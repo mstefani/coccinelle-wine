@@ -7,40 +7,78 @@ found = 0
 @ find @
 type Tv;
 identifier lpVtbl ~= "^lp.*Vtbl$";
+type obj;
 @@
-  struct {
+  typedef struct {
       ...
       Tv *lpVtbl;
       ...
-  }
+  } obj;
 
 @script:python@
-Tv << find.Tv;
+fullIIFaceVtbl << find.Tv;
 lpVtbl << find.lpVtbl;
+Object << find.obj;
 @@
 print("// Generated Wine COM cleanup cocci file\n")
 if found:
     cocci.include_match(False)
 found = 1
 
-Tv_pure = Tv.lstrip("const ")
-Ti = Tv_pure.rstrip("Vtbl")
-iface = Ti + "_iface"
+IIFaceVtbl = fullIIFaceVtbl.lstrip("const ")
+IIFace = IIFaceVtbl.rstrip("Vtbl")
+IIFace_iface = IIFace + "_iface"
 
-// Generate the rules
+////////////////////////
+// Generate the rules //
+////////////////////////
 print("""
 // Change the COM object
 @ object @
 typedef %s;
 typedef %s;
+type obj;
 @@
-  struct {
+  typedef struct {
       ...
 -     %s *%s;
 +     %s %s;
       ...
+  } obj;
+""" % (IIFaceVtbl, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+
+print("""
+// Implement impl_from_IFace if it doesn't exist yet
+@ has_impl @
+typedef %s;
+identifier iface;
+@@
+  static inline %s *impl_from_%s(%s *iface)
+  {
+      ...
   }
-""" % (Tv_pure, Ti, Tv, lpVtbl, Ti, iface))
+
+@ depends on !has_impl @
+type object.obj;
+@@
+  typedef struct { ... } obj;
++
++ static inline %s *impl_from_%s(%s *iface)
++ {
++     return CONTAINING_RECORD(iface, %s, %s);
++ }
+""" % (Object, Object, IIFace, IIFace, Object, IIFace, IIFace, Object, IIFace_iface))
+
+print("""
+// Fixup declarations of *This
+@ disable drop_cast @
+identifier This;
+%s *iface;
+@@
+  %s *This =
+-            (%s *)iface;
++            impl_from_%s(iface);
+""" % (IIFace, Object, Object, IIFace))
 
 print("""
 // Replace all object to interface casts to address of instance expressions
@@ -48,7 +86,7 @@ print("""
 @@
 - (%s *) &This->%s
 + &This->%s
-""" % (Ti, lpVtbl, iface))
+""" % (IIFace, lpVtbl, IIFace_iface))
 
 print("""
 // Cleanups
