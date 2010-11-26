@@ -48,9 +48,31 @@ type obj;
 """ % (IIFaceVtbl, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 
 print("""
+// Fixup the initialization of the object
+@@
+expression E;
+identifier Vtbl;
+@@
+- E->%s = &Vtbl
++ E->%s.lpVtbl = &Vtbl
+
+@@
+typedef %s;
+identifier obj;
+identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
+@@
+  static %s obj = {
+      ...,
+-     &vtbl,
++     { &vtbl },
+      ...,
+  };
+""" % (lpVtbl, IIFace_iface, Object, Object + "Vtbl", Object))
+
+
+print("""
 // Implement impl_from_IFace if it doesn't exist yet
 @ has_impl @
-typedef %s;
 identifier iface;
 @@
   static inline %s *impl_from_%s(%s *iface)
@@ -67,7 +89,7 @@ type object.obj;
 + {
 +     return CONTAINING_RECORD(iface, %s, %s);
 + }
-""" % (Object, Object, IIFace, IIFace, Object, IIFace, IIFace, Object, IIFace_iface))
+""" % (Object, IIFace, IIFace, Object, IIFace, IIFace, Object, IIFace_iface))
 
 print("""
 // Fixup declarations of *This
