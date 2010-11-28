@@ -127,7 +127,15 @@ identifier This;
 print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
+identifier This;
 @@
 - (%s *) &This->%s
 + &This->%s
-""" % (IIFace, lpVtbl, IIFace_iface))
+
+// Replace the other member accesses too
+@@
+identifier This;
+@@
+- &This->%s
++ &This->%s
+""" % (IIFace, lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
