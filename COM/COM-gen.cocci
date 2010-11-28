@@ -100,6 +100,20 @@ type object.obj;
 """ % (Object, IIFace, IIFace, Object, IIFace, IIFace, Object, IIFace_iface))
 
 print("""
+@ depends on has_impl disable drop_cast @
+type T;
+identifier iface;
+@@
+(
+- return (T *)((char *)iface - FIELD_OFFSET(T, %s));
++ return CONTAINING_RECORD(iface, T, %s);
+|
+- return CONTAINING_RECORD(iface, T, %s);
++ return CONTAINING_RECORD(iface, T, %s);
+)
+""" % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
+
+print("""
 // Fixup declarations of *This
 @ disable drop_cast @
 identifier This;
@@ -117,13 +131,3 @@ print("""
 - (%s *) &This->%s
 + &This->%s
 """ % (IIFace, lpVtbl, IIFace_iface))
-
-print("""
-// Cleanups
-@@
-type T;
-identifier iface, vtbl;
-@@
-- return (T *)((char *)iface - FIELD_OFFSET(T, vtbl));
-+ return CONTAINING_RECORD(iface, T, vtbl);
-""")
