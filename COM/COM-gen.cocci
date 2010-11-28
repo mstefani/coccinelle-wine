@@ -58,14 +58,14 @@ type obj;
 print("""
 // Fixup the initialization of the object
 @@
-expression E;
+typedef %s;
+%s *This;
 identifier Vtbl;
 @@
-- E->%s = &Vtbl
-+ E->%s.lpVtbl = &Vtbl
+- This->%s = &Vtbl
++ This->%s.lpVtbl = &Vtbl
 
 @@
-typedef %s;
 identifier obj;
 identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 @@
@@ -75,7 +75,7 @@ identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 +     { &vtbl },
       ...,
   };
-""" % (lpVtbl, IIFace_iface, Object, Object + "Vtbl", Object))
+""" % (Object, Object, lpVtbl, IIFace_iface, Object + "Vtbl", Object))
 
 
 print("""
@@ -127,15 +127,15 @@ identifier This;
 print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
-identifier This;
+%s *This;
 @@
 - (%s *) &This->%s
 + &This->%s
 
 // Replace the other member accesses too
 @@
-identifier This;
+%s *This;
 @@
 - &This->%s
 + &This->%s
-""" % (IIFace, lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
+""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, lpVtbl, IIFace_iface))
