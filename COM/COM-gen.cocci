@@ -6,7 +6,7 @@ found = 0
 
 @ find @
 type Tv;
-identifier lpVtbl ~= "^lp.*Vtbl$";
+identifier lpVtbl ~= ".*[vV]tbl$";
 type obj;
 @@
   typedef struct {
@@ -20,18 +20,26 @@ fullIIFaceVtbl << find.Tv;
 lpVtbl << find.lpVtbl;
 Object << find.obj;
 @@
-print("// Generated Wine COM cleanup cocci file\n")
 if found:
     cocci.include_match(False)
+    quit()
+// Cross check if we found the right member
+if not fullIIFaceVtbl.endswith("Vtbl"):
+    cocci.include_match(False)
+    quit()
 found = 1
 
-IIFaceVtbl = fullIIFaceVtbl.lstrip("const ")
-IIFace = IIFaceVtbl.rstrip("Vtbl")
+if fullIIFaceVtbl.startswith("const "):
+    IIFaceVtbl = fullIIFaceVtbl[6:]
+else:
+    IIFaceVtbl = fullIIFaceVtbl
+IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
 
 ////////////////////////
 // Generate the rules //
 ////////////////////////
+print("// Generated Wine COM cleanup cocci file\n")
 print("""
 // Change the COM object
 @ object @
