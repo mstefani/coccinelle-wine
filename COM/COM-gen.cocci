@@ -133,11 +133,17 @@ print("""
 + &This->%s
 
 @ disable drop_cast @
+%s This;
+@@
+- (%s *)&This
++ &This.%s
+
+@ disable drop_cast @
 %s *This;
 @@
 - (%s *)This
 + &This->%s
-""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface))
+""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface, Object, IIFace, IIFace_iface))
 
 print("""
 // Replace the other member accesses too
