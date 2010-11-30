@@ -114,15 +114,13 @@ identifier iface;
 """ % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
 
 print("""
-// Fixup declarations of *This
+// Fixup IIFace to Object casts
 @ disable drop_cast @
-identifier This;
 %s *iface;
 @@
-  %s *This =
--            (%s *)iface;
-+            impl_from_%s(iface);
-""" % (IIFace, Object, Object, IIFace))
+- (%s *)iface
++ impl_from_%s(iface)
+""" % (IIFace, Object, IIFace))
 
 print("""
 // Replace all object to interface casts to address of instance expressions
