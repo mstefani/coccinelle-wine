@@ -151,3 +151,38 @@ print("""
 - &This->%s
 + &This->%s
 """ % (Object, lpVtbl, IIFace_iface))
+
+print("""
+// Sanity: impl_from%s() should be used only from %s members
+@ vtbl @
+identifier fn, vtbl;
+@@
+  %s vtbl = {
+      ...,
+      fn,
+      ...,
+  };
+
+@ good_impl_from_use @
+identifier vtbl.fn;
+position p;
+@@
+  fn@p( ... )
+  {
+      <...
+      impl_from_%s( ... )
+      ...>
+  }
+
+@ bad_impl_from_use @
+identifier fn;
+position p != good_impl_from_use.p;
+@@
+  fn@p( ... )
+  {
+      <...
+-     impl_from_%s
++     BADBADBAD
+      ...>
+  }
+""" % (IIFace, IIFaceVtbl, IIFaceVtbl, IIFace, IIFace))
