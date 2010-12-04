@@ -120,7 +120,15 @@ print("""
 @@
 - (%s *)iface
 + impl_from_%s(iface)
-""" % (IIFace, Object, IIFace))
+
+// Grrr... sometimes IIFace * is typedef'ed to LPIFACE
+@ disable drop_cast @
+identifier iface, This;
+@@
+%s *This =
+-         (%s *)iface;
++         impl_from_%s(iface);
+""" % (IIFace, Object, IIFace, Object, Object, IIFace))
 
 print("""
 // Replace all object to interface casts to address of instance expressions
