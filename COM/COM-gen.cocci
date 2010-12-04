@@ -6,7 +6,7 @@ found = 0
 
 @ find @
 type Tv;
-identifier lpVtbl ~= ".*[vV]tbl$";
+identifier lpVtbl ~= ".*[vV]tbl";
 type obj;
 @@
   typedef struct {
