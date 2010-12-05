@@ -113,6 +113,29 @@ identifier iface;
 )
 """ % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
 
+if lpVtbl.ident.startswith("lp") and lpVtbl.ident.endswith("Vtbl"):
+    IIFace_THIS = lpVtbl.ident[2:-4]
+else:
+    IIFace_THIS = IIFace
+print("""
+// Get rid of DEFINE_THIS and look alikes
+@ obj_this @
+identifier iface, OBJ_THIS;
+@@
+- #define OBJ_THIS(iface) DEFINE_THIS(%s, %s, iface)
+
+@@
+identifier obj_this.OBJ_THIS;
+@@
+- OBJ_THIS
++ impl_from_%s
+
+@@
+identifier obj_this.OBJ_THIS;
+@@
+- #define OBJ_THIS
+""" % (Object, IIFace_THIS, IIFace))
+
 print("""
 // Fixup IIFace to Object casts
 @ disable drop_cast @
