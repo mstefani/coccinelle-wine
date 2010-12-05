@@ -172,11 +172,26 @@ print("""
 @@
 - (%s *)This
 + &This->%s
+""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface, Object, IIFace, IIFace_iface))
 
+print("""
+// Get rid of some ->lpVtbl to IIFace wrappers
 @ wrapcast disable drop_cast @
 identifier iface, wrapper;
 @@
+(
 - #define wrapper(iface) ((%s *)&(iface)->%s)
+|
+- #define wrapper(iface) (&(iface)->%s)
+)
+
+@@
+identifier wrapcast.wrapper;
+type T;
+T *obj;
+@@
+- wrapper(obj)
++ &obj->%s
 
 @@
 expression obj;
@@ -184,7 +199,7 @@ identifier wrapcast.wrapper;
 @@
 - wrapper(obj)
 + obj.%s
-""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface, Object, IIFace, IIFace_iface, IIFace, lpVtbl, IIFace_iface))
+""" % (IIFace, lpVtbl, lpVtbl, IIFace_iface, IIFace_iface))
 
 print("""
 // Replace the other member accesses too
