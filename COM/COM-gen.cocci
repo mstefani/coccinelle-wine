@@ -113,7 +113,7 @@ identifier iface;
 )
 """ % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
 
-if lpVtbl.ident.startswith("lp") and lpVtbl.ident.endswith("Vtbl"):
+if len(lpVtbl.ident) > 6 and lpVtbl.ident.startswith("lp") and lpVtbl.ident.endswith("Vtbl"):
     IIFace_THIS = lpVtbl.ident[2:-4]
 else:
     IIFace_THIS = IIFace
