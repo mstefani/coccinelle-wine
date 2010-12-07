@@ -6,6 +6,8 @@
 fullIIFaceVtbl = ""
 lpVtbl = ""
 Object = ""
+# typedef and struct are separate for the Object
+separate = 0
 # Limit to only one match
 found = 0
 
@@ -20,6 +22,24 @@ type obj;
       ...
   } obj;
 
+@ findS @
+type Tv;
+identifier lpVtbl ~= ".*[vV]tbl";
+identifier tag_obj;
+@@
+  struct tag_obj {
+      ...
+      Tv *lpVtbl;
+      ...
+  }
+
+@ findT @
+identifier findS.tag_obj;
+type obj;
+@@
+  typedef struct tag_obj obj;
+
+
 @script:python@
 Tvtbl << find.Tv;
 vtbl << find.lpVtbl;
@@ -30,6 +50,19 @@ if not found and Tvtbl.endswith("Vtbl"):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+
+
+@script:python@
+Tvtbl << findS.Tv;
+vtbl << findS.lpVtbl;
+obj << findT.obj;
+@@
+if not found and Tvtbl.endswith("Vtbl"):
+    found = 1
+    fullIIFaceVtbl = Tvtbl
+    lpVtbl = vtbl.ident
+    Object = obj
+    separate = 1
 
 
 @finalize:python@
@@ -47,7 +80,8 @@ IIFace_iface = IIFace + "_iface"
 // Generate the rules //
 ////////////////////////
 print("// Generated Wine COM cleanup cocci file\n")
-print("""
+if not separate:
+    print("""
 // Change the COM object
 @ object @
 typedef %s;
@@ -60,6 +94,21 @@ type obj;
 +     %s %s;
       ...
   } obj;
+""" % (IIFaceVtbl, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+else:
+    print("""
+// Change the COM object
+@ object @
+typedef %s;
+typedef %s;
+identifier tag_obj;
+@@
+  struct tag_obj {
+      ...
+-     %s *%s;
++     %s %s;
+      ...
+  };
 """ % (IIFaceVtbl, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 
 print("""
@@ -94,17 +143,26 @@ identifier iface;
   {
       ...
   }
+""" % (Object, IIFace, IIFace))
 
-@ depends on !has_impl @
-type object.obj;
+print("@ depends on !has_impl @")
+if not separate:
+    print("""type object.obj;
 @@
   typedef struct { ... } obj;
+""")
+else:
+    print("""identifier object.tag_obj;
+@@
+  struct tag_obj { ... };
+""")
+print("""
 +
 + static inline %s *impl_from_%s(%s *iface)
 + {
 +     return CONTAINING_RECORD(iface, %s, %s);
 + }
-""" % (Object, IIFace, IIFace, Object, IIFace, IIFace, Object, IIFace_iface))
+""" % (Object, IIFace, IIFace, Object, IIFace_iface))
 
 print("""
 @ depends on has_impl disable drop_cast @
