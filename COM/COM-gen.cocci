@@ -2,6 +2,11 @@
 // for an interface.
 
 @initialize:python@
+# Parsed stuff
+fullIIFaceVtbl = ""
+lpVtbl = ""
+Object = ""
+# Limit to only one match
 found = 0
 
 @ find @
@@ -16,18 +21,20 @@ type obj;
   } obj;
 
 @script:python@
-fullIIFaceVtbl << find.Tv;
-lpVtbl << find.lpVtbl;
-Object << find.obj;
+Tvtbl << find.Tv;
+vtbl << find.lpVtbl;
+obj << find.obj;
 @@
-if found:
-    cocci.include_match(False)
+if not found and Tvtbl.endswith("Vtbl"):
+    found = 1
+    fullIIFaceVtbl = Tvtbl
+    lpVtbl = vtbl.ident
+    Object = obj
+
+
+@finalize:python@
+if not found:
     quit()
-// Cross check if we found the right member
-if not fullIIFaceVtbl.endswith("Vtbl"):
-    cocci.include_match(False)
-    quit()
-found = 1
 
 if fullIIFaceVtbl.startswith("const "):
     IIFaceVtbl = fullIIFaceVtbl[6:]
@@ -113,8 +120,8 @@ identifier iface;
 )
 """ % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
 
-if len(lpVtbl.ident) > 6 and lpVtbl.ident.startswith("lp") and lpVtbl.ident.endswith("Vtbl"):
-    IIFace_THIS = lpVtbl.ident[2:-4]
+if len(lpVtbl) > 6 and lpVtbl.startswith("lp") and lpVtbl.endswith("Vtbl"):
+    IIFace_THIS = lpVtbl[2:-4]
 else:
     IIFace_THIS = IIFace
 print("""
