@@ -184,11 +184,11 @@ print("""
 
 print("""
 @ depends on has_impl disable drop_cast @
-type T;
+type onebyte, T;
 identifier iface;
 @@
 (
-- return (T *)((char *)iface - FIELD_OFFSET(T, %s));
+- return (T *)((onebyte *)iface - FIELD_OFFSET(T, %s));
 + return CONTAINING_RECORD(iface, T, %s);
 |
 - return CONTAINING_RECORD(iface, T, %s);
