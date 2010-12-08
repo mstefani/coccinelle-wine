@@ -6,21 +6,30 @@
 fullIIFaceVtbl = ""
 lpVtbl = ""
 Object = ""
+tagObject = ""
 # typedef and struct are separate for the Object
 separate = 0
 # Limit to only one match
 found = 0
 
 @ find @
-type Tv;
+type obj, Tv;
 identifier lpVtbl ~= ".*[vV]tbl";
-type obj;
+identifier tag_obj;
 @@
+(
   typedef struct {
       ...
       Tv *lpVtbl;
       ...
   } obj;
+|
+  typedef struct tag_obj {
+      ...
+      Tv *lpVtbl;
+      ...
+  } obj;
+)
 
 @ findS @
 type Tv;
@@ -44,12 +53,15 @@ type obj;
 Tvtbl << find.Tv;
 vtbl << find.lpVtbl;
 obj << find.obj;
+tag_obj << find.tag_obj;
 @@
 if not found and Tvtbl.endswith("Vtbl"):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+    if tag_obj:
+        tagObject = tag_obj.ident
 
 
 @script:python@
@@ -75,6 +87,10 @@ else:
     IIFaceVtbl = fullIIFaceVtbl
 IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
+if len(tagObject) > 0:
+    tag_obj = "tag_obj"
+else:
+    tag_obj = ""
 
 ////////////////////////
 // Generate the rules //
@@ -87,14 +103,15 @@ if not separate:
 typedef %s;
 typedef %s;
 type obj;
+identifier tag_obj;
 @@
-  typedef struct {
+  typedef struct %s {
       ...
 -     %s *%s;
 +     %s %s;
       ...
   } obj;
-""" % (IIFaceVtbl, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+""" % (IIFaceVtbl, IIFace, tag_obj, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 else:
     print("""
 // Change the COM object
@@ -148,9 +165,10 @@ identifier iface;
 print("@ depends on !has_impl @")
 if not separate:
     print("""type object.obj;
+identifier tag_obj;
 @@
-  typedef struct { ... } obj;
-""")
+  typedef struct %s { ... } obj;
+""" % (tag_obj))
 else:
     print("""identifier object.tag_obj;
 @@
