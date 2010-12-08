@@ -237,6 +237,15 @@ identifier iface, This;
 """ % (IIFace, Object, IIFace, Object, Object, IIFace))
 
 print("""
+// ICOM_THIS_MULTI replacement
+@@
+%s *iface;
+@@
+- ICOM_THIS_MULTI(%s, %s, iface);
++ %s *This = impl_from_%s(iface);
+""" % (IIFace, Object, lpVtbl, Object, IIFace))
+
+print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
