@@ -224,7 +224,7 @@ print("""
 @ disable drop_cast @
 %s *iface;
 @@
-- (%s *)iface
+- (%s *)(iface)
 + impl_from_%s(iface)
 
 // Grrr... sometimes IIFace * is typedef'ed to LPIFACE
@@ -232,7 +232,7 @@ print("""
 identifier iface, This;
 @@
 %s *This =
--         (%s *)iface;
+-         (%s *)(iface);
 +         impl_from_%s(iface);
 """ % (IIFace, Object, IIFace, Object, Object, IIFace))
 
@@ -241,19 +241,19 @@ print("""
 @ disable drop_cast @
 %s *This;
 @@
-- (%s *)&This->%s
+- (%s *)(&This->%s)
 + &This->%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (%s *)&This
+- (%s *)(&This)
 + &This.%s
 
 @ disable drop_cast @
 %s *This;
 @@
-- (%s *)This
+- (%s *)(This)
 + &This->%s
 """ % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface, Object, IIFace, IIFace_iface))
 
