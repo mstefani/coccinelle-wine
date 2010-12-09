@@ -209,16 +209,17 @@ identifier iface, OBJ_THIS;
 
 @@
 identifier obj_this.OBJ_THIS;
+%s *iface;
 @@
-- OBJ_THIS
-+ impl_from_%s
+- OBJ_THIS(iface)
++ impl_from_%s(iface)
 
 // #undef is not supportet yet in coccinelle
 //@@
 //identifier obj_this.OBJ_THIS;
 //@@
 //- #undef OBJ_THIS
-""" % (Object, IIFace_THIS, IIFace))
+""" % (Object, IIFace_THIS, IIFace, IIFace))
 
 print("""
 // Fixup IIFace to Object casts
