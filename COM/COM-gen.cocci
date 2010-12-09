@@ -213,10 +213,11 @@ identifier obj_this.OBJ_THIS;
 - OBJ_THIS
 + impl_from_%s
 
-@@
-identifier obj_this.OBJ_THIS;
-@@
-- #define OBJ_THIS
+// #undef is not supportet yet in coccinelle
+//@@
+//identifier obj_this.OBJ_THIS;
+//@@
+//- #undef OBJ_THIS
 """ % (Object, IIFace_THIS, IIFace))
 
 print("""
