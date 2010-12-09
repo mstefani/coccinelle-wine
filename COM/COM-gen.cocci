@@ -230,8 +230,19 @@ print("""
 + impl_from_%s(iface)
 
 // Grrr... sometimes IIFace * is typedef'ed to LPIFACE
+// But of course we cannot just change all casts to Object*
+@ iface_obvious_ptr @
+identifier iface;
+type T;
+@@
+  fn( ..., T *iface, ...)
+  {
+      ...
+  }
+
 @ disable drop_cast @
-identifier iface, This;
+identifier iface != iface_obvious_ptr.iface;
+identifier This;
 @@
 %s *This =
 -         (%s *)(iface);
