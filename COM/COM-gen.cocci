@@ -93,6 +93,10 @@ else:
     IIFaceVtbl_typedef = "\ntypedef " + IIFaceVtbl + ";"
 IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
+if IIFace[0] == "I":
+    LPIFACE = "LP" + IIFace[1:].upper()
+else:
+    LPIFACE = "LP" + IIFace.upper()
 if len(tagObject) > 0:
     tag_obj = "tag_obj"
 else:
@@ -212,76 +216,74 @@ identifier iface, OBJ_THIS;
 - #define OBJ_THIS(iface) DEFINE_THIS(%s, %s, iface)
 
 @@
+typedef %s;
 identifier obj_this.OBJ_THIS;
 %s *iface;
+%s lpiface;
 @@
-- OBJ_THIS(iface)
-+ impl_from_%s(iface)
+- OBJ_THIS
++ impl_from_%s
+      (\(iface\|lpiface\))
 
 // #undef is not supportet yet in coccinelle
 //@@
 //identifier obj_this.OBJ_THIS;
 //@@
 //- #undef OBJ_THIS
-""" % (Object, IIFace_THIS, IIFace, IIFace))
+""" % (Object, IIFace_THIS, LPIFACE, IIFace, LPIFACE, IIFace))
 
 print("""
 // Fixup IIFace to Object casts
 @ disable drop_cast @
 %s *iface;
+%s lpiface;
 @@
+(
 - (%s *)(iface)
 + impl_from_%s(iface)
-
-// Grrr... sometimes IIFace * is typedef'ed to LPIFACE
-// But of course we cannot just change all casts to Object*
-@ iface_obvious_ptr @
-identifier iface;
-type T;
-@@
-  fn( ..., T *iface, ...)
-  {
-      ...
-  }
-
-@ disable drop_cast @
-identifier iface != iface_obvious_ptr.iface;
-identifier This;
-@@
-%s *This =
--         (%s *)(iface);
-+         impl_from_%s(iface);
-""" % (IIFace, Object, IIFace, Object, Object, IIFace))
+|
+- (%s *)(lpiface)
++ impl_from_%s(lpiface)
+)
+""" % (IIFace, LPIFACE, Object, IIFace, Object, IIFace))
 
 print("""
 // ICOM_THIS_MULTI replacement
 @@
 %s *iface;
+%s lpiface;
 @@
+(
 - ICOM_THIS_MULTI(%s, %s, iface);
 + %s *This = impl_from_%s(iface);
-""" % (IIFace, Object, lpVtbl, Object, IIFace))
+|
+- ICOM_THIS_MULTI(%s, %s, lpiface);
++ %s *This = impl_from_%s(lpiface);
+)
+""" % (IIFace, LPIFACE, Object, lpVtbl, Object, IIFace, Object, lpVtbl, Object, IIFace))
 
 print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
 @@
-- (%s *)(&This->%s)
+- (\(%s *\|%s\))(&This->%s)
 + &This->%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (%s *)(&This)
+- (\(%s *\|%s\))(&This)
 + &This.%s
 
 @ disable drop_cast @
 %s *This;
 @@
-- (%s *)(This)
+- (\(%s *\|%s\))(This)
 + &This->%s
-""" % (Object, IIFace, lpVtbl, IIFace_iface, Object, IIFace, IIFace_iface, Object, IIFace, IIFace_iface))
+""" % (Object, IIFace, LPIFACE, lpVtbl, IIFace_iface,
+       Object, IIFace, LPIFACE, IIFace_iface,
+       Object, IIFace, LPIFACE, IIFace_iface))
 
 print("""
 // Get rid of some ->lpVtbl to IIFace wrappers
