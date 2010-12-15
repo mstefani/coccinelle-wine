@@ -196,7 +196,7 @@ type onebyte, T;
 identifier iface;
 @@
 (
-- return (T *)((onebyte *)iface - FIELD_OFFSET(T, %s));
+- return (T *)((onebyte *)iface - \(FIELD_OFFSET\|offsetof\)(T, %s));
 + return CONTAINING_RECORD(iface, T, %s);
 |
 - return CONTAINING_RECORD(iface, T, %s);
