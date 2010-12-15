@@ -283,13 +283,13 @@ print("""
 @ disable drop_cast @
 %s *This;
 @@
-- (\(%s *\|%s\))(&This->%s)
+- (\(%s *\|%s\))(&(This->%s))
 + &This->%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (\(%s *\|%s\))(&This.%s)
+- (\(%s *\|%s\))(&(This.%s))
 + &This.%s
 
 @ disable drop_cast @
@@ -301,7 +301,7 @@ print("""
 @ disable drop_cast @
 %s This;
 @@
-- (\(%s *\|%s\))(&This)
+- (\(%s *\|%s\))(&(This))
 + &This.%s
 
 // Replace the other member accesses too
