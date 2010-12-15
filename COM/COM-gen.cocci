@@ -167,6 +167,23 @@ identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
        Object, lpVtbl, IIFace_iface,
        Object + "Vtbl", Object))
 
+print("""
+// Fixup vtbl pointer comparison
+@@
+%s *This;
+identifier _Vtbl_;
+@@
+- This->%s == &_Vtbl_
++ This->%s.lpVtbl == &_Vtbl_
+
+@@
+%s This;
+identifier _Vtbl_;
+@@
+- This.%s == &_Vtbl_
++ This.%s.lpVtbl == &_Vtbl_
+""" % (Object, lpVtbl, IIFace_iface,
+       Object, lpVtbl, IIFace_iface))
 
 print("""
 @ has_impl_from disable drop_cast @
