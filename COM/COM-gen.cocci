@@ -141,17 +141,17 @@ print("""
 @@
 typedef %s;
 %s *This;
-identifier Vtbl;
+identifier _Vtbl_;
 @@
-- This->%s = &Vtbl
-+ This->%s.lpVtbl = &Vtbl
+- This->%s = &_Vtbl_
++ This->%s.lpVtbl = &_Vtbl_
 
 @@
 %s This;
-identifier Vtbl;
+identifier _Vtbl_;
 @@
-- This.%s = &Vtbl
-+ This.%s.lpVtbl = &Vtbl
+- This.%s = &_Vtbl_
++ This.%s.lpVtbl = &_Vtbl_
 
 @@
 identifier obj;
