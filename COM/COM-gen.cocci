@@ -147,6 +147,13 @@ identifier Vtbl;
 + This->%s.lpVtbl = &Vtbl
 
 @@
+%s This;
+identifier Vtbl;
+@@
+- This.%s = &Vtbl
++ This.%s.lpVtbl = &Vtbl
+
+@@
 identifier obj;
 identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 @@
@@ -156,7 +163,9 @@ identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 +     { &vtbl },
       ...,
   };
-""" % (Object, Object, lpVtbl, IIFace_iface, Object + "Vtbl", Object))
+""" % (Object, Object, lpVtbl, IIFace_iface,
+       Object, lpVtbl, IIFace_iface,
+       Object + "Vtbl", Object))
 
 
 print("""
@@ -280,7 +289,7 @@ print("""
 @ disable drop_cast @
 %s This;
 @@
-- (\(%s *\|%s\))(&This)
+- (\(%s *\|%s\))(&This.%s)
 + &This.%s
 
 @ disable drop_cast @
@@ -288,9 +297,31 @@ print("""
 @@
 - (\(%s *\|%s\))(This)
 + &This->%s
+
+@ disable drop_cast @
+%s This;
+@@
+- (\(%s *\|%s\))(&This)
++ &This.%s
+
+// Replace the other member accesses too
+@@
+%s *This;
+@@
+- (This->%s)
++ This->%s
+
+@@
+%s This;
+@@
+- (This.%s)
++ This.%s
 """ % (Object, IIFace, LPIFACE, lpVtbl, IIFace_iface,
+       Object, IIFace, LPIFACE, lpVtbl, IIFace_iface,
        Object, IIFace, LPIFACE, IIFace_iface,
-       Object, IIFace, LPIFACE, IIFace_iface))
+       Object, IIFace, LPIFACE, IIFace_iface,
+       Object, lpVtbl, IIFace_iface,
+       Object, lpVtbl, IIFace_iface))
 
 print("""
 // Get rid of some ->lpVtbl to IIFace wrappers
@@ -318,15 +349,6 @@ identifier wrapcast.wrapper;
 - wrapper(obj)
 + obj.%s
 """ % (IIFace, lpVtbl, lpVtbl, IIFace_iface, IIFace_iface))
-
-print("""
-// Replace the other member accesses too
-@@
-%s *This;
-@@
-- &This->%s
-+ &This->%s
-""" % (Object, lpVtbl, IIFace_iface))
 
 print("""
 // Sanity: impl_from%s() should be used only from %s members
