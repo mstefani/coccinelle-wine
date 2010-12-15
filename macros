@@ -1,12 +1,17 @@
 #define __ENDTRY
+#define __EXCEPT(x)
 #define __EXCEPT_PAGE_FAULT
+#define __RPC_USER
 #define __TRY
+#define CDECL
 #define DECLSPEC_HIDDEN
 #define DECLSPEC_HOTPATCH
 #define STDMETHODCALLTYPE
 #define todo_wine
+#define UNALIGNED
 #define USER_DRIVER
 #define WINAPI
+#define WINAPIV
 #define WINUSERAPI
 
 #define SERVER_START_REQ(type) \
