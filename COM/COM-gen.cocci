@@ -160,17 +160,38 @@ identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 
 
 print("""
-// Implement impl_from_IFace if it doesn't exist yet
-@ has_impl @
-identifier iface;
+@ has_impl_from disable drop_cast @
+type onebyte;
+identifier iface, impl_from_IFace;
 @@
-  static inline %s *impl_from_%s(%s *iface)
+  static inline %s *
+-                   impl_from_IFace
++                   impl_from_%s
+                                   (%s *iface)
   {
-      ...
+(
+-      return CONTAINING_RECORD(iface, %s, %s);
++      return CONTAINING_RECORD(iface, %s, %s);
+|
+-      return (%s *)((onebyte *)iface - \(FIELD_OFFSET\|offsetof\)(%s, %s));
++      return CONTAINING_RECORD(iface, %s, %s);
+|
+-      return (%s *)iface;
++      return CONTAINING_RECORD(iface, %s, %s);
+)
   }
-""" % (Object, IIFace, IIFace))
+""" % (Object, IIFace, IIFace, Object, lpVtbl, Object, IIFace_iface,
+       Object, Object, lpVtbl, Object, IIFace_iface,
+       Object, Object, IIFace_iface))
 
-print("@ depends on !has_impl @")
+print("""@ impl_from_IFace depends on has_impl_from @
+identifier has_impl_from.impl_from_IFace;
+@@
+- impl_from_IFace
++ impl_from_%s
+""" % (IIFace))
+
+print("@ depends on !has_impl_from @")
 if not separate:
     print("""type object.obj;
 identifier tag_obj;
@@ -189,20 +210,6 @@ print("""
 +     return CONTAINING_RECORD(iface, %s, %s);
 + }
 """ % (Object, IIFace, IIFace, Object, IIFace_iface))
-
-print("""
-@ depends on has_impl disable drop_cast @
-type onebyte, T;
-identifier iface;
-@@
-(
-- return (T *)((onebyte *)iface - \(FIELD_OFFSET\|offsetof\)(T, %s));
-+ return CONTAINING_RECORD(iface, T, %s);
-|
-- return CONTAINING_RECORD(iface, T, %s);
-+ return CONTAINING_RECORD(iface, T, %s);
-)
-""" % (lpVtbl, IIFace_iface, lpVtbl, IIFace_iface))
 
 if len(lpVtbl) > 6 and lpVtbl.startswith("lp") and lpVtbl.endswith("Vtbl"):
     IIFace_THIS = lpVtbl[2:-4]
