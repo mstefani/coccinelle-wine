@@ -371,15 +371,24 @@ print("""
 // Sanity: impl_from%s() should be used only from %s members
 @ vtbl @
 identifier fn, vtbl;
+type T;
 @@
-  %s vtbl = {
+  T vtbl = {
       ...,
       fn,
       ...,
   };
 
+@ script:python vtblcheck @
+T << vtbl.T;
+f << vtbl.fn;
+fn;
+@@
+if T.endswith("%s"):
+    coccinelle.fn = f
+
 @ good_impl_from_use @
-identifier vtbl.fn;
+identifier vtblcheck.fn;
 position p;
 @@
   fn@p( ... )
