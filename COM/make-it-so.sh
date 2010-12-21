@@ -15,4 +15,5 @@ if [ -s "$GENCOCCI" ]; then
     spatch -sp_file "$GENCOCCI" -macro_file "$MYDIR/../macros" -patch "$WINE" -smpl_spacing $@
 else
     echo Nothing to do >&2
+    exit 42
 fi
