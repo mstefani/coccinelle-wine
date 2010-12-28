@@ -17,19 +17,21 @@ type obj, Tv;
 identifier lpVtbl ~= ".*[vV]tbl";
 identifier tag_obj;
 @@
-(
-  typedef struct {
-      ...
-      Tv *lpVtbl;
-      ...
-  } obj;
-|
   typedef struct tag_obj {
       ...
       Tv *lpVtbl;
       ...
   } obj;
-)
+
+@ find2 @
+type obj, Tv;
+identifier lpVtbl ~= ".*[vV]tbl";
+@@
+  typedef struct {
+      ...
+      Tv *lpVtbl;
+      ...
+  } obj;
 
 @ findS @
 type Tv;
@@ -60,8 +62,19 @@ if not found and Tvtbl.endswith("Vtbl"):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
-    if tag_obj:
-        tagObject = tag_obj.ident
+    tagObject = tag_obj.ident
+
+
+@script:python@
+Tvtbl << find2.Tv;
+vtbl << find2.lpVtbl;
+obj << find2.obj;
+@@
+if not found and Tvtbl.endswith("Vtbl"):
+    found = 1
+    fullIIFaceVtbl = Tvtbl
+    lpVtbl = vtbl.ident
+    Object = obj
 
 
 @script:python@
