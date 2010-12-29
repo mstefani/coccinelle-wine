@@ -377,10 +377,13 @@ expression obj;
 - wrapper(&obj)
 + &obj.%s
 |
+- wrapper(*obj)
++ &(*obj)->%s
+|
 - wrapper(obj)
 + &obj->%s
 )
-""" % (IIFace, lpVtbl, lpVtbl, IIFace_iface, IIFace_iface))
+""" % (IIFace, lpVtbl, lpVtbl, IIFace_iface, IIFace_iface, IIFace_iface))
 
 print("""
 // Sanity: impl_from%s() should be used only from %s members
