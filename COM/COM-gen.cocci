@@ -259,7 +259,11 @@ print("""
 @ obj_this @
 identifier iface, OBJ_THIS;
 @@
+(
 - #define OBJ_THIS(iface) DEFINE_THIS(%s, %s, iface)
+|
+- #define OBJ_THIS(iface) ((%s *)iface)
+)
 
 @@
 typedef %s;
@@ -276,7 +280,8 @@ identifier obj_this.OBJ_THIS;
 //identifier obj_this.OBJ_THIS;
 //@@
 //- #undef OBJ_THIS
-""" % (Object, IIFace_THIS, LPIFACE, IIFace, LPIFACE, IIFace))
+""" % (Object, IIFace_THIS, Object,
+       LPIFACE, IIFace, LPIFACE, IIFace))
 
 print("""
 // Fixup IIFace to Object casts
