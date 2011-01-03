@@ -90,6 +90,22 @@ if not found and Tvtbl.endswith("Vtbl"):
     separate = 1
 
 
+// "found" will take care of the double matching with the previous rule
+@script:python@
+Tvtbl << findS.Tv;
+vtbl << findS.lpVtbl;
+tag_obj << findS.tag_obj;
+@@
+if not found and Tvtbl.endswith("Vtbl"):
+    found = 1
+    fullIIFaceVtbl = Tvtbl
+    lpVtbl = vtbl.ident
+    Object = tag_obj.ident
+    separate = 1
+    import sys
+    print >> sys.stderr, ("Warning: Assuming \"typedef struct %s %s;\"" % (Object, Object))
+
+
 @finalize:python@
 if not found:
     quit()
