@@ -374,6 +374,28 @@ print("""
        Object, lpVtbl, IIFace_iface,
        Object, lpVtbl, IIFace_iface))
 
+if IIFace != "IUnknown":
+    print("""
+// Replace object to (IUnknown *) casts.
+// Though this two rules are not entirely correct. We just assume that the
+// run for the first iface has eliminated all (IUnknown *)object sites.
+// This is a limitation in coccinelle for now.
+@ disable drop_cast @
+typedef IUnknown;
+%s This;
+@@
+  (IUnknown *)
+-             (&(This))
++             &This.%s
+
+@ disable drop_cast @
+%s *This;
+@@
+  (IUnknown *)
+-             (This)
++             &This->%s
+""" % (Object, IIFace_iface, Object, IIFace_iface))
+
 print("""
 // Get rid of some ->lpVtbl to IIFace wrappers
 @ wrapcast disable drop_cast @
