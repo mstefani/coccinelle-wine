@@ -423,6 +423,27 @@ expression obj;
 )
 """ % (IIFace, lpVtbl, lpVtbl, IIFace_iface, IIFace_iface, IIFace_iface))
 
+
+if IIFace != "IUnknown":
+    print("""
+// Avoid some casts to IUnknown*
+@ disable drop_cast @
+expression E, arg2, arg3;
+@@
+(
+- IUnknown_QueryInterface((IUnknown *)&E->%s, arg2, arg3)
++ %s_QueryInterface(&E->%s, arg2, arg3)
+|
+- IUnknown_AddRef((IUnknown *)&E->%s)
++ %s_AddRef(&E->%s)
+|
+- IUnknown_Release((IUnknown *)&E->%s)
++ %s_Release(&E->%s)
+)
+""" % (IIFace_iface, IIFace, IIFace_iface, IIFace_iface, IIFace, IIFace_iface,
+       IIFace_iface, IIFace, IIFace_iface))
+
+
 print("""
 // Sanity: impl_from%s() should be used only from %s members
 @ vtbl @
