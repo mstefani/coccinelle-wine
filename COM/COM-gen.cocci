@@ -11,6 +11,9 @@ tagObject = ""
 separate = 0
 # Limit to only one match
 found = 0
+# Vtbl type
+import re
+r_Tvtbl = re.compile(r"\bI\w+Vtbl$")
 
 @ find @
 type obj, Tv;
@@ -57,7 +60,7 @@ vtbl << find.lpVtbl;
 obj << find.obj;
 tag_obj << find.tag_obj;
 @@
-if not found and Tvtbl.endswith("Vtbl"):
+if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
@@ -70,19 +73,18 @@ Tvtbl << find2.Tv;
 vtbl << find2.lpVtbl;
 obj << find2.obj;
 @@
-if not found and Tvtbl.endswith("Vtbl"):
+if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
-
 
 @script:python@
 Tvtbl << findS.Tv;
 vtbl << findS.lpVtbl;
 obj << findT.obj;
 @@
-if not found and Tvtbl.endswith("Vtbl"):
+if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
@@ -96,7 +98,7 @@ Tvtbl << findS.Tv;
 vtbl << findS.lpVtbl;
 tag_obj << findS.tag_obj;
 @@
-if not found and Tvtbl.endswith("Vtbl"):
+if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
