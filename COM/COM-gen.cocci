@@ -293,11 +293,10 @@ identifier obj_this.OBJ_THIS;
 + impl_from_%s
       (\(iface\|lpiface\))
 
-// #undef is not supportet yet in coccinelle
-//@@
-//identifier obj_this.OBJ_THIS;
-//@@
-//- #undef OBJ_THIS
+@@
+identifier obj_this.OBJ_THIS;
+@@
+- #undef OBJ_THIS
 """ % (Object, IIFace_THIS, Object,
        LPIFACE, IIFace, LPIFACE, IIFace))
 
@@ -408,6 +407,11 @@ identifier iface, wrapper;
 |
 - #define wrapper(iface) (&(iface)->%s)
 )
+
+@@
+identifier wrapcast.wrapper;
+@@
+- #undef wrapper
 
 @@
 identifier wrapcast.wrapper;
