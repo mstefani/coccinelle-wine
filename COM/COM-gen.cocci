@@ -79,9 +79,11 @@ if not found and r_Tvtbl.search(Tvtbl):
     lpVtbl = vtbl.ident
     Object = obj
 
+
 @script:python@
 Tvtbl << findS.Tv;
 vtbl << findS.lpVtbl;
+tag_obj << findS.tag_obj;
 obj << findT.obj;
 @@
 if not found and r_Tvtbl.search(Tvtbl):
@@ -89,6 +91,7 @@ if not found and r_Tvtbl.search(Tvtbl):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+    tagObject = tag_obj.ident
     separate = 1
 
 
@@ -103,6 +106,7 @@ if not found and r_Tvtbl.search(Tvtbl):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = tag_obj.ident
+    tagObject = tag_obj.ident
     separate = 1
     import sys
     print >> sys.stderr, ("Warning: Assuming \"typedef struct %s %s;\"" % (Object, Object))
