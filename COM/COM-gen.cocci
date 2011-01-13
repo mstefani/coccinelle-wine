@@ -133,8 +133,10 @@ if IIFace[0] == "I":
 else:
     LPIFACE = "LP" + IIFace.upper()
 if len(tagObject) > 0:
+    object_types = [Object, "struct " + tagObject]
     tag_obj = "tag_obj"
 else:
+    object_types = [Object]
     tag_obj = ""
 
 ////////////////////////
@@ -304,7 +306,8 @@ identifier obj_this.OBJ_THIS;
 """ % (Object, IIFace_THIS, Object,
        LPIFACE, IIFace, LPIFACE, IIFace))
 
-print("""
+for objectT in object_types:
+    print("""
 // Fixup IIFace to Object casts
 @ disable drop_cast @
 %s *iface;
@@ -317,7 +320,7 @@ print("""
 - (%s *)(lpiface)
 + impl_from_%s(lpiface)
 )
-""" % (IIFace, LPIFACE, Object, IIFace, Object, IIFace))
+""" % (IIFace, LPIFACE, objectT, IIFace, objectT, IIFace))
 
 print("""
 // ICOM_THIS_MULTI replacement
@@ -334,7 +337,8 @@ print("""
 )
 """ % (IIFace, LPIFACE, Object, lpVtbl, Object, IIFace, Object, lpVtbl, Object, IIFace))
 
-print("""
+for objectT in object_types:
+    print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
@@ -372,21 +376,23 @@ print("""
 @@
 - (This.%s)
 + This.%s
-""" % (Object, IIFace, LPIFACE, lpVtbl, IIFace_iface,
-       Object, IIFace, LPIFACE, lpVtbl, IIFace_iface,
-       Object, IIFace, LPIFACE, IIFace_iface,
-       Object, IIFace, LPIFACE, IIFace_iface,
-       Object, lpVtbl, IIFace_iface,
-       Object, lpVtbl, IIFace_iface))
+""" % (objectT, IIFace, LPIFACE, lpVtbl, IIFace_iface,
+       objectT, IIFace, LPIFACE, lpVtbl, IIFace_iface,
+       objectT, IIFace, LPIFACE, IIFace_iface,
+       objectT, IIFace, LPIFACE, IIFace_iface,
+       objectT, lpVtbl, IIFace_iface,
+       objectT, lpVtbl, IIFace_iface))
 
 if IIFace != "IUnknown":
-    print("""
+    typedefIUnknown = "typedef IUnknown;"
+    for objectT in object_types:
+        print("""
 // Replace object to (IUnknown *) casts.
 // Though this two rules are not entirely correct. We just assume that the
 // run for the first iface has eliminated all (IUnknown *)object sites.
 // This is a limitation in coccinelle for now.
 @ disable drop_cast @
-typedef IUnknown;
+%s
 %s This;
 @@
   (IUnknown *)
@@ -399,7 +405,8 @@ typedef IUnknown;
   (IUnknown *)
 -             (This)
 +             &This->%s
-""" % (Object, IIFace_iface, Object, IIFace_iface))
+""" % (typedefIUnknown, objectT, IIFace_iface, objectT, IIFace_iface))
+        typedefIUnknown = ""
 
 print("""
 // Get rid of some ->lpVtbl to IIFace wrappers
