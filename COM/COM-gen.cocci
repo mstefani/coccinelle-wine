@@ -227,10 +227,10 @@ print("""
 type onebyte;
 identifier iface, impl_from_IFace;
 @@
-  static inline %s *
--                   impl_from_IFace
-+                   impl_from_%s
-                                   (%s *iface)
+  %s *
+-      impl_from_IFace
++      impl_from_%s
+                      (%s *iface)
   {
 (
 -      return CONTAINING_RECORD(iface, %s, %s);
