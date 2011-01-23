@@ -236,7 +236,7 @@ identifier iface, impl_from_IFace;
 -      return CONTAINING_RECORD(iface, %s, %s);
 +      return CONTAINING_RECORD(iface, %s, %s);
 |
--      return (%s *)((onebyte *)iface - \(FIELD_OFFSET\|offsetof\)(%s, %s));
+-      return (%s *)((onebyte *)(iface) - \(FIELD_OFFSET\|offsetof\)(%s, %s));
 +      return CONTAINING_RECORD(iface, %s, %s);
 |
 -      return (%s *)iface;
