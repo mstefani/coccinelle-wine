@@ -123,9 +123,11 @@ else:
 if IIFaceVtbl_struct.startswith("struct "):
     IIFaceVtbl = IIFaceVtbl_struct[7:]
     IIFaceVtbl_typedef = ""
+    IIFaceVtbl_all = IIFaceVtbl_struct
 else:
     IIFaceVtbl = IIFaceVtbl_struct
     IIFaceVtbl_typedef = "\ntypedef " + IIFaceVtbl + ";"
+    IIFaceVtbl_all = "\(" + IIFaceVtbl + "\|struct " + IIFaceVtbl + "\)"
 IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
 if IIFace[0] == "I":
@@ -465,24 +467,15 @@ print("""
 // Sanity: impl_from%s() should be used only from %s members
 @ vtbl @
 identifier fn, vtbl;
-type T;
 @@
-  T vtbl = {
+  %s vtbl = {
       ...,
       fn,
       ...,
   };
 
-@ script:python vtblcheck @
-T << vtbl.T;
-f << vtbl.fn;
-fn;
-@@
-if T.endswith("%s"):
-    coccinelle.fn = f
-
 @ good_impl_from_use @
-identifier vtblcheck.fn;
+identifier vtbl.fn;
 position p;
 @@
   fn@p( ... )
@@ -503,4 +496,4 @@ position p != good_impl_from_use.p;
 +     BADBADBAD
       ...>
   }
-""" % (IIFace, IIFaceVtbl, IIFaceVtbl_struct, IIFace, IIFace))
+""" % (IIFace, IIFaceVtbl, IIFaceVtbl_all, IIFace, IIFace))
