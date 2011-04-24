@@ -122,12 +122,8 @@ else:
     IIFaceVtbl_struct = fullIIFaceVtbl
 if IIFaceVtbl_struct.startswith("struct "):
     IIFaceVtbl = IIFaceVtbl_struct[7:]
-    IIFaceVtbl_typedef = ""
-    IIFaceVtbl_all = IIFaceVtbl_struct
 else:
     IIFaceVtbl = IIFaceVtbl_struct
-    IIFaceVtbl_typedef = "\ntypedef " + IIFaceVtbl + ";"
-    IIFaceVtbl_all = "\(" + IIFaceVtbl + "\|struct " + IIFaceVtbl + "\)"
 IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
 if IIFace[0] == "I":
@@ -148,7 +144,8 @@ print("// Generated Wine COM cleanup cocci file\n")
 if not separate:
     print("""
 // Change the COM object
-@ object @%s
+@ object @
+typedef %s;
 typedef %s;
 type obj;
 identifier tag_obj;
@@ -159,11 +156,12 @@ identifier tag_obj;
 +     %s %s;
       ...
   } obj;
-""" % (IIFaceVtbl_typedef, IIFace, tag_obj, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+""" % (IIFace, IIFaceVtbl, tag_obj, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 else:
     print("""
 // Change the COM object
-@ object @%s
+@ object @
+typedef %s;
 typedef %s;
 identifier tag_obj;
 @@
@@ -173,7 +171,7 @@ identifier tag_obj;
 +     %s %s;
       ...
   };
-""" % (IIFaceVtbl_typedef, IIFace, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+""" % (IIFace, IIFaceVtbl, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 
 print("""
 // Fixup the initialization of the object
@@ -468,7 +466,7 @@ print("""
 @ vtbl @
 identifier fn, vtbl;
 @@
-  %s vtbl = {
+  \(%s\|struct %s\) vtbl = {
       ...,
       fn,
       ...,
@@ -496,4 +494,4 @@ position p != good_impl_from_use.p;
 +     BADBADBAD
       ...>
   }
-""" % (IIFace, IIFaceVtbl, IIFaceVtbl_all, IIFace, IIFace))
+""" % (IIFace, IIFaceVtbl, IIFaceVtbl, IIFaceVtbl, IIFace, IIFace))
