@@ -10,7 +10,7 @@
 #define DECLSPEC_HIDDEN
 #define DECLSPEC_HOTPATCH
 #define NSAPI
-#define START_TEST(name)        void name(void)
+#define START_TEST(name)        void start_test(name)
 #define STDMETHODCALLTYPE
 #define todo_wine
 #define UNALIGNED
