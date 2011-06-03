@@ -273,10 +273,10 @@ else:
 """)
 print("""
 +
-+ static inline %s *impl_from_%s(%s *iface)
-+ {
-+     return CONTAINING_RECORD(iface, %s, %s);
-+ }
++static inline %s *impl_from_%s(%s *iface)
++{
++    return CONTAINING_RECORD(iface, %s, %s);
++}
 """ % (Object, IIFace, IIFace, Object, IIFace_iface))
 
 if len(lpVtbl) > 6 and lpVtbl.startswith("lp") and lpVtbl.endswith("Vtbl"):
