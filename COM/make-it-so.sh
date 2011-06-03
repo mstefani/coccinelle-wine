@@ -13,7 +13,7 @@ GENCOCCI=`mktemp --tmpdir COM-$DATE-XXXX.cocci`
 spatch -sp_file "$MYDIR/COM-gen.cocci" -I "$WINE/include" $@ > "$GENCOCCI" || exit 1
 if [ -s "$GENCOCCI" ]; then
     echo Generated $GENCOCCI >&2
-    spatch -sp_file "$GENCOCCI" -macro_file "$MYDIR/../macros" -patch "$WINE" -smpl_spacing $@
+    spatch -sp_file "$GENCOCCI" -macro_file_builtins "$MYDIR/../macros" -patch "$WINE" -smpl_spacing $@
 else
     echo Nothing to do >&2
     exit 42
