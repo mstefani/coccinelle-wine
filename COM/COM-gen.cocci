@@ -6,6 +6,7 @@
 fullIIFaceVtbl = ""
 lpVtbl = ""
 Object = ""
+TObject = ""
 tagObject = ""
 # typedef and struct are separate for the Object
 separate = 0
@@ -65,6 +66,7 @@ if not found and r_Tvtbl.search(Tvtbl):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+    TObject = obj
     tagObject = tag_obj.ident
 
 
@@ -78,6 +80,7 @@ if not found and r_Tvtbl.search(Tvtbl):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+    TObject = obj
 
 
 @script:python@
@@ -91,6 +94,7 @@ if not found and r_Tvtbl.search(Tvtbl):
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
     Object = obj
+    TObject = obj
     tagObject = tag_obj.ident
     separate = 1
 
@@ -105,11 +109,12 @@ if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
     lpVtbl = vtbl.ident
-    Object = tag_obj.ident
+    Object = "struct " + tag_obj.ident
+    TObject = tag_obj.ident
     tagObject = tag_obj.ident
     separate = 1
     import sys
-    print >> sys.stderr, ("Warning: Assuming \"typedef struct %s %s;\"" % (Object, Object))
+    print >> sys.stderr, ("Warning: Assuming \"typedef %s %s;\"" % (Object, TObject))
 
 
 @finalize:python@
@@ -131,10 +136,10 @@ if IIFace[0] == "I":
 else:
     LPIFACE = "LP" + IIFace.upper()
 if len(tagObject) > 0:
-    object_types = [Object, "struct " + tagObject]
+    object_types = [TObject, "struct " + tagObject]
     tag_obj = "tag_obj"
 else:
-    object_types = [Object]
+    object_types = [TObject]
     tag_obj = ""
 
 ////////////////////////
@@ -200,9 +205,9 @@ identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
 +     { &vtbl },
       ...,
   };
-""" % (Object, Object, lpVtbl, IIFace_iface,
+""" % (TObject, Object, lpVtbl, IIFace_iface,
        Object, lpVtbl, IIFace_iface,
-       Object + "Vtbl", Object))
+       TObject + "Vtbl", Object))
 
 print("""
 // Fixup vtbl pointer comparison
