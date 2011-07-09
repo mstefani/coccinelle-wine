@@ -132,8 +132,10 @@ else:
 IIFace = IIFaceVtbl[:-4]        # strip the "Vtbl"
 IIFace_iface = IIFace + "_iface"
 if IIFace[0] == "I":
+    PIFACE = "P" + IIFace[1:].upper()
     LPIFACE = "LP" + IIFace[1:].upper()
 else:
+    PIFACE = "P" + IIFace.upper()
     LPIFACE = "LP" + IIFace.upper()
 if len(tagObject) > 0:
     object_types = [TObject, "struct " + tagObject]
@@ -296,77 +298,91 @@ identifier iface, OBJ_THIS;
 
 @@
 typedef %s;
+typedef %s;
 identifier obj_this.OBJ_THIS;
 %s *iface;
+%s piface;
 %s lpiface;
 @@
 - OBJ_THIS
 + impl_from_%s
-      (\(iface\|lpiface\))
+      (\(iface\|piface\|lpiface\))
 
 @@
 identifier obj_this.OBJ_THIS;
 @@
 - #undef OBJ_THIS
 """ % (Object, IIFace_THIS, Object,
-       LPIFACE, IIFace, LPIFACE, IIFace))
+       PIFACE, LPIFACE, IIFace, PIFACE, LPIFACE, IIFace))
 
 for objectT in object_types:
     print("""
 // Fixup IIFace to Object casts
 @ disable drop_cast @
 %s *iface;
+%s piface;
 %s lpiface;
 @@
 (
 - (%s *)(iface)
 + impl_from_%s(iface)
 |
+- (%s *)(piface)
++ impl_from_%s(piface)
+|
 - (%s *)(lpiface)
 + impl_from_%s(lpiface)
 )
-""" % (IIFace, LPIFACE, objectT, IIFace, objectT, IIFace))
+""" % (IIFace, PIFACE, LPIFACE, objectT, IIFace, objectT, IIFace, objectT, IIFace))
 
 print("""
 // ICOM_THIS_MULTI replacement
 @@
 %s *iface;
+%s piface;
 %s lpiface;
 @@
 (
 - ICOM_THIS_MULTI(%s, %s, iface);
 + %s *This = impl_from_%s(iface);
 |
+- ICOM_THIS_MULTI(%s, %s, piface);
++ %s *This = impl_from_%s(piface);
+|
 - ICOM_THIS_MULTI(%s, %s, lpiface);
 + %s *This = impl_from_%s(lpiface);
 )
-""" % (IIFace, LPIFACE, Object, lpVtbl, Object, IIFace, Object, lpVtbl, Object, IIFace))
+""" % (IIFace, PIFACE, LPIFACE,
+       Object, lpVtbl, Object, IIFace,
+       Object, lpVtbl, Object, IIFace,
+       Object, lpVtbl, Object, IIFace))
 
+all_iface_types = r"\(%s*\|%s\|%s\)" % (IIFace, PIFACE, LPIFACE)
 for objectT in object_types:
     print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
 @@
-- (\(%s *\|%s\))(&(This->%s))
+- (%s)(&(This->%s))
 + &This->%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (\(%s *\|%s\))(&(This.%s))
+- (%s)(&(This.%s))
 + &This.%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (\(%s *\|%s\))(&(This))
+- (%s)(&(This))
 + &This.%s
 
 @ disable drop_cast @
 %s *This;
 @@
-- (\(%s *\|%s\))(This)
+- (%s)(This)
 + &This->%s
 
 // Replace the other member accesses too
@@ -381,10 +397,10 @@ for objectT in object_types:
 @@
 - (This.%s)
 + This.%s
-""" % (objectT, IIFace, LPIFACE, lpVtbl, IIFace_iface,
-       objectT, IIFace, LPIFACE, lpVtbl, IIFace_iface,
-       objectT, IIFace, LPIFACE, IIFace_iface,
-       objectT, IIFace, LPIFACE, IIFace_iface,
+""" % (objectT, all_iface_types, lpVtbl, IIFace_iface,
+       objectT, all_iface_types, lpVtbl, IIFace_iface,
+       objectT, all_iface_types, IIFace_iface,
+       objectT, all_iface_types, IIFace_iface,
        objectT, lpVtbl, IIFace_iface,
        objectT, lpVtbl, IIFace_iface))
 
