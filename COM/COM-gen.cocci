@@ -483,7 +483,20 @@ expression E, arg2, arg3;
 
 
 print("""
-// Sanity: impl_from%s() should be used only from %s members
+// Get rid of the PIFACE and LPIFACE aliases of IIFace*
+@@
+@@
+(
+- %s
++ %s *
+|
+- %s
++ %s *
+)
+""" % (PIFACE, IIFace, LPIFACE, IIFace))
+
+print("""
+// Sanity: impl_from_%s() should be used only from %s members
 @ vtbl @
 identifier fn, vtbl;
 @@
