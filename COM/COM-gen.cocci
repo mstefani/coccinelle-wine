@@ -148,11 +148,26 @@ else:
 // Generate the rules //
 ////////////////////////
 print("// Generated Wine COM cleanup cocci file\n")
+print("""
+// First get rid of the PIFACE and LPIFACE aliases of IIFace*
+@@
+typedef %s;
+typedef %s;
+typedef %s;
+@@
+(
+- %s
++ %s *
+|
+- %s
++ %s *
+)
+""" % (IIFace, PIFACE, LPIFACE, PIFACE, IIFace, LPIFACE, IIFace))
+
 if not separate:
     print("""
 // Change the COM object
 @ object @
-typedef %s;
 typedef %s;
 type obj;
 identifier tag_obj;
@@ -163,12 +178,11 @@ identifier tag_obj;
 +     %s %s;
       ...
   } obj;
-""" % (IIFace, IIFaceVtbl, tag_obj, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+""" % (IIFaceVtbl, tag_obj, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 else:
     print("""
 // Change the COM object
 @ object @
-typedef %s;
 typedef %s;
 identifier tag_obj;
 @@
@@ -178,7 +192,7 @@ identifier tag_obj;
 +     %s %s;
       ...
   };
-""" % (IIFace, IIFaceVtbl, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
+""" % (IIFaceVtbl, fullIIFaceVtbl, lpVtbl, IIFace, IIFace_iface))
 
 print("""
 // Fixup the initialization of the object
@@ -297,92 +311,63 @@ identifier iface, OBJ_THIS;
 )
 
 @@
-typedef %s;
-typedef %s;
 identifier obj_this.OBJ_THIS;
 %s *iface;
-%s piface;
-%s lpiface;
 @@
 - OBJ_THIS
 + impl_from_%s
-      (\(iface\|piface\|lpiface\))
+      (iface)
 
 @@
 identifier obj_this.OBJ_THIS;
 @@
 - #undef OBJ_THIS
-""" % (Object, IIFace_THIS, Object,
-       PIFACE, LPIFACE, IIFace, PIFACE, LPIFACE, IIFace))
+""" % (Object, IIFace_THIS, Object, IIFace, IIFace))
 
 for objectT in object_types:
     print("""
 // Fixup IIFace to Object casts
 @ disable drop_cast @
 %s *iface;
-%s piface;
-%s lpiface;
 @@
-(
 - (%s *)(iface)
 + impl_from_%s(iface)
-|
-- (%s *)(piface)
-+ impl_from_%s(piface)
-|
-- (%s *)(lpiface)
-+ impl_from_%s(lpiface)
-)
-""" % (IIFace, PIFACE, LPIFACE, objectT, IIFace, objectT, IIFace, objectT, IIFace))
+""" % (IIFace, objectT, IIFace))
 
 print("""
 // ICOM_THIS_MULTI replacement
 @@
 %s *iface;
-%s piface;
-%s lpiface;
 @@
-(
 - ICOM_THIS_MULTI(%s, %s, iface);
 + %s *This = impl_from_%s(iface);
-|
-- ICOM_THIS_MULTI(%s, %s, piface);
-+ %s *This = impl_from_%s(piface);
-|
-- ICOM_THIS_MULTI(%s, %s, lpiface);
-+ %s *This = impl_from_%s(lpiface);
-)
-""" % (IIFace, PIFACE, LPIFACE,
-       Object, lpVtbl, Object, IIFace,
-       Object, lpVtbl, Object, IIFace,
-       Object, lpVtbl, Object, IIFace))
+""" % (IIFace, Object, lpVtbl, Object, IIFace))
 
-all_iface_types = r"\(%s*\|%s\|%s\)" % (IIFace, PIFACE, LPIFACE)
 for objectT in object_types:
     print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
 @@
-- (%s)(&(This->%s))
+- (%s *)(&(This->%s))
 + &This->%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (%s)(&(This.%s))
+- (%s *)(&(This.%s))
 + &This.%s
 
 @ disable drop_cast @
 %s This;
 @@
-- (%s)(&(This))
+- (%s *)(&(This))
 + &This.%s
 
 @ disable drop_cast @
 %s *This;
 @@
-- (%s)(This)
+- (%s *)(This)
 + &This->%s
 
 // Replace the other member accesses too
@@ -397,10 +382,10 @@ for objectT in object_types:
 @@
 - (This.%s)
 + This.%s
-""" % (objectT, all_iface_types, lpVtbl, IIFace_iface,
-       objectT, all_iface_types, lpVtbl, IIFace_iface,
-       objectT, all_iface_types, IIFace_iface,
-       objectT, all_iface_types, IIFace_iface,
+""" % (objectT, IIFace, lpVtbl, IIFace_iface,
+       objectT, IIFace, lpVtbl, IIFace_iface,
+       objectT, IIFace, IIFace_iface,
+       objectT, IIFace, IIFace_iface,
        objectT, lpVtbl, IIFace_iface,
        objectT, lpVtbl, IIFace_iface))
 
@@ -481,19 +466,6 @@ expression E, arg2, arg3;
 """ % (IIFace_iface, IIFace, IIFace_iface, IIFace_iface, IIFace, IIFace_iface,
        IIFace_iface, IIFace, IIFace_iface))
 
-
-print("""
-// Get rid of the PIFACE and LPIFACE aliases of IIFace*
-@@
-@@
-(
-- %s
-+ %s *
-|
-- %s
-+ %s *
-)
-""" % (PIFACE, IIFace, LPIFACE, IIFace))
 
 print("""
 // Sanity: impl_from_%s() should be used only from %s members
