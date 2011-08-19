@@ -450,20 +450,33 @@ expression obj;
 if IIFace != "IUnknown":
     print("""
 // Avoid some casts to IUnknown*
-@ disable drop_cast @
+@ disable drop_cast, ptr_to_array @
 expression E, arg2, arg3;
 @@
 (
 - IUnknown_QueryInterface((IUnknown *)&E->%s, arg2, arg3)
 + %s_QueryInterface(&E->%s, arg2, arg3)
 |
+- IUnknown_QueryInterface((IUnknown *)&E.%s, arg2, arg3)
++ %s_QueryInterface(&E.%s, arg2, arg3)
+|
 - IUnknown_AddRef((IUnknown *)&E->%s)
 + %s_AddRef(&E->%s)
 |
+- IUnknown_AddRef((IUnknown *)&E.%s)
++ %s_AddRef(&E.%s)
+|
 - IUnknown_Release((IUnknown *)&E->%s)
 + %s_Release(&E->%s)
+|
+- IUnknown_Release((IUnknown *)&E.%s)
++ %s_Release(&E.%s)
 )
-""" % (IIFace_iface, IIFace, IIFace_iface, IIFace_iface, IIFace, IIFace_iface,
+""" % (IIFace_iface, IIFace, IIFace_iface,
+       IIFace_iface, IIFace, IIFace_iface,
+       IIFace_iface, IIFace, IIFace_iface,
+       IIFace_iface, IIFace, IIFace_iface,
+       IIFace_iface, IIFace, IIFace_iface,
        IIFace_iface, IIFace, IIFace_iface))
 
 
