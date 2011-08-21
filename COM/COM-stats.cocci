@@ -11,7 +11,7 @@ r_Tvtbl = re.compile(r"\b(ns)?I\w+Vtbl\s+\*$")
 
 @ find @
 type T;
-identifier iface ~= ".*\([vV]tbl\|_iface$\)";
+identifier iface =~ "([vV]tbl|_iface$)";
 identifier tag_obj;
 position p;
 @@
@@ -23,7 +23,7 @@ position p;
 
 @ find2 @
 type obj, T;
-identifier iface ~= ".*\([vV]tbl\|_iface$\)";
+identifier iface =~ "([vV]tbl|_iface$)";
 position p;
 @@
   typedef struct {

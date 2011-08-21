@@ -18,7 +18,7 @@ r_Tvtbl = re.compile(r"\bI\w+Vtbl$")
 
 @ find @
 type obj, Tv;
-identifier lpVtbl ~= ".*[vV]tbl";
+identifier lpVtbl =~ "[vV]tbl";
 identifier tag_obj;
 @@
   typedef struct tag_obj {
@@ -29,7 +29,7 @@ identifier tag_obj;
 
 @ find2 @
 type obj, Tv;
-identifier lpVtbl ~= ".*[vV]tbl";
+identifier lpVtbl =~ "[vV]tbl";
 @@
   typedef struct {
       ...
@@ -39,7 +39,7 @@ identifier lpVtbl ~= ".*[vV]tbl";
 
 @ findS @
 type Tv;
-identifier lpVtbl ~= ".*[vV]tbl";
+identifier lpVtbl =~ "[vV]tbl";
 identifier tag_obj;
 @@
   struct tag_obj {
@@ -213,7 +213,7 @@ identifier _Vtbl_;
 
 @@
 identifier obj;
-identifier vtbl ~= "%s"; // FIXME: Dynamically detect the Vtbl
+identifier vtbl =~ "%s"; // FIXME: Dynamically detect the Vtbl
 @@
   static %s obj = {
       ...,
