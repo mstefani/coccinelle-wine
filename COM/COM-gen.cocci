@@ -139,9 +139,11 @@ else:
     LPIFACE = "LP" + IIFace.upper()
 if len(tagObject) > 0:
     object_types = [TObject, "struct " + tagObject]
+    object_types_header = "{" + TObject + ", struct " + tagObject + "}"
     tag_obj = "tag_obj"
 else:
     object_types = [TObject]
+    object_types_header = TObject
     tag_obj = ""
 
 ////////////////////////
@@ -343,8 +345,7 @@ print("""
 + %s *This = impl_from_%s(iface);
 """ % (IIFace, Object, lpVtbl, Object, IIFace))
 
-for objectT in object_types:
-    print("""
+print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
@@ -382,23 +383,21 @@ for objectT in object_types:
 @@
 - (This.%s)
 + This.%s
-""" % (objectT, IIFace, lpVtbl, IIFace_iface,
-       objectT, IIFace, lpVtbl, IIFace_iface,
-       objectT, IIFace, IIFace_iface,
-       objectT, IIFace, IIFace_iface,
-       objectT, lpVtbl, IIFace_iface,
-       objectT, lpVtbl, IIFace_iface))
+""" % (object_types_header, IIFace, lpVtbl, IIFace_iface,
+       object_types_header, IIFace, lpVtbl, IIFace_iface,
+       object_types_header, IIFace, IIFace_iface,
+       object_types_header, IIFace, IIFace_iface,
+       object_types_header, lpVtbl, IIFace_iface,
+       object_types_header, lpVtbl, IIFace_iface))
 
 if IIFace != "IUnknown":
-    typedefIUnknown = "typedef IUnknown;"
-    for objectT in object_types:
-        print("""
+    print("""
 // Replace object to (IUnknown *) casts.
 // Though this two rules are not entirely correct. We just assume that the
 // run for the first iface has eliminated all (IUnknown *)object sites.
 // This is a limitation in coccinelle for now.
 @ disable drop_cast @
-%s
+typedef IUnknown;
 %s This;
 @@
   (IUnknown *)
@@ -411,8 +410,7 @@ if IIFace != "IUnknown":
   (IUnknown *)
 -             (This)
 +             &This->%s
-""" % (typedefIUnknown, objectT, IIFace_iface, objectT, IIFace_iface))
-        typedefIUnknown = ""
+""" % (object_types_header, IIFace_iface, object_types_header, IIFace_iface))
 
 print("""
 // Get rid of some ->lpVtbl to IIFace wrappers
