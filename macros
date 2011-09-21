@@ -9,6 +9,7 @@
 #define CONST                   const
 #define DECLSPEC_HIDDEN
 #define DECLSPEC_HOTPATCH
+#define interface               struct
 #define NSAPI
 #define START_TEST(name)        void start_test(name)
 #define STDMETHODCALLTYPE
