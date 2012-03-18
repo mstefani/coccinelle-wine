@@ -39,15 +39,15 @@ iface << find.iface;
 obj << find.tag_obj;
 p << find.p;
 @@
-print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface.ident, T, obj.ident, p[0].file))
+print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface, T, obj, p[0].file))
 if r_Tiface.search(T):
-    if iface.ident.endswith("_iface"):
+    if iface.endswith("_iface"):
         iface_new += 1
     elif r_Tvtbl.search(T):
         iface_old += 1
     else:
         print("Error detecting iface style")
-    objects.add(p[0].file + "::" + obj.ident)
+    objects.add(p[0].file + "::" + obj)
 else:
     print("Warning: Missdetection")
 
@@ -58,9 +58,9 @@ iface << find2.iface;
 obj << find2.obj;
 p << find2.p;
 @@
-print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface.ident, T, obj, p[0].file))
+print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface, T, obj, p[0].file))
 if r_Tiface.search(T):
-    if iface.ident.endswith("_iface"):
+    if iface.endswith("_iface"):
         iface_new += 1
     elif r_Tvtbl.search(T):
         iface_old += 1

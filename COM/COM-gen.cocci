@@ -64,10 +64,10 @@ tag_obj << find.tag_obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
-    tagObject = tag_obj.ident
+    tagObject = tag_obj
 
 
 @script:python@
@@ -78,7 +78,7 @@ obj << find2.obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
 
@@ -92,10 +92,10 @@ obj << findT.obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
-    tagObject = tag_obj.ident
+    tagObject = tag_obj
     separate = 1
 
 
@@ -108,10 +108,10 @@ tag_obj << findS.tag_obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
-    Object = "struct " + tag_obj.ident
-    TObject = tag_obj.ident
-    tagObject = tag_obj.ident
+    lpVtbl = vtbl
+    Object = "struct " + tag_obj
+    TObject = tag_obj
+    tagObject = tag_obj
     separate = 1
     import sys
     print >> sys.stderr, ("Warning: Assuming \"typedef %s %s;\"" % (Object, TObject))

@@ -10,10 +10,10 @@ MYDIR=`dirname $0`
 DATE=`date +%Y%m%d-%H%M`
 GENCOCCI=`mktemp --tmpdir COM-$DATE-XXXX.cocci`
 
-spatch -sp_file "$MYDIR/COM-gen.cocci" -no_includes $@ > "$GENCOCCI" || exit 1
+spatch --sp-file "$MYDIR/COM-gen.cocci" --no-includes $@ > "$GENCOCCI" || exit 1
 if [ -s "$GENCOCCI" ]; then
     echo Generated $GENCOCCI >&2
-    spatch -sp_file "$GENCOCCI" -macro_file_builtins "$MYDIR/../macros" -no_includes -patch "$WINE" -smpl_spacing $@
+    spatch --sp-file "$GENCOCCI" --macro-file-builtins "$MYDIR/../macros" --no-includes --patch "$WINE" --smpl-spacing $@
 else
     echo Nothing to do >&2
     exit 42
