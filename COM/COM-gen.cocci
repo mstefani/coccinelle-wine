@@ -346,6 +346,28 @@ print("""
 """ % (IIFace, Object, lpVtbl, Object, IIFace))
 
 print("""
+// Don't use impl_from_IFace() outside declarations
+@@
+identifier fn, iface, foo, bar;
+@@
+ fn( ... )
+ {
++    %s *This = impl_from_%s(iface);
+     ...
+(
+     foo(...,
+-             impl_from_%s(iface)
++             This
+         , ...)
+|
+-    (impl_from_%s(iface))->bar
++    This->bar
+)
+     ...
+ }
+""" % (Object, IIFace, IIFace, IIFace))
+
+print("""
 // Replace all object to interface casts to address of instance expressions
 @ disable drop_cast @
 %s *This;
