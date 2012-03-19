@@ -11,7 +11,7 @@ r_Tvtbl = re.compile(r"\b(ns)?I\w+Vtbl\s+\*$")
 
 @ find @
 type T;
-identifier iface =~ "([vV]tbl|_iface$)";
+identifier iface =~ "([vV]tbl|_iface$|^IUnknown_inner$)";
 identifier tag_obj;
 position p;
 @@
@@ -23,7 +23,7 @@ position p;
 
 @ find2 @
 type obj, T;
-identifier iface =~ "([vV]tbl|_iface$)";
+identifier iface =~ "([vV]tbl|_iface$|^IUnknown_inner$)";
 position p;
 @@
   typedef struct {
@@ -41,7 +41,7 @@ p << find.p;
 @@
 print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface, T, obj, p[0].file))
 if r_Tiface.search(T):
-    if iface.endswith("_iface"):
+    if iface.endswith("_iface") or iface == "IUnknown_inner":
         iface_new += 1
     elif r_Tvtbl.search(T):
         iface_old += 1
@@ -60,7 +60,7 @@ p << find2.p;
 @@
 print("find: iface='%s', type='%s', obj='%s, file='%s'" % (iface, T, obj, p[0].file))
 if r_Tiface.search(T):
-    if iface.endswith("_iface"):
+    if iface.endswith("_iface") or iface == "IUnknown_inner":
         iface_new += 1
     elif r_Tvtbl.search(T):
         iface_old += 1
