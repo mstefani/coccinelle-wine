@@ -501,6 +501,26 @@ expression E, arg2, arg3;
 
 
 print("""
+// The third parameter of QueryInterface is NOT an object!
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier riid, ppvObj;
+typedef REFIID;
+type T;
+@@
+ QueryInterface(%s *iface, REFIID riid,
+-                                       T ppvObj
++                                       void **ppv
+               )
+ {
+     <...
+-    ppvObj
++    ppv
+     ...>
+ }
+""" % (IIFace))
+
+print("""
 // Sanity: impl_from_%s() should be used only from %s members
 @ vtbl @
 identifier fn, vtbl;
