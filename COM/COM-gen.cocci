@@ -518,7 +518,23 @@ type T;
 +    ppv
      ...>
  }
-""" % (IIFace))
+
+// Make sure we don't assing the object to ppv
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier riid, ppv;
+%s *This;
+@@
+ QueryInterface(%s *iface, REFIID riid, void **ppv)
+ {
+     <...
+     *ppv =
+-          This
++          NOTANOBJECT
+           ;
+     ...>
+ }
+""" % (IIFace, object_types_header, IIFace))
 
 print("""
 // Sanity: impl_from_%s() should be used only from %s members
