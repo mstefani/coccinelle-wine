@@ -8,6 +8,7 @@ objects = set()
 import re
 r_Tiface = re.compile(r"\b(ns)?I\w+(\s+\*)?$")
 r_Tvtbl = re.compile(r"\b(ns)?I\w+Vtbl\s+\*$")
+r_Tvtbl2 = re.compile(r"\b(ns)?I\w+Vtbl$")
 
 @ find @
 type T;
@@ -69,6 +70,47 @@ if r_Tiface.search(T):
     objects.add(p[0].file + "::" + obj)
 else:
     print("Warning: Missdetection")
+
+
+// Try to detect COM interface implemetations that don't use the standard
+// naming schemes (old or new) for the iface field name.
+@vtable@
+identifier vtbl, QueryInterface, AddRef, Release;
+type T;
+@@
+  T vtbl = {
+      QueryInterface,
+      AddRef,
+      Release,
+      ...,
+  };
+
+@script:python vtbltype@
+T << vtable.T;
+@@
+if not r_Tvtbl2.search(T):
+    cocci.include_match(False)
+
+@oddball depends on vtbltype@
+identifier vtable.vtbl;
+identifier iface !~ "([vV]tbl|_iface$|^IUnknown_inner$)";
+type T;
+T obj;
+position p;
+@@
+(
+  obj.iface@p = &vtbl;
+|
+  obj.iface.lpVtbl@p = &vtbl;
+)
+
+@script:python@
+T << vtable.T;
+iface << oddball.iface;
+obj << oddball.T;
+p << oddball.p;
+@@
+print("oddball: iface='%s', type='%s', obj='%s', file='%s'" % (iface, T, obj, p[0].file))
 
 
 @finalize:python@
