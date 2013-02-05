@@ -11,3 +11,14 @@
       ...
   }
 
+@@
+identifier trace =~ "^(ERR|FIXME|TRACE|WARN)$";
+@@
+
+  DllCanUnloadNow( ... ) {
+?     trace(...);
+      return
+-         S_OK
++         S_FALSE
+      ;
+  }
