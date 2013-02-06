@@ -1,16 +1,31 @@
+#define __cdecl
 #define __ENDTRY
 #define __EXCEPT(x)
 #define __EXCEPT_PAGE_FAULT
+#define __int64                 long long
 #define __RPC_FAR
 #define __RPC_USER
+#define __stdcall
+#define __thiscall
 #define __TRY
 #define __WINE_ALLOC_SIZE(x)
 #define CDECL
 #define CONST                   const
+#define DECL_HANDLER(name)      void req_name(name)
+#define DECLSPEC_ALIGN(x)
 #define DECLSPEC_HIDDEN
 #define DECLSPEC_HOTPATCH
+#define EXTERN_C
+#define FAR
+#define GDIPCONST               const
+#define IN
 #define interface               struct
+#define NEAR
 #define NSAPI
+#define NTAPI
+#define OPTIONAL
+#define OUT
+#define PASCAL
 #define START_TEST(name)        void start_test(name)
 #define STDMETHODCALLTYPE
 #define todo_wine
@@ -18,19 +33,9 @@
 #define USER_DRIVER
 #define WINAPI
 #define WINAPIV
+#define WINE_GLAPI
 #define WINUSERAPI
 #define XMLCALL
 
-#define SERVER_START_REQ(type) \
-    do { \
-        struct __server_request_info __req; \
-        struct type##_request * const req = &__req.u.req.type##_request; \
-        const struct type##_reply * const reply = &__req.u.reply.type##_reply; \
-        memset( &__req.u.req, 0, sizeof(__req.u.req) ); \
-        __req.u.req.request_header.req = REQ_##type; \
-        __req.data_count = 0; \
-        (void)reply; \
-        do
-#define SERVER_END_REQ \
-        while(0); \
-    } while(0)
+#define SERVER_START_REQ(type)  do
+#define SERVER_END_REQ          while(0);
