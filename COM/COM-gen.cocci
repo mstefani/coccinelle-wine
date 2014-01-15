@@ -510,27 +510,27 @@ type T;
 @@
  QueryInterface(%s *iface, REFIID riid,
 -                                       T ppvObj
-+                                       void **ppv
++                                       void **ret_iface
                )
  {
      <...
 -    ppvObj
-+    ppv
++    ret_iface
      ...>
  }
 
-// Make sure we don't assing the object to ppv
+// Make sure we don't assing the object to ret_iface
 @@
 identifier QueryInterface =~ "_QueryInterface$";
-identifier riid, ppv;
+identifier riid, ret_iface;
 %s *This;
 @@
- QueryInterface(%s *iface, REFIID riid, void **ppv)
+ QueryInterface(%s *iface, REFIID riid, void **ret_iface)
  {
      <...
-     *ppv =
--          This
-+          NOTANOBJECT
+     *ret_iface =
+-                 This
++                 NOTANOBJECT
            ;
      ...>
  }
