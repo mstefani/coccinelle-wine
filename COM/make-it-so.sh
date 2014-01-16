@@ -15,6 +15,7 @@ if [ -s "$GENCOCCI" ]; then
     echo Generated $GENCOCCI >&2
     spatch --sp-file "$GENCOCCI" --macro-file-builtins "$MYDIR/../macros" --no-includes --patch "$WINE" --smpl-spacing $@
 else
+    rm "$GENCOCCI"
     echo Nothing to do >&2
     exit 42
 fi
