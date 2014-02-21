@@ -1,6 +1,7 @@
 // Parse some statistics for COM interfaces implemented by Wine.
 
 @initialize:python@
+@@
 iface_old = 0
 iface_new = 0
 objects = set()
@@ -114,6 +115,7 @@ print("oddball: iface='%s', type='%s', obj='%s', file='%s'" % (iface, T, obj, p[
 
 
 @finalize:python@
+@@
 print('New iface style "_iface": %d' % (iface_new))
 print('Old iface style "lpVtbl": %d' % (iface_old))
 print("Total of %d ifaces in %d objects" % (iface_new + iface_old, len(objects)))

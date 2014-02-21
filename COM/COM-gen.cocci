@@ -2,6 +2,7 @@
 // for an interface.
 
 @initialize:python@
+@@
 # Parsed stuff
 fullIIFaceVtbl = ""
 lpVtbl = ""
@@ -118,6 +119,7 @@ if not found and r_Tvtbl.search(Tvtbl):
 
 
 @finalize:python@
+@@
 if not found:
     quit()
 
