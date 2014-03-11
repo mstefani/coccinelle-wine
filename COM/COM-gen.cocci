@@ -123,6 +123,9 @@ if not found and r_Tvtbl.search(Tvtbl):
 if not found:
     quit()
 
+if fullIIFaceVtbl.startswith("const IDocHostContainerVtbl"):
+    quit()      # False positive, badly named type
+
 if fullIIFaceVtbl.startswith("const "):
     IIFaceVtbl_struct = fullIIFaceVtbl[6:]
 else:

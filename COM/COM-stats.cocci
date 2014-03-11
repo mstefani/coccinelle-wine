@@ -46,7 +46,10 @@ if r_Tiface.search(T):
     if iface.endswith("_iface") or iface == "IUnknown_inner":
         iface_new += 1
     elif r_Tvtbl.search(T):
-        iface_old += 1
+        if not T.startswith("const IDocHostContainerVtbl"):
+            iface_old += 1
+        else:
+            print("Warning: Missdetection. Badly named type.")
     else:
         print("Error detecting iface style")
     objects.add(p[0].file + "::" + obj)
