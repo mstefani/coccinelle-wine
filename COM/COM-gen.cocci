@@ -295,7 +295,6 @@ else:
   struct tag_obj { ... };
 """)
 print("""
-+
 +static inline %s *impl_from_%s(%s *iface)
 +{
 +    return CONTAINING_RECORD(iface, %s, %s);
