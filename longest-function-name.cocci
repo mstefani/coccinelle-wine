@@ -3,6 +3,7 @@
 // Copyright: Michael Stefaniuc <mstefani@redhat.com>
 
 @initialize:python@
+@@
 maxlen = 0
 strings = {}
 
@@ -22,4 +23,5 @@ elif t == maxlen:
     strings[f.ident] = 0
 
 @finalize:python@
+@@
 print(maxlen, sorted(strings.keys()))
