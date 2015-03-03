@@ -3,6 +3,7 @@
 #define __EXCEPT(x)
 #define __EXCEPT_PAGE_FAULT
 #define __int64                 long long
+#define __RPC_API
 #define __RPC_FAR
 #define __RPC_USER
 #define __stdcall
@@ -26,6 +27,9 @@
 #define OPTIONAL
 #define OUT
 #define PASCAL
+#define PURE
+#define RPC_ENTRY
+#define RPCRTAPI
 #define START_TEST(name)        void start_test(name)
 #define STDMETHODCALLTYPE
 #define todo_wine
