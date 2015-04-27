@@ -2,6 +2,7 @@
 // for an interface.
 
 @initialize:python@
+@@
 # Parsed stuff
 fullIIFaceVtbl = ""
 lpVtbl = ""
@@ -64,10 +65,10 @@ tag_obj << find.tag_obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
-    tagObject = tag_obj.ident
+    tagObject = tag_obj
 
 
 @script:python@
@@ -78,7 +79,7 @@ obj << find2.obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
 
@@ -92,10 +93,10 @@ obj << findT.obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
+    lpVtbl = vtbl
     Object = obj
     TObject = obj
-    tagObject = tag_obj.ident
+    tagObject = tag_obj
     separate = 1
 
 
@@ -108,18 +109,22 @@ tag_obj << findS.tag_obj;
 if not found and r_Tvtbl.search(Tvtbl):
     found = 1
     fullIIFaceVtbl = Tvtbl
-    lpVtbl = vtbl.ident
-    Object = "struct " + tag_obj.ident
-    TObject = tag_obj.ident
-    tagObject = tag_obj.ident
+    lpVtbl = vtbl
+    Object = "struct " + tag_obj
+    TObject = tag_obj
+    tagObject = tag_obj
     separate = 1
     import sys
     print >> sys.stderr, ("Warning: Assuming \"typedef %s %s;\"" % (Object, TObject))
 
 
 @finalize:python@
+@@
 if not found:
     quit()
+
+if fullIIFaceVtbl.startswith("const IDocHostContainerVtbl"):
+    quit()      # False positive, badly named type
 
 if fullIIFaceVtbl.startswith("const "):
     IIFaceVtbl_struct = fullIIFaceVtbl[6:]
@@ -290,7 +295,6 @@ else:
   struct tag_obj { ... };
 """)
 print("""
-+
 +static inline %s *impl_from_%s(%s *iface)
 +{
 +    return CONTAINING_RECORD(iface, %s, %s);
@@ -344,6 +348,28 @@ print("""
 - ICOM_THIS_MULTI(%s, %s, iface);
 + %s *This = impl_from_%s(iface);
 """ % (IIFace, Object, lpVtbl, Object, IIFace))
+
+print("""
+// Don't use impl_from_IFace() outside declarations
+@@
+identifier fn, iface, foo, bar;
+@@
+ fn( ... )
+ {
++    %s *This = impl_from_%s(iface);
+     ...
+(
+     foo(...,
+-             impl_from_%s(iface)
++             This
+         , ...)
+|
+-    (impl_from_%s(iface))->bar
++    This->bar
+)
+     ...
+ }
+""" % (Object, IIFace, IIFace, IIFace))
 
 print("""
 // Replace all object to interface casts to address of instance expressions
@@ -477,6 +503,42 @@ expression E, arg2, arg3;
        IIFace_iface, IIFace, IIFace_iface,
        IIFace_iface, IIFace, IIFace_iface))
 
+
+print("""
+// The third parameter of QueryInterface is NOT an object!
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier riid, ppvObj;
+typedef REFIID;
+type T;
+@@
+ QueryInterface(%s *iface, REFIID riid,
+-                                       T ppvObj
++                                       void **ret_iface
+               )
+ {
+     <...
+-    ppvObj
++    ret_iface
+     ...>
+ }
+
+// Make sure we don't assing the object to ret_iface
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier riid, ret_iface;
+%s *This;
+@@
+ QueryInterface(%s *iface, REFIID riid, void **ret_iface)
+ {
+     <...
+     *ret_iface =
+-                 This
++                 NOTANOBJECT
+           ;
+     ...>
+ }
+""" % (IIFace, object_types_header, IIFace))
 
 print("""
 // Sanity: impl_from_%s() should be used only from %s members
