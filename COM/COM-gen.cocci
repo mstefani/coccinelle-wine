@@ -208,8 +208,9 @@ typedef %s;
 %s *This;
 identifier _Vtbl_;
 @@
-- This->%s = &_Vtbl_
-+ This->%s.lpVtbl = &_Vtbl_
+- This->%s
++ This->%s.lpVtbl
+                  = &_Vtbl_
 
 @@
 %s This;
