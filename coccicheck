@@ -15,7 +15,7 @@ if ($ARGV[0] !~ /\.cocci$/) {
 } else {
    $srcdir = $ARGV[1];
 }
-$srcdir =~ s,/\K[^/]+$,,;
+$srcdir =~ s,/\K[^/]+$,, if (! -d $srcdir);
 $srcdir = `cd '$srcdir' && git rev-parse --show-toplevel`;
 chomp($srcdir);
 
