@@ -2,7 +2,7 @@
 // implementation of that function. Don't output a FIXME there.
 //
 // Confidence: Medium
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @@ @@
   DllCanUnloadNow( ... ) {

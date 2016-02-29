@@ -2,7 +2,7 @@
 // be used instead.
 //
 // Confidence: High
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @ disable drop_cast @
 typedef LPARAM;

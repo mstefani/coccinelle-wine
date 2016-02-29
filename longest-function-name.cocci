@@ -1,6 +1,6 @@
 // Find and print the function with the longest name
 //
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @initialize:python@
 @@

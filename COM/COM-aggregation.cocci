@@ -4,7 +4,7 @@
 //        - Works only on IUnknown_iface style interfaces aka after a basic
 //          COM cleanup with COM-gen.cocci.
 //
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @ object @
 typedef IUnknown;

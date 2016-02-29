@@ -1,7 +1,7 @@
 // Don't use negation for FAILED/SUCCEEDED
 //
 // Confidence: High
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @@ expression E; @@
 

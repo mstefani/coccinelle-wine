@@ -3,7 +3,7 @@
 // skip() changed to win_skip().
 //
 // Confidence: Unknown
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 @ okskip @
 position p;
 expression E, E1;

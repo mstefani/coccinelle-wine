@@ -3,7 +3,7 @@
 // Warning: Has some false positives in Wine.
 //
 // Confidence: Medium
-// Copyright: Michael Stefaniuc <mstefani@redhat.com>
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
 
 @ bitwise disable drop_cast @
 identifier i;
