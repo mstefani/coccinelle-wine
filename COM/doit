@@ -1,0 +1,82 @@
+#!/bin/bash
+WINESRC="/j/wine/source/COM/dlls"
+WINEBUILD=$WINESRC
+OUTPUT_DIR="/tmp/COM-out"
+MAKEITSO="$HOME/work/janitorial/coccinelle/COM/make-it-so.sh"
+HEADER="$HOME/work/janitorial/coccinelle/COM/src-header.sh"
+GIT_APPLY="git apply --whitespace=nowarn"
+NR_PAR=`/usr/bin/getconf _NPROCESSORS_ONLN`
+let NR_PAR++
+
+cd "$WINESRC" || exit 1
+mkdir -p $OUTPUT_DIR
+change=0
+git reset --hard
+find "$WINESRC" -name \*.[ch] | grep -v nsiface.h | while read i; do
+    if [ "$i" != "${i/_p\.c/.c}" -a -f ${i/_p\.c/.idl} ]; then
+        echo "Skipping generated file $i" >&2
+        continue
+    fi
+    echo "$MAKEITSO" "$i" '> /dev/null; ret=$?; if [ "$ret" -ne 42 ]; then echo "'$i'"; fi; true'
+done | spawn -j$NR_PAR | while read i; do
+    if [ $change -gt 0 ]; then
+        git reset --hard
+        change=0
+    fi
+    ret=0
+    while [ "$ret" -eq 0 ]; do
+        echo "$MAKEITSO" $i '>' "$OUTPUT_DIR/diff"
+        "$MAKEITSO" $i > "$OUTPUT_DIR/diff"
+        ret=$?
+        if [ "$ret" -ne 42 ]; then
+            let change++
+            $GIT_APPLY "$OUTPUT_DIR/diff"
+            ret=$?
+        fi
+    done
+    basedir=`dirname $i | perl -p -e 's,'"$WINESRC"',,'`
+    outdir="/tmp/COM-out/$basedir"
+    f=`basename $i`
+    mkdir -p "$outdir"
+    if [ "$ret" -eq 42 ]; then
+        if git diff --quiet; then
+            continue
+        fi
+        git diff > "$outdir/$f.diff"
+        (cd "$WINEBUILD/$basedir" && make -s) >  "$outdir/$f.build" 2>&1
+        if grep -q Error "$outdir/$f.build"; then
+            touch "$outdir/$f.buildfail"
+        fi
+        if [ ! -s "$outdir/$f.build" ]; then
+            rm "$outdir/$f.build"
+        fi
+    else
+        echo "ret=$ret" > "$outdir/$f.fail"
+    fi
+done
+
+# Cleanups
+git reset --hard
+find "$OUTPUT_DIR" -type d -print0 | xargs -0 -n1 rmdir -p --ignore-fail-on-non-empty
+rm "$OUTPUT_DIR"/diff
+
+# Generate a diff for each iface in a header file
+find "$OUTPUT_DIR" -name \*.h.diff | while read i; do
+    h=${i%%.diff}
+    mkdir "$h"
+    pushd "$h" || continue
+    $HEADER "$WINESRC"${h/$OUTPUT_DIR/}
+    popd
+done
+
+# Test the generated header iface diffs
+find "$OUTPUT_DIR" -name \*.diff | fgrep .h/I | while read i; do
+    (cd "$WINESRC" && $GIT_APPLY $i) || continue
+    d=$(dirname $(dirname $i) | perl -p -e 's,'"$OUTPUT_DIR"',,')
+    (cd "$WINEBUILD/$d" && make -s) > ${i/.diff/.build} 2>&1
+    if [ ! -s "${i/.diff/.build}" ]; then
+        rm "${i/.diff/.build}"
+    fi
+    (cd "$WINESRC" && git reset --hard && cd "$WINEBUILD/$d" && make -s)
+done
+
