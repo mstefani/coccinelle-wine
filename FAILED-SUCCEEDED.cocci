@@ -2,6 +2,7 @@
 //
 // Confidence: High
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --include-headers --no-includes
 
 @@ expression E; @@
 

@@ -3,6 +3,7 @@
 //
 // Confidence: High
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --no-includes
 
 @ disable drop_cast @
 typedef LPARAM;

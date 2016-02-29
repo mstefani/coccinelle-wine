@@ -4,6 +4,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --no-includes
 
 @ bitwise disable drop_cast @
 identifier i;

@@ -19,4 +19,10 @@ $srcdir =~ s,/\K[^/]+$,, if (! -d $srcdir);
 $srcdir = `cd '$srcdir' && git rev-parse --show-toplevel`;
 chomp($srcdir);
 
-system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--quiet', @ARGV);
+my @cocci = grep(/\.cocci$/, @ARGV);
+my $optstr = `grep -P '^\\s*//\\s*Options:' '$cocci[0]' | cut -d: -f2`;
+$optstr =~ s/^\s+//;
+$optstr =~ s/\s+$//;
+my @opts = split(/\s+/, $optstr);
+
+system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--quiet', @opts, @ARGV);

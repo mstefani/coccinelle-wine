@@ -3,6 +3,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --no-includes
 
 @@ @@
   DllCanUnloadNow( ... ) {
