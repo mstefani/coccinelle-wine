@@ -1,0 +1,22 @@
+#!/usr/bin/perl -w
+#
+# coccicheck
+#       A more generic coccinelle wrapper but following the same idea from the Linux version.
+use strict;
+
+my $nrproc = `getconf _NPROCESSORS_ONLN`;
+chomp($nrproc);
+my $macros = $0;
+$macros =~ s,/[^/]+$,/macros,;
+
+my $srcdir;
+if ($ARGV[0] !~ /\.cocci$/) {
+   $srcdir = $ARGV[0];
+} else {
+   $srcdir = $ARGV[1];
+}
+$srcdir =~ s,/\K[^/]+$,,;
+$srcdir = `cd '$srcdir' && git rev-parse --show-toplevel`;
+chomp($srcdir);
+
+system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--quiet', @ARGV);
