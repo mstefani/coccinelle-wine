@@ -73,7 +73,7 @@ def check_format(fmt, args, func, p):
                         ERR(p, "Format specifier for debugstr arg %d is %%%s instead of %%s" % (i + 1, spec[i][-1]))
         else:
             ERR(p, "Nr of format specifiers (%d) doesn't match the args (%d)" % (len(spec), len(args.elements)))
-        print(spec)
+        #print(spec)
 
 
 @r@
