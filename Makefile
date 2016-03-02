@@ -8,6 +8,7 @@ COCCI_FILES = \
 	casts/cast-zero.cocci \
 	DllCanUnloadNow.cocci \
 	register.cocci \
+	SetRectEmpty.cocci \
 	string-not-empty.cocci \
 	tests/ok.cocci
 
