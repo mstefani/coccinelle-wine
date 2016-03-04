@@ -7,6 +7,7 @@ COCCI_FILES = \
 	casts/cast-NULL.cocci \
 	casts/cast-zero.cocci \
 	casts/selfcast.cocci \
+	COM/method-forward.cocci \
 	DllCanUnloadNow.cocci \
 	register.cocci \
 	SetRectEmpty.cocci \
