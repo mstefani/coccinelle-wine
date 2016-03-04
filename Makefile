@@ -6,6 +6,7 @@ COCCI_FILES = \
 	debug/trace.cocci \
 	casts/cast-NULL.cocci \
 	casts/cast-zero.cocci \
+	casts/makeparam.cocci \
 	casts/selfcast.cocci \
 	COM/method-forward.cocci \
 	DllCanUnloadNow.cocci \
