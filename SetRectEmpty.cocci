@@ -6,6 +6,19 @@
 // Comments: FIXME: SetRectEmpty cannot be used from all places. This produces false positives.
 
 @@
+typedef RECT;
+typedef LPRECT;
+RECT rect;
+expression l, t, r, b;
+@@
+- rect.left = l;
+- rect.top = t;
+- rect.right = r;
+- rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+
+
+@@
 expression E;
 @@
 - SetRect
@@ -13,13 +26,3 @@ expression E;
          (E,
 -            0, 0, 0, 0
          )
-
-
-@@
-expression r;
-@@
-- r.left = 0;
-- r.top = 0;
-- r.right = 0;
-- r.bottom = 0;
-+ SetRectEmpty(&r);
