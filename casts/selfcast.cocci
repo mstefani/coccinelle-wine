@@ -2,6 +2,7 @@
 //
 // Confidence: High (Medium in reality due to coccinelle limitations)
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options:
 
 @ disable drop_cast @
 type T;
