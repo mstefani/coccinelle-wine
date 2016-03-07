@@ -3,7 +3,7 @@
 // modified in between.
 //
 // Confidence: Medium
-// Copyright:  Michael Stefaniuc <mstefani@redhat.com>
+// Copyright:  Michael Stefaniuc <mstefani@winehq.org>
 // License:    LGPLv2.1+
 //
 // TODO:
