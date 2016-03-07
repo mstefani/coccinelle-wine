@@ -9,6 +9,7 @@ COCCI_FILES = \
 	casts/makeparam.cocci \
 	casts/selfcast.cocci \
 	COM/method-forward.cocci \
+	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
 	register.cocci \
 	SetRectEmpty.cocci \
