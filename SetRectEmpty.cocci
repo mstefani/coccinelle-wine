@@ -2,7 +2,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --include-headers --no-includes
+// Options: --include-headers --recursive-includes --include-headers-for-types
 // Comments: FIXME: SetRectEmpty cannot be used from all places. This produces false positives.
 
 @@
