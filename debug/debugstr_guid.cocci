@@ -6,15 +6,17 @@
 // Comments: Make use of the new format string support from coccinelle.
 
 @@
-identifier trace =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)$";
-identifier trace_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
-identifier channel;
+identifier dbg =~ "^(WINE_)?(ERR|FIXME|trace|TRACE|WARN)$";
+identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
+identifier channel, file, line;
 expression E;
 @@
 (
- trace
+ dbg
 |
- trace_(channel)
+ dbg_(channel)
+|
+ trace_(file, line)
 )
        (...,
 -       E.Data1, E.Data2, E.Data3, E.Data4[0], E.Data4[1], E.Data4[2],
