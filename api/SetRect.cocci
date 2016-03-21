@@ -12,8 +12,13 @@ RECT rect;
 expression l, t, r, b;
 @@
 - rect.left = l;
+(
 - rect.top = t;
 - rect.right = r;
+|
+- rect.right = r;
+- rect.top = t;
+)
 - rect.bottom = b;
 + SetRect(&rect, l, t, r, b);
 
