@@ -1,4 +1,5 @@
 COCCI_FILES = \
+	api/SetRect.cocci \
 	boolean/cond-false-true.cocci \
 	boolean/cond-true-false.cocci \
 	boolean/FAILED-SUCCEEDED.cocci \
@@ -12,7 +13,6 @@ COCCI_FILES = \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
 	register.cocci \
-	SetRectEmpty.cocci \
 	string-not-empty.cocci \
 	tests/ok.cocci
 

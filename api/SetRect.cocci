@@ -1,9 +1,9 @@
-// Use SectRectEmpty instead of open conding it.
+// Use SectRect() and variants instead of open conding them.
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --include-headers --recursive-includes --include-headers-for-types
-// Comments: FIXME: SetRectEmpty cannot be used from all places. This produces false positives.
+// Comments: FIXME: SetRect cannot be used from all places. This produces false positives.
 
 @@
 typedef RECT;
