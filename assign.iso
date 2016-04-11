@@ -1,0 +1,27 @@
+// The order of the rules is important. The higher order rule replaces
+// the first position, the rest is taken care of by the lower order rules.
+
+Expression
+@ assign4 @
+expression A, B, C, D, E;
+@@
+ A = B = C = D = E => B = A = C = D = E => C = A = B = D = E => D = A = B = C = E
+
+Expression
+@ assign3 @
+expression A, B, C, D;
+@@
+ A = B = C = D => B = A = C = D => C = A = B = D
+
+Expression
+@ assign2 @
+expression A, B, C;
+@@
+ A = B = C => B = A = C
+
+// Not working, cannot be expressed as an isomorphism
+//Statement
+//@ assign_2 @
+//expression A, B, C, D;
+//@@
+// A = B; C = D; => C = D; A = B;

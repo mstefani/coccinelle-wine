@@ -5,6 +5,8 @@
 // Options: --include-headers --recursive-includes --include-headers-for-types
 // Comments: FIXME: SetRect cannot be used from all places. This produces false positives.
 
+using "../assign.iso"
+
 @@
 typedef RECT;
 typedef LPRECT;
@@ -38,7 +40,7 @@ RECT rect;
 expression l, b;
 @@
 - rect.left = l;
-- rect.right = rect.top = rect.bottom = b;
+- rect.top = rect.right = rect.bottom = b;
 + SetRect(&rect, l, b, b, b);
 
 
@@ -46,7 +48,7 @@ expression l, b;
 RECT rect;
 expression b;
 @@
-- rect.left = rect.right = rect.top = rect.bottom = b;
+- rect.left = rect.top = rect.right = rect.bottom = b;
 + SetRect(&rect, b, b, b, b);
 
 
