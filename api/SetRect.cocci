@@ -37,6 +37,15 @@ expression l, t, b;
 
 @@
 RECT rect;
+expression t, b;
+@@
+- rect.left = rect.top = t;
+- rect.right = rect.bottom = b;
++ SetRect(&rect, t, t, b, b);
+
+
+@@
+RECT rect;
 expression l, b;
 @@
 - rect.left = l;
