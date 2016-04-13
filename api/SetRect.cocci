@@ -7,7 +7,11 @@
 
 using "../assign.iso"
 
+@ skip @
 @@
+#include "gdi_private.h"
+
+@ depends on !skip @
 typedef RECT;
 typedef LPRECT;
 RECT rect;
@@ -25,7 +29,7 @@ expression l, t, r, b;
 + SetRect(&rect, l, t, r, b);
 
 
-@@
+@ depends on !skip @
 RECT rect;
 expression l, t, b;
 @@
@@ -35,7 +39,7 @@ expression l, t, b;
 + SetRect(&rect, l, t, b, b);
 
 
-@@
+@ depends on !skip @
 RECT rect;
 expression t, r, b;
 @@
@@ -45,7 +49,7 @@ expression t, r, b;
 + SetRect(&rect, t, t, r, b);
 
 
-@@
+@ depends on !skip @
 RECT rect;
 expression t, b;
 @@
@@ -54,7 +58,7 @@ expression t, b;
 + SetRect(&rect, t, t, b, b);
 
 
-@@
+@ depends on !skip @
 RECT rect;
 expression l, b;
 @@
@@ -63,7 +67,7 @@ expression l, b;
 + SetRect(&rect, l, b, b, b);
 
 
-@@
+@ depends on !skip @
 RECT rect;
 expression b;
 @@
@@ -71,7 +75,7 @@ expression b;
 + SetRect(&rect, b, b, b, b);
 
 
-@@
+@ depends on !skip @
 expression E;
 @@
 - SetRect
