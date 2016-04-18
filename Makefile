@@ -5,6 +5,7 @@ COCCI_FILES = \
 	boolean/FAILED-SUCCEEDED.cocci \
 	debug/debugstr_guid.cocci \
 	debug/trace.cocci \
+	debug/wine_dbgstr_rect.cocci \
 	casts/cast-NULL.cocci \
 	casts/cast-zero.cocci \
 	casts/makeparam.cocci \
