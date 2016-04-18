@@ -83,3 +83,14 @@ expression rect;
          (rect,
 -            0, 0, 0, 0
          )
+
+
+// Sanity check to not use an RECT field in the SetRect.
+@@
+expression rect;
+identifier fld;
+@@
+  SetRect(&rect, ...,
+-                     <+... rect.fld ...+>,
++                     BADBADBAD,
+                                ...)
