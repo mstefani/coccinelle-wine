@@ -76,10 +76,10 @@ expression b;
 
 
 @ depends on !skip @
-expression E;
+expression rect;
 @@
 - SetRect
 + SetRectEmpty
-         (E,
+         (rect,
 -            0, 0, 0, 0
          )
