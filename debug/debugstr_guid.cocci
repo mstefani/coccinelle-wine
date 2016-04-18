@@ -21,5 +21,5 @@ expression E;
        (...,
 -       E.Data1, E.Data2, E.Data3, E.Data4[0], E.Data4[1], E.Data4[2],
 -       E.Data4[3], E.Data4[4], E.Data4[5], E.Data4[6], E.Data4[7]
-+       debugstr_guid(E)
++       debugstr_guid(&E)
  , ... )
