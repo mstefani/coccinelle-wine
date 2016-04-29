@@ -90,7 +90,14 @@ expression rect;
 expression rect;
 identifier fld;
 @@
+(
   SetRect(&rect, ...,
--                     <+... rect.fld ...+>,
-+                     BADBADBAD,
-                                ...)
+-                     <+... rect.fld ...+>
++                     BADBADBAD
+                                ,...)
+|
+  SetRect(&rect, ...,
+-                     <+... rect.fld ...+>
++                     BADBADBAD
+                                )
+)
