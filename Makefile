@@ -1,4 +1,5 @@
 COCCI_FILES = \
+	api/IsRectEmpty.cocci \
 	api/SetRect.cocci \
 	boolean/cond-false-true.cocci \
 	boolean/cond-true-false.cocci \
