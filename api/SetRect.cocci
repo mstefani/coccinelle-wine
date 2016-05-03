@@ -1,4 +1,4 @@
-// Use SectRect() and variants instead of open conding them.
+// Use SetRect() and variants instead of open conding them.
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
