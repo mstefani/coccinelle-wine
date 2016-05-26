@@ -3,7 +3,7 @@
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --include-headers --no-includes
-// Comments: FIXME: SetRect cannot be used from all places. This produces false positives.
+// Comments: FIXME: IsRectEmpty cannot be used from all places. This produces false positives.
 
 @ skip @
 @@
