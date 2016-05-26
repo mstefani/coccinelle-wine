@@ -1,0 +1,22 @@
+// Permutations for chained AND expressions. Only correct in special cases!
+//
+// The order of the rules is important. The higher order rule replaces
+// the first position, the rest is taken care of by the lower order rules.
+
+Expression
+@ bin_and4 @
+expression A, B, C, D;
+@@
+ A && B && C && D => B && A && C && D => C && A && B && D => D && A && B && C
+
+Expression
+@ bin_and3 @
+expression A, B, C;
+@@
+ A && B && C => B && A && C => C && A && B
+
+Expression
+@ bin_and2 @
+expression A, B;
+@@
+ A && B => B && A
