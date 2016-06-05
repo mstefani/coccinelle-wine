@@ -2,6 +2,7 @@ COCCI_FILES = \
 	api/EqualRect.cocci \
 	api/InflateRect.cocci \
 	api/IsRectEmpty.cocci \
+	api/OffsetRect.cocci \
 	api/SetRect.cocci \
 	boolean/cond-false-true.cocci \
 	boolean/cond-true-false.cocci \
