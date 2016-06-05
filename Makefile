@@ -1,5 +1,6 @@
 COCCI_FILES = \
 	api/EqualRect.cocci \
+	api/InflateRect.cocci \
 	api/IsRectEmpty.cocci \
 	api/SetRect.cocci \
 	boolean/cond-false-true.cocci \
