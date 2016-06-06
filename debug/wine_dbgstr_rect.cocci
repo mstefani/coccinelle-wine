@@ -6,15 +6,19 @@
 // Comments: Make use of the new format string support from coccinelle.
 
 @ disable ptr_to_array @
-identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)$";
+identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
-identifier channel;
+identifier channel, file, line;
 expression r;
 @@
 (
  dbg
 |
  dbg_(channel)
+|
+ ok_(file, line)
+|
+ trace_(file, line)
 )
        (...,
 -       r->left, r->top, r->right, r->bottom
@@ -23,15 +27,19 @@ expression r;
 
 
 @@
-identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)$";
+identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
-identifier channel;
+identifier channel, file, line;
 expression r;
 @@
 (
  dbg
 |
  dbg_(channel)
+|
+ ok_(file, line)
+|
+ trace_(file, line)
 )
        (...,
 -       r.left, r.top, r.right, r.bottom
