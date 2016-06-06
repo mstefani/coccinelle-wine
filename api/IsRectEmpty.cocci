@@ -9,6 +9,7 @@
 @@
 #include "gdi_private.h"
 
+
 @ depends on !skip @
 expression rect;
 @@
@@ -30,4 +31,28 @@ expression rect;
 |
 - (rect->top >= rect->bottom) || (rect->left >= rect->right)
 + IsRectEmpty(rect)
+)
+
+
+@ depends on skip @
+expression rect;
+@@
+(
+- (rect.left >= rect.right) || (rect.top >= rect.bottom)
++ is_rect_empty(&rect)
+|
+- (rect.top >= rect.bottom) || (rect.left >= rect.right)
++ is_rect_empty(&rect)
+)
+
+
+@ depends on skip disable ptr_to_array @
+expression rect;
+@@
+(
+- (rect->left >= rect->right) || (rect->top >= rect->bottom)
++ is_rect_empty(rect)
+|
+- (rect->top >= rect->bottom) || (rect->left >= rect->right)
++ is_rect_empty(rect)
 )
