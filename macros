@@ -33,6 +33,7 @@
 #define START_TEST(name)        void start_test(name)
 #define STDMETHODCALLTYPE
 #define todo_wine
+#define todo_wine_if            if
 #define UNALIGNED
 #define USER_DRIVER
 #define WINAPI
