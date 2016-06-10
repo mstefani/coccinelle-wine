@@ -5,6 +5,7 @@
 // Confidence: Medium
 // Copyright:  Michael Stefaniuc <mstefani@winehq.org>
 // License:    LGPLv2.1+
+// Options: --no-includes --timeout 600
 //
 // TODO:
 //    - Make the checks more generic (only "equal" comparison are supported)
