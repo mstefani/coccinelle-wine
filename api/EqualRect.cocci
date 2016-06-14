@@ -69,3 +69,28 @@ expression r1, r2;
 - (r1->left) == (r2.left) && (r1->top) == (r2.top) && (r1->right) == (r2.right) && (r1->bottom) == (r2.bottom)
 + EqualRect(r1, &r2)
 )
+
+
+@ depends on !skip @
+typedef RECT;
+RECT *r1;
+RECT *r2;
+expression size;
+@@
+- !memcmp
++ EqualRect
+            ( r1, r2,
+-                     size
+            )
+
+
+@ depends on !skip @
+RECT *r1;
+RECT *r2;
+expression size;
+@@
+- memcmp
++ !EqualRect
+            ( r1, r2,
+-                     size
+            )
