@@ -1,4 +1,5 @@
 COCCI_FILES = \
+	api/CopyRect.cocci \
 	api/EqualRect.cocci \
 	api/InflateRect.cocci \
 	api/IsRectEmpty.cocci \
