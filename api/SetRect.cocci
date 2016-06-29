@@ -17,16 +17,79 @@ typedef LPRECT;
 RECT rect;
 expression l, t, r, b;
 @@
-- rect.left = l;
 (
-- rect.top = t;
-- rect.right = r;
-|
-- rect.right = r;
-- rect.top = t;
-)
-- rect.bottom = b;
+- rect.left = l; rect.top = t; rect.right = r; rect.bottom = b;
 + SetRect(&rect, l, t, r, b);
+|
+- rect.left = l; rect.top = t; rect.bottom = b; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.left = l; rect.right = r; rect.top = t; rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.left = l; rect.right = r; rect.bottom = b; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.left = l; rect.bottom = b; rect.top = t; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.left = l; rect.bottom = b; rect.right = r; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.left = l; rect.right = r; rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.left = l; rect.bottom = b; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.right = r; rect.left = l; rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.right = r; rect.bottom = b; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.bottom = b; rect.left = l; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.top = t; rect.bottom = b; rect.right = r; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.left = l; rect.top = t; rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.left = l; rect.bottom = b; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.top = t; rect.left = l; rect.bottom = b;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.top = t; rect.bottom = b; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.bottom = b; rect.left = l; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.right = r; rect.bottom = b; rect.top = t; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.left = l; rect.top = t; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.left = l; rect.right = r; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.top = t; rect.left = l; rect.right = r;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.top = t; rect.right = r; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.right = r; rect.left = l; rect.top = t;
++ SetRect(&rect, l, t, r, b);
+|
+- rect.bottom = b; rect.right = r; rect.top = t; rect.left = l;
++ SetRect(&rect, l, t, r, b);
+)
 
 
 @ depends on !skip @
