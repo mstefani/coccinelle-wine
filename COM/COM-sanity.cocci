@@ -1,7 +1,7 @@
 // Check for the proper use of COM in Wine.
 // Confidence: High
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --local-includes --timeout 900
+// Options: --local-includes --timeout 300
 //
 
 @ find @
