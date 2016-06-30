@@ -9,6 +9,7 @@
 @@
 #include "gdi_private.h"
 
+
 @ depends on !skip @
 expression rect, x, y;
 @@
@@ -162,6 +163,318 @@ expression rect, x, y;
 |
 - rect->bottom += y; rect->right += x; rect->top -= y; rect->left -= x;
 + InflateRect(rect, x, y);
+)
+
+
+@ depends on !skip @
+expression rect, x, y;
+@@
+(
+- rect.left -= x; rect.top += y; rect.right += x; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.left -= x; rect.top += y; rect.bottom -= y; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.left -= x; rect.right += x; rect.top += y; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.left -= x; rect.right += x; rect.bottom -= y; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.left -= x; rect.bottom -= y; rect.top += y; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.left -= x; rect.bottom -= y; rect.right += x; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.left -= x; rect.right += x; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.left -= x; rect.bottom -= y; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.right += x; rect.left -= x; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.right += x; rect.bottom -= y; rect.left -= x;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.bottom -= y; rect.left -= x; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.top += y; rect.bottom -= y; rect.right += x; rect.left -= x;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.left -= x; rect.top += y; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.left -= x; rect.bottom -= y; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.top += y; rect.left -= x; rect.bottom -= y;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.top += y; rect.bottom -= y; rect.left -= x;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.bottom -= y; rect.left -= x; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.right += x; rect.bottom -= y; rect.top += y; rect.left -= x;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.left -= x; rect.top += y; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.left -= x; rect.right += x; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.top += y; rect.left -= x; rect.right += x;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.top += y; rect.right += x; rect.left -= x;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.right += x; rect.left -= x; rect.top += y;
++ InflateRect(&rect, x, -y);
+|
+- rect.bottom -= y; rect.right += x; rect.top += y; rect.left -= x;
++ InflateRect(&rect, x, -y);
+)
+
+
+@ depends on !skip disable ptr_to_array @
+expression rect, x, y;
+@@
+(
+- rect->left -= x; rect->top += y; rect->right += x; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->left -= x; rect->top += y; rect->bottom -= y; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->left -= x; rect->right += x; rect->top += y; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->left -= x; rect->right += x; rect->bottom -= y; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->left -= x; rect->bottom -= y; rect->top += y; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->left -= x; rect->bottom -= y; rect->right += x; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->left -= x; rect->right += x; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->left -= x; rect->bottom -= y; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->right += x; rect->left -= x; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->right += x; rect->bottom -= y; rect->left -= x;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->bottom -= y; rect->left -= x; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->top += y; rect->bottom -= y; rect->right += x; rect->left -= x;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->left -= x; rect->top += y; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->left -= x; rect->bottom -= y; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->top += y; rect->left -= x; rect->bottom -= y;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->top += y; rect->bottom -= y; rect->left -= x;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->bottom -= y; rect->left -= x; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->right += x; rect->bottom -= y; rect->top += y; rect->left -= x;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->left -= x; rect->top += y; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->left -= x; rect->right += x; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->top += y; rect->left -= x; rect->right += x;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->top += y; rect->right += x; rect->left -= x;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->right += x; rect->left -= x; rect->top += y;
++ InflateRect(rect, x, -y);
+|
+- rect->bottom -= y; rect->right += x; rect->top += y; rect->left -= x;
++ InflateRect(rect, x, -y);
+)
+
+
+@ depends on !skip @
+expression rect, x, y;
+@@
+(
+- rect.left += x; rect.top -= y; rect.right -= x; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.left += x; rect.top -= y; rect.bottom += y; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.left += x; rect.right -= x; rect.top -= y; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.left += x; rect.right -= x; rect.bottom += y; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.left += x; rect.bottom += y; rect.top -= y; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.left += x; rect.bottom += y; rect.right -= x; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.left += x; rect.right -= x; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.left += x; rect.bottom += y; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.right -= x; rect.left += x; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.right -= x; rect.bottom += y; rect.left += x;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.bottom += y; rect.left += x; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.top -= y; rect.bottom += y; rect.right -= x; rect.left += x;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.left += x; rect.top -= y; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.left += x; rect.bottom += y; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.top -= y; rect.left += x; rect.bottom += y;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.top -= y; rect.bottom += y; rect.left += x;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.bottom += y; rect.left += x; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.right -= x; rect.bottom += y; rect.top -= y; rect.left += x;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.left += x; rect.top -= y; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.left += x; rect.right -= x; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.top -= y; rect.left += x; rect.right -= x;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.top -= y; rect.right -= x; rect.left += x;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.right -= x; rect.left += x; rect.top -= y;
++ InflateRect(&rect, -x, y);
+|
+- rect.bottom += y; rect.right -= x; rect.top -= y; rect.left += x;
++ InflateRect(&rect, -x, y);
+)
+
+
+@ depends on !skip disable ptr_to_array @
+expression rect, x, y;
+@@
+(
+- rect->left += x; rect->top -= y; rect->right -= x; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->left += x; rect->top -= y; rect->bottom += y; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->left += x; rect->right -= x; rect->top -= y; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->left += x; rect->right -= x; rect->bottom += y; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->left += x; rect->bottom += y; rect->top -= y; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->left += x; rect->bottom += y; rect->right -= x; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->left += x; rect->right -= x; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->left += x; rect->bottom += y; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->right -= x; rect->left += x; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->right -= x; rect->bottom += y; rect->left += x;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->bottom += y; rect->left += x; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->top -= y; rect->bottom += y; rect->right -= x; rect->left += x;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->left += x; rect->top -= y; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->left += x; rect->bottom += y; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->top -= y; rect->left += x; rect->bottom += y;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->top -= y; rect->bottom += y; rect->left += x;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->bottom += y; rect->left += x; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->right -= x; rect->bottom += y; rect->top -= y; rect->left += x;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->left += x; rect->top -= y; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->left += x; rect->right -= x; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->top -= y; rect->left += x; rect->right -= x;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->top -= y; rect->right -= x; rect->left += x;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->right -= x; rect->left += x; rect->top -= y;
++ InflateRect(rect, -x, y);
+|
+- rect->bottom += y; rect->right -= x; rect->top -= y; rect->left += x;
++ InflateRect(rect, -x, y);
 )
 
 
