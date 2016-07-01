@@ -15,3 +15,10 @@ expression str;
 - (len(str) == 0)
 + !str[0]
 )
+
+
+@@
+expression str;
+@@
+- !strcmp(str, "")
++ !str[0]
