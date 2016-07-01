@@ -15,6 +15,7 @@ COCCI_FILES = \
 	casts/cast-zero.cocci \
 	casts/makeparam.cocci \
 	casts/selfcast.cocci \
+	COM/COM-aggregation.cocci \
 	COM/COM-sanity.cocci \
 	COM/method-forward.cocci \
 	CONTAINING_RECORD.cocci \
