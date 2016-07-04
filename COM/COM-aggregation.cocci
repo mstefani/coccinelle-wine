@@ -14,6 +14,7 @@ type obj;
 identifier tag_obj;
 identifier outer =~ "[Oo][Uu][Tt]";
 @@
+(
  typedef struct tag_obj {
 +    IUnknown IUnknown_inner;
      ...
@@ -23,6 +24,27 @@ identifier outer =~ "[Oo][Uu][Tt]";
 +    IUnknown *outer_unk;
      ...
  } obj;
+|
+ typedef struct {
++    IUnknown IUnknown_inner;
+     ...
+-    IUnknown IUnknown_iface;
+     ...
+-    IUnknown *outer;
++    IUnknown *outer_unk;
+     ...
+ } obj;
+|
+ struct tag_obj {
++    IUnknown IUnknown_inner;
+     ...
+-    IUnknown IUnknown_iface;
+     ...
+-    IUnknown *outer;
++    IUnknown *outer_unk;
+     ...
+ };
+)
 
 
 @@
