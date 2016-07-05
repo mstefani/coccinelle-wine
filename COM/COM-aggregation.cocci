@@ -90,6 +90,16 @@ identifier iface;
 
 
 @@
+identifier object.tag_obj;
+identifier iface;
+@@
+ return CONTAINING_RECORD(iface, struct tag_obj,
+-                         IUnknown_iface
++                         IUnknown_inner
+ );
+
+
+@@
 object.obj *This;
 @@
 - This->IUnknown_iface
@@ -97,7 +107,24 @@ object.obj *This;
 
 
 @@
+identifier object.tag_obj;
+struct tag_obj *This;
+@@
+- This->IUnknown_iface
++ This->IUnknown_inner
+
+
+@@
 object2.obj *This;
+identifier object.outer;
+@@
+- This->outer
++ This->outer_unk
+
+
+@@
+identifier object2.tag_obj;
+struct tag_obj *This;
 identifier object.outer;
 @@
 - This->outer
@@ -126,6 +153,27 @@ expression E;
 
 
 @@
+identifier My_QueryInterface =~ "_QueryInterface$";
+identifier Obj_QueryInterface =~ "_QueryInterface$";
+identifier iface, This;
+identifier object2.tag_obj;
+type T;
+expression E;
+@@
+ My_QueryInterface(T *iface, ...)
+ {
+     struct tag_obj *This = ...;
+     return
+-            Obj_QueryInterface
++            IUnknown_QueryInterface
+                     (
+-                     E,
++                     This->outer_unk,
+                      ...);
+ }
+
+
+@@
 identifier My_AddRef =~ "_AddRef$";
 identifier Obj_AddRef =~ "_AddRef$";
 identifier iface, This;
@@ -141,6 +189,21 @@ type T;
 
 
 @@
+identifier My_AddRef =~ "_AddRef$";
+identifier Obj_AddRef =~ "_AddRef$";
+identifier iface, This;
+identifier object2.tag_obj;
+type T;
+@@
+ My_AddRef(T *iface)
+ {
+     struct tag_obj *This = ...;
+-    return Obj_AddRef(...);
++    return IUnknown_AddRef(This->outer_unk);
+ }
+
+
+@@
 identifier My_Release =~ "_Release$";
 identifier Obj_Release =~ "_Release$";
 identifier iface, This;
@@ -150,6 +213,21 @@ type T;
  My_Release(T *iface)
  {
      obj *This = ...;
+-    return Obj_Release(...);
++    return IUnknown_Release(This->outer_unk);
+ }
+
+
+@@
+identifier My_Release =~ "_Release$";
+identifier Obj_Release =~ "_Release$";
+identifier iface, This;
+identifier object2.tag_obj;
+type T;
+@@
+ My_Release(T *iface)
+ {
+     struct tag_obj *This = ...;
 -    return Obj_Release(...);
 +    return IUnknown_Release(This->outer_unk);
  }
