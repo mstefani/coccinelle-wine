@@ -164,6 +164,16 @@ identifier gen_impl.impl_from_IFace;
 + impl_from_IFace(iface)
 
 
+@ disable drop_cast @
+type find.Ti;
+Ti *iface;
+identifier find.tag_obj;
+identifier gen_impl.impl_from_IFace;
+@@
+- (struct tag_obj *)(iface)
++ impl_from_IFace(iface)
+
+
 // Don't use impl_from_IFace() outside declarations
 @@
 type find.To;
@@ -173,6 +183,28 @@ identifier gen_impl.impl_from_IFace;
  fn( ... )
  {
 +    To *This = impl_from_IFace(iface);
+     ...
+(
+     foo(...,
+-             impl_from_IFace(iface)
++             This
+         , ...)
+|
+-    (impl_from_IFace(iface))->bar
++    This->bar
+)
+     ...
+ }
+
+
+@@
+identifier find.tag_obj;
+identifier fn, iface, foo, bar;
+identifier gen_impl.impl_from_IFace;
+@@
+ fn( ... )
+ {
++    struct tag_obj *This = impl_from_IFace(iface);
      ...
 (
      foo(...,
