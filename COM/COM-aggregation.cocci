@@ -20,8 +20,7 @@ identifier outer =~ "[Oo][Uu][Tt]";
      ...
 -    IUnknown IUnknown_iface;
      ...
--    IUnknown *outer;
-+    IUnknown *outer_unk;
+     IUnknown *outer;
      ...
  } obj;
 |
@@ -30,8 +29,7 @@ identifier outer =~ "[Oo][Uu][Tt]";
      ...
 -    IUnknown IUnknown_iface;
      ...
--    IUnknown *outer;
-+    IUnknown *outer_unk;
+     IUnknown *outer;
      ...
  } obj;
 |
@@ -39,6 +37,40 @@ identifier outer =~ "[Oo][Uu][Tt]";
 +    IUnknown IUnknown_inner;
      ...
 -    IUnknown IUnknown_iface;
+     ...
+     IUnknown *outer;
+     ...
+ };
+)
+
+
+@ object2 @
+type obj;
+identifier tag_obj;
+identifier outer =~ "[Oo][Uu][Tt]";
+@@
+(
+ typedef struct tag_obj {
+     ...
+     IUnknown IUnknown_inner;
+     ...
+-    IUnknown *outer;
++    IUnknown *outer_unk;
+     ...
+ } obj;
+|
+ typedef struct {
+     ...
+     IUnknown IUnknown_inner;
+     ...
+-    IUnknown *outer;
++    IUnknown *outer_unk;
+     ...
+ } obj;
+|
+ struct tag_obj {
+     ...
+     IUnknown IUnknown_inner;
      ...
 -    IUnknown *outer;
 +    IUnknown *outer_unk;
@@ -65,7 +97,7 @@ object.obj *This;
 
 
 @@
-object.obj *This;
+object2.obj *This;
 identifier object.outer;
 @@
 - This->outer
@@ -76,7 +108,7 @@ identifier object.outer;
 identifier My_QueryInterface =~ "_QueryInterface$";
 identifier Obj_QueryInterface =~ "_QueryInterface$";
 identifier iface, This;
-type object.obj;
+type object2.obj;
 type T;
 expression E;
 @@
@@ -97,7 +129,7 @@ expression E;
 identifier My_AddRef =~ "_AddRef$";
 identifier Obj_AddRef =~ "_AddRef$";
 identifier iface, This;
-type object.obj;
+type object2.obj;
 type T;
 @@
  My_AddRef(T *iface)
@@ -112,7 +144,7 @@ type T;
 identifier My_Release =~ "_Release$";
 identifier Obj_Release =~ "_Release$";
 identifier iface, This;
-type object.obj;
+type object2.obj;
 type T;
 @@
  My_Release(T *iface)
