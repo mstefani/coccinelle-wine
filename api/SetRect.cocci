@@ -228,7 +228,7 @@ expression rect;
 
 
 // Sanity check to not use an RECT field in the SetRect.
-@@
+@ disable ptr_to_array @
 expression rect;
 identifier fld;
 @@
@@ -240,6 +240,16 @@ identifier fld;
 |
   SetRect(&rect, ...,
 -                     <+... rect.fld ...+>
++                     BADBADBAD
+                                )
+|
+  SetRect(rect, ...,
+-                     <+... rect->fld ...+>
++                     BADBADBAD
+                                ,...)
+|
+  SetRect(rect, ...,
+-                     <+... rect->fld ...+>
 +                     BADBADBAD
                                 )
 )
