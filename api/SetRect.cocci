@@ -181,6 +181,16 @@ expression l, t, b;
 + SetRect(&rect, l, t, b, b);
 
 
+@ depends on !skip disable ptr_to_array @
+RECT *rect;
+expression l, t, b;
+@@
+- rect->left = l;
+- rect->top = t;
+- rect->right = rect->bottom = b;
++ SetRect(rect, l, t, b, b);
+
+
 @ depends on !skip @
 RECT rect;
 expression t, r, b;
@@ -189,6 +199,16 @@ expression t, r, b;
 - rect.right = r;
 - rect.bottom = b;
 + SetRect(&rect, t, t, r, b);
+
+
+@ depends on !skip disable ptr_to_array @
+RECT *rect;
+expression t, r, b;
+@@
+- rect->left = rect->top = t;
+- rect->right = r;
+- rect->bottom = b;
++ SetRect(rect, t, t, r, b);
 
 
 @ depends on !skip @
@@ -200,6 +220,15 @@ expression t, b;
 + SetRect(&rect, t, t, b, b);
 
 
+@ depends on !skip disable ptr_to_array @
+RECT *rect;
+expression t, b;
+@@
+- rect->left = rect->top = t;
+- rect->right = rect->bottom = b;
++ SetRect(rect, t, t, b, b);
+
+
 @ depends on !skip @
 RECT rect;
 expression l, b;
@@ -209,12 +238,29 @@ expression l, b;
 + SetRect(&rect, l, b, b, b);
 
 
+@ depends on !skip disable ptr_to_array @
+RECT *rect;
+expression l, b;
+@@
+- rect->left = l;
+- rect->top = rect->right = rect->bottom = b;
++ SetRect(rect, l, b, b, b);
+
+
 @ depends on !skip @
 RECT rect;
 expression b;
 @@
 - rect.left = rect.top = rect.right = rect.bottom = b;
 + SetRect(&rect, b, b, b, b);
+
+
+@ depends on !skip disable ptr_to_array @
+RECT *rect;
+expression b;
+@@
+- rect->left = rect->top = rect->right = rect->bottom = b;
++ SetRect(rect, b, b, b, b);
 
 
 @ depends on !skip @
