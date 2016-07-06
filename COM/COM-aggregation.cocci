@@ -125,7 +125,7 @@ identifier object.outer;
 @@
 identifier object2.tag_obj;
 struct tag_obj *This;
-identifier object.outer;
+identifier object2.outer;
 @@
 - This->outer
 + This->outer_unk
