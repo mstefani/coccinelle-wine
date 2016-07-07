@@ -10,7 +10,7 @@ type T;
 @@
 - if (E != NULL)
 - {
-       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., (T)E);
+       \(CoTaskMemFree\|free\|Free\|GdipFree\|HeapFree\|heap_free\|I_RpcFree\|msi_free\|MSVCRT_free\|MyFree\|RtlFreeHeap\|SysFreeString\)(..., (T)E);
 - }
 
 
@@ -19,4 +19,4 @@ expression E;
 type T;
 @@
 - if (E != NULL)
-       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., (T)E);
+       \(CoTaskMemFree\|free\|Free\|GdipFree\|HeapFree\|heap_free\|I_RpcFree\|msi_free\|MSVCRT_free\|MyFree\|RtlFreeHeap\|SysFreeString\)(..., (T)E);
