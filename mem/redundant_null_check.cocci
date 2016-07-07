@@ -6,15 +6,17 @@
 
 @@
 expression E;
+type T;
 @@
 - if (E != NULL)
 - {
-       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., E);
+       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., (T)E);
 - }
 
 
 @@
 expression E;
+type T;
 @@
 - if (E != NULL)
-       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., E);
+       \(free\|HeapFree\|heap_free\|msi_free\|MSVCRT_free\)(..., (T)E);
