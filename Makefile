@@ -20,6 +20,7 @@ COCCI_FILES = \
 	COM/method-forward.cocci \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
+	mem/redundant_null_check.cocci \
 	register.cocci \
 	string-not-empty.cocci \
 	tests/ok.cocci
