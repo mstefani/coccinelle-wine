@@ -662,3 +662,33 @@ expression rect, x, y;
 - rect.bottom -= y; rect.top += y;
 + InflateRect(&rect, 0, -y);
 )
+
+
+@ depends on !skip disable ptr_to_array @
+expression rect, x, y;
+@@
+(
+- rect->left -= x; rect->right += x;
++ InflateRect(rect, x, 0);
+|
+- rect->right += x; rect->left -= x;
++ InflateRect(rect, x, 0);
+|
+- rect->left += x; rect->right -= x;
++ InflateRect(rect, -x, 0);
+|
+- rect->right -= x; rect->left += x;
++ InflateRect(rect, -x, 0);
+|
+- rect->top -= y; rect->bottom += y;
++ InflateRect(rect, 0, y);
+|
+- rect->bottom += y; rect->top -= y;
++ InflateRect(rect, 0, y);
+|
+- rect->top += y; rect->bottom -= y;
++ InflateRect(rect, 0, -y);
+|
+- rect->bottom -= y; rect->top += y;
++ InflateRect(rect, 0, -y);
+)
