@@ -46,10 +46,10 @@ expression r1, r2;
 @@
 (
 - r1.left == r2->left && r1.top == r2->top && r1.right == r2->right && r1.bottom == r2->bottom
-+ EqualRect(r1, r2)
++ EqualRect(&r1, r2)
 |
 - (r1.left == r2->left) && (r1.top == r2->top) && (r1.right == r2->right) && (r1.bottom == r2->bottom)
-+ EqualRect(r1, r2)
++ EqualRect(&r1, r2)
 |
 - (r1.left) == (r2->left) && (r1.top) == (r2->top) && (r1.right) == (r2->right) && (r1.bottom) == (r2->bottom)
 + EqualRect(&r1, r2)
@@ -61,10 +61,10 @@ expression r1, r2;
 @@
 (
 - r1->left == r2.left && r1->top == r2.top && r1->right == r2.right && r1->bottom == r2.bottom
-+ EqualRect(r1, r2)
++ EqualRect(r1, &r2)
 |
 - (r1->left == r2.left) && (r1->top == r2.top) && (r1->right == r2.right) && (r1->bottom == r2.bottom)
-+ EqualRect(r1, r2)
++ EqualRect(r1, &r2)
 |
 - (r1->left) == (r2.left) && (r1->top) == (r2.top) && (r1->right) == (r2.right) && (r1->bottom) == (r2.bottom)
 + EqualRect(r1, &r2)
