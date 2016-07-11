@@ -17,6 +17,7 @@ COCCI_FILES = \
 	casts/selfcast.cocci \
 	COM/COM-aggregation.cocci \
 	COM/COM-sanity.cocci \
+	COM/LPJUNK.cocci \
 	COM/method-forward.cocci \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
