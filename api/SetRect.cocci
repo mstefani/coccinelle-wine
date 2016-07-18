@@ -275,20 +275,22 @@ expression rect;
 
 
 @@
-expression r1, r2;
+expression r1;
+RECT r2;
+RECT *r3;
 @@
 (
 - SetRect(&r1, r2.left, r2.top, r2.right, r2.bottom)
 + r1 = r2
 |
-- SetRect(&r1, r2->left, r2->top, r2->right, r2->bottom)
-+ r1 = *r2
+- SetRect(&r1, r3->left, r3->top, r3->right, r3->bottom)
++ r1 = *r3
 |
 - SetRect(r1, r2.left, r2.top, r2.right, r2.bottom)
 + *r1 = r2
 |
-- SetRect(r1, r2->left, r2->top, r2->right, r2->bottom)
-+ *r1 = *r2
+- SetRect(r1, r3->left, r3->top, r3->right, r3->bottom)
++ *r1 = *r3
 )
 
 
