@@ -264,7 +264,7 @@ expression b;
 
 
 // SetRect() calls that should be something else
-@ depends on !skip @
+@@
 expression rect;
 @@
 - SetRect
