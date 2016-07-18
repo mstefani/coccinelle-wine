@@ -263,6 +263,7 @@ expression b;
 + SetRect(rect, b, b, b, b);
 
 
+// SetRect() calls that should be something else
 @ depends on !skip @
 expression rect;
 @@
@@ -271,6 +272,24 @@ expression rect;
          (rect,
 -            0, 0, 0, 0
          )
+
+
+@@
+expression r1, r2;
+@@
+(
+- SetRect(&r1, r2.left, r2.top, r2.right, r2.bottom)
++ r1 = r2
+|
+- SetRect(&r1, r2->left, r2->top, r2->right, r2->bottom)
++ r1 = *r2
+|
+- SetRect(r1, r2.left, r2.top, r2.right, r2.bottom)
++ *r1 = r2
+|
+- SetRect(r1, r2->left, r2->top, r2->right, r2->bottom)
++ *r1 = *r2
+)
 
 
 // Sanity check to not use an RECT field in the SetRect.
