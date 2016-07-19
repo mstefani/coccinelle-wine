@@ -22,7 +22,7 @@ COCCI_FILES = \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
 	mem/redundant_null_check.cocci \
-	register.cocci \
+	mem/register.cocci \
 	string-not-empty.cocci \
 	tests/ok.cocci
 
