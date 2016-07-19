@@ -77,3 +77,15 @@ identifier channel, file, line;
                       guid
 +                    )
  , ... )
+
+
+@ test @
+@@
+ #include "wine/test.h"
+
+
+@ depends on test @
+@@
+- debugstr_guid
++ wine_dbgstr_guid
+                  (...)
