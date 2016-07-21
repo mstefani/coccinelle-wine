@@ -2,7 +2,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --include-headers --recursive-includes --include-headers-for-types
+// Options: --include-headers
 // Comments: FIXME: InflateRect cannot be used from all places. This produces false positives.
 
 @ skip @
