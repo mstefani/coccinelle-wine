@@ -2,7 +2,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --include-headers --recursive-includes --include-headers-for-types
+// Options: --include-headers --recursive-includes
 // Comments: FIXME: SetRect cannot be used from all places. This produces false positives.
 
 using "../assign.iso"
