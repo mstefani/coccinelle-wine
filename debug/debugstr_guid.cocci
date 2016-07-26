@@ -62,6 +62,7 @@ identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace|)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
 identifier channel, file, line;
 {CLSID*, LPCLSID, REFCLSID, IID*, REFIID, const GUID*, LPGUID, LPCGUID} guid;
+expression E;
 @@
 (
  dbg
@@ -77,6 +78,7 @@ identifier channel, file, line;
                       guid
 +                    )
  , ... )
+ ... when != *guid = E
 
 
 @ test @
