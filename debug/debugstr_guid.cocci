@@ -58,10 +58,11 @@ typedef LPGUID;
 typedef IID;
 typedef REFCLSID;
 typedef REFIID;
+typedef WICPixelFormatGUID;
 identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace|)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
 identifier channel, file, line;
-{CLSID*, LPCLSID, REFCLSID, IID*, REFIID, const GUID*, LPGUID, LPCGUID} guid;
+{CLSID*, LPCLSID, REFCLSID, IID*, REFIID, const GUID*, LPGUID, LPCGUID, WICPixelFormatGUID*} guid;
 expression E;
 @@
 (
