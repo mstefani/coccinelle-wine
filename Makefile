@@ -21,6 +21,7 @@ COCCI_FILES = \
 	COM/method-forward.cocci \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
+	mem/memset.cocci \
 	mem/redundant_null_check.cocci \
 	mem/register.cocci \
 	string-not-empty.cocci \
