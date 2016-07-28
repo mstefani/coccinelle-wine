@@ -263,6 +263,16 @@ expression b;
 + SetRect(rect, b, b, b, b);
 
 
+@@
+RECT *rect;
+@@
+- memset
++ SetRectEmpty
+              (rect
+-                  , 0, ...
+                   )
+
+
 // SetRect() calls that should be something else
 @@
 expression rect;
