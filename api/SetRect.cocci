@@ -304,6 +304,18 @@ RECT *r3;
 )
 
 
+// SetRectEmpty() calls that should be a SetRect()
+@@
+expression rect, l;
+@@
+- SetRectEmpty
++ SetRect
+         (&rect
++                 , l, 0, 0, 0
+         );
+- rect.left = l;
+
+
 // Sanity check to not use an RECT field in the SetRect.
 @ disable ptr_to_array @
 expression rect;
