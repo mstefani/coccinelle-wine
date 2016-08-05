@@ -8,6 +8,7 @@
 //           The generated diff needs to be fixed too:
 //           perl -pi -e '/^+.*todo_wine_if/ and do {s/\bif ?\(//; s/\)([^)]*$)/$1/}; /^-/ and s/\(todo_wine\)/todo_wine/g;' tests/todo_wine_if.out
 
+
 @disable drop_else, drop_cast@
 typedef todo_wine;
 expression cond, ok;
@@ -24,6 +25,7 @@ expression cond, ok;
 -         ok;
 - }
 
+
 @disable drop_else, drop_cast@
 expression cond, ok;
 @@
@@ -36,4 +38,46 @@ expression cond, ok;
   }
 - else {
 -         (todo_wine) ok;
+- }
+
+
+@disable drop_else, drop_cast@
+typedef todo_wine;
+expression cond, ok1, ok2, ok3;
+@@
+  if (
++     todo_wine_if(
+                   cond
++                   )
+                     ) {
+-         (todo_wine)
+                ok1;
+-         (todo_wine)
+                ok2;
+?-        (todo_wine)
+?               ok3;
+  }
+- else {
+-         ok1;
+-         ok2;
+?-        ok3;
+- }
+
+
+@disable drop_else, drop_cast@
+expression cond, ok1, ok2, ok3;
+@@
+  if (
++     todo_wine_if(!(
+                   cond
++                   ))
+                     ) {
+          ok1;
+          ok2;
+?         ok3;
+  }
+- else {
+-         (todo_wine) ok1;
+-         (todo_wine) ok2;
+?-        (todo_wine) ok3;
 - }
