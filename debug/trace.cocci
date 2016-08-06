@@ -109,15 +109,6 @@ p << r2.p;
 @@
 check_format(fmt, args, func, p)
 
-@@
-identifier f =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)$";
-expression E;
-@@
- f(...,
--       E->left, E->top, E->right, E->bottom
-+       wine_dbgstr_rect(E)
- , ...)
-
 @stub depends on diff@
 identifier f;
 identifier FIXME =~ "^(WINE_)?FIXME$";
