@@ -30,6 +30,13 @@ identifier tag_obj;
 )
 
 
+@ find2 @
+type To;
+identifier find.tag_obj;
+@@
+  typedef struct tag_obj To;
+
+
 // Fix object to interface casts
 ////////
 @ disable drop_cast @
@@ -43,6 +50,24 @@ To *obj;
 
 @ disable drop_cast @
 type find.Ti, find.To;
+identifier find.iface;
+To obj;
+@@
+- (Ti *)(&(obj))
++ &obj.iface
+
+
+@ disable drop_cast @
+type find.Ti, find2.To;
+identifier find.iface;
+To *obj;
+@@
+- (Ti *)(obj)
++ &obj->iface
+
+
+@ disable drop_cast @
+type find.Ti, find2.To;
 identifier find.iface;
 To obj;
 @@
@@ -165,6 +190,15 @@ identifier gen_impl.impl_from_IFace;
 
 
 @ disable drop_cast @
+type find.Ti, find2.To;
+Ti *iface;
+identifier gen_impl.impl_from_IFace;
+@@
+- (To *)(iface)
++ impl_from_IFace(iface)
+
+
+@ disable drop_cast @
 type find.Ti;
 Ti *iface;
 identifier find.tag_obj;
@@ -177,6 +211,28 @@ identifier gen_impl.impl_from_IFace;
 // Don't use impl_from_IFace() outside declarations
 @@
 type find.To;
+identifier fn, iface, foo, bar;
+identifier gen_impl.impl_from_IFace;
+@@
+ fn( ... )
+ {
++    To *This = impl_from_IFace(iface);
+     ...
+(
+     foo(...,
+-             impl_from_IFace(iface)
++             This
+         , ...)
+|
+-    (impl_from_IFace(iface))->bar
++    This->bar
+)
+     ...
+ }
+
+
+@@
+type find2.To;
 identifier fn, iface, foo, bar;
 identifier gen_impl.impl_from_IFace;
 @@
