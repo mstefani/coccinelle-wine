@@ -19,6 +19,7 @@ COCCI_FILES = \
 	COM/COM-sanity.cocci \
 	COM/LPJUNK.cocci \
 	COM/method-forward.cocci \
+	COM/method-use.cocci \
 	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
 	mem/memset.cocci \
