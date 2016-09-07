@@ -93,6 +93,34 @@ struct tag_obj obj;
 + &obj.iface
 
 
+// There should be no need to cast a COM object to something else.
+@ disable drop_cast @
+type find.To;
+type T;
+To *obj;
+@@
+- (T)
+       (obj)
+
+
+@ disable drop_cast @
+type find2.To;
+type T;
+To *obj;
+@@
+- (T)
+       (obj)
+
+
+@ disable drop_cast @
+type T;
+identifier find.tag_obj;
+struct tag_obj *obj;
+@@
+- (T)
+       (obj)
+
+
 // Get rid of some ->lpVtbl to IIFace wrappers
 @ wrapcast disable drop_cast @
 type find.Ti;
