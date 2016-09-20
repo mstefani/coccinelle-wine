@@ -99,8 +99,13 @@ type find.To;
 type T;
 To *obj;
 @@
+(
+  // Only valid exception
+  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
+|
 - (T)
        (obj)
+)
 
 
 @ disable drop_cast @
