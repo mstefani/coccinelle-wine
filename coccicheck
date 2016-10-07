@@ -3,11 +3,17 @@
 # coccicheck
 #       A more generic coccinelle wrapper but following the same idea from the Linux version.
 use strict;
+use Getopt::Long;
 
 my $nrproc = `getconf _NPROCESSORS_ONLN`;
 chomp($nrproc);
 my $macros = $0;
 $macros =~ s,/[^/]+$,/macros,;
+
+my $report = 0;
+GetOptions(
+        "report" => \$report,
+);
 
 my $srcdir;
 if ($ARGV[0] !~ /\.cocci$/) {
@@ -24,5 +30,9 @@ my $optstr = `grep -P '^\\s*//\\s*Options:' '$cocci[0]' | cut -d: -f2`;
 $optstr =~ s/^\s+//;
 $optstr =~ s/\s+$//;
 my @opts = split(/\s+/, $optstr);
+
+if ($report) {
+    push(@opts, '--no-show-diff', '-D', 'report');
+}
 
 system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--indent', 4, '--quiet', @opts, @ARGV);
