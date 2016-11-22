@@ -100,7 +100,6 @@ type T;
 To *obj;
 @@
 (
-  // Only valid exception
   \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
 |
 - (T)
@@ -113,8 +112,12 @@ type find2.To;
 type T;
 To *obj;
 @@
+(
+  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
+|
 - (T)
        (obj)
+)
 
 
 @ disable drop_cast @
@@ -122,8 +125,12 @@ type T;
 identifier find.tag_obj;
 struct tag_obj *obj;
 @@
+(
+  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
+|
 - (T)
        (obj)
+)
 
 
 // Get rid of some ->lpVtbl to IIFace wrappers
