@@ -40,36 +40,18 @@ identifier find.tag_obj;
 // Fix object to interface casts
 ////////
 @ disable drop_cast @
-type find.Ti, find.To;
+type find.Ti;
 identifier find.iface;
-To *obj;
+{find.To, find2.To} *obj;
 @@
 - (Ti *)(obj)
 + &obj->iface
 
 
 @ disable drop_cast @
-type find.Ti, find.To;
+type find.Ti;
 identifier find.iface;
-To obj;
-@@
-- (Ti *)(&(obj))
-+ &obj.iface
-
-
-@ disable drop_cast @
-type find.Ti, find2.To;
-identifier find.iface;
-To *obj;
-@@
-- (Ti *)(obj)
-+ &obj->iface
-
-
-@ disable drop_cast @
-type find.Ti, find2.To;
-identifier find.iface;
-To obj;
+{find.To, find2.To} obj;
 @@
 - (Ti *)(&(obj))
 + &obj.iface
@@ -95,22 +77,8 @@ struct tag_obj obj;
 
 // There should be no need to cast a COM object to something else.
 @ disable drop_cast @
-type find.To;
 type T;
-To *obj;
-@@
-(
-  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
-|
-- (T)
-       (obj)
-)
-
-
-@ disable drop_cast @
-type find2.To;
-type T;
-To *obj;
+{find.To, find2.To} *obj;
 @@
 (
   \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
