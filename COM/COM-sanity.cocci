@@ -189,16 +189,8 @@ coccinelle.impl_from_IFace = "impl_from_" + Ti
 
 
 @ disable drop_cast @
-type find.Ti, find.To;
-Ti *iface;
-identifier gen_impl.impl_from_IFace;
-@@
-- (To *)(iface)
-+ impl_from_IFace(iface)
-
-
-@ disable drop_cast @
-type find.Ti, find2.To;
+type find.Ti;
+type To = {find.To, find2.To};
 Ti *iface;
 identifier gen_impl.impl_from_IFace;
 @@
@@ -218,29 +210,7 @@ identifier gen_impl.impl_from_IFace;
 
 // Don't use impl_from_IFace() outside declarations
 @@
-type find.To;
-identifier fn, iface, foo, bar;
-identifier gen_impl.impl_from_IFace;
-@@
- fn( ... )
- {
-+    To *This = impl_from_IFace(iface);
-     ...
-(
-     foo(...,
--             impl_from_IFace(iface)
-+             This
-         , ...)
-|
--    (impl_from_IFace(iface))->bar
-+    This->bar
-)
-     ...
- }
-
-
-@@
-type find2.To;
+type To = {find.To, find2.To};
 identifier fn, iface, foo, bar;
 identifier gen_impl.impl_from_IFace;
 @@
