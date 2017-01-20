@@ -26,6 +26,7 @@ COCCI_FILES = \
 	mem/redundant_null_check.cocci \
 	mem/register.cocci \
 	string-not-empty.cocci \
+	tests/broken.cocci \
 	tests/ok.cocci
 
 WINESRC = /home/michi/work/wine
