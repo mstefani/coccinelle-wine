@@ -24,8 +24,9 @@ expression E1, E2;
 binary operator comp = {==, !=, >, >=, <, <= };
 @@
 (
-  E1 == 0 ||
-             broken(E1)
+  E1 == 0 || broken(E1)
+|
+  SUCCEEDED(E1) == E2 || broken(SUCCEEDED(E1))
 |
   E1 comp E2 ||
 *               broken(\(E1\|E2\))
