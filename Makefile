@@ -8,6 +8,7 @@ COCCI_FILES = \
 	boolean/cond-false-true.cocci \
 	boolean/cond-true-false.cocci \
 	boolean/FAILED-SUCCEEDED.cocci \
+	debug/debugstr_aw.cocci \
 	debug/debugstr_guid.cocci \
 	debug/trace.cocci \
 	debug/wine_dbgstr_rect.cocci \
