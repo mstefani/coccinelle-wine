@@ -35,4 +35,5 @@ if ($report) {
     push(@opts, '--no-show-diff', '-D', 'report');
 }
 
-system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--indent', 4, '--quiet', @opts, @ARGV);
+system('spatch', '--macro-file', $macros, '-j', $nrproc, '--patch', $srcdir, '--indent', 4,
+       '--max-width', 100, '--quiet', @opts, @ARGV);
