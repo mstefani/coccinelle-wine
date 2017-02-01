@@ -11,7 +11,8 @@
 
 
 @ depends on !skip @
-expression rect;
+type T != {D2D_RECT_F, RECT16, rectangle_t, struct wined3d_box};
+T rect;
 @@
 (
 - (rect.left >= rect.right) || (rect.top >= rect.bottom)
@@ -23,7 +24,8 @@ expression rect;
 
 
 @ depends on !skip disable ptr_to_array @
-expression rect;
+type T != {D2D_RECT_F*, RECT16*, rectangle_t*, struct wined3d_box*};
+T rect;
 @@
 (
 - (rect->left >= rect->right) || (rect->top >= rect->bottom)
@@ -35,7 +37,8 @@ expression rect;
 
 
 @ depends on skip @
-expression rect;
+type T != {D2D_RECT_F, RECT16, rectangle_t, struct wined3d_box};
+T rect;
 @@
 (
 - (rect.left >= rect.right) || (rect.top >= rect.bottom)
@@ -47,7 +50,8 @@ expression rect;
 
 
 @ depends on skip disable ptr_to_array @
-expression rect;
+type T != {D2D_RECT_F*, RECT16*, rectangle_t*, struct wined3d_box*};
+T rect;
 @@
 (
 - (rect->left >= rect->right) || (rect->top >= rect->bottom)
