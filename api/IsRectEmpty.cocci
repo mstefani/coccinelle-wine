@@ -10,7 +10,7 @@
 #include "gdi_private.h"
 
 
-@ depends on !skip @
+@ depends on !skip disable fld_to_ptr @
 type T != {D2D_RECT_F, RECT16, rectangle_t, struct wined3d_box};
 T rect;
 @@
@@ -36,7 +36,7 @@ T rect;
 )
 
 
-@ depends on skip @
+@ depends on skip disable fld_to_ptr @
 type T != {D2D_RECT_F, RECT16, rectangle_t, struct wined3d_box};
 T rect;
 @@
