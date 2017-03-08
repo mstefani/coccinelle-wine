@@ -94,3 +94,24 @@ expression size;
             ( r1, r2,
 -                     size
             )
+
+
+@ depends on !skip @
+expression r1, r2;
+@@
+- memcmp
++ !EqualRect
+            ( r1, r2,
+-                     sizeof(RECT)
+            )
+
+
+@ depends on !skip @
+RECT *r1;
+expression r2, size;
+@@
+- memcmp
++ !EqualRect
+            ( r1, r2,
+-                     size
+            )
