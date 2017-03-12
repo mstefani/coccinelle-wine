@@ -1,3 +1,4 @@
+*.diff
 *.out
 COM/stats
 COM/stats.old
