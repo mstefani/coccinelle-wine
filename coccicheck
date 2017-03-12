@@ -11,8 +11,10 @@ my $macros = $0;
 $macros =~ s,/[^/]+$,/macros,;
 
 my $report = 0;
+my $tryreport = 0;
 GetOptions(
         "report" => \$report,
+        "try-report" => \$tryreport,
 );
 
 my $srcdir;
@@ -26,6 +28,10 @@ $srcdir = `cd '$srcdir' && git rev-parse --show-toplevel`;
 chomp($srcdir);
 
 my @cocci = grep(/\.cocci$/, @ARGV);
+if ($tryreport) {
+    system('grep', '-q', '^virtual report', $cocci[0]);
+    $report = 1 if ($? >> 8 == 0);
+}
 my $optstr = `grep -P '^\\s*//\\s*Options:' '$cocci[0]' | cut -d: -f2`;
 $optstr =~ s/^\s+//;
 $optstr =~ s/\s+$//;
