@@ -33,13 +33,17 @@ COCCI_FILES = \
 WINESRC = /home/michi/work/wine
 
 OUTPUT_FILES = $(COCCI_FILES:.cocci=.out)
+DIFF_FILES = $(COCCI_FILES:.cocci=.diff)
 
-.SUFFIXES: .cocci .out
+.SUFFIXES: .cocci .out .diff
 
 all: $(OUTPUT_FILES)
 
 .cocci.out:
-	./coccicheck $*.cocci $(WINESRC) >$*.out
+	./coccicheck --try-report $*.cocci $(WINESRC) >$*.out
+
+.cocci.diff:
+	./coccicheck $*.cocci $(WINESRC) >$*.diff
 
 clean:
-	rm -f $(OUTPUT_FILES)
+	rm -f $(OUTPUT_FILES) $(DIFF_FILES)
