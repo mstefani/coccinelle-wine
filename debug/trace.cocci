@@ -7,7 +7,7 @@
 // Comments: Needs cleanups as it is way too verbose.
 //           Should use the new format string support from coccinelle.
 
-virtual diff
+virtual report
 
 @initialize:python@
 @@
@@ -108,7 +108,7 @@ p << r2.p;
 @@
 check_format(fmt, args, func, p)
 
-@stub depends on diff@
+@stub@
 identifier f;
 identifier FIXME =~ "^(WINE_)?FIXME$";
 constant fmt, C;
@@ -120,13 +120,19 @@ position p;
      return C;
  }
 
-@script:python stub_added @
+@script:python depends on report@
+fmt << stub.fmt;
+p << stub.p;
+@@
+if not re.search("stub", fmt, re.I):
+    WARN(p, "stub function without 'stub' FIXME")
+
+@script:python stub_added depends on !report@
 fmt << stub.fmt;
 p << stub.p;
 newfmt;
 @@
 if not re.search("stub", fmt, re.I):
-    WARN(p, "stub function without 'stub' FIXME")
     coccinelle.newfmt = '"(' + fmt[1:-3] + r') stub\n"'
 else:
     cocci.include_match(False)
