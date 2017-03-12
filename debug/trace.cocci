@@ -15,8 +15,7 @@ import re
 fmtcache = {}
 
 def MSG(level, pos, msg=""):
-    print("%s: In function '%s':" % (pos[0].file, pos[0].current_element))
-    print("%s:%s: %s: %s" % (pos[0].file, pos[0].line, level, msg))
+    print("%s:%s: %s: In function %s %s" % (pos[0].file, pos[0].line, level, pos[0].current_element, msg))
 def ERR(pos, msg):
     MSG("error", pos, msg)
 def WARN(pos, msg):
