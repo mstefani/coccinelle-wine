@@ -5,20 +5,45 @@
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --no-includes
 
-@ disable drop_cast @
+virtual report
+
+
+@initialize:python@
+@@
+def WARN(pos, msg):
+    print("%s:%s: Warning: In function %s %s" % (pos.file, pos.line, pos.current_element, msg), flush=True)
+
+
+@ zero disable drop_cast @
 typedef LPARAM;
 typedef WPARAM;
+position p;
 @@
 (
-- (LPARAM) NULL
+- (LPARAM) NULL@p
 + 0
 |
-- (WPARAM) NULL
+- (WPARAM) NULL@p
 + 0
 )
 
-@ disable drop_cast @
-type T;
+
+@ script:python depends on report @
+p << zero.p;
 @@
-- (T)
+WARN(p[0], "use 0 instead of casting NULL")
+
+
+@ null disable drop_cast @
+type T;
+position p;
+@@
+- (T@p)
   NULL
+
+
+@ script:python depends on report @
+p << null.p;
+T << null.T;
+@@
+WARN(p[0], "do not cast NULL to " + T)
