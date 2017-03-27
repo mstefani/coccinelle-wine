@@ -47,3 +47,6 @@ all: $(OUTPUT_FILES)
 
 clean:
 	rm -f $(OUTPUT_FILES) $(DIFF_FILES)
+
+reportcheck:
+	for i in $(COCCI_FILES); do grep -q '^virtual report' $$i || echo "Missing report mode for $$i"; done
