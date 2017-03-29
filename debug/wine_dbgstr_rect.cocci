@@ -5,11 +5,23 @@
 // Options: --include-headers --no-includes
 // Comments: Make use of the new format string support from coccinelle.
 
-@ disable ptr_to_array @
+virtual report
+
+
+@initialize:python@
+@@
+import re
+
+def WARN(pos):
+    print("%s:%s: Warning: In function %s use wine_dbgstr_rect() instead of open coding it" % (pos.file, pos.line, pos.current_element), flush=True)
+
+
+@ r1 disable ptr_to_array @
 identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
 identifier channel, file, line;
 expression r;
+position p;
 @@
 (
  dbg
@@ -21,16 +33,23 @@ expression r;
  trace_(file, line)
 )
        (...,
--       r->left, r->top, r->right, r->bottom
+-       r@p->left, r->top, r->right, r->bottom
 +       wine_dbgstr_rect(r)
  , ... )
 
 
+@script:python depends on report@
+p << r1.p;
 @@
+WARN(p[0])
+
+
+@ r2 @
 identifier dbg =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN|ok|trace)$";
 identifier dbg_ =~ "^(WINE_)?(ERR|FIXME|TRACE|WARN)_$";
 identifier channel, file, line;
 expression r;
+position p;
 @@
 (
  dbg
@@ -42,9 +61,15 @@ expression r;
  trace_(file, line)
 )
        (...,
--       r.left, r.top, r.right, r.bottom
+-       r@p.left, r.top, r.right, r.bottom
 +       wine_dbgstr_rect(&r)
  , ... )
+
+
+@script:python depends on report@
+p << r2.p;
+@@
+WARN(p[0])
 
 
 // Detect RECT fields specified out of the natural order.
@@ -103,26 +128,32 @@ position pr;
 @ rb disable ptr_to_array @
 expression rl.r;
 identifier fn;
-position rr.pr;
+position rr.pr, p;
 @@
 (
  fn(..., r.right@pr, ...,
--        r.bottom
+-        r@p.bottom
 +        wine_dbgstr_rect(&r)
                    , ...)
 |
  fn(...,
--        r.bottom
+-        r@p.bottom
 +        wine_dbgstr_rect(&r)
                    , ..., r.right@pr, ...)
 |
  fn(..., r->right@pr, ...,
--        r->bottom
+-        r@p->bottom
 +        wine_dbgstr_rect(r)
                    , ...)
 |
  fn(...,
--        r->bottom
+-        r@p->bottom
 +        wine_dbgstr_rect(r)
                    , ..., r->right@pr, ...)
 )
+
+
+@script:python depends on report@
+p << rb.p;
+@@
+WARN(p[0])
