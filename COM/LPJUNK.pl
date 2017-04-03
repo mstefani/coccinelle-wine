@@ -13,11 +13,20 @@ while (<>) {
     };
 }
 
+my $r = 0;
 foreach my $t (sort(keys(%types))) {
+    $r++;
     my $PJUNK = $t;
     $PJUNK =~ tr/a-z/A-Z/;
     $PJUNK =~ s/^I/P/;
     my $LPJUNK = "L" . $PJUNK;
-    print("\n\n@@\ntypedef $t;\ntypedef $PJUNK;\ntypedef $LPJUNK;\n@@\n");
-    print("(\n- $PJUNK\n+ $t *\n|\n- $LPJUNK\n+ $t *\n)\n");
+    print("\n\n\@r$r@\ntypedef $t;\ntypedef $PJUNK;\nposition p;\n@@\n");
+    print("- $PJUNK\@p\n+ $t *\n");
+    print("\n\@script:python depends on report@\n");
+    print("p << r$r.p;\n@@\nWARN(p[0], \"$t*\", \"$PJUNK\")\n");
+    $r++;
+    print("\n\n\@r$r@\ntypedef $LPJUNK;\nposition p;\n@@\n");
+    print("- $LPJUNK\@p\n+ $t *\n");
+    print("\n\@script:python depends on report@\n");
+    print("p << r$r.p;\n@@\nWARN(p[0], \"$t*\", \"$LPJUNK\")\n");
 }
