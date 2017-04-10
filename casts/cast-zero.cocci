@@ -6,6 +6,9 @@
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --no-includes
 
+virtual report
+
+
 @ bitwise disable drop_cast @
 identifier i;
 position p;
@@ -19,9 +22,17 @@ type T;
   *((T)@p 0)
 )
 
-@ disable drop_cast @
+
+@ r disable drop_cast @
 type T;
 position p != bitwise.p;
 @@
 - (T)@p
   0
+
+
+@ script:python depends on report @
+p << r.p;
+T << r.T;
+@@
+print("%s:%s: Warning: In function %s do not cast 0 to %s" % (p[0].file, p[0].line, p[0].current_element, T), flush=True)
