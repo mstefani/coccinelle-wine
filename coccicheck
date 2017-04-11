@@ -3,7 +3,7 @@
 # coccicheck
 #       A more generic coccinelle wrapper but following the same idea from the Linux version.
 use strict;
-use Getopt::Long;
+use Getopt::Long qw(:config pass_through);
 
 my $nrproc = `getconf _NPROCESSORS_ONLN`;
 chomp($nrproc);
