@@ -33,7 +33,7 @@ def setrect(pos, rect, left, top, right, bottom):
 #include "gdi_private.h"
 
 
-@ sr1 depends on !skip @
+@ sr1 depends on !skip disable fld_to_ptr @
 typedef RECT;
 typedef LPRECT;
 RECT rect;
@@ -217,7 +217,7 @@ b << sr2.b;
 setrect(p[0], rect, l, t, r, b)
 
 
-@ sr3 depends on !skip @
+@ sr3 depends on !skip disable fld_to_ptr @
 RECT rect;
 expression l, t, b;
 position p;
@@ -259,7 +259,7 @@ b << sr4.b;
 setrect(p[0], rect, l, t, b, b)
 
 
-@ sr5 depends on !skip @
+@ sr5 depends on !skip disable fld_to_ptr @
 RECT rect;
 expression t, r, b;
 position p;
@@ -301,7 +301,7 @@ b << sr6.b;
 setrect(p[0], rect, t, t, r, b)
 
 
-@ sr7 depends on !skip @
+@ sr7 depends on !skip disable fld_to_ptr @
 RECT rect;
 expression t, b;
 position p;
@@ -339,7 +339,7 @@ b << sr8.b;
 setrect(p[0], rect, t, t, b, b)
 
 
-@ sr9 depends on !skip @
+@ sr9 depends on !skip disable fld_to_ptr @
 RECT rect;
 expression l, b;
 position p;
@@ -377,7 +377,7 @@ b << sr10.b;
 setrect(p[0], rect, l, b, b, b)
 
 
-@ sr11 depends on !skip @
+@ sr11 depends on !skip disable fld_to_ptr @
 RECT rect;
 expression b;
 position p;
@@ -446,7 +446,7 @@ p << sre.p;
 WARN(p[0], "use SetRectEmpty() instead of SetRect()")
 
 
-@ assign @
+@ assign disable fld_to_ptr @
 expression r1;
 RECT r2;
 RECT *r3;
