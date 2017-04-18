@@ -22,6 +22,16 @@
 //*ok(<+... ret ...+>, ...);
 
 virtual expect
+virtual report
+
+
+@initialize:python@
+@@
+import re
+
+def WARN(pos, msg):
+    print("%s:%s: Warning: In function %s %s" % (pos.file, pos.line, pos.current_element, msg), flush=True)
+
 
 // Eliminate false positives due to ok(var1 == var2, ...)
 // FIXME: Eliminates too much, should be more specific.
@@ -31,6 +41,7 @@ position p;
 @@
  ok@p(var1 == var2, ...)
 
+
 // Eliminate false positives due to ok(var == f(), ...)
 @vfunc@
 local idexpression var;
@@ -39,9 +50,10 @@ position p;
 @@
  ok@p(var == f(...), ...)
 
+
 // Verify that a variable isn't checked in two ok() calls without being
 // modified in between.
-@@
+@r1@
 local idexpression hr;
 position p1 != vfunc.p;
 position p2 != {v1v2.p, vfunc.p};
@@ -54,6 +66,17 @@ type T;
 +NOTOK
       (hr == E3, ...)
 
+
+@script:python depends on report@
+p1 << r1.p1;
+p2 << r1.p2;
+hr << r1.hr;
+val1 << r1.E1;
+val2 << r1.E3;
+@@
+WARN(p2[0], "duplicate ok() call for '%s' == '%s', previously tested at line %s to be == '%s'" % (hr, val2, p1[0].line, val1))
+
+
 @msg depends on expect@
 constant C, fmt;
 expression E;
@@ -62,9 +85,6 @@ type T;
 @@
  ok@p(E == (T)C, fmt, ...)
 
-@initialize:python@
-@@
-import re
 
 @script:python msgfix@
 C << msg.C;
@@ -78,7 +98,8 @@ if re.search(r"\bexpect(?:ed)?\b", fmt, re.I) and not re.search(r"\b" + re.escap
 else:
     cocci.include_match(False)
 
-@@
+
+@depends on !report@
 constant msg.fmt;
 position msg.p;
 identifier msgfix.newfmt;
