@@ -46,9 +46,10 @@ position p;
 @vfunc@
 local idexpression var;
 expression f;
+type T;
 position p;
 @@
- ok@p(var == f(...), ...)
+ ok@p(var == (T)f(...), ...)
 
 
 // Verify that a variable isn't checked in two ok() calls without being
