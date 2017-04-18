@@ -62,7 +62,7 @@ expression E1, E2, E3, f, Ef1, Ef2;
 type T;
 @@
  ok@p1(hr == E1, ...)
- ... when != \( hr = E2 \| f(..., \( (T)&hr \| Ef1 ? (T)&hr : Ef2 \), ...) \)
+ ... when != \( hr = E2 \| f(..., \( (T)&hr \| Ef1 ? (T)&hr : Ef2 \), ...) \| hr-- \)
 -ok@p2
 +NOTOK
       (hr == E3, ...)
