@@ -4,8 +4,6 @@
 // Options: --local-includes
 // NOTES: - Cannot automate the whole work so manual intervention is still
 //          required.
-//        - Works only on IUnknown_iface style interfaces aka after a basic
-//          COM cleanup with COM-gen.cocci.
 //
 
 @ object @
