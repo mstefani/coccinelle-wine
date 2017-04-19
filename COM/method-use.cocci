@@ -3,10 +3,15 @@
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --local-includes --timeout 300
 
+virtual report
+
 
 @initialize:python@
 @@
 import re
+
+def WARN(pos, good, bad):
+    print("%s:%s: Warning: Use the COM C macro %s instead of the implementation %s" % (pos.file, pos.line, good, bad), flush=True)
 
 
 @find disable ptr_to_array@
@@ -47,10 +52,19 @@ coccinelle.cobjmacro = re.sub("Impl_", "_", newmethod)
 @usage@
 identifier vtable.method;
 identifier gen.cobjmacro;
+position p;
 @@
-- method
+- method@p
 + cobjmacro
            (...);
+
+
+@script:python depends on report@
+p << usage.p;
+good << gen.cobjmacro;
+bad << vtable.method;
+@@
+WARN(p[0], good, bad)
 
 
 //@@
