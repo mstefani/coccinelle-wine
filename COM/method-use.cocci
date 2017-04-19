@@ -40,13 +40,14 @@ type T;
 
 @script:python gen@
 method << vtable.method;
+iface << find.iface;
 cobjmacro;
 @@
-if not method.startswith("I"):
-    newmethod = "I" + method
-else:
-    newmethod = method
-coccinelle.cobjmacro = re.sub("Impl_", "_", newmethod)
+interface = "IUnknown"
+if iface != "IUnknown_inner":
+    interface = re.sub("_iface", "", iface)
+newmethod = re.sub("^.*(?=_[^_]+$)", "", method)
+coccinelle.cobjmacro = interface + newmethod
 
 
 @usage@
