@@ -5,6 +5,7 @@ COCCI_FILES = \
 	api/IsRectEmpty.cocci \
 	api/OffsetRect.cocci \
 	api/SetRect.cocci \
+	api/VariantInit.cocci \
 	boolean/cond-false-true.cocci \
 	boolean/cond-true-false.cocci \
 	boolean/FAILED-SUCCEEDED.cocci \
