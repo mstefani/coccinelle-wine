@@ -27,6 +27,7 @@ COCCI_FILES = \
 	mem/memset.cocci \
 	mem/redundant_null_check.cocci \
 	mem/register.cocci \
+	misc/ARRAY_SIZE.cocci \
 	string-not-empty.cocci \
 	tests/broken.cocci \
 	tests/ok.cocci
