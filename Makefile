@@ -22,12 +22,12 @@ COCCI_FILES = \
 	COM/LPJUNK.cocci \
 	COM/method-forward.cocci \
 	COM/method-use.cocci \
-	CONTAINING_RECORD.cocci \
 	DllCanUnloadNow.cocci \
 	mem/memset.cocci \
 	mem/redundant_null_check.cocci \
 	mem/register.cocci \
 	misc/ARRAY_SIZE.cocci \
+	misc/CONTAINING_RECORD.cocci \
 	string-not-empty.cocci \
 	tests/broken.cocci \
 	tests/ok.cocci
