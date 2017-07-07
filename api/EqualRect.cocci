@@ -38,7 +38,7 @@ position p;
 @script:python depends on report@
 p << open1.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "open conding it")
 
 
 @ open2 depends on !skip disable paren, ptr_to_array @
@@ -60,7 +60,7 @@ position p;
 @script:python depends on report@
 p << open2.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "open conding it")
 
 
 @ open3 depends on !skip disable paren, ptr_to_array @
@@ -82,7 +82,7 @@ position p;
 @script:python depends on report@
 p << open3.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "open conding it")
 
 
 @ open4 depends on !skip disable paren, ptr_to_array @
@@ -104,7 +104,7 @@ position p;
 @script:python depends on report@
 p << open4.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "open conding it")
 
 
 @ memcmp1 depends on !skip @
@@ -129,7 +129,7 @@ position p;
 @script:python depends on report@
 p << memcmp1.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "memcmp()")
 
 
 @ memcmp2 depends on !skip @
@@ -146,7 +146,7 @@ position p;
 @script:python depends on report@
 p << memcmp2.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "memcmp()")
 
 
 @ memcmp3 depends on !skip @
@@ -164,4 +164,4 @@ position p;
 @script:python depends on report@
 p << memcmp3.p;
 @@
-WARN(p[0], "IsRectEmpty")
+WARN(p[0], "memcmp()")
