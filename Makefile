@@ -29,6 +29,7 @@ COCCI_FILES = \
 	mem/register.cocci \
 	misc/ARRAY_SIZE.cocci \
 	misc/CONTAINING_RECORD.cocci \
+	misc/redundant-check-before-set.cocci \
 	string-not-empty.cocci \
 	tests/broken.cocci \
 	tests/ok.cocci
