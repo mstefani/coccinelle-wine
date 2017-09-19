@@ -4,12 +4,28 @@
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --include-headers --no-includes --disable-worth-trying-opt
 
+virtual report
+
+@initialize:python@
 @@
+def WARN(pos, fn):
+    print("%s:%s: Warning: Redundant NULL check before %s()" % (pos.file, pos.line, fn), flush=True)
+
+
+@r@
 expression E;
 type T;
+position p;
 identifier fn = {CoTaskMemFree, free, Free, GdipFree, HeapFree, heap_free, I_RpcFree, msi_free, MSVCRT_free, MyFree, RtlFreeHeap, SysFreeString};
 @@
-- if (E != NULL)
+- if@p (E != NULL)
   {
        fn(..., (T)E);
   }
+
+
+@script:python depends on report@
+p << r.p;
+fn << r.fn;
+@@
+WARN(p[0], fn)
