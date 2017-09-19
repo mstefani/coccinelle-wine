@@ -9,14 +9,6 @@ expression E;
 type T;
 @@
 - if (E != NULL)
-- {
+  {
        \(CoTaskMemFree\|free\|Free\|GdipFree\|HeapFree\|heap_free\|I_RpcFree\|msi_free\|MSVCRT_free\|MyFree\|RtlFreeHeap\|SysFreeString\)(..., (T)E);
-- }
-
-
-@@
-expression E;
-type T;
-@@
-- if (E != NULL)
-       \(CoTaskMemFree\|free\|Free\|GdipFree\|HeapFree\|heap_free\|I_RpcFree\|msi_free\|MSVCRT_free\|MyFree\|RtlFreeHeap\|SysFreeString\)(..., (T)E);
+  }
