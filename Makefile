@@ -43,6 +43,8 @@ DIFF_FILES = $(COCCI_FILES:.cocci=.diff)
 
 all: $(OUTPUT_FILES)
 
+diff: $(DIFF_FILES)
+
 .cocci.out:
 	./coccicheck --try-report $*.cocci $(WINESRC) >$*.out
 
