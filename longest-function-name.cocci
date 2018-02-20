@@ -1,11 +1,12 @@
 // Find and print the function with the longest name
 //
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --include-headers --no-includes -j 1
 
 @initialize:python@
 @@
 maxlen = 0
-strings = {}
+strings = set()
 
 @ r @
 identifier f;
@@ -15,13 +16,14 @@ identifier f;
 @script:python@
 f << r.f;
 @@
-t = len(f.ident)
+t = len(f)
 if t > maxlen:
     maxlen = t
-    strings = {f.ident: 0}
+    strings = set()
+    strings.add(f)
 elif t == maxlen:
-    strings[f.ident] = 0
+    strings.add(f)
 
 @finalize:python@
 @@
-print(maxlen, sorted(strings.keys()))
+print(maxlen, sorted(strings))
