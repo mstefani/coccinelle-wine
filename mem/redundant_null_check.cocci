@@ -18,10 +18,16 @@ type T;
 position p;
 identifier fn = {CoTaskMemFree, free, Free, GdipFree, HeapFree, heap_free, I_RpcFree, msi_free, MSVCRT_free, MyFree, RtlFreeHeap, SysFreeString};
 @@
+(
 - if@p (E != NULL)
-  {
-       fn(..., (T)E);
-  }
+      fn(..., (T)E);
+|
+- if@p (E != NULL)
+- {
+      fn(..., (T)E);
+?     E = NULL;
+- }
+)
 
 
 @script:python depends on report@
