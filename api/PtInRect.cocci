@@ -2,7 +2,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --include-headers --no-includes --timeout 900
+// Options: --include-headers --no-includes --timeout 300
 // Comments: FIXME: PtInRect cannot be used from all places. This produces false positives.
 
 using "../binary_and.iso"
