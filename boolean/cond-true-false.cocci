@@ -25,20 +25,34 @@ expression E1, E2;
 )
 - ? TRUE : FALSE
 
+
 @@
-type T;
-T *E;
+identifier I;
+expression E;
 @@
-  E
+(
++ !!
+  I
 -   ? TRUE : FALSE
-+   != NULL
+|
++ !!
+  E.I
+-   ? TRUE : FALSE
+|
++ !!
+  E->I
+-   ? TRUE : FALSE
+)
+
 
 @@
 expression E;
 @@
++ !!(
   E
++  )
 -   ? TRUE : FALSE
-+   != 0
+
 
 @@
 expression E1, E2;
