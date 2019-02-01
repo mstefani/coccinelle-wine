@@ -6,25 +6,16 @@
 
 @@
 expression E1, E2;
+binary operator op = {&&, ||, ==, !=, >, >=, <, <=};
 @@
+(
 - (
-(
-   E1 == E2
-|
-   E1 != E2
-)
+   E1 op E2
 - ) ? TRUE : FALSE
-
-@@
-expression E1, E2;
-@@
-(
-  E1 == E2
 |
-  E1 != E2
+   E1 op E2
+-   ? TRUE : FALSE
 )
-- ? TRUE : FALSE
-
 
 @@
 identifier I;
