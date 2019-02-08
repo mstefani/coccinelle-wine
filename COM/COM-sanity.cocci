@@ -79,9 +79,10 @@ struct tag_obj obj;
 @ disable drop_cast @
 type T;
 {find.To, find2.To} *obj;
+identifier func = {PostMessageA, PostMessageW, SetWindowLongPtrA, SetWindowLongPtrW, WinHttpSendRequest};
 @@
 (
-  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
+  func(..., (T)(obj))
 |
 - (T)
        (obj)
@@ -92,9 +93,10 @@ type T;
 type T;
 identifier find.tag_obj;
 struct tag_obj *obj;
+identifier func = {PostMessageA, PostMessageW, SetWindowLongPtrA, SetWindowLongPtrW, WinHttpSendRequest};
 @@
 (
-  \(SetWindowLongPtrA\|SetWindowLongPtrW\)(..., GWLP_USERDATA, (T)(obj))
+  func(..., (T)(obj))
 |
 - (T)
        (obj)
