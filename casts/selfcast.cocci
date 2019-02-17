@@ -1,6 +1,6 @@
 // Casting an expression to its own type is a no-op and thus pointless.
 //
-// Confidence: High (Medium in reality due to coccinelle limitations)
+// Confidence: High
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options:
 
