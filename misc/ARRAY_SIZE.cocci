@@ -12,25 +12,7 @@ def WARN(pos):
     print("%s:%s: Warning: In function %s use the available ARRAY_SIZE() macro" % (pos.file, pos.line, pos.current_element), flush=True)
 
 
-@ testh @
-@@
-(
- #include <wine/test.h>
-|
- #include "wine/test.h"
-)
-
-@ array_size depends on !testh @
-identifier a;
-@@
-(
-#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
-|
-#define ARRAY_SIZE(a) (sizeof(a) / sizeof(*(a)))
-)
-
-
-@ r depends on (array_size || testh) @
+@ r @
 type T;
 T[] E;
 position p;
