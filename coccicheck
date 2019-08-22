@@ -11,9 +11,11 @@ my $macros = $0;
 $macros =~ s,/[^/]+$,/macros,;
 
 my $report = 0;
+my $timeout = undef;
 my $tryreport = 0;
 GetOptions(
         "report" => \$report,
+        "timeout=s" => \$timeout,
         "try-report" => \$tryreport,
 );
 
@@ -36,7 +38,9 @@ my $optstr = `grep -P '^\\s*//\\s*Options:' '$cocci[0]' | cut -d: -f2`;
 $optstr =~ s/^\s+//;
 $optstr =~ s/\s+$//;
 my @opts = split(/\s+/, $optstr);
-
+if (defined($timeout)) {
+    push(@opts, '--timeout', $timeout);
+}
 if ($report) {
     push(@opts, '--no-show-diff', '-D', 'report');
 }
