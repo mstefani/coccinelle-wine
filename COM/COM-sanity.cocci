@@ -4,6 +4,8 @@
 // Options: --local-includes --timeout 300
 //
 
+virtual impl_outside_decl
+
 @ find @
 type Ti, To;
 identifier iface =~ "(_iface|^IUnknown_inner)$";
@@ -211,7 +213,7 @@ identifier gen_impl.impl_from_IFace;
 
 
 // Don't use impl_from_IFace() outside declarations
-@@
+@ depends on impl_outside_decl @
 type find.To;
 identifier fn, iface, foo, bar;
 identifier gen_impl.impl_from_IFace;
@@ -233,7 +235,7 @@ identifier gen_impl.impl_from_IFace;
  }
 
 
-@@
+@ depends on impl_outside_decl @
 type find2.To;
 identifier fn, iface, foo, bar;
 identifier gen_impl.impl_from_IFace;
@@ -255,7 +257,7 @@ identifier gen_impl.impl_from_IFace;
  }
 
 
-@@
+@ depends on impl_outside_decl @
 identifier find.tag_obj;
 identifier fn, iface, foo, bar;
 identifier gen_impl.impl_from_IFace;
