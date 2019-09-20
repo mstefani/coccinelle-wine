@@ -8,11 +8,6 @@ COCCI_FILES = \
 	api/VariantInit.cocci \
 	boolean/cond-true-false.cocci \
 	boolean/FAILED-SUCCEEDED.cocci \
-	debug/critsect.cocci \
-	debug/debugstr_aw.cocci \
-	debug/debugstr_guid.cocci \
-	debug/trace.cocci \
-	debug/wine_dbgstr_rect.cocci \
 	casts/cast-NULL.cocci \
 	casts/cast-zero.cocci \
 	casts/makeparam.cocci \
@@ -22,11 +17,17 @@ COCCI_FILES = \
 	COM/LPJUNK.cocci \
 	COM/method-forward.cocci \
 	COM/method-use.cocci \
+	debug/critsect.cocci \
+	debug/debugstr_aw.cocci \
+	debug/debugstr_guid.cocci \
+	debug/trace.cocci \
+	debug/wine_dbgstr_rect.cocci \
 	DllCanUnloadNow.cocci \
 	mem/memset.cocci \
 	mem/redundant_null_check.cocci \
 	mem/register.cocci \
 	misc/ARRAY_SIZE.cocci \
+	misc/comma.cocci \
 	misc/CONTAINING_RECORD.cocci \
 	misc/redundant-check-before-set.cocci \
 	string-not-empty.cocci \
