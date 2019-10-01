@@ -20,16 +20,16 @@ type T;
 lvar << r.lvar;
 chs << r.chs;
 p << r.p;
-ustr;
+wstr;
 @@
-coccinelle.ustr = 'u"' + "".join(map(lambda x: x[1:-1], chs)) + '"'
+coccinelle.wstr = 'L"' + "".join(map(lambda x: x[1:-1], chs)) + '"'
 #print(lvar, chs)
-#print(lvar, coccinelle.ustr)
+#print(lvar, coccinelle.wstr)
 
 
 @@
 identifier r.lvar;
-identifier u.ustr;
+identifier u.wstr;
 initializer list r.chs;
 position r.p;
 type T;
@@ -37,21 +37,21 @@ type T;
 (
  WCHAR lvar[]@p =
 -                 { chs, \('\0'\|0\) }
-+                 ustr
++                 wstr
                   ;
 |
  WCHAR *lvar@p =
 -                { chs, \('\0'\|0\) }
-+                ustr
++                wstr
                  ;
 |
  LOGFONTW lvar@p = { ...,
 -                       { chs, \('\0'\|0\) }
-+                       ustr
++                       wstr
                    };
 |
  T lvar[]@p = { ..., {..., {...,
 -                       { chs, \('\0'\|0\) }
-+                       ustr
++                       wstr
                    }, ...}, ... };
 )
