@@ -30,7 +30,7 @@ COCCI_FILES = \
 	misc/comma.cocci \
 	misc/CONTAINING_RECORD.cocci \
 	misc/redundant-check-before-set.cocci \
-	string-not-empty.cocci \
+	string/string-not-empty.cocci \
 	tests/broken.cocci \
 	tests/ok.cocci
 
