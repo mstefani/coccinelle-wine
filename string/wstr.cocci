@@ -1,3 +1,26 @@
+// Convert WCHAR strings from old style array initialization to L"string".
+// Also remove no longer needed variables holding those strings.
+//
+// Confidence: High
+// Copyright: Michael Stefaniuc <mstefani@winehq.org>
+// Options: --no-includes --include-headers
+
+// Always remove variables holding the empty string
+@empty@
+typedef WCHAR;
+identifier lvar;
+position p;
+@@
+- WCHAR lvar[]@p = { \('\0'\|0\) };
+
+
+@@
+identifier empty.lvar;
+@@
+- lvar
++ L""
+
+
 @r@
 typedef LOGFONTW, WCHAR;
 identifier lvar;
