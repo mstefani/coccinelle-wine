@@ -10,7 +10,11 @@
 typedef WCHAR;
 identifier lvar;
 @@
+(
 - WCHAR lvar[] = { \('\0'\|0\) };
+|
+- WCHAR *lvar = { \('\0'\|0\) };
+)
 
 
 @@
