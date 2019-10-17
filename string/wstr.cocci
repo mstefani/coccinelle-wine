@@ -54,27 +54,26 @@ coccinelle.wstr = 'L"' + "".join(map(lambda x: x[1:-1], chs)) + '"'
 @@
 identifier r.lvar;
 identifier L.wstr;
-initializer list r.chs;
 type T;
 @@
 (
  WCHAR lvar[] =
--                 { chs, \('\0'\|0\) }
+-                 { ... }
 +                 wstr
                   ;
 |
  WCHAR *lvar =
--                { chs, \('\0'\|0\) }
+-                { ... }
 +                wstr
                  ;
 |
  LOGFONTW lvar = { ...,
--                       { chs, \('\0'\|0\) }
+-                       { ... }
 +                       wstr
                    };
 |
  T lvar[] = { ..., {..., {...,
--                       { chs, \('\0'\|0\) }
+-                       { ... }
 +                       wstr
                    }, ...}, ... };
 )
