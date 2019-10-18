@@ -2,7 +2,7 @@
 //
 // Confidence: Medium
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --include-headers --disable-worth-trying-opt
+// Options: --include-headers --no-includes --disable-worth-trying-opt
 
 virtual report
 
