@@ -31,6 +31,16 @@ identifier empty.lvar;
 + L""
 
 
+@empty2@
+identifier lvar;
+@@
+- WCHAR lvar = \('\0'\|0\);
+  <+...
+- &lvar
++ L""
+  ...+>
+
+
 // Initialization of structs
 @rs@
 typedef LOGFONTW;
