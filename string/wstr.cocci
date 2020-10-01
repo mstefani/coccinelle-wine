@@ -99,7 +99,7 @@ wstr;
 coccinelle.wstr = array2wstr(chs)
 
 
-@single@
+@single exists@
 identifier rv.lvar;
 identifier Lv.wstr;
 @@
