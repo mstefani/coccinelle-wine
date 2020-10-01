@@ -9,7 +9,7 @@
 @initialize:python@
 @@
 def array2wstr(chs):
-    return  'L"' + "".join(map(lambda x: x[1:-1], chs)) + '"'
+    return  'L"' + "".join(map(lambda x: '\\0' if x == '0' else x[1:-1], chs)) + '"'
 
 
 // Always remove variables holding the empty string
