@@ -16,7 +16,7 @@ def WARN(pos, fn):
 expression E;
 type T;
 position p;
-identifier fn = {CoTaskMemFree, free, Free, GdipFree, HeapFree, heap_free, I_RpcFree, msi_free, MSVCRT_free, MyFree, RtlFreeHeap, SysFreeString};
+identifier fn = {CoTaskMemFree, free, Free, GdipFree, HeapFree, heap_free, I_RpcFree, msi_free, MSVCRT_free, MyFree, ReleaseStgMedium, RtlFreeHeap, SysFreeString};
 @@
 (
 - if@p (E != NULL)
