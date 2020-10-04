@@ -9,7 +9,31 @@
 @initialize:python@
 @@
 def array2wstr(chs):
-    return  'L"' + "".join(map(lambda x: '\\0' if x == '0' else x[1:-1], chs)) + '"'
+    s = 'L"'
+    for c in chs:
+        if c[0] == "'":
+            c = c[1:-1]
+            if c == r"\'":
+                c = "'"
+            elif c == '"':
+                c = r'\"'
+            s += c
+        else:
+            if c.startswith('0x'):
+                i = int(c, 16)
+            elif c.startswith('0'):
+                i = int(c, 8)
+            elif c.isnumeric():
+                i = int(c)
+            else:
+                # Define, variable, ... skip
+                cocci.include_match(False)
+                return
+            if i < 10:
+                s += '\\' + str(i)
+            else:
+                s += '\\x%04x' % (i)
+    return s + '"'
 
 
 // Always remove variables holding the empty string
