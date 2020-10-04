@@ -104,6 +104,33 @@ type T;
 )
 
 
+// Array of arrays
+@ra@
+identifier lvar;
+initializer list chs;
+initializer list[n] elem;
+@@
+ WCHAR lvar[...][...] = { elem, { chs, \('\0'\|0\) }, ... };
+
+
+@script:python La@
+chs << ra.chs;
+wstr;
+@@
+coccinelle.wstr = array2wstr(chs)
+
+
+@@
+identifier ra.lvar;
+identifier La.wstr;
+initializer list[ra.n] ra.elem;
+@@
+   WCHAR lvar[...][...] = { elem,
+-                              { ... }
+++                             wstr
+                            , ... };
+
+
 // Remove single use variables
 @rv@
 identifier lvar;
