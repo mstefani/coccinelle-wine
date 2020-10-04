@@ -89,16 +89,17 @@ coccinelle.wstr = array2wstr(chs)
 @@
 identifier rs.lvar;
 identifier Ls.wstr;
-type T;
+initializer list rs.chs;
+type rs.T;
 @@
 (
  LOGFONTW lvar = { ...,
--                       { ... }
+-                       { chs, \('\0'\|0\) }
 +                       wstr
                    };
 |
  T lvar[] = { ..., {..., {...,
--                       { ... }
+-                       { chs, \('\0'\|0\) }
 +                       wstr
                    }, ...}, ... };
 )
@@ -173,15 +174,16 @@ identifier rv.lvar;
 @@
 identifier rv.lvar;
 identifier Lv.wstr;
+initializer list rv.chs;
 @@
 (
- WCHAR lvar[] =
--                 { ... }
-+                 wstr
-                  ;
+  WCHAR lvar[] =
+-                { chs, \('\0'\|0\) }
++                wstr
+                 ;
 |
- WCHAR *lvar =
--                { ... }
+  WCHAR *lvar =
+-                { chs, \('\0'\|0\) }
 +                wstr
                  ;
 )
