@@ -154,10 +154,10 @@ coccinelle.wstr = array2wstr(chs)
 identifier rv.lvar;
 identifier Lv.wstr;
 @@
-  ... when != lvar
-- lvar
-+ wstr
-  ... when != lvar
+   ... when != lvar
+-  lvar
+++ wstr
+   ... when != lvar
 
 
 @depends on single@
