@@ -70,13 +70,8 @@ identifier lvar;
 typedef LOGFONTW;
 identifier lvar;
 initializer list chs;
-type T;
 @@
-(
  LOGFONTW lvar = { ..., { chs, \('\0'\|0\) } };
-|
- T lvar[] = { ..., { ..., { ..., { chs, \('\0'\|0\) } }, ... }, ...};
-)
 
 
 @script:python Ls@
@@ -90,19 +85,11 @@ coccinelle.wstr = array2wstr(chs)
 identifier rs.lvar;
 identifier Ls.wstr;
 initializer list rs.chs;
-type rs.T;
 @@
-(
  LOGFONTW lvar = { ...,
 -                       { chs, \('\0'\|0\) }
 +                       wstr
                    };
-|
- T lvar[] = { ..., {..., {...,
--                       { chs, \('\0'\|0\) }
-+                       wstr
-                   }, ...}, ... };
-)
 
 
 // Array of arrays
