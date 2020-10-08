@@ -143,8 +143,23 @@ identifier rv.lvar;
 identifier Lv.wstr;
 @@
    ... when != lvar
+(
+(
+-  memcmp
++  lstrcmpW
+|
+-  memcpy
++  lstrcpyW
+)
+           (...,
+-                lvar
++                wstr
+-                    , sizeof(lvar)
+           )
+|
 -  lvar
 ++ wstr
+)
    ... when != lvar
 
 
