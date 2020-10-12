@@ -165,11 +165,12 @@ identifier Lv.wstr;
 
 @depends on single@
 identifier rv.lvar;
+initializer list rv.chs;
 @@
 (
-- WCHAR lvar[] = ...;
+- WCHAR lvar[] = { chs, \('\0'\|0\) };
 |
-- WCHAR *lvar = ...;
+- WCHAR *lvar = { chs, \('\0'\|0\) };
 )
 
 
