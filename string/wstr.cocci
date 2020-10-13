@@ -120,14 +120,14 @@ initializer list[ra.n] ra.elem;
 
 
 // Remove single use variables
-@rv@
+@rv disable optional_qualifier@
 identifier lvar;
 initializer list chs;
 @@
 (
- WCHAR lvar[] = { chs, \('\0'\|0\) };
+ const WCHAR lvar[] = { chs, \('\0'\|0\) };
 |
- WCHAR *lvar = { chs, \('\0'\|0\) };
+ const WCHAR *lvar = { chs, \('\0'\|0\) };
 )
 
 
