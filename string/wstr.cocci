@@ -174,10 +174,29 @@ initializer list rv.chs;
 )
 
 
+// Finally replace the remaining WCHAR arrays
+@rf@
+identifier lvar;
+initializer list chs;
 @@
-identifier rv.lvar;
-identifier Lv.wstr;
-initializer list rv.chs;
+(
+ WCHAR lvar[] = { chs, \('\0'\|0\) };
+|
+ WCHAR *lvar = { chs, \('\0'\|0\) };
+)
+
+
+@script:python Lf@
+chs << rf.chs;
+wstr;
+@@
+coccinelle.wstr = array2wstr(chs)
+
+
+@@
+identifier rf.lvar;
+identifier Lf.wstr;
+initializer list rf.chs;
 @@
 (
   WCHAR lvar[] =
