@@ -5,6 +5,8 @@
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
 // Options: --no-includes --include-headers --smpl-spacing
 
+virtual constify
+
 
 @initialize:python@
 @@
@@ -117,6 +119,21 @@ initializer list[ra.n] ra.elem;
 -                              { ... }
 ++                             wstr
                             , ... };
+
+
+// Constify WCHAR strings. Most of the time this is wrong.
+// Defaults to off.
+@depends on constify disable optional_qualifier@
+identifier lvar;
+initializer list chs;
+@@
+(
++ const
+  WCHAR lvar[] = { chs, \('\0'\|0\) };
+|
++ const
+  WCHAR *lvar = { chs, \('\0'\|0\) };
+)
 
 
 // Remove single use variables
