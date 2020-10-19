@@ -31,8 +31,22 @@ def array2wstr(chs):
                 # Define, variable, ... skip
                 cocci.include_match(False)
                 return
-            if i < 10:
+            if i < 7:
                 s += '\\' + str(i)
+            elif i == 7:
+                s += '\\a'
+            elif i == 8:
+                s += '\\b'
+            elif i == 9:
+                s += '\\t'
+            elif i == 10:
+                s += '\\n'
+            elif i == 11:
+                s += '\\v'
+            elif i == 12:
+                s += '\\f'
+            elif i == 13:
+                s += '\\r'
             else:
                 s += '\\x%04x' % (i)
     return s + '"'
