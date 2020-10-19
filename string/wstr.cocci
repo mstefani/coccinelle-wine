@@ -150,6 +150,47 @@ initializer list chs;
 )
 
 
+// Inline simple strings
+@r1@
+identifier lvar;
+initializer list chs;
+@@
+(
+ const WCHAR lvar[] = { chs, \('\0'\|0\) };
+|
+ const WCHAR *lvar = { chs, \('\0'\|0\) };
+)
+
+
+@script:python L1@
+chs << r1.chs;
+wstr;
+@@
+if len(chs.elements) == 1:
+    coccinelle.wstr = array2wstr(chs)
+else:
+    cocci.include_match(False)
+
+
+@simple@
+identifier r1.lvar;
+identifier L1.wstr;
+@@
+- lvar
++ wstr
+
+
+@depends on simple@
+identifier r1.lvar;
+initializer list r1.chs;
+@@
+(
+- WCHAR lvar[] = { chs, \('\0'\|0\) };
+|
+- WCHAR *lvar = { chs, \('\0'\|0\) };
+)
+
+
 // Remove single use variables
 @rv disable optional_qualifier@
 identifier lvar;
