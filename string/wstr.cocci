@@ -6,6 +6,11 @@
 // Options: --local-includes --include-headers --smpl-spacing
 
 virtual constify
+virtual no_array
+virtual no_empty
+virtual no_final
+virtual no_simple
+virtual no_single
 
 
 @initialize:python@
@@ -53,7 +58,7 @@ def array2wstr(chs):
 
 
 // Always remove variables holding the empty string
-@empty@
+@empty depends on !no_empty@
 typedef WCHAR;
 identifier lvar;
 @@
@@ -73,7 +78,7 @@ identifier empty.lvar;
 + L""
 
 
-@empty2@
+@empty2 depends on !no_empty@
 identifier lvar;
 @@
 - WCHAR lvar = \('\0'\|0\);
@@ -111,7 +116,7 @@ initializer list rs.chs;
 
 
 // Array of arrays
-@ra@
+@ra depends on !no_array@
 identifier lvar;
 initializer list chs;
 initializer list[n] elem;
@@ -153,7 +158,7 @@ initializer list chs;
 
 
 // Inline simple strings
-@r1@
+@r1 depends on !no_simple@
 identifier lvar;
 initializer list chs;
 @@
@@ -194,7 +199,7 @@ initializer list r1.chs;
 
 
 // Remove single use variables
-@rv disable optional_qualifier@
+@rv depends on !no_single disable optional_qualifier@
 identifier lvar;
 initializer list chs;
 @@
@@ -249,7 +254,7 @@ initializer list rv.chs;
 
 
 // Finally replace the remaining WCHAR arrays
-@rf@
+@rf depends on !no_final@
 identifier lvar;
 initializer list chs;
 @@
