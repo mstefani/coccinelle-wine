@@ -3,7 +3,7 @@
 //
 // Confidence: High
 // Copyright: Michael Stefaniuc <mstefani@winehq.org>
-// Options: --no-includes --include-headers --smpl-spacing
+// Options: --local-includes --include-headers --smpl-spacing
 
 virtual constify
 
