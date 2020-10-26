@@ -15,15 +15,22 @@ virtual no_single
 
 @initialize:python@
 @@
+import string
+
 def array2wstr(chs):
     s = 'L"'
+    last_hex_esc = False
     for c in chs:
+        curr_hex_esc = False
         if c[0] == "'":
             c = c[1:-1]
             if c == r"\'":
                 c = "'"
             elif c == '"':
                 c = r'\"'
+            if last_hex_esc and c in string.hexdigits:
+                # Avoid the "hexdigit" to be slurped in by the previous hex escape sequence
+                s += '" "'
             s += c
         else:
             if c.startswith('0x'):
@@ -53,7 +60,9 @@ def array2wstr(chs):
             elif i == 13:
                 s += '\\r'
             else:
+                curr_hex_esc = True
                 s += '\\x%04x' % (i)
+        last_hex_esc = curr_hex_esc
     return s + '"'
 
 
