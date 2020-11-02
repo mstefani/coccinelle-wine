@@ -180,12 +180,20 @@ initializer list chs;
 
 @script:python L1@
 chs << r1.chs;
+lvar << r1.lvar;
 wstr;
 @@
 if len(chs.elements) == 1:
     coccinelle.wstr = array2wstr(chs)
 else:
-    cocci.include_match(False)
+    wstr = array2wstr(chs)
+    # Strip surrounding L""
+    content = wstr[2:-1]
+    # String content matches variable name with allowance for ending 'W' or '_w'
+    if len(lvar) <= len(content) + 2 and lvar.lower().startswith(content.lower()):
+        coccinelle.wstr = wstr
+    else:
+        cocci.include_match(False)
 
 
 @simple@
