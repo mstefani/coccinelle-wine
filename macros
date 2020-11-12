@@ -10,7 +10,7 @@
 #define __thiscall
 #define __TRY
 #define __WINE_ALLOC_SIZE(x)
-#define CDECL
+#define CDECL                   __cdecl
 #define CONST                   const
 #define DECL_HANDLER(name)      void req_name(name)
 #define DECLSPEC_ALIGN(x)
