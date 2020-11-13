@@ -9,6 +9,7 @@ virtual constify
 virtual no_array
 virtual no_empty
 virtual no_final
+virtual alt_simple
 virtual no_simple
 virtual no_single
 
@@ -196,7 +197,7 @@ else:
         cocci.include_match(False)
 
 
-@simple@
+@simple depends on !alt_simple@
 identifier r1.lvar;
 identifier L1.wstr;
 @@
@@ -213,6 +214,22 @@ initializer list r1.chs;
 |
 - WCHAR *lvar = { chs, \('\0'\|0\) };
 )
+
+
+@depends on alt_simple@
+identifier r1.lvar;
+identifier L1.wstr;
+initializer list r1.chs;
+@@
+(
+- WCHAR lvar[] = { chs, \('\0'\|0\) };
+|
+- WCHAR *lvar = { chs, \('\0'\|0\) };
+)
+  <+...
+- lvar
++ wstr
+  ...+>
 
 
 // Remove single use variables
