@@ -193,6 +193,11 @@ else:
     # String content matches variable name with allowance for ending 'W' or '_w'
     if len(lvar) <= len(content) + 2 and lvar.lower().startswith(content.lower()):
         coccinelle.wstr = wstr
+    # String variable name is a "sz" or "wsz" prefix + content
+    elif (((lvar.startswith("sz") and len(lvar) == len(content) + 2) or
+          (lvar.startswith("wsz") and len(lvar) == len(content) + 3)) and
+          lvar.lower().endswith(content.lower())):
+        coccinelle.wstr = wstr
     else:
         cocci.include_match(False)
 
