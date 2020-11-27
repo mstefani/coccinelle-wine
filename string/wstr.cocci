@@ -23,7 +23,7 @@ def array2wstr(chs):
     last_hex_esc = False
     for c in chs:
         curr_hex_esc = False
-        if c[0] == "'":
+        if c[0] == "'" and c[-1] == "'":
             c = c[1:-1]
             if c == r"\'":
                 c = "'"
