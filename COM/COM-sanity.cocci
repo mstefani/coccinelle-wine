@@ -77,6 +77,25 @@ struct tag_obj obj;
 + &obj.iface
 
 
+@ disable drop_cast @
+typedef IUnknown;
+identifier find.iface, find.tag_obj;
+struct tag_obj obj;
+@@
+  (IUnknown *)
+-             (&(obj))
++             &obj.iface
+
+
+@ disable drop_cast @
+identifier find.iface, find.tag_obj;
+struct tag_obj *obj;
+@@
+  (IUnknown *)
+-             (obj)
++             &obj->iface
+
+
 // There should be no need to cast a COM object to something else.
 @ disable drop_cast @
 type T;
