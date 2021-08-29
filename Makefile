@@ -17,6 +17,7 @@ COCCI_FILES = \
 	COM/LPJUNK.cocci \
 	COM/method-forward.cocci \
 	COM/method-use.cocci \
+	COM/QI-obj-rename.cocci \
 	debug/critsect.cocci \
 	debug/debugstr_aw.cocci \
 	debug/debugstr_guid.cocci \
