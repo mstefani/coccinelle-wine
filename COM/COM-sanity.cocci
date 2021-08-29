@@ -124,6 +124,46 @@ identifier func = {PostMessageA, PostMessageW, SetWindowLongPtrA, SetWindowLongP
 )
 
 
+// Don't assign the object to ret_iface in QueryInterface
+////////
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier interface, riid, ret_iface;
+identifier find.iface;
+{find.To, find2.To} *obj;
+type find.Ti;
+type Tr, Tv;
+@@
+ QueryInterface(Ti *interface, Tr riid, Tv **ret_iface)
+ {
+     <...
+     *ret_iface =
+-                 obj
++                 &obj->iface
+           ;
+     ...>
+ }
+
+
+@@
+identifier QueryInterface =~ "_QueryInterface$";
+identifier interface, riid, ret_iface;
+identifier find.iface, find.tag_obj;
+struct tag_obj *obj;
+type find.Ti;
+type Tr, Tv;
+@@
+ QueryInterface(Ti *interface, Tr riid, Tv **ret_iface)
+ {
+     <...
+     *ret_iface =
+-                 obj
++                 &obj->iface
+           ;
+     ...>
+ }
+
+
 // Get rid of some ->lpVtbl to IIFace wrappers
 @ wrapcast disable drop_cast @
 type find.Ti;
@@ -170,7 +210,6 @@ coccinelle.QI = Ti + "_QueryInterface"
 
 
 @ disable drop_cast, ptr_to_array @
-typedef IUnknown;
 identifier find.iface;
 identifier gen_methods.AddRef, gen_methods.Release, gen_methods.QI;
 expression E;
