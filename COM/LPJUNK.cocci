@@ -68,6 +68,114 @@ WARN(p[0], "IACList2*", "LPACLIST2")
 
 
 @r5@
+typedef IADs;
+typedef PADS;
+position p;
+@@
+- PADS@p
++ IADs *
+
+@script:python depends on report@
+p << r5.p;
+@@
+WARN(p[0], "IADs*", "PADS")
+
+
+@r6@
+typedef LPADS;
+position p;
+@@
+- LPADS@p
++ IADs *
+
+@script:python depends on report@
+p << r6.p;
+@@
+WARN(p[0], "IADs*", "LPADS")
+
+
+@r7@
+typedef IADsADSystemInfo;
+typedef PADSADSYSTEMINFO;
+position p;
+@@
+- PADSADSYSTEMINFO@p
++ IADsADSystemInfo *
+
+@script:python depends on report@
+p << r7.p;
+@@
+WARN(p[0], "IADsADSystemInfo*", "PADSADSYSTEMINFO")
+
+
+@r8@
+typedef LPADSADSYSTEMINFO;
+position p;
+@@
+- LPADSADSYSTEMINFO@p
++ IADsADSystemInfo *
+
+@script:python depends on report@
+p << r8.p;
+@@
+WARN(p[0], "IADsADSystemInfo*", "LPADSADSYSTEMINFO")
+
+
+@r9@
+typedef IADsOpenDSObject;
+typedef PADSOPENDSOBJECT;
+position p;
+@@
+- PADSOPENDSOBJECT@p
++ IADsOpenDSObject *
+
+@script:python depends on report@
+p << r9.p;
+@@
+WARN(p[0], "IADsOpenDSObject*", "PADSOPENDSOBJECT")
+
+
+@r10@
+typedef LPADSOPENDSOBJECT;
+position p;
+@@
+- LPADSOPENDSOBJECT@p
++ IADsOpenDSObject *
+
+@script:python depends on report@
+p << r10.p;
+@@
+WARN(p[0], "IADsOpenDSObject*", "LPADSOPENDSOBJECT")
+
+
+@r11@
+typedef IADsPathname;
+typedef PADSPATHNAME;
+position p;
+@@
+- PADSPATHNAME@p
++ IADsPathname *
+
+@script:python depends on report@
+p << r11.p;
+@@
+WARN(p[0], "IADsPathname*", "PADSPATHNAME")
+
+
+@r12@
+typedef LPADSPATHNAME;
+position p;
+@@
+- LPADSPATHNAME@p
++ IADsPathname *
+
+@script:python depends on report@
+p << r12.p;
+@@
+WARN(p[0], "IADsPathname*", "LPADSPATHNAME")
+
+
+@r13@
 typedef IAMCertifiedOutputProtection;
 typedef PAMCERTIFIEDOUTPUTPROTECTION;
 position p;
@@ -76,12 +184,12 @@ position p;
 + IAMCertifiedOutputProtection *
 
 @script:python depends on report@
-p << r5.p;
+p << r13.p;
 @@
 WARN(p[0], "IAMCertifiedOutputProtection*", "PAMCERTIFIEDOUTPUTPROTECTION")
 
 
-@r6@
+@r14@
 typedef LPAMCERTIFIEDOUTPUTPROTECTION;
 position p;
 @@
@@ -89,12 +197,12 @@ position p;
 + IAMCertifiedOutputProtection *
 
 @script:python depends on report@
-p << r6.p;
+p << r14.p;
 @@
 WARN(p[0], "IAMCertifiedOutputProtection*", "LPAMCERTIFIEDOUTPUTPROTECTION")
 
 
-@r7@
+@r15@
 typedef IAMDirectSound;
 typedef PAMDIRECTSOUND;
 position p;
@@ -103,12 +211,12 @@ position p;
 + IAMDirectSound *
 
 @script:python depends on report@
-p << r7.p;
+p << r15.p;
 @@
 WARN(p[0], "IAMDirectSound*", "PAMDIRECTSOUND")
 
 
-@r8@
+@r16@
 typedef LPAMDIRECTSOUND;
 position p;
 @@
@@ -116,12 +224,12 @@ position p;
 + IAMDirectSound *
 
 @script:python depends on report@
-p << r8.p;
+p << r16.p;
 @@
 WARN(p[0], "IAMDirectSound*", "LPAMDIRECTSOUND")
 
 
-@r9@
+@r17@
 typedef IAMFilterData;
 typedef PAMFILTERDATA;
 position p;
@@ -130,12 +238,12 @@ position p;
 + IAMFilterData *
 
 @script:python depends on report@
-p << r9.p;
+p << r17.p;
 @@
 WARN(p[0], "IAMFilterData*", "PAMFILTERDATA")
 
 
-@r10@
+@r18@
 typedef LPAMFILTERDATA;
 position p;
 @@
@@ -143,12 +251,12 @@ position p;
 + IAMFilterData *
 
 @script:python depends on report@
-p << r10.p;
+p << r18.p;
 @@
 WARN(p[0], "IAMFilterData*", "LPAMFILTERDATA")
 
 
-@r11@
+@r19@
 typedef IAMFilterMiscFlags;
 typedef PAMFILTERMISCFLAGS;
 position p;
@@ -157,12 +265,12 @@ position p;
 + IAMFilterMiscFlags *
 
 @script:python depends on report@
-p << r11.p;
+p << r19.p;
 @@
 WARN(p[0], "IAMFilterMiscFlags*", "PAMFILTERMISCFLAGS")
 
 
-@r12@
+@r20@
 typedef LPAMFILTERMISCFLAGS;
 position p;
 @@
@@ -170,12 +278,12 @@ position p;
 + IAMFilterMiscFlags *
 
 @script:python depends on report@
-p << r12.p;
+p << r20.p;
 @@
 WARN(p[0], "IAMFilterMiscFlags*", "LPAMFILTERMISCFLAGS")
 
 
-@r13@
+@r21@
 typedef IAMMediaStream;
 typedef PAMMEDIASTREAM;
 position p;
@@ -184,12 +292,12 @@ position p;
 + IAMMediaStream *
 
 @script:python depends on report@
-p << r13.p;
+p << r21.p;
 @@
 WARN(p[0], "IAMMediaStream*", "PAMMEDIASTREAM")
 
 
-@r14@
+@r22@
 typedef LPAMMEDIASTREAM;
 position p;
 @@
@@ -197,12 +305,12 @@ position p;
 + IAMMediaStream *
 
 @script:python depends on report@
-p << r14.p;
+p << r22.p;
 @@
 WARN(p[0], "IAMMediaStream*", "LPAMMEDIASTREAM")
 
 
-@r15@
+@r23@
 typedef IAMMultiMediaStream;
 typedef PAMMULTIMEDIASTREAM;
 position p;
@@ -211,12 +319,12 @@ position p;
 + IAMMultiMediaStream *
 
 @script:python depends on report@
-p << r15.p;
+p << r23.p;
 @@
 WARN(p[0], "IAMMultiMediaStream*", "PAMMULTIMEDIASTREAM")
 
 
-@r16@
+@r24@
 typedef LPAMMULTIMEDIASTREAM;
 position p;
 @@
@@ -224,12 +332,12 @@ position p;
 + IAMMultiMediaStream *
 
 @script:python depends on report@
-p << r16.p;
+p << r24.p;
 @@
 WARN(p[0], "IAMMultiMediaStream*", "LPAMMULTIMEDIASTREAM")
 
 
-@r17@
+@r25@
 typedef IAMStreamConfig;
 typedef PAMSTREAMCONFIG;
 position p;
@@ -238,12 +346,12 @@ position p;
 + IAMStreamConfig *
 
 @script:python depends on report@
-p << r17.p;
+p << r25.p;
 @@
 WARN(p[0], "IAMStreamConfig*", "PAMSTREAMCONFIG")
 
 
-@r18@
+@r26@
 typedef LPAMSTREAMCONFIG;
 position p;
 @@
@@ -251,12 +359,12 @@ position p;
 + IAMStreamConfig *
 
 @script:python depends on report@
-p << r18.p;
+p << r26.p;
 @@
 WARN(p[0], "IAMStreamConfig*", "LPAMSTREAMCONFIG")
 
 
-@r19@
+@r27@
 typedef IAMStreamControl;
 typedef PAMSTREAMCONTROL;
 position p;
@@ -265,12 +373,12 @@ position p;
 + IAMStreamControl *
 
 @script:python depends on report@
-p << r19.p;
+p << r27.p;
 @@
 WARN(p[0], "IAMStreamControl*", "PAMSTREAMCONTROL")
 
 
-@r20@
+@r28@
 typedef LPAMSTREAMCONTROL;
 position p;
 @@
@@ -278,12 +386,12 @@ position p;
 + IAMStreamControl *
 
 @script:python depends on report@
-p << r20.p;
+p << r28.p;
 @@
 WARN(p[0], "IAMStreamControl*", "LPAMSTREAMCONTROL")
 
 
-@r21@
+@r29@
 typedef IAMStreamSelect;
 typedef PAMSTREAMSELECT;
 position p;
@@ -292,12 +400,12 @@ position p;
 + IAMStreamSelect *
 
 @script:python depends on report@
-p << r21.p;
+p << r29.p;
 @@
 WARN(p[0], "IAMStreamSelect*", "PAMSTREAMSELECT")
 
 
-@r22@
+@r30@
 typedef LPAMSTREAMSELECT;
 position p;
 @@
@@ -305,12 +413,12 @@ position p;
 + IAMStreamSelect *
 
 @script:python depends on report@
-p << r22.p;
+p << r30.p;
 @@
 WARN(p[0], "IAMStreamSelect*", "LPAMSTREAMSELECT")
 
 
-@r23@
+@r31@
 typedef IAMTimeline;
 typedef PAMTIMELINE;
 position p;
@@ -319,12 +427,12 @@ position p;
 + IAMTimeline *
 
 @script:python depends on report@
-p << r23.p;
+p << r31.p;
 @@
 WARN(p[0], "IAMTimeline*", "PAMTIMELINE")
 
 
-@r24@
+@r32@
 typedef LPAMTIMELINE;
 position p;
 @@
@@ -332,12 +440,39 @@ position p;
 + IAMTimeline *
 
 @script:python depends on report@
-p << r24.p;
+p << r32.p;
 @@
 WARN(p[0], "IAMTimeline*", "LPAMTIMELINE")
 
 
-@r25@
+@r33@
+typedef IAMTimelineGroup;
+typedef PAMTIMELINEGROUP;
+position p;
+@@
+- PAMTIMELINEGROUP@p
++ IAMTimelineGroup *
+
+@script:python depends on report@
+p << r33.p;
+@@
+WARN(p[0], "IAMTimelineGroup*", "PAMTIMELINEGROUP")
+
+
+@r34@
+typedef LPAMTIMELINEGROUP;
+position p;
+@@
+- LPAMTIMELINEGROUP@p
++ IAMTimelineGroup *
+
+@script:python depends on report@
+p << r34.p;
+@@
+WARN(p[0], "IAMTimelineGroup*", "LPAMTIMELINEGROUP")
+
+
+@r35@
 typedef IAMTimelineObj;
 typedef PAMTIMELINEOBJ;
 position p;
@@ -346,12 +481,12 @@ position p;
 + IAMTimelineObj *
 
 @script:python depends on report@
-p << r25.p;
+p << r35.p;
 @@
 WARN(p[0], "IAMTimelineObj*", "PAMTIMELINEOBJ")
 
 
-@r26@
+@r36@
 typedef LPAMTIMELINEOBJ;
 position p;
 @@
@@ -359,12 +494,39 @@ position p;
 + IAMTimelineObj *
 
 @script:python depends on report@
-p << r26.p;
+p << r36.p;
 @@
 WARN(p[0], "IAMTimelineObj*", "LPAMTIMELINEOBJ")
 
 
-@r27@
+@r37@
+typedef IAMVideoControl;
+typedef PAMVIDEOCONTROL;
+position p;
+@@
+- PAMVIDEOCONTROL@p
++ IAMVideoControl *
+
+@script:python depends on report@
+p << r37.p;
+@@
+WARN(p[0], "IAMVideoControl*", "PAMVIDEOCONTROL")
+
+
+@r38@
+typedef LPAMVIDEOCONTROL;
+position p;
+@@
+- LPAMVIDEOCONTROL@p
++ IAMVideoControl *
+
+@script:python depends on report@
+p << r38.p;
+@@
+WARN(p[0], "IAMVideoControl*", "LPAMVIDEOCONTROL")
+
+
+@r39@
 typedef IAMVideoProcAmp;
 typedef PAMVIDEOPROCAMP;
 position p;
@@ -373,12 +535,12 @@ position p;
 + IAMVideoProcAmp *
 
 @script:python depends on report@
-p << r27.p;
+p << r39.p;
 @@
 WARN(p[0], "IAMVideoProcAmp*", "PAMVIDEOPROCAMP")
 
 
-@r28@
+@r40@
 typedef LPAMVIDEOPROCAMP;
 position p;
 @@
@@ -386,12 +548,12 @@ position p;
 + IAMVideoProcAmp *
 
 @script:python depends on report@
-p << r28.p;
+p << r40.p;
 @@
 WARN(p[0], "IAMVideoProcAmp*", "LPAMVIDEOPROCAMP")
 
 
-@r29@
+@r41@
 typedef IAVIEditStream;
 typedef PAVIEDITSTREAM;
 position p;
@@ -400,12 +562,12 @@ position p;
 + IAVIEditStream *
 
 @script:python depends on report@
-p << r29.p;
+p << r41.p;
 @@
 WARN(p[0], "IAVIEditStream*", "PAVIEDITSTREAM")
 
 
-@r30@
+@r42@
 typedef LPAVIEDITSTREAM;
 position p;
 @@
@@ -413,12 +575,12 @@ position p;
 + IAVIEditStream *
 
 @script:python depends on report@
-p << r30.p;
+p << r42.p;
 @@
 WARN(p[0], "IAVIEditStream*", "LPAVIEDITSTREAM")
 
 
-@r31@
+@r43@
 typedef IAVIFile;
 typedef PAVIFILE;
 position p;
@@ -427,12 +589,12 @@ position p;
 + IAVIFile *
 
 @script:python depends on report@
-p << r31.p;
+p << r43.p;
 @@
 WARN(p[0], "IAVIFile*", "PAVIFILE")
 
 
-@r32@
+@r44@
 typedef LPAVIFILE;
 position p;
 @@
@@ -440,12 +602,12 @@ position p;
 + IAVIFile *
 
 @script:python depends on report@
-p << r32.p;
+p << r44.p;
 @@
 WARN(p[0], "IAVIFile*", "LPAVIFILE")
 
 
-@r33@
+@r45@
 typedef IAVIStream;
 typedef PAVISTREAM;
 position p;
@@ -454,12 +616,12 @@ position p;
 + IAVIStream *
 
 @script:python depends on report@
-p << r33.p;
+p << r45.p;
 @@
 WARN(p[0], "IAVIStream*", "PAVISTREAM")
 
 
-@r34@
+@r46@
 typedef LPAVISTREAM;
 position p;
 @@
@@ -467,12 +629,12 @@ position p;
 + IAVIStream *
 
 @script:python depends on report@
-p << r34.p;
+p << r46.p;
 @@
 WARN(p[0], "IAVIStream*", "LPAVISTREAM")
 
 
-@r35@
+@r47@
 typedef IAccessible;
 typedef PACCESSIBLE;
 position p;
@@ -481,12 +643,12 @@ position p;
 + IAccessible *
 
 @script:python depends on report@
-p << r35.p;
+p << r47.p;
 @@
 WARN(p[0], "IAccessible*", "PACCESSIBLE")
 
 
-@r36@
+@r48@
 typedef LPACCESSIBLE;
 position p;
 @@
@@ -494,12 +656,12 @@ position p;
 + IAccessible *
 
 @script:python depends on report@
-p << r36.p;
+p << r48.p;
 @@
 WARN(p[0], "IAccessible*", "LPACCESSIBLE")
 
 
-@r37@
+@r49@
 typedef IAccessor;
 typedef PACCESSOR;
 position p;
@@ -508,12 +670,12 @@ position p;
 + IAccessor *
 
 @script:python depends on report@
-p << r37.p;
+p << r49.p;
 @@
 WARN(p[0], "IAccessor*", "PACCESSOR")
 
 
-@r38@
+@r50@
 typedef LPACCESSOR;
 position p;
 @@
@@ -521,12 +683,93 @@ position p;
 + IAccessor *
 
 @script:python depends on report@
-p << r38.p;
+p << r50.p;
 @@
 WARN(p[0], "IAccessor*", "LPACCESSOR")
 
 
-@r39@
+@r51@
+typedef IActionCollection;
+typedef PACTIONCOLLECTION;
+position p;
+@@
+- PACTIONCOLLECTION@p
++ IActionCollection *
+
+@script:python depends on report@
+p << r51.p;
+@@
+WARN(p[0], "IActionCollection*", "PACTIONCOLLECTION")
+
+
+@r52@
+typedef LPACTIONCOLLECTION;
+position p;
+@@
+- LPACTIONCOLLECTION@p
++ IActionCollection *
+
+@script:python depends on report@
+p << r52.p;
+@@
+WARN(p[0], "IActionCollection*", "LPACTIONCOLLECTION")
+
+
+@r53@
+typedef IActivateAudioInterfaceAsyncOperation;
+typedef PACTIVATEAUDIOINTERFACEASYNCOPERATION;
+position p;
+@@
+- PACTIVATEAUDIOINTERFACEASYNCOPERATION@p
++ IActivateAudioInterfaceAsyncOperation *
+
+@script:python depends on report@
+p << r53.p;
+@@
+WARN(p[0], "IActivateAudioInterfaceAsyncOperation*", "PACTIVATEAUDIOINTERFACEASYNCOPERATION")
+
+
+@r54@
+typedef LPACTIVATEAUDIOINTERFACEASYNCOPERATION;
+position p;
+@@
+- LPACTIVATEAUDIOINTERFACEASYNCOPERATION@p
++ IActivateAudioInterfaceAsyncOperation *
+
+@script:python depends on report@
+p << r54.p;
+@@
+WARN(p[0], "IActivateAudioInterfaceAsyncOperation*", "LPACTIVATEAUDIOINTERFACEASYNCOPERATION")
+
+
+@r55@
+typedef IActivationFactory;
+typedef PACTIVATIONFACTORY;
+position p;
+@@
+- PACTIVATIONFACTORY@p
++ IActivationFactory *
+
+@script:python depends on report@
+p << r55.p;
+@@
+WARN(p[0], "IActivationFactory*", "PACTIVATIONFACTORY")
+
+
+@r56@
+typedef LPACTIVATIONFACTORY;
+position p;
+@@
+- LPACTIVATIONFACTORY@p
++ IActivationFactory *
+
+@script:python depends on report@
+p << r56.p;
+@@
+WARN(p[0], "IActivationFactory*", "LPACTIVATIONFACTORY")
+
+
+@r57@
 typedef IActiveIMMApp;
 typedef PACTIVEIMMAPP;
 position p;
@@ -535,12 +778,12 @@ position p;
 + IActiveIMMApp *
 
 @script:python depends on report@
-p << r39.p;
+p << r57.p;
 @@
 WARN(p[0], "IActiveIMMApp*", "PACTIVEIMMAPP")
 
 
-@r40@
+@r58@
 typedef LPACTIVEIMMAPP;
 position p;
 @@
@@ -548,12 +791,12 @@ position p;
 + IActiveIMMApp *
 
 @script:python depends on report@
-p << r40.p;
+p << r58.p;
 @@
 WARN(p[0], "IActiveIMMApp*", "LPACTIVEIMMAPP")
 
 
-@r41@
+@r59@
 typedef IActiveIMMMessagePumpOwner;
 typedef PACTIVEIMMMESSAGEPUMPOWNER;
 position p;
@@ -562,12 +805,12 @@ position p;
 + IActiveIMMMessagePumpOwner *
 
 @script:python depends on report@
-p << r41.p;
+p << r59.p;
 @@
 WARN(p[0], "IActiveIMMMessagePumpOwner*", "PACTIVEIMMMESSAGEPUMPOWNER")
 
 
-@r42@
+@r60@
 typedef LPACTIVEIMMMESSAGEPUMPOWNER;
 position p;
 @@
@@ -575,12 +818,12 @@ position p;
 + IActiveIMMMessagePumpOwner *
 
 @script:python depends on report@
-p << r42.p;
+p << r60.p;
 @@
 WARN(p[0], "IActiveIMMMessagePumpOwner*", "LPACTIVEIMMMESSAGEPUMPOWNER")
 
 
-@r43@
+@r61@
 typedef IActiveScript;
 typedef PACTIVESCRIPT;
 position p;
@@ -589,12 +832,12 @@ position p;
 + IActiveScript *
 
 @script:python depends on report@
-p << r43.p;
+p << r61.p;
 @@
 WARN(p[0], "IActiveScript*", "PACTIVESCRIPT")
 
 
-@r44@
+@r62@
 typedef LPACTIVESCRIPT;
 position p;
 @@
@@ -602,12 +845,66 @@ position p;
 + IActiveScript *
 
 @script:python depends on report@
-p << r44.p;
+p << r62.p;
 @@
 WARN(p[0], "IActiveScript*", "LPACTIVESCRIPT")
 
 
-@r45@
+@r63@
+typedef IActiveScriptDebug;
+typedef PACTIVESCRIPTDEBUG;
+position p;
+@@
+- PACTIVESCRIPTDEBUG@p
++ IActiveScriptDebug *
+
+@script:python depends on report@
+p << r63.p;
+@@
+WARN(p[0], "IActiveScriptDebug*", "PACTIVESCRIPTDEBUG")
+
+
+@r64@
+typedef LPACTIVESCRIPTDEBUG;
+position p;
+@@
+- LPACTIVESCRIPTDEBUG@p
++ IActiveScriptDebug *
+
+@script:python depends on report@
+p << r64.p;
+@@
+WARN(p[0], "IActiveScriptDebug*", "LPACTIVESCRIPTDEBUG")
+
+
+@r65@
+typedef IActiveScriptError;
+typedef PACTIVESCRIPTERROR;
+position p;
+@@
+- PACTIVESCRIPTERROR@p
++ IActiveScriptError *
+
+@script:python depends on report@
+p << r65.p;
+@@
+WARN(p[0], "IActiveScriptError*", "PACTIVESCRIPTERROR")
+
+
+@r66@
+typedef LPACTIVESCRIPTERROR;
+position p;
+@@
+- LPACTIVESCRIPTERROR@p
++ IActiveScriptError *
+
+@script:python depends on report@
+p << r66.p;
+@@
+WARN(p[0], "IActiveScriptError*", "LPACTIVESCRIPTERROR")
+
+
+@r67@
 typedef IActiveScriptParse;
 typedef PACTIVESCRIPTPARSE;
 position p;
@@ -616,12 +913,12 @@ position p;
 + IActiveScriptParse *
 
 @script:python depends on report@
-p << r45.p;
+p << r67.p;
 @@
 WARN(p[0], "IActiveScriptParse*", "PACTIVESCRIPTPARSE")
 
 
-@r46@
+@r68@
 typedef LPACTIVESCRIPTPARSE;
 position p;
 @@
@@ -629,12 +926,12 @@ position p;
 + IActiveScriptParse *
 
 @script:python depends on report@
-p << r46.p;
+p << r68.p;
 @@
 WARN(p[0], "IActiveScriptParse*", "LPACTIVESCRIPTPARSE")
 
 
-@r47@
+@r69@
 typedef IActiveScriptParseProcedure2;
 typedef PACTIVESCRIPTPARSEPROCEDURE2;
 position p;
@@ -643,12 +940,12 @@ position p;
 + IActiveScriptParseProcedure2 *
 
 @script:python depends on report@
-p << r47.p;
+p << r69.p;
 @@
 WARN(p[0], "IActiveScriptParseProcedure2*", "PACTIVESCRIPTPARSEPROCEDURE2")
 
 
-@r48@
+@r70@
 typedef LPACTIVESCRIPTPARSEPROCEDURE2;
 position p;
 @@
@@ -656,12 +953,12 @@ position p;
 + IActiveScriptParseProcedure2 *
 
 @script:python depends on report@
-p << r48.p;
+p << r70.p;
 @@
 WARN(p[0], "IActiveScriptParseProcedure2*", "LPACTIVESCRIPTPARSEPROCEDURE2")
 
 
-@r49@
+@r71@
 typedef IActiveScriptProperty;
 typedef PACTIVESCRIPTPROPERTY;
 position p;
@@ -670,12 +967,12 @@ position p;
 + IActiveScriptProperty *
 
 @script:python depends on report@
-p << r49.p;
+p << r71.p;
 @@
 WARN(p[0], "IActiveScriptProperty*", "PACTIVESCRIPTPROPERTY")
 
 
-@r50@
+@r72@
 typedef LPACTIVESCRIPTPROPERTY;
 position p;
 @@
@@ -683,12 +980,12 @@ position p;
 + IActiveScriptProperty *
 
 @script:python depends on report@
-p << r50.p;
+p << r72.p;
 @@
 WARN(p[0], "IActiveScriptProperty*", "LPACTIVESCRIPTPROPERTY")
 
 
-@r51@
+@r73@
 typedef IActiveScriptSite;
 typedef PACTIVESCRIPTSITE;
 position p;
@@ -697,12 +994,12 @@ position p;
 + IActiveScriptSite *
 
 @script:python depends on report@
-p << r51.p;
+p << r73.p;
 @@
 WARN(p[0], "IActiveScriptSite*", "PACTIVESCRIPTSITE")
 
 
-@r52@
+@r74@
 typedef LPACTIVESCRIPTSITE;
 position p;
 @@
@@ -710,12 +1007,12 @@ position p;
 + IActiveScriptSite *
 
 @script:python depends on report@
-p << r52.p;
+p << r74.p;
 @@
 WARN(p[0], "IActiveScriptSite*", "LPACTIVESCRIPTSITE")
 
 
-@r53@
+@r75@
 typedef IActiveScriptSiteDebug;
 typedef PACTIVESCRIPTSITEDEBUG;
 position p;
@@ -724,12 +1021,12 @@ position p;
 + IActiveScriptSiteDebug *
 
 @script:python depends on report@
-p << r53.p;
+p << r75.p;
 @@
 WARN(p[0], "IActiveScriptSiteDebug*", "PACTIVESCRIPTSITEDEBUG")
 
 
-@r54@
+@r76@
 typedef LPACTIVESCRIPTSITEDEBUG;
 position p;
 @@
@@ -737,12 +1034,12 @@ position p;
 + IActiveScriptSiteDebug *
 
 @script:python depends on report@
-p << r54.p;
+p << r76.p;
 @@
 WARN(p[0], "IActiveScriptSiteDebug*", "LPACTIVESCRIPTSITEDEBUG")
 
 
-@r55@
+@r77@
 typedef IActiveScriptSiteInterruptPoll;
 typedef PACTIVESCRIPTSITEINTERRUPTPOLL;
 position p;
@@ -751,12 +1048,12 @@ position p;
 + IActiveScriptSiteInterruptPoll *
 
 @script:python depends on report@
-p << r55.p;
+p << r77.p;
 @@
 WARN(p[0], "IActiveScriptSiteInterruptPoll*", "PACTIVESCRIPTSITEINTERRUPTPOLL")
 
 
-@r56@
+@r78@
 typedef LPACTIVESCRIPTSITEINTERRUPTPOLL;
 position p;
 @@
@@ -764,12 +1061,12 @@ position p;
 + IActiveScriptSiteInterruptPoll *
 
 @script:python depends on report@
-p << r56.p;
+p << r78.p;
 @@
 WARN(p[0], "IActiveScriptSiteInterruptPoll*", "LPACTIVESCRIPTSITEINTERRUPTPOLL")
 
 
-@r57@
+@r79@
 typedef IActiveScriptSiteUIControl;
 typedef PACTIVESCRIPTSITEUICONTROL;
 position p;
@@ -778,12 +1075,12 @@ position p;
 + IActiveScriptSiteUIControl *
 
 @script:python depends on report@
-p << r57.p;
+p << r79.p;
 @@
 WARN(p[0], "IActiveScriptSiteUIControl*", "PACTIVESCRIPTSITEUICONTROL")
 
 
-@r58@
+@r80@
 typedef LPACTIVESCRIPTSITEUICONTROL;
 position p;
 @@
@@ -791,12 +1088,12 @@ position p;
 + IActiveScriptSiteUIControl *
 
 @script:python depends on report@
-p << r58.p;
+p << r80.p;
 @@
 WARN(p[0], "IActiveScriptSiteUIControl*", "LPACTIVESCRIPTSITEUICONTROL")
 
 
-@r59@
+@r81@
 typedef IActiveScriptSiteWindow;
 typedef PACTIVESCRIPTSITEWINDOW;
 position p;
@@ -805,12 +1102,12 @@ position p;
 + IActiveScriptSiteWindow *
 
 @script:python depends on report@
-p << r59.p;
+p << r81.p;
 @@
 WARN(p[0], "IActiveScriptSiteWindow*", "PACTIVESCRIPTSITEWINDOW")
 
 
-@r60@
+@r82@
 typedef LPACTIVESCRIPTSITEWINDOW;
 position p;
 @@
@@ -818,12 +1115,12 @@ position p;
 + IActiveScriptSiteWindow *
 
 @script:python depends on report@
-p << r60.p;
+p << r82.p;
 @@
 WARN(p[0], "IActiveScriptSiteWindow*", "LPACTIVESCRIPTSITEWINDOW")
 
 
-@r61@
+@r83@
 typedef IAdviseSink;
 typedef PADVISESINK;
 position p;
@@ -832,12 +1129,12 @@ position p;
 + IAdviseSink *
 
 @script:python depends on report@
-p << r61.p;
+p << r83.p;
 @@
 WARN(p[0], "IAdviseSink*", "PADVISESINK")
 
 
-@r62@
+@r84@
 typedef LPADVISESINK;
 position p;
 @@
@@ -845,12 +1142,12 @@ position p;
 + IAdviseSink *
 
 @script:python depends on report@
-p << r62.p;
+p << r84.p;
 @@
 WARN(p[0], "IAdviseSink*", "LPADVISESINK")
 
 
-@r63@
+@r85@
 typedef IAdviseSinkEx;
 typedef PADVISESINKEX;
 position p;
@@ -859,12 +1156,12 @@ position p;
 + IAdviseSinkEx *
 
 @script:python depends on report@
-p << r63.p;
+p << r85.p;
 @@
 WARN(p[0], "IAdviseSinkEx*", "PADVISESINKEX")
 
 
-@r64@
+@r86@
 typedef LPADVISESINKEX;
 position p;
 @@
@@ -872,12 +1169,12 @@ position p;
 + IAdviseSinkEx *
 
 @script:python depends on report@
-p << r64.p;
+p << r86.p;
 @@
 WARN(p[0], "IAdviseSinkEx*", "LPADVISESINKEX")
 
 
-@r65@
+@r87@
 typedef IApplicationAssociationRegistration;
 typedef PAPPLICATIONASSOCIATIONREGISTRATION;
 position p;
@@ -886,12 +1183,12 @@ position p;
 + IApplicationAssociationRegistration *
 
 @script:python depends on report@
-p << r65.p;
+p << r87.p;
 @@
 WARN(p[0], "IApplicationAssociationRegistration*", "PAPPLICATIONASSOCIATIONREGISTRATION")
 
 
-@r66@
+@r88@
 typedef LPAPPLICATIONASSOCIATIONREGISTRATION;
 position p;
 @@
@@ -899,12 +1196,66 @@ position p;
 + IApplicationAssociationRegistration *
 
 @script:python depends on report@
-p << r66.p;
+p << r88.p;
 @@
 WARN(p[0], "IApplicationAssociationRegistration*", "LPAPPLICATIONASSOCIATIONREGISTRATION")
 
 
-@r67@
+@r89@
+typedef IApplicationDestinations;
+typedef PAPPLICATIONDESTINATIONS;
+position p;
+@@
+- PAPPLICATIONDESTINATIONS@p
++ IApplicationDestinations *
+
+@script:python depends on report@
+p << r89.p;
+@@
+WARN(p[0], "IApplicationDestinations*", "PAPPLICATIONDESTINATIONS")
+
+
+@r90@
+typedef LPAPPLICATIONDESTINATIONS;
+position p;
+@@
+- LPAPPLICATIONDESTINATIONS@p
++ IApplicationDestinations *
+
+@script:python depends on report@
+p << r90.p;
+@@
+WARN(p[0], "IApplicationDestinations*", "LPAPPLICATIONDESTINATIONS")
+
+
+@r91@
+typedef IApplicationDocumentLists;
+typedef PAPPLICATIONDOCUMENTLISTS;
+position p;
+@@
+- PAPPLICATIONDOCUMENTLISTS@p
++ IApplicationDocumentLists *
+
+@script:python depends on report@
+p << r91.p;
+@@
+WARN(p[0], "IApplicationDocumentLists*", "PAPPLICATIONDOCUMENTLISTS")
+
+
+@r92@
+typedef LPAPPLICATIONDOCUMENTLISTS;
+position p;
+@@
+- LPAPPLICATIONDOCUMENTLISTS@p
++ IApplicationDocumentLists *
+
+@script:python depends on report@
+p << r92.p;
+@@
+WARN(p[0], "IApplicationDocumentLists*", "LPAPPLICATIONDOCUMENTLISTS")
+
+
+@r93@
 typedef IAssemblyCache;
 typedef PASSEMBLYCACHE;
 position p;
@@ -913,12 +1264,12 @@ position p;
 + IAssemblyCache *
 
 @script:python depends on report@
-p << r67.p;
+p << r93.p;
 @@
 WARN(p[0], "IAssemblyCache*", "PASSEMBLYCACHE")
 
 
-@r68@
+@r94@
 typedef LPASSEMBLYCACHE;
 position p;
 @@
@@ -926,12 +1277,12 @@ position p;
 + IAssemblyCache *
 
 @script:python depends on report@
-p << r68.p;
+p << r94.p;
 @@
 WARN(p[0], "IAssemblyCache*", "LPASSEMBLYCACHE")
 
 
-@r69@
+@r95@
 typedef IAssemblyCacheItem;
 typedef PASSEMBLYCACHEITEM;
 position p;
@@ -940,12 +1291,12 @@ position p;
 + IAssemblyCacheItem *
 
 @script:python depends on report@
-p << r69.p;
+p << r95.p;
 @@
 WARN(p[0], "IAssemblyCacheItem*", "PASSEMBLYCACHEITEM")
 
 
-@r70@
+@r96@
 typedef LPASSEMBLYCACHEITEM;
 position p;
 @@
@@ -953,12 +1304,12 @@ position p;
 + IAssemblyCacheItem *
 
 @script:python depends on report@
-p << r70.p;
+p << r96.p;
 @@
 WARN(p[0], "IAssemblyCacheItem*", "LPASSEMBLYCACHEITEM")
 
 
-@r71@
+@r97@
 typedef IAssemblyEnum;
 typedef PASSEMBLYENUM;
 position p;
@@ -967,12 +1318,12 @@ position p;
 + IAssemblyEnum *
 
 @script:python depends on report@
-p << r71.p;
+p << r97.p;
 @@
 WARN(p[0], "IAssemblyEnum*", "PASSEMBLYENUM")
 
 
-@r72@
+@r98@
 typedef LPASSEMBLYENUM;
 position p;
 @@
@@ -980,12 +1331,12 @@ position p;
 + IAssemblyEnum *
 
 @script:python depends on report@
-p << r72.p;
+p << r98.p;
 @@
 WARN(p[0], "IAssemblyEnum*", "LPASSEMBLYENUM")
 
 
-@r73@
+@r99@
 typedef IAssemblyName;
 typedef PASSEMBLYNAME;
 position p;
@@ -994,12 +1345,12 @@ position p;
 + IAssemblyName *
 
 @script:python depends on report@
-p << r73.p;
+p << r99.p;
 @@
 WARN(p[0], "IAssemblyName*", "PASSEMBLYNAME")
 
 
-@r74@
+@r100@
 typedef LPASSEMBLYNAME;
 position p;
 @@
@@ -1007,12 +1358,12 @@ position p;
 + IAssemblyName *
 
 @script:python depends on report@
-p << r74.p;
+p << r100.p;
 @@
 WARN(p[0], "IAssemblyName*", "LPASSEMBLYNAME")
 
 
-@r75@
+@r101@
 typedef IAsyncReader;
 typedef PASYNCREADER;
 position p;
@@ -1021,12 +1372,12 @@ position p;
 + IAsyncReader *
 
 @script:python depends on report@
-p << r75.p;
+p << r101.p;
 @@
 WARN(p[0], "IAsyncReader*", "PASYNCREADER")
 
 
-@r76@
+@r102@
 typedef LPASYNCREADER;
 position p;
 @@
@@ -1034,12 +1385,12 @@ position p;
 + IAsyncReader *
 
 @script:python depends on report@
-p << r76.p;
+p << r102.p;
 @@
 WARN(p[0], "IAsyncReader*", "LPASYNCREADER")
 
 
-@r77@
+@r103@
 typedef IAudioCaptureClient;
 typedef PAUDIOCAPTURECLIENT;
 position p;
@@ -1048,12 +1399,12 @@ position p;
 + IAudioCaptureClient *
 
 @script:python depends on report@
-p << r77.p;
+p << r103.p;
 @@
 WARN(p[0], "IAudioCaptureClient*", "PAUDIOCAPTURECLIENT")
 
 
-@r78@
+@r104@
 typedef LPAUDIOCAPTURECLIENT;
 position p;
 @@
@@ -1061,39 +1412,39 @@ position p;
 + IAudioCaptureClient *
 
 @script:python depends on report@
-p << r78.p;
+p << r104.p;
 @@
 WARN(p[0], "IAudioCaptureClient*", "LPAUDIOCAPTURECLIENT")
 
 
-@r79@
-typedef IAudioClient;
-typedef PAUDIOCLIENT;
+@r105@
+typedef IAudioClient3;
+typedef PAUDIOCLIENT3;
 position p;
 @@
-- PAUDIOCLIENT@p
-+ IAudioClient *
+- PAUDIOCLIENT3@p
++ IAudioClient3 *
 
 @script:python depends on report@
-p << r79.p;
+p << r105.p;
 @@
-WARN(p[0], "IAudioClient*", "PAUDIOCLIENT")
+WARN(p[0], "IAudioClient3*", "PAUDIOCLIENT3")
 
 
-@r80@
-typedef LPAUDIOCLIENT;
+@r106@
+typedef LPAUDIOCLIENT3;
 position p;
 @@
-- LPAUDIOCLIENT@p
-+ IAudioClient *
+- LPAUDIOCLIENT3@p
++ IAudioClient3 *
 
 @script:python depends on report@
-p << r80.p;
+p << r106.p;
 @@
-WARN(p[0], "IAudioClient*", "LPAUDIOCLIENT")
+WARN(p[0], "IAudioClient3*", "LPAUDIOCLIENT3")
 
 
-@r81@
+@r107@
 typedef IAudioClock;
 typedef PAUDIOCLOCK;
 position p;
@@ -1102,12 +1453,12 @@ position p;
 + IAudioClock *
 
 @script:python depends on report@
-p << r81.p;
+p << r107.p;
 @@
 WARN(p[0], "IAudioClock*", "PAUDIOCLOCK")
 
 
-@r82@
+@r108@
 typedef LPAUDIOCLOCK;
 position p;
 @@
@@ -1115,12 +1466,12 @@ position p;
 + IAudioClock *
 
 @script:python depends on report@
-p << r82.p;
+p << r108.p;
 @@
 WARN(p[0], "IAudioClock*", "LPAUDIOCLOCK")
 
 
-@r83@
+@r109@
 typedef IAudioClock2;
 typedef PAUDIOCLOCK2;
 position p;
@@ -1129,12 +1480,12 @@ position p;
 + IAudioClock2 *
 
 @script:python depends on report@
-p << r83.p;
+p << r109.p;
 @@
 WARN(p[0], "IAudioClock2*", "PAUDIOCLOCK2")
 
 
-@r84@
+@r110@
 typedef LPAUDIOCLOCK2;
 position p;
 @@
@@ -1142,12 +1493,12 @@ position p;
 + IAudioClock2 *
 
 @script:python depends on report@
-p << r84.p;
+p << r110.p;
 @@
 WARN(p[0], "IAudioClock2*", "LPAUDIOCLOCK2")
 
 
-@r85@
+@r111@
 typedef IAudioData;
 typedef PAUDIODATA;
 position p;
@@ -1156,12 +1507,12 @@ position p;
 + IAudioData *
 
 @script:python depends on report@
-p << r85.p;
+p << r111.p;
 @@
 WARN(p[0], "IAudioData*", "PAUDIODATA")
 
 
-@r86@
+@r112@
 typedef LPAUDIODATA;
 position p;
 @@
@@ -1169,12 +1520,12 @@ position p;
 + IAudioData *
 
 @script:python depends on report@
-p << r86.p;
+p << r112.p;
 @@
 WARN(p[0], "IAudioData*", "LPAUDIODATA")
 
 
-@r87@
+@r113@
 typedef IAudioEndpointVolumeEx;
 typedef PAUDIOENDPOINTVOLUMEEX;
 position p;
@@ -1183,12 +1534,12 @@ position p;
 + IAudioEndpointVolumeEx *
 
 @script:python depends on report@
-p << r87.p;
+p << r113.p;
 @@
 WARN(p[0], "IAudioEndpointVolumeEx*", "PAUDIOENDPOINTVOLUMEEX")
 
 
-@r88@
+@r114@
 typedef LPAUDIOENDPOINTVOLUMEEX;
 position p;
 @@
@@ -1196,12 +1547,39 @@ position p;
 + IAudioEndpointVolumeEx *
 
 @script:python depends on report@
-p << r88.p;
+p << r114.p;
 @@
 WARN(p[0], "IAudioEndpointVolumeEx*", "LPAUDIOENDPOINTVOLUMEEX")
 
 
-@r89@
+@r115@
+typedef IAudioFormatEnumerator;
+typedef PAUDIOFORMATENUMERATOR;
+position p;
+@@
+- PAUDIOFORMATENUMERATOR@p
++ IAudioFormatEnumerator *
+
+@script:python depends on report@
+p << r115.p;
+@@
+WARN(p[0], "IAudioFormatEnumerator*", "PAUDIOFORMATENUMERATOR")
+
+
+@r116@
+typedef LPAUDIOFORMATENUMERATOR;
+position p;
+@@
+- LPAUDIOFORMATENUMERATOR@p
++ IAudioFormatEnumerator *
+
+@script:python depends on report@
+p << r116.p;
+@@
+WARN(p[0], "IAudioFormatEnumerator*", "LPAUDIOFORMATENUMERATOR")
+
+
+@r117@
 typedef IAudioMediaStream;
 typedef PAUDIOMEDIASTREAM;
 position p;
@@ -1210,12 +1588,12 @@ position p;
 + IAudioMediaStream *
 
 @script:python depends on report@
-p << r89.p;
+p << r117.p;
 @@
 WARN(p[0], "IAudioMediaStream*", "PAUDIOMEDIASTREAM")
 
 
-@r90@
+@r118@
 typedef LPAUDIOMEDIASTREAM;
 position p;
 @@
@@ -1223,12 +1601,12 @@ position p;
 + IAudioMediaStream *
 
 @script:python depends on report@
-p << r90.p;
+p << r118.p;
 @@
 WARN(p[0], "IAudioMediaStream*", "LPAUDIOMEDIASTREAM")
 
 
-@r91@
+@r119@
 typedef IAudioRenderClient;
 typedef PAUDIORENDERCLIENT;
 position p;
@@ -1237,12 +1615,12 @@ position p;
 + IAudioRenderClient *
 
 @script:python depends on report@
-p << r91.p;
+p << r119.p;
 @@
 WARN(p[0], "IAudioRenderClient*", "PAUDIORENDERCLIENT")
 
 
-@r92@
+@r120@
 typedef LPAUDIORENDERCLIENT;
 position p;
 @@
@@ -1250,12 +1628,12 @@ position p;
 + IAudioRenderClient *
 
 @script:python depends on report@
-p << r92.p;
+p << r120.p;
 @@
 WARN(p[0], "IAudioRenderClient*", "LPAUDIORENDERCLIENT")
 
 
-@r93@
+@r121@
 typedef IAudioSessionControl2;
 typedef PAUDIOSESSIONCONTROL2;
 position p;
@@ -1264,12 +1642,12 @@ position p;
 + IAudioSessionControl2 *
 
 @script:python depends on report@
-p << r93.p;
+p << r121.p;
 @@
 WARN(p[0], "IAudioSessionControl2*", "PAUDIOSESSIONCONTROL2")
 
 
-@r94@
+@r122@
 typedef LPAUDIOSESSIONCONTROL2;
 position p;
 @@
@@ -1277,12 +1655,12 @@ position p;
 + IAudioSessionControl2 *
 
 @script:python depends on report@
-p << r94.p;
+p << r122.p;
 @@
 WARN(p[0], "IAudioSessionControl2*", "LPAUDIOSESSIONCONTROL2")
 
 
-@r95@
+@r123@
 typedef IAudioSessionManager2;
 typedef PAUDIOSESSIONMANAGER2;
 position p;
@@ -1291,12 +1669,12 @@ position p;
 + IAudioSessionManager2 *
 
 @script:python depends on report@
-p << r95.p;
+p << r123.p;
 @@
 WARN(p[0], "IAudioSessionManager2*", "PAUDIOSESSIONMANAGER2")
 
 
-@r96@
+@r124@
 typedef LPAUDIOSESSIONMANAGER2;
 position p;
 @@
@@ -1304,12 +1682,12 @@ position p;
 + IAudioSessionManager2 *
 
 @script:python depends on report@
-p << r96.p;
+p << r124.p;
 @@
 WARN(p[0], "IAudioSessionManager2*", "LPAUDIOSESSIONMANAGER2")
 
 
-@r97@
+@r125@
 typedef IAudioStreamSample;
 typedef PAUDIOSTREAMSAMPLE;
 position p;
@@ -1318,12 +1696,12 @@ position p;
 + IAudioStreamSample *
 
 @script:python depends on report@
-p << r97.p;
+p << r125.p;
 @@
 WARN(p[0], "IAudioStreamSample*", "PAUDIOSTREAMSAMPLE")
 
 
-@r98@
+@r126@
 typedef LPAUDIOSTREAMSAMPLE;
 position p;
 @@
@@ -1331,12 +1709,12 @@ position p;
 + IAudioStreamSample *
 
 @script:python depends on report@
-p << r98.p;
+p << r126.p;
 @@
 WARN(p[0], "IAudioStreamSample*", "LPAUDIOSTREAMSAMPLE")
 
 
-@r99@
+@r127@
 typedef IAudioStreamVolume;
 typedef PAUDIOSTREAMVOLUME;
 position p;
@@ -1345,12 +1723,12 @@ position p;
 + IAudioStreamVolume *
 
 @script:python depends on report@
-p << r99.p;
+p << r127.p;
 @@
 WARN(p[0], "IAudioStreamVolume*", "PAUDIOSTREAMVOLUME")
 
 
-@r100@
+@r128@
 typedef LPAUDIOSTREAMVOLUME;
 position p;
 @@
@@ -1358,12 +1736,12 @@ position p;
 + IAudioStreamVolume *
 
 @script:python depends on report@
-p << r100.p;
+p << r128.p;
 @@
 WARN(p[0], "IAudioStreamVolume*", "LPAUDIOSTREAMVOLUME")
 
 
-@r101@
+@r129@
 typedef IAuthenticate;
 typedef PAUTHENTICATE;
 position p;
@@ -1372,12 +1750,12 @@ position p;
 + IAuthenticate *
 
 @script:python depends on report@
-p << r101.p;
+p << r129.p;
 @@
 WARN(p[0], "IAuthenticate*", "PAUTHENTICATE")
 
 
-@r102@
+@r130@
 typedef LPAUTHENTICATE;
 position p;
 @@
@@ -1385,12 +1763,12 @@ position p;
 + IAuthenticate *
 
 @script:python depends on report@
-p << r102.p;
+p << r130.p;
 @@
 WARN(p[0], "IAuthenticate*", "LPAUTHENTICATE")
 
 
-@r103@
+@r131@
 typedef IAutoComplete2;
 typedef PAUTOCOMPLETE2;
 position p;
@@ -1399,12 +1777,12 @@ position p;
 + IAutoComplete2 *
 
 @script:python depends on report@
-p << r103.p;
+p << r131.p;
 @@
 WARN(p[0], "IAutoComplete2*", "PAUTOCOMPLETE2")
 
 
-@r104@
+@r132@
 typedef LPAUTOCOMPLETE2;
 position p;
 @@
@@ -1412,12 +1790,12 @@ position p;
 + IAutoComplete2 *
 
 @script:python depends on report@
-p << r104.p;
+p << r132.p;
 @@
 WARN(p[0], "IAutoComplete2*", "LPAUTOCOMPLETE2")
 
 
-@r105@
+@r133@
 typedef IAutoCompleteDropDown;
 typedef PAUTOCOMPLETEDROPDOWN;
 position p;
@@ -1426,12 +1804,12 @@ position p;
 + IAutoCompleteDropDown *
 
 @script:python depends on report@
-p << r105.p;
+p << r133.p;
 @@
 WARN(p[0], "IAutoCompleteDropDown*", "PAUTOCOMPLETEDROPDOWN")
 
 
-@r106@
+@r134@
 typedef LPAUTOCOMPLETEDROPDOWN;
 position p;
 @@
@@ -1439,12 +1817,12 @@ position p;
 + IAutoCompleteDropDown *
 
 @script:python depends on report@
-p << r106.p;
+p << r134.p;
 @@
 WARN(p[0], "IAutoCompleteDropDown*", "LPAUTOCOMPLETEDROPDOWN")
 
 
-@r107@
+@r135@
 typedef IAutomaticUpdates;
 typedef PAUTOMATICUPDATES;
 position p;
@@ -1453,12 +1831,12 @@ position p;
 + IAutomaticUpdates *
 
 @script:python depends on report@
-p << r107.p;
+p << r135.p;
 @@
 WARN(p[0], "IAutomaticUpdates*", "PAUTOMATICUPDATES")
 
 
-@r108@
+@r136@
 typedef LPAUTOMATICUPDATES;
 position p;
 @@
@@ -1466,12 +1844,39 @@ position p;
 + IAutomaticUpdates *
 
 @script:python depends on report@
-p << r108.p;
+p << r136.p;
 @@
 WARN(p[0], "IAutomaticUpdates*", "LPAUTOMATICUPDATES")
 
 
-@r109@
+@r137@
+typedef IBackgroundCopyCallback2;
+typedef PBACKGROUNDCOPYCALLBACK2;
+position p;
+@@
+- PBACKGROUNDCOPYCALLBACK2@p
++ IBackgroundCopyCallback2 *
+
+@script:python depends on report@
+p << r137.p;
+@@
+WARN(p[0], "IBackgroundCopyCallback2*", "PBACKGROUNDCOPYCALLBACK2")
+
+
+@r138@
+typedef LPBACKGROUNDCOPYCALLBACK2;
+position p;
+@@
+- LPBACKGROUNDCOPYCALLBACK2@p
++ IBackgroundCopyCallback2 *
+
+@script:python depends on report@
+p << r138.p;
+@@
+WARN(p[0], "IBackgroundCopyCallback2*", "LPBACKGROUNDCOPYCALLBACK2")
+
+
+@r139@
 typedef IBackgroundCopyError;
 typedef PBACKGROUNDCOPYERROR;
 position p;
@@ -1480,12 +1885,12 @@ position p;
 + IBackgroundCopyError *
 
 @script:python depends on report@
-p << r109.p;
+p << r139.p;
 @@
 WARN(p[0], "IBackgroundCopyError*", "PBACKGROUNDCOPYERROR")
 
 
-@r110@
+@r140@
 typedef LPBACKGROUNDCOPYERROR;
 position p;
 @@
@@ -1493,12 +1898,12 @@ position p;
 + IBackgroundCopyError *
 
 @script:python depends on report@
-p << r110.p;
+p << r140.p;
 @@
 WARN(p[0], "IBackgroundCopyError*", "LPBACKGROUNDCOPYERROR")
 
 
-@r111@
+@r141@
 typedef IBackgroundCopyFile2;
 typedef PBACKGROUNDCOPYFILE2;
 position p;
@@ -1507,12 +1912,12 @@ position p;
 + IBackgroundCopyFile2 *
 
 @script:python depends on report@
-p << r111.p;
+p << r141.p;
 @@
 WARN(p[0], "IBackgroundCopyFile2*", "PBACKGROUNDCOPYFILE2")
 
 
-@r112@
+@r142@
 typedef LPBACKGROUNDCOPYFILE2;
 position p;
 @@
@@ -1520,39 +1925,39 @@ position p;
 + IBackgroundCopyFile2 *
 
 @script:python depends on report@
-p << r112.p;
+p << r142.p;
 @@
 WARN(p[0], "IBackgroundCopyFile2*", "LPBACKGROUNDCOPYFILE2")
 
 
-@r113@
-typedef IBackgroundCopyJob3;
-typedef PBACKGROUNDCOPYJOB3;
+@r143@
+typedef IBackgroundCopyJob4;
+typedef PBACKGROUNDCOPYJOB4;
 position p;
 @@
-- PBACKGROUNDCOPYJOB3@p
-+ IBackgroundCopyJob3 *
+- PBACKGROUNDCOPYJOB4@p
++ IBackgroundCopyJob4 *
 
 @script:python depends on report@
-p << r113.p;
+p << r143.p;
 @@
-WARN(p[0], "IBackgroundCopyJob3*", "PBACKGROUNDCOPYJOB3")
+WARN(p[0], "IBackgroundCopyJob4*", "PBACKGROUNDCOPYJOB4")
 
 
-@r114@
-typedef LPBACKGROUNDCOPYJOB3;
+@r144@
+typedef LPBACKGROUNDCOPYJOB4;
 position p;
 @@
-- LPBACKGROUNDCOPYJOB3@p
-+ IBackgroundCopyJob3 *
+- LPBACKGROUNDCOPYJOB4@p
++ IBackgroundCopyJob4 *
 
 @script:python depends on report@
-p << r114.p;
+p << r144.p;
 @@
-WARN(p[0], "IBackgroundCopyJob3*", "LPBACKGROUNDCOPYJOB3")
+WARN(p[0], "IBackgroundCopyJob4*", "LPBACKGROUNDCOPYJOB4")
 
 
-@r115@
+@r145@
 typedef IBackgroundCopyJobHttpOptions;
 typedef PBACKGROUNDCOPYJOBHTTPOPTIONS;
 position p;
@@ -1561,12 +1966,12 @@ position p;
 + IBackgroundCopyJobHttpOptions *
 
 @script:python depends on report@
-p << r115.p;
+p << r145.p;
 @@
 WARN(p[0], "IBackgroundCopyJobHttpOptions*", "PBACKGROUNDCOPYJOBHTTPOPTIONS")
 
 
-@r116@
+@r146@
 typedef LPBACKGROUNDCOPYJOBHTTPOPTIONS;
 position p;
 @@
@@ -1574,12 +1979,12 @@ position p;
 + IBackgroundCopyJobHttpOptions *
 
 @script:python depends on report@
-p << r116.p;
+p << r146.p;
 @@
 WARN(p[0], "IBackgroundCopyJobHttpOptions*", "LPBACKGROUNDCOPYJOBHTTPOPTIONS")
 
 
-@r117@
+@r147@
 typedef IBackgroundCopyManager;
 typedef PBACKGROUNDCOPYMANAGER;
 position p;
@@ -1588,12 +1993,12 @@ position p;
 + IBackgroundCopyManager *
 
 @script:python depends on report@
-p << r117.p;
+p << r147.p;
 @@
 WARN(p[0], "IBackgroundCopyManager*", "PBACKGROUNDCOPYMANAGER")
 
 
-@r118@
+@r148@
 typedef LPBACKGROUNDCOPYMANAGER;
 position p;
 @@
@@ -1601,12 +2006,12 @@ position p;
 + IBackgroundCopyManager *
 
 @script:python depends on report@
-p << r118.p;
+p << r148.p;
 @@
 WARN(p[0], "IBackgroundCopyManager*", "LPBACKGROUNDCOPYMANAGER")
 
 
-@r119@
+@r149@
 typedef IBaseFilter;
 typedef PBASEFILTER;
 position p;
@@ -1615,12 +2020,12 @@ position p;
 + IBaseFilter *
 
 @script:python depends on report@
-p << r119.p;
+p << r149.p;
 @@
 WARN(p[0], "IBaseFilter*", "PBASEFILTER")
 
 
-@r120@
+@r150@
 typedef LPBASEFILTER;
 position p;
 @@
@@ -1628,12 +2033,12 @@ position p;
 + IBaseFilter *
 
 @script:python depends on report@
-p << r120.p;
+p << r150.p;
 @@
 WARN(p[0], "IBaseFilter*", "LPBASEFILTER")
 
 
-@r121@
+@r151@
 typedef IBasicAudio;
 typedef PBASICAUDIO;
 position p;
@@ -1642,12 +2047,12 @@ position p;
 + IBasicAudio *
 
 @script:python depends on report@
-p << r121.p;
+p << r151.p;
 @@
 WARN(p[0], "IBasicAudio*", "PBASICAUDIO")
 
 
-@r122@
+@r152@
 typedef LPBASICAUDIO;
 position p;
 @@
@@ -1655,12 +2060,39 @@ position p;
 + IBasicAudio *
 
 @script:python depends on report@
-p << r122.p;
+p << r152.p;
 @@
 WARN(p[0], "IBasicAudio*", "LPBASICAUDIO")
 
 
-@r123@
+@r153@
+typedef IBasicVideo;
+typedef PBASICVIDEO;
+position p;
+@@
+- PBASICVIDEO@p
++ IBasicVideo *
+
+@script:python depends on report@
+p << r153.p;
+@@
+WARN(p[0], "IBasicVideo*", "PBASICVIDEO")
+
+
+@r154@
+typedef LPBASICVIDEO;
+position p;
+@@
+- LPBASICVIDEO@p
++ IBasicVideo *
+
+@script:python depends on report@
+p << r154.p;
+@@
+WARN(p[0], "IBasicVideo*", "LPBASICVIDEO")
+
+
+@r155@
 typedef IBasicVideo2;
 typedef PBASICVIDEO2;
 position p;
@@ -1669,12 +2101,12 @@ position p;
 + IBasicVideo2 *
 
 @script:python depends on report@
-p << r123.p;
+p << r155.p;
 @@
 WARN(p[0], "IBasicVideo2*", "PBASICVIDEO2")
 
 
-@r124@
+@r156@
 typedef LPBASICVIDEO2;
 position p;
 @@
@@ -1682,12 +2114,39 @@ position p;
 + IBasicVideo2 *
 
 @script:python depends on report@
-p << r124.p;
+p << r156.p;
 @@
 WARN(p[0], "IBasicVideo2*", "LPBASICVIDEO2")
 
 
-@r125@
+@r157@
+typedef IBindCallbackRedirect;
+typedef PBINDCALLBACKREDIRECT;
+position p;
+@@
+- PBINDCALLBACKREDIRECT@p
++ IBindCallbackRedirect *
+
+@script:python depends on report@
+p << r157.p;
+@@
+WARN(p[0], "IBindCallbackRedirect*", "PBINDCALLBACKREDIRECT")
+
+
+@r158@
+typedef LPBINDCALLBACKREDIRECT;
+position p;
+@@
+- LPBINDCALLBACKREDIRECT@p
++ IBindCallbackRedirect *
+
+@script:python depends on report@
+p << r158.p;
+@@
+WARN(p[0], "IBindCallbackRedirect*", "LPBINDCALLBACKREDIRECT")
+
+
+@r159@
 typedef IBindCtx;
 typedef PBINDCTX;
 position p;
@@ -1696,12 +2155,12 @@ position p;
 + IBindCtx *
 
 @script:python depends on report@
-p << r125.p;
+p << r159.p;
 @@
 WARN(p[0], "IBindCtx*", "PBINDCTX")
 
 
-@r126@
+@r160@
 typedef LPBINDCTX;
 position p;
 @@
@@ -1709,12 +2168,12 @@ position p;
 + IBindCtx *
 
 @script:python depends on report@
-p << r126.p;
+p << r160.p;
 @@
 WARN(p[0], "IBindCtx*", "LPBINDCTX")
 
 
-@r127@
+@r161@
 typedef IBindHost;
 typedef PBINDHOST;
 position p;
@@ -1723,12 +2182,12 @@ position p;
 + IBindHost *
 
 @script:python depends on report@
-p << r127.p;
+p << r161.p;
 @@
 WARN(p[0], "IBindHost*", "PBINDHOST")
 
 
-@r128@
+@r162@
 typedef LPBINDHOST;
 position p;
 @@
@@ -1736,12 +2195,12 @@ position p;
 + IBindHost *
 
 @script:python depends on report@
-p << r128.p;
+p << r162.p;
 @@
 WARN(p[0], "IBindHost*", "LPBINDHOST")
 
 
-@r129@
+@r163@
 typedef IBindStatusCallback;
 typedef PBINDSTATUSCALLBACK;
 position p;
@@ -1750,12 +2209,12 @@ position p;
 + IBindStatusCallback *
 
 @script:python depends on report@
-p << r129.p;
+p << r163.p;
 @@
 WARN(p[0], "IBindStatusCallback*", "PBINDSTATUSCALLBACK")
 
 
-@r130@
+@r164@
 typedef LPBINDSTATUSCALLBACK;
 position p;
 @@
@@ -1763,12 +2222,12 @@ position p;
 + IBindStatusCallback *
 
 @script:python depends on report@
-p << r130.p;
+p << r164.p;
 @@
 WARN(p[0], "IBindStatusCallback*", "LPBINDSTATUSCALLBACK")
 
 
-@r131@
+@r165@
 typedef IBindStatusCallbackEx;
 typedef PBINDSTATUSCALLBACKEX;
 position p;
@@ -1777,12 +2236,12 @@ position p;
 + IBindStatusCallbackEx *
 
 @script:python depends on report@
-p << r131.p;
+p << r165.p;
 @@
 WARN(p[0], "IBindStatusCallbackEx*", "PBINDSTATUSCALLBACKEX")
 
 
-@r132@
+@r166@
 typedef LPBINDSTATUSCALLBACKEX;
 position p;
 @@
@@ -1790,12 +2249,12 @@ position p;
 + IBindStatusCallbackEx *
 
 @script:python depends on report@
-p << r132.p;
+p << r166.p;
 @@
 WARN(p[0], "IBindStatusCallbackEx*", "LPBINDSTATUSCALLBACKEX")
 
 
-@r133@
+@r167@
 typedef IBinding;
 typedef PBINDING;
 position p;
@@ -1804,12 +2263,12 @@ position p;
 + IBinding *
 
 @script:python depends on report@
-p << r133.p;
+p << r167.p;
 @@
 WARN(p[0], "IBinding*", "PBINDING")
 
 
-@r134@
+@r168@
 typedef LPBINDING;
 position p;
 @@
@@ -1817,12 +2276,12 @@ position p;
 + IBinding *
 
 @script:python depends on report@
-p << r134.p;
+p << r168.p;
 @@
 WARN(p[0], "IBinding*", "LPBINDING")
 
 
-@r135@
+@r169@
 typedef IBrowserService;
 typedef PBROWSERSERVICE;
 position p;
@@ -1831,12 +2290,12 @@ position p;
 + IBrowserService *
 
 @script:python depends on report@
-p << r135.p;
+p << r169.p;
 @@
 WARN(p[0], "IBrowserService*", "PBROWSERSERVICE")
 
 
-@r136@
+@r170@
 typedef LPBROWSERSERVICE;
 position p;
 @@
@@ -1844,12 +2303,12 @@ position p;
 + IBrowserService *
 
 @script:python depends on report@
-p << r136.p;
+p << r170.p;
 @@
 WARN(p[0], "IBrowserService*", "LPBROWSERSERVICE")
 
 
-@r137@
+@r171@
 typedef ICLRMetaHost;
 typedef PCLRMETAHOST;
 position p;
@@ -1858,12 +2317,12 @@ position p;
 + ICLRMetaHost *
 
 @script:python depends on report@
-p << r137.p;
+p << r171.p;
 @@
 WARN(p[0], "ICLRMetaHost*", "PCLRMETAHOST")
 
 
-@r138@
+@r172@
 typedef LPCLRMETAHOST;
 position p;
 @@
@@ -1871,12 +2330,12 @@ position p;
 + ICLRMetaHost *
 
 @script:python depends on report@
-p << r138.p;
+p << r172.p;
 @@
 WARN(p[0], "ICLRMetaHost*", "LPCLRMETAHOST")
 
 
-@r139@
+@r173@
 typedef ICLRMetaHostPolicy;
 typedef PCLRMETAHOSTPOLICY;
 position p;
@@ -1885,12 +2344,12 @@ position p;
 + ICLRMetaHostPolicy *
 
 @script:python depends on report@
-p << r139.p;
+p << r173.p;
 @@
 WARN(p[0], "ICLRMetaHostPolicy*", "PCLRMETAHOSTPOLICY")
 
 
-@r140@
+@r174@
 typedef LPCLRMETAHOSTPOLICY;
 position p;
 @@
@@ -1898,12 +2357,12 @@ position p;
 + ICLRMetaHostPolicy *
 
 @script:python depends on report@
-p << r140.p;
+p << r174.p;
 @@
 WARN(p[0], "ICLRMetaHostPolicy*", "LPCLRMETAHOSTPOLICY")
 
 
-@r141@
+@r175@
 typedef ICLRRuntimeHost;
 typedef PCLRRUNTIMEHOST;
 position p;
@@ -1912,12 +2371,12 @@ position p;
 + ICLRRuntimeHost *
 
 @script:python depends on report@
-p << r141.p;
+p << r175.p;
 @@
 WARN(p[0], "ICLRRuntimeHost*", "PCLRRUNTIMEHOST")
 
 
-@r142@
+@r176@
 typedef LPCLRRUNTIMEHOST;
 position p;
 @@
@@ -1925,12 +2384,12 @@ position p;
 + ICLRRuntimeHost *
 
 @script:python depends on report@
-p << r142.p;
+p << r176.p;
 @@
 WARN(p[0], "ICLRRuntimeHost*", "LPCLRRUNTIMEHOST")
 
 
-@r143@
+@r177@
 typedef ICLRRuntimeInfo;
 typedef PCLRRUNTIMEINFO;
 position p;
@@ -1939,12 +2398,12 @@ position p;
 + ICLRRuntimeInfo *
 
 @script:python depends on report@
-p << r143.p;
+p << r177.p;
 @@
 WARN(p[0], "ICLRRuntimeInfo*", "PCLRRUNTIMEINFO")
 
 
-@r144@
+@r178@
 typedef LPCLRRUNTIMEINFO;
 position p;
 @@
@@ -1952,12 +2411,12 @@ position p;
 + ICLRRuntimeInfo *
 
 @script:python depends on report@
-p << r144.p;
+p << r178.p;
 @@
 WARN(p[0], "ICLRRuntimeInfo*", "LPCLRRUNTIMEINFO")
 
 
-@r145@
+@r179@
 typedef ICaptureGraphBuilder;
 typedef PCAPTUREGRAPHBUILDER;
 position p;
@@ -1966,12 +2425,12 @@ position p;
 + ICaptureGraphBuilder *
 
 @script:python depends on report@
-p << r145.p;
+p << r179.p;
 @@
 WARN(p[0], "ICaptureGraphBuilder*", "PCAPTUREGRAPHBUILDER")
 
 
-@r146@
+@r180@
 typedef LPCAPTUREGRAPHBUILDER;
 position p;
 @@
@@ -1979,12 +2438,12 @@ position p;
 + ICaptureGraphBuilder *
 
 @script:python depends on report@
-p << r146.p;
+p << r180.p;
 @@
 WARN(p[0], "ICaptureGraphBuilder*", "LPCAPTUREGRAPHBUILDER")
 
 
-@r147@
+@r181@
 typedef ICaptureGraphBuilder2;
 typedef PCAPTUREGRAPHBUILDER2;
 position p;
@@ -1993,12 +2452,12 @@ position p;
 + ICaptureGraphBuilder2 *
 
 @script:python depends on report@
-p << r147.p;
+p << r181.p;
 @@
 WARN(p[0], "ICaptureGraphBuilder2*", "PCAPTUREGRAPHBUILDER2")
 
 
-@r148@
+@r182@
 typedef LPCAPTUREGRAPHBUILDER2;
 position p;
 @@
@@ -2006,12 +2465,12 @@ position p;
 + ICaptureGraphBuilder2 *
 
 @script:python depends on report@
-p << r148.p;
+p << r182.p;
 @@
 WARN(p[0], "ICaptureGraphBuilder2*", "LPCAPTUREGRAPHBUILDER2")
 
 
-@r149@
+@r183@
 typedef ICatInformation;
 typedef PCATINFORMATION;
 position p;
@@ -2020,12 +2479,12 @@ position p;
 + ICatInformation *
 
 @script:python depends on report@
-p << r149.p;
+p << r183.p;
 @@
 WARN(p[0], "ICatInformation*", "PCATINFORMATION")
 
 
-@r150@
+@r184@
 typedef LPCATINFORMATION;
 position p;
 @@
@@ -2033,12 +2492,12 @@ position p;
 + ICatInformation *
 
 @script:python depends on report@
-p << r150.p;
+p << r184.p;
 @@
 WARN(p[0], "ICatInformation*", "LPCATINFORMATION")
 
 
-@r151@
+@r185@
 typedef ICatRegister;
 typedef PCATREGISTER;
 position p;
@@ -2047,12 +2506,12 @@ position p;
 + ICatRegister *
 
 @script:python depends on report@
-p << r151.p;
+p << r185.p;
 @@
 WARN(p[0], "ICatRegister*", "PCATREGISTER")
 
 
-@r152@
+@r186@
 typedef LPCATREGISTER;
 position p;
 @@
@@ -2060,12 +2519,12 @@ position p;
 + ICatRegister *
 
 @script:python depends on report@
-p << r152.p;
+p << r186.p;
 @@
 WARN(p[0], "ICatRegister*", "LPCATREGISTER")
 
 
-@r153@
+@r187@
 typedef IChannelAudioVolume;
 typedef PCHANNELAUDIOVOLUME;
 position p;
@@ -2074,12 +2533,12 @@ position p;
 + IChannelAudioVolume *
 
 @script:python depends on report@
-p << r153.p;
+p << r187.p;
 @@
 WARN(p[0], "IChannelAudioVolume*", "PCHANNELAUDIOVOLUME")
 
 
-@r154@
+@r188@
 typedef LPCHANNELAUDIOVOLUME;
 position p;
 @@
@@ -2087,12 +2546,12 @@ position p;
 + IChannelAudioVolume *
 
 @script:python depends on report@
-p << r154.p;
+p << r188.p;
 @@
 WARN(p[0], "IChannelAudioVolume*", "LPCHANNELAUDIOVOLUME")
 
 
-@r155@
+@r189@
 typedef IChapteredRowset;
 typedef PCHAPTEREDROWSET;
 position p;
@@ -2101,12 +2560,12 @@ position p;
 + IChapteredRowset *
 
 @script:python depends on report@
-p << r155.p;
+p << r189.p;
 @@
 WARN(p[0], "IChapteredRowset*", "PCHAPTEREDROWSET")
 
 
-@r156@
+@r190@
 typedef LPCHAPTEREDROWSET;
 position p;
 @@
@@ -2114,12 +2573,12 @@ position p;
 + IChapteredRowset *
 
 @script:python depends on report@
-p << r156.p;
+p << r190.p;
 @@
 WARN(p[0], "IChapteredRowset*", "LPCHAPTEREDROWSET")
 
 
-@r157@
+@r191@
 typedef IClassFactory;
 typedef PCLASSFACTORY;
 position p;
@@ -2128,12 +2587,12 @@ position p;
 + IClassFactory *
 
 @script:python depends on report@
-p << r157.p;
+p << r191.p;
 @@
 WARN(p[0], "IClassFactory*", "PCLASSFACTORY")
 
 
-@r158@
+@r192@
 typedef LPCLASSFACTORY;
 position p;
 @@
@@ -2141,12 +2600,12 @@ position p;
 + IClassFactory *
 
 @script:python depends on report@
-p << r158.p;
+p << r192.p;
 @@
 WARN(p[0], "IClassFactory*", "LPCLASSFACTORY")
 
 
-@r159@
+@r193@
 typedef IClientSecurity;
 typedef PCLIENTSECURITY;
 position p;
@@ -2155,12 +2614,12 @@ position p;
 + IClientSecurity *
 
 @script:python depends on report@
-p << r159.p;
+p << r193.p;
 @@
 WARN(p[0], "IClientSecurity*", "PCLIENTSECURITY")
 
 
-@r160@
+@r194@
 typedef LPCLIENTSECURITY;
 position p;
 @@
@@ -2168,12 +2627,93 @@ position p;
 + IClientSecurity *
 
 @script:python depends on report@
-p << r160.p;
+p << r194.p;
 @@
 WARN(p[0], "IClientSecurity*", "LPCLIENTSECURITY")
 
 
-@r161@
+@r195@
+typedef ICoclass1;
+typedef PCOCLASS1;
+position p;
+@@
+- PCOCLASS1@p
++ ICoclass1 *
+
+@script:python depends on report@
+p << r195.p;
+@@
+WARN(p[0], "ICoclass1*", "PCOCLASS1")
+
+
+@r196@
+typedef LPCOCLASS1;
+position p;
+@@
+- LPCOCLASS1@p
++ ICoclass1 *
+
+@script:python depends on report@
+p << r196.p;
+@@
+WARN(p[0], "ICoclass1*", "LPCOCLASS1")
+
+
+@r197@
+typedef ICoclass2;
+typedef PCOCLASS2;
+position p;
+@@
+- PCOCLASS2@p
++ ICoclass2 *
+
+@script:python depends on report@
+p << r197.p;
+@@
+WARN(p[0], "ICoclass2*", "PCOCLASS2")
+
+
+@r198@
+typedef LPCOCLASS2;
+position p;
+@@
+- LPCOCLASS2@p
++ ICoclass2 *
+
+@script:python depends on report@
+p << r198.p;
+@@
+WARN(p[0], "ICoclass2*", "LPCOCLASS2")
+
+
+@r199@
+typedef IColumnsInfo;
+typedef PCOLUMNSINFO;
+position p;
+@@
+- PCOLUMNSINFO@p
++ IColumnsInfo *
+
+@script:python depends on report@
+p << r199.p;
+@@
+WARN(p[0], "IColumnsInfo*", "PCOLUMNSINFO")
+
+
+@r200@
+typedef LPCOLUMNSINFO;
+position p;
+@@
+- LPCOLUMNSINFO@p
++ IColumnsInfo *
+
+@script:python depends on report@
+p << r200.p;
+@@
+WARN(p[0], "IColumnsInfo*", "LPCOLUMNSINFO")
+
+
+@r201@
 typedef IComThreadingInfo;
 typedef PCOMTHREADINGINFO;
 position p;
@@ -2182,12 +2722,12 @@ position p;
 + IComThreadingInfo *
 
 @script:python depends on report@
-p << r161.p;
+p << r201.p;
 @@
 WARN(p[0], "IComThreadingInfo*", "PCOMTHREADINGINFO")
 
 
-@r162@
+@r202@
 typedef LPCOMTHREADINGINFO;
 position p;
 @@
@@ -2195,12 +2735,12 @@ position p;
 + IComThreadingInfo *
 
 @script:python depends on report@
-p << r162.p;
+p << r202.p;
 @@
 WARN(p[0], "IComThreadingInfo*", "LPCOMTHREADINGINFO")
 
 
-@r163@
+@r203@
 typedef ICommDlgBrowser;
 typedef PCOMMDLGBROWSER;
 position p;
@@ -2209,12 +2749,12 @@ position p;
 + ICommDlgBrowser *
 
 @script:python depends on report@
-p << r163.p;
+p << r203.p;
 @@
 WARN(p[0], "ICommDlgBrowser*", "PCOMMDLGBROWSER")
 
 
-@r164@
+@r204@
 typedef LPCOMMDLGBROWSER;
 position p;
 @@
@@ -2222,12 +2762,12 @@ position p;
 + ICommDlgBrowser *
 
 @script:python depends on report@
-p << r164.p;
+p << r204.p;
 @@
 WARN(p[0], "ICommDlgBrowser*", "LPCOMMDLGBROWSER")
 
 
-@r165@
+@r205@
 typedef ICommDlgBrowser3;
 typedef PCOMMDLGBROWSER3;
 position p;
@@ -2236,12 +2776,12 @@ position p;
 + ICommDlgBrowser3 *
 
 @script:python depends on report@
-p << r165.p;
+p << r205.p;
 @@
 WARN(p[0], "ICommDlgBrowser3*", "PCOMMDLGBROWSER3")
 
 
-@r166@
+@r206@
 typedef LPCOMMDLGBROWSER3;
 position p;
 @@
@@ -2249,12 +2789,39 @@ position p;
 + ICommDlgBrowser3 *
 
 @script:python depends on report@
-p << r166.p;
+p << r206.p;
 @@
 WARN(p[0], "ICommDlgBrowser3*", "LPCOMMDLGBROWSER3")
 
 
-@r167@
+@r207@
+typedef ICommonQuery;
+typedef PCOMMONQUERY;
+position p;
+@@
+- PCOMMONQUERY@p
++ ICommonQuery *
+
+@script:python depends on report@
+p << r207.p;
+@@
+WARN(p[0], "ICommonQuery*", "PCOMMONQUERY")
+
+
+@r208@
+typedef LPCOMMONQUERY;
+position p;
+@@
+- LPCOMMONQUERY@p
++ ICommonQuery *
+
+@script:python depends on report@
+p << r208.p;
+@@
+WARN(p[0], "ICommonQuery*", "LPCOMMONQUERY")
+
+
+@r209@
 typedef IConfigAviMux;
 typedef PCONFIGAVIMUX;
 position p;
@@ -2263,12 +2830,12 @@ position p;
 + IConfigAviMux *
 
 @script:python depends on report@
-p << r167.p;
+p << r209.p;
 @@
 WARN(p[0], "IConfigAviMux*", "PCONFIGAVIMUX")
 
 
-@r168@
+@r210@
 typedef LPCONFIGAVIMUX;
 position p;
 @@
@@ -2276,12 +2843,12 @@ position p;
 + IConfigAviMux *
 
 @script:python depends on report@
-p << r168.p;
+p << r210.p;
 @@
 WARN(p[0], "IConfigAviMux*", "LPCONFIGAVIMUX")
 
 
-@r169@
+@r211@
 typedef IConfigInterleaving;
 typedef PCONFIGINTERLEAVING;
 position p;
@@ -2290,12 +2857,12 @@ position p;
 + IConfigInterleaving *
 
 @script:python depends on report@
-p << r169.p;
+p << r211.p;
 @@
 WARN(p[0], "IConfigInterleaving*", "PCONFIGINTERLEAVING")
 
 
-@r170@
+@r212@
 typedef LPCONFIGINTERLEAVING;
 position p;
 @@
@@ -2303,12 +2870,12 @@ position p;
 + IConfigInterleaving *
 
 @script:python depends on report@
-p << r170.p;
+p << r212.p;
 @@
 WARN(p[0], "IConfigInterleaving*", "LPCONFIGINTERLEAVING")
 
 
-@r171@
+@r213@
 typedef IConnectionPoint;
 typedef PCONNECTIONPOINT;
 position p;
@@ -2317,12 +2884,12 @@ position p;
 + IConnectionPoint *
 
 @script:python depends on report@
-p << r171.p;
+p << r213.p;
 @@
 WARN(p[0], "IConnectionPoint*", "PCONNECTIONPOINT")
 
 
-@r172@
+@r214@
 typedef LPCONNECTIONPOINT;
 position p;
 @@
@@ -2330,12 +2897,12 @@ position p;
 + IConnectionPoint *
 
 @script:python depends on report@
-p << r172.p;
+p << r214.p;
 @@
 WARN(p[0], "IConnectionPoint*", "LPCONNECTIONPOINT")
 
 
-@r173@
+@r215@
 typedef IConnectionPointContainer;
 typedef PCONNECTIONPOINTCONTAINER;
 position p;
@@ -2344,12 +2911,12 @@ position p;
 + IConnectionPointContainer *
 
 @script:python depends on report@
-p << r173.p;
+p << r215.p;
 @@
 WARN(p[0], "IConnectionPointContainer*", "PCONNECTIONPOINTCONTAINER")
 
 
-@r174@
+@r216@
 typedef LPCONNECTIONPOINTCONTAINER;
 position p;
 @@
@@ -2357,12 +2924,12 @@ position p;
 + IConnectionPointContainer *
 
 @script:python depends on report@
-p << r174.p;
+p << r216.p;
 @@
 WARN(p[0], "IConnectionPointContainer*", "LPCONNECTIONPOINTCONTAINER")
 
 
-@r175@
+@r217@
 typedef IContextCallback;
 typedef PCONTEXTCALLBACK;
 position p;
@@ -2371,12 +2938,12 @@ position p;
 + IContextCallback *
 
 @script:python depends on report@
-p << r175.p;
+p << r217.p;
 @@
 WARN(p[0], "IContextCallback*", "PCONTEXTCALLBACK")
 
 
-@r176@
+@r218@
 typedef LPCONTEXTCALLBACK;
 position p;
 @@
@@ -2384,12 +2951,12 @@ position p;
 + IContextCallback *
 
 @script:python depends on report@
-p << r176.p;
+p << r218.p;
 @@
 WARN(p[0], "IContextCallback*", "LPCONTEXTCALLBACK")
 
 
-@r177@
+@r219@
 typedef IContextMenu;
 typedef PCONTEXTMENU;
 position p;
@@ -2398,12 +2965,12 @@ position p;
 + IContextMenu *
 
 @script:python depends on report@
-p << r177.p;
+p << r219.p;
 @@
 WARN(p[0], "IContextMenu*", "PCONTEXTMENU")
 
 
-@r178@
+@r220@
 typedef LPCONTEXTMENU;
 position p;
 @@
@@ -2411,12 +2978,12 @@ position p;
 + IContextMenu *
 
 @script:python depends on report@
-p << r178.p;
+p << r220.p;
 @@
 WARN(p[0], "IContextMenu*", "LPCONTEXTMENU")
 
 
-@r179@
+@r221@
 typedef IContextMenu2;
 typedef PCONTEXTMENU2;
 position p;
@@ -2425,12 +2992,12 @@ position p;
 + IContextMenu2 *
 
 @script:python depends on report@
-p << r179.p;
+p << r221.p;
 @@
 WARN(p[0], "IContextMenu2*", "PCONTEXTMENU2")
 
 
-@r180@
+@r222@
 typedef LPCONTEXTMENU2;
 position p;
 @@
@@ -2438,12 +3005,12 @@ position p;
 + IContextMenu2 *
 
 @script:python depends on report@
-p << r180.p;
+p << r222.p;
 @@
 WARN(p[0], "IContextMenu2*", "LPCONTEXTMENU2")
 
 
-@r181@
+@r223@
 typedef IContextMenu3;
 typedef PCONTEXTMENU3;
 position p;
@@ -2452,12 +3019,12 @@ position p;
 + IContextMenu3 *
 
 @script:python depends on report@
-p << r181.p;
+p << r223.p;
 @@
 WARN(p[0], "IContextMenu3*", "PCONTEXTMENU3")
 
 
-@r182@
+@r224@
 typedef LPCONTEXTMENU3;
 position p;
 @@
@@ -2465,12 +3032,12 @@ position p;
 + IContextMenu3 *
 
 @script:python depends on report@
-p << r182.p;
+p << r224.p;
 @@
 WARN(p[0], "IContextMenu3*", "LPCONTEXTMENU3")
 
 
-@r183@
+@r225@
 typedef ICorDebug;
 typedef PCORDEBUG;
 position p;
@@ -2479,12 +3046,12 @@ position p;
 + ICorDebug *
 
 @script:python depends on report@
-p << r183.p;
+p << r225.p;
 @@
 WARN(p[0], "ICorDebug*", "PCORDEBUG")
 
 
-@r184@
+@r226@
 typedef LPCORDEBUG;
 position p;
 @@
@@ -2492,12 +3059,12 @@ position p;
 + ICorDebug *
 
 @script:python depends on report@
-p << r184.p;
+p << r226.p;
 @@
 WARN(p[0], "ICorDebug*", "LPCORDEBUG")
 
 
-@r185@
+@r227@
 typedef ICorDebugProcess;
 typedef PCORDEBUGPROCESS;
 position p;
@@ -2506,12 +3073,12 @@ position p;
 + ICorDebugProcess *
 
 @script:python depends on report@
-p << r185.p;
+p << r227.p;
 @@
 WARN(p[0], "ICorDebugProcess*", "PCORDEBUGPROCESS")
 
 
-@r186@
+@r228@
 typedef LPCORDEBUGPROCESS;
 position p;
 @@
@@ -2519,12 +3086,12 @@ position p;
 + ICorDebugProcess *
 
 @script:python depends on report@
-p << r186.p;
+p << r228.p;
 @@
 WARN(p[0], "ICorDebugProcess*", "LPCORDEBUGPROCESS")
 
 
-@r187@
+@r229@
 typedef ICorDebugProcessEnum;
 typedef PCORDEBUGPROCESSENUM;
 position p;
@@ -2533,12 +3100,12 @@ position p;
 + ICorDebugProcessEnum *
 
 @script:python depends on report@
-p << r187.p;
+p << r229.p;
 @@
 WARN(p[0], "ICorDebugProcessEnum*", "PCORDEBUGPROCESSENUM")
 
 
-@r188@
+@r230@
 typedef LPCORDEBUGPROCESSENUM;
 position p;
 @@
@@ -2546,12 +3113,12 @@ position p;
 + ICorDebugProcessEnum *
 
 @script:python depends on report@
-p << r188.p;
+p << r230.p;
 @@
 WARN(p[0], "ICorDebugProcessEnum*", "LPCORDEBUGPROCESSENUM")
 
 
-@r189@
+@r231@
 typedef ICorRuntimeHost;
 typedef PCORRUNTIMEHOST;
 position p;
@@ -2560,12 +3127,12 @@ position p;
 + ICorRuntimeHost *
 
 @script:python depends on report@
-p << r189.p;
+p << r231.p;
 @@
 WARN(p[0], "ICorRuntimeHost*", "PCORRUNTIMEHOST")
 
 
-@r190@
+@r232@
 typedef LPCORRUNTIMEHOST;
 position p;
 @@
@@ -2573,12 +3140,12 @@ position p;
 + ICorRuntimeHost *
 
 @script:python depends on report@
-p << r190.p;
+p << r232.p;
 @@
 WARN(p[0], "ICorRuntimeHost*", "LPCORRUNTIMEHOST")
 
 
-@r191@
+@r233@
 typedef ICreateErrorInfo;
 typedef PCREATEERRORINFO;
 position p;
@@ -2587,12 +3154,12 @@ position p;
 + ICreateErrorInfo *
 
 @script:python depends on report@
-p << r191.p;
+p << r233.p;
 @@
 WARN(p[0], "ICreateErrorInfo*", "PCREATEERRORINFO")
 
 
-@r192@
+@r234@
 typedef LPCREATEERRORINFO;
 position p;
 @@
@@ -2600,12 +3167,12 @@ position p;
 + ICreateErrorInfo *
 
 @script:python depends on report@
-p << r192.p;
+p << r234.p;
 @@
 WARN(p[0], "ICreateErrorInfo*", "LPCREATEERRORINFO")
 
 
-@r193@
+@r235@
 typedef ICreateTypeInfo2;
 typedef PCREATETYPEINFO2;
 position p;
@@ -2614,12 +3181,12 @@ position p;
 + ICreateTypeInfo2 *
 
 @script:python depends on report@
-p << r193.p;
+p << r235.p;
 @@
 WARN(p[0], "ICreateTypeInfo2*", "PCREATETYPEINFO2")
 
 
-@r194@
+@r236@
 typedef LPCREATETYPEINFO2;
 position p;
 @@
@@ -2627,12 +3194,12 @@ position p;
 + ICreateTypeInfo2 *
 
 @script:python depends on report@
-p << r194.p;
+p << r236.p;
 @@
 WARN(p[0], "ICreateTypeInfo2*", "LPCREATETYPEINFO2")
 
 
-@r195@
+@r237@
 typedef ICreateTypeLib2;
 typedef PCREATETYPELIB2;
 position p;
@@ -2641,12 +3208,12 @@ position p;
 + ICreateTypeLib2 *
 
 @script:python depends on report@
-p << r195.p;
+p << r237.p;
 @@
 WARN(p[0], "ICreateTypeLib2*", "PCREATETYPELIB2")
 
 
-@r196@
+@r238@
 typedef LPCREATETYPELIB2;
 position p;
 @@
@@ -2654,12 +3221,12 @@ position p;
 + ICreateTypeLib2 *
 
 @script:python depends on report@
-p << r196.p;
+p << r238.p;
 @@
 WARN(p[0], "ICreateTypeLib2*", "LPCREATETYPELIB2")
 
 
-@r197@
+@r239@
 typedef ICustomDestinationList;
 typedef PCUSTOMDESTINATIONLIST;
 position p;
@@ -2668,12 +3235,12 @@ position p;
 + ICustomDestinationList *
 
 @script:python depends on report@
-p << r197.p;
+p << r239.p;
 @@
 WARN(p[0], "ICustomDestinationList*", "PCUSTOMDESTINATIONLIST")
 
 
-@r198@
+@r240@
 typedef LPCUSTOMDESTINATIONLIST;
 position p;
 @@
@@ -2681,12 +3248,12 @@ position p;
 + ICustomDestinationList *
 
 @script:python depends on report@
-p << r198.p;
+p << r240.p;
 @@
 WARN(p[0], "ICustomDestinationList*", "LPCUSTOMDESTINATIONLIST")
 
 
-@r199@
+@r241@
 typedef ICustomDoc;
 typedef PCUSTOMDOC;
 position p;
@@ -2695,12 +3262,12 @@ position p;
 + ICustomDoc *
 
 @script:python depends on report@
-p << r199.p;
+p << r241.p;
 @@
 WARN(p[0], "ICustomDoc*", "PCUSTOMDOC")
 
 
-@r200@
+@r242@
 typedef LPCUSTOMDOC;
 position p;
 @@
@@ -2708,39 +3275,39 @@ position p;
 + ICustomDoc *
 
 @script:python depends on report@
-p << r200.p;
+p << r242.p;
 @@
 WARN(p[0], "ICustomDoc*", "LPCUSTOMDOC")
 
 
-@r201@
-typedef ID2D1Bitmap;
-typedef PD2D1BITMAP;
+@r243@
+typedef ID2D1Bitmap1;
+typedef PD2D1BITMAP1;
 position p;
 @@
-- PD2D1BITMAP@p
-+ ID2D1Bitmap *
+- PD2D1BITMAP1@p
++ ID2D1Bitmap1 *
 
 @script:python depends on report@
-p << r201.p;
+p << r243.p;
 @@
-WARN(p[0], "ID2D1Bitmap*", "PD2D1BITMAP")
+WARN(p[0], "ID2D1Bitmap1*", "PD2D1BITMAP1")
 
 
-@r202@
-typedef LPD2D1BITMAP;
+@r244@
+typedef LPD2D1BITMAP1;
 position p;
 @@
-- LPD2D1BITMAP@p
-+ ID2D1Bitmap *
+- LPD2D1BITMAP1@p
++ ID2D1Bitmap1 *
 
 @script:python depends on report@
-p << r202.p;
+p << r244.p;
 @@
-WARN(p[0], "ID2D1Bitmap*", "LPD2D1BITMAP")
+WARN(p[0], "ID2D1Bitmap1*", "LPD2D1BITMAP1")
 
 
-@r203@
+@r245@
 typedef ID2D1BitmapRenderTarget;
 typedef PD2D1BITMAPRENDERTARGET;
 position p;
@@ -2749,12 +3316,12 @@ position p;
 + ID2D1BitmapRenderTarget *
 
 @script:python depends on report@
-p << r203.p;
+p << r245.p;
 @@
 WARN(p[0], "ID2D1BitmapRenderTarget*", "PD2D1BITMAPRENDERTARGET")
 
 
-@r204@
+@r246@
 typedef LPD2D1BITMAPRENDERTARGET;
 position p;
 @@
@@ -2762,12 +3329,12 @@ position p;
 + ID2D1BitmapRenderTarget *
 
 @script:python depends on report@
-p << r204.p;
+p << r246.p;
 @@
 WARN(p[0], "ID2D1BitmapRenderTarget*", "LPD2D1BITMAPRENDERTARGET")
 
 
-@r205@
+@r247@
 typedef ID2D1Brush;
 typedef PD2D1BRUSH;
 position p;
@@ -2776,12 +3343,12 @@ position p;
 + ID2D1Brush *
 
 @script:python depends on report@
-p << r205.p;
+p << r247.p;
 @@
 WARN(p[0], "ID2D1Brush*", "PD2D1BRUSH")
 
 
-@r206@
+@r248@
 typedef LPD2D1BRUSH;
 position p;
 @@
@@ -2789,12 +3356,12 @@ position p;
 + ID2D1Brush *
 
 @script:python depends on report@
-p << r206.p;
+p << r248.p;
 @@
 WARN(p[0], "ID2D1Brush*", "LPD2D1BRUSH")
 
 
-@r207@
+@r249@
 typedef ID2D1DCRenderTarget;
 typedef PD2D1DCRENDERTARGET;
 position p;
@@ -2803,12 +3370,12 @@ position p;
 + ID2D1DCRenderTarget *
 
 @script:python depends on report@
-p << r207.p;
+p << r249.p;
 @@
 WARN(p[0], "ID2D1DCRenderTarget*", "PD2D1DCRENDERTARGET")
 
 
-@r208@
+@r250@
 typedef LPD2D1DCRENDERTARGET;
 position p;
 @@
@@ -2816,66 +3383,147 @@ position p;
 + ID2D1DCRenderTarget *
 
 @script:python depends on report@
-p << r208.p;
+p << r250.p;
 @@
 WARN(p[0], "ID2D1DCRenderTarget*", "LPD2D1DCRENDERTARGET")
 
 
-@r209@
-typedef ID2D1DrawingStateBlock;
-typedef PD2D1DRAWINGSTATEBLOCK;
+@r251@
+typedef ID2D1Device;
+typedef PD2D1DEVICE;
 position p;
 @@
-- PD2D1DRAWINGSTATEBLOCK@p
-+ ID2D1DrawingStateBlock *
+- PD2D1DEVICE@p
++ ID2D1Device *
 
 @script:python depends on report@
-p << r209.p;
+p << r251.p;
 @@
-WARN(p[0], "ID2D1DrawingStateBlock*", "PD2D1DRAWINGSTATEBLOCK")
+WARN(p[0], "ID2D1Device*", "PD2D1DEVICE")
 
 
-@r210@
-typedef LPD2D1DRAWINGSTATEBLOCK;
+@r252@
+typedef LPD2D1DEVICE;
 position p;
 @@
-- LPD2D1DRAWINGSTATEBLOCK@p
-+ ID2D1DrawingStateBlock *
+- LPD2D1DEVICE@p
++ ID2D1Device *
 
 @script:python depends on report@
-p << r210.p;
+p << r252.p;
 @@
-WARN(p[0], "ID2D1DrawingStateBlock*", "LPD2D1DRAWINGSTATEBLOCK")
+WARN(p[0], "ID2D1Device*", "LPD2D1DEVICE")
 
 
-@r211@
-typedef ID2D1Factory;
-typedef PD2D1FACTORY;
+@r253@
+typedef ID2D1DeviceContext;
+typedef PD2D1DEVICECONTEXT;
 position p;
 @@
-- PD2D1FACTORY@p
-+ ID2D1Factory *
+- PD2D1DEVICECONTEXT@p
++ ID2D1DeviceContext *
 
 @script:python depends on report@
-p << r211.p;
+p << r253.p;
 @@
-WARN(p[0], "ID2D1Factory*", "PD2D1FACTORY")
+WARN(p[0], "ID2D1DeviceContext*", "PD2D1DEVICECONTEXT")
 
 
-@r212@
-typedef LPD2D1FACTORY;
+@r254@
+typedef LPD2D1DEVICECONTEXT;
 position p;
 @@
-- LPD2D1FACTORY@p
-+ ID2D1Factory *
+- LPD2D1DEVICECONTEXT@p
++ ID2D1DeviceContext *
 
 @script:python depends on report@
-p << r212.p;
+p << r254.p;
 @@
-WARN(p[0], "ID2D1Factory*", "LPD2D1FACTORY")
+WARN(p[0], "ID2D1DeviceContext*", "LPD2D1DEVICECONTEXT")
 
 
-@r213@
+@r255@
+typedef ID2D1DrawingStateBlock1;
+typedef PD2D1DRAWINGSTATEBLOCK1;
+position p;
+@@
+- PD2D1DRAWINGSTATEBLOCK1@p
++ ID2D1DrawingStateBlock1 *
+
+@script:python depends on report@
+p << r255.p;
+@@
+WARN(p[0], "ID2D1DrawingStateBlock1*", "PD2D1DRAWINGSTATEBLOCK1")
+
+
+@r256@
+typedef LPD2D1DRAWINGSTATEBLOCK1;
+position p;
+@@
+- LPD2D1DRAWINGSTATEBLOCK1@p
++ ID2D1DrawingStateBlock1 *
+
+@script:python depends on report@
+p << r256.p;
+@@
+WARN(p[0], "ID2D1DrawingStateBlock1*", "LPD2D1DRAWINGSTATEBLOCK1")
+
+
+@r257@
+typedef ID2D1Effect;
+typedef PD2D1EFFECT;
+position p;
+@@
+- PD2D1EFFECT@p
++ ID2D1Effect *
+
+@script:python depends on report@
+p << r257.p;
+@@
+WARN(p[0], "ID2D1Effect*", "PD2D1EFFECT")
+
+
+@r258@
+typedef LPD2D1EFFECT;
+position p;
+@@
+- LPD2D1EFFECT@p
++ ID2D1Effect *
+
+@script:python depends on report@
+p << r258.p;
+@@
+WARN(p[0], "ID2D1Effect*", "LPD2D1EFFECT")
+
+
+@r259@
+typedef ID2D1Factory2;
+typedef PD2D1FACTORY2;
+position p;
+@@
+- PD2D1FACTORY2@p
++ ID2D1Factory2 *
+
+@script:python depends on report@
+p << r259.p;
+@@
+WARN(p[0], "ID2D1Factory2*", "PD2D1FACTORY2")
+
+
+@r260@
+typedef LPD2D1FACTORY2;
+position p;
+@@
+- LPD2D1FACTORY2@p
++ ID2D1Factory2 *
+
+@script:python depends on report@
+p << r260.p;
+@@
+WARN(p[0], "ID2D1Factory2*", "LPD2D1FACTORY2")
+
+
+@r261@
 typedef ID2D1GdiInteropRenderTarget;
 typedef PD2D1GDIINTEROPRENDERTARGET;
 position p;
@@ -2884,12 +3532,12 @@ position p;
 + ID2D1GdiInteropRenderTarget *
 
 @script:python depends on report@
-p << r213.p;
+p << r261.p;
 @@
 WARN(p[0], "ID2D1GdiInteropRenderTarget*", "PD2D1GDIINTEROPRENDERTARGET")
 
 
-@r214@
+@r262@
 typedef LPD2D1GDIINTEROPRENDERTARGET;
 position p;
 @@
@@ -2897,12 +3545,12 @@ position p;
 + ID2D1GdiInteropRenderTarget *
 
 @script:python depends on report@
-p << r214.p;
+p << r262.p;
 @@
 WARN(p[0], "ID2D1GdiInteropRenderTarget*", "LPD2D1GDIINTEROPRENDERTARGET")
 
 
-@r215@
+@r263@
 typedef ID2D1Geometry;
 typedef PD2D1GEOMETRY;
 position p;
@@ -2911,12 +3559,12 @@ position p;
 + ID2D1Geometry *
 
 @script:python depends on report@
-p << r215.p;
+p << r263.p;
 @@
 WARN(p[0], "ID2D1Geometry*", "PD2D1GEOMETRY")
 
 
-@r216@
+@r264@
 typedef LPD2D1GEOMETRY;
 position p;
 @@
@@ -2924,12 +3572,12 @@ position p;
 + ID2D1Geometry *
 
 @script:python depends on report@
-p << r216.p;
+p << r264.p;
 @@
 WARN(p[0], "ID2D1Geometry*", "LPD2D1GEOMETRY")
 
 
-@r217@
+@r265@
 typedef ID2D1GradientStopCollection;
 typedef PD2D1GRADIENTSTOPCOLLECTION;
 position p;
@@ -2938,12 +3586,12 @@ position p;
 + ID2D1GradientStopCollection *
 
 @script:python depends on report@
-p << r217.p;
+p << r265.p;
 @@
 WARN(p[0], "ID2D1GradientStopCollection*", "PD2D1GRADIENTSTOPCOLLECTION")
 
 
-@r218@
+@r266@
 typedef LPD2D1GRADIENTSTOPCOLLECTION;
 position p;
 @@
@@ -2951,12 +3599,12 @@ position p;
 + ID2D1GradientStopCollection *
 
 @script:python depends on report@
-p << r218.p;
+p << r266.p;
 @@
 WARN(p[0], "ID2D1GradientStopCollection*", "LPD2D1GRADIENTSTOPCOLLECTION")
 
 
-@r219@
+@r267@
 typedef ID2D1HwndRenderTarget;
 typedef PD2D1HWNDRENDERTARGET;
 position p;
@@ -2965,12 +3613,12 @@ position p;
 + ID2D1HwndRenderTarget *
 
 @script:python depends on report@
-p << r219.p;
+p << r267.p;
 @@
 WARN(p[0], "ID2D1HwndRenderTarget*", "PD2D1HWNDRENDERTARGET")
 
 
-@r220@
+@r268@
 typedef LPD2D1HWNDRENDERTARGET;
 position p;
 @@
@@ -2978,12 +3626,66 @@ position p;
 + ID2D1HwndRenderTarget *
 
 @script:python depends on report@
-p << r220.p;
+p << r268.p;
 @@
 WARN(p[0], "ID2D1HwndRenderTarget*", "LPD2D1HWNDRENDERTARGET")
 
 
-@r221@
+@r269@
+typedef ID2D1Image;
+typedef PD2D1IMAGE;
+position p;
+@@
+- PD2D1IMAGE@p
++ ID2D1Image *
+
+@script:python depends on report@
+p << r269.p;
+@@
+WARN(p[0], "ID2D1Image*", "PD2D1IMAGE")
+
+
+@r270@
+typedef LPD2D1IMAGE;
+position p;
+@@
+- LPD2D1IMAGE@p
++ ID2D1Image *
+
+@script:python depends on report@
+p << r270.p;
+@@
+WARN(p[0], "ID2D1Image*", "LPD2D1IMAGE")
+
+
+@r271@
+typedef ID2D1Layer;
+typedef PD2D1LAYER;
+position p;
+@@
+- PD2D1LAYER@p
++ ID2D1Layer *
+
+@script:python depends on report@
+p << r271.p;
+@@
+WARN(p[0], "ID2D1Layer*", "PD2D1LAYER")
+
+
+@r272@
+typedef LPD2D1LAYER;
+position p;
+@@
+- LPD2D1LAYER@p
++ ID2D1Layer *
+
+@script:python depends on report@
+p << r272.p;
+@@
+WARN(p[0], "ID2D1Layer*", "LPD2D1LAYER")
+
+
+@r273@
 typedef ID2D1Mesh;
 typedef PD2D1MESH;
 position p;
@@ -2992,12 +3694,12 @@ position p;
 + ID2D1Mesh *
 
 @script:python depends on report@
-p << r221.p;
+p << r273.p;
 @@
 WARN(p[0], "ID2D1Mesh*", "PD2D1MESH")
 
 
-@r222@
+@r274@
 typedef LPD2D1MESH;
 position p;
 @@
@@ -3005,39 +3707,39 @@ position p;
 + ID2D1Mesh *
 
 @script:python depends on report@
-p << r222.p;
+p << r274.p;
 @@
 WARN(p[0], "ID2D1Mesh*", "LPD2D1MESH")
 
 
-@r223@
-typedef ID2D1RenderTarget;
-typedef PD2D1RENDERTARGET;
+@r275@
+typedef ID2D1Multithread;
+typedef PD2D1MULTITHREAD;
 position p;
 @@
-- PD2D1RENDERTARGET@p
-+ ID2D1RenderTarget *
+- PD2D1MULTITHREAD@p
++ ID2D1Multithread *
 
 @script:python depends on report@
-p << r223.p;
+p << r275.p;
 @@
-WARN(p[0], "ID2D1RenderTarget*", "PD2D1RENDERTARGET")
+WARN(p[0], "ID2D1Multithread*", "PD2D1MULTITHREAD")
 
 
-@r224@
-typedef LPD2D1RENDERTARGET;
+@r276@
+typedef LPD2D1MULTITHREAD;
 position p;
 @@
-- LPD2D1RENDERTARGET@p
-+ ID2D1RenderTarget *
+- LPD2D1MULTITHREAD@p
++ ID2D1Multithread *
 
 @script:python depends on report@
-p << r224.p;
+p << r276.p;
 @@
-WARN(p[0], "ID2D1RenderTarget*", "LPD2D1RENDERTARGET")
+WARN(p[0], "ID2D1Multithread*", "LPD2D1MULTITHREAD")
 
 
-@r225@
+@r277@
 typedef ID2D1SimplifiedGeometrySink;
 typedef PD2D1SIMPLIFIEDGEOMETRYSINK;
 position p;
@@ -3046,12 +3748,12 @@ position p;
 + ID2D1SimplifiedGeometrySink *
 
 @script:python depends on report@
-p << r225.p;
+p << r277.p;
 @@
 WARN(p[0], "ID2D1SimplifiedGeometrySink*", "PD2D1SIMPLIFIEDGEOMETRYSINK")
 
 
-@r226@
+@r278@
 typedef LPD2D1SIMPLIFIEDGEOMETRYSINK;
 position p;
 @@
@@ -3059,12 +3761,12 @@ position p;
 + ID2D1SimplifiedGeometrySink *
 
 @script:python depends on report@
-p << r226.p;
+p << r278.p;
 @@
 WARN(p[0], "ID2D1SimplifiedGeometrySink*", "LPD2D1SIMPLIFIEDGEOMETRYSINK")
 
 
-@r227@
+@r279@
 typedef ID2D1StrokeStyle;
 typedef PD2D1STROKESTYLE;
 position p;
@@ -3073,12 +3775,12 @@ position p;
 + ID2D1StrokeStyle *
 
 @script:python depends on report@
-p << r227.p;
+p << r279.p;
 @@
 WARN(p[0], "ID2D1StrokeStyle*", "PD2D1STROKESTYLE")
 
 
-@r228@
+@r280@
 typedef LPD2D1STROKESTYLE;
 position p;
 @@
@@ -3086,12 +3788,12 @@ position p;
 + ID2D1StrokeStyle *
 
 @script:python depends on report@
-p << r228.p;
+p << r280.p;
 @@
 WARN(p[0], "ID2D1StrokeStyle*", "LPD2D1STROKESTYLE")
 
 
-@r229@
+@r281@
 typedef ID3D10BlendState1;
 typedef PD3D10BLENDSTATE1;
 position p;
@@ -3100,12 +3802,12 @@ position p;
 + ID3D10BlendState1 *
 
 @script:python depends on report@
-p << r229.p;
+p << r281.p;
 @@
 WARN(p[0], "ID3D10BlendState1*", "PD3D10BLENDSTATE1")
 
 
-@r230@
+@r282@
 typedef LPD3D10BLENDSTATE1;
 position p;
 @@
@@ -3113,12 +3815,12 @@ position p;
 + ID3D10BlendState1 *
 
 @script:python depends on report@
-p << r230.p;
+p << r282.p;
 @@
 WARN(p[0], "ID3D10BlendState1*", "LPD3D10BLENDSTATE1")
 
 
-@r231@
+@r283@
 typedef ID3D10Buffer;
 typedef PD3D10BUFFER;
 position p;
@@ -3127,12 +3829,12 @@ position p;
 + ID3D10Buffer *
 
 @script:python depends on report@
-p << r231.p;
+p << r283.p;
 @@
 WARN(p[0], "ID3D10Buffer*", "PD3D10BUFFER")
 
 
-@r232@
+@r284@
 typedef LPD3D10BUFFER;
 position p;
 @@
@@ -3140,12 +3842,12 @@ position p;
 + ID3D10Buffer *
 
 @script:python depends on report@
-p << r232.p;
+p << r284.p;
 @@
 WARN(p[0], "ID3D10Buffer*", "LPD3D10BUFFER")
 
 
-@r233@
+@r285@
 typedef ID3D10DepthStencilState;
 typedef PD3D10DEPTHSTENCILSTATE;
 position p;
@@ -3154,12 +3856,12 @@ position p;
 + ID3D10DepthStencilState *
 
 @script:python depends on report@
-p << r233.p;
+p << r285.p;
 @@
 WARN(p[0], "ID3D10DepthStencilState*", "PD3D10DEPTHSTENCILSTATE")
 
 
-@r234@
+@r286@
 typedef LPD3D10DEPTHSTENCILSTATE;
 position p;
 @@
@@ -3167,12 +3869,12 @@ position p;
 + ID3D10DepthStencilState *
 
 @script:python depends on report@
-p << r234.p;
+p << r286.p;
 @@
 WARN(p[0], "ID3D10DepthStencilState*", "LPD3D10DEPTHSTENCILSTATE")
 
 
-@r235@
+@r287@
 typedef ID3D10DepthStencilView;
 typedef PD3D10DEPTHSTENCILVIEW;
 position p;
@@ -3181,12 +3883,12 @@ position p;
 + ID3D10DepthStencilView *
 
 @script:python depends on report@
-p << r235.p;
+p << r287.p;
 @@
 WARN(p[0], "ID3D10DepthStencilView*", "PD3D10DEPTHSTENCILVIEW")
 
 
-@r236@
+@r288@
 typedef LPD3D10DEPTHSTENCILVIEW;
 position p;
 @@
@@ -3194,12 +3896,12 @@ position p;
 + ID3D10DepthStencilView *
 
 @script:python depends on report@
-p << r236.p;
+p << r288.p;
 @@
 WARN(p[0], "ID3D10DepthStencilView*", "LPD3D10DEPTHSTENCILVIEW")
 
 
-@r237@
+@r289@
 typedef ID3D10Device1;
 typedef PD3D10DEVICE1;
 position p;
@@ -3208,12 +3910,12 @@ position p;
 + ID3D10Device1 *
 
 @script:python depends on report@
-p << r237.p;
+p << r289.p;
 @@
 WARN(p[0], "ID3D10Device1*", "PD3D10DEVICE1")
 
 
-@r238@
+@r290@
 typedef LPD3D10DEVICE1;
 position p;
 @@
@@ -3221,12 +3923,12 @@ position p;
 + ID3D10Device1 *
 
 @script:python depends on report@
-p << r238.p;
+p << r290.p;
 @@
 WARN(p[0], "ID3D10Device1*", "LPD3D10DEVICE1")
 
 
-@r239@
+@r291@
 typedef ID3D10Effect;
 typedef PD3D10EFFECT;
 position p;
@@ -3235,12 +3937,12 @@ position p;
 + ID3D10Effect *
 
 @script:python depends on report@
-p << r239.p;
+p << r291.p;
 @@
 WARN(p[0], "ID3D10Effect*", "PD3D10EFFECT")
 
 
-@r240@
+@r292@
 typedef LPD3D10EFFECT;
 position p;
 @@
@@ -3248,12 +3950,12 @@ position p;
 + ID3D10Effect *
 
 @script:python depends on report@
-p << r240.p;
+p << r292.p;
 @@
 WARN(p[0], "ID3D10Effect*", "LPD3D10EFFECT")
 
 
-@r241@
+@r293@
 typedef ID3D10EffectPass;
 typedef PD3D10EFFECTPASS;
 position p;
@@ -3262,12 +3964,12 @@ position p;
 + ID3D10EffectPass *
 
 @script:python depends on report@
-p << r241.p;
+p << r293.p;
 @@
 WARN(p[0], "ID3D10EffectPass*", "PD3D10EFFECTPASS")
 
 
-@r242@
+@r294@
 typedef LPD3D10EFFECTPASS;
 position p;
 @@
@@ -3275,12 +3977,12 @@ position p;
 + ID3D10EffectPass *
 
 @script:python depends on report@
-p << r242.p;
+p << r294.p;
 @@
 WARN(p[0], "ID3D10EffectPass*", "LPD3D10EFFECTPASS")
 
 
-@r243@
+@r295@
 typedef ID3D10EffectTechnique;
 typedef PD3D10EFFECTTECHNIQUE;
 position p;
@@ -3289,12 +3991,12 @@ position p;
 + ID3D10EffectTechnique *
 
 @script:python depends on report@
-p << r243.p;
+p << r295.p;
 @@
 WARN(p[0], "ID3D10EffectTechnique*", "PD3D10EFFECTTECHNIQUE")
 
 
-@r244@
+@r296@
 typedef LPD3D10EFFECTTECHNIQUE;
 position p;
 @@
@@ -3302,12 +4004,12 @@ position p;
 + ID3D10EffectTechnique *
 
 @script:python depends on report@
-p << r244.p;
+p << r296.p;
 @@
 WARN(p[0], "ID3D10EffectTechnique*", "LPD3D10EFFECTTECHNIQUE")
 
 
-@r245@
+@r297@
 typedef ID3D10EffectType;
 typedef PD3D10EFFECTTYPE;
 position p;
@@ -3316,12 +4018,12 @@ position p;
 + ID3D10EffectType *
 
 @script:python depends on report@
-p << r245.p;
+p << r297.p;
 @@
 WARN(p[0], "ID3D10EffectType*", "PD3D10EFFECTTYPE")
 
 
-@r246@
+@r298@
 typedef LPD3D10EFFECTTYPE;
 position p;
 @@
@@ -3329,12 +4031,12 @@ position p;
 + ID3D10EffectType *
 
 @script:python depends on report@
-p << r246.p;
+p << r298.p;
 @@
 WARN(p[0], "ID3D10EffectType*", "LPD3D10EFFECTTYPE")
 
 
-@r247@
+@r299@
 typedef ID3D10EffectVariable;
 typedef PD3D10EFFECTVARIABLE;
 position p;
@@ -3343,12 +4045,12 @@ position p;
 + ID3D10EffectVariable *
 
 @script:python depends on report@
-p << r247.p;
+p << r299.p;
 @@
 WARN(p[0], "ID3D10EffectVariable*", "PD3D10EFFECTVARIABLE")
 
 
-@r248@
+@r300@
 typedef LPD3D10EFFECTVARIABLE;
 position p;
 @@
@@ -3356,12 +4058,12 @@ position p;
 + ID3D10EffectVariable *
 
 @script:python depends on report@
-p << r248.p;
+p << r300.p;
 @@
 WARN(p[0], "ID3D10EffectVariable*", "LPD3D10EFFECTVARIABLE")
 
 
-@r249@
+@r301@
 typedef ID3D10GeometryShader;
 typedef PD3D10GEOMETRYSHADER;
 position p;
@@ -3370,12 +4072,12 @@ position p;
 + ID3D10GeometryShader *
 
 @script:python depends on report@
-p << r249.p;
+p << r301.p;
 @@
 WARN(p[0], "ID3D10GeometryShader*", "PD3D10GEOMETRYSHADER")
 
 
-@r250@
+@r302@
 typedef LPD3D10GEOMETRYSHADER;
 position p;
 @@
@@ -3383,12 +4085,12 @@ position p;
 + ID3D10GeometryShader *
 
 @script:python depends on report@
-p << r250.p;
+p << r302.p;
 @@
 WARN(p[0], "ID3D10GeometryShader*", "LPD3D10GEOMETRYSHADER")
 
 
-@r251@
+@r303@
 typedef ID3D10InputLayout;
 typedef PD3D10INPUTLAYOUT;
 position p;
@@ -3397,12 +4099,12 @@ position p;
 + ID3D10InputLayout *
 
 @script:python depends on report@
-p << r251.p;
+p << r303.p;
 @@
 WARN(p[0], "ID3D10InputLayout*", "PD3D10INPUTLAYOUT")
 
 
-@r252@
+@r304@
 typedef LPD3D10INPUTLAYOUT;
 position p;
 @@
@@ -3410,12 +4112,12 @@ position p;
 + ID3D10InputLayout *
 
 @script:python depends on report@
-p << r252.p;
+p << r304.p;
 @@
 WARN(p[0], "ID3D10InputLayout*", "LPD3D10INPUTLAYOUT")
 
 
-@r253@
+@r305@
 typedef ID3D10Multithread;
 typedef PD3D10MULTITHREAD;
 position p;
@@ -3424,12 +4126,12 @@ position p;
 + ID3D10Multithread *
 
 @script:python depends on report@
-p << r253.p;
+p << r305.p;
 @@
 WARN(p[0], "ID3D10Multithread*", "PD3D10MULTITHREAD")
 
 
-@r254@
+@r306@
 typedef LPD3D10MULTITHREAD;
 position p;
 @@
@@ -3437,12 +4139,12 @@ position p;
 + ID3D10Multithread *
 
 @script:python depends on report@
-p << r254.p;
+p << r306.p;
 @@
 WARN(p[0], "ID3D10Multithread*", "LPD3D10MULTITHREAD")
 
 
-@r255@
+@r307@
 typedef ID3D10PixelShader;
 typedef PD3D10PIXELSHADER;
 position p;
@@ -3451,12 +4153,12 @@ position p;
 + ID3D10PixelShader *
 
 @script:python depends on report@
-p << r255.p;
+p << r307.p;
 @@
 WARN(p[0], "ID3D10PixelShader*", "PD3D10PIXELSHADER")
 
 
-@r256@
+@r308@
 typedef LPD3D10PIXELSHADER;
 position p;
 @@
@@ -3464,12 +4166,12 @@ position p;
 + ID3D10PixelShader *
 
 @script:python depends on report@
-p << r256.p;
+p << r308.p;
 @@
 WARN(p[0], "ID3D10PixelShader*", "LPD3D10PIXELSHADER")
 
 
-@r257@
+@r309@
 typedef ID3D10Query;
 typedef PD3D10QUERY;
 position p;
@@ -3478,12 +4180,12 @@ position p;
 + ID3D10Query *
 
 @script:python depends on report@
-p << r257.p;
+p << r309.p;
 @@
 WARN(p[0], "ID3D10Query*", "PD3D10QUERY")
 
 
-@r258@
+@r310@
 typedef LPD3D10QUERY;
 position p;
 @@
@@ -3491,12 +4193,12 @@ position p;
 + ID3D10Query *
 
 @script:python depends on report@
-p << r258.p;
+p << r310.p;
 @@
 WARN(p[0], "ID3D10Query*", "LPD3D10QUERY")
 
 
-@r259@
+@r311@
 typedef ID3D10RasterizerState;
 typedef PD3D10RASTERIZERSTATE;
 position p;
@@ -3505,12 +4207,12 @@ position p;
 + ID3D10RasterizerState *
 
 @script:python depends on report@
-p << r259.p;
+p << r311.p;
 @@
 WARN(p[0], "ID3D10RasterizerState*", "PD3D10RASTERIZERSTATE")
 
 
-@r260@
+@r312@
 typedef LPD3D10RASTERIZERSTATE;
 position p;
 @@
@@ -3518,12 +4220,12 @@ position p;
 + ID3D10RasterizerState *
 
 @script:python depends on report@
-p << r260.p;
+p << r312.p;
 @@
 WARN(p[0], "ID3D10RasterizerState*", "LPD3D10RASTERIZERSTATE")
 
 
-@r261@
+@r313@
 typedef ID3D10RenderTargetView;
 typedef PD3D10RENDERTARGETVIEW;
 position p;
@@ -3532,12 +4234,12 @@ position p;
 + ID3D10RenderTargetView *
 
 @script:python depends on report@
-p << r261.p;
+p << r313.p;
 @@
 WARN(p[0], "ID3D10RenderTargetView*", "PD3D10RENDERTARGETVIEW")
 
 
-@r262@
+@r314@
 typedef LPD3D10RENDERTARGETVIEW;
 position p;
 @@
@@ -3545,12 +4247,12 @@ position p;
 + ID3D10RenderTargetView *
 
 @script:python depends on report@
-p << r262.p;
+p << r314.p;
 @@
 WARN(p[0], "ID3D10RenderTargetView*", "LPD3D10RENDERTARGETVIEW")
 
 
-@r263@
+@r315@
 typedef ID3D10SamplerState;
 typedef PD3D10SAMPLERSTATE;
 position p;
@@ -3559,12 +4261,12 @@ position p;
 + ID3D10SamplerState *
 
 @script:python depends on report@
-p << r263.p;
+p << r315.p;
 @@
 WARN(p[0], "ID3D10SamplerState*", "PD3D10SAMPLERSTATE")
 
 
-@r264@
+@r316@
 typedef LPD3D10SAMPLERSTATE;
 position p;
 @@
@@ -3572,12 +4274,12 @@ position p;
 + ID3D10SamplerState *
 
 @script:python depends on report@
-p << r264.p;
+p << r316.p;
 @@
 WARN(p[0], "ID3D10SamplerState*", "LPD3D10SAMPLERSTATE")
 
 
-@r265@
+@r317@
 typedef ID3D10ShaderReflection;
 typedef PD3D10SHADERREFLECTION;
 position p;
@@ -3586,12 +4288,12 @@ position p;
 + ID3D10ShaderReflection *
 
 @script:python depends on report@
-p << r265.p;
+p << r317.p;
 @@
 WARN(p[0], "ID3D10ShaderReflection*", "PD3D10SHADERREFLECTION")
 
 
-@r266@
+@r318@
 typedef LPD3D10SHADERREFLECTION;
 position p;
 @@
@@ -3599,12 +4301,93 @@ position p;
 + ID3D10ShaderReflection *
 
 @script:python depends on report@
-p << r266.p;
+p << r318.p;
 @@
 WARN(p[0], "ID3D10ShaderReflection*", "LPD3D10SHADERREFLECTION")
 
 
-@r267@
+@r319@
+typedef ID3D10ShaderReflectionConstantBuffer;
+typedef PD3D10SHADERREFLECTIONCONSTANTBUFFER;
+position p;
+@@
+- PD3D10SHADERREFLECTIONCONSTANTBUFFER@p
++ ID3D10ShaderReflectionConstantBuffer *
+
+@script:python depends on report@
+p << r319.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionConstantBuffer*", "PD3D10SHADERREFLECTIONCONSTANTBUFFER")
+
+
+@r320@
+typedef LPD3D10SHADERREFLECTIONCONSTANTBUFFER;
+position p;
+@@
+- LPD3D10SHADERREFLECTIONCONSTANTBUFFER@p
++ ID3D10ShaderReflectionConstantBuffer *
+
+@script:python depends on report@
+p << r320.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionConstantBuffer*", "LPD3D10SHADERREFLECTIONCONSTANTBUFFER")
+
+
+@r321@
+typedef ID3D10ShaderReflectionType;
+typedef PD3D10SHADERREFLECTIONTYPE;
+position p;
+@@
+- PD3D10SHADERREFLECTIONTYPE@p
++ ID3D10ShaderReflectionType *
+
+@script:python depends on report@
+p << r321.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionType*", "PD3D10SHADERREFLECTIONTYPE")
+
+
+@r322@
+typedef LPD3D10SHADERREFLECTIONTYPE;
+position p;
+@@
+- LPD3D10SHADERREFLECTIONTYPE@p
++ ID3D10ShaderReflectionType *
+
+@script:python depends on report@
+p << r322.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionType*", "LPD3D10SHADERREFLECTIONTYPE")
+
+
+@r323@
+typedef ID3D10ShaderReflectionVariable;
+typedef PD3D10SHADERREFLECTIONVARIABLE;
+position p;
+@@
+- PD3D10SHADERREFLECTIONVARIABLE@p
++ ID3D10ShaderReflectionVariable *
+
+@script:python depends on report@
+p << r323.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionVariable*", "PD3D10SHADERREFLECTIONVARIABLE")
+
+
+@r324@
+typedef LPD3D10SHADERREFLECTIONVARIABLE;
+position p;
+@@
+- LPD3D10SHADERREFLECTIONVARIABLE@p
++ ID3D10ShaderReflectionVariable *
+
+@script:python depends on report@
+p << r324.p;
+@@
+WARN(p[0], "ID3D10ShaderReflectionVariable*", "LPD3D10SHADERREFLECTIONVARIABLE")
+
+
+@r325@
 typedef ID3D10ShaderResourceView1;
 typedef PD3D10SHADERRESOURCEVIEW1;
 position p;
@@ -3613,12 +4396,12 @@ position p;
 + ID3D10ShaderResourceView1 *
 
 @script:python depends on report@
-p << r267.p;
+p << r325.p;
 @@
 WARN(p[0], "ID3D10ShaderResourceView1*", "PD3D10SHADERRESOURCEVIEW1")
 
 
-@r268@
+@r326@
 typedef LPD3D10SHADERRESOURCEVIEW1;
 position p;
 @@
@@ -3626,12 +4409,12 @@ position p;
 + ID3D10ShaderResourceView1 *
 
 @script:python depends on report@
-p << r268.p;
+p << r326.p;
 @@
 WARN(p[0], "ID3D10ShaderResourceView1*", "LPD3D10SHADERRESOURCEVIEW1")
 
 
-@r269@
+@r327@
 typedef ID3D10StateBlock;
 typedef PD3D10STATEBLOCK;
 position p;
@@ -3640,12 +4423,12 @@ position p;
 + ID3D10StateBlock *
 
 @script:python depends on report@
-p << r269.p;
+p << r327.p;
 @@
 WARN(p[0], "ID3D10StateBlock*", "PD3D10STATEBLOCK")
 
 
-@r270@
+@r328@
 typedef LPD3D10STATEBLOCK;
 position p;
 @@
@@ -3653,12 +4436,39 @@ position p;
 + ID3D10StateBlock *
 
 @script:python depends on report@
-p << r270.p;
+p << r328.p;
 @@
 WARN(p[0], "ID3D10StateBlock*", "LPD3D10STATEBLOCK")
 
 
-@r271@
+@r329@
+typedef ID3D10Texture1D;
+typedef PD3D10TEXTURE1D;
+position p;
+@@
+- PD3D10TEXTURE1D@p
++ ID3D10Texture1D *
+
+@script:python depends on report@
+p << r329.p;
+@@
+WARN(p[0], "ID3D10Texture1D*", "PD3D10TEXTURE1D")
+
+
+@r330@
+typedef LPD3D10TEXTURE1D;
+position p;
+@@
+- LPD3D10TEXTURE1D@p
++ ID3D10Texture1D *
+
+@script:python depends on report@
+p << r330.p;
+@@
+WARN(p[0], "ID3D10Texture1D*", "LPD3D10TEXTURE1D")
+
+
+@r331@
 typedef ID3D10Texture2D;
 typedef PD3D10TEXTURE2D;
 position p;
@@ -3667,12 +4477,12 @@ position p;
 + ID3D10Texture2D *
 
 @script:python depends on report@
-p << r271.p;
+p << r331.p;
 @@
 WARN(p[0], "ID3D10Texture2D*", "PD3D10TEXTURE2D")
 
 
-@r272@
+@r332@
 typedef LPD3D10TEXTURE2D;
 position p;
 @@
@@ -3680,12 +4490,12 @@ position p;
 + ID3D10Texture2D *
 
 @script:python depends on report@
-p << r272.p;
+p << r332.p;
 @@
 WARN(p[0], "ID3D10Texture2D*", "LPD3D10TEXTURE2D")
 
 
-@r273@
+@r333@
 typedef ID3D10Texture3D;
 typedef PD3D10TEXTURE3D;
 position p;
@@ -3694,12 +4504,12 @@ position p;
 + ID3D10Texture3D *
 
 @script:python depends on report@
-p << r273.p;
+p << r333.p;
 @@
 WARN(p[0], "ID3D10Texture3D*", "PD3D10TEXTURE3D")
 
 
-@r274@
+@r334@
 typedef LPD3D10TEXTURE3D;
 position p;
 @@
@@ -3707,12 +4517,12 @@ position p;
 + ID3D10Texture3D *
 
 @script:python depends on report@
-p << r274.p;
+p << r334.p;
 @@
 WARN(p[0], "ID3D10Texture3D*", "LPD3D10TEXTURE3D")
 
 
-@r275@
+@r335@
 typedef ID3D10VertexShader;
 typedef PD3D10VERTEXSHADER;
 position p;
@@ -3721,12 +4531,12 @@ position p;
 + ID3D10VertexShader *
 
 @script:python depends on report@
-p << r275.p;
+p << r335.p;
 @@
 WARN(p[0], "ID3D10VertexShader*", "PD3D10VERTEXSHADER")
 
 
-@r276@
+@r336@
 typedef LPD3D10VERTEXSHADER;
 position p;
 @@
@@ -3734,12 +4544,12 @@ position p;
 + ID3D10VertexShader *
 
 @script:python depends on report@
-p << r276.p;
+p << r336.p;
 @@
 WARN(p[0], "ID3D10VertexShader*", "LPD3D10VERTEXSHADER")
 
 
-@r277@
+@r337@
 typedef ID3D11BlendState;
 typedef PD3D11BLENDSTATE;
 position p;
@@ -3748,12 +4558,12 @@ position p;
 + ID3D11BlendState *
 
 @script:python depends on report@
-p << r277.p;
+p << r337.p;
 @@
 WARN(p[0], "ID3D11BlendState*", "PD3D11BLENDSTATE")
 
 
-@r278@
+@r338@
 typedef LPD3D11BLENDSTATE;
 position p;
 @@
@@ -3761,12 +4571,12 @@ position p;
 + ID3D11BlendState *
 
 @script:python depends on report@
-p << r278.p;
+p << r338.p;
 @@
 WARN(p[0], "ID3D11BlendState*", "LPD3D11BLENDSTATE")
 
 
-@r279@
+@r339@
 typedef ID3D11Buffer;
 typedef PD3D11BUFFER;
 position p;
@@ -3775,12 +4585,12 @@ position p;
 + ID3D11Buffer *
 
 @script:python depends on report@
-p << r279.p;
+p << r339.p;
 @@
 WARN(p[0], "ID3D11Buffer*", "PD3D11BUFFER")
 
 
-@r280@
+@r340@
 typedef LPD3D11BUFFER;
 position p;
 @@
@@ -3788,12 +4598,12 @@ position p;
 + ID3D11Buffer *
 
 @script:python depends on report@
-p << r280.p;
+p << r340.p;
 @@
 WARN(p[0], "ID3D11Buffer*", "LPD3D11BUFFER")
 
 
-@r281@
+@r341@
 typedef ID3D11ClassLinkage;
 typedef PD3D11CLASSLINKAGE;
 position p;
@@ -3802,12 +4612,12 @@ position p;
 + ID3D11ClassLinkage *
 
 @script:python depends on report@
-p << r281.p;
+p << r341.p;
 @@
 WARN(p[0], "ID3D11ClassLinkage*", "PD3D11CLASSLINKAGE")
 
 
-@r282@
+@r342@
 typedef LPD3D11CLASSLINKAGE;
 position p;
 @@
@@ -3815,12 +4625,39 @@ position p;
 + ID3D11ClassLinkage *
 
 @script:python depends on report@
-p << r282.p;
+p << r342.p;
 @@
 WARN(p[0], "ID3D11ClassLinkage*", "LPD3D11CLASSLINKAGE")
 
 
-@r283@
+@r343@
+typedef ID3D11CommandList;
+typedef PD3D11COMMANDLIST;
+position p;
+@@
+- PD3D11COMMANDLIST@p
++ ID3D11CommandList *
+
+@script:python depends on report@
+p << r343.p;
+@@
+WARN(p[0], "ID3D11CommandList*", "PD3D11COMMANDLIST")
+
+
+@r344@
+typedef LPD3D11COMMANDLIST;
+position p;
+@@
+- LPD3D11COMMANDLIST@p
++ ID3D11CommandList *
+
+@script:python depends on report@
+p << r344.p;
+@@
+WARN(p[0], "ID3D11CommandList*", "LPD3D11COMMANDLIST")
+
+
+@r345@
 typedef ID3D11ComputeShader;
 typedef PD3D11COMPUTESHADER;
 position p;
@@ -3829,12 +4666,12 @@ position p;
 + ID3D11ComputeShader *
 
 @script:python depends on report@
-p << r283.p;
+p << r345.p;
 @@
 WARN(p[0], "ID3D11ComputeShader*", "PD3D11COMPUTESHADER")
 
 
-@r284@
+@r346@
 typedef LPD3D11COMPUTESHADER;
 position p;
 @@
@@ -3842,12 +4679,12 @@ position p;
 + ID3D11ComputeShader *
 
 @script:python depends on report@
-p << r284.p;
+p << r346.p;
 @@
 WARN(p[0], "ID3D11ComputeShader*", "LPD3D11COMPUTESHADER")
 
 
-@r285@
+@r347@
 typedef ID3D11DepthStencilState;
 typedef PD3D11DEPTHSTENCILSTATE;
 position p;
@@ -3856,12 +4693,12 @@ position p;
 + ID3D11DepthStencilState *
 
 @script:python depends on report@
-p << r285.p;
+p << r347.p;
 @@
 WARN(p[0], "ID3D11DepthStencilState*", "PD3D11DEPTHSTENCILSTATE")
 
 
-@r286@
+@r348@
 typedef LPD3D11DEPTHSTENCILSTATE;
 position p;
 @@
@@ -3869,12 +4706,12 @@ position p;
 + ID3D11DepthStencilState *
 
 @script:python depends on report@
-p << r286.p;
+p << r348.p;
 @@
 WARN(p[0], "ID3D11DepthStencilState*", "LPD3D11DEPTHSTENCILSTATE")
 
 
-@r287@
+@r349@
 typedef ID3D11DepthStencilView;
 typedef PD3D11DEPTHSTENCILVIEW;
 position p;
@@ -3883,12 +4720,12 @@ position p;
 + ID3D11DepthStencilView *
 
 @script:python depends on report@
-p << r287.p;
+p << r349.p;
 @@
 WARN(p[0], "ID3D11DepthStencilView*", "PD3D11DEPTHSTENCILVIEW")
 
 
-@r288@
+@r350@
 typedef LPD3D11DEPTHSTENCILVIEW;
 position p;
 @@
@@ -3896,66 +4733,66 @@ position p;
 + ID3D11DepthStencilView *
 
 @script:python depends on report@
-p << r288.p;
+p << r350.p;
 @@
 WARN(p[0], "ID3D11DepthStencilView*", "LPD3D11DEPTHSTENCILVIEW")
 
 
-@r289@
-typedef ID3D11Device;
-typedef PD3D11DEVICE;
+@r351@
+typedef ID3D11Device2;
+typedef PD3D11DEVICE2;
 position p;
 @@
-- PD3D11DEVICE@p
-+ ID3D11Device *
+- PD3D11DEVICE2@p
++ ID3D11Device2 *
 
 @script:python depends on report@
-p << r289.p;
+p << r351.p;
 @@
-WARN(p[0], "ID3D11Device*", "PD3D11DEVICE")
+WARN(p[0], "ID3D11Device2*", "PD3D11DEVICE2")
 
 
-@r290@
-typedef LPD3D11DEVICE;
+@r352@
+typedef LPD3D11DEVICE2;
 position p;
 @@
-- LPD3D11DEVICE@p
-+ ID3D11Device *
+- LPD3D11DEVICE2@p
++ ID3D11Device2 *
 
 @script:python depends on report@
-p << r290.p;
+p << r352.p;
 @@
-WARN(p[0], "ID3D11Device*", "LPD3D11DEVICE")
+WARN(p[0], "ID3D11Device2*", "LPD3D11DEVICE2")
 
 
-@r291@
-typedef ID3D11DeviceContext;
-typedef PD3D11DEVICECONTEXT;
+@r353@
+typedef ID3D11DeviceContext1;
+typedef PD3D11DEVICECONTEXT1;
 position p;
 @@
-- PD3D11DEVICECONTEXT@p
-+ ID3D11DeviceContext *
+- PD3D11DEVICECONTEXT1@p
++ ID3D11DeviceContext1 *
 
 @script:python depends on report@
-p << r291.p;
+p << r353.p;
 @@
-WARN(p[0], "ID3D11DeviceContext*", "PD3D11DEVICECONTEXT")
+WARN(p[0], "ID3D11DeviceContext1*", "PD3D11DEVICECONTEXT1")
 
 
-@r292@
-typedef LPD3D11DEVICECONTEXT;
+@r354@
+typedef LPD3D11DEVICECONTEXT1;
 position p;
 @@
-- LPD3D11DEVICECONTEXT@p
-+ ID3D11DeviceContext *
+- LPD3D11DEVICECONTEXT1@p
++ ID3D11DeviceContext1 *
 
 @script:python depends on report@
-p << r292.p;
+p << r354.p;
 @@
-WARN(p[0], "ID3D11DeviceContext*", "LPD3D11DEVICECONTEXT")
+WARN(p[0], "ID3D11DeviceContext1*", "LPD3D11DEVICECONTEXT1")
 
 
-@r293@
+@r355@
 typedef ID3D11DomainShader;
 typedef PD3D11DOMAINSHADER;
 position p;
@@ -3964,12 +4801,12 @@ position p;
 + ID3D11DomainShader *
 
 @script:python depends on report@
-p << r293.p;
+p << r355.p;
 @@
 WARN(p[0], "ID3D11DomainShader*", "PD3D11DOMAINSHADER")
 
 
-@r294@
+@r356@
 typedef LPD3D11DOMAINSHADER;
 position p;
 @@
@@ -3977,12 +4814,12 @@ position p;
 + ID3D11DomainShader *
 
 @script:python depends on report@
-p << r294.p;
+p << r356.p;
 @@
 WARN(p[0], "ID3D11DomainShader*", "LPD3D11DOMAINSHADER")
 
 
-@r295@
+@r357@
 typedef ID3D11GeometryShader;
 typedef PD3D11GEOMETRYSHADER;
 position p;
@@ -3991,12 +4828,12 @@ position p;
 + ID3D11GeometryShader *
 
 @script:python depends on report@
-p << r295.p;
+p << r357.p;
 @@
 WARN(p[0], "ID3D11GeometryShader*", "PD3D11GEOMETRYSHADER")
 
 
-@r296@
+@r358@
 typedef LPD3D11GEOMETRYSHADER;
 position p;
 @@
@@ -4004,12 +4841,12 @@ position p;
 + ID3D11GeometryShader *
 
 @script:python depends on report@
-p << r296.p;
+p << r358.p;
 @@
 WARN(p[0], "ID3D11GeometryShader*", "LPD3D11GEOMETRYSHADER")
 
 
-@r297@
+@r359@
 typedef ID3D11HullShader;
 typedef PD3D11HULLSHADER;
 position p;
@@ -4018,12 +4855,12 @@ position p;
 + ID3D11HullShader *
 
 @script:python depends on report@
-p << r297.p;
+p << r359.p;
 @@
 WARN(p[0], "ID3D11HullShader*", "PD3D11HULLSHADER")
 
 
-@r298@
+@r360@
 typedef LPD3D11HULLSHADER;
 position p;
 @@
@@ -4031,12 +4868,12 @@ position p;
 + ID3D11HullShader *
 
 @script:python depends on report@
-p << r298.p;
+p << r360.p;
 @@
 WARN(p[0], "ID3D11HullShader*", "LPD3D11HULLSHADER")
 
 
-@r299@
+@r361@
 typedef ID3D11InputLayout;
 typedef PD3D11INPUTLAYOUT;
 position p;
@@ -4045,12 +4882,12 @@ position p;
 + ID3D11InputLayout *
 
 @script:python depends on report@
-p << r299.p;
+p << r361.p;
 @@
 WARN(p[0], "ID3D11InputLayout*", "PD3D11INPUTLAYOUT")
 
 
-@r300@
+@r362@
 typedef LPD3D11INPUTLAYOUT;
 position p;
 @@
@@ -4058,12 +4895,39 @@ position p;
 + ID3D11InputLayout *
 
 @script:python depends on report@
-p << r300.p;
+p << r362.p;
 @@
 WARN(p[0], "ID3D11InputLayout*", "LPD3D11INPUTLAYOUT")
 
 
-@r301@
+@r363@
+typedef ID3D11Multithread;
+typedef PD3D11MULTITHREAD;
+position p;
+@@
+- PD3D11MULTITHREAD@p
++ ID3D11Multithread *
+
+@script:python depends on report@
+p << r363.p;
+@@
+WARN(p[0], "ID3D11Multithread*", "PD3D11MULTITHREAD")
+
+
+@r364@
+typedef LPD3D11MULTITHREAD;
+position p;
+@@
+- LPD3D11MULTITHREAD@p
++ ID3D11Multithread *
+
+@script:python depends on report@
+p << r364.p;
+@@
+WARN(p[0], "ID3D11Multithread*", "LPD3D11MULTITHREAD")
+
+
+@r365@
 typedef ID3D11PixelShader;
 typedef PD3D11PIXELSHADER;
 position p;
@@ -4072,12 +4936,12 @@ position p;
 + ID3D11PixelShader *
 
 @script:python depends on report@
-p << r301.p;
+p << r365.p;
 @@
 WARN(p[0], "ID3D11PixelShader*", "PD3D11PIXELSHADER")
 
 
-@r302@
+@r366@
 typedef LPD3D11PIXELSHADER;
 position p;
 @@
@@ -4085,12 +4949,12 @@ position p;
 + ID3D11PixelShader *
 
 @script:python depends on report@
-p << r302.p;
+p << r366.p;
 @@
 WARN(p[0], "ID3D11PixelShader*", "LPD3D11PIXELSHADER")
 
 
-@r303@
+@r367@
 typedef ID3D11Query;
 typedef PD3D11QUERY;
 position p;
@@ -4099,12 +4963,12 @@ position p;
 + ID3D11Query *
 
 @script:python depends on report@
-p << r303.p;
+p << r367.p;
 @@
 WARN(p[0], "ID3D11Query*", "PD3D11QUERY")
 
 
-@r304@
+@r368@
 typedef LPD3D11QUERY;
 position p;
 @@
@@ -4112,12 +4976,12 @@ position p;
 + ID3D11Query *
 
 @script:python depends on report@
-p << r304.p;
+p << r368.p;
 @@
 WARN(p[0], "ID3D11Query*", "LPD3D11QUERY")
 
 
-@r305@
+@r369@
 typedef ID3D11RasterizerState;
 typedef PD3D11RASTERIZERSTATE;
 position p;
@@ -4126,12 +4990,12 @@ position p;
 + ID3D11RasterizerState *
 
 @script:python depends on report@
-p << r305.p;
+p << r369.p;
 @@
 WARN(p[0], "ID3D11RasterizerState*", "PD3D11RASTERIZERSTATE")
 
 
-@r306@
+@r370@
 typedef LPD3D11RASTERIZERSTATE;
 position p;
 @@
@@ -4139,12 +5003,12 @@ position p;
 + ID3D11RasterizerState *
 
 @script:python depends on report@
-p << r306.p;
+p << r370.p;
 @@
 WARN(p[0], "ID3D11RasterizerState*", "LPD3D11RASTERIZERSTATE")
 
 
-@r307@
+@r371@
 typedef ID3D11RenderTargetView;
 typedef PD3D11RENDERTARGETVIEW;
 position p;
@@ -4153,12 +5017,12 @@ position p;
 + ID3D11RenderTargetView *
 
 @script:python depends on report@
-p << r307.p;
+p << r371.p;
 @@
 WARN(p[0], "ID3D11RenderTargetView*", "PD3D11RENDERTARGETVIEW")
 
 
-@r308@
+@r372@
 typedef LPD3D11RENDERTARGETVIEW;
 position p;
 @@
@@ -4166,12 +5030,12 @@ position p;
 + ID3D11RenderTargetView *
 
 @script:python depends on report@
-p << r308.p;
+p << r372.p;
 @@
 WARN(p[0], "ID3D11RenderTargetView*", "LPD3D11RENDERTARGETVIEW")
 
 
-@r309@
+@r373@
 typedef ID3D11SamplerState;
 typedef PD3D11SAMPLERSTATE;
 position p;
@@ -4180,12 +5044,12 @@ position p;
 + ID3D11SamplerState *
 
 @script:python depends on report@
-p << r309.p;
+p << r373.p;
 @@
 WARN(p[0], "ID3D11SamplerState*", "PD3D11SAMPLERSTATE")
 
 
-@r310@
+@r374@
 typedef LPD3D11SAMPLERSTATE;
 position p;
 @@
@@ -4193,12 +5057,12 @@ position p;
 + ID3D11SamplerState *
 
 @script:python depends on report@
-p << r310.p;
+p << r374.p;
 @@
 WARN(p[0], "ID3D11SamplerState*", "LPD3D11SAMPLERSTATE")
 
 
-@r311@
+@r375@
 typedef ID3D11ShaderReflection;
 typedef PD3D11SHADERREFLECTION;
 position p;
@@ -4207,12 +5071,12 @@ position p;
 + ID3D11ShaderReflection *
 
 @script:python depends on report@
-p << r311.p;
+p << r375.p;
 @@
 WARN(p[0], "ID3D11ShaderReflection*", "PD3D11SHADERREFLECTION")
 
 
-@r312@
+@r376@
 typedef LPD3D11SHADERREFLECTION;
 position p;
 @@
@@ -4220,12 +5084,12 @@ position p;
 + ID3D11ShaderReflection *
 
 @script:python depends on report@
-p << r312.p;
+p << r376.p;
 @@
 WARN(p[0], "ID3D11ShaderReflection*", "LPD3D11SHADERREFLECTION")
 
 
-@r313@
+@r377@
 typedef ID3D11ShaderReflectionConstantBuffer;
 typedef PD3D11SHADERREFLECTIONCONSTANTBUFFER;
 position p;
@@ -4234,12 +5098,12 @@ position p;
 + ID3D11ShaderReflectionConstantBuffer *
 
 @script:python depends on report@
-p << r313.p;
+p << r377.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionConstantBuffer*", "PD3D11SHADERREFLECTIONCONSTANTBUFFER")
 
 
-@r314@
+@r378@
 typedef LPD3D11SHADERREFLECTIONCONSTANTBUFFER;
 position p;
 @@
@@ -4247,12 +5111,12 @@ position p;
 + ID3D11ShaderReflectionConstantBuffer *
 
 @script:python depends on report@
-p << r314.p;
+p << r378.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionConstantBuffer*", "LPD3D11SHADERREFLECTIONCONSTANTBUFFER")
 
 
-@r315@
+@r379@
 typedef ID3D11ShaderReflectionType;
 typedef PD3D11SHADERREFLECTIONTYPE;
 position p;
@@ -4261,12 +5125,12 @@ position p;
 + ID3D11ShaderReflectionType *
 
 @script:python depends on report@
-p << r315.p;
+p << r379.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionType*", "PD3D11SHADERREFLECTIONTYPE")
 
 
-@r316@
+@r380@
 typedef LPD3D11SHADERREFLECTIONTYPE;
 position p;
 @@
@@ -4274,12 +5138,12 @@ position p;
 + ID3D11ShaderReflectionType *
 
 @script:python depends on report@
-p << r316.p;
+p << r380.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionType*", "LPD3D11SHADERREFLECTIONTYPE")
 
 
-@r317@
+@r381@
 typedef ID3D11ShaderReflectionVariable;
 typedef PD3D11SHADERREFLECTIONVARIABLE;
 position p;
@@ -4288,12 +5152,12 @@ position p;
 + ID3D11ShaderReflectionVariable *
 
 @script:python depends on report@
-p << r317.p;
+p << r381.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionVariable*", "PD3D11SHADERREFLECTIONVARIABLE")
 
 
-@r318@
+@r382@
 typedef LPD3D11SHADERREFLECTIONVARIABLE;
 position p;
 @@
@@ -4301,12 +5165,12 @@ position p;
 + ID3D11ShaderReflectionVariable *
 
 @script:python depends on report@
-p << r318.p;
+p << r382.p;
 @@
 WARN(p[0], "ID3D11ShaderReflectionVariable*", "LPD3D11SHADERREFLECTIONVARIABLE")
 
 
-@r319@
+@r383@
 typedef ID3D11ShaderResourceView;
 typedef PD3D11SHADERRESOURCEVIEW;
 position p;
@@ -4315,12 +5179,12 @@ position p;
 + ID3D11ShaderResourceView *
 
 @script:python depends on report@
-p << r319.p;
+p << r383.p;
 @@
 WARN(p[0], "ID3D11ShaderResourceView*", "PD3D11SHADERRESOURCEVIEW")
 
 
-@r320@
+@r384@
 typedef LPD3D11SHADERRESOURCEVIEW;
 position p;
 @@
@@ -4328,12 +5192,39 @@ position p;
 + ID3D11ShaderResourceView *
 
 @script:python depends on report@
-p << r320.p;
+p << r384.p;
 @@
 WARN(p[0], "ID3D11ShaderResourceView*", "LPD3D11SHADERRESOURCEVIEW")
 
 
-@r321@
+@r385@
+typedef ID3D11Texture1D;
+typedef PD3D11TEXTURE1D;
+position p;
+@@
+- PD3D11TEXTURE1D@p
++ ID3D11Texture1D *
+
+@script:python depends on report@
+p << r385.p;
+@@
+WARN(p[0], "ID3D11Texture1D*", "PD3D11TEXTURE1D")
+
+
+@r386@
+typedef LPD3D11TEXTURE1D;
+position p;
+@@
+- LPD3D11TEXTURE1D@p
++ ID3D11Texture1D *
+
+@script:python depends on report@
+p << r386.p;
+@@
+WARN(p[0], "ID3D11Texture1D*", "LPD3D11TEXTURE1D")
+
+
+@r387@
 typedef ID3D11Texture2D;
 typedef PD3D11TEXTURE2D;
 position p;
@@ -4342,12 +5233,12 @@ position p;
 + ID3D11Texture2D *
 
 @script:python depends on report@
-p << r321.p;
+p << r387.p;
 @@
 WARN(p[0], "ID3D11Texture2D*", "PD3D11TEXTURE2D")
 
 
-@r322@
+@r388@
 typedef LPD3D11TEXTURE2D;
 position p;
 @@
@@ -4355,12 +5246,12 @@ position p;
 + ID3D11Texture2D *
 
 @script:python depends on report@
-p << r322.p;
+p << r388.p;
 @@
 WARN(p[0], "ID3D11Texture2D*", "LPD3D11TEXTURE2D")
 
 
-@r323@
+@r389@
 typedef ID3D11Texture3D;
 typedef PD3D11TEXTURE3D;
 position p;
@@ -4369,12 +5260,12 @@ position p;
 + ID3D11Texture3D *
 
 @script:python depends on report@
-p << r323.p;
+p << r389.p;
 @@
 WARN(p[0], "ID3D11Texture3D*", "PD3D11TEXTURE3D")
 
 
-@r324@
+@r390@
 typedef LPD3D11TEXTURE3D;
 position p;
 @@
@@ -4382,12 +5273,12 @@ position p;
 + ID3D11Texture3D *
 
 @script:python depends on report@
-p << r324.p;
+p << r390.p;
 @@
 WARN(p[0], "ID3D11Texture3D*", "LPD3D11TEXTURE3D")
 
 
-@r325@
+@r391@
 typedef ID3D11UnorderedAccessView;
 typedef PD3D11UNORDEREDACCESSVIEW;
 position p;
@@ -4396,12 +5287,12 @@ position p;
 + ID3D11UnorderedAccessView *
 
 @script:python depends on report@
-p << r325.p;
+p << r391.p;
 @@
 WARN(p[0], "ID3D11UnorderedAccessView*", "PD3D11UNORDEREDACCESSVIEW")
 
 
-@r326@
+@r392@
 typedef LPD3D11UNORDEREDACCESSVIEW;
 position p;
 @@
@@ -4409,12 +5300,12 @@ position p;
 + ID3D11UnorderedAccessView *
 
 @script:python depends on report@
-p << r326.p;
+p << r392.p;
 @@
 WARN(p[0], "ID3D11UnorderedAccessView*", "LPD3D11UNORDEREDACCESSVIEW")
 
 
-@r327@
+@r393@
 typedef ID3D11VertexShader;
 typedef PD3D11VERTEXSHADER;
 position p;
@@ -4423,12 +5314,12 @@ position p;
 + ID3D11VertexShader *
 
 @script:python depends on report@
-p << r327.p;
+p << r393.p;
 @@
 WARN(p[0], "ID3D11VertexShader*", "PD3D11VERTEXSHADER")
 
 
-@r328@
+@r394@
 typedef LPD3D11VERTEXSHADER;
 position p;
 @@
@@ -4436,12 +5327,12 @@ position p;
 + ID3D11VertexShader *
 
 @script:python depends on report@
-p << r328.p;
+p << r394.p;
 @@
 WARN(p[0], "ID3D11VertexShader*", "LPD3D11VERTEXSHADER")
 
 
-@r329@
+@r395@
 typedef ID3DBlob;
 typedef PD3DBLOB;
 position p;
@@ -4450,12 +5341,12 @@ position p;
 + ID3DBlob *
 
 @script:python depends on report@
-p << r329.p;
+p << r395.p;
 @@
 WARN(p[0], "ID3DBlob*", "PD3DBLOB")
 
 
-@r330@
+@r396@
 typedef LPD3DBLOB;
 position p;
 @@
@@ -4463,12 +5354,39 @@ position p;
 + ID3DBlob *
 
 @script:python depends on report@
-p << r330.p;
+p << r396.p;
 @@
 WARN(p[0], "ID3DBlob*", "LPD3DBLOB")
 
 
-@r331@
+@r397@
+typedef ID3DDeviceContextState;
+typedef PD3DDEVICECONTEXTSTATE;
+position p;
+@@
+- PD3DDEVICECONTEXTSTATE@p
++ ID3DDeviceContextState *
+
+@script:python depends on report@
+p << r397.p;
+@@
+WARN(p[0], "ID3DDeviceContextState*", "PD3DDEVICECONTEXTSTATE")
+
+
+@r398@
+typedef LPD3DDEVICECONTEXTSTATE;
+position p;
+@@
+- LPD3DDEVICECONTEXTSTATE@p
++ ID3DDeviceContextState *
+
+@script:python depends on report@
+p << r398.p;
+@@
+WARN(p[0], "ID3DDeviceContextState*", "LPD3DDEVICECONTEXTSTATE")
+
+
+@r399@
 typedef ID3DInclude;
 typedef PD3DINCLUDE;
 position p;
@@ -4477,12 +5395,12 @@ position p;
 + ID3DInclude *
 
 @script:python depends on report@
-p << r331.p;
+p << r399.p;
 @@
 WARN(p[0], "ID3DInclude*", "PD3DINCLUDE")
 
 
-@r332@
+@r400@
 typedef LPD3DINCLUDE;
 position p;
 @@
@@ -4490,12 +5408,12 @@ position p;
 + ID3DInclude *
 
 @script:python depends on report@
-p << r332.p;
+p << r400.p;
 @@
 WARN(p[0], "ID3DInclude*", "LPD3DINCLUDE")
 
 
-@r333@
+@r401@
 typedef ID3DX10DataLoader;
 typedef PD3DX10DATALOADER;
 position p;
@@ -4504,12 +5422,12 @@ position p;
 + ID3DX10DataLoader *
 
 @script:python depends on report@
-p << r333.p;
+p << r401.p;
 @@
 WARN(p[0], "ID3DX10DataLoader*", "PD3DX10DATALOADER")
 
 
-@r334@
+@r402@
 typedef LPD3DX10DATALOADER;
 position p;
 @@
@@ -4517,12 +5435,93 @@ position p;
 + ID3DX10DataLoader *
 
 @script:python depends on report@
-p << r334.p;
+p << r402.p;
 @@
 WARN(p[0], "ID3DX10DataLoader*", "LPD3DX10DATALOADER")
 
 
-@r335@
+@r403@
+typedef ID3DX10Font;
+typedef PD3DX10FONT;
+position p;
+@@
+- PD3DX10FONT@p
++ ID3DX10Font *
+
+@script:python depends on report@
+p << r403.p;
+@@
+WARN(p[0], "ID3DX10Font*", "PD3DX10FONT")
+
+
+@r404@
+typedef LPD3DX10FONT;
+position p;
+@@
+- LPD3DX10FONT@p
++ ID3DX10Font *
+
+@script:python depends on report@
+p << r404.p;
+@@
+WARN(p[0], "ID3DX10Font*", "LPD3DX10FONT")
+
+
+@r405@
+typedef ID3DX10Mesh;
+typedef PD3DX10MESH;
+position p;
+@@
+- PD3DX10MESH@p
++ ID3DX10Mesh *
+
+@script:python depends on report@
+p << r405.p;
+@@
+WARN(p[0], "ID3DX10Mesh*", "PD3DX10MESH")
+
+
+@r406@
+typedef LPD3DX10MESH;
+position p;
+@@
+- LPD3DX10MESH@p
++ ID3DX10Mesh *
+
+@script:python depends on report@
+p << r406.p;
+@@
+WARN(p[0], "ID3DX10Mesh*", "LPD3DX10MESH")
+
+
+@r407@
+typedef ID3DX10Sprite;
+typedef PD3DX10SPRITE;
+position p;
+@@
+- PD3DX10SPRITE@p
++ ID3DX10Sprite *
+
+@script:python depends on report@
+p << r407.p;
+@@
+WARN(p[0], "ID3DX10Sprite*", "PD3DX10SPRITE")
+
+
+@r408@
+typedef LPD3DX10SPRITE;
+position p;
+@@
+- LPD3DX10SPRITE@p
++ ID3DX10Sprite *
+
+@script:python depends on report@
+p << r408.p;
+@@
+WARN(p[0], "ID3DX10Sprite*", "LPD3DX10SPRITE")
+
+
+@r409@
 typedef ID3DX11DataLoader;
 typedef PD3DX11DATALOADER;
 position p;
@@ -4531,12 +5530,12 @@ position p;
 + ID3DX11DataLoader *
 
 @script:python depends on report@
-p << r335.p;
+p << r409.p;
 @@
 WARN(p[0], "ID3DX11DataLoader*", "PD3DX11DATALOADER")
 
 
-@r336@
+@r410@
 typedef LPD3DX11DATALOADER;
 position p;
 @@
@@ -4544,12 +5543,12 @@ position p;
 + ID3DX11DataLoader *
 
 @script:python depends on report@
-p << r336.p;
+p << r410.p;
 @@
 WARN(p[0], "ID3DX11DataLoader*", "LPD3DX11DATALOADER")
 
 
-@r337@
+@r411@
 typedef ID3DXAnimationController;
 typedef PD3DXANIMATIONCONTROLLER;
 position p;
@@ -4558,12 +5557,12 @@ position p;
 + ID3DXAnimationController *
 
 @script:python depends on report@
-p << r337.p;
+p << r411.p;
 @@
 WARN(p[0], "ID3DXAnimationController*", "PD3DXANIMATIONCONTROLLER")
 
 
-@r338@
+@r412@
 typedef LPD3DXANIMATIONCONTROLLER;
 position p;
 @@
@@ -4571,12 +5570,12 @@ position p;
 + ID3DXAnimationController *
 
 @script:python depends on report@
-p << r338.p;
+p << r412.p;
 @@
 WARN(p[0], "ID3DXAnimationController*", "LPD3DXANIMATIONCONTROLLER")
 
 
-@r339@
+@r413@
 typedef ID3DXBuffer;
 typedef PD3DXBUFFER;
 position p;
@@ -4585,12 +5584,12 @@ position p;
 + ID3DXBuffer *
 
 @script:python depends on report@
-p << r339.p;
+p << r413.p;
 @@
 WARN(p[0], "ID3DXBuffer*", "PD3DXBUFFER")
 
 
-@r340@
+@r414@
 typedef LPD3DXBUFFER;
 position p;
 @@
@@ -4598,12 +5597,12 @@ position p;
 + ID3DXBuffer *
 
 @script:python depends on report@
-p << r340.p;
+p << r414.p;
 @@
 WARN(p[0], "ID3DXBuffer*", "LPD3DXBUFFER")
 
 
-@r341@
+@r415@
 typedef ID3DXConstantTable;
 typedef PD3DXCONSTANTTABLE;
 position p;
@@ -4612,12 +5611,12 @@ position p;
 + ID3DXConstantTable *
 
 @script:python depends on report@
-p << r341.p;
+p << r415.p;
 @@
 WARN(p[0], "ID3DXConstantTable*", "PD3DXCONSTANTTABLE")
 
 
-@r342@
+@r416@
 typedef LPD3DXCONSTANTTABLE;
 position p;
 @@
@@ -4625,12 +5624,12 @@ position p;
 + ID3DXConstantTable *
 
 @script:python depends on report@
-p << r342.p;
+p << r416.p;
 @@
 WARN(p[0], "ID3DXConstantTable*", "LPD3DXCONSTANTTABLE")
 
 
-@r343@
+@r417@
 typedef ID3DXEffect;
 typedef PD3DXEFFECT;
 position p;
@@ -4639,12 +5638,12 @@ position p;
 + ID3DXEffect *
 
 @script:python depends on report@
-p << r343.p;
+p << r417.p;
 @@
 WARN(p[0], "ID3DXEffect*", "PD3DXEFFECT")
 
 
-@r344@
+@r418@
 typedef LPD3DXEFFECT;
 position p;
 @@
@@ -4652,12 +5651,12 @@ position p;
 + ID3DXEffect *
 
 @script:python depends on report@
-p << r344.p;
+p << r418.p;
 @@
 WARN(p[0], "ID3DXEffect*", "LPD3DXEFFECT")
 
 
-@r345@
+@r419@
 typedef ID3DXEffectCompiler;
 typedef PD3DXEFFECTCOMPILER;
 position p;
@@ -4666,12 +5665,12 @@ position p;
 + ID3DXEffectCompiler *
 
 @script:python depends on report@
-p << r345.p;
+p << r419.p;
 @@
 WARN(p[0], "ID3DXEffectCompiler*", "PD3DXEFFECTCOMPILER")
 
 
-@r346@
+@r420@
 typedef LPD3DXEFFECTCOMPILER;
 position p;
 @@
@@ -4679,12 +5678,12 @@ position p;
 + ID3DXEffectCompiler *
 
 @script:python depends on report@
-p << r346.p;
+p << r420.p;
 @@
 WARN(p[0], "ID3DXEffectCompiler*", "LPD3DXEFFECTCOMPILER")
 
 
-@r347@
+@r421@
 typedef ID3DXEffectPool;
 typedef PD3DXEFFECTPOOL;
 position p;
@@ -4693,12 +5692,12 @@ position p;
 + ID3DXEffectPool *
 
 @script:python depends on report@
-p << r347.p;
+p << r421.p;
 @@
 WARN(p[0], "ID3DXEffectPool*", "PD3DXEFFECTPOOL")
 
 
-@r348@
+@r422@
 typedef LPD3DXEFFECTPOOL;
 position p;
 @@
@@ -4706,12 +5705,39 @@ position p;
 + ID3DXEffectPool *
 
 @script:python depends on report@
-p << r348.p;
+p << r422.p;
 @@
 WARN(p[0], "ID3DXEffectPool*", "LPD3DXEFFECTPOOL")
 
 
-@r349@
+@r423@
+typedef ID3DXEffectStateManager;
+typedef PD3DXEFFECTSTATEMANAGER;
+position p;
+@@
+- PD3DXEFFECTSTATEMANAGER@p
++ ID3DXEffectStateManager *
+
+@script:python depends on report@
+p << r423.p;
+@@
+WARN(p[0], "ID3DXEffectStateManager*", "PD3DXEFFECTSTATEMANAGER")
+
+
+@r424@
+typedef LPD3DXEFFECTSTATEMANAGER;
+position p;
+@@
+- LPD3DXEFFECTSTATEMANAGER@p
++ ID3DXEffectStateManager *
+
+@script:python depends on report@
+p << r424.p;
+@@
+WARN(p[0], "ID3DXEffectStateManager*", "LPD3DXEFFECTSTATEMANAGER")
+
+
+@r425@
 typedef ID3DXFile;
 typedef PD3DXFILE;
 position p;
@@ -4720,12 +5746,12 @@ position p;
 + ID3DXFile *
 
 @script:python depends on report@
-p << r349.p;
+p << r425.p;
 @@
 WARN(p[0], "ID3DXFile*", "PD3DXFILE")
 
 
-@r350@
+@r426@
 typedef LPD3DXFILE;
 position p;
 @@
@@ -4733,12 +5759,12 @@ position p;
 + ID3DXFile *
 
 @script:python depends on report@
-p << r350.p;
+p << r426.p;
 @@
 WARN(p[0], "ID3DXFile*", "LPD3DXFILE")
 
 
-@r351@
+@r427@
 typedef ID3DXFileData;
 typedef PD3DXFILEDATA;
 position p;
@@ -4747,12 +5773,12 @@ position p;
 + ID3DXFileData *
 
 @script:python depends on report@
-p << r351.p;
+p << r427.p;
 @@
 WARN(p[0], "ID3DXFileData*", "PD3DXFILEDATA")
 
 
-@r352@
+@r428@
 typedef LPD3DXFILEDATA;
 position p;
 @@
@@ -4760,12 +5786,12 @@ position p;
 + ID3DXFileData *
 
 @script:python depends on report@
-p << r352.p;
+p << r428.p;
 @@
 WARN(p[0], "ID3DXFileData*", "LPD3DXFILEDATA")
 
 
-@r353@
+@r429@
 typedef ID3DXFileEnumObject;
 typedef PD3DXFILEENUMOBJECT;
 position p;
@@ -4774,12 +5800,12 @@ position p;
 + ID3DXFileEnumObject *
 
 @script:python depends on report@
-p << r353.p;
+p << r429.p;
 @@
 WARN(p[0], "ID3DXFileEnumObject*", "PD3DXFILEENUMOBJECT")
 
 
-@r354@
+@r430@
 typedef LPD3DXFILEENUMOBJECT;
 position p;
 @@
@@ -4787,12 +5813,12 @@ position p;
 + ID3DXFileEnumObject *
 
 @script:python depends on report@
-p << r354.p;
+p << r430.p;
 @@
 WARN(p[0], "ID3DXFileEnumObject*", "LPD3DXFILEENUMOBJECT")
 
 
-@r355@
+@r431@
 typedef ID3DXFont;
 typedef PD3DXFONT;
 position p;
@@ -4801,12 +5827,12 @@ position p;
 + ID3DXFont *
 
 @script:python depends on report@
-p << r355.p;
+p << r431.p;
 @@
 WARN(p[0], "ID3DXFont*", "PD3DXFONT")
 
 
-@r356@
+@r432@
 typedef LPD3DXFONT;
 position p;
 @@
@@ -4814,12 +5840,39 @@ position p;
 + ID3DXFont *
 
 @script:python depends on report@
-p << r356.p;
+p << r432.p;
 @@
 WARN(p[0], "ID3DXFont*", "LPD3DXFONT")
 
 
-@r357@
+@r433@
+typedef ID3DXFragmentLinker;
+typedef PD3DXFRAGMENTLINKER;
+position p;
+@@
+- PD3DXFRAGMENTLINKER@p
++ ID3DXFragmentLinker *
+
+@script:python depends on report@
+p << r433.p;
+@@
+WARN(p[0], "ID3DXFragmentLinker*", "PD3DXFRAGMENTLINKER")
+
+
+@r434@
+typedef LPD3DXFRAGMENTLINKER;
+position p;
+@@
+- LPD3DXFRAGMENTLINKER@p
++ ID3DXFragmentLinker *
+
+@script:python depends on report@
+p << r434.p;
+@@
+WARN(p[0], "ID3DXFragmentLinker*", "LPD3DXFRAGMENTLINKER")
+
+
+@r435@
 typedef ID3DXInclude;
 typedef PD3DXINCLUDE;
 position p;
@@ -4828,12 +5881,12 @@ position p;
 + ID3DXInclude *
 
 @script:python depends on report@
-p << r357.p;
+p << r435.p;
 @@
 WARN(p[0], "ID3DXInclude*", "PD3DXINCLUDE")
 
 
-@r358@
+@r436@
 typedef LPD3DXINCLUDE;
 position p;
 @@
@@ -4841,12 +5894,39 @@ position p;
 + ID3DXInclude *
 
 @script:python depends on report@
-p << r358.p;
+p << r436.p;
 @@
 WARN(p[0], "ID3DXInclude*", "LPD3DXINCLUDE")
 
 
-@r359@
+@r437@
+typedef ID3DXKeyframedAnimationSet;
+typedef PD3DXKEYFRAMEDANIMATIONSET;
+position p;
+@@
+- PD3DXKEYFRAMEDANIMATIONSET@p
++ ID3DXKeyframedAnimationSet *
+
+@script:python depends on report@
+p << r437.p;
+@@
+WARN(p[0], "ID3DXKeyframedAnimationSet*", "PD3DXKEYFRAMEDANIMATIONSET")
+
+
+@r438@
+typedef LPD3DXKEYFRAMEDANIMATIONSET;
+position p;
+@@
+- LPD3DXKEYFRAMEDANIMATIONSET@p
++ ID3DXKeyframedAnimationSet *
+
+@script:python depends on report@
+p << r438.p;
+@@
+WARN(p[0], "ID3DXKeyframedAnimationSet*", "LPD3DXKEYFRAMEDANIMATIONSET")
+
+
+@r439@
 typedef ID3DXLine;
 typedef PD3DXLINE;
 position p;
@@ -4855,12 +5935,12 @@ position p;
 + ID3DXLine *
 
 @script:python depends on report@
-p << r359.p;
+p << r439.p;
 @@
 WARN(p[0], "ID3DXLine*", "PD3DXLINE")
 
 
-@r360@
+@r440@
 typedef LPD3DXLINE;
 position p;
 @@
@@ -4868,12 +5948,12 @@ position p;
 + ID3DXLine *
 
 @script:python depends on report@
-p << r360.p;
+p << r440.p;
 @@
 WARN(p[0], "ID3DXLine*", "LPD3DXLINE")
 
 
-@r361@
+@r441@
 typedef ID3DXMatrixStack;
 typedef PD3DXMATRIXSTACK;
 position p;
@@ -4882,12 +5962,12 @@ position p;
 + ID3DXMatrixStack *
 
 @script:python depends on report@
-p << r361.p;
+p << r441.p;
 @@
 WARN(p[0], "ID3DXMatrixStack*", "PD3DXMATRIXSTACK")
 
 
-@r362@
+@r442@
 typedef LPD3DXMATRIXSTACK;
 position p;
 @@
@@ -4895,12 +5975,12 @@ position p;
 + ID3DXMatrixStack *
 
 @script:python depends on report@
-p << r362.p;
+p << r442.p;
 @@
 WARN(p[0], "ID3DXMatrixStack*", "LPD3DXMATRIXSTACK")
 
 
-@r363@
+@r443@
 typedef ID3DXMesh;
 typedef PD3DXMESH;
 position p;
@@ -4909,12 +5989,12 @@ position p;
 + ID3DXMesh *
 
 @script:python depends on report@
-p << r363.p;
+p << r443.p;
 @@
 WARN(p[0], "ID3DXMesh*", "PD3DXMESH")
 
 
-@r364@
+@r444@
 typedef LPD3DXMESH;
 position p;
 @@
@@ -4922,12 +6002,12 @@ position p;
 + ID3DXMesh *
 
 @script:python depends on report@
-p << r364.p;
+p << r444.p;
 @@
 WARN(p[0], "ID3DXMesh*", "LPD3DXMESH")
 
 
-@r365@
+@r445@
 typedef ID3DXRenderToEnvMap;
 typedef PD3DXRENDERTOENVMAP;
 position p;
@@ -4936,12 +6016,12 @@ position p;
 + ID3DXRenderToEnvMap *
 
 @script:python depends on report@
-p << r365.p;
+p << r445.p;
 @@
 WARN(p[0], "ID3DXRenderToEnvMap*", "PD3DXRENDERTOENVMAP")
 
 
-@r366@
+@r446@
 typedef LPD3DXRENDERTOENVMAP;
 position p;
 @@
@@ -4949,12 +6029,12 @@ position p;
 + ID3DXRenderToEnvMap *
 
 @script:python depends on report@
-p << r366.p;
+p << r446.p;
 @@
 WARN(p[0], "ID3DXRenderToEnvMap*", "LPD3DXRENDERTOENVMAP")
 
 
-@r367@
+@r447@
 typedef ID3DXRenderToSurface;
 typedef PD3DXRENDERTOSURFACE;
 position p;
@@ -4963,12 +6043,12 @@ position p;
 + ID3DXRenderToSurface *
 
 @script:python depends on report@
-p << r367.p;
+p << r447.p;
 @@
 WARN(p[0], "ID3DXRenderToSurface*", "PD3DXRENDERTOSURFACE")
 
 
-@r368@
+@r448@
 typedef LPD3DXRENDERTOSURFACE;
 position p;
 @@
@@ -4976,12 +6056,12 @@ position p;
 + ID3DXRenderToSurface *
 
 @script:python depends on report@
-p << r368.p;
+p << r448.p;
 @@
 WARN(p[0], "ID3DXRenderToSurface*", "LPD3DXRENDERTOSURFACE")
 
 
-@r369@
+@r449@
 typedef ID3DXSkinInfo;
 typedef PD3DXSKININFO;
 position p;
@@ -4990,12 +6070,12 @@ position p;
 + ID3DXSkinInfo *
 
 @script:python depends on report@
-p << r369.p;
+p << r449.p;
 @@
 WARN(p[0], "ID3DXSkinInfo*", "PD3DXSKININFO")
 
 
-@r370@
+@r450@
 typedef LPD3DXSKININFO;
 position p;
 @@
@@ -5003,12 +6083,12 @@ position p;
 + ID3DXSkinInfo *
 
 @script:python depends on report@
-p << r370.p;
+p << r450.p;
 @@
 WARN(p[0], "ID3DXSkinInfo*", "LPD3DXSKININFO")
 
 
-@r371@
+@r451@
 typedef ID3DXSprite;
 typedef PD3DXSPRITE;
 position p;
@@ -5017,12 +6097,12 @@ position p;
 + ID3DXSprite *
 
 @script:python depends on report@
-p << r371.p;
+p << r451.p;
 @@
 WARN(p[0], "ID3DXSprite*", "PD3DXSPRITE")
 
 
-@r372@
+@r452@
 typedef LPD3DXSPRITE;
 position p;
 @@
@@ -5030,12 +6110,12 @@ position p;
 + ID3DXSprite *
 
 @script:python depends on report@
-p << r372.p;
+p << r452.p;
 @@
 WARN(p[0], "ID3DXSprite*", "LPD3DXSPRITE")
 
 
-@r373@
+@r453@
 typedef ID3DXTextureShader;
 typedef PD3DXTEXTURESHADER;
 position p;
@@ -5044,12 +6124,12 @@ position p;
 + ID3DXTextureShader *
 
 @script:python depends on report@
-p << r373.p;
+p << r453.p;
 @@
 WARN(p[0], "ID3DXTextureShader*", "PD3DXTEXTURESHADER")
 
 
-@r374@
+@r454@
 typedef LPD3DXTEXTURESHADER;
 position p;
 @@
@@ -5057,12 +6137,12 @@ position p;
 + ID3DXTextureShader *
 
 @script:python depends on report@
-p << r374.p;
+p << r454.p;
 @@
 WARN(p[0], "ID3DXTextureShader*", "LPD3DXTEXTURESHADER")
 
 
-@r375@
+@r455@
 typedef IDBInitialize;
 typedef PDBINITIALIZE;
 position p;
@@ -5071,12 +6151,12 @@ position p;
 + IDBInitialize *
 
 @script:python depends on report@
-p << r375.p;
+p << r455.p;
 @@
 WARN(p[0], "IDBInitialize*", "PDBINITIALIZE")
 
 
-@r376@
+@r456@
 typedef LPDBINITIALIZE;
 position p;
 @@
@@ -5084,12 +6164,12 @@ position p;
 + IDBInitialize *
 
 @script:python depends on report@
-p << r376.p;
+p << r456.p;
 @@
 WARN(p[0], "IDBInitialize*", "LPDBINITIALIZE")
 
 
-@r377@
+@r457@
 typedef IDBProperties;
 typedef PDBPROPERTIES;
 position p;
@@ -5098,12 +6178,12 @@ position p;
 + IDBProperties *
 
 @script:python depends on report@
-p << r377.p;
+p << r457.p;
 @@
 WARN(p[0], "IDBProperties*", "PDBPROPERTIES")
 
 
-@r378@
+@r458@
 typedef LPDBPROPERTIES;
 position p;
 @@
@@ -5111,12 +6191,12 @@ position p;
 + IDBProperties *
 
 @script:python depends on report@
-p << r378.p;
+p << r458.p;
 @@
 WARN(p[0], "IDBProperties*", "LPDBPROPERTIES")
 
 
-@r379@
+@r459@
 typedef IDCInfo;
 typedef PDCINFO;
 position p;
@@ -5125,12 +6205,12 @@ position p;
 + IDCInfo *
 
 @script:python depends on report@
-p << r379.p;
+p << r459.p;
 @@
 WARN(p[0], "IDCInfo*", "PDCINFO")
 
 
-@r380@
+@r460@
 typedef LPDCINFO;
 position p;
 @@
@@ -5138,12 +6218,201 @@ position p;
 + IDCInfo *
 
 @script:python depends on report@
-p << r380.p;
+p << r460.p;
 @@
 WARN(p[0], "IDCInfo*", "LPDCINFO")
 
 
-@r381@
+@r461@
+typedef IDHTMLEdit;
+typedef PDHTMLEDIT;
+position p;
+@@
+- PDHTMLEDIT@p
++ IDHTMLEdit *
+
+@script:python depends on report@
+p << r461.p;
+@@
+WARN(p[0], "IDHTMLEdit*", "PDHTMLEDIT")
+
+
+@r462@
+typedef LPDHTMLEDIT;
+position p;
+@@
+- LPDHTMLEDIT@p
++ IDHTMLEdit *
+
+@script:python depends on report@
+p << r462.p;
+@@
+WARN(p[0], "IDHTMLEdit*", "LPDHTMLEDIT")
+
+
+@r463@
+typedef IDMOWrapperFilter;
+typedef PDMOWRAPPERFILTER;
+position p;
+@@
+- PDMOWRAPPERFILTER@p
++ IDMOWrapperFilter *
+
+@script:python depends on report@
+p << r463.p;
+@@
+WARN(p[0], "IDMOWrapperFilter*", "PDMOWRAPPERFILTER")
+
+
+@r464@
+typedef LPDMOWRAPPERFILTER;
+position p;
+@@
+- LPDMOWRAPPERFILTER@p
++ IDMOWrapperFilter *
+
+@script:python depends on report@
+p << r464.p;
+@@
+WARN(p[0], "IDMOWrapperFilter*", "LPDMOWRAPPERFILTER")
+
+
+@r465@
+typedef IDOMCustomEvent;
+typedef PDOMCUSTOMEVENT;
+position p;
+@@
+- PDOMCUSTOMEVENT@p
++ IDOMCustomEvent *
+
+@script:python depends on report@
+p << r465.p;
+@@
+WARN(p[0], "IDOMCustomEvent*", "PDOMCUSTOMEVENT")
+
+
+@r466@
+typedef LPDOMCUSTOMEVENT;
+position p;
+@@
+- LPDOMCUSTOMEVENT@p
++ IDOMCustomEvent *
+
+@script:python depends on report@
+p << r466.p;
+@@
+WARN(p[0], "IDOMCustomEvent*", "LPDOMCUSTOMEVENT")
+
+
+@r467@
+typedef IDOMEvent;
+typedef PDOMEVENT;
+position p;
+@@
+- PDOMEVENT@p
++ IDOMEvent *
+
+@script:python depends on report@
+p << r467.p;
+@@
+WARN(p[0], "IDOMEvent*", "PDOMEVENT")
+
+
+@r468@
+typedef LPDOMEVENT;
+position p;
+@@
+- LPDOMEVENT@p
++ IDOMEvent *
+
+@script:python depends on report@
+p << r468.p;
+@@
+WARN(p[0], "IDOMEvent*", "LPDOMEVENT")
+
+
+@r469@
+typedef IDOMKeyboardEvent;
+typedef PDOMKEYBOARDEVENT;
+position p;
+@@
+- PDOMKEYBOARDEVENT@p
++ IDOMKeyboardEvent *
+
+@script:python depends on report@
+p << r469.p;
+@@
+WARN(p[0], "IDOMKeyboardEvent*", "PDOMKEYBOARDEVENT")
+
+
+@r470@
+typedef LPDOMKEYBOARDEVENT;
+position p;
+@@
+- LPDOMKEYBOARDEVENT@p
++ IDOMKeyboardEvent *
+
+@script:python depends on report@
+p << r470.p;
+@@
+WARN(p[0], "IDOMKeyboardEvent*", "LPDOMKEYBOARDEVENT")
+
+
+@r471@
+typedef IDOMMouseEvent;
+typedef PDOMMOUSEEVENT;
+position p;
+@@
+- PDOMMOUSEEVENT@p
++ IDOMMouseEvent *
+
+@script:python depends on report@
+p << r471.p;
+@@
+WARN(p[0], "IDOMMouseEvent*", "PDOMMOUSEEVENT")
+
+
+@r472@
+typedef LPDOMMOUSEEVENT;
+position p;
+@@
+- LPDOMMOUSEEVENT@p
++ IDOMMouseEvent *
+
+@script:python depends on report@
+p << r472.p;
+@@
+WARN(p[0], "IDOMMouseEvent*", "LPDOMMOUSEEVENT")
+
+
+@r473@
+typedef IDOMUIEvent;
+typedef PDOMUIEVENT;
+position p;
+@@
+- PDOMUIEVENT@p
++ IDOMUIEvent *
+
+@script:python depends on report@
+p << r473.p;
+@@
+WARN(p[0], "IDOMUIEvent*", "PDOMUIEVENT")
+
+
+@r474@
+typedef LPDOMUIEVENT;
+position p;
+@@
+- LPDOMUIEVENT@p
++ IDOMUIEvent *
+
+@script:python depends on report@
+p << r474.p;
+@@
+WARN(p[0], "IDOMUIEvent*", "LPDOMUIEVENT")
+
+
+@r475@
 typedef IDPLobbySP;
 typedef PDPLOBBYSP;
 position p;
@@ -5152,12 +6421,12 @@ position p;
 + IDPLobbySP *
 
 @script:python depends on report@
-p << r381.p;
+p << r475.p;
 @@
 WARN(p[0], "IDPLobbySP*", "PDPLOBBYSP")
 
 
-@r382@
+@r476@
 typedef LPDPLOBBYSP;
 position p;
 @@
@@ -5165,12 +6434,12 @@ position p;
 + IDPLobbySP *
 
 @script:python depends on report@
-p << r382.p;
+p << r476.p;
 @@
 WARN(p[0], "IDPLobbySP*", "LPDPLOBBYSP")
 
 
-@r383@
+@r477@
 typedef IDWriteBitmapRenderTarget1;
 typedef PDWRITEBITMAPRENDERTARGET1;
 position p;
@@ -5179,12 +6448,12 @@ position p;
 + IDWriteBitmapRenderTarget1 *
 
 @script:python depends on report@
-p << r383.p;
+p << r477.p;
 @@
 WARN(p[0], "IDWriteBitmapRenderTarget1*", "PDWRITEBITMAPRENDERTARGET1")
 
 
-@r384@
+@r478@
 typedef LPDWRITEBITMAPRENDERTARGET1;
 position p;
 @@
@@ -5192,66 +6461,66 @@ position p;
 + IDWriteBitmapRenderTarget1 *
 
 @script:python depends on report@
-p << r384.p;
+p << r478.p;
 @@
 WARN(p[0], "IDWriteBitmapRenderTarget1*", "LPDWRITEBITMAPRENDERTARGET1")
 
 
-@r385@
-typedef IDWriteColorGlyphRunEnumerator;
-typedef PDWRITECOLORGLYPHRUNENUMERATOR;
+@r479@
+typedef IDWriteColorGlyphRunEnumerator1;
+typedef PDWRITECOLORGLYPHRUNENUMERATOR1;
 position p;
 @@
-- PDWRITECOLORGLYPHRUNENUMERATOR@p
-+ IDWriteColorGlyphRunEnumerator *
+- PDWRITECOLORGLYPHRUNENUMERATOR1@p
++ IDWriteColorGlyphRunEnumerator1 *
 
 @script:python depends on report@
-p << r385.p;
+p << r479.p;
 @@
-WARN(p[0], "IDWriteColorGlyphRunEnumerator*", "PDWRITECOLORGLYPHRUNENUMERATOR")
+WARN(p[0], "IDWriteColorGlyphRunEnumerator1*", "PDWRITECOLORGLYPHRUNENUMERATOR1")
 
 
-@r386@
-typedef LPDWRITECOLORGLYPHRUNENUMERATOR;
+@r480@
+typedef LPDWRITECOLORGLYPHRUNENUMERATOR1;
 position p;
 @@
-- LPDWRITECOLORGLYPHRUNENUMERATOR@p
-+ IDWriteColorGlyphRunEnumerator *
+- LPDWRITECOLORGLYPHRUNENUMERATOR1@p
++ IDWriteColorGlyphRunEnumerator1 *
 
 @script:python depends on report@
-p << r386.p;
+p << r480.p;
 @@
-WARN(p[0], "IDWriteColorGlyphRunEnumerator*", "LPDWRITECOLORGLYPHRUNENUMERATOR")
+WARN(p[0], "IDWriteColorGlyphRunEnumerator1*", "LPDWRITECOLORGLYPHRUNENUMERATOR1")
 
 
-@r387@
-typedef IDWriteFactory4;
-typedef PDWRITEFACTORY4;
+@r481@
+typedef IDWriteFactory7;
+typedef PDWRITEFACTORY7;
 position p;
 @@
-- PDWRITEFACTORY4@p
-+ IDWriteFactory4 *
+- PDWRITEFACTORY7@p
++ IDWriteFactory7 *
 
 @script:python depends on report@
-p << r387.p;
+p << r481.p;
 @@
-WARN(p[0], "IDWriteFactory4*", "PDWRITEFACTORY4")
+WARN(p[0], "IDWriteFactory7*", "PDWRITEFACTORY7")
 
 
-@r388@
-typedef LPDWRITEFACTORY4;
+@r482@
+typedef LPDWRITEFACTORY7;
 position p;
 @@
-- LPDWRITEFACTORY4@p
-+ IDWriteFactory4 *
+- LPDWRITEFACTORY7@p
++ IDWriteFactory7 *
 
 @script:python depends on report@
-p << r388.p;
+p << r482.p;
 @@
-WARN(p[0], "IDWriteFactory4*", "LPDWRITEFACTORY4")
+WARN(p[0], "IDWriteFactory7*", "LPDWRITEFACTORY7")
 
 
-@r389@
+@r483@
 typedef IDWriteFont3;
 typedef PDWRITEFONT3;
 position p;
@@ -5260,12 +6529,12 @@ position p;
 + IDWriteFont3 *
 
 @script:python depends on report@
-p << r389.p;
+p << r483.p;
 @@
 WARN(p[0], "IDWriteFont3*", "PDWRITEFONT3")
 
 
-@r390@
+@r484@
 typedef LPDWRITEFONT3;
 position p;
 @@
@@ -5273,39 +6542,39 @@ position p;
 + IDWriteFont3 *
 
 @script:python depends on report@
-p << r390.p;
+p << r484.p;
 @@
 WARN(p[0], "IDWriteFont3*", "LPDWRITEFONT3")
 
 
-@r391@
-typedef IDWriteFontCollection1;
-typedef PDWRITEFONTCOLLECTION1;
+@r485@
+typedef IDWriteFontCollection3;
+typedef PDWRITEFONTCOLLECTION3;
 position p;
 @@
-- PDWRITEFONTCOLLECTION1@p
-+ IDWriteFontCollection1 *
+- PDWRITEFONTCOLLECTION3@p
++ IDWriteFontCollection3 *
 
 @script:python depends on report@
-p << r391.p;
+p << r485.p;
 @@
-WARN(p[0], "IDWriteFontCollection1*", "PDWRITEFONTCOLLECTION1")
+WARN(p[0], "IDWriteFontCollection3*", "PDWRITEFONTCOLLECTION3")
 
 
-@r392@
-typedef LPDWRITEFONTCOLLECTION1;
+@r486@
+typedef LPDWRITEFONTCOLLECTION3;
 position p;
 @@
-- LPDWRITEFONTCOLLECTION1@p
-+ IDWriteFontCollection1 *
+- LPDWRITEFONTCOLLECTION3@p
++ IDWriteFontCollection3 *
 
 @script:python depends on report@
-p << r392.p;
+p << r486.p;
 @@
-WARN(p[0], "IDWriteFontCollection1*", "LPDWRITEFONTCOLLECTION1")
+WARN(p[0], "IDWriteFontCollection3*", "LPDWRITEFONTCOLLECTION3")
 
 
-@r393@
+@r487@
 typedef IDWriteFontCollectionLoader;
 typedef PDWRITEFONTCOLLECTIONLOADER;
 position p;
@@ -5314,12 +6583,12 @@ position p;
 + IDWriteFontCollectionLoader *
 
 @script:python depends on report@
-p << r393.p;
+p << r487.p;
 @@
 WARN(p[0], "IDWriteFontCollectionLoader*", "PDWRITEFONTCOLLECTIONLOADER")
 
 
-@r394@
+@r488@
 typedef LPDWRITEFONTCOLLECTIONLOADER;
 position p;
 @@
@@ -5327,39 +6596,39 @@ position p;
 + IDWriteFontCollectionLoader *
 
 @script:python depends on report@
-p << r394.p;
+p << r488.p;
 @@
 WARN(p[0], "IDWriteFontCollectionLoader*", "LPDWRITEFONTCOLLECTIONLOADER")
 
 
-@r395@
-typedef IDWriteFontFace4;
-typedef PDWRITEFONTFACE4;
+@r489@
+typedef IDWriteFontFace5;
+typedef PDWRITEFONTFACE5;
 position p;
 @@
-- PDWRITEFONTFACE4@p
-+ IDWriteFontFace4 *
+- PDWRITEFONTFACE5@p
++ IDWriteFontFace5 *
 
 @script:python depends on report@
-p << r395.p;
+p << r489.p;
 @@
-WARN(p[0], "IDWriteFontFace4*", "PDWRITEFONTFACE4")
+WARN(p[0], "IDWriteFontFace5*", "PDWRITEFONTFACE5")
 
 
-@r396@
-typedef LPDWRITEFONTFACE4;
+@r490@
+typedef LPDWRITEFONTFACE5;
 position p;
 @@
-- LPDWRITEFONTFACE4@p
-+ IDWriteFontFace4 *
+- LPDWRITEFONTFACE5@p
++ IDWriteFontFace5 *
 
 @script:python depends on report@
-p << r396.p;
+p << r490.p;
 @@
-WARN(p[0], "IDWriteFontFace4*", "LPDWRITEFONTFACE4")
+WARN(p[0], "IDWriteFontFace5*", "LPDWRITEFONTFACE5")
 
 
-@r397@
+@r491@
 typedef IDWriteFontFaceReference;
 typedef PDWRITEFONTFACEREFERENCE;
 position p;
@@ -5368,12 +6637,12 @@ position p;
 + IDWriteFontFaceReference *
 
 @script:python depends on report@
-p << r397.p;
+p << r491.p;
 @@
 WARN(p[0], "IDWriteFontFaceReference*", "PDWRITEFONTFACEREFERENCE")
 
 
-@r398@
+@r492@
 typedef LPDWRITEFONTFACEREFERENCE;
 position p;
 @@
@@ -5381,66 +6650,120 @@ position p;
 + IDWriteFontFaceReference *
 
 @script:python depends on report@
-p << r398.p;
+p << r492.p;
 @@
 WARN(p[0], "IDWriteFontFaceReference*", "LPDWRITEFONTFACEREFERENCE")
 
 
-@r399@
-typedef IDWriteFontFallback;
-typedef PDWRITEFONTFALLBACK;
+@r493@
+typedef IDWriteFontFaceReference1;
+typedef PDWRITEFONTFACEREFERENCE1;
 position p;
 @@
-- PDWRITEFONTFALLBACK@p
-+ IDWriteFontFallback *
+- PDWRITEFONTFACEREFERENCE1@p
++ IDWriteFontFaceReference1 *
 
 @script:python depends on report@
-p << r399.p;
+p << r493.p;
 @@
-WARN(p[0], "IDWriteFontFallback*", "PDWRITEFONTFALLBACK")
+WARN(p[0], "IDWriteFontFaceReference1*", "PDWRITEFONTFACEREFERENCE1")
 
 
-@r400@
-typedef LPDWRITEFONTFALLBACK;
+@r494@
+typedef LPDWRITEFONTFACEREFERENCE1;
 position p;
 @@
-- LPDWRITEFONTFALLBACK@p
-+ IDWriteFontFallback *
+- LPDWRITEFONTFACEREFERENCE1@p
++ IDWriteFontFaceReference1 *
 
 @script:python depends on report@
-p << r400.p;
+p << r494.p;
 @@
-WARN(p[0], "IDWriteFontFallback*", "LPDWRITEFONTFALLBACK")
+WARN(p[0], "IDWriteFontFaceReference1*", "LPDWRITEFONTFACEREFERENCE1")
 
 
-@r401@
-typedef IDWriteFontFamily1;
-typedef PDWRITEFONTFAMILY1;
+@r495@
+typedef IDWriteFontFallback1;
+typedef PDWRITEFONTFALLBACK1;
 position p;
 @@
-- PDWRITEFONTFAMILY1@p
-+ IDWriteFontFamily1 *
+- PDWRITEFONTFALLBACK1@p
++ IDWriteFontFallback1 *
 
 @script:python depends on report@
-p << r401.p;
+p << r495.p;
 @@
-WARN(p[0], "IDWriteFontFamily1*", "PDWRITEFONTFAMILY1")
+WARN(p[0], "IDWriteFontFallback1*", "PDWRITEFONTFALLBACK1")
 
 
-@r402@
-typedef LPDWRITEFONTFAMILY1;
+@r496@
+typedef LPDWRITEFONTFALLBACK1;
 position p;
 @@
-- LPDWRITEFONTFAMILY1@p
-+ IDWriteFontFamily1 *
+- LPDWRITEFONTFALLBACK1@p
++ IDWriteFontFallback1 *
 
 @script:python depends on report@
-p << r402.p;
+p << r496.p;
 @@
-WARN(p[0], "IDWriteFontFamily1*", "LPDWRITEFONTFAMILY1")
+WARN(p[0], "IDWriteFontFallback1*", "LPDWRITEFONTFALLBACK1")
 
 
-@r403@
+@r497@
+typedef IDWriteFontFallbackBuilder;
+typedef PDWRITEFONTFALLBACKBUILDER;
+position p;
+@@
+- PDWRITEFONTFALLBACKBUILDER@p
++ IDWriteFontFallbackBuilder *
+
+@script:python depends on report@
+p << r497.p;
+@@
+WARN(p[0], "IDWriteFontFallbackBuilder*", "PDWRITEFONTFALLBACKBUILDER")
+
+
+@r498@
+typedef LPDWRITEFONTFALLBACKBUILDER;
+position p;
+@@
+- LPDWRITEFONTFALLBACKBUILDER@p
++ IDWriteFontFallbackBuilder *
+
+@script:python depends on report@
+p << r498.p;
+@@
+WARN(p[0], "IDWriteFontFallbackBuilder*", "LPDWRITEFONTFALLBACKBUILDER")
+
+
+@r499@
+typedef IDWriteFontFamily2;
+typedef PDWRITEFONTFAMILY2;
+position p;
+@@
+- PDWRITEFONTFAMILY2@p
++ IDWriteFontFamily2 *
+
+@script:python depends on report@
+p << r499.p;
+@@
+WARN(p[0], "IDWriteFontFamily2*", "PDWRITEFONTFAMILY2")
+
+
+@r500@
+typedef LPDWRITEFONTFAMILY2;
+position p;
+@@
+- LPDWRITEFONTFAMILY2@p
++ IDWriteFontFamily2 *
+
+@script:python depends on report@
+p << r500.p;
+@@
+WARN(p[0], "IDWriteFontFamily2*", "LPDWRITEFONTFAMILY2")
+
+
+@r501@
 typedef IDWriteFontFile;
 typedef PDWRITEFONTFILE;
 position p;
@@ -5449,12 +6772,12 @@ position p;
 + IDWriteFontFile *
 
 @script:python depends on report@
-p << r403.p;
+p << r501.p;
 @@
 WARN(p[0], "IDWriteFontFile*", "PDWRITEFONTFILE")
 
 
-@r404@
+@r502@
 typedef LPDWRITEFONTFILE;
 position p;
 @@
@@ -5462,12 +6785,12 @@ position p;
 + IDWriteFontFile *
 
 @script:python depends on report@
-p << r404.p;
+p << r502.p;
 @@
 WARN(p[0], "IDWriteFontFile*", "LPDWRITEFONTFILE")
 
 
-@r405@
+@r503@
 typedef IDWriteFontFileEnumerator;
 typedef PDWRITEFONTFILEENUMERATOR;
 position p;
@@ -5476,12 +6799,12 @@ position p;
 + IDWriteFontFileEnumerator *
 
 @script:python depends on report@
-p << r405.p;
+p << r503.p;
 @@
 WARN(p[0], "IDWriteFontFileEnumerator*", "PDWRITEFONTFILEENUMERATOR")
 
 
-@r406@
+@r504@
 typedef LPDWRITEFONTFILEENUMERATOR;
 position p;
 @@
@@ -5489,12 +6812,39 @@ position p;
 + IDWriteFontFileEnumerator *
 
 @script:python depends on report@
-p << r406.p;
+p << r504.p;
 @@
 WARN(p[0], "IDWriteFontFileEnumerator*", "LPDWRITEFONTFILEENUMERATOR")
 
 
-@r407@
+@r505@
+typedef IDWriteFontFileLoader;
+typedef PDWRITEFONTFILELOADER;
+position p;
+@@
+- PDWRITEFONTFILELOADER@p
++ IDWriteFontFileLoader *
+
+@script:python depends on report@
+p << r505.p;
+@@
+WARN(p[0], "IDWriteFontFileLoader*", "PDWRITEFONTFILELOADER")
+
+
+@r506@
+typedef LPDWRITEFONTFILELOADER;
+position p;
+@@
+- LPDWRITEFONTFILELOADER@p
++ IDWriteFontFileLoader *
+
+@script:python depends on report@
+p << r506.p;
+@@
+WARN(p[0], "IDWriteFontFileLoader*", "LPDWRITEFONTFILELOADER")
+
+
+@r507@
 typedef IDWriteFontFileStream;
 typedef PDWRITEFONTFILESTREAM;
 position p;
@@ -5503,12 +6853,12 @@ position p;
 + IDWriteFontFileStream *
 
 @script:python depends on report@
-p << r407.p;
+p << r507.p;
 @@
 WARN(p[0], "IDWriteFontFileStream*", "PDWRITEFONTFILESTREAM")
 
 
-@r408@
+@r508@
 typedef LPDWRITEFONTFILESTREAM;
 position p;
 @@
@@ -5516,39 +6866,120 @@ position p;
 + IDWriteFontFileStream *
 
 @script:python depends on report@
-p << r408.p;
+p << r508.p;
 @@
 WARN(p[0], "IDWriteFontFileStream*", "LPDWRITEFONTFILESTREAM")
 
 
-@r409@
-typedef IDWriteFontList1;
-typedef PDWRITEFONTLIST1;
+@r509@
+typedef IDWriteFontList2;
+typedef PDWRITEFONTLIST2;
 position p;
 @@
-- PDWRITEFONTLIST1@p
-+ IDWriteFontList1 *
+- PDWRITEFONTLIST2@p
++ IDWriteFontList2 *
 
 @script:python depends on report@
-p << r409.p;
+p << r509.p;
 @@
-WARN(p[0], "IDWriteFontList1*", "PDWRITEFONTLIST1")
+WARN(p[0], "IDWriteFontList2*", "PDWRITEFONTLIST2")
 
 
-@r410@
-typedef LPDWRITEFONTLIST1;
+@r510@
+typedef LPDWRITEFONTLIST2;
 position p;
 @@
-- LPDWRITEFONTLIST1@p
-+ IDWriteFontList1 *
+- LPDWRITEFONTLIST2@p
++ IDWriteFontList2 *
 
 @script:python depends on report@
-p << r410.p;
+p << r510.p;
 @@
-WARN(p[0], "IDWriteFontList1*", "LPDWRITEFONTLIST1")
+WARN(p[0], "IDWriteFontList2*", "LPDWRITEFONTLIST2")
 
 
-@r411@
+@r511@
+typedef IDWriteFontResource;
+typedef PDWRITEFONTRESOURCE;
+position p;
+@@
+- PDWRITEFONTRESOURCE@p
++ IDWriteFontResource *
+
+@script:python depends on report@
+p << r511.p;
+@@
+WARN(p[0], "IDWriteFontResource*", "PDWRITEFONTRESOURCE")
+
+
+@r512@
+typedef LPDWRITEFONTRESOURCE;
+position p;
+@@
+- LPDWRITEFONTRESOURCE@p
++ IDWriteFontResource *
+
+@script:python depends on report@
+p << r512.p;
+@@
+WARN(p[0], "IDWriteFontResource*", "LPDWRITEFONTRESOURCE")
+
+
+@r513@
+typedef IDWriteFontSet3;
+typedef PDWRITEFONTSET3;
+position p;
+@@
+- PDWRITEFONTSET3@p
++ IDWriteFontSet3 *
+
+@script:python depends on report@
+p << r513.p;
+@@
+WARN(p[0], "IDWriteFontSet3*", "PDWRITEFONTSET3")
+
+
+@r514@
+typedef LPDWRITEFONTSET3;
+position p;
+@@
+- LPDWRITEFONTSET3@p
++ IDWriteFontSet3 *
+
+@script:python depends on report@
+p << r514.p;
+@@
+WARN(p[0], "IDWriteFontSet3*", "LPDWRITEFONTSET3")
+
+
+@r515@
+typedef IDWriteFontSetBuilder2;
+typedef PDWRITEFONTSETBUILDER2;
+position p;
+@@
+- PDWRITEFONTSETBUILDER2@p
++ IDWriteFontSetBuilder2 *
+
+@script:python depends on report@
+p << r515.p;
+@@
+WARN(p[0], "IDWriteFontSetBuilder2*", "PDWRITEFONTSETBUILDER2")
+
+
+@r516@
+typedef LPDWRITEFONTSETBUILDER2;
+position p;
+@@
+- LPDWRITEFONTSETBUILDER2@p
++ IDWriteFontSetBuilder2 *
+
+@script:python depends on report@
+p << r516.p;
+@@
+WARN(p[0], "IDWriteFontSetBuilder2*", "LPDWRITEFONTSETBUILDER2")
+
+
+@r517@
 typedef IDWriteGdiInterop1;
 typedef PDWRITEGDIINTEROP1;
 position p;
@@ -5557,12 +6988,12 @@ position p;
 + IDWriteGdiInterop1 *
 
 @script:python depends on report@
-p << r411.p;
+p << r517.p;
 @@
 WARN(p[0], "IDWriteGdiInterop1*", "PDWRITEGDIINTEROP1")
 
 
-@r412@
+@r518@
 typedef LPDWRITEGDIINTEROP1;
 position p;
 @@
@@ -5570,12 +7001,12 @@ position p;
 + IDWriteGdiInterop1 *
 
 @script:python depends on report@
-p << r412.p;
+p << r518.p;
 @@
 WARN(p[0], "IDWriteGdiInterop1*", "LPDWRITEGDIINTEROP1")
 
 
-@r413@
+@r519@
 typedef IDWriteGlyphRunAnalysis;
 typedef PDWRITEGLYPHRUNANALYSIS;
 position p;
@@ -5584,12 +7015,12 @@ position p;
 + IDWriteGlyphRunAnalysis *
 
 @script:python depends on report@
-p << r413.p;
+p << r519.p;
 @@
 WARN(p[0], "IDWriteGlyphRunAnalysis*", "PDWRITEGLYPHRUNANALYSIS")
 
 
-@r414@
+@r520@
 typedef LPDWRITEGLYPHRUNANALYSIS;
 position p;
 @@
@@ -5597,12 +7028,39 @@ position p;
 + IDWriteGlyphRunAnalysis *
 
 @script:python depends on report@
-p << r414.p;
+p << r520.p;
 @@
 WARN(p[0], "IDWriteGlyphRunAnalysis*", "LPDWRITEGLYPHRUNANALYSIS")
 
 
-@r415@
+@r521@
+typedef IDWriteInMemoryFontFileLoader;
+typedef PDWRITEINMEMORYFONTFILELOADER;
+position p;
+@@
+- PDWRITEINMEMORYFONTFILELOADER@p
++ IDWriteInMemoryFontFileLoader *
+
+@script:python depends on report@
+p << r521.p;
+@@
+WARN(p[0], "IDWriteInMemoryFontFileLoader*", "PDWRITEINMEMORYFONTFILELOADER")
+
+
+@r522@
+typedef LPDWRITEINMEMORYFONTFILELOADER;
+position p;
+@@
+- LPDWRITEINMEMORYFONTFILELOADER@p
++ IDWriteInMemoryFontFileLoader *
+
+@script:python depends on report@
+p << r522.p;
+@@
+WARN(p[0], "IDWriteInMemoryFontFileLoader*", "LPDWRITEINMEMORYFONTFILELOADER")
+
+
+@r523@
 typedef IDWriteInlineObject;
 typedef PDWRITEINLINEOBJECT;
 position p;
@@ -5611,12 +7069,12 @@ position p;
 + IDWriteInlineObject *
 
 @script:python depends on report@
-p << r415.p;
+p << r523.p;
 @@
 WARN(p[0], "IDWriteInlineObject*", "PDWRITEINLINEOBJECT")
 
 
-@r416@
+@r524@
 typedef LPDWRITEINLINEOBJECT;
 position p;
 @@
@@ -5624,12 +7082,12 @@ position p;
 + IDWriteInlineObject *
 
 @script:python depends on report@
-p << r416.p;
+p << r524.p;
 @@
 WARN(p[0], "IDWriteInlineObject*", "LPDWRITEINLINEOBJECT")
 
 
-@r417@
+@r525@
 typedef IDWriteLocalFontFileLoader;
 typedef PDWRITELOCALFONTFILELOADER;
 position p;
@@ -5638,12 +7096,12 @@ position p;
 + IDWriteLocalFontFileLoader *
 
 @script:python depends on report@
-p << r417.p;
+p << r525.p;
 @@
 WARN(p[0], "IDWriteLocalFontFileLoader*", "PDWRITELOCALFONTFILELOADER")
 
 
-@r418@
+@r526@
 typedef LPDWRITELOCALFONTFILELOADER;
 position p;
 @@
@@ -5651,12 +7109,12 @@ position p;
 + IDWriteLocalFontFileLoader *
 
 @script:python depends on report@
-p << r418.p;
+p << r526.p;
 @@
 WARN(p[0], "IDWriteLocalFontFileLoader*", "LPDWRITELOCALFONTFILELOADER")
 
 
-@r419@
+@r527@
 typedef IDWriteLocalizedStrings;
 typedef PDWRITELOCALIZEDSTRINGS;
 position p;
@@ -5665,12 +7123,12 @@ position p;
 + IDWriteLocalizedStrings *
 
 @script:python depends on report@
-p << r419.p;
+p << r527.p;
 @@
 WARN(p[0], "IDWriteLocalizedStrings*", "PDWRITELOCALIZEDSTRINGS")
 
 
-@r420@
+@r528@
 typedef LPDWRITELOCALIZEDSTRINGS;
 position p;
 @@
@@ -5678,12 +7136,12 @@ position p;
 + IDWriteLocalizedStrings *
 
 @script:python depends on report@
-p << r420.p;
+p << r528.p;
 @@
 WARN(p[0], "IDWriteLocalizedStrings*", "LPDWRITELOCALIZEDSTRINGS")
 
 
-@r421@
+@r529@
 typedef IDWriteNumberSubstitution;
 typedef PDWRITENUMBERSUBSTITUTION;
 position p;
@@ -5692,12 +7150,12 @@ position p;
 + IDWriteNumberSubstitution *
 
 @script:python depends on report@
-p << r421.p;
+p << r529.p;
 @@
 WARN(p[0], "IDWriteNumberSubstitution*", "PDWRITENUMBERSUBSTITUTION")
 
 
-@r422@
+@r530@
 typedef LPDWRITENUMBERSUBSTITUTION;
 position p;
 @@
@@ -5705,12 +7163,12 @@ position p;
 + IDWriteNumberSubstitution *
 
 @script:python depends on report@
-p << r422.p;
+p << r530.p;
 @@
 WARN(p[0], "IDWriteNumberSubstitution*", "LPDWRITENUMBERSUBSTITUTION")
 
 
-@r423@
+@r531@
 typedef IDWriteRenderingParams3;
 typedef PDWRITERENDERINGPARAMS3;
 position p;
@@ -5719,12 +7177,12 @@ position p;
 + IDWriteRenderingParams3 *
 
 @script:python depends on report@
-p << r423.p;
+p << r531.p;
 @@
 WARN(p[0], "IDWriteRenderingParams3*", "PDWRITERENDERINGPARAMS3")
 
 
-@r424@
+@r532@
 typedef LPDWRITERENDERINGPARAMS3;
 position p;
 @@
@@ -5732,12 +7190,12 @@ position p;
 + IDWriteRenderingParams3 *
 
 @script:python depends on report@
-p << r424.p;
+p << r532.p;
 @@
 WARN(p[0], "IDWriteRenderingParams3*", "LPDWRITERENDERINGPARAMS3")
 
 
-@r425@
+@r533@
 typedef IDWriteTextAnalysisSink;
 typedef PDWRITETEXTANALYSISSINK;
 position p;
@@ -5746,12 +7204,12 @@ position p;
 + IDWriteTextAnalysisSink *
 
 @script:python depends on report@
-p << r425.p;
+p << r533.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSink*", "PDWRITETEXTANALYSISSINK")
 
 
-@r426@
+@r534@
 typedef LPDWRITETEXTANALYSISSINK;
 position p;
 @@
@@ -5759,12 +7217,12 @@ position p;
 + IDWriteTextAnalysisSink *
 
 @script:python depends on report@
-p << r426.p;
+p << r534.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSink*", "LPDWRITETEXTANALYSISSINK")
 
 
-@r427@
+@r535@
 typedef IDWriteTextAnalysisSink1;
 typedef PDWRITETEXTANALYSISSINK1;
 position p;
@@ -5773,12 +7231,12 @@ position p;
 + IDWriteTextAnalysisSink1 *
 
 @script:python depends on report@
-p << r427.p;
+p << r535.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSink1*", "PDWRITETEXTANALYSISSINK1")
 
 
-@r428@
+@r536@
 typedef LPDWRITETEXTANALYSISSINK1;
 position p;
 @@
@@ -5786,12 +7244,12 @@ position p;
 + IDWriteTextAnalysisSink1 *
 
 @script:python depends on report@
-p << r428.p;
+p << r536.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSink1*", "LPDWRITETEXTANALYSISSINK1")
 
 
-@r429@
+@r537@
 typedef IDWriteTextAnalysisSource;
 typedef PDWRITETEXTANALYSISSOURCE;
 position p;
@@ -5800,12 +7258,12 @@ position p;
 + IDWriteTextAnalysisSource *
 
 @script:python depends on report@
-p << r429.p;
+p << r537.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSource*", "PDWRITETEXTANALYSISSOURCE")
 
 
-@r430@
+@r538@
 typedef LPDWRITETEXTANALYSISSOURCE;
 position p;
 @@
@@ -5813,12 +7271,12 @@ position p;
 + IDWriteTextAnalysisSource *
 
 @script:python depends on report@
-p << r430.p;
+p << r538.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSource*", "LPDWRITETEXTANALYSISSOURCE")
 
 
-@r431@
+@r539@
 typedef IDWriteTextAnalysisSource1;
 typedef PDWRITETEXTANALYSISSOURCE1;
 position p;
@@ -5827,12 +7285,12 @@ position p;
 + IDWriteTextAnalysisSource1 *
 
 @script:python depends on report@
-p << r431.p;
+p << r539.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSource1*", "PDWRITETEXTANALYSISSOURCE1")
 
 
-@r432@
+@r540@
 typedef LPDWRITETEXTANALYSISSOURCE1;
 position p;
 @@
@@ -5840,93 +7298,66 @@ position p;
 + IDWriteTextAnalysisSource1 *
 
 @script:python depends on report@
-p << r432.p;
+p << r540.p;
 @@
 WARN(p[0], "IDWriteTextAnalysisSource1*", "LPDWRITETEXTANALYSISSOURCE1")
 
 
-@r433@
-typedef IDWriteTextFormat1;
-typedef PDWRITETEXTFORMAT1;
+@r541@
+typedef IDWriteTextFormat3;
+typedef PDWRITETEXTFORMAT3;
 position p;
 @@
-- PDWRITETEXTFORMAT1@p
-+ IDWriteTextFormat1 *
+- PDWRITETEXTFORMAT3@p
++ IDWriteTextFormat3 *
 
 @script:python depends on report@
-p << r433.p;
+p << r541.p;
 @@
-WARN(p[0], "IDWriteTextFormat1*", "PDWRITETEXTFORMAT1")
+WARN(p[0], "IDWriteTextFormat3*", "PDWRITETEXTFORMAT3")
 
 
-@r434@
-typedef LPDWRITETEXTFORMAT1;
+@r542@
+typedef LPDWRITETEXTFORMAT3;
 position p;
 @@
-- LPDWRITETEXTFORMAT1@p
-+ IDWriteTextFormat1 *
+- LPDWRITETEXTFORMAT3@p
++ IDWriteTextFormat3 *
 
 @script:python depends on report@
-p << r434.p;
+p << r542.p;
 @@
-WARN(p[0], "IDWriteTextFormat1*", "LPDWRITETEXTFORMAT1")
+WARN(p[0], "IDWriteTextFormat3*", "LPDWRITETEXTFORMAT3")
 
 
-@r435@
-typedef IDWriteTextFormat2;
-typedef PDWRITETEXTFORMAT2;
+@r543@
+typedef IDWriteTextLayout4;
+typedef PDWRITETEXTLAYOUT4;
 position p;
 @@
-- PDWRITETEXTFORMAT2@p
-+ IDWriteTextFormat2 *
+- PDWRITETEXTLAYOUT4@p
++ IDWriteTextLayout4 *
 
 @script:python depends on report@
-p << r435.p;
+p << r543.p;
 @@
-WARN(p[0], "IDWriteTextFormat2*", "PDWRITETEXTFORMAT2")
+WARN(p[0], "IDWriteTextLayout4*", "PDWRITETEXTLAYOUT4")
 
 
-@r436@
-typedef LPDWRITETEXTFORMAT2;
+@r544@
+typedef LPDWRITETEXTLAYOUT4;
 position p;
 @@
-- LPDWRITETEXTFORMAT2@p
-+ IDWriteTextFormat2 *
+- LPDWRITETEXTLAYOUT4@p
++ IDWriteTextLayout4 *
 
 @script:python depends on report@
-p << r436.p;
+p << r544.p;
 @@
-WARN(p[0], "IDWriteTextFormat2*", "LPDWRITETEXTFORMAT2")
+WARN(p[0], "IDWriteTextLayout4*", "LPDWRITETEXTLAYOUT4")
 
 
-@r437@
-typedef IDWriteTextLayout3;
-typedef PDWRITETEXTLAYOUT3;
-position p;
-@@
-- PDWRITETEXTLAYOUT3@p
-+ IDWriteTextLayout3 *
-
-@script:python depends on report@
-p << r437.p;
-@@
-WARN(p[0], "IDWriteTextLayout3*", "PDWRITETEXTLAYOUT3")
-
-
-@r438@
-typedef LPDWRITETEXTLAYOUT3;
-position p;
-@@
-- LPDWRITETEXTLAYOUT3@p
-+ IDWriteTextLayout3 *
-
-@script:python depends on report@
-p << r438.p;
-@@
-WARN(p[0], "IDWriteTextLayout3*", "LPDWRITETEXTLAYOUT3")
-
-
-@r439@
+@r545@
 typedef IDWriteTextRenderer;
 typedef PDWRITETEXTRENDERER;
 position p;
@@ -5935,12 +7366,12 @@ position p;
 + IDWriteTextRenderer *
 
 @script:python depends on report@
-p << r439.p;
+p << r545.p;
 @@
 WARN(p[0], "IDWriteTextRenderer*", "PDWRITETEXTRENDERER")
 
 
-@r440@
+@r546@
 typedef LPDWRITETEXTRENDERER;
 position p;
 @@
@@ -5948,12 +7379,12 @@ position p;
 + IDWriteTextRenderer *
 
 @script:python depends on report@
-p << r440.p;
+p << r546.p;
 @@
 WARN(p[0], "IDWriteTextRenderer*", "LPDWRITETEXTRENDERER")
 
 
-@r441@
+@r547@
 typedef IDWriteTypography;
 typedef PDWRITETYPOGRAPHY;
 position p;
@@ -5962,12 +7393,12 @@ position p;
 + IDWriteTypography *
 
 @script:python depends on report@
-p << r441.p;
+p << r547.p;
 @@
 WARN(p[0], "IDWriteTypography*", "PDWRITETYPOGRAPHY")
 
 
-@r442@
+@r548@
 typedef LPDWRITETYPOGRAPHY;
 position p;
 @@
@@ -5975,93 +7406,93 @@ position p;
 + IDWriteTypography *
 
 @script:python depends on report@
-p << r442.p;
+p << r548.p;
 @@
 WARN(p[0], "IDWriteTypography*", "LPDWRITETYPOGRAPHY")
 
 
-@r443@
-typedef IDXGIAdapter1;
-typedef PDXGIADAPTER1;
+@r549@
+typedef IDXGIAdapter;
+typedef PDXGIADAPTER;
 position p;
 @@
-- PDXGIADAPTER1@p
-+ IDXGIAdapter1 *
+- PDXGIADAPTER@p
++ IDXGIAdapter *
 
 @script:python depends on report@
-p << r443.p;
+p << r549.p;
 @@
-WARN(p[0], "IDXGIAdapter1*", "PDXGIADAPTER1")
+WARN(p[0], "IDXGIAdapter*", "PDXGIADAPTER")
 
 
-@r444@
-typedef LPDXGIADAPTER1;
+@r550@
+typedef LPDXGIADAPTER;
 position p;
 @@
-- LPDXGIADAPTER1@p
-+ IDXGIAdapter1 *
+- LPDXGIADAPTER@p
++ IDXGIAdapter *
 
 @script:python depends on report@
-p << r444.p;
+p << r550.p;
 @@
-WARN(p[0], "IDXGIAdapter1*", "LPDXGIADAPTER1")
+WARN(p[0], "IDXGIAdapter*", "LPDXGIADAPTER")
 
 
-@r445@
-typedef IDXGIFactory1;
-typedef PDXGIFACTORY1;
+@r551@
+typedef IDXGIFactory;
+typedef PDXGIFACTORY;
 position p;
 @@
-- PDXGIFACTORY1@p
-+ IDXGIFactory1 *
+- PDXGIFACTORY@p
++ IDXGIFactory *
 
 @script:python depends on report@
-p << r445.p;
+p << r551.p;
 @@
-WARN(p[0], "IDXGIFactory1*", "PDXGIFACTORY1")
+WARN(p[0], "IDXGIFactory*", "PDXGIFACTORY")
 
 
-@r446@
-typedef LPDXGIFACTORY1;
+@r552@
+typedef LPDXGIFACTORY;
 position p;
 @@
-- LPDXGIFACTORY1@p
-+ IDXGIFactory1 *
+- LPDXGIFACTORY@p
++ IDXGIFactory *
 
 @script:python depends on report@
-p << r446.p;
+p << r552.p;
 @@
-WARN(p[0], "IDXGIFactory1*", "LPDXGIFACTORY1")
+WARN(p[0], "IDXGIFactory*", "LPDXGIFACTORY")
 
 
-@r447@
-typedef IDXGIOutput;
-typedef PDXGIOUTPUT;
+@r553@
+typedef IDXGIOutput6;
+typedef PDXGIOUTPUT6;
 position p;
 @@
-- PDXGIOUTPUT@p
-+ IDXGIOutput *
+- PDXGIOUTPUT6@p
++ IDXGIOutput6 *
 
 @script:python depends on report@
-p << r447.p;
+p << r553.p;
 @@
-WARN(p[0], "IDXGIOutput*", "PDXGIOUTPUT")
+WARN(p[0], "IDXGIOutput6*", "PDXGIOUTPUT6")
 
 
-@r448@
-typedef LPDXGIOUTPUT;
+@r554@
+typedef LPDXGIOUTPUT6;
 position p;
 @@
-- LPDXGIOUTPUT@p
-+ IDXGIOutput *
+- LPDXGIOUTPUT6@p
++ IDXGIOutput6 *
 
 @script:python depends on report@
-p << r448.p;
+p << r554.p;
 @@
-WARN(p[0], "IDXGIOutput*", "LPDXGIOUTPUT")
+WARN(p[0], "IDXGIOutput6*", "LPDXGIOUTPUT6")
 
 
-@r449@
+@r555@
 typedef IDXGISurface1;
 typedef PDXGISURFACE1;
 position p;
@@ -6070,12 +7501,12 @@ position p;
 + IDXGISurface1 *
 
 @script:python depends on report@
-p << r449.p;
+p << r555.p;
 @@
 WARN(p[0], "IDXGISurface1*", "PDXGISURFACE1")
 
 
-@r450@
+@r556@
 typedef LPDXGISURFACE1;
 position p;
 @@
@@ -6083,39 +7514,66 @@ position p;
 + IDXGISurface1 *
 
 @script:python depends on report@
-p << r450.p;
+p << r556.p;
 @@
 WARN(p[0], "IDXGISurface1*", "LPDXGISURFACE1")
 
 
-@r451@
-typedef IDXGISwapChain;
-typedef PDXGISWAPCHAIN;
+@r557@
+typedef IDXGISwapChain1;
+typedef PDXGISWAPCHAIN1;
 position p;
 @@
-- PDXGISWAPCHAIN@p
-+ IDXGISwapChain *
+- PDXGISWAPCHAIN1@p
++ IDXGISwapChain1 *
 
 @script:python depends on report@
-p << r451.p;
+p << r557.p;
 @@
-WARN(p[0], "IDXGISwapChain*", "PDXGISWAPCHAIN")
+WARN(p[0], "IDXGISwapChain1*", "PDXGISWAPCHAIN1")
 
 
-@r452@
-typedef LPDXGISWAPCHAIN;
+@r558@
+typedef LPDXGISWAPCHAIN1;
 position p;
 @@
-- LPDXGISWAPCHAIN@p
-+ IDXGISwapChain *
+- LPDXGISWAPCHAIN1@p
++ IDXGISwapChain1 *
 
 @script:python depends on report@
-p << r452.p;
+p << r558.p;
 @@
-WARN(p[0], "IDXGISwapChain*", "LPDXGISWAPCHAIN")
+WARN(p[0], "IDXGISwapChain1*", "LPDXGISWAPCHAIN1")
 
 
-@r453@
+@r559@
+typedef IDXGISwapChain4;
+typedef PDXGISWAPCHAIN4;
+position p;
+@@
+- PDXGISWAPCHAIN4@p
++ IDXGISwapChain4 *
+
+@script:python depends on report@
+p << r559.p;
+@@
+WARN(p[0], "IDXGISwapChain4*", "PDXGISWAPCHAIN4")
+
+
+@r560@
+typedef LPDXGISWAPCHAIN4;
+position p;
+@@
+- LPDXGISWAPCHAIN4@p
++ IDXGISwapChain4 *
+
+@script:python depends on report@
+p << r560.p;
+@@
+WARN(p[0], "IDXGISwapChain4*", "LPDXGISWAPCHAIN4")
+
+
+@r561@
 typedef IDailyTrigger;
 typedef PDAILYTRIGGER;
 position p;
@@ -6124,12 +7582,12 @@ position p;
 + IDailyTrigger *
 
 @script:python depends on report@
-p << r453.p;
+p << r561.p;
 @@
 WARN(p[0], "IDailyTrigger*", "PDAILYTRIGGER")
 
 
-@r454@
+@r562@
 typedef LPDAILYTRIGGER;
 position p;
 @@
@@ -6137,12 +7595,12 @@ position p;
 + IDailyTrigger *
 
 @script:python depends on report@
-p << r454.p;
+p << r562.p;
 @@
 WARN(p[0], "IDailyTrigger*", "LPDAILYTRIGGER")
 
 
-@r455@
+@r563@
 typedef IDataAdviseHolder;
 typedef PDATAADVISEHOLDER;
 position p;
@@ -6151,12 +7609,12 @@ position p;
 + IDataAdviseHolder *
 
 @script:python depends on report@
-p << r455.p;
+p << r563.p;
 @@
 WARN(p[0], "IDataAdviseHolder*", "PDATAADVISEHOLDER")
 
 
-@r456@
+@r564@
 typedef LPDATAADVISEHOLDER;
 position p;
 @@
@@ -6164,12 +7622,12 @@ position p;
 + IDataAdviseHolder *
 
 @script:python depends on report@
-p << r456.p;
+p << r564.p;
 @@
 WARN(p[0], "IDataAdviseHolder*", "LPDATAADVISEHOLDER")
 
 
-@r457@
+@r565@
 typedef IDataConvert;
 typedef PDATACONVERT;
 position p;
@@ -6178,12 +7636,12 @@ position p;
 + IDataConvert *
 
 @script:python depends on report@
-p << r457.p;
+p << r565.p;
 @@
 WARN(p[0], "IDataConvert*", "PDATACONVERT")
 
 
-@r458@
+@r566@
 typedef LPDATACONVERT;
 position p;
 @@
@@ -6191,12 +7649,12 @@ position p;
 + IDataConvert *
 
 @script:python depends on report@
-p << r458.p;
+p << r566.p;
 @@
 WARN(p[0], "IDataConvert*", "LPDATACONVERT")
 
 
-@r459@
+@r567@
 typedef IDataInitialize;
 typedef PDATAINITIALIZE;
 position p;
@@ -6205,12 +7663,12 @@ position p;
 + IDataInitialize *
 
 @script:python depends on report@
-p << r459.p;
+p << r567.p;
 @@
 WARN(p[0], "IDataInitialize*", "PDATAINITIALIZE")
 
 
-@r460@
+@r568@
 typedef LPDATAINITIALIZE;
 position p;
 @@
@@ -6218,12 +7676,12 @@ position p;
 + IDataInitialize *
 
 @script:python depends on report@
-p << r460.p;
+p << r568.p;
 @@
 WARN(p[0], "IDataInitialize*", "LPDATAINITIALIZE")
 
 
-@r461@
+@r569@
 typedef IDataObject;
 typedef PDATAOBJECT;
 position p;
@@ -6232,12 +7690,12 @@ position p;
 + IDataObject *
 
 @script:python depends on report@
-p << r461.p;
+p << r569.p;
 @@
 WARN(p[0], "IDataObject*", "PDATAOBJECT")
 
 
-@r462@
+@r570@
 typedef LPDATAOBJECT;
 position p;
 @@
@@ -6245,12 +7703,12 @@ position p;
 + IDataObject *
 
 @script:python depends on report@
-p << r462.p;
+p << r570.p;
 @@
 WARN(p[0], "IDataObject*", "LPDATAOBJECT")
 
 
-@r463@
+@r571@
 typedef IDataSourceLocator;
 typedef PDATASOURCELOCATOR;
 position p;
@@ -6259,12 +7717,12 @@ position p;
 + IDataSourceLocator *
 
 @script:python depends on report@
-p << r463.p;
+p << r571.p;
 @@
 WARN(p[0], "IDataSourceLocator*", "PDATASOURCELOCATOR")
 
 
-@r464@
+@r572@
 typedef LPDATASOURCELOCATOR;
 position p;
 @@
@@ -6272,12 +7730,174 @@ position p;
 + IDataSourceLocator *
 
 @script:python depends on report@
-p << r464.p;
+p << r572.p;
 @@
 WARN(p[0], "IDataSourceLocator*", "LPDATASOURCELOCATOR")
 
 
-@r465@
+@r573@
+typedef IDebugAdvanced;
+typedef PDEBUGADVANCED;
+position p;
+@@
+- PDEBUGADVANCED@p
++ IDebugAdvanced *
+
+@script:python depends on report@
+p << r573.p;
+@@
+WARN(p[0], "IDebugAdvanced*", "PDEBUGADVANCED")
+
+
+@r574@
+typedef LPDEBUGADVANCED;
+position p;
+@@
+- LPDEBUGADVANCED@p
++ IDebugAdvanced *
+
+@script:python depends on report@
+p << r574.p;
+@@
+WARN(p[0], "IDebugAdvanced*", "LPDEBUGADVANCED")
+
+
+@r575@
+typedef IDebugClient7;
+typedef PDEBUGCLIENT7;
+position p;
+@@
+- PDEBUGCLIENT7@p
++ IDebugClient7 *
+
+@script:python depends on report@
+p << r575.p;
+@@
+WARN(p[0], "IDebugClient7*", "PDEBUGCLIENT7")
+
+
+@r576@
+typedef LPDEBUGCLIENT7;
+position p;
+@@
+- LPDEBUGCLIENT7@p
++ IDebugClient7 *
+
+@script:python depends on report@
+p << r576.p;
+@@
+WARN(p[0], "IDebugClient7*", "LPDEBUGCLIENT7")
+
+
+@r577@
+typedef IDebugControl2;
+typedef PDEBUGCONTROL2;
+position p;
+@@
+- PDEBUGCONTROL2@p
++ IDebugControl2 *
+
+@script:python depends on report@
+p << r577.p;
+@@
+WARN(p[0], "IDebugControl2*", "PDEBUGCONTROL2")
+
+
+@r578@
+typedef LPDEBUGCONTROL2;
+position p;
+@@
+- LPDEBUGCONTROL2@p
++ IDebugControl2 *
+
+@script:python depends on report@
+p << r578.p;
+@@
+WARN(p[0], "IDebugControl2*", "LPDEBUGCONTROL2")
+
+
+@r579@
+typedef IDebugDataSpaces;
+typedef PDEBUGDATASPACES;
+position p;
+@@
+- PDEBUGDATASPACES@p
++ IDebugDataSpaces *
+
+@script:python depends on report@
+p << r579.p;
+@@
+WARN(p[0], "IDebugDataSpaces*", "PDEBUGDATASPACES")
+
+
+@r580@
+typedef LPDEBUGDATASPACES;
+position p;
+@@
+- LPDEBUGDATASPACES@p
++ IDebugDataSpaces *
+
+@script:python depends on report@
+p << r580.p;
+@@
+WARN(p[0], "IDebugDataSpaces*", "LPDEBUGDATASPACES")
+
+
+@r581@
+typedef IDebugSymbols3;
+typedef PDEBUGSYMBOLS3;
+position p;
+@@
+- PDEBUGSYMBOLS3@p
++ IDebugSymbols3 *
+
+@script:python depends on report@
+p << r581.p;
+@@
+WARN(p[0], "IDebugSymbols3*", "PDEBUGSYMBOLS3")
+
+
+@r582@
+typedef LPDEBUGSYMBOLS3;
+position p;
+@@
+- LPDEBUGSYMBOLS3@p
++ IDebugSymbols3 *
+
+@script:python depends on report@
+p << r582.p;
+@@
+WARN(p[0], "IDebugSymbols3*", "LPDEBUGSYMBOLS3")
+
+
+@r583@
+typedef IDebugSystemObjects;
+typedef PDEBUGSYSTEMOBJECTS;
+position p;
+@@
+- PDEBUGSYSTEMOBJECTS@p
++ IDebugSystemObjects *
+
+@script:python depends on report@
+p << r583.p;
+@@
+WARN(p[0], "IDebugSystemObjects*", "PDEBUGSYSTEMOBJECTS")
+
+
+@r584@
+typedef LPDEBUGSYSTEMOBJECTS;
+position p;
+@@
+- LPDEBUGSYSTEMOBJECTS@p
++ IDebugSystemObjects *
+
+@script:python depends on report@
+p << r584.p;
+@@
+WARN(p[0], "IDebugSystemObjects*", "LPDEBUGSYSTEMOBJECTS")
+
+
+@r585@
 typedef IDictionary;
 typedef PDICTIONARY;
 position p;
@@ -6286,12 +7906,12 @@ position p;
 + IDictionary *
 
 @script:python depends on report@
-p << r465.p;
+p << r585.p;
 @@
 WARN(p[0], "IDictionary*", "PDICTIONARY")
 
 
-@r466@
+@r586@
 typedef LPDICTIONARY;
 position p;
 @@
@@ -6299,12 +7919,12 @@ position p;
 + IDictionary *
 
 @script:python depends on report@
-p << r466.p;
+p << r586.p;
 @@
 WARN(p[0], "IDictionary*", "LPDICTIONARY")
 
 
-@r467@
+@r587@
 typedef IDirect3D;
 typedef PDIRECT3D;
 position p;
@@ -6313,12 +7933,12 @@ position p;
 + IDirect3D *
 
 @script:python depends on report@
-p << r467.p;
+p << r587.p;
 @@
 WARN(p[0], "IDirect3D*", "PDIRECT3D")
 
 
-@r468@
+@r588@
 typedef LPDIRECT3D;
 position p;
 @@
@@ -6326,12 +7946,12 @@ position p;
 + IDirect3D *
 
 @script:python depends on report@
-p << r468.p;
+p << r588.p;
 @@
 WARN(p[0], "IDirect3D*", "LPDIRECT3D")
 
 
-@r469@
+@r589@
 typedef IDirect3D2;
 typedef PDIRECT3D2;
 position p;
@@ -6340,12 +7960,12 @@ position p;
 + IDirect3D2 *
 
 @script:python depends on report@
-p << r469.p;
+p << r589.p;
 @@
 WARN(p[0], "IDirect3D2*", "PDIRECT3D2")
 
 
-@r470@
+@r590@
 typedef LPDIRECT3D2;
 position p;
 @@
@@ -6353,12 +7973,12 @@ position p;
 + IDirect3D2 *
 
 @script:python depends on report@
-p << r470.p;
+p << r590.p;
 @@
 WARN(p[0], "IDirect3D2*", "LPDIRECT3D2")
 
 
-@r471@
+@r591@
 typedef IDirect3D3;
 typedef PDIRECT3D3;
 position p;
@@ -6367,12 +7987,12 @@ position p;
 + IDirect3D3 *
 
 @script:python depends on report@
-p << r471.p;
+p << r591.p;
 @@
 WARN(p[0], "IDirect3D3*", "PDIRECT3D3")
 
 
-@r472@
+@r592@
 typedef LPDIRECT3D3;
 position p;
 @@
@@ -6380,12 +8000,12 @@ position p;
 + IDirect3D3 *
 
 @script:python depends on report@
-p << r472.p;
+p << r592.p;
 @@
 WARN(p[0], "IDirect3D3*", "LPDIRECT3D3")
 
 
-@r473@
+@r593@
 typedef IDirect3D7;
 typedef PDIRECT3D7;
 position p;
@@ -6394,12 +8014,12 @@ position p;
 + IDirect3D7 *
 
 @script:python depends on report@
-p << r473.p;
+p << r593.p;
 @@
 WARN(p[0], "IDirect3D7*", "PDIRECT3D7")
 
 
-@r474@
+@r594@
 typedef LPDIRECT3D7;
 position p;
 @@
@@ -6407,12 +8027,12 @@ position p;
 + IDirect3D7 *
 
 @script:python depends on report@
-p << r474.p;
+p << r594.p;
 @@
 WARN(p[0], "IDirect3D7*", "LPDIRECT3D7")
 
 
-@r475@
+@r595@
 typedef IDirect3D8;
 typedef PDIRECT3D8;
 position p;
@@ -6421,12 +8041,12 @@ position p;
 + IDirect3D8 *
 
 @script:python depends on report@
-p << r475.p;
+p << r595.p;
 @@
 WARN(p[0], "IDirect3D8*", "PDIRECT3D8")
 
 
-@r476@
+@r596@
 typedef LPDIRECT3D8;
 position p;
 @@
@@ -6434,12 +8054,12 @@ position p;
 + IDirect3D8 *
 
 @script:python depends on report@
-p << r476.p;
+p << r596.p;
 @@
 WARN(p[0], "IDirect3D8*", "LPDIRECT3D8")
 
 
-@r477@
+@r597@
 typedef IDirect3D9Ex;
 typedef PDIRECT3D9EX;
 position p;
@@ -6448,12 +8068,12 @@ position p;
 + IDirect3D9Ex *
 
 @script:python depends on report@
-p << r477.p;
+p << r597.p;
 @@
 WARN(p[0], "IDirect3D9Ex*", "PDIRECT3D9EX")
 
 
-@r478@
+@r598@
 typedef LPDIRECT3D9EX;
 position p;
 @@
@@ -6461,12 +8081,12 @@ position p;
 + IDirect3D9Ex *
 
 @script:python depends on report@
-p << r478.p;
+p << r598.p;
 @@
 WARN(p[0], "IDirect3D9Ex*", "LPDIRECT3D9EX")
 
 
-@r479@
+@r599@
 typedef IDirect3DBaseTexture8;
 typedef PDIRECT3DBASETEXTURE8;
 position p;
@@ -6475,12 +8095,12 @@ position p;
 + IDirect3DBaseTexture8 *
 
 @script:python depends on report@
-p << r479.p;
+p << r599.p;
 @@
 WARN(p[0], "IDirect3DBaseTexture8*", "PDIRECT3DBASETEXTURE8")
 
 
-@r480@
+@r600@
 typedef LPDIRECT3DBASETEXTURE8;
 position p;
 @@
@@ -6488,12 +8108,12 @@ position p;
 + IDirect3DBaseTexture8 *
 
 @script:python depends on report@
-p << r480.p;
+p << r600.p;
 @@
 WARN(p[0], "IDirect3DBaseTexture8*", "LPDIRECT3DBASETEXTURE8")
 
 
-@r481@
+@r601@
 typedef IDirect3DBaseTexture9;
 typedef PDIRECT3DBASETEXTURE9;
 position p;
@@ -6502,12 +8122,12 @@ position p;
 + IDirect3DBaseTexture9 *
 
 @script:python depends on report@
-p << r481.p;
+p << r601.p;
 @@
 WARN(p[0], "IDirect3DBaseTexture9*", "PDIRECT3DBASETEXTURE9")
 
 
-@r482@
+@r602@
 typedef LPDIRECT3DBASETEXTURE9;
 position p;
 @@
@@ -6515,12 +8135,12 @@ position p;
 + IDirect3DBaseTexture9 *
 
 @script:python depends on report@
-p << r482.p;
+p << r602.p;
 @@
 WARN(p[0], "IDirect3DBaseTexture9*", "LPDIRECT3DBASETEXTURE9")
 
 
-@r483@
+@r603@
 typedef IDirect3DDevice;
 typedef PDIRECT3DDEVICE;
 position p;
@@ -6529,12 +8149,12 @@ position p;
 + IDirect3DDevice *
 
 @script:python depends on report@
-p << r483.p;
+p << r603.p;
 @@
 WARN(p[0], "IDirect3DDevice*", "PDIRECT3DDEVICE")
 
 
-@r484@
+@r604@
 typedef LPDIRECT3DDEVICE;
 position p;
 @@
@@ -6542,12 +8162,12 @@ position p;
 + IDirect3DDevice *
 
 @script:python depends on report@
-p << r484.p;
+p << r604.p;
 @@
 WARN(p[0], "IDirect3DDevice*", "LPDIRECT3DDEVICE")
 
 
-@r485@
+@r605@
 typedef IDirect3DDevice2;
 typedef PDIRECT3DDEVICE2;
 position p;
@@ -6556,12 +8176,12 @@ position p;
 + IDirect3DDevice2 *
 
 @script:python depends on report@
-p << r485.p;
+p << r605.p;
 @@
 WARN(p[0], "IDirect3DDevice2*", "PDIRECT3DDEVICE2")
 
 
-@r486@
+@r606@
 typedef LPDIRECT3DDEVICE2;
 position p;
 @@
@@ -6569,12 +8189,12 @@ position p;
 + IDirect3DDevice2 *
 
 @script:python depends on report@
-p << r486.p;
+p << r606.p;
 @@
 WARN(p[0], "IDirect3DDevice2*", "LPDIRECT3DDEVICE2")
 
 
-@r487@
+@r607@
 typedef IDirect3DDevice3;
 typedef PDIRECT3DDEVICE3;
 position p;
@@ -6583,12 +8203,12 @@ position p;
 + IDirect3DDevice3 *
 
 @script:python depends on report@
-p << r487.p;
+p << r607.p;
 @@
 WARN(p[0], "IDirect3DDevice3*", "PDIRECT3DDEVICE3")
 
 
-@r488@
+@r608@
 typedef LPDIRECT3DDEVICE3;
 position p;
 @@
@@ -6596,12 +8216,12 @@ position p;
 + IDirect3DDevice3 *
 
 @script:python depends on report@
-p << r488.p;
+p << r608.p;
 @@
 WARN(p[0], "IDirect3DDevice3*", "LPDIRECT3DDEVICE3")
 
 
-@r489@
+@r609@
 typedef IDirect3DDevice7;
 typedef PDIRECT3DDEVICE7;
 position p;
@@ -6610,12 +8230,12 @@ position p;
 + IDirect3DDevice7 *
 
 @script:python depends on report@
-p << r489.p;
+p << r609.p;
 @@
 WARN(p[0], "IDirect3DDevice7*", "PDIRECT3DDEVICE7")
 
 
-@r490@
+@r610@
 typedef LPDIRECT3DDEVICE7;
 position p;
 @@
@@ -6623,12 +8243,12 @@ position p;
 + IDirect3DDevice7 *
 
 @script:python depends on report@
-p << r490.p;
+p << r610.p;
 @@
 WARN(p[0], "IDirect3DDevice7*", "LPDIRECT3DDEVICE7")
 
 
-@r491@
+@r611@
 typedef IDirect3DDevice8;
 typedef PDIRECT3DDEVICE8;
 position p;
@@ -6637,12 +8257,12 @@ position p;
 + IDirect3DDevice8 *
 
 @script:python depends on report@
-p << r491.p;
+p << r611.p;
 @@
 WARN(p[0], "IDirect3DDevice8*", "PDIRECT3DDEVICE8")
 
 
-@r492@
+@r612@
 typedef LPDIRECT3DDEVICE8;
 position p;
 @@
@@ -6650,12 +8270,12 @@ position p;
 + IDirect3DDevice8 *
 
 @script:python depends on report@
-p << r492.p;
+p << r612.p;
 @@
 WARN(p[0], "IDirect3DDevice8*", "LPDIRECT3DDEVICE8")
 
 
-@r493@
+@r613@
 typedef IDirect3DDevice9Ex;
 typedef PDIRECT3DDEVICE9EX;
 position p;
@@ -6664,12 +8284,12 @@ position p;
 + IDirect3DDevice9Ex *
 
 @script:python depends on report@
-p << r493.p;
+p << r613.p;
 @@
 WARN(p[0], "IDirect3DDevice9Ex*", "PDIRECT3DDEVICE9EX")
 
 
-@r494@
+@r614@
 typedef LPDIRECT3DDEVICE9EX;
 position p;
 @@
@@ -6677,12 +8297,39 @@ position p;
 + IDirect3DDevice9Ex *
 
 @script:python depends on report@
-p << r494.p;
+p << r614.p;
 @@
 WARN(p[0], "IDirect3DDevice9Ex*", "LPDIRECT3DDEVICE9EX")
 
 
-@r495@
+@r615@
+typedef IDirect3DDeviceManager9;
+typedef PDIRECT3DDEVICEMANAGER9;
+position p;
+@@
+- PDIRECT3DDEVICEMANAGER9@p
++ IDirect3DDeviceManager9 *
+
+@script:python depends on report@
+p << r615.p;
+@@
+WARN(p[0], "IDirect3DDeviceManager9*", "PDIRECT3DDEVICEMANAGER9")
+
+
+@r616@
+typedef LPDIRECT3DDEVICEMANAGER9;
+position p;
+@@
+- LPDIRECT3DDEVICEMANAGER9@p
++ IDirect3DDeviceManager9 *
+
+@script:python depends on report@
+p << r616.p;
+@@
+WARN(p[0], "IDirect3DDeviceManager9*", "LPDIRECT3DDEVICEMANAGER9")
+
+
+@r617@
 typedef IDirect3DExecuteBuffer;
 typedef PDIRECT3DEXECUTEBUFFER;
 position p;
@@ -6691,12 +8338,12 @@ position p;
 + IDirect3DExecuteBuffer *
 
 @script:python depends on report@
-p << r495.p;
+p << r617.p;
 @@
 WARN(p[0], "IDirect3DExecuteBuffer*", "PDIRECT3DEXECUTEBUFFER")
 
 
-@r496@
+@r618@
 typedef LPDIRECT3DEXECUTEBUFFER;
 position p;
 @@
@@ -6704,12 +8351,12 @@ position p;
 + IDirect3DExecuteBuffer *
 
 @script:python depends on report@
-p << r496.p;
+p << r618.p;
 @@
 WARN(p[0], "IDirect3DExecuteBuffer*", "LPDIRECT3DEXECUTEBUFFER")
 
 
-@r497@
+@r619@
 typedef IDirect3DIndexBuffer8;
 typedef PDIRECT3DINDEXBUFFER8;
 position p;
@@ -6718,12 +8365,12 @@ position p;
 + IDirect3DIndexBuffer8 *
 
 @script:python depends on report@
-p << r497.p;
+p << r619.p;
 @@
 WARN(p[0], "IDirect3DIndexBuffer8*", "PDIRECT3DINDEXBUFFER8")
 
 
-@r498@
+@r620@
 typedef LPDIRECT3DINDEXBUFFER8;
 position p;
 @@
@@ -6731,12 +8378,12 @@ position p;
 + IDirect3DIndexBuffer8 *
 
 @script:python depends on report@
-p << r498.p;
+p << r620.p;
 @@
 WARN(p[0], "IDirect3DIndexBuffer8*", "LPDIRECT3DINDEXBUFFER8")
 
 
-@r499@
+@r621@
 typedef IDirect3DIndexBuffer9;
 typedef PDIRECT3DINDEXBUFFER9;
 position p;
@@ -6745,12 +8392,12 @@ position p;
 + IDirect3DIndexBuffer9 *
 
 @script:python depends on report@
-p << r499.p;
+p << r621.p;
 @@
 WARN(p[0], "IDirect3DIndexBuffer9*", "PDIRECT3DINDEXBUFFER9")
 
 
-@r500@
+@r622@
 typedef LPDIRECT3DINDEXBUFFER9;
 position p;
 @@
@@ -6758,12 +8405,12 @@ position p;
 + IDirect3DIndexBuffer9 *
 
 @script:python depends on report@
-p << r500.p;
+p << r622.p;
 @@
 WARN(p[0], "IDirect3DIndexBuffer9*", "LPDIRECT3DINDEXBUFFER9")
 
 
-@r501@
+@r623@
 typedef IDirect3DLight;
 typedef PDIRECT3DLIGHT;
 position p;
@@ -6772,12 +8419,12 @@ position p;
 + IDirect3DLight *
 
 @script:python depends on report@
-p << r501.p;
+p << r623.p;
 @@
 WARN(p[0], "IDirect3DLight*", "PDIRECT3DLIGHT")
 
 
-@r502@
+@r624@
 typedef LPDIRECT3DLIGHT;
 position p;
 @@
@@ -6785,12 +8432,12 @@ position p;
 + IDirect3DLight *
 
 @script:python depends on report@
-p << r502.p;
+p << r624.p;
 @@
 WARN(p[0], "IDirect3DLight*", "LPDIRECT3DLIGHT")
 
 
-@r503@
+@r625@
 typedef IDirect3DMaterial;
 typedef PDIRECT3DMATERIAL;
 position p;
@@ -6799,12 +8446,12 @@ position p;
 + IDirect3DMaterial *
 
 @script:python depends on report@
-p << r503.p;
+p << r625.p;
 @@
 WARN(p[0], "IDirect3DMaterial*", "PDIRECT3DMATERIAL")
 
 
-@r504@
+@r626@
 typedef LPDIRECT3DMATERIAL;
 position p;
 @@
@@ -6812,12 +8459,12 @@ position p;
 + IDirect3DMaterial *
 
 @script:python depends on report@
-p << r504.p;
+p << r626.p;
 @@
 WARN(p[0], "IDirect3DMaterial*", "LPDIRECT3DMATERIAL")
 
 
-@r505@
+@r627@
 typedef IDirect3DMaterial2;
 typedef PDIRECT3DMATERIAL2;
 position p;
@@ -6826,12 +8473,12 @@ position p;
 + IDirect3DMaterial2 *
 
 @script:python depends on report@
-p << r505.p;
+p << r627.p;
 @@
 WARN(p[0], "IDirect3DMaterial2*", "PDIRECT3DMATERIAL2")
 
 
-@r506@
+@r628@
 typedef LPDIRECT3DMATERIAL2;
 position p;
 @@
@@ -6839,12 +8486,12 @@ position p;
 + IDirect3DMaterial2 *
 
 @script:python depends on report@
-p << r506.p;
+p << r628.p;
 @@
 WARN(p[0], "IDirect3DMaterial2*", "LPDIRECT3DMATERIAL2")
 
 
-@r507@
+@r629@
 typedef IDirect3DMaterial3;
 typedef PDIRECT3DMATERIAL3;
 position p;
@@ -6853,12 +8500,12 @@ position p;
 + IDirect3DMaterial3 *
 
 @script:python depends on report@
-p << r507.p;
+p << r629.p;
 @@
 WARN(p[0], "IDirect3DMaterial3*", "PDIRECT3DMATERIAL3")
 
 
-@r508@
+@r630@
 typedef LPDIRECT3DMATERIAL3;
 position p;
 @@
@@ -6866,12 +8513,12 @@ position p;
 + IDirect3DMaterial3 *
 
 @script:python depends on report@
-p << r508.p;
+p << r630.p;
 @@
 WARN(p[0], "IDirect3DMaterial3*", "LPDIRECT3DMATERIAL3")
 
 
-@r509@
+@r631@
 typedef IDirect3DPixelShader9;
 typedef PDIRECT3DPIXELSHADER9;
 position p;
@@ -6880,12 +8527,12 @@ position p;
 + IDirect3DPixelShader9 *
 
 @script:python depends on report@
-p << r509.p;
+p << r631.p;
 @@
 WARN(p[0], "IDirect3DPixelShader9*", "PDIRECT3DPIXELSHADER9")
 
 
-@r510@
+@r632@
 typedef LPDIRECT3DPIXELSHADER9;
 position p;
 @@
@@ -6893,12 +8540,12 @@ position p;
 + IDirect3DPixelShader9 *
 
 @script:python depends on report@
-p << r510.p;
+p << r632.p;
 @@
 WARN(p[0], "IDirect3DPixelShader9*", "LPDIRECT3DPIXELSHADER9")
 
 
-@r511@
+@r633@
 typedef IDirect3DQuery9;
 typedef PDIRECT3DQUERY9;
 position p;
@@ -6907,12 +8554,12 @@ position p;
 + IDirect3DQuery9 *
 
 @script:python depends on report@
-p << r511.p;
+p << r633.p;
 @@
 WARN(p[0], "IDirect3DQuery9*", "PDIRECT3DQUERY9")
 
 
-@r512@
+@r634@
 typedef LPDIRECT3DQUERY9;
 position p;
 @@
@@ -6920,12 +8567,12 @@ position p;
 + IDirect3DQuery9 *
 
 @script:python depends on report@
-p << r512.p;
+p << r634.p;
 @@
 WARN(p[0], "IDirect3DQuery9*", "LPDIRECT3DQUERY9")
 
 
-@r513@
+@r635@
 typedef IDirect3DRM;
 typedef PDIRECT3DRM;
 position p;
@@ -6934,12 +8581,12 @@ position p;
 + IDirect3DRM *
 
 @script:python depends on report@
-p << r513.p;
+p << r635.p;
 @@
 WARN(p[0], "IDirect3DRM*", "PDIRECT3DRM")
 
 
-@r514@
+@r636@
 typedef LPDIRECT3DRM;
 position p;
 @@
@@ -6947,12 +8594,12 @@ position p;
 + IDirect3DRM *
 
 @script:python depends on report@
-p << r514.p;
+p << r636.p;
 @@
 WARN(p[0], "IDirect3DRM*", "LPDIRECT3DRM")
 
 
-@r515@
+@r637@
 typedef IDirect3DRM2;
 typedef PDIRECT3DRM2;
 position p;
@@ -6961,12 +8608,12 @@ position p;
 + IDirect3DRM2 *
 
 @script:python depends on report@
-p << r515.p;
+p << r637.p;
 @@
 WARN(p[0], "IDirect3DRM2*", "PDIRECT3DRM2")
 
 
-@r516@
+@r638@
 typedef LPDIRECT3DRM2;
 position p;
 @@
@@ -6974,12 +8621,12 @@ position p;
 + IDirect3DRM2 *
 
 @script:python depends on report@
-p << r516.p;
+p << r638.p;
 @@
 WARN(p[0], "IDirect3DRM2*", "LPDIRECT3DRM2")
 
 
-@r517@
+@r639@
 typedef IDirect3DRM3;
 typedef PDIRECT3DRM3;
 position p;
@@ -6988,12 +8635,12 @@ position p;
 + IDirect3DRM3 *
 
 @script:python depends on report@
-p << r517.p;
+p << r639.p;
 @@
 WARN(p[0], "IDirect3DRM3*", "PDIRECT3DRM3")
 
 
-@r518@
+@r640@
 typedef LPDIRECT3DRM3;
 position p;
 @@
@@ -7001,12 +8648,66 @@ position p;
 + IDirect3DRM3 *
 
 @script:python depends on report@
-p << r518.p;
+p << r640.p;
 @@
 WARN(p[0], "IDirect3DRM3*", "LPDIRECT3DRM3")
 
 
-@r519@
+@r641@
+typedef IDirect3DRMAnimation;
+typedef PDIRECT3DRMANIMATION;
+position p;
+@@
+- PDIRECT3DRMANIMATION@p
++ IDirect3DRMAnimation *
+
+@script:python depends on report@
+p << r641.p;
+@@
+WARN(p[0], "IDirect3DRMAnimation*", "PDIRECT3DRMANIMATION")
+
+
+@r642@
+typedef LPDIRECT3DRMANIMATION;
+position p;
+@@
+- LPDIRECT3DRMANIMATION@p
++ IDirect3DRMAnimation *
+
+@script:python depends on report@
+p << r642.p;
+@@
+WARN(p[0], "IDirect3DRMAnimation*", "LPDIRECT3DRMANIMATION")
+
+
+@r643@
+typedef IDirect3DRMAnimation2;
+typedef PDIRECT3DRMANIMATION2;
+position p;
+@@
+- PDIRECT3DRMANIMATION2@p
++ IDirect3DRMAnimation2 *
+
+@script:python depends on report@
+p << r643.p;
+@@
+WARN(p[0], "IDirect3DRMAnimation2*", "PDIRECT3DRMANIMATION2")
+
+
+@r644@
+typedef LPDIRECT3DRMANIMATION2;
+position p;
+@@
+- LPDIRECT3DRMANIMATION2@p
++ IDirect3DRMAnimation2 *
+
+@script:python depends on report@
+p << r644.p;
+@@
+WARN(p[0], "IDirect3DRMAnimation2*", "LPDIRECT3DRMANIMATION2")
+
+
+@r645@
 typedef IDirect3DRMDevice;
 typedef PDIRECT3DRMDEVICE;
 position p;
@@ -7015,12 +8716,12 @@ position p;
 + IDirect3DRMDevice *
 
 @script:python depends on report@
-p << r519.p;
+p << r645.p;
 @@
 WARN(p[0], "IDirect3DRMDevice*", "PDIRECT3DRMDEVICE")
 
 
-@r520@
+@r646@
 typedef LPDIRECT3DRMDEVICE;
 position p;
 @@
@@ -7028,12 +8729,12 @@ position p;
 + IDirect3DRMDevice *
 
 @script:python depends on report@
-p << r520.p;
+p << r646.p;
 @@
 WARN(p[0], "IDirect3DRMDevice*", "LPDIRECT3DRMDEVICE")
 
 
-@r521@
+@r647@
 typedef IDirect3DRMDevice2;
 typedef PDIRECT3DRMDEVICE2;
 position p;
@@ -7042,12 +8743,12 @@ position p;
 + IDirect3DRMDevice2 *
 
 @script:python depends on report@
-p << r521.p;
+p << r647.p;
 @@
 WARN(p[0], "IDirect3DRMDevice2*", "PDIRECT3DRMDEVICE2")
 
 
-@r522@
+@r648@
 typedef LPDIRECT3DRMDEVICE2;
 position p;
 @@
@@ -7055,12 +8756,12 @@ position p;
 + IDirect3DRMDevice2 *
 
 @script:python depends on report@
-p << r522.p;
+p << r648.p;
 @@
 WARN(p[0], "IDirect3DRMDevice2*", "LPDIRECT3DRMDEVICE2")
 
 
-@r523@
+@r649@
 typedef IDirect3DRMDevice3;
 typedef PDIRECT3DRMDEVICE3;
 position p;
@@ -7069,12 +8770,12 @@ position p;
 + IDirect3DRMDevice3 *
 
 @script:python depends on report@
-p << r523.p;
+p << r649.p;
 @@
 WARN(p[0], "IDirect3DRMDevice3*", "PDIRECT3DRMDEVICE3")
 
 
-@r524@
+@r650@
 typedef LPDIRECT3DRMDEVICE3;
 position p;
 @@
@@ -7082,12 +8783,12 @@ position p;
 + IDirect3DRMDevice3 *
 
 @script:python depends on report@
-p << r524.p;
+p << r650.p;
 @@
 WARN(p[0], "IDirect3DRMDevice3*", "LPDIRECT3DRMDEVICE3")
 
 
-@r525@
+@r651@
 typedef IDirect3DRMFace;
 typedef PDIRECT3DRMFACE;
 position p;
@@ -7096,12 +8797,12 @@ position p;
 + IDirect3DRMFace *
 
 @script:python depends on report@
-p << r525.p;
+p << r651.p;
 @@
 WARN(p[0], "IDirect3DRMFace*", "PDIRECT3DRMFACE")
 
 
-@r526@
+@r652@
 typedef LPDIRECT3DRMFACE;
 position p;
 @@
@@ -7109,12 +8810,12 @@ position p;
 + IDirect3DRMFace *
 
 @script:python depends on report@
-p << r526.p;
+p << r652.p;
 @@
 WARN(p[0], "IDirect3DRMFace*", "LPDIRECT3DRMFACE")
 
 
-@r527@
+@r653@
 typedef IDirect3DRMFace2;
 typedef PDIRECT3DRMFACE2;
 position p;
@@ -7123,12 +8824,12 @@ position p;
 + IDirect3DRMFace2 *
 
 @script:python depends on report@
-p << r527.p;
+p << r653.p;
 @@
 WARN(p[0], "IDirect3DRMFace2*", "PDIRECT3DRMFACE2")
 
 
-@r528@
+@r654@
 typedef LPDIRECT3DRMFACE2;
 position p;
 @@
@@ -7136,12 +8837,12 @@ position p;
 + IDirect3DRMFace2 *
 
 @script:python depends on report@
-p << r528.p;
+p << r654.p;
 @@
 WARN(p[0], "IDirect3DRMFace2*", "LPDIRECT3DRMFACE2")
 
 
-@r529@
+@r655@
 typedef IDirect3DRMFrame;
 typedef PDIRECT3DRMFRAME;
 position p;
@@ -7150,12 +8851,12 @@ position p;
 + IDirect3DRMFrame *
 
 @script:python depends on report@
-p << r529.p;
+p << r655.p;
 @@
 WARN(p[0], "IDirect3DRMFrame*", "PDIRECT3DRMFRAME")
 
 
-@r530@
+@r656@
 typedef LPDIRECT3DRMFRAME;
 position p;
 @@
@@ -7163,12 +8864,12 @@ position p;
 + IDirect3DRMFrame *
 
 @script:python depends on report@
-p << r530.p;
+p << r656.p;
 @@
 WARN(p[0], "IDirect3DRMFrame*", "LPDIRECT3DRMFRAME")
 
 
-@r531@
+@r657@
 typedef IDirect3DRMFrame2;
 typedef PDIRECT3DRMFRAME2;
 position p;
@@ -7177,12 +8878,12 @@ position p;
 + IDirect3DRMFrame2 *
 
 @script:python depends on report@
-p << r531.p;
+p << r657.p;
 @@
 WARN(p[0], "IDirect3DRMFrame2*", "PDIRECT3DRMFRAME2")
 
 
-@r532@
+@r658@
 typedef LPDIRECT3DRMFRAME2;
 position p;
 @@
@@ -7190,12 +8891,12 @@ position p;
 + IDirect3DRMFrame2 *
 
 @script:python depends on report@
-p << r532.p;
+p << r658.p;
 @@
 WARN(p[0], "IDirect3DRMFrame2*", "LPDIRECT3DRMFRAME2")
 
 
-@r533@
+@r659@
 typedef IDirect3DRMFrame3;
 typedef PDIRECT3DRMFRAME3;
 position p;
@@ -7204,12 +8905,12 @@ position p;
 + IDirect3DRMFrame3 *
 
 @script:python depends on report@
-p << r533.p;
+p << r659.p;
 @@
 WARN(p[0], "IDirect3DRMFrame3*", "PDIRECT3DRMFRAME3")
 
 
-@r534@
+@r660@
 typedef LPDIRECT3DRMFRAME3;
 position p;
 @@
@@ -7217,12 +8918,12 @@ position p;
 + IDirect3DRMFrame3 *
 
 @script:python depends on report@
-p << r534.p;
+p << r660.p;
 @@
 WARN(p[0], "IDirect3DRMFrame3*", "LPDIRECT3DRMFRAME3")
 
 
-@r535@
+@r661@
 typedef IDirect3DRMFrameArray;
 typedef PDIRECT3DRMFRAMEARRAY;
 position p;
@@ -7231,12 +8932,12 @@ position p;
 + IDirect3DRMFrameArray *
 
 @script:python depends on report@
-p << r535.p;
+p << r661.p;
 @@
 WARN(p[0], "IDirect3DRMFrameArray*", "PDIRECT3DRMFRAMEARRAY")
 
 
-@r536@
+@r662@
 typedef LPDIRECT3DRMFRAMEARRAY;
 position p;
 @@
@@ -7244,12 +8945,12 @@ position p;
 + IDirect3DRMFrameArray *
 
 @script:python depends on report@
-p << r536.p;
+p << r662.p;
 @@
 WARN(p[0], "IDirect3DRMFrameArray*", "LPDIRECT3DRMFRAMEARRAY")
 
 
-@r537@
+@r663@
 typedef IDirect3DRMLight;
 typedef PDIRECT3DRMLIGHT;
 position p;
@@ -7258,12 +8959,12 @@ position p;
 + IDirect3DRMLight *
 
 @script:python depends on report@
-p << r537.p;
+p << r663.p;
 @@
 WARN(p[0], "IDirect3DRMLight*", "PDIRECT3DRMLIGHT")
 
 
-@r538@
+@r664@
 typedef LPDIRECT3DRMLIGHT;
 position p;
 @@
@@ -7271,12 +8972,12 @@ position p;
 + IDirect3DRMLight *
 
 @script:python depends on report@
-p << r538.p;
+p << r664.p;
 @@
 WARN(p[0], "IDirect3DRMLight*", "LPDIRECT3DRMLIGHT")
 
 
-@r539@
+@r665@
 typedef IDirect3DRMLightArray;
 typedef PDIRECT3DRMLIGHTARRAY;
 position p;
@@ -7285,12 +8986,12 @@ position p;
 + IDirect3DRMLightArray *
 
 @script:python depends on report@
-p << r539.p;
+p << r665.p;
 @@
 WARN(p[0], "IDirect3DRMLightArray*", "PDIRECT3DRMLIGHTARRAY")
 
 
-@r540@
+@r666@
 typedef LPDIRECT3DRMLIGHTARRAY;
 position p;
 @@
@@ -7298,12 +8999,12 @@ position p;
 + IDirect3DRMLightArray *
 
 @script:python depends on report@
-p << r540.p;
+p << r666.p;
 @@
 WARN(p[0], "IDirect3DRMLightArray*", "LPDIRECT3DRMLIGHTARRAY")
 
 
-@r541@
+@r667@
 typedef IDirect3DRMMaterial2;
 typedef PDIRECT3DRMMATERIAL2;
 position p;
@@ -7312,12 +9013,12 @@ position p;
 + IDirect3DRMMaterial2 *
 
 @script:python depends on report@
-p << r541.p;
+p << r667.p;
 @@
 WARN(p[0], "IDirect3DRMMaterial2*", "PDIRECT3DRMMATERIAL2")
 
 
-@r542@
+@r668@
 typedef LPDIRECT3DRMMATERIAL2;
 position p;
 @@
@@ -7325,12 +9026,12 @@ position p;
 + IDirect3DRMMaterial2 *
 
 @script:python depends on report@
-p << r542.p;
+p << r668.p;
 @@
 WARN(p[0], "IDirect3DRMMaterial2*", "LPDIRECT3DRMMATERIAL2")
 
 
-@r543@
+@r669@
 typedef IDirect3DRMMesh;
 typedef PDIRECT3DRMMESH;
 position p;
@@ -7339,12 +9040,12 @@ position p;
 + IDirect3DRMMesh *
 
 @script:python depends on report@
-p << r543.p;
+p << r669.p;
 @@
 WARN(p[0], "IDirect3DRMMesh*", "PDIRECT3DRMMESH")
 
 
-@r544@
+@r670@
 typedef LPDIRECT3DRMMESH;
 position p;
 @@
@@ -7352,12 +9053,12 @@ position p;
 + IDirect3DRMMesh *
 
 @script:python depends on report@
-p << r544.p;
+p << r670.p;
 @@
 WARN(p[0], "IDirect3DRMMesh*", "LPDIRECT3DRMMESH")
 
 
-@r545@
+@r671@
 typedef IDirect3DRMMeshBuilder2;
 typedef PDIRECT3DRMMESHBUILDER2;
 position p;
@@ -7366,12 +9067,12 @@ position p;
 + IDirect3DRMMeshBuilder2 *
 
 @script:python depends on report@
-p << r545.p;
+p << r671.p;
 @@
 WARN(p[0], "IDirect3DRMMeshBuilder2*", "PDIRECT3DRMMESHBUILDER2")
 
 
-@r546@
+@r672@
 typedef LPDIRECT3DRMMESHBUILDER2;
 position p;
 @@
@@ -7379,12 +9080,12 @@ position p;
 + IDirect3DRMMeshBuilder2 *
 
 @script:python depends on report@
-p << r546.p;
+p << r672.p;
 @@
 WARN(p[0], "IDirect3DRMMeshBuilder2*", "LPDIRECT3DRMMESHBUILDER2")
 
 
-@r547@
+@r673@
 typedef IDirect3DRMMeshBuilder3;
 typedef PDIRECT3DRMMESHBUILDER3;
 position p;
@@ -7393,12 +9094,12 @@ position p;
 + IDirect3DRMMeshBuilder3 *
 
 @script:python depends on report@
-p << r547.p;
+p << r673.p;
 @@
 WARN(p[0], "IDirect3DRMMeshBuilder3*", "PDIRECT3DRMMESHBUILDER3")
 
 
-@r548@
+@r674@
 typedef LPDIRECT3DRMMESHBUILDER3;
 position p;
 @@
@@ -7406,12 +9107,12 @@ position p;
 + IDirect3DRMMeshBuilder3 *
 
 @script:python depends on report@
-p << r548.p;
+p << r674.p;
 @@
 WARN(p[0], "IDirect3DRMMeshBuilder3*", "LPDIRECT3DRMMESHBUILDER3")
 
 
-@r549@
+@r675@
 typedef IDirect3DRMTexture;
 typedef PDIRECT3DRMTEXTURE;
 position p;
@@ -7420,12 +9121,12 @@ position p;
 + IDirect3DRMTexture *
 
 @script:python depends on report@
-p << r549.p;
+p << r675.p;
 @@
 WARN(p[0], "IDirect3DRMTexture*", "PDIRECT3DRMTEXTURE")
 
 
-@r550@
+@r676@
 typedef LPDIRECT3DRMTEXTURE;
 position p;
 @@
@@ -7433,12 +9134,12 @@ position p;
 + IDirect3DRMTexture *
 
 @script:python depends on report@
-p << r550.p;
+p << r676.p;
 @@
 WARN(p[0], "IDirect3DRMTexture*", "LPDIRECT3DRMTEXTURE")
 
 
-@r551@
+@r677@
 typedef IDirect3DRMTexture2;
 typedef PDIRECT3DRMTEXTURE2;
 position p;
@@ -7447,12 +9148,12 @@ position p;
 + IDirect3DRMTexture2 *
 
 @script:python depends on report@
-p << r551.p;
+p << r677.p;
 @@
 WARN(p[0], "IDirect3DRMTexture2*", "PDIRECT3DRMTEXTURE2")
 
 
-@r552@
+@r678@
 typedef LPDIRECT3DRMTEXTURE2;
 position p;
 @@
@@ -7460,12 +9161,12 @@ position p;
 + IDirect3DRMTexture2 *
 
 @script:python depends on report@
-p << r552.p;
+p << r678.p;
 @@
 WARN(p[0], "IDirect3DRMTexture2*", "LPDIRECT3DRMTEXTURE2")
 
 
-@r553@
+@r679@
 typedef IDirect3DRMTexture3;
 typedef PDIRECT3DRMTEXTURE3;
 position p;
@@ -7474,12 +9175,12 @@ position p;
 + IDirect3DRMTexture3 *
 
 @script:python depends on report@
-p << r553.p;
+p << r679.p;
 @@
 WARN(p[0], "IDirect3DRMTexture3*", "PDIRECT3DRMTEXTURE3")
 
 
-@r554@
+@r680@
 typedef LPDIRECT3DRMTEXTURE3;
 position p;
 @@
@@ -7487,12 +9188,12 @@ position p;
 + IDirect3DRMTexture3 *
 
 @script:python depends on report@
-p << r554.p;
+p << r680.p;
 @@
 WARN(p[0], "IDirect3DRMTexture3*", "LPDIRECT3DRMTEXTURE3")
 
 
-@r555@
+@r681@
 typedef IDirect3DRMViewport;
 typedef PDIRECT3DRMVIEWPORT;
 position p;
@@ -7501,12 +9202,12 @@ position p;
 + IDirect3DRMViewport *
 
 @script:python depends on report@
-p << r555.p;
+p << r681.p;
 @@
 WARN(p[0], "IDirect3DRMViewport*", "PDIRECT3DRMVIEWPORT")
 
 
-@r556@
+@r682@
 typedef LPDIRECT3DRMVIEWPORT;
 position p;
 @@
@@ -7514,12 +9215,12 @@ position p;
 + IDirect3DRMViewport *
 
 @script:python depends on report@
-p << r556.p;
+p << r682.p;
 @@
 WARN(p[0], "IDirect3DRMViewport*", "LPDIRECT3DRMVIEWPORT")
 
 
-@r557@
+@r683@
 typedef IDirect3DRMViewport2;
 typedef PDIRECT3DRMVIEWPORT2;
 position p;
@@ -7528,12 +9229,12 @@ position p;
 + IDirect3DRMViewport2 *
 
 @script:python depends on report@
-p << r557.p;
+p << r683.p;
 @@
 WARN(p[0], "IDirect3DRMViewport2*", "PDIRECT3DRMVIEWPORT2")
 
 
-@r558@
+@r684@
 typedef LPDIRECT3DRMVIEWPORT2;
 position p;
 @@
@@ -7541,12 +9242,12 @@ position p;
 + IDirect3DRMViewport2 *
 
 @script:python depends on report@
-p << r558.p;
+p << r684.p;
 @@
 WARN(p[0], "IDirect3DRMViewport2*", "LPDIRECT3DRMVIEWPORT2")
 
 
-@r559@
+@r685@
 typedef IDirect3DRMVisualArray;
 typedef PDIRECT3DRMVISUALARRAY;
 position p;
@@ -7555,12 +9256,12 @@ position p;
 + IDirect3DRMVisualArray *
 
 @script:python depends on report@
-p << r559.p;
+p << r685.p;
 @@
 WARN(p[0], "IDirect3DRMVisualArray*", "PDIRECT3DRMVISUALARRAY")
 
 
-@r560@
+@r686@
 typedef LPDIRECT3DRMVISUALARRAY;
 position p;
 @@
@@ -7568,12 +9269,12 @@ position p;
 + IDirect3DRMVisualArray *
 
 @script:python depends on report@
-p << r560.p;
+p << r686.p;
 @@
 WARN(p[0], "IDirect3DRMVisualArray*", "LPDIRECT3DRMVISUALARRAY")
 
 
-@r561@
+@r687@
 typedef IDirect3DRMWinDevice;
 typedef PDIRECT3DRMWINDEVICE;
 position p;
@@ -7582,12 +9283,12 @@ position p;
 + IDirect3DRMWinDevice *
 
 @script:python depends on report@
-p << r561.p;
+p << r687.p;
 @@
 WARN(p[0], "IDirect3DRMWinDevice*", "PDIRECT3DRMWINDEVICE")
 
 
-@r562@
+@r688@
 typedef LPDIRECT3DRMWINDEVICE;
 position p;
 @@
@@ -7595,12 +9296,39 @@ position p;
 + IDirect3DRMWinDevice *
 
 @script:python depends on report@
-p << r562.p;
+p << r688.p;
 @@
 WARN(p[0], "IDirect3DRMWinDevice*", "LPDIRECT3DRMWINDEVICE")
 
 
-@r563@
+@r689@
+typedef IDirect3DRMWrap;
+typedef PDIRECT3DRMWRAP;
+position p;
+@@
+- PDIRECT3DRMWRAP@p
++ IDirect3DRMWrap *
+
+@script:python depends on report@
+p << r689.p;
+@@
+WARN(p[0], "IDirect3DRMWrap*", "PDIRECT3DRMWRAP")
+
+
+@r690@
+typedef LPDIRECT3DRMWRAP;
+position p;
+@@
+- LPDIRECT3DRMWRAP@p
++ IDirect3DRMWrap *
+
+@script:python depends on report@
+p << r690.p;
+@@
+WARN(p[0], "IDirect3DRMWrap*", "LPDIRECT3DRMWRAP")
+
+
+@r691@
 typedef IDirect3DStateBlock9;
 typedef PDIRECT3DSTATEBLOCK9;
 position p;
@@ -7609,12 +9337,12 @@ position p;
 + IDirect3DStateBlock9 *
 
 @script:python depends on report@
-p << r563.p;
+p << r691.p;
 @@
 WARN(p[0], "IDirect3DStateBlock9*", "PDIRECT3DSTATEBLOCK9")
 
 
-@r564@
+@r692@
 typedef LPDIRECT3DSTATEBLOCK9;
 position p;
 @@
@@ -7622,12 +9350,12 @@ position p;
 + IDirect3DStateBlock9 *
 
 @script:python depends on report@
-p << r564.p;
+p << r692.p;
 @@
 WARN(p[0], "IDirect3DStateBlock9*", "LPDIRECT3DSTATEBLOCK9")
 
 
-@r565@
+@r693@
 typedef IDirect3DSurface8;
 typedef PDIRECT3DSURFACE8;
 position p;
@@ -7636,12 +9364,12 @@ position p;
 + IDirect3DSurface8 *
 
 @script:python depends on report@
-p << r565.p;
+p << r693.p;
 @@
 WARN(p[0], "IDirect3DSurface8*", "PDIRECT3DSURFACE8")
 
 
-@r566@
+@r694@
 typedef LPDIRECT3DSURFACE8;
 position p;
 @@
@@ -7649,12 +9377,12 @@ position p;
 + IDirect3DSurface8 *
 
 @script:python depends on report@
-p << r566.p;
+p << r694.p;
 @@
 WARN(p[0], "IDirect3DSurface8*", "LPDIRECT3DSURFACE8")
 
 
-@r567@
+@r695@
 typedef IDirect3DSurface9;
 typedef PDIRECT3DSURFACE9;
 position p;
@@ -7663,12 +9391,12 @@ position p;
 + IDirect3DSurface9 *
 
 @script:python depends on report@
-p << r567.p;
+p << r695.p;
 @@
 WARN(p[0], "IDirect3DSurface9*", "PDIRECT3DSURFACE9")
 
 
-@r568@
+@r696@
 typedef LPDIRECT3DSURFACE9;
 position p;
 @@
@@ -7676,12 +9404,12 @@ position p;
 + IDirect3DSurface9 *
 
 @script:python depends on report@
-p << r568.p;
+p << r696.p;
 @@
 WARN(p[0], "IDirect3DSurface9*", "LPDIRECT3DSURFACE9")
 
 
-@r569@
+@r697@
 typedef IDirect3DSwapChain8;
 typedef PDIRECT3DSWAPCHAIN8;
 position p;
@@ -7690,12 +9418,12 @@ position p;
 + IDirect3DSwapChain8 *
 
 @script:python depends on report@
-p << r569.p;
+p << r697.p;
 @@
 WARN(p[0], "IDirect3DSwapChain8*", "PDIRECT3DSWAPCHAIN8")
 
 
-@r570@
+@r698@
 typedef LPDIRECT3DSWAPCHAIN8;
 position p;
 @@
@@ -7703,12 +9431,12 @@ position p;
 + IDirect3DSwapChain8 *
 
 @script:python depends on report@
-p << r570.p;
+p << r698.p;
 @@
 WARN(p[0], "IDirect3DSwapChain8*", "LPDIRECT3DSWAPCHAIN8")
 
 
-@r571@
+@r699@
 typedef IDirect3DSwapChain9Ex;
 typedef PDIRECT3DSWAPCHAIN9EX;
 position p;
@@ -7717,12 +9445,12 @@ position p;
 + IDirect3DSwapChain9Ex *
 
 @script:python depends on report@
-p << r571.p;
+p << r699.p;
 @@
 WARN(p[0], "IDirect3DSwapChain9Ex*", "PDIRECT3DSWAPCHAIN9EX")
 
 
-@r572@
+@r700@
 typedef LPDIRECT3DSWAPCHAIN9EX;
 position p;
 @@
@@ -7730,12 +9458,12 @@ position p;
 + IDirect3DSwapChain9Ex *
 
 @script:python depends on report@
-p << r572.p;
+p << r700.p;
 @@
 WARN(p[0], "IDirect3DSwapChain9Ex*", "LPDIRECT3DSWAPCHAIN9EX")
 
 
-@r573@
+@r701@
 typedef IDirect3DTexture;
 typedef PDIRECT3DTEXTURE;
 position p;
@@ -7744,12 +9472,12 @@ position p;
 + IDirect3DTexture *
 
 @script:python depends on report@
-p << r573.p;
+p << r701.p;
 @@
 WARN(p[0], "IDirect3DTexture*", "PDIRECT3DTEXTURE")
 
 
-@r574@
+@r702@
 typedef LPDIRECT3DTEXTURE;
 position p;
 @@
@@ -7757,12 +9485,12 @@ position p;
 + IDirect3DTexture *
 
 @script:python depends on report@
-p << r574.p;
+p << r702.p;
 @@
 WARN(p[0], "IDirect3DTexture*", "LPDIRECT3DTEXTURE")
 
 
-@r575@
+@r703@
 typedef IDirect3DTexture2;
 typedef PDIRECT3DTEXTURE2;
 position p;
@@ -7771,12 +9499,12 @@ position p;
 + IDirect3DTexture2 *
 
 @script:python depends on report@
-p << r575.p;
+p << r703.p;
 @@
 WARN(p[0], "IDirect3DTexture2*", "PDIRECT3DTEXTURE2")
 
 
-@r576@
+@r704@
 typedef LPDIRECT3DTEXTURE2;
 position p;
 @@
@@ -7784,12 +9512,12 @@ position p;
 + IDirect3DTexture2 *
 
 @script:python depends on report@
-p << r576.p;
+p << r704.p;
 @@
 WARN(p[0], "IDirect3DTexture2*", "LPDIRECT3DTEXTURE2")
 
 
-@r577@
+@r705@
 typedef IDirect3DVertexBuffer7;
 typedef PDIRECT3DVERTEXBUFFER7;
 position p;
@@ -7798,12 +9526,12 @@ position p;
 + IDirect3DVertexBuffer7 *
 
 @script:python depends on report@
-p << r577.p;
+p << r705.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer7*", "PDIRECT3DVERTEXBUFFER7")
 
 
-@r578@
+@r706@
 typedef LPDIRECT3DVERTEXBUFFER7;
 position p;
 @@
@@ -7811,12 +9539,12 @@ position p;
 + IDirect3DVertexBuffer7 *
 
 @script:python depends on report@
-p << r578.p;
+p << r706.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer7*", "LPDIRECT3DVERTEXBUFFER7")
 
 
-@r579@
+@r707@
 typedef IDirect3DVertexBuffer8;
 typedef PDIRECT3DVERTEXBUFFER8;
 position p;
@@ -7825,12 +9553,12 @@ position p;
 + IDirect3DVertexBuffer8 *
 
 @script:python depends on report@
-p << r579.p;
+p << r707.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer8*", "PDIRECT3DVERTEXBUFFER8")
 
 
-@r580@
+@r708@
 typedef LPDIRECT3DVERTEXBUFFER8;
 position p;
 @@
@@ -7838,12 +9566,12 @@ position p;
 + IDirect3DVertexBuffer8 *
 
 @script:python depends on report@
-p << r580.p;
+p << r708.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer8*", "LPDIRECT3DVERTEXBUFFER8")
 
 
-@r581@
+@r709@
 typedef IDirect3DVertexBuffer9;
 typedef PDIRECT3DVERTEXBUFFER9;
 position p;
@@ -7852,12 +9580,12 @@ position p;
 + IDirect3DVertexBuffer9 *
 
 @script:python depends on report@
-p << r581.p;
+p << r709.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer9*", "PDIRECT3DVERTEXBUFFER9")
 
 
-@r582@
+@r710@
 typedef LPDIRECT3DVERTEXBUFFER9;
 position p;
 @@
@@ -7865,12 +9593,12 @@ position p;
 + IDirect3DVertexBuffer9 *
 
 @script:python depends on report@
-p << r582.p;
+p << r710.p;
 @@
 WARN(p[0], "IDirect3DVertexBuffer9*", "LPDIRECT3DVERTEXBUFFER9")
 
 
-@r583@
+@r711@
 typedef IDirect3DVertexDeclaration9;
 typedef PDIRECT3DVERTEXDECLARATION9;
 position p;
@@ -7879,12 +9607,12 @@ position p;
 + IDirect3DVertexDeclaration9 *
 
 @script:python depends on report@
-p << r583.p;
+p << r711.p;
 @@
 WARN(p[0], "IDirect3DVertexDeclaration9*", "PDIRECT3DVERTEXDECLARATION9")
 
 
-@r584@
+@r712@
 typedef LPDIRECT3DVERTEXDECLARATION9;
 position p;
 @@
@@ -7892,12 +9620,12 @@ position p;
 + IDirect3DVertexDeclaration9 *
 
 @script:python depends on report@
-p << r584.p;
+p << r712.p;
 @@
 WARN(p[0], "IDirect3DVertexDeclaration9*", "LPDIRECT3DVERTEXDECLARATION9")
 
 
-@r585@
+@r713@
 typedef IDirect3DVertexShader9;
 typedef PDIRECT3DVERTEXSHADER9;
 position p;
@@ -7906,12 +9634,12 @@ position p;
 + IDirect3DVertexShader9 *
 
 @script:python depends on report@
-p << r585.p;
+p << r713.p;
 @@
 WARN(p[0], "IDirect3DVertexShader9*", "PDIRECT3DVERTEXSHADER9")
 
 
-@r586@
+@r714@
 typedef LPDIRECT3DVERTEXSHADER9;
 position p;
 @@
@@ -7919,12 +9647,12 @@ position p;
 + IDirect3DVertexShader9 *
 
 @script:python depends on report@
-p << r586.p;
+p << r714.p;
 @@
 WARN(p[0], "IDirect3DVertexShader9*", "LPDIRECT3DVERTEXSHADER9")
 
 
-@r587@
+@r715@
 typedef IDirect3DViewport3;
 typedef PDIRECT3DVIEWPORT3;
 position p;
@@ -7933,12 +9661,12 @@ position p;
 + IDirect3DViewport3 *
 
 @script:python depends on report@
-p << r587.p;
+p << r715.p;
 @@
 WARN(p[0], "IDirect3DViewport3*", "PDIRECT3DVIEWPORT3")
 
 
-@r588@
+@r716@
 typedef LPDIRECT3DVIEWPORT3;
 position p;
 @@
@@ -7946,12 +9674,12 @@ position p;
 + IDirect3DViewport3 *
 
 @script:python depends on report@
-p << r588.p;
+p << r716.p;
 @@
 WARN(p[0], "IDirect3DViewport3*", "LPDIRECT3DVIEWPORT3")
 
 
-@r589@
+@r717@
 typedef IDirect3DVolume8;
 typedef PDIRECT3DVOLUME8;
 position p;
@@ -7960,12 +9688,12 @@ position p;
 + IDirect3DVolume8 *
 
 @script:python depends on report@
-p << r589.p;
+p << r717.p;
 @@
 WARN(p[0], "IDirect3DVolume8*", "PDIRECT3DVOLUME8")
 
 
-@r590@
+@r718@
 typedef LPDIRECT3DVOLUME8;
 position p;
 @@
@@ -7973,12 +9701,12 @@ position p;
 + IDirect3DVolume8 *
 
 @script:python depends on report@
-p << r590.p;
+p << r718.p;
 @@
 WARN(p[0], "IDirect3DVolume8*", "LPDIRECT3DVOLUME8")
 
 
-@r591@
+@r719@
 typedef IDirect3DVolume9;
 typedef PDIRECT3DVOLUME9;
 position p;
@@ -7987,12 +9715,12 @@ position p;
 + IDirect3DVolume9 *
 
 @script:python depends on report@
-p << r591.p;
+p << r719.p;
 @@
 WARN(p[0], "IDirect3DVolume9*", "PDIRECT3DVOLUME9")
 
 
-@r592@
+@r720@
 typedef LPDIRECT3DVOLUME9;
 position p;
 @@
@@ -8000,12 +9728,12 @@ position p;
 + IDirect3DVolume9 *
 
 @script:python depends on report@
-p << r592.p;
+p << r720.p;
 @@
 WARN(p[0], "IDirect3DVolume9*", "LPDIRECT3DVOLUME9")
 
 
-@r593@
+@r721@
 typedef IDirectDraw;
 typedef PDIRECTDRAW;
 position p;
@@ -8014,12 +9742,12 @@ position p;
 + IDirectDraw *
 
 @script:python depends on report@
-p << r593.p;
+p << r721.p;
 @@
 WARN(p[0], "IDirectDraw*", "PDIRECTDRAW")
 
 
-@r594@
+@r722@
 typedef LPDIRECTDRAW;
 position p;
 @@
@@ -8027,12 +9755,12 @@ position p;
 + IDirectDraw *
 
 @script:python depends on report@
-p << r594.p;
+p << r722.p;
 @@
 WARN(p[0], "IDirectDraw*", "LPDIRECTDRAW")
 
 
-@r595@
+@r723@
 typedef IDirectDraw2;
 typedef PDIRECTDRAW2;
 position p;
@@ -8041,12 +9769,12 @@ position p;
 + IDirectDraw2 *
 
 @script:python depends on report@
-p << r595.p;
+p << r723.p;
 @@
 WARN(p[0], "IDirectDraw2*", "PDIRECTDRAW2")
 
 
-@r596@
+@r724@
 typedef LPDIRECTDRAW2;
 position p;
 @@
@@ -8054,12 +9782,12 @@ position p;
 + IDirectDraw2 *
 
 @script:python depends on report@
-p << r596.p;
+p << r724.p;
 @@
 WARN(p[0], "IDirectDraw2*", "LPDIRECTDRAW2")
 
 
-@r597@
+@r725@
 typedef IDirectDraw3;
 typedef PDIRECTDRAW3;
 position p;
@@ -8068,12 +9796,12 @@ position p;
 + IDirectDraw3 *
 
 @script:python depends on report@
-p << r597.p;
+p << r725.p;
 @@
 WARN(p[0], "IDirectDraw3*", "PDIRECTDRAW3")
 
 
-@r598@
+@r726@
 typedef LPDIRECTDRAW3;
 position p;
 @@
@@ -8081,12 +9809,12 @@ position p;
 + IDirectDraw3 *
 
 @script:python depends on report@
-p << r598.p;
+p << r726.p;
 @@
 WARN(p[0], "IDirectDraw3*", "LPDIRECTDRAW3")
 
 
-@r599@
+@r727@
 typedef IDirectDraw4;
 typedef PDIRECTDRAW4;
 position p;
@@ -8095,12 +9823,12 @@ position p;
 + IDirectDraw4 *
 
 @script:python depends on report@
-p << r599.p;
+p << r727.p;
 @@
 WARN(p[0], "IDirectDraw4*", "PDIRECTDRAW4")
 
 
-@r600@
+@r728@
 typedef LPDIRECTDRAW4;
 position p;
 @@
@@ -8108,12 +9836,12 @@ position p;
 + IDirectDraw4 *
 
 @script:python depends on report@
-p << r600.p;
+p << r728.p;
 @@
 WARN(p[0], "IDirectDraw4*", "LPDIRECTDRAW4")
 
 
-@r601@
+@r729@
 typedef IDirectDraw7;
 typedef PDIRECTDRAW7;
 position p;
@@ -8122,12 +9850,12 @@ position p;
 + IDirectDraw7 *
 
 @script:python depends on report@
-p << r601.p;
+p << r729.p;
 @@
 WARN(p[0], "IDirectDraw7*", "PDIRECTDRAW7")
 
 
-@r602@
+@r730@
 typedef LPDIRECTDRAW7;
 position p;
 @@
@@ -8135,12 +9863,12 @@ position p;
 + IDirectDraw7 *
 
 @script:python depends on report@
-p << r602.p;
+p << r730.p;
 @@
 WARN(p[0], "IDirectDraw7*", "LPDIRECTDRAW7")
 
 
-@r603@
+@r731@
 typedef IDirectDrawClipper;
 typedef PDIRECTDRAWCLIPPER;
 position p;
@@ -8149,12 +9877,12 @@ position p;
 + IDirectDrawClipper *
 
 @script:python depends on report@
-p << r603.p;
+p << r731.p;
 @@
 WARN(p[0], "IDirectDrawClipper*", "PDIRECTDRAWCLIPPER")
 
 
-@r604@
+@r732@
 typedef LPDIRECTDRAWCLIPPER;
 position p;
 @@
@@ -8162,12 +9890,12 @@ position p;
 + IDirectDrawClipper *
 
 @script:python depends on report@
-p << r604.p;
+p << r732.p;
 @@
 WARN(p[0], "IDirectDrawClipper*", "LPDIRECTDRAWCLIPPER")
 
 
-@r605@
+@r733@
 typedef IDirectDrawFactory;
 typedef PDIRECTDRAWFACTORY;
 position p;
@@ -8176,12 +9904,12 @@ position p;
 + IDirectDrawFactory *
 
 @script:python depends on report@
-p << r605.p;
+p << r733.p;
 @@
 WARN(p[0], "IDirectDrawFactory*", "PDIRECTDRAWFACTORY")
 
 
-@r606@
+@r734@
 typedef LPDIRECTDRAWFACTORY;
 position p;
 @@
@@ -8189,12 +9917,12 @@ position p;
 + IDirectDrawFactory *
 
 @script:python depends on report@
-p << r606.p;
+p << r734.p;
 @@
 WARN(p[0], "IDirectDrawFactory*", "LPDIRECTDRAWFACTORY")
 
 
-@r607@
+@r735@
 typedef IDirectDrawGammaControl;
 typedef PDIRECTDRAWGAMMACONTROL;
 position p;
@@ -8203,12 +9931,12 @@ position p;
 + IDirectDrawGammaControl *
 
 @script:python depends on report@
-p << r607.p;
+p << r735.p;
 @@
 WARN(p[0], "IDirectDrawGammaControl*", "PDIRECTDRAWGAMMACONTROL")
 
 
-@r608@
+@r736@
 typedef LPDIRECTDRAWGAMMACONTROL;
 position p;
 @@
@@ -8216,12 +9944,12 @@ position p;
 + IDirectDrawGammaControl *
 
 @script:python depends on report@
-p << r608.p;
+p << r736.p;
 @@
 WARN(p[0], "IDirectDrawGammaControl*", "LPDIRECTDRAWGAMMACONTROL")
 
 
-@r609@
+@r737@
 typedef IDirectDrawMediaStream;
 typedef PDIRECTDRAWMEDIASTREAM;
 position p;
@@ -8230,12 +9958,12 @@ position p;
 + IDirectDrawMediaStream *
 
 @script:python depends on report@
-p << r609.p;
+p << r737.p;
 @@
 WARN(p[0], "IDirectDrawMediaStream*", "PDIRECTDRAWMEDIASTREAM")
 
 
-@r610@
+@r738@
 typedef LPDIRECTDRAWMEDIASTREAM;
 position p;
 @@
@@ -8243,12 +9971,12 @@ position p;
 + IDirectDrawMediaStream *
 
 @script:python depends on report@
-p << r610.p;
+p << r738.p;
 @@
 WARN(p[0], "IDirectDrawMediaStream*", "LPDIRECTDRAWMEDIASTREAM")
 
 
-@r611@
+@r739@
 typedef IDirectDrawPalette;
 typedef PDIRECTDRAWPALETTE;
 position p;
@@ -8257,12 +9985,12 @@ position p;
 + IDirectDrawPalette *
 
 @script:python depends on report@
-p << r611.p;
+p << r739.p;
 @@
 WARN(p[0], "IDirectDrawPalette*", "PDIRECTDRAWPALETTE")
 
 
-@r612@
+@r740@
 typedef LPDIRECTDRAWPALETTE;
 position p;
 @@
@@ -8270,12 +9998,12 @@ position p;
 + IDirectDrawPalette *
 
 @script:python depends on report@
-p << r612.p;
+p << r740.p;
 @@
 WARN(p[0], "IDirectDrawPalette*", "LPDIRECTDRAWPALETTE")
 
 
-@r613@
+@r741@
 typedef IDirectDrawStreamSample;
 typedef PDIRECTDRAWSTREAMSAMPLE;
 position p;
@@ -8284,12 +10012,12 @@ position p;
 + IDirectDrawStreamSample *
 
 @script:python depends on report@
-p << r613.p;
+p << r741.p;
 @@
 WARN(p[0], "IDirectDrawStreamSample*", "PDIRECTDRAWSTREAMSAMPLE")
 
 
-@r614@
+@r742@
 typedef LPDIRECTDRAWSTREAMSAMPLE;
 position p;
 @@
@@ -8297,12 +10025,12 @@ position p;
 + IDirectDrawStreamSample *
 
 @script:python depends on report@
-p << r614.p;
+p << r742.p;
 @@
 WARN(p[0], "IDirectDrawStreamSample*", "LPDIRECTDRAWSTREAMSAMPLE")
 
 
-@r615@
+@r743@
 typedef IDirectDrawSurface;
 typedef PDIRECTDRAWSURFACE;
 position p;
@@ -8311,12 +10039,12 @@ position p;
 + IDirectDrawSurface *
 
 @script:python depends on report@
-p << r615.p;
+p << r743.p;
 @@
 WARN(p[0], "IDirectDrawSurface*", "PDIRECTDRAWSURFACE")
 
 
-@r616@
+@r744@
 typedef LPDIRECTDRAWSURFACE;
 position p;
 @@
@@ -8324,12 +10052,12 @@ position p;
 + IDirectDrawSurface *
 
 @script:python depends on report@
-p << r616.p;
+p << r744.p;
 @@
 WARN(p[0], "IDirectDrawSurface*", "LPDIRECTDRAWSURFACE")
 
 
-@r617@
+@r745@
 typedef IDirectDrawSurface2;
 typedef PDIRECTDRAWSURFACE2;
 position p;
@@ -8338,12 +10066,12 @@ position p;
 + IDirectDrawSurface2 *
 
 @script:python depends on report@
-p << r617.p;
+p << r745.p;
 @@
 WARN(p[0], "IDirectDrawSurface2*", "PDIRECTDRAWSURFACE2")
 
 
-@r618@
+@r746@
 typedef LPDIRECTDRAWSURFACE2;
 position p;
 @@
@@ -8351,12 +10079,12 @@ position p;
 + IDirectDrawSurface2 *
 
 @script:python depends on report@
-p << r618.p;
+p << r746.p;
 @@
 WARN(p[0], "IDirectDrawSurface2*", "LPDIRECTDRAWSURFACE2")
 
 
-@r619@
+@r747@
 typedef IDirectDrawSurface3;
 typedef PDIRECTDRAWSURFACE3;
 position p;
@@ -8365,12 +10093,12 @@ position p;
 + IDirectDrawSurface3 *
 
 @script:python depends on report@
-p << r619.p;
+p << r747.p;
 @@
 WARN(p[0], "IDirectDrawSurface3*", "PDIRECTDRAWSURFACE3")
 
 
-@r620@
+@r748@
 typedef LPDIRECTDRAWSURFACE3;
 position p;
 @@
@@ -8378,12 +10106,12 @@ position p;
 + IDirectDrawSurface3 *
 
 @script:python depends on report@
-p << r620.p;
+p << r748.p;
 @@
 WARN(p[0], "IDirectDrawSurface3*", "LPDIRECTDRAWSURFACE3")
 
 
-@r621@
+@r749@
 typedef IDirectDrawSurface4;
 typedef PDIRECTDRAWSURFACE4;
 position p;
@@ -8392,12 +10120,12 @@ position p;
 + IDirectDrawSurface4 *
 
 @script:python depends on report@
-p << r621.p;
+p << r749.p;
 @@
 WARN(p[0], "IDirectDrawSurface4*", "PDIRECTDRAWSURFACE4")
 
 
-@r622@
+@r750@
 typedef LPDIRECTDRAWSURFACE4;
 position p;
 @@
@@ -8405,12 +10133,12 @@ position p;
 + IDirectDrawSurface4 *
 
 @script:python depends on report@
-p << r622.p;
+p << r750.p;
 @@
 WARN(p[0], "IDirectDrawSurface4*", "LPDIRECTDRAWSURFACE4")
 
 
-@r623@
+@r751@
 typedef IDirectDrawSurface7;
 typedef PDIRECTDRAWSURFACE7;
 position p;
@@ -8419,12 +10147,12 @@ position p;
 + IDirectDrawSurface7 *
 
 @script:python depends on report@
-p << r623.p;
+p << r751.p;
 @@
 WARN(p[0], "IDirectDrawSurface7*", "PDIRECTDRAWSURFACE7")
 
 
-@r624@
+@r752@
 typedef LPDIRECTDRAWSURFACE7;
 position p;
 @@
@@ -8432,12 +10160,12 @@ position p;
 + IDirectDrawSurface7 *
 
 @script:python depends on report@
-p << r624.p;
+p << r752.p;
 @@
 WARN(p[0], "IDirectDrawSurface7*", "LPDIRECTDRAWSURFACE7")
 
 
-@r625@
+@r753@
 typedef IDirectInput7A;
 typedef PDIRECTINPUT7A;
 position p;
@@ -8446,12 +10174,12 @@ position p;
 + IDirectInput7A *
 
 @script:python depends on report@
-p << r625.p;
+p << r753.p;
 @@
 WARN(p[0], "IDirectInput7A*", "PDIRECTINPUT7A")
 
 
-@r626@
+@r754@
 typedef LPDIRECTINPUT7A;
 position p;
 @@
@@ -8459,12 +10187,12 @@ position p;
 + IDirectInput7A *
 
 @script:python depends on report@
-p << r626.p;
+p << r754.p;
 @@
 WARN(p[0], "IDirectInput7A*", "LPDIRECTINPUT7A")
 
 
-@r627@
+@r755@
 typedef IDirectInput7W;
 typedef PDIRECTINPUT7W;
 position p;
@@ -8473,12 +10201,12 @@ position p;
 + IDirectInput7W *
 
 @script:python depends on report@
-p << r627.p;
+p << r755.p;
 @@
 WARN(p[0], "IDirectInput7W*", "PDIRECTINPUT7W")
 
 
-@r628@
+@r756@
 typedef LPDIRECTINPUT7W;
 position p;
 @@
@@ -8486,12 +10214,12 @@ position p;
 + IDirectInput7W *
 
 @script:python depends on report@
-p << r628.p;
+p << r756.p;
 @@
 WARN(p[0], "IDirectInput7W*", "LPDIRECTINPUT7W")
 
 
-@r629@
+@r757@
 typedef IDirectInput8A;
 typedef PDIRECTINPUT8A;
 position p;
@@ -8500,12 +10228,12 @@ position p;
 + IDirectInput8A *
 
 @script:python depends on report@
-p << r629.p;
+p << r757.p;
 @@
 WARN(p[0], "IDirectInput8A*", "PDIRECTINPUT8A")
 
 
-@r630@
+@r758@
 typedef LPDIRECTINPUT8A;
 position p;
 @@
@@ -8513,12 +10241,12 @@ position p;
 + IDirectInput8A *
 
 @script:python depends on report@
-p << r630.p;
+p << r758.p;
 @@
 WARN(p[0], "IDirectInput8A*", "LPDIRECTINPUT8A")
 
 
-@r631@
+@r759@
 typedef IDirectInput8W;
 typedef PDIRECTINPUT8W;
 position p;
@@ -8527,12 +10255,12 @@ position p;
 + IDirectInput8W *
 
 @script:python depends on report@
-p << r631.p;
+p << r759.p;
 @@
 WARN(p[0], "IDirectInput8W*", "PDIRECTINPUT8W")
 
 
-@r632@
+@r760@
 typedef LPDIRECTINPUT8W;
 position p;
 @@
@@ -8540,12 +10268,12 @@ position p;
 + IDirectInput8W *
 
 @script:python depends on report@
-p << r632.p;
+p << r760.p;
 @@
 WARN(p[0], "IDirectInput8W*", "LPDIRECTINPUT8W")
 
 
-@r633@
+@r761@
 typedef IDirectInputDevice8A;
 typedef PDIRECTINPUTDEVICE8A;
 position p;
@@ -8554,12 +10282,12 @@ position p;
 + IDirectInputDevice8A *
 
 @script:python depends on report@
-p << r633.p;
+p << r761.p;
 @@
 WARN(p[0], "IDirectInputDevice8A*", "PDIRECTINPUTDEVICE8A")
 
 
-@r634@
+@r762@
 typedef LPDIRECTINPUTDEVICE8A;
 position p;
 @@
@@ -8567,12 +10295,12 @@ position p;
 + IDirectInputDevice8A *
 
 @script:python depends on report@
-p << r634.p;
+p << r762.p;
 @@
 WARN(p[0], "IDirectInputDevice8A*", "LPDIRECTINPUTDEVICE8A")
 
 
-@r635@
+@r763@
 typedef IDirectInputDevice8W;
 typedef PDIRECTINPUTDEVICE8W;
 position p;
@@ -8581,12 +10309,12 @@ position p;
 + IDirectInputDevice8W *
 
 @script:python depends on report@
-p << r635.p;
+p << r763.p;
 @@
 WARN(p[0], "IDirectInputDevice8W*", "PDIRECTINPUTDEVICE8W")
 
 
-@r636@
+@r764@
 typedef LPDIRECTINPUTDEVICE8W;
 position p;
 @@
@@ -8594,12 +10322,12 @@ position p;
 + IDirectInputDevice8W *
 
 @script:python depends on report@
-p << r636.p;
+p << r764.p;
 @@
 WARN(p[0], "IDirectInputDevice8W*", "LPDIRECTINPUTDEVICE8W")
 
 
-@r637@
+@r765@
 typedef IDirectInputEffect;
 typedef PDIRECTINPUTEFFECT;
 position p;
@@ -8608,12 +10336,12 @@ position p;
 + IDirectInputEffect *
 
 @script:python depends on report@
-p << r637.p;
+p << r765.p;
 @@
 WARN(p[0], "IDirectInputEffect*", "PDIRECTINPUTEFFECT")
 
 
-@r638@
+@r766@
 typedef LPDIRECTINPUTEFFECT;
 position p;
 @@
@@ -8621,12 +10349,12 @@ position p;
 + IDirectInputEffect *
 
 @script:python depends on report@
-p << r638.p;
+p << r766.p;
 @@
 WARN(p[0], "IDirectInputEffect*", "LPDIRECTINPUTEFFECT")
 
 
-@r639@
+@r767@
 typedef IDirectInputJoyConfig8;
 typedef PDIRECTINPUTJOYCONFIG8;
 position p;
@@ -8635,12 +10363,12 @@ position p;
 + IDirectInputJoyConfig8 *
 
 @script:python depends on report@
-p << r639.p;
+p << r767.p;
 @@
 WARN(p[0], "IDirectInputJoyConfig8*", "PDIRECTINPUTJOYCONFIG8")
 
 
-@r640@
+@r768@
 typedef LPDIRECTINPUTJOYCONFIG8;
 position p;
 @@
@@ -8648,12 +10376,201 @@ position p;
 + IDirectInputJoyConfig8 *
 
 @script:python depends on report@
-p << r640.p;
+p << r768.p;
 @@
 WARN(p[0], "IDirectInputJoyConfig8*", "LPDIRECTINPUTJOYCONFIG8")
 
 
-@r641@
+@r769@
+typedef IDirectManipulationCompositor2;
+typedef PDIRECTMANIPULATIONCOMPOSITOR2;
+position p;
+@@
+- PDIRECTMANIPULATIONCOMPOSITOR2@p
++ IDirectManipulationCompositor2 *
+
+@script:python depends on report@
+p << r769.p;
+@@
+WARN(p[0], "IDirectManipulationCompositor2*", "PDIRECTMANIPULATIONCOMPOSITOR2")
+
+
+@r770@
+typedef LPDIRECTMANIPULATIONCOMPOSITOR2;
+position p;
+@@
+- LPDIRECTMANIPULATIONCOMPOSITOR2@p
++ IDirectManipulationCompositor2 *
+
+@script:python depends on report@
+p << r770.p;
+@@
+WARN(p[0], "IDirectManipulationCompositor2*", "LPDIRECTMANIPULATIONCOMPOSITOR2")
+
+
+@r771@
+typedef IDirectManipulationContent;
+typedef PDIRECTMANIPULATIONCONTENT;
+position p;
+@@
+- PDIRECTMANIPULATIONCONTENT@p
++ IDirectManipulationContent *
+
+@script:python depends on report@
+p << r771.p;
+@@
+WARN(p[0], "IDirectManipulationContent*", "PDIRECTMANIPULATIONCONTENT")
+
+
+@r772@
+typedef LPDIRECTMANIPULATIONCONTENT;
+position p;
+@@
+- LPDIRECTMANIPULATIONCONTENT@p
++ IDirectManipulationContent *
+
+@script:python depends on report@
+p << r772.p;
+@@
+WARN(p[0], "IDirectManipulationContent*", "LPDIRECTMANIPULATIONCONTENT")
+
+
+@r773@
+typedef IDirectManipulationFrameInfoProvider;
+typedef PDIRECTMANIPULATIONFRAMEINFOPROVIDER;
+position p;
+@@
+- PDIRECTMANIPULATIONFRAMEINFOPROVIDER@p
++ IDirectManipulationFrameInfoProvider *
+
+@script:python depends on report@
+p << r773.p;
+@@
+WARN(p[0], "IDirectManipulationFrameInfoProvider*", "PDIRECTMANIPULATIONFRAMEINFOPROVIDER")
+
+
+@r774@
+typedef LPDIRECTMANIPULATIONFRAMEINFOPROVIDER;
+position p;
+@@
+- LPDIRECTMANIPULATIONFRAMEINFOPROVIDER@p
++ IDirectManipulationFrameInfoProvider *
+
+@script:python depends on report@
+p << r774.p;
+@@
+WARN(p[0], "IDirectManipulationFrameInfoProvider*", "LPDIRECTMANIPULATIONFRAMEINFOPROVIDER")
+
+
+@r775@
+typedef IDirectManipulationManager2;
+typedef PDIRECTMANIPULATIONMANAGER2;
+position p;
+@@
+- PDIRECTMANIPULATIONMANAGER2@p
++ IDirectManipulationManager2 *
+
+@script:python depends on report@
+p << r775.p;
+@@
+WARN(p[0], "IDirectManipulationManager2*", "PDIRECTMANIPULATIONMANAGER2")
+
+
+@r776@
+typedef LPDIRECTMANIPULATIONMANAGER2;
+position p;
+@@
+- LPDIRECTMANIPULATIONMANAGER2@p
++ IDirectManipulationManager2 *
+
+@script:python depends on report@
+p << r776.p;
+@@
+WARN(p[0], "IDirectManipulationManager2*", "LPDIRECTMANIPULATIONMANAGER2")
+
+
+@r777@
+typedef IDirectManipulationPrimaryContent;
+typedef PDIRECTMANIPULATIONPRIMARYCONTENT;
+position p;
+@@
+- PDIRECTMANIPULATIONPRIMARYCONTENT@p
++ IDirectManipulationPrimaryContent *
+
+@script:python depends on report@
+p << r777.p;
+@@
+WARN(p[0], "IDirectManipulationPrimaryContent*", "PDIRECTMANIPULATIONPRIMARYCONTENT")
+
+
+@r778@
+typedef LPDIRECTMANIPULATIONPRIMARYCONTENT;
+position p;
+@@
+- LPDIRECTMANIPULATIONPRIMARYCONTENT@p
++ IDirectManipulationPrimaryContent *
+
+@script:python depends on report@
+p << r778.p;
+@@
+WARN(p[0], "IDirectManipulationPrimaryContent*", "LPDIRECTMANIPULATIONPRIMARYCONTENT")
+
+
+@r779@
+typedef IDirectManipulationUpdateManager;
+typedef PDIRECTMANIPULATIONUPDATEMANAGER;
+position p;
+@@
+- PDIRECTMANIPULATIONUPDATEMANAGER@p
++ IDirectManipulationUpdateManager *
+
+@script:python depends on report@
+p << r779.p;
+@@
+WARN(p[0], "IDirectManipulationUpdateManager*", "PDIRECTMANIPULATIONUPDATEMANAGER")
+
+
+@r780@
+typedef LPDIRECTMANIPULATIONUPDATEMANAGER;
+position p;
+@@
+- LPDIRECTMANIPULATIONUPDATEMANAGER@p
++ IDirectManipulationUpdateManager *
+
+@script:python depends on report@
+p << r780.p;
+@@
+WARN(p[0], "IDirectManipulationUpdateManager*", "LPDIRECTMANIPULATIONUPDATEMANAGER")
+
+
+@r781@
+typedef IDirectManipulationViewport2;
+typedef PDIRECTMANIPULATIONVIEWPORT2;
+position p;
+@@
+- PDIRECTMANIPULATIONVIEWPORT2@p
++ IDirectManipulationViewport2 *
+
+@script:python depends on report@
+p << r781.p;
+@@
+WARN(p[0], "IDirectManipulationViewport2*", "PDIRECTMANIPULATIONVIEWPORT2")
+
+
+@r782@
+typedef LPDIRECTMANIPULATIONVIEWPORT2;
+position p;
+@@
+- LPDIRECTMANIPULATIONVIEWPORT2@p
++ IDirectManipulationViewport2 *
+
+@script:python depends on report@
+p << r782.p;
+@@
+WARN(p[0], "IDirectManipulationViewport2*", "LPDIRECTMANIPULATIONVIEWPORT2")
+
+
+@r783@
 typedef IDirectMusic8;
 typedef PDIRECTMUSIC8;
 position p;
@@ -8662,12 +10579,12 @@ position p;
 + IDirectMusic8 *
 
 @script:python depends on report@
-p << r641.p;
+p << r783.p;
 @@
 WARN(p[0], "IDirectMusic8*", "PDIRECTMUSIC8")
 
 
-@r642@
+@r784@
 typedef LPDIRECTMUSIC8;
 position p;
 @@
@@ -8675,12 +10592,12 @@ position p;
 + IDirectMusic8 *
 
 @script:python depends on report@
-p << r642.p;
+p << r784.p;
 @@
 WARN(p[0], "IDirectMusic8*", "LPDIRECTMUSIC8")
 
 
-@r643@
+@r785@
 typedef IDirectMusicAudioPath;
 typedef PDIRECTMUSICAUDIOPATH;
 position p;
@@ -8689,12 +10606,12 @@ position p;
 + IDirectMusicAudioPath *
 
 @script:python depends on report@
-p << r643.p;
+p << r785.p;
 @@
 WARN(p[0], "IDirectMusicAudioPath*", "PDIRECTMUSICAUDIOPATH")
 
 
-@r644@
+@r786@
 typedef LPDIRECTMUSICAUDIOPATH;
 position p;
 @@
@@ -8702,12 +10619,12 @@ position p;
 + IDirectMusicAudioPath *
 
 @script:python depends on report@
-p << r644.p;
+p << r786.p;
 @@
 WARN(p[0], "IDirectMusicAudioPath*", "LPDIRECTMUSICAUDIOPATH")
 
 
-@r645@
+@r787@
 typedef IDirectMusicBand;
 typedef PDIRECTMUSICBAND;
 position p;
@@ -8716,12 +10633,12 @@ position p;
 + IDirectMusicBand *
 
 @script:python depends on report@
-p << r645.p;
+p << r787.p;
 @@
 WARN(p[0], "IDirectMusicBand*", "PDIRECTMUSICBAND")
 
 
-@r646@
+@r788@
 typedef LPDIRECTMUSICBAND;
 position p;
 @@
@@ -8729,12 +10646,12 @@ position p;
 + IDirectMusicBand *
 
 @script:python depends on report@
-p << r646.p;
+p << r788.p;
 @@
 WARN(p[0], "IDirectMusicBand*", "LPDIRECTMUSICBAND")
 
 
-@r647@
+@r789@
 typedef IDirectMusicBuffer;
 typedef PDIRECTMUSICBUFFER;
 position p;
@@ -8743,12 +10660,12 @@ position p;
 + IDirectMusicBuffer *
 
 @script:python depends on report@
-p << r647.p;
+p << r789.p;
 @@
 WARN(p[0], "IDirectMusicBuffer*", "PDIRECTMUSICBUFFER")
 
 
-@r648@
+@r790@
 typedef LPDIRECTMUSICBUFFER;
 position p;
 @@
@@ -8756,12 +10673,12 @@ position p;
 + IDirectMusicBuffer *
 
 @script:python depends on report@
-p << r648.p;
+p << r790.p;
 @@
 WARN(p[0], "IDirectMusicBuffer*", "LPDIRECTMUSICBUFFER")
 
 
-@r649@
+@r791@
 typedef IDirectMusicChordMap;
 typedef PDIRECTMUSICCHORDMAP;
 position p;
@@ -8770,12 +10687,12 @@ position p;
 + IDirectMusicChordMap *
 
 @script:python depends on report@
-p << r649.p;
+p << r791.p;
 @@
 WARN(p[0], "IDirectMusicChordMap*", "PDIRECTMUSICCHORDMAP")
 
 
-@r650@
+@r792@
 typedef LPDIRECTMUSICCHORDMAP;
 position p;
 @@
@@ -8783,12 +10700,12 @@ position p;
 + IDirectMusicChordMap *
 
 @script:python depends on report@
-p << r650.p;
+p << r792.p;
 @@
 WARN(p[0], "IDirectMusicChordMap*", "LPDIRECTMUSICCHORDMAP")
 
 
-@r651@
+@r793@
 typedef IDirectMusicCollection;
 typedef PDIRECTMUSICCOLLECTION;
 position p;
@@ -8797,12 +10714,12 @@ position p;
 + IDirectMusicCollection *
 
 @script:python depends on report@
-p << r651.p;
+p << r793.p;
 @@
 WARN(p[0], "IDirectMusicCollection*", "PDIRECTMUSICCOLLECTION")
 
 
-@r652@
+@r794@
 typedef LPDIRECTMUSICCOLLECTION;
 position p;
 @@
@@ -8810,12 +10727,12 @@ position p;
 + IDirectMusicCollection *
 
 @script:python depends on report@
-p << r652.p;
+p << r794.p;
 @@
 WARN(p[0], "IDirectMusicCollection*", "LPDIRECTMUSICCOLLECTION")
 
 
-@r653@
+@r795@
 typedef IDirectMusicComposer;
 typedef PDIRECTMUSICCOMPOSER;
 position p;
@@ -8824,12 +10741,12 @@ position p;
 + IDirectMusicComposer *
 
 @script:python depends on report@
-p << r653.p;
+p << r795.p;
 @@
 WARN(p[0], "IDirectMusicComposer*", "PDIRECTMUSICCOMPOSER")
 
 
-@r654@
+@r796@
 typedef LPDIRECTMUSICCOMPOSER;
 position p;
 @@
@@ -8837,12 +10754,12 @@ position p;
 + IDirectMusicComposer *
 
 @script:python depends on report@
-p << r654.p;
+p << r796.p;
 @@
 WARN(p[0], "IDirectMusicComposer*", "LPDIRECTMUSICCOMPOSER")
 
 
-@r655@
+@r797@
 typedef IDirectMusicContainer;
 typedef PDIRECTMUSICCONTAINER;
 position p;
@@ -8851,12 +10768,12 @@ position p;
 + IDirectMusicContainer *
 
 @script:python depends on report@
-p << r655.p;
+p << r797.p;
 @@
 WARN(p[0], "IDirectMusicContainer*", "PDIRECTMUSICCONTAINER")
 
 
-@r656@
+@r798@
 typedef LPDIRECTMUSICCONTAINER;
 position p;
 @@
@@ -8864,12 +10781,12 @@ position p;
 + IDirectMusicContainer *
 
 @script:python depends on report@
-p << r656.p;
+p << r798.p;
 @@
 WARN(p[0], "IDirectMusicContainer*", "LPDIRECTMUSICCONTAINER")
 
 
-@r657@
+@r799@
 typedef IDirectMusicDownload;
 typedef PDIRECTMUSICDOWNLOAD;
 position p;
@@ -8878,12 +10795,12 @@ position p;
 + IDirectMusicDownload *
 
 @script:python depends on report@
-p << r657.p;
+p << r799.p;
 @@
 WARN(p[0], "IDirectMusicDownload*", "PDIRECTMUSICDOWNLOAD")
 
 
-@r658@
+@r800@
 typedef LPDIRECTMUSICDOWNLOAD;
 position p;
 @@
@@ -8891,12 +10808,12 @@ position p;
 + IDirectMusicDownload *
 
 @script:python depends on report@
-p << r658.p;
+p << r800.p;
 @@
 WARN(p[0], "IDirectMusicDownload*", "LPDIRECTMUSICDOWNLOAD")
 
 
-@r659@
+@r801@
 typedef IDirectMusicDownloadedInstrument;
 typedef PDIRECTMUSICDOWNLOADEDINSTRUMENT;
 position p;
@@ -8905,12 +10822,12 @@ position p;
 + IDirectMusicDownloadedInstrument *
 
 @script:python depends on report@
-p << r659.p;
+p << r801.p;
 @@
 WARN(p[0], "IDirectMusicDownloadedInstrument*", "PDIRECTMUSICDOWNLOADEDINSTRUMENT")
 
 
-@r660@
+@r802@
 typedef LPDIRECTMUSICDOWNLOADEDINSTRUMENT;
 position p;
 @@
@@ -8918,12 +10835,12 @@ position p;
 + IDirectMusicDownloadedInstrument *
 
 @script:python depends on report@
-p << r660.p;
+p << r802.p;
 @@
 WARN(p[0], "IDirectMusicDownloadedInstrument*", "LPDIRECTMUSICDOWNLOADEDINSTRUMENT")
 
 
-@r661@
+@r803@
 typedef IDirectMusicGraph;
 typedef PDIRECTMUSICGRAPH;
 position p;
@@ -8932,12 +10849,12 @@ position p;
 + IDirectMusicGraph *
 
 @script:python depends on report@
-p << r661.p;
+p << r803.p;
 @@
 WARN(p[0], "IDirectMusicGraph*", "PDIRECTMUSICGRAPH")
 
 
-@r662@
+@r804@
 typedef LPDIRECTMUSICGRAPH;
 position p;
 @@
@@ -8945,12 +10862,12 @@ position p;
 + IDirectMusicGraph *
 
 @script:python depends on report@
-p << r662.p;
+p << r804.p;
 @@
 WARN(p[0], "IDirectMusicGraph*", "LPDIRECTMUSICGRAPH")
 
 
-@r663@
+@r805@
 typedef IDirectMusicInstrument;
 typedef PDIRECTMUSICINSTRUMENT;
 position p;
@@ -8959,12 +10876,12 @@ position p;
 + IDirectMusicInstrument *
 
 @script:python depends on report@
-p << r663.p;
+p << r805.p;
 @@
 WARN(p[0], "IDirectMusicInstrument*", "PDIRECTMUSICINSTRUMENT")
 
 
-@r664@
+@r806@
 typedef LPDIRECTMUSICINSTRUMENT;
 position p;
 @@
@@ -8972,12 +10889,12 @@ position p;
 + IDirectMusicInstrument *
 
 @script:python depends on report@
-p << r664.p;
+p << r806.p;
 @@
 WARN(p[0], "IDirectMusicInstrument*", "LPDIRECTMUSICINSTRUMENT")
 
 
-@r665@
+@r807@
 typedef IDirectMusicLoader8;
 typedef PDIRECTMUSICLOADER8;
 position p;
@@ -8986,12 +10903,12 @@ position p;
 + IDirectMusicLoader8 *
 
 @script:python depends on report@
-p << r665.p;
+p << r807.p;
 @@
 WARN(p[0], "IDirectMusicLoader8*", "PDIRECTMUSICLOADER8")
 
 
-@r666@
+@r808@
 typedef LPDIRECTMUSICLOADER8;
 position p;
 @@
@@ -8999,12 +10916,12 @@ position p;
 + IDirectMusicLoader8 *
 
 @script:python depends on report@
-p << r666.p;
+p << r808.p;
 @@
 WARN(p[0], "IDirectMusicLoader8*", "LPDIRECTMUSICLOADER8")
 
 
-@r667@
+@r809@
 typedef IDirectMusicObject;
 typedef PDIRECTMUSICOBJECT;
 position p;
@@ -9013,12 +10930,12 @@ position p;
 + IDirectMusicObject *
 
 @script:python depends on report@
-p << r667.p;
+p << r809.p;
 @@
 WARN(p[0], "IDirectMusicObject*", "PDIRECTMUSICOBJECT")
 
 
-@r668@
+@r810@
 typedef LPDIRECTMUSICOBJECT;
 position p;
 @@
@@ -9026,12 +10943,12 @@ position p;
 + IDirectMusicObject *
 
 @script:python depends on report@
-p << r668.p;
+p << r810.p;
 @@
 WARN(p[0], "IDirectMusicObject*", "LPDIRECTMUSICOBJECT")
 
 
-@r669@
+@r811@
 typedef IDirectMusicPerformance8;
 typedef PDIRECTMUSICPERFORMANCE8;
 position p;
@@ -9040,12 +10957,12 @@ position p;
 + IDirectMusicPerformance8 *
 
 @script:python depends on report@
-p << r669.p;
+p << r811.p;
 @@
 WARN(p[0], "IDirectMusicPerformance8*", "PDIRECTMUSICPERFORMANCE8")
 
 
-@r670@
+@r812@
 typedef LPDIRECTMUSICPERFORMANCE8;
 position p;
 @@
@@ -9053,12 +10970,12 @@ position p;
 + IDirectMusicPerformance8 *
 
 @script:python depends on report@
-p << r670.p;
+p << r812.p;
 @@
 WARN(p[0], "IDirectMusicPerformance8*", "LPDIRECTMUSICPERFORMANCE8")
 
 
-@r671@
+@r813@
 typedef IDirectMusicPort;
 typedef PDIRECTMUSICPORT;
 position p;
@@ -9067,12 +10984,12 @@ position p;
 + IDirectMusicPort *
 
 @script:python depends on report@
-p << r671.p;
+p << r813.p;
 @@
 WARN(p[0], "IDirectMusicPort*", "PDIRECTMUSICPORT")
 
 
-@r672@
+@r814@
 typedef LPDIRECTMUSICPORT;
 position p;
 @@
@@ -9080,12 +10997,12 @@ position p;
 + IDirectMusicPort *
 
 @script:python depends on report@
-p << r672.p;
+p << r814.p;
 @@
 WARN(p[0], "IDirectMusicPort*", "LPDIRECTMUSICPORT")
 
 
-@r673@
+@r815@
 typedef IDirectMusicPortDownload;
 typedef PDIRECTMUSICPORTDOWNLOAD;
 position p;
@@ -9094,12 +11011,12 @@ position p;
 + IDirectMusicPortDownload *
 
 @script:python depends on report@
-p << r673.p;
+p << r815.p;
 @@
 WARN(p[0], "IDirectMusicPortDownload*", "PDIRECTMUSICPORTDOWNLOAD")
 
 
-@r674@
+@r816@
 typedef LPDIRECTMUSICPORTDOWNLOAD;
 position p;
 @@
@@ -9107,12 +11024,12 @@ position p;
 + IDirectMusicPortDownload *
 
 @script:python depends on report@
-p << r674.p;
+p << r816.p;
 @@
 WARN(p[0], "IDirectMusicPortDownload*", "LPDIRECTMUSICPORTDOWNLOAD")
 
 
-@r675@
+@r817@
 typedef IDirectMusicScript;
 typedef PDIRECTMUSICSCRIPT;
 position p;
@@ -9121,12 +11038,12 @@ position p;
 + IDirectMusicScript *
 
 @script:python depends on report@
-p << r675.p;
+p << r817.p;
 @@
 WARN(p[0], "IDirectMusicScript*", "PDIRECTMUSICSCRIPT")
 
 
-@r676@
+@r818@
 typedef LPDIRECTMUSICSCRIPT;
 position p;
 @@
@@ -9134,12 +11051,12 @@ position p;
 + IDirectMusicScript *
 
 @script:python depends on report@
-p << r676.p;
+p << r818.p;
 @@
 WARN(p[0], "IDirectMusicScript*", "LPDIRECTMUSICSCRIPT")
 
 
-@r677@
+@r819@
 typedef IDirectMusicSegment8;
 typedef PDIRECTMUSICSEGMENT8;
 position p;
@@ -9148,12 +11065,12 @@ position p;
 + IDirectMusicSegment8 *
 
 @script:python depends on report@
-p << r677.p;
+p << r819.p;
 @@
 WARN(p[0], "IDirectMusicSegment8*", "PDIRECTMUSICSEGMENT8")
 
 
-@r678@
+@r820@
 typedef LPDIRECTMUSICSEGMENT8;
 position p;
 @@
@@ -9161,12 +11078,12 @@ position p;
 + IDirectMusicSegment8 *
 
 @script:python depends on report@
-p << r678.p;
+p << r820.p;
 @@
 WARN(p[0], "IDirectMusicSegment8*", "LPDIRECTMUSICSEGMENT8")
 
 
-@r679@
+@r821@
 typedef IDirectMusicSegmentState8;
 typedef PDIRECTMUSICSEGMENTSTATE8;
 position p;
@@ -9175,12 +11092,12 @@ position p;
 + IDirectMusicSegmentState8 *
 
 @script:python depends on report@
-p << r679.p;
+p << r821.p;
 @@
 WARN(p[0], "IDirectMusicSegmentState8*", "PDIRECTMUSICSEGMENTSTATE8")
 
 
-@r680@
+@r822@
 typedef LPDIRECTMUSICSEGMENTSTATE8;
 position p;
 @@
@@ -9188,12 +11105,12 @@ position p;
 + IDirectMusicSegmentState8 *
 
 @script:python depends on report@
-p << r680.p;
+p << r822.p;
 @@
 WARN(p[0], "IDirectMusicSegmentState8*", "LPDIRECTMUSICSEGMENTSTATE8")
 
 
-@r681@
+@r823@
 typedef IDirectMusicStyle8;
 typedef PDIRECTMUSICSTYLE8;
 position p;
@@ -9202,12 +11119,12 @@ position p;
 + IDirectMusicStyle8 *
 
 @script:python depends on report@
-p << r681.p;
+p << r823.p;
 @@
 WARN(p[0], "IDirectMusicStyle8*", "PDIRECTMUSICSTYLE8")
 
 
-@r682@
+@r824@
 typedef LPDIRECTMUSICSTYLE8;
 position p;
 @@
@@ -9215,12 +11132,12 @@ position p;
 + IDirectMusicStyle8 *
 
 @script:python depends on report@
-p << r682.p;
+p << r824.p;
 @@
 WARN(p[0], "IDirectMusicStyle8*", "LPDIRECTMUSICSTYLE8")
 
 
-@r683@
+@r825@
 typedef IDirectMusicSynth8;
 typedef PDIRECTMUSICSYNTH8;
 position p;
@@ -9229,12 +11146,12 @@ position p;
 + IDirectMusicSynth8 *
 
 @script:python depends on report@
-p << r683.p;
+p << r825.p;
 @@
 WARN(p[0], "IDirectMusicSynth8*", "PDIRECTMUSICSYNTH8")
 
 
-@r684@
+@r826@
 typedef LPDIRECTMUSICSYNTH8;
 position p;
 @@
@@ -9242,12 +11159,12 @@ position p;
 + IDirectMusicSynth8 *
 
 @script:python depends on report@
-p << r684.p;
+p << r826.p;
 @@
 WARN(p[0], "IDirectMusicSynth8*", "LPDIRECTMUSICSYNTH8")
 
 
-@r685@
+@r827@
 typedef IDirectMusicSynthSink;
 typedef PDIRECTMUSICSYNTHSINK;
 position p;
@@ -9256,12 +11173,12 @@ position p;
 + IDirectMusicSynthSink *
 
 @script:python depends on report@
-p << r685.p;
+p << r827.p;
 @@
 WARN(p[0], "IDirectMusicSynthSink*", "PDIRECTMUSICSYNTHSINK")
 
 
-@r686@
+@r828@
 typedef LPDIRECTMUSICSYNTHSINK;
 position p;
 @@
@@ -9269,12 +11186,12 @@ position p;
 + IDirectMusicSynthSink *
 
 @script:python depends on report@
-p << r686.p;
+p << r828.p;
 @@
 WARN(p[0], "IDirectMusicSynthSink*", "LPDIRECTMUSICSYNTHSINK")
 
 
-@r687@
+@r829@
 typedef IDirectMusicThru;
 typedef PDIRECTMUSICTHRU;
 position p;
@@ -9283,12 +11200,12 @@ position p;
 + IDirectMusicThru *
 
 @script:python depends on report@
-p << r687.p;
+p << r829.p;
 @@
 WARN(p[0], "IDirectMusicThru*", "PDIRECTMUSICTHRU")
 
 
-@r688@
+@r830@
 typedef LPDIRECTMUSICTHRU;
 position p;
 @@
@@ -9296,12 +11213,12 @@ position p;
 + IDirectMusicThru *
 
 @script:python depends on report@
-p << r688.p;
+p << r830.p;
 @@
 WARN(p[0], "IDirectMusicThru*", "LPDIRECTMUSICTHRU")
 
 
-@r689@
+@r831@
 typedef IDirectMusicTrack;
 typedef PDIRECTMUSICTRACK;
 position p;
@@ -9310,12 +11227,12 @@ position p;
 + IDirectMusicTrack *
 
 @script:python depends on report@
-p << r689.p;
+p << r831.p;
 @@
 WARN(p[0], "IDirectMusicTrack*", "PDIRECTMUSICTRACK")
 
 
-@r690@
+@r832@
 typedef LPDIRECTMUSICTRACK;
 position p;
 @@
@@ -9323,12 +11240,12 @@ position p;
 + IDirectMusicTrack *
 
 @script:python depends on report@
-p << r690.p;
+p << r832.p;
 @@
 WARN(p[0], "IDirectMusicTrack*", "LPDIRECTMUSICTRACK")
 
 
-@r691@
+@r833@
 typedef IDirectMusicTrack8;
 typedef PDIRECTMUSICTRACK8;
 position p;
@@ -9337,12 +11254,12 @@ position p;
 + IDirectMusicTrack8 *
 
 @script:python depends on report@
-p << r691.p;
+p << r833.p;
 @@
 WARN(p[0], "IDirectMusicTrack8*", "PDIRECTMUSICTRACK8")
 
 
-@r692@
+@r834@
 typedef LPDIRECTMUSICTRACK8;
 position p;
 @@
@@ -9350,12 +11267,12 @@ position p;
 + IDirectMusicTrack8 *
 
 @script:python depends on report@
-p << r692.p;
+p << r834.p;
 @@
 WARN(p[0], "IDirectMusicTrack8*", "LPDIRECTMUSICTRACK8")
 
 
-@r693@
+@r835@
 typedef IDirectPlay;
 typedef PDIRECTPLAY;
 position p;
@@ -9364,12 +11281,12 @@ position p;
 + IDirectPlay *
 
 @script:python depends on report@
-p << r693.p;
+p << r835.p;
 @@
 WARN(p[0], "IDirectPlay*", "PDIRECTPLAY")
 
 
-@r694@
+@r836@
 typedef LPDIRECTPLAY;
 position p;
 @@
@@ -9377,12 +11294,12 @@ position p;
 + IDirectPlay *
 
 @script:python depends on report@
-p << r694.p;
+p << r836.p;
 @@
 WARN(p[0], "IDirectPlay*", "LPDIRECTPLAY")
 
 
-@r695@
+@r837@
 typedef IDirectPlay2;
 typedef PDIRECTPLAY2;
 position p;
@@ -9391,12 +11308,12 @@ position p;
 + IDirectPlay2 *
 
 @script:python depends on report@
-p << r695.p;
+p << r837.p;
 @@
 WARN(p[0], "IDirectPlay2*", "PDIRECTPLAY2")
 
 
-@r696@
+@r838@
 typedef LPDIRECTPLAY2;
 position p;
 @@
@@ -9404,12 +11321,12 @@ position p;
 + IDirectPlay2 *
 
 @script:python depends on report@
-p << r696.p;
+p << r838.p;
 @@
 WARN(p[0], "IDirectPlay2*", "LPDIRECTPLAY2")
 
 
-@r697@
+@r839@
 typedef IDirectPlay2A;
 typedef PDIRECTPLAY2A;
 position p;
@@ -9418,12 +11335,12 @@ position p;
 + IDirectPlay2A *
 
 @script:python depends on report@
-p << r697.p;
+p << r839.p;
 @@
 WARN(p[0], "IDirectPlay2A*", "PDIRECTPLAY2A")
 
 
-@r698@
+@r840@
 typedef LPDIRECTPLAY2A;
 position p;
 @@
@@ -9431,12 +11348,12 @@ position p;
 + IDirectPlay2A *
 
 @script:python depends on report@
-p << r698.p;
+p << r840.p;
 @@
 WARN(p[0], "IDirectPlay2A*", "LPDIRECTPLAY2A")
 
 
-@r699@
+@r841@
 typedef IDirectPlay3;
 typedef PDIRECTPLAY3;
 position p;
@@ -9445,12 +11362,12 @@ position p;
 + IDirectPlay3 *
 
 @script:python depends on report@
-p << r699.p;
+p << r841.p;
 @@
 WARN(p[0], "IDirectPlay3*", "PDIRECTPLAY3")
 
 
-@r700@
+@r842@
 typedef LPDIRECTPLAY3;
 position p;
 @@
@@ -9458,12 +11375,12 @@ position p;
 + IDirectPlay3 *
 
 @script:python depends on report@
-p << r700.p;
+p << r842.p;
 @@
 WARN(p[0], "IDirectPlay3*", "LPDIRECTPLAY3")
 
 
-@r701@
+@r843@
 typedef IDirectPlay3A;
 typedef PDIRECTPLAY3A;
 position p;
@@ -9472,12 +11389,12 @@ position p;
 + IDirectPlay3A *
 
 @script:python depends on report@
-p << r701.p;
+p << r843.p;
 @@
 WARN(p[0], "IDirectPlay3A*", "PDIRECTPLAY3A")
 
 
-@r702@
+@r844@
 typedef LPDIRECTPLAY3A;
 position p;
 @@
@@ -9485,12 +11402,12 @@ position p;
 + IDirectPlay3A *
 
 @script:python depends on report@
-p << r702.p;
+p << r844.p;
 @@
 WARN(p[0], "IDirectPlay3A*", "LPDIRECTPLAY3A")
 
 
-@r703@
+@r845@
 typedef IDirectPlay4;
 typedef PDIRECTPLAY4;
 position p;
@@ -9499,12 +11416,12 @@ position p;
 + IDirectPlay4 *
 
 @script:python depends on report@
-p << r703.p;
+p << r845.p;
 @@
 WARN(p[0], "IDirectPlay4*", "PDIRECTPLAY4")
 
 
-@r704@
+@r846@
 typedef LPDIRECTPLAY4;
 position p;
 @@
@@ -9512,12 +11429,12 @@ position p;
 + IDirectPlay4 *
 
 @script:python depends on report@
-p << r704.p;
+p << r846.p;
 @@
 WARN(p[0], "IDirectPlay4*", "LPDIRECTPLAY4")
 
 
-@r705@
+@r847@
 typedef IDirectPlay4A;
 typedef PDIRECTPLAY4A;
 position p;
@@ -9526,12 +11443,12 @@ position p;
 + IDirectPlay4A *
 
 @script:python depends on report@
-p << r705.p;
+p << r847.p;
 @@
 WARN(p[0], "IDirectPlay4A*", "PDIRECTPLAY4A")
 
 
-@r706@
+@r848@
 typedef LPDIRECTPLAY4A;
 position p;
 @@
@@ -9539,12 +11456,12 @@ position p;
 + IDirectPlay4A *
 
 @script:python depends on report@
-p << r706.p;
+p << r848.p;
 @@
 WARN(p[0], "IDirectPlay4A*", "LPDIRECTPLAY4A")
 
 
-@r707@
+@r849@
 typedef IDirectPlay8Address;
 typedef PDIRECTPLAY8ADDRESS;
 position p;
@@ -9553,12 +11470,12 @@ position p;
 + IDirectPlay8Address *
 
 @script:python depends on report@
-p << r707.p;
+p << r849.p;
 @@
 WARN(p[0], "IDirectPlay8Address*", "PDIRECTPLAY8ADDRESS")
 
 
-@r708@
+@r850@
 typedef LPDIRECTPLAY8ADDRESS;
 position p;
 @@
@@ -9566,12 +11483,12 @@ position p;
 + IDirectPlay8Address *
 
 @script:python depends on report@
-p << r708.p;
+p << r850.p;
 @@
 WARN(p[0], "IDirectPlay8Address*", "LPDIRECTPLAY8ADDRESS")
 
 
-@r709@
+@r851@
 typedef IDirectPlay8Client;
 typedef PDIRECTPLAY8CLIENT;
 position p;
@@ -9580,12 +11497,12 @@ position p;
 + IDirectPlay8Client *
 
 @script:python depends on report@
-p << r709.p;
+p << r851.p;
 @@
 WARN(p[0], "IDirectPlay8Client*", "PDIRECTPLAY8CLIENT")
 
 
-@r710@
+@r852@
 typedef LPDIRECTPLAY8CLIENT;
 position p;
 @@
@@ -9593,12 +11510,12 @@ position p;
 + IDirectPlay8Client *
 
 @script:python depends on report@
-p << r710.p;
+p << r852.p;
 @@
 WARN(p[0], "IDirectPlay8Client*", "LPDIRECTPLAY8CLIENT")
 
 
-@r711@
+@r853@
 typedef IDirectPlay8LobbiedApplication;
 typedef PDIRECTPLAY8LOBBIEDAPPLICATION;
 position p;
@@ -9607,12 +11524,12 @@ position p;
 + IDirectPlay8LobbiedApplication *
 
 @script:python depends on report@
-p << r711.p;
+p << r853.p;
 @@
 WARN(p[0], "IDirectPlay8LobbiedApplication*", "PDIRECTPLAY8LOBBIEDAPPLICATION")
 
 
-@r712@
+@r854@
 typedef LPDIRECTPLAY8LOBBIEDAPPLICATION;
 position p;
 @@
@@ -9620,12 +11537,12 @@ position p;
 + IDirectPlay8LobbiedApplication *
 
 @script:python depends on report@
-p << r712.p;
+p << r854.p;
 @@
 WARN(p[0], "IDirectPlay8LobbiedApplication*", "LPDIRECTPLAY8LOBBIEDAPPLICATION")
 
 
-@r713@
+@r855@
 typedef IDirectPlay8LobbyClient;
 typedef PDIRECTPLAY8LOBBYCLIENT;
 position p;
@@ -9634,12 +11551,12 @@ position p;
 + IDirectPlay8LobbyClient *
 
 @script:python depends on report@
-p << r713.p;
+p << r855.p;
 @@
 WARN(p[0], "IDirectPlay8LobbyClient*", "PDIRECTPLAY8LOBBYCLIENT")
 
 
-@r714@
+@r856@
 typedef LPDIRECTPLAY8LOBBYCLIENT;
 position p;
 @@
@@ -9647,12 +11564,12 @@ position p;
 + IDirectPlay8LobbyClient *
 
 @script:python depends on report@
-p << r714.p;
+p << r856.p;
 @@
 WARN(p[0], "IDirectPlay8LobbyClient*", "LPDIRECTPLAY8LOBBYCLIENT")
 
 
-@r715@
+@r857@
 typedef IDirectPlay8Peer;
 typedef PDIRECTPLAY8PEER;
 position p;
@@ -9661,12 +11578,12 @@ position p;
 + IDirectPlay8Peer *
 
 @script:python depends on report@
-p << r715.p;
+p << r857.p;
 @@
 WARN(p[0], "IDirectPlay8Peer*", "PDIRECTPLAY8PEER")
 
 
-@r716@
+@r858@
 typedef LPDIRECTPLAY8PEER;
 position p;
 @@
@@ -9674,12 +11591,12 @@ position p;
 + IDirectPlay8Peer *
 
 @script:python depends on report@
-p << r716.p;
+p << r858.p;
 @@
 WARN(p[0], "IDirectPlay8Peer*", "LPDIRECTPLAY8PEER")
 
 
-@r717@
+@r859@
 typedef IDirectPlay8Server;
 typedef PDIRECTPLAY8SERVER;
 position p;
@@ -9688,12 +11605,12 @@ position p;
 + IDirectPlay8Server *
 
 @script:python depends on report@
-p << r717.p;
+p << r859.p;
 @@
 WARN(p[0], "IDirectPlay8Server*", "PDIRECTPLAY8SERVER")
 
 
-@r718@
+@r860@
 typedef LPDIRECTPLAY8SERVER;
 position p;
 @@
@@ -9701,12 +11618,12 @@ position p;
 + IDirectPlay8Server *
 
 @script:python depends on report@
-p << r718.p;
+p << r860.p;
 @@
 WARN(p[0], "IDirectPlay8Server*", "LPDIRECTPLAY8SERVER")
 
 
-@r719@
+@r861@
 typedef IDirectPlay8ThreadPool;
 typedef PDIRECTPLAY8THREADPOOL;
 position p;
@@ -9715,12 +11632,12 @@ position p;
 + IDirectPlay8ThreadPool *
 
 @script:python depends on report@
-p << r719.p;
+p << r861.p;
 @@
 WARN(p[0], "IDirectPlay8ThreadPool*", "PDIRECTPLAY8THREADPOOL")
 
 
-@r720@
+@r862@
 typedef LPDIRECTPLAY8THREADPOOL;
 position p;
 @@
@@ -9728,12 +11645,12 @@ position p;
 + IDirectPlay8ThreadPool *
 
 @script:python depends on report@
-p << r720.p;
+p << r862.p;
 @@
 WARN(p[0], "IDirectPlay8ThreadPool*", "LPDIRECTPLAY8THREADPOOL")
 
 
-@r721@
+@r863@
 typedef IDirectPlaySP;
 typedef PDIRECTPLAYSP;
 position p;
@@ -9742,12 +11659,12 @@ position p;
 + IDirectPlaySP *
 
 @script:python depends on report@
-p << r721.p;
+p << r863.p;
 @@
 WARN(p[0], "IDirectPlaySP*", "PDIRECTPLAYSP")
 
 
-@r722@
+@r864@
 typedef LPDIRECTPLAYSP;
 position p;
 @@
@@ -9755,12 +11672,12 @@ position p;
 + IDirectPlaySP *
 
 @script:python depends on report@
-p << r722.p;
+p << r864.p;
 @@
 WARN(p[0], "IDirectPlaySP*", "LPDIRECTPLAYSP")
 
 
-@r723@
+@r865@
 typedef IDirectPlayVoiceClient;
 typedef PDIRECTPLAYVOICECLIENT;
 position p;
@@ -9769,12 +11686,12 @@ position p;
 + IDirectPlayVoiceClient *
 
 @script:python depends on report@
-p << r723.p;
+p << r865.p;
 @@
 WARN(p[0], "IDirectPlayVoiceClient*", "PDIRECTPLAYVOICECLIENT")
 
 
-@r724@
+@r866@
 typedef LPDIRECTPLAYVOICECLIENT;
 position p;
 @@
@@ -9782,12 +11699,12 @@ position p;
 + IDirectPlayVoiceClient *
 
 @script:python depends on report@
-p << r724.p;
+p << r866.p;
 @@
 WARN(p[0], "IDirectPlayVoiceClient*", "LPDIRECTPLAYVOICECLIENT")
 
 
-@r725@
+@r867@
 typedef IDirectPlayVoiceServer;
 typedef PDIRECTPLAYVOICESERVER;
 position p;
@@ -9796,12 +11713,12 @@ position p;
 + IDirectPlayVoiceServer *
 
 @script:python depends on report@
-p << r725.p;
+p << r867.p;
 @@
 WARN(p[0], "IDirectPlayVoiceServer*", "PDIRECTPLAYVOICESERVER")
 
 
-@r726@
+@r868@
 typedef LPDIRECTPLAYVOICESERVER;
 position p;
 @@
@@ -9809,12 +11726,12 @@ position p;
 + IDirectPlayVoiceServer *
 
 @script:python depends on report@
-p << r726.p;
+p << r868.p;
 @@
 WARN(p[0], "IDirectPlayVoiceServer*", "LPDIRECTPLAYVOICESERVER")
 
 
-@r727@
+@r869@
 typedef IDirectPlayVoiceTest;
 typedef PDIRECTPLAYVOICETEST;
 position p;
@@ -9823,12 +11740,12 @@ position p;
 + IDirectPlayVoiceTest *
 
 @script:python depends on report@
-p << r727.p;
+p << r869.p;
 @@
 WARN(p[0], "IDirectPlayVoiceTest*", "PDIRECTPLAYVOICETEST")
 
 
-@r728@
+@r870@
 typedef LPDIRECTPLAYVOICETEST;
 position p;
 @@
@@ -9836,12 +11753,12 @@ position p;
 + IDirectPlayVoiceTest *
 
 @script:python depends on report@
-p << r728.p;
+p << r870.p;
 @@
 WARN(p[0], "IDirectPlayVoiceTest*", "LPDIRECTPLAYVOICETEST")
 
 
-@r729@
+@r871@
 typedef IDirectSound3DBuffer;
 typedef PDIRECTSOUND3DBUFFER;
 position p;
@@ -9850,12 +11767,12 @@ position p;
 + IDirectSound3DBuffer *
 
 @script:python depends on report@
-p << r729.p;
+p << r871.p;
 @@
 WARN(p[0], "IDirectSound3DBuffer*", "PDIRECTSOUND3DBUFFER")
 
 
-@r730@
+@r872@
 typedef LPDIRECTSOUND3DBUFFER;
 position p;
 @@
@@ -9863,12 +11780,12 @@ position p;
 + IDirectSound3DBuffer *
 
 @script:python depends on report@
-p << r730.p;
+p << r872.p;
 @@
 WARN(p[0], "IDirectSound3DBuffer*", "LPDIRECTSOUND3DBUFFER")
 
 
-@r731@
+@r873@
 typedef IDirectSound3DListener;
 typedef PDIRECTSOUND3DLISTENER;
 position p;
@@ -9877,12 +11794,12 @@ position p;
 + IDirectSound3DListener *
 
 @script:python depends on report@
-p << r731.p;
+p << r873.p;
 @@
 WARN(p[0], "IDirectSound3DListener*", "PDIRECTSOUND3DLISTENER")
 
 
-@r732@
+@r874@
 typedef LPDIRECTSOUND3DLISTENER;
 position p;
 @@
@@ -9890,12 +11807,12 @@ position p;
 + IDirectSound3DListener *
 
 @script:python depends on report@
-p << r732.p;
+p << r874.p;
 @@
 WARN(p[0], "IDirectSound3DListener*", "LPDIRECTSOUND3DLISTENER")
 
 
-@r733@
+@r875@
 typedef IDirectSound8;
 typedef PDIRECTSOUND8;
 position p;
@@ -9904,12 +11821,12 @@ position p;
 + IDirectSound8 *
 
 @script:python depends on report@
-p << r733.p;
+p << r875.p;
 @@
 WARN(p[0], "IDirectSound8*", "PDIRECTSOUND8")
 
 
-@r734@
+@r876@
 typedef LPDIRECTSOUND8;
 position p;
 @@
@@ -9917,12 +11834,12 @@ position p;
 + IDirectSound8 *
 
 @script:python depends on report@
-p << r734.p;
+p << r876.p;
 @@
 WARN(p[0], "IDirectSound8*", "LPDIRECTSOUND8")
 
 
-@r735@
+@r877@
 typedef IDirectSoundBuffer8;
 typedef PDIRECTSOUNDBUFFER8;
 position p;
@@ -9931,12 +11848,12 @@ position p;
 + IDirectSoundBuffer8 *
 
 @script:python depends on report@
-p << r735.p;
+p << r877.p;
 @@
 WARN(p[0], "IDirectSoundBuffer8*", "PDIRECTSOUNDBUFFER8")
 
 
-@r736@
+@r878@
 typedef LPDIRECTSOUNDBUFFER8;
 position p;
 @@
@@ -9944,12 +11861,12 @@ position p;
 + IDirectSoundBuffer8 *
 
 @script:python depends on report@
-p << r736.p;
+p << r878.p;
 @@
 WARN(p[0], "IDirectSoundBuffer8*", "LPDIRECTSOUNDBUFFER8")
 
 
-@r737@
+@r879@
 typedef IDirectSoundCapture;
 typedef PDIRECTSOUNDCAPTURE;
 position p;
@@ -9958,12 +11875,12 @@ position p;
 + IDirectSoundCapture *
 
 @script:python depends on report@
-p << r737.p;
+p << r879.p;
 @@
 WARN(p[0], "IDirectSoundCapture*", "PDIRECTSOUNDCAPTURE")
 
 
-@r738@
+@r880@
 typedef LPDIRECTSOUNDCAPTURE;
 position p;
 @@
@@ -9971,12 +11888,12 @@ position p;
 + IDirectSoundCapture *
 
 @script:python depends on report@
-p << r738.p;
+p << r880.p;
 @@
 WARN(p[0], "IDirectSoundCapture*", "LPDIRECTSOUNDCAPTURE")
 
 
-@r739@
+@r881@
 typedef IDirectSoundCaptureBuffer8;
 typedef PDIRECTSOUNDCAPTUREBUFFER8;
 position p;
@@ -9985,12 +11902,12 @@ position p;
 + IDirectSoundCaptureBuffer8 *
 
 @script:python depends on report@
-p << r739.p;
+p << r881.p;
 @@
 WARN(p[0], "IDirectSoundCaptureBuffer8*", "PDIRECTSOUNDCAPTUREBUFFER8")
 
 
-@r740@
+@r882@
 typedef LPDIRECTSOUNDCAPTUREBUFFER8;
 position p;
 @@
@@ -9998,12 +11915,93 @@ position p;
 + IDirectSoundCaptureBuffer8 *
 
 @script:python depends on report@
-p << r740.p;
+p << r882.p;
 @@
 WARN(p[0], "IDirectSoundCaptureBuffer8*", "LPDIRECTSOUNDCAPTUREBUFFER8")
 
 
-@r741@
+@r883@
+typedef IDirectSoundFXI3DL2Reverb;
+typedef PDIRECTSOUNDFXI3DL2REVERB;
+position p;
+@@
+- PDIRECTSOUNDFXI3DL2REVERB@p
++ IDirectSoundFXI3DL2Reverb *
+
+@script:python depends on report@
+p << r883.p;
+@@
+WARN(p[0], "IDirectSoundFXI3DL2Reverb*", "PDIRECTSOUNDFXI3DL2REVERB")
+
+
+@r884@
+typedef LPDIRECTSOUNDFXI3DL2REVERB;
+position p;
+@@
+- LPDIRECTSOUNDFXI3DL2REVERB@p
++ IDirectSoundFXI3DL2Reverb *
+
+@script:python depends on report@
+p << r884.p;
+@@
+WARN(p[0], "IDirectSoundFXI3DL2Reverb*", "LPDIRECTSOUNDFXI3DL2REVERB")
+
+
+@r885@
+typedef IDirectSoundFXParamEq;
+typedef PDIRECTSOUNDFXPARAMEQ;
+position p;
+@@
+- PDIRECTSOUNDFXPARAMEQ@p
++ IDirectSoundFXParamEq *
+
+@script:python depends on report@
+p << r885.p;
+@@
+WARN(p[0], "IDirectSoundFXParamEq*", "PDIRECTSOUNDFXPARAMEQ")
+
+
+@r886@
+typedef LPDIRECTSOUNDFXPARAMEQ;
+position p;
+@@
+- LPDIRECTSOUNDFXPARAMEQ@p
++ IDirectSoundFXParamEq *
+
+@script:python depends on report@
+p << r886.p;
+@@
+WARN(p[0], "IDirectSoundFXParamEq*", "LPDIRECTSOUNDFXPARAMEQ")
+
+
+@r887@
+typedef IDirectSoundFXWavesReverb;
+typedef PDIRECTSOUNDFXWAVESREVERB;
+position p;
+@@
+- PDIRECTSOUNDFXWAVESREVERB@p
++ IDirectSoundFXWavesReverb *
+
+@script:python depends on report@
+p << r887.p;
+@@
+WARN(p[0], "IDirectSoundFXWavesReverb*", "PDIRECTSOUNDFXWAVESREVERB")
+
+
+@r888@
+typedef LPDIRECTSOUNDFXWAVESREVERB;
+position p;
+@@
+- LPDIRECTSOUNDFXWAVESREVERB@p
++ IDirectSoundFXWavesReverb *
+
+@script:python depends on report@
+p << r888.p;
+@@
+WARN(p[0], "IDirectSoundFXWavesReverb*", "LPDIRECTSOUNDFXWAVESREVERB")
+
+
+@r889@
 typedef IDirectSoundFullDuplex;
 typedef PDIRECTSOUNDFULLDUPLEX;
 position p;
@@ -10012,12 +12010,12 @@ position p;
 + IDirectSoundFullDuplex *
 
 @script:python depends on report@
-p << r741.p;
+p << r889.p;
 @@
 WARN(p[0], "IDirectSoundFullDuplex*", "PDIRECTSOUNDFULLDUPLEX")
 
 
-@r742@
+@r890@
 typedef LPDIRECTSOUNDFULLDUPLEX;
 position p;
 @@
@@ -10025,12 +12023,12 @@ position p;
 + IDirectSoundFullDuplex *
 
 @script:python depends on report@
-p << r742.p;
+p << r890.p;
 @@
 WARN(p[0], "IDirectSoundFullDuplex*", "LPDIRECTSOUNDFULLDUPLEX")
 
 
-@r743@
+@r891@
 typedef IDirectSoundNotify;
 typedef PDIRECTSOUNDNOTIFY;
 position p;
@@ -10039,12 +12037,12 @@ position p;
 + IDirectSoundNotify *
 
 @script:python depends on report@
-p << r743.p;
+p << r891.p;
 @@
 WARN(p[0], "IDirectSoundNotify*", "PDIRECTSOUNDNOTIFY")
 
 
-@r744@
+@r892@
 typedef LPDIRECTSOUNDNOTIFY;
 position p;
 @@
@@ -10052,12 +12050,12 @@ position p;
 + IDirectSoundNotify *
 
 @script:python depends on report@
-p << r744.p;
+p << r892.p;
 @@
 WARN(p[0], "IDirectSoundNotify*", "LPDIRECTSOUNDNOTIFY")
 
 
-@r745@
+@r893@
 typedef IDirectWriterLock;
 typedef PDIRECTWRITERLOCK;
 position p;
@@ -10066,12 +12064,12 @@ position p;
 + IDirectWriterLock *
 
 @script:python depends on report@
-p << r745.p;
+p << r893.p;
 @@
 WARN(p[0], "IDirectWriterLock*", "PDIRECTWRITERLOCK")
 
 
-@r746@
+@r894@
 typedef LPDIRECTWRITERLOCK;
 position p;
 @@
@@ -10079,12 +12077,12 @@ position p;
 + IDirectWriterLock *
 
 @script:python depends on report@
-p << r746.p;
+p << r894.p;
 @@
 WARN(p[0], "IDirectWriterLock*", "LPDIRECTWRITERLOCK")
 
 
-@r747@
+@r895@
 typedef IDirectXFile;
 typedef PDIRECTXFILE;
 position p;
@@ -10093,12 +12091,12 @@ position p;
 + IDirectXFile *
 
 @script:python depends on report@
-p << r747.p;
+p << r895.p;
 @@
 WARN(p[0], "IDirectXFile*", "PDIRECTXFILE")
 
 
-@r748@
+@r896@
 typedef LPDIRECTXFILE;
 position p;
 @@
@@ -10106,12 +12104,12 @@ position p;
 + IDirectXFile *
 
 @script:python depends on report@
-p << r748.p;
+p << r896.p;
 @@
 WARN(p[0], "IDirectXFile*", "LPDIRECTXFILE")
 
 
-@r749@
+@r897@
 typedef IDirectXFileBinary;
 typedef PDIRECTXFILEBINARY;
 position p;
@@ -10120,12 +12118,12 @@ position p;
 + IDirectXFileBinary *
 
 @script:python depends on report@
-p << r749.p;
+p << r897.p;
 @@
 WARN(p[0], "IDirectXFileBinary*", "PDIRECTXFILEBINARY")
 
 
-@r750@
+@r898@
 typedef LPDIRECTXFILEBINARY;
 position p;
 @@
@@ -10133,12 +12131,12 @@ position p;
 + IDirectXFileBinary *
 
 @script:python depends on report@
-p << r750.p;
+p << r898.p;
 @@
 WARN(p[0], "IDirectXFileBinary*", "LPDIRECTXFILEBINARY")
 
 
-@r751@
+@r899@
 typedef IDirectXFileData;
 typedef PDIRECTXFILEDATA;
 position p;
@@ -10147,12 +12145,12 @@ position p;
 + IDirectXFileData *
 
 @script:python depends on report@
-p << r751.p;
+p << r899.p;
 @@
 WARN(p[0], "IDirectXFileData*", "PDIRECTXFILEDATA")
 
 
-@r752@
+@r900@
 typedef LPDIRECTXFILEDATA;
 position p;
 @@
@@ -10160,12 +12158,12 @@ position p;
 + IDirectXFileData *
 
 @script:python depends on report@
-p << r752.p;
+p << r900.p;
 @@
 WARN(p[0], "IDirectXFileData*", "LPDIRECTXFILEDATA")
 
 
-@r753@
+@r901@
 typedef IDirectXFileDataReference;
 typedef PDIRECTXFILEDATAREFERENCE;
 position p;
@@ -10174,12 +12172,12 @@ position p;
 + IDirectXFileDataReference *
 
 @script:python depends on report@
-p << r753.p;
+p << r901.p;
 @@
 WARN(p[0], "IDirectXFileDataReference*", "PDIRECTXFILEDATAREFERENCE")
 
 
-@r754@
+@r902@
 typedef LPDIRECTXFILEDATAREFERENCE;
 position p;
 @@
@@ -10187,12 +12185,12 @@ position p;
 + IDirectXFileDataReference *
 
 @script:python depends on report@
-p << r754.p;
+p << r902.p;
 @@
 WARN(p[0], "IDirectXFileDataReference*", "LPDIRECTXFILEDATAREFERENCE")
 
 
-@r755@
+@r903@
 typedef IDirectXFileEnumObject;
 typedef PDIRECTXFILEENUMOBJECT;
 position p;
@@ -10201,12 +12199,12 @@ position p;
 + IDirectXFileEnumObject *
 
 @script:python depends on report@
-p << r755.p;
+p << r903.p;
 @@
 WARN(p[0], "IDirectXFileEnumObject*", "PDIRECTXFILEENUMOBJECT")
 
 
-@r756@
+@r904@
 typedef LPDIRECTXFILEENUMOBJECT;
 position p;
 @@
@@ -10214,12 +12212,12 @@ position p;
 + IDirectXFileEnumObject *
 
 @script:python depends on report@
-p << r756.p;
+p << r904.p;
 @@
 WARN(p[0], "IDirectXFileEnumObject*", "LPDIRECTXFILEENUMOBJECT")
 
 
-@r757@
+@r905@
 typedef IDirectXFileObject;
 typedef PDIRECTXFILEOBJECT;
 position p;
@@ -10228,12 +12226,12 @@ position p;
 + IDirectXFileObject *
 
 @script:python depends on report@
-p << r757.p;
+p << r905.p;
 @@
 WARN(p[0], "IDirectXFileObject*", "PDIRECTXFILEOBJECT")
 
 
-@r758@
+@r906@
 typedef LPDIRECTXFILEOBJECT;
 position p;
 @@
@@ -10241,12 +12239,12 @@ position p;
 + IDirectXFileObject *
 
 @script:python depends on report@
-p << r758.p;
+p << r906.p;
 @@
 WARN(p[0], "IDirectXFileObject*", "LPDIRECTXFILEOBJECT")
 
 
-@r759@
+@r907@
 typedef IDirectXFileSaveObject;
 typedef PDIRECTXFILESAVEOBJECT;
 position p;
@@ -10255,12 +12253,12 @@ position p;
 + IDirectXFileSaveObject *
 
 @script:python depends on report@
-p << r759.p;
+p << r907.p;
 @@
 WARN(p[0], "IDirectXFileSaveObject*", "PDIRECTXFILESAVEOBJECT")
 
 
-@r760@
+@r908@
 typedef LPDIRECTXFILESAVEOBJECT;
 position p;
 @@
@@ -10268,12 +12266,147 @@ position p;
 + IDirectXFileSaveObject *
 
 @script:python depends on report@
-p << r760.p;
+p << r908.p;
 @@
 WARN(p[0], "IDirectXFileSaveObject*", "LPDIRECTXFILESAVEOBJECT")
 
 
-@r761@
+@r909@
+typedef IDirectXVideoDecoderService;
+typedef PDIRECTXVIDEODECODERSERVICE;
+position p;
+@@
+- PDIRECTXVIDEODECODERSERVICE@p
++ IDirectXVideoDecoderService *
+
+@script:python depends on report@
+p << r909.p;
+@@
+WARN(p[0], "IDirectXVideoDecoderService*", "PDIRECTXVIDEODECODERSERVICE")
+
+
+@r910@
+typedef LPDIRECTXVIDEODECODERSERVICE;
+position p;
+@@
+- LPDIRECTXVIDEODECODERSERVICE@p
++ IDirectXVideoDecoderService *
+
+@script:python depends on report@
+p << r910.p;
+@@
+WARN(p[0], "IDirectXVideoDecoderService*", "LPDIRECTXVIDEODECODERSERVICE")
+
+
+@r911@
+typedef IDirectXVideoProcessor;
+typedef PDIRECTXVIDEOPROCESSOR;
+position p;
+@@
+- PDIRECTXVIDEOPROCESSOR@p
++ IDirectXVideoProcessor *
+
+@script:python depends on report@
+p << r911.p;
+@@
+WARN(p[0], "IDirectXVideoProcessor*", "PDIRECTXVIDEOPROCESSOR")
+
+
+@r912@
+typedef LPDIRECTXVIDEOPROCESSOR;
+position p;
+@@
+- LPDIRECTXVIDEOPROCESSOR@p
++ IDirectXVideoProcessor *
+
+@script:python depends on report@
+p << r912.p;
+@@
+WARN(p[0], "IDirectXVideoProcessor*", "LPDIRECTXVIDEOPROCESSOR")
+
+
+@r913@
+typedef IDirectXVideoProcessorService;
+typedef PDIRECTXVIDEOPROCESSORSERVICE;
+position p;
+@@
+- PDIRECTXVIDEOPROCESSORSERVICE@p
++ IDirectXVideoProcessorService *
+
+@script:python depends on report@
+p << r913.p;
+@@
+WARN(p[0], "IDirectXVideoProcessorService*", "PDIRECTXVIDEOPROCESSORSERVICE")
+
+
+@r914@
+typedef LPDIRECTXVIDEOPROCESSORSERVICE;
+position p;
+@@
+- LPDIRECTXVIDEOPROCESSORSERVICE@p
++ IDirectXVideoProcessorService *
+
+@script:python depends on report@
+p << r914.p;
+@@
+WARN(p[0], "IDirectXVideoProcessorService*", "LPDIRECTXVIDEOPROCESSORSERVICE")
+
+
+@r915@
+typedef IDirectoryObject;
+typedef PDIRECTORYOBJECT;
+position p;
+@@
+- PDIRECTORYOBJECT@p
++ IDirectoryObject *
+
+@script:python depends on report@
+p << r915.p;
+@@
+WARN(p[0], "IDirectoryObject*", "PDIRECTORYOBJECT")
+
+
+@r916@
+typedef LPDIRECTORYOBJECT;
+position p;
+@@
+- LPDIRECTORYOBJECT@p
++ IDirectoryObject *
+
+@script:python depends on report@
+p << r916.p;
+@@
+WARN(p[0], "IDirectoryObject*", "LPDIRECTORYOBJECT")
+
+
+@r917@
+typedef IDirectorySearch;
+typedef PDIRECTORYSEARCH;
+position p;
+@@
+- PDIRECTORYSEARCH@p
++ IDirectorySearch *
+
+@script:python depends on report@
+p << r917.p;
+@@
+WARN(p[0], "IDirectorySearch*", "PDIRECTORYSEARCH")
+
+
+@r918@
+typedef LPDIRECTORYSEARCH;
+position p;
+@@
+- LPDIRECTORYSEARCH@p
++ IDirectorySearch *
+
+@script:python depends on report@
+p << r918.p;
+@@
+WARN(p[0], "IDirectorySearch*", "LPDIRECTORYSEARCH")
+
+
+@r919@
 typedef IDispatch;
 typedef PDISPATCH;
 position p;
@@ -10282,12 +12415,12 @@ position p;
 + IDispatch *
 
 @script:python depends on report@
-p << r761.p;
+p << r919.p;
 @@
 WARN(p[0], "IDispatch*", "PDISPATCH")
 
 
-@r762@
+@r920@
 typedef LPDISPATCH;
 position p;
 @@
@@ -10295,12 +12428,12 @@ position p;
 + IDispatch *
 
 @script:python depends on report@
-p << r762.p;
+p << r920.p;
 @@
 WARN(p[0], "IDispatch*", "LPDISPATCH")
 
 
-@r763@
+@r921@
 typedef IDispatchEx;
 typedef PDISPATCHEX;
 position p;
@@ -10309,12 +12442,12 @@ position p;
 + IDispatchEx *
 
 @script:python depends on report@
-p << r763.p;
+p << r921.p;
 @@
 WARN(p[0], "IDispatchEx*", "PDISPATCHEX")
 
 
-@r764@
+@r922@
 typedef LPDISPATCHEX;
 position p;
 @@
@@ -10322,12 +12455,93 @@ position p;
 + IDispatchEx *
 
 @script:python depends on report@
-p << r764.p;
+p << r922.p;
 @@
 WARN(p[0], "IDispatchEx*", "LPDISPATCHEX")
 
 
-@r765@
+@r923@
+typedef IDispenserDriver;
+typedef PDISPENSERDRIVER;
+position p;
+@@
+- PDISPENSERDRIVER@p
++ IDispenserDriver *
+
+@script:python depends on report@
+p << r923.p;
+@@
+WARN(p[0], "IDispenserDriver*", "PDISPENSERDRIVER")
+
+
+@r924@
+typedef LPDISPENSERDRIVER;
+position p;
+@@
+- LPDISPENSERDRIVER@p
++ IDispenserDriver *
+
+@script:python depends on report@
+p << r924.p;
+@@
+WARN(p[0], "IDispenserDriver*", "LPDISPENSERDRIVER")
+
+
+@r925@
+typedef IDispenserManager;
+typedef PDISPENSERMANAGER;
+position p;
+@@
+- PDISPENSERMANAGER@p
++ IDispenserManager *
+
+@script:python depends on report@
+p << r925.p;
+@@
+WARN(p[0], "IDispenserManager*", "PDISPENSERMANAGER")
+
+
+@r926@
+typedef LPDISPENSERMANAGER;
+position p;
+@@
+- LPDISPENSERMANAGER@p
++ IDispenserManager *
+
+@script:python depends on report@
+p << r926.p;
+@@
+WARN(p[0], "IDispenserManager*", "LPDISPENSERMANAGER")
+
+
+@r927@
+typedef IDisplayServices;
+typedef PDISPLAYSERVICES;
+position p;
+@@
+- PDISPLAYSERVICES@p
++ IDisplayServices *
+
+@script:python depends on report@
+p << r927.p;
+@@
+WARN(p[0], "IDisplayServices*", "PDISPLAYSERVICES")
+
+
+@r928@
+typedef LPDISPLAYSERVICES;
+position p;
+@@
+- LPDISPLAYSERVICES@p
++ IDisplayServices *
+
+@script:python depends on report@
+p << r928.p;
+@@
+WARN(p[0], "IDisplayServices*", "LPDISPLAYSERVICES")
+
+
+@r929@
 typedef IDocHostUIHandler;
 typedef PDOCHOSTUIHANDLER;
 position p;
@@ -10336,12 +12550,12 @@ position p;
 + IDocHostUIHandler *
 
 @script:python depends on report@
-p << r765.p;
+p << r929.p;
 @@
 WARN(p[0], "IDocHostUIHandler*", "PDOCHOSTUIHANDLER")
 
 
-@r766@
+@r930@
 typedef LPDOCHOSTUIHANDLER;
 position p;
 @@
@@ -10349,12 +12563,12 @@ position p;
 + IDocHostUIHandler *
 
 @script:python depends on report@
-p << r766.p;
+p << r930.p;
 @@
 WARN(p[0], "IDocHostUIHandler*", "LPDOCHOSTUIHANDLER")
 
 
-@r767@
+@r931@
 typedef IDocHostUIHandler2;
 typedef PDOCHOSTUIHANDLER2;
 position p;
@@ -10363,12 +12577,12 @@ position p;
 + IDocHostUIHandler2 *
 
 @script:python depends on report@
-p << r767.p;
+p << r931.p;
 @@
 WARN(p[0], "IDocHostUIHandler2*", "PDOCHOSTUIHANDLER2")
 
 
-@r768@
+@r932@
 typedef LPDOCHOSTUIHANDLER2;
 position p;
 @@
@@ -10376,12 +12590,12 @@ position p;
 + IDocHostUIHandler2 *
 
 @script:python depends on report@
-p << r768.p;
+p << r932.p;
 @@
 WARN(p[0], "IDocHostUIHandler2*", "LPDOCHOSTUIHANDLER2")
 
 
-@r769@
+@r933@
 typedef IDocObjectService;
 typedef PDOCOBJECTSERVICE;
 position p;
@@ -10390,12 +12604,12 @@ position p;
 + IDocObjectService *
 
 @script:python depends on report@
-p << r769.p;
+p << r933.p;
 @@
 WARN(p[0], "IDocObjectService*", "PDOCOBJECTSERVICE")
 
 
-@r770@
+@r934@
 typedef LPDOCOBJECTSERVICE;
 position p;
 @@
@@ -10403,12 +12617,66 @@ position p;
 + IDocObjectService *
 
 @script:python depends on report@
-p << r770.p;
+p << r934.p;
 @@
 WARN(p[0], "IDocObjectService*", "LPDOCOBJECTSERVICE")
 
 
-@r771@
+@r935@
+typedef IDocumentEvent;
+typedef PDOCUMENTEVENT;
+position p;
+@@
+- PDOCUMENTEVENT@p
++ IDocumentEvent *
+
+@script:python depends on report@
+p << r935.p;
+@@
+WARN(p[0], "IDocumentEvent*", "PDOCUMENTEVENT")
+
+
+@r936@
+typedef LPDOCUMENTEVENT;
+position p;
+@@
+- LPDOCUMENTEVENT@p
++ IDocumentEvent *
+
+@script:python depends on report@
+p << r936.p;
+@@
+WARN(p[0], "IDocumentEvent*", "LPDOCUMENTEVENT")
+
+
+@r937@
+typedef IDocumentRange;
+typedef PDOCUMENTRANGE;
+position p;
+@@
+- PDOCUMENTRANGE@p
++ IDocumentRange *
+
+@script:python depends on report@
+p << r937.p;
+@@
+WARN(p[0], "IDocumentRange*", "PDOCUMENTRANGE")
+
+
+@r938@
+typedef LPDOCUMENTRANGE;
+position p;
+@@
+- LPDOCUMENTRANGE@p
++ IDocumentRange *
+
+@script:python depends on report@
+p << r938.p;
+@@
+WARN(p[0], "IDocumentRange*", "LPDOCUMENTRANGE")
+
+
+@r939@
 typedef IDocumentSelector;
 typedef PDOCUMENTSELECTOR;
 position p;
@@ -10417,12 +12685,12 @@ position p;
 + IDocumentSelector *
 
 @script:python depends on report@
-p << r771.p;
+p << r939.p;
 @@
 WARN(p[0], "IDocumentSelector*", "PDOCUMENTSELECTOR")
 
 
-@r772@
+@r940@
 typedef LPDOCUMENTSELECTOR;
 position p;
 @@
@@ -10430,12 +12698,12 @@ position p;
 + IDocumentSelector *
 
 @script:python depends on report@
-p << r772.p;
+p << r940.p;
 @@
 WARN(p[0], "IDocumentSelector*", "LPDOCUMENTSELECTOR")
 
 
-@r773@
+@r941@
 typedef IDragSourceHelper;
 typedef PDRAGSOURCEHELPER;
 position p;
@@ -10444,12 +12712,12 @@ position p;
 + IDragSourceHelper *
 
 @script:python depends on report@
-p << r773.p;
+p << r941.p;
 @@
 WARN(p[0], "IDragSourceHelper*", "PDRAGSOURCEHELPER")
 
 
-@r774@
+@r942@
 typedef LPDRAGSOURCEHELPER;
 position p;
 @@
@@ -10457,12 +12725,12 @@ position p;
 + IDragSourceHelper *
 
 @script:python depends on report@
-p << r774.p;
+p << r942.p;
 @@
 WARN(p[0], "IDragSourceHelper*", "LPDRAGSOURCEHELPER")
 
 
-@r775@
+@r943@
 typedef IDrive;
 typedef PDRIVE;
 position p;
@@ -10471,12 +12739,12 @@ position p;
 + IDrive *
 
 @script:python depends on report@
-p << r775.p;
+p << r943.p;
 @@
 WARN(p[0], "IDrive*", "PDRIVE")
 
 
-@r776@
+@r944@
 typedef LPDRIVE;
 position p;
 @@
@@ -10484,12 +12752,12 @@ position p;
 + IDrive *
 
 @script:python depends on report@
-p << r776.p;
+p << r944.p;
 @@
 WARN(p[0], "IDrive*", "LPDRIVE")
 
 
-@r777@
+@r945@
 typedef IDriveCollection;
 typedef PDRIVECOLLECTION;
 position p;
@@ -10498,12 +12766,12 @@ position p;
 + IDriveCollection *
 
 @script:python depends on report@
-p << r777.p;
+p << r945.p;
 @@
 WARN(p[0], "IDriveCollection*", "PDRIVECOLLECTION")
 
 
-@r778@
+@r946@
 typedef LPDRIVECOLLECTION;
 position p;
 @@
@@ -10511,12 +12779,12 @@ position p;
 + IDriveCollection *
 
 @script:python depends on report@
-p << r778.p;
+p << r946.p;
 @@
 WARN(p[0], "IDriveCollection*", "LPDRIVECOLLECTION")
 
 
-@r779@
+@r947@
 typedef IDropSource;
 typedef PDROPSOURCE;
 position p;
@@ -10525,12 +12793,12 @@ position p;
 + IDropSource *
 
 @script:python depends on report@
-p << r779.p;
+p << r947.p;
 @@
 WARN(p[0], "IDropSource*", "PDROPSOURCE")
 
 
-@r780@
+@r948@
 typedef LPDROPSOURCE;
 position p;
 @@
@@ -10538,12 +12806,12 @@ position p;
 + IDropSource *
 
 @script:python depends on report@
-p << r780.p;
+p << r948.p;
 @@
 WARN(p[0], "IDropSource*", "LPDROPSOURCE")
 
 
-@r781@
+@r949@
 typedef IDropTarget;
 typedef PDROPTARGET;
 position p;
@@ -10552,12 +12820,12 @@ position p;
 + IDropTarget *
 
 @script:python depends on report@
-p << r781.p;
+p << r949.p;
 @@
 WARN(p[0], "IDropTarget*", "PDROPTARGET")
 
 
-@r782@
+@r950@
 typedef LPDROPTARGET;
 position p;
 @@
@@ -10565,12 +12833,12 @@ position p;
 + IDropTarget *
 
 @script:python depends on report@
-p << r782.p;
+p << r950.p;
 @@
 WARN(p[0], "IDropTarget*", "LPDROPTARGET")
 
 
-@r783@
+@r951@
 typedef IDropTargetHelper;
 typedef PDROPTARGETHELPER;
 position p;
@@ -10579,12 +12847,12 @@ position p;
 + IDropTargetHelper *
 
 @script:python depends on report@
-p << r783.p;
+p << r951.p;
 @@
 WARN(p[0], "IDropTargetHelper*", "PDROPTARGETHELPER")
 
 
-@r784@
+@r952@
 typedef LPDROPTARGETHELPER;
 position p;
 @@
@@ -10592,12 +12860,39 @@ position p;
 + IDropTargetHelper *
 
 @script:python depends on report@
-p << r784.p;
+p << r952.p;
 @@
 WARN(p[0], "IDropTargetHelper*", "LPDROPTARGETHELPER")
 
 
-@r785@
+@r953@
+typedef IDsDisplaySpecifier;
+typedef PDSDISPLAYSPECIFIER;
+position p;
+@@
+- PDSDISPLAYSPECIFIER@p
++ IDsDisplaySpecifier *
+
+@script:python depends on report@
+p << r953.p;
+@@
+WARN(p[0], "IDsDisplaySpecifier*", "PDSDISPLAYSPECIFIER")
+
+
+@r954@
+typedef LPDSDISPLAYSPECIFIER;
+position p;
+@@
+- LPDSDISPLAYSPECIFIER@p
++ IDsDisplaySpecifier *
+
+@script:python depends on report@
+p << r954.p;
+@@
+WARN(p[0], "IDsDisplaySpecifier*", "LPDSDISPLAYSPECIFIER")
+
+
+@r955@
 typedef IDsObjectPicker;
 typedef PDSOBJECTPICKER;
 position p;
@@ -10606,12 +12901,12 @@ position p;
 + IDsObjectPicker *
 
 @script:python depends on report@
-p << r785.p;
+p << r955.p;
 @@
 WARN(p[0], "IDsObjectPicker*", "PDSOBJECTPICKER")
 
 
-@r786@
+@r956@
 typedef LPDSOBJECTPICKER;
 position p;
 @@
@@ -10619,12 +12914,93 @@ position p;
 + IDsObjectPicker *
 
 @script:python depends on report@
-p << r786.p;
+p << r956.p;
 @@
 WARN(p[0], "IDsObjectPicker*", "LPDSOBJECTPICKER")
 
 
-@r787@
+@r957@
+typedef IDvdControl2;
+typedef PDVDCONTROL2;
+position p;
+@@
+- PDVDCONTROL2@p
++ IDvdControl2 *
+
+@script:python depends on report@
+p << r957.p;
+@@
+WARN(p[0], "IDvdControl2*", "PDVDCONTROL2")
+
+
+@r958@
+typedef LPDVDCONTROL2;
+position p;
+@@
+- LPDVDCONTROL2@p
++ IDvdControl2 *
+
+@script:python depends on report@
+p << r958.p;
+@@
+WARN(p[0], "IDvdControl2*", "LPDVDCONTROL2")
+
+
+@r959@
+typedef IDvdGraphBuilder;
+typedef PDVDGRAPHBUILDER;
+position p;
+@@
+- PDVDGRAPHBUILDER@p
++ IDvdGraphBuilder *
+
+@script:python depends on report@
+p << r959.p;
+@@
+WARN(p[0], "IDvdGraphBuilder*", "PDVDGRAPHBUILDER")
+
+
+@r960@
+typedef LPDVDGRAPHBUILDER;
+position p;
+@@
+- LPDVDGRAPHBUILDER@p
++ IDvdGraphBuilder *
+
+@script:python depends on report@
+p << r960.p;
+@@
+WARN(p[0], "IDvdGraphBuilder*", "LPDVDGRAPHBUILDER")
+
+
+@r961@
+typedef IDvdInfo2;
+typedef PDVDINFO2;
+position p;
+@@
+- PDVDINFO2@p
++ IDvdInfo2 *
+
+@script:python depends on report@
+p << r961.p;
+@@
+WARN(p[0], "IDvdInfo2*", "PDVDINFO2")
+
+
+@r962@
+typedef LPDVDINFO2;
+position p;
+@@
+- LPDVDINFO2@p
++ IDvdInfo2 *
+
+@script:python depends on report@
+p << r962.p;
+@@
+WARN(p[0], "IDvdInfo2*", "LPDVDINFO2")
+
+
+@r963@
 typedef IDxDiagContainer;
 typedef PDXDIAGCONTAINER;
 position p;
@@ -10633,12 +13009,12 @@ position p;
 + IDxDiagContainer *
 
 @script:python depends on report@
-p << r787.p;
+p << r963.p;
 @@
 WARN(p[0], "IDxDiagContainer*", "PDXDIAGCONTAINER")
 
 
-@r788@
+@r964@
 typedef LPDXDIAGCONTAINER;
 position p;
 @@
@@ -10646,12 +13022,12 @@ position p;
 + IDxDiagContainer *
 
 @script:python depends on report@
-p << r788.p;
+p << r964.p;
 @@
 WARN(p[0], "IDxDiagContainer*", "LPDXDIAGCONTAINER")
 
 
-@r789@
+@r965@
 typedef IDxDiagProvider;
 typedef PDXDIAGPROVIDER;
 position p;
@@ -10660,12 +13036,12 @@ position p;
 + IDxDiagProvider *
 
 @script:python depends on report@
-p << r789.p;
+p << r965.p;
 @@
 WARN(p[0], "IDxDiagProvider*", "PDXDIAGPROVIDER")
 
 
-@r790@
+@r966@
 typedef LPDXDIAGPROVIDER;
 position p;
 @@
@@ -10673,12 +13049,39 @@ position p;
 + IDxDiagProvider *
 
 @script:python depends on report@
-p << r790.p;
+p << r966.p;
 @@
 WARN(p[0], "IDxDiagProvider*", "LPDXDIAGPROVIDER")
 
 
-@r791@
+@r967@
+typedef IEVRFilterConfig;
+typedef PEVRFILTERCONFIG;
+position p;
+@@
+- PEVRFILTERCONFIG@p
++ IEVRFilterConfig *
+
+@script:python depends on report@
+p << r967.p;
+@@
+WARN(p[0], "IEVRFilterConfig*", "PEVRFILTERCONFIG")
+
+
+@r968@
+typedef LPEVRFILTERCONFIG;
+position p;
+@@
+- LPEVRFILTERCONFIG@p
++ IEVRFilterConfig *
+
+@script:python depends on report@
+p << r968.p;
+@@
+WARN(p[0], "IEVRFilterConfig*", "LPEVRFILTERCONFIG")
+
+
+@r969@
 typedef IElementSelector;
 typedef PELEMENTSELECTOR;
 position p;
@@ -10687,12 +13090,12 @@ position p;
 + IElementSelector *
 
 @script:python depends on report@
-p << r791.p;
+p << r969.p;
 @@
 WARN(p[0], "IElementSelector*", "PELEMENTSELECTOR")
 
 
-@r792@
+@r970@
 typedef LPELEMENTSELECTOR;
 position p;
 @@
@@ -10700,12 +13103,39 @@ position p;
 + IElementSelector *
 
 @script:python depends on report@
-p << r792.p;
+p << r970.p;
 @@
 WARN(p[0], "IElementSelector*", "LPELEMENTSELECTOR")
 
 
-@r793@
+@r971@
+typedef IElementTraversal;
+typedef PELEMENTTRAVERSAL;
+position p;
+@@
+- PELEMENTTRAVERSAL@p
++ IElementTraversal *
+
+@script:python depends on report@
+p << r971.p;
+@@
+WARN(p[0], "IElementTraversal*", "PELEMENTTRAVERSAL")
+
+
+@r972@
+typedef LPELEMENTTRAVERSAL;
+position p;
+@@
+- LPELEMENTTRAVERSAL@p
++ IElementTraversal *
+
+@script:python depends on report@
+p << r972.p;
+@@
+WARN(p[0], "IElementTraversal*", "LPELEMENTTRAVERSAL")
+
+
+@r973@
 typedef IEnumAssocHandlers;
 typedef PENUMASSOCHANDLERS;
 position p;
@@ -10714,12 +13144,12 @@ position p;
 + IEnumAssocHandlers *
 
 @script:python depends on report@
-p << r793.p;
+p << r973.p;
 @@
 WARN(p[0], "IEnumAssocHandlers*", "PENUMASSOCHANDLERS")
 
 
-@r794@
+@r974@
 typedef LPENUMASSOCHANDLERS;
 position p;
 @@
@@ -10727,12 +13157,12 @@ position p;
 + IEnumAssocHandlers *
 
 @script:python depends on report@
-p << r794.p;
+p << r974.p;
 @@
 WARN(p[0], "IEnumAssocHandlers*", "LPENUMASSOCHANDLERS")
 
 
-@r795@
+@r975@
 typedef IEnumBackgroundCopyFiles;
 typedef PENUMBACKGROUNDCOPYFILES;
 position p;
@@ -10741,12 +13171,12 @@ position p;
 + IEnumBackgroundCopyFiles *
 
 @script:python depends on report@
-p << r795.p;
+p << r975.p;
 @@
 WARN(p[0], "IEnumBackgroundCopyFiles*", "PENUMBACKGROUNDCOPYFILES")
 
 
-@r796@
+@r976@
 typedef LPENUMBACKGROUNDCOPYFILES;
 position p;
 @@
@@ -10754,12 +13184,12 @@ position p;
 + IEnumBackgroundCopyFiles *
 
 @script:python depends on report@
-p << r796.p;
+p << r976.p;
 @@
 WARN(p[0], "IEnumBackgroundCopyFiles*", "LPENUMBACKGROUNDCOPYFILES")
 
 
-@r797@
+@r977@
 typedef IEnumBackgroundCopyJobs;
 typedef PENUMBACKGROUNDCOPYJOBS;
 position p;
@@ -10768,12 +13198,12 @@ position p;
 + IEnumBackgroundCopyJobs *
 
 @script:python depends on report@
-p << r797.p;
+p << r977.p;
 @@
 WARN(p[0], "IEnumBackgroundCopyJobs*", "PENUMBACKGROUNDCOPYJOBS")
 
 
-@r798@
+@r978@
 typedef LPENUMBACKGROUNDCOPYJOBS;
 position p;
 @@
@@ -10781,12 +13211,12 @@ position p;
 + IEnumBackgroundCopyJobs *
 
 @script:python depends on report@
-p << r798.p;
+p << r978.p;
 @@
 WARN(p[0], "IEnumBackgroundCopyJobs*", "LPENUMBACKGROUNDCOPYJOBS")
 
 
-@r799@
+@r979@
 typedef IEnumCATEGORYINFO;
 typedef PENUMCATEGORYINFO;
 position p;
@@ -10795,12 +13225,12 @@ position p;
 + IEnumCATEGORYINFO *
 
 @script:python depends on report@
-p << r799.p;
+p << r979.p;
 @@
 WARN(p[0], "IEnumCATEGORYINFO*", "PENUMCATEGORYINFO")
 
 
-@r800@
+@r980@
 typedef LPENUMCATEGORYINFO;
 position p;
 @@
@@ -10808,12 +13238,12 @@ position p;
 + IEnumCATEGORYINFO *
 
 @script:python depends on report@
-p << r800.p;
+p << r980.p;
 @@
 WARN(p[0], "IEnumCATEGORYINFO*", "LPENUMCATEGORYINFO")
 
 
-@r801@
+@r981@
 typedef IEnumCodePage;
 typedef PENUMCODEPAGE;
 position p;
@@ -10822,12 +13252,12 @@ position p;
 + IEnumCodePage *
 
 @script:python depends on report@
-p << r801.p;
+p << r981.p;
 @@
 WARN(p[0], "IEnumCodePage*", "PENUMCODEPAGE")
 
 
-@r802@
+@r982@
 typedef LPENUMCODEPAGE;
 position p;
 @@
@@ -10835,12 +13265,12 @@ position p;
 + IEnumCodePage *
 
 @script:python depends on report@
-p << r802.p;
+p << r982.p;
 @@
 WARN(p[0], "IEnumCodePage*", "LPENUMCODEPAGE")
 
 
-@r803@
+@r983@
 typedef IEnumConnectionPoints;
 typedef PENUMCONNECTIONPOINTS;
 position p;
@@ -10849,12 +13279,12 @@ position p;
 + IEnumConnectionPoints *
 
 @script:python depends on report@
-p << r803.p;
+p << r983.p;
 @@
 WARN(p[0], "IEnumConnectionPoints*", "PENUMCONNECTIONPOINTS")
 
 
-@r804@
+@r984@
 typedef LPENUMCONNECTIONPOINTS;
 position p;
 @@
@@ -10862,12 +13292,12 @@ position p;
 + IEnumConnectionPoints *
 
 @script:python depends on report@
-p << r804.p;
+p << r984.p;
 @@
 WARN(p[0], "IEnumConnectionPoints*", "LPENUMCONNECTIONPOINTS")
 
 
-@r805@
+@r985@
 typedef IEnumConnections;
 typedef PENUMCONNECTIONS;
 position p;
@@ -10876,12 +13306,12 @@ position p;
 + IEnumConnections *
 
 @script:python depends on report@
-p << r805.p;
+p << r985.p;
 @@
 WARN(p[0], "IEnumConnections*", "PENUMCONNECTIONS")
 
 
-@r806@
+@r986@
 typedef LPENUMCONNECTIONS;
 position p;
 @@
@@ -10889,12 +13319,12 @@ position p;
 + IEnumConnections *
 
 @script:python depends on report@
-p << r806.p;
+p << r986.p;
 @@
 WARN(p[0], "IEnumConnections*", "LPENUMCONNECTIONS")
 
 
-@r807@
+@r987@
 typedef IEnumDMO;
 typedef PENUMDMO;
 position p;
@@ -10903,12 +13333,12 @@ position p;
 + IEnumDMO *
 
 @script:python depends on report@
-p << r807.p;
+p << r987.p;
 @@
 WARN(p[0], "IEnumDMO*", "PENUMDMO")
 
 
-@r808@
+@r988@
 typedef LPENUMDMO;
 position p;
 @@
@@ -10916,12 +13346,12 @@ position p;
 + IEnumDMO *
 
 @script:python depends on report@
-p << r808.p;
+p << r988.p;
 @@
 WARN(p[0], "IEnumDMO*", "LPENUMDMO")
 
 
-@r809@
+@r989@
 typedef IEnumFORMATETC;
 typedef PENUMFORMATETC;
 position p;
@@ -10930,12 +13360,12 @@ position p;
 + IEnumFORMATETC *
 
 @script:python depends on report@
-p << r809.p;
+p << r989.p;
 @@
 WARN(p[0], "IEnumFORMATETC*", "PENUMFORMATETC")
 
 
-@r810@
+@r990@
 typedef LPENUMFORMATETC;
 position p;
 @@
@@ -10943,12 +13373,12 @@ position p;
 + IEnumFORMATETC *
 
 @script:python depends on report@
-p << r810.p;
+p << r990.p;
 @@
 WARN(p[0], "IEnumFORMATETC*", "LPENUMFORMATETC")
 
 
-@r811@
+@r991@
 typedef IEnumFilters;
 typedef PENUMFILTERS;
 position p;
@@ -10957,12 +13387,12 @@ position p;
 + IEnumFilters *
 
 @script:python depends on report@
-p << r811.p;
+p << r991.p;
 @@
 WARN(p[0], "IEnumFilters*", "PENUMFILTERS")
 
 
-@r812@
+@r992@
 typedef LPENUMFILTERS;
 position p;
 @@
@@ -10970,12 +13400,12 @@ position p;
 + IEnumFilters *
 
 @script:python depends on report@
-p << r812.p;
+p << r992.p;
 @@
 WARN(p[0], "IEnumFilters*", "LPENUMFILTERS")
 
 
-@r813@
+@r993@
 typedef IEnumGUID;
 typedef PENUMGUID;
 position p;
@@ -10984,12 +13414,12 @@ position p;
 + IEnumGUID *
 
 @script:python depends on report@
-p << r813.p;
+p << r993.p;
 @@
 WARN(p[0], "IEnumGUID*", "PENUMGUID")
 
 
-@r814@
+@r994@
 typedef LPENUMGUID;
 position p;
 @@
@@ -10997,12 +13427,12 @@ position p;
 + IEnumGUID *
 
 @script:python depends on report@
-p << r814.p;
+p << r994.p;
 @@
 WARN(p[0], "IEnumGUID*", "LPENUMGUID")
 
 
-@r815@
+@r995@
 typedef IEnumIDList;
 typedef PENUMIDLIST;
 position p;
@@ -11011,12 +13441,12 @@ position p;
 + IEnumIDList *
 
 @script:python depends on report@
-p << r815.p;
+p << r995.p;
 @@
 WARN(p[0], "IEnumIDList*", "PENUMIDLIST")
 
 
-@r816@
+@r996@
 typedef LPENUMIDLIST;
 position p;
 @@
@@ -11024,12 +13454,12 @@ position p;
 + IEnumIDList *
 
 @script:python depends on report@
-p << r816.p;
+p << r996.p;
 @@
 WARN(p[0], "IEnumIDList*", "LPENUMIDLIST")
 
 
-@r817@
+@r997@
 typedef IEnumMediaTypes;
 typedef PENUMMEDIATYPES;
 position p;
@@ -11038,12 +13468,12 @@ position p;
 + IEnumMediaTypes *
 
 @script:python depends on report@
-p << r817.p;
+p << r997.p;
 @@
 WARN(p[0], "IEnumMediaTypes*", "PENUMMEDIATYPES")
 
 
-@r818@
+@r998@
 typedef LPENUMMEDIATYPES;
 position p;
 @@
@@ -11051,12 +13481,12 @@ position p;
 + IEnumMediaTypes *
 
 @script:python depends on report@
-p << r818.p;
+p << r998.p;
 @@
 WARN(p[0], "IEnumMediaTypes*", "LPENUMMEDIATYPES")
 
 
-@r819@
+@r999@
 typedef IEnumMoniker;
 typedef PENUMMONIKER;
 position p;
@@ -11065,12 +13495,12 @@ position p;
 + IEnumMoniker *
 
 @script:python depends on report@
-p << r819.p;
+p << r999.p;
 @@
 WARN(p[0], "IEnumMoniker*", "PENUMMONIKER")
 
 
-@r820@
+@r1000@
 typedef LPENUMMONIKER;
 position p;
 @@
@@ -11078,12 +13508,12 @@ position p;
 + IEnumMoniker *
 
 @script:python depends on report@
-p << r820.p;
+p << r1000.p;
 @@
 WARN(p[0], "IEnumMoniker*", "LPENUMMONIKER")
 
 
-@r821@
+@r1001@
 typedef IEnumNetworkConnections;
 typedef PENUMNETWORKCONNECTIONS;
 position p;
@@ -11092,12 +13522,12 @@ position p;
 + IEnumNetworkConnections *
 
 @script:python depends on report@
-p << r821.p;
+p << r1001.p;
 @@
 WARN(p[0], "IEnumNetworkConnections*", "PENUMNETWORKCONNECTIONS")
 
 
-@r822@
+@r1002@
 typedef LPENUMNETWORKCONNECTIONS;
 position p;
 @@
@@ -11105,12 +13535,12 @@ position p;
 + IEnumNetworkConnections *
 
 @script:python depends on report@
-p << r822.p;
+p << r1002.p;
 @@
 WARN(p[0], "IEnumNetworkConnections*", "LPENUMNETWORKCONNECTIONS")
 
 
-@r823@
+@r1003@
 typedef IEnumNetworks;
 typedef PENUMNETWORKS;
 position p;
@@ -11119,12 +13549,12 @@ position p;
 + IEnumNetworks *
 
 @script:python depends on report@
-p << r823.p;
+p << r1003.p;
 @@
 WARN(p[0], "IEnumNetworks*", "PENUMNETWORKS")
 
 
-@r824@
+@r1004@
 typedef LPENUMNETWORKS;
 position p;
 @@
@@ -11132,12 +13562,12 @@ position p;
 + IEnumNetworks *
 
 @script:python depends on report@
-p << r824.p;
+p << r1004.p;
 @@
 WARN(p[0], "IEnumNetworks*", "LPENUMNETWORKS")
 
 
-@r825@
+@r1005@
 typedef IEnumOLEVERB;
 typedef PENUMOLEVERB;
 position p;
@@ -11146,12 +13576,12 @@ position p;
 + IEnumOLEVERB *
 
 @script:python depends on report@
-p << r825.p;
+p << r1005.p;
 @@
 WARN(p[0], "IEnumOLEVERB*", "PENUMOLEVERB")
 
 
-@r826@
+@r1006@
 typedef LPENUMOLEVERB;
 position p;
 @@
@@ -11159,12 +13589,12 @@ position p;
 + IEnumOLEVERB *
 
 @script:python depends on report@
-p << r826.p;
+p << r1006.p;
 @@
 WARN(p[0], "IEnumOLEVERB*", "LPENUMOLEVERB")
 
 
-@r827@
+@r1007@
 typedef IEnumPins;
 typedef PENUMPINS;
 position p;
@@ -11173,12 +13603,12 @@ position p;
 + IEnumPins *
 
 @script:python depends on report@
-p << r827.p;
+p << r1007.p;
 @@
 WARN(p[0], "IEnumPins*", "PENUMPINS")
 
 
-@r828@
+@r1008@
 typedef LPENUMPINS;
 position p;
 @@
@@ -11186,12 +13616,12 @@ position p;
 + IEnumPins *
 
 @script:python depends on report@
-p << r828.p;
+p << r1008.p;
 @@
 WARN(p[0], "IEnumPins*", "LPENUMPINS")
 
 
-@r829@
+@r1009@
 typedef IEnumRegFilters;
 typedef PENUMREGFILTERS;
 position p;
@@ -11200,12 +13630,12 @@ position p;
 + IEnumRegFilters *
 
 @script:python depends on report@
-p << r829.p;
+p << r1009.p;
 @@
 WARN(p[0], "IEnumRegFilters*", "PENUMREGFILTERS")
 
 
-@r830@
+@r1010@
 typedef LPENUMREGFILTERS;
 position p;
 @@
@@ -11213,12 +13643,12 @@ position p;
 + IEnumRegFilters *
 
 @script:python depends on report@
-p << r830.p;
+p << r1010.p;
 @@
 WARN(p[0], "IEnumRegFilters*", "LPENUMREGFILTERS")
 
 
-@r831@
+@r1011@
 typedef IEnumRfc1766;
 typedef PENUMRFC1766;
 position p;
@@ -11227,12 +13657,12 @@ position p;
 + IEnumRfc1766 *
 
 @script:python depends on report@
-p << r831.p;
+p << r1011.p;
 @@
 WARN(p[0], "IEnumRfc1766*", "PENUMRFC1766")
 
 
-@r832@
+@r1012@
 typedef LPENUMRFC1766;
 position p;
 @@
@@ -11240,12 +13670,12 @@ position p;
 + IEnumRfc1766 *
 
 @script:python depends on report@
-p << r832.p;
+p << r1012.p;
 @@
 WARN(p[0], "IEnumRfc1766*", "LPENUMRFC1766")
 
 
-@r833@
+@r1013@
 typedef IEnumSTATDATA;
 typedef PENUMSTATDATA;
 position p;
@@ -11254,12 +13684,12 @@ position p;
 + IEnumSTATDATA *
 
 @script:python depends on report@
-p << r833.p;
+p << r1013.p;
 @@
 WARN(p[0], "IEnumSTATDATA*", "PENUMSTATDATA")
 
 
-@r834@
+@r1014@
 typedef LPENUMSTATDATA;
 position p;
 @@
@@ -11267,12 +13697,66 @@ position p;
 + IEnumSTATDATA *
 
 @script:python depends on report@
-p << r834.p;
+p << r1014.p;
 @@
 WARN(p[0], "IEnumSTATDATA*", "LPENUMSTATDATA")
 
 
-@r835@
+@r1015@
+typedef IEnumSTATPROPSETSTG;
+typedef PENUMSTATPROPSETSTG;
+position p;
+@@
+- PENUMSTATPROPSETSTG@p
++ IEnumSTATPROPSETSTG *
+
+@script:python depends on report@
+p << r1015.p;
+@@
+WARN(p[0], "IEnumSTATPROPSETSTG*", "PENUMSTATPROPSETSTG")
+
+
+@r1016@
+typedef LPENUMSTATPROPSETSTG;
+position p;
+@@
+- LPENUMSTATPROPSETSTG@p
++ IEnumSTATPROPSETSTG *
+
+@script:python depends on report@
+p << r1016.p;
+@@
+WARN(p[0], "IEnumSTATPROPSETSTG*", "LPENUMSTATPROPSETSTG")
+
+
+@r1017@
+typedef IEnumSTATPROPSTG;
+typedef PENUMSTATPROPSTG;
+position p;
+@@
+- PENUMSTATPROPSTG@p
++ IEnumSTATPROPSTG *
+
+@script:python depends on report@
+p << r1017.p;
+@@
+WARN(p[0], "IEnumSTATPROPSTG*", "PENUMSTATPROPSTG")
+
+
+@r1018@
+typedef LPENUMSTATPROPSTG;
+position p;
+@@
+- LPENUMSTATPROPSTG@p
++ IEnumSTATPROPSTG *
+
+@script:python depends on report@
+p << r1018.p;
+@@
+WARN(p[0], "IEnumSTATPROPSTG*", "LPENUMSTATPROPSTG")
+
+
+@r1019@
 typedef IEnumSTATSTG;
 typedef PENUMSTATSTG;
 position p;
@@ -11281,12 +13765,12 @@ position p;
 + IEnumSTATSTG *
 
 @script:python depends on report@
-p << r835.p;
+p << r1019.p;
 @@
 WARN(p[0], "IEnumSTATSTG*", "PENUMSTATSTG")
 
 
-@r836@
+@r1020@
 typedef LPENUMSTATSTG;
 position p;
 @@
@@ -11294,12 +13778,12 @@ position p;
 + IEnumSTATSTG *
 
 @script:python depends on report@
-p << r836.p;
+p << r1020.p;
 @@
 WARN(p[0], "IEnumSTATSTG*", "LPENUMSTATSTG")
 
 
-@r837@
+@r1021@
 typedef IEnumScript;
 typedef PENUMSCRIPT;
 position p;
@@ -11308,12 +13792,12 @@ position p;
 + IEnumScript *
 
 @script:python depends on report@
-p << r837.p;
+p << r1021.p;
 @@
 WARN(p[0], "IEnumScript*", "PENUMSCRIPT")
 
 
-@r838@
+@r1022@
 typedef LPENUMSCRIPT;
 position p;
 @@
@@ -11321,12 +13805,12 @@ position p;
 + IEnumScript *
 
 @script:python depends on report@
-p << r838.p;
+p << r1022.p;
 @@
 WARN(p[0], "IEnumScript*", "LPENUMSCRIPT")
 
 
-@r839@
+@r1023@
 typedef IEnumShellItems;
 typedef PENUMSHELLITEMS;
 position p;
@@ -11335,12 +13819,12 @@ position p;
 + IEnumShellItems *
 
 @script:python depends on report@
-p << r839.p;
+p << r1023.p;
 @@
 WARN(p[0], "IEnumShellItems*", "PENUMSHELLITEMS")
 
 
-@r840@
+@r1024@
 typedef LPENUMSHELLITEMS;
 position p;
 @@
@@ -11348,12 +13832,12 @@ position p;
 + IEnumShellItems *
 
 @script:python depends on report@
-p << r840.p;
+p << r1024.p;
 @@
 WARN(p[0], "IEnumShellItems*", "LPENUMSHELLITEMS")
 
 
-@r841@
+@r1025@
 typedef IEnumString;
 typedef PENUMSTRING;
 position p;
@@ -11362,12 +13846,12 @@ position p;
 + IEnumString *
 
 @script:python depends on report@
-p << r841.p;
+p << r1025.p;
 @@
 WARN(p[0], "IEnumString*", "PENUMSTRING")
 
 
-@r842@
+@r1026@
 typedef LPENUMSTRING;
 position p;
 @@
@@ -11375,12 +13859,12 @@ position p;
 + IEnumString *
 
 @script:python depends on report@
-p << r842.p;
+p << r1026.p;
 @@
 WARN(p[0], "IEnumString*", "LPENUMSTRING")
 
 
-@r843@
+@r1027@
 typedef IEnumTfContexts;
 typedef PENUMTFCONTEXTS;
 position p;
@@ -11389,12 +13873,12 @@ position p;
 + IEnumTfContexts *
 
 @script:python depends on report@
-p << r843.p;
+p << r1027.p;
 @@
 WARN(p[0], "IEnumTfContexts*", "PENUMTFCONTEXTS")
 
 
-@r844@
+@r1028@
 typedef LPENUMTFCONTEXTS;
 position p;
 @@
@@ -11402,12 +13886,12 @@ position p;
 + IEnumTfContexts *
 
 @script:python depends on report@
-p << r844.p;
+p << r1028.p;
 @@
 WARN(p[0], "IEnumTfContexts*", "LPENUMTFCONTEXTS")
 
 
-@r845@
+@r1029@
 typedef IEnumTfDocumentMgrs;
 typedef PENUMTFDOCUMENTMGRS;
 position p;
@@ -11416,12 +13900,12 @@ position p;
 + IEnumTfDocumentMgrs *
 
 @script:python depends on report@
-p << r845.p;
+p << r1029.p;
 @@
 WARN(p[0], "IEnumTfDocumentMgrs*", "PENUMTFDOCUMENTMGRS")
 
 
-@r846@
+@r1030@
 typedef LPENUMTFDOCUMENTMGRS;
 position p;
 @@
@@ -11429,12 +13913,12 @@ position p;
 + IEnumTfDocumentMgrs *
 
 @script:python depends on report@
-p << r846.p;
+p << r1030.p;
 @@
 WARN(p[0], "IEnumTfDocumentMgrs*", "LPENUMTFDOCUMENTMGRS")
 
 
-@r847@
+@r1031@
 typedef IEnumTfInputProcessorProfiles;
 typedef PENUMTFINPUTPROCESSORPROFILES;
 position p;
@@ -11443,12 +13927,12 @@ position p;
 + IEnumTfInputProcessorProfiles *
 
 @script:python depends on report@
-p << r847.p;
+p << r1031.p;
 @@
 WARN(p[0], "IEnumTfInputProcessorProfiles*", "PENUMTFINPUTPROCESSORPROFILES")
 
 
-@r848@
+@r1032@
 typedef LPENUMTFINPUTPROCESSORPROFILES;
 position p;
 @@
@@ -11456,12 +13940,12 @@ position p;
 + IEnumTfInputProcessorProfiles *
 
 @script:python depends on report@
-p << r848.p;
+p << r1032.p;
 @@
 WARN(p[0], "IEnumTfInputProcessorProfiles*", "LPENUMTFINPUTPROCESSORPROFILES")
 
 
-@r849@
+@r1033@
 typedef IEnumTfLanguageProfiles;
 typedef PENUMTFLANGUAGEPROFILES;
 position p;
@@ -11470,12 +13954,12 @@ position p;
 + IEnumTfLanguageProfiles *
 
 @script:python depends on report@
-p << r849.p;
+p << r1033.p;
 @@
 WARN(p[0], "IEnumTfLanguageProfiles*", "PENUMTFLANGUAGEPROFILES")
 
 
-@r850@
+@r1034@
 typedef LPENUMTFLANGUAGEPROFILES;
 position p;
 @@
@@ -11483,12 +13967,12 @@ position p;
 + IEnumTfLanguageProfiles *
 
 @script:python depends on report@
-p << r850.p;
+p << r1034.p;
 @@
 WARN(p[0], "IEnumTfLanguageProfiles*", "LPENUMTFLANGUAGEPROFILES")
 
 
-@r851@
+@r1035@
 typedef IEnumUnknown;
 typedef PENUMUNKNOWN;
 position p;
@@ -11497,12 +13981,12 @@ position p;
 + IEnumUnknown *
 
 @script:python depends on report@
-p << r851.p;
+p << r1035.p;
 @@
 WARN(p[0], "IEnumUnknown*", "PENUMUNKNOWN")
 
 
-@r852@
+@r1036@
 typedef LPENUMUNKNOWN;
 position p;
 @@
@@ -11510,12 +13994,12 @@ position p;
 + IEnumUnknown *
 
 @script:python depends on report@
-p << r852.p;
+p << r1036.p;
 @@
 WARN(p[0], "IEnumUnknown*", "LPENUMUNKNOWN")
 
 
-@r853@
+@r1037@
 typedef IEnumUserIdentity;
 typedef PENUMUSERIDENTITY;
 position p;
@@ -11524,12 +14008,12 @@ position p;
 + IEnumUserIdentity *
 
 @script:python depends on report@
-p << r853.p;
+p << r1037.p;
 @@
 WARN(p[0], "IEnumUserIdentity*", "PENUMUSERIDENTITY")
 
 
-@r854@
+@r1038@
 typedef LPENUMUSERIDENTITY;
 position p;
 @@
@@ -11537,12 +14021,12 @@ position p;
 + IEnumUserIdentity *
 
 @script:python depends on report@
-p << r854.p;
+p << r1038.p;
 @@
 WARN(p[0], "IEnumUserIdentity*", "LPENUMUSERIDENTITY")
 
 
-@r855@
+@r1039@
 typedef IEnumVARIANT;
 typedef PENUMVARIANT;
 position p;
@@ -11551,12 +14035,12 @@ position p;
 + IEnumVARIANT *
 
 @script:python depends on report@
-p << r855.p;
+p << r1039.p;
 @@
 WARN(p[0], "IEnumVARIANT*", "PENUMVARIANT")
 
 
-@r856@
+@r1040@
 typedef LPENUMVARIANT;
 position p;
 @@
@@ -11564,12 +14048,12 @@ position p;
 + IEnumVARIANT *
 
 @script:python depends on report@
-p << r856.p;
+p << r1040.p;
 @@
 WARN(p[0], "IEnumVARIANT*", "LPENUMVARIANT")
 
 
-@r857@
+@r1041@
 typedef IEnumWIA_DEV_INFO;
 typedef PENUMWIA_DEV_INFO;
 position p;
@@ -11578,12 +14062,12 @@ position p;
 + IEnumWIA_DEV_INFO *
 
 @script:python depends on report@
-p << r857.p;
+p << r1041.p;
 @@
 WARN(p[0], "IEnumWIA_DEV_INFO*", "PENUMWIA_DEV_INFO")
 
 
-@r858@
+@r1042@
 typedef LPENUMWIA_DEV_INFO;
 position p;
 @@
@@ -11591,12 +14075,12 @@ position p;
 + IEnumWIA_DEV_INFO *
 
 @script:python depends on report@
-p << r858.p;
+p << r1042.p;
 @@
 WARN(p[0], "IEnumWIA_DEV_INFO*", "LPENUMWIA_DEV_INFO")
 
 
-@r859@
+@r1043@
 typedef IEnumWbemClassObject;
 typedef PENUMWBEMCLASSOBJECT;
 position p;
@@ -11605,12 +14089,12 @@ position p;
 + IEnumWbemClassObject *
 
 @script:python depends on report@
-p << r859.p;
+p << r1043.p;
 @@
 WARN(p[0], "IEnumWbemClassObject*", "PENUMWBEMCLASSOBJECT")
 
 
-@r860@
+@r1044@
 typedef LPENUMWBEMCLASSOBJECT;
 position p;
 @@
@@ -11618,12 +14102,12 @@ position p;
 + IEnumWbemClassObject *
 
 @script:python depends on report@
-p << r860.p;
+p << r1044.p;
 @@
 WARN(p[0], "IEnumWbemClassObject*", "LPENUMWBEMCLASSOBJECT")
 
 
-@r861@
+@r1045@
 typedef IEnumWorkItems;
 typedef PENUMWORKITEMS;
 position p;
@@ -11632,12 +14116,12 @@ position p;
 + IEnumWorkItems *
 
 @script:python depends on report@
-p << r861.p;
+p << r1045.p;
 @@
 WARN(p[0], "IEnumWorkItems*", "PENUMWORKITEMS")
 
 
-@r862@
+@r1046@
 typedef LPENUMWORKITEMS;
 position p;
 @@
@@ -11645,12 +14129,12 @@ position p;
 + IEnumWorkItems *
 
 @script:python depends on report@
-p << r862.p;
+p << r1046.p;
 @@
 WARN(p[0], "IEnumWorkItems*", "LPENUMWORKITEMS")
 
 
-@r863@
+@r1047@
 typedef IErrorInfo;
 typedef PERRORINFO;
 position p;
@@ -11659,12 +14143,12 @@ position p;
 + IErrorInfo *
 
 @script:python depends on report@
-p << r863.p;
+p << r1047.p;
 @@
 WARN(p[0], "IErrorInfo*", "PERRORINFO")
 
 
-@r864@
+@r1048@
 typedef LPERRORINFO;
 position p;
 @@
@@ -11672,12 +14156,12 @@ position p;
 + IErrorInfo *
 
 @script:python depends on report@
-p << r864.p;
+p << r1048.p;
 @@
 WARN(p[0], "IErrorInfo*", "LPERRORINFO")
 
 
-@r865@
+@r1049@
 typedef IErrorRecords;
 typedef PERRORRECORDS;
 position p;
@@ -11686,12 +14170,12 @@ position p;
 + IErrorRecords *
 
 @script:python depends on report@
-p << r865.p;
+p << r1049.p;
 @@
 WARN(p[0], "IErrorRecords*", "PERRORRECORDS")
 
 
-@r866@
+@r1050@
 typedef LPERRORRECORDS;
 position p;
 @@
@@ -11699,12 +14183,120 @@ position p;
 + IErrorRecords *
 
 @script:python depends on report@
-p << r866.p;
+p << r1050.p;
 @@
 WARN(p[0], "IErrorRecords*", "LPERRORRECORDS")
 
 
-@r867@
+@r1051@
+typedef IEventHandler_Gamepad;
+typedef PEVENTHANDLER_GAMEPAD;
+position p;
+@@
+- PEVENTHANDLER_GAMEPAD@p
++ IEventHandler_Gamepad *
+
+@script:python depends on report@
+p << r1051.p;
+@@
+WARN(p[0], "IEventHandler_Gamepad*", "PEVENTHANDLER_GAMEPAD")
+
+
+@r1052@
+typedef LPEVENTHANDLER_GAMEPAD;
+position p;
+@@
+- LPEVENTHANDLER_GAMEPAD@p
++ IEventHandler_Gamepad *
+
+@script:python depends on report@
+p << r1052.p;
+@@
+WARN(p[0], "IEventHandler_Gamepad*", "LPEVENTHANDLER_GAMEPAD")
+
+
+@r1053@
+typedef IEventHandler_RawGameController;
+typedef PEVENTHANDLER_RAWGAMECONTROLLER;
+position p;
+@@
+- PEVENTHANDLER_RAWGAMECONTROLLER@p
++ IEventHandler_RawGameController *
+
+@script:python depends on report@
+p << r1053.p;
+@@
+WARN(p[0], "IEventHandler_RawGameController*", "PEVENTHANDLER_RAWGAMECONTROLLER")
+
+
+@r1054@
+typedef LPEVENTHANDLER_RAWGAMECONTROLLER;
+position p;
+@@
+- LPEVENTHANDLER_RAWGAMECONTROLLER@p
++ IEventHandler_RawGameController *
+
+@script:python depends on report@
+p << r1054.p;
+@@
+WARN(p[0], "IEventHandler_RawGameController*", "LPEVENTHANDLER_RAWGAMECONTROLLER")
+
+
+@r1055@
+typedef IEventTarget;
+typedef PEVENTTARGET;
+position p;
+@@
+- PEVENTTARGET@p
++ IEventTarget *
+
+@script:python depends on report@
+p << r1055.p;
+@@
+WARN(p[0], "IEventTarget*", "PEVENTTARGET")
+
+
+@r1056@
+typedef LPEVENTTARGET;
+position p;
+@@
+- LPEVENTTARGET@p
++ IEventTarget *
+
+@script:python depends on report@
+p << r1056.p;
+@@
+WARN(p[0], "IEventTarget*", "LPEVENTTARGET")
+
+
+@r1057@
+typedef IExecAction;
+typedef PEXECACTION;
+position p;
+@@
+- PEXECACTION@p
++ IExecAction *
+
+@script:python depends on report@
+p << r1057.p;
+@@
+WARN(p[0], "IExecAction*", "PEXECACTION")
+
+
+@r1058@
+typedef LPEXECACTION;
+position p;
+@@
+- LPEXECACTION@p
++ IExecAction *
+
+@script:python depends on report@
+p << r1058.p;
+@@
+WARN(p[0], "IExecAction*", "LPEXECACTION")
+
+
+@r1059@
 typedef IExplorerBrowser;
 typedef PEXPLORERBROWSER;
 position p;
@@ -11713,12 +14305,12 @@ position p;
 + IExplorerBrowser *
 
 @script:python depends on report@
-p << r867.p;
+p << r1059.p;
 @@
 WARN(p[0], "IExplorerBrowser*", "PEXPLORERBROWSER")
 
 
-@r868@
+@r1060@
 typedef LPEXPLORERBROWSER;
 position p;
 @@
@@ -11726,12 +14318,12 @@ position p;
 + IExplorerBrowser *
 
 @script:python depends on report@
-p << r868.p;
+p << r1060.p;
 @@
 WARN(p[0], "IExplorerBrowser*", "LPEXPLORERBROWSER")
 
 
-@r869@
+@r1061@
 typedef IExplorerBrowserEvents;
 typedef PEXPLORERBROWSEREVENTS;
 position p;
@@ -11740,12 +14332,12 @@ position p;
 + IExplorerBrowserEvents *
 
 @script:python depends on report@
-p << r869.p;
+p << r1061.p;
 @@
 WARN(p[0], "IExplorerBrowserEvents*", "PEXPLORERBROWSEREVENTS")
 
 
-@r870@
+@r1062@
 typedef LPEXPLORERBROWSEREVENTS;
 position p;
 @@
@@ -11753,12 +14345,12 @@ position p;
 + IExplorerBrowserEvents *
 
 @script:python depends on report@
-p << r870.p;
+p << r1062.p;
 @@
 WARN(p[0], "IExplorerBrowserEvents*", "LPEXPLORERBROWSEREVENTS")
 
 
-@r871@
+@r1063@
 typedef IExplorerPaneVisibility;
 typedef PEXPLORERPANEVISIBILITY;
 position p;
@@ -11767,12 +14359,12 @@ position p;
 + IExplorerPaneVisibility *
 
 @script:python depends on report@
-p << r871.p;
+p << r1063.p;
 @@
 WARN(p[0], "IExplorerPaneVisibility*", "PEXPLORERPANEVISIBILITY")
 
 
-@r872@
+@r1064@
 typedef LPEXPLORERPANEVISIBILITY;
 position p;
 @@
@@ -11780,12 +14372,12 @@ position p;
 + IExplorerPaneVisibility *
 
 @script:python depends on report@
-p << r872.p;
+p << r1064.p;
 @@
 WARN(p[0], "IExplorerPaneVisibility*", "LPEXPLORERPANEVISIBILITY")
 
 
-@r873@
+@r1065@
 typedef IExtensionServices;
 typedef PEXTENSIONSERVICES;
 position p;
@@ -11794,12 +14386,12 @@ position p;
 + IExtensionServices *
 
 @script:python depends on report@
-p << r873.p;
+p << r1065.p;
 @@
 WARN(p[0], "IExtensionServices*", "PEXTENSIONSERVICES")
 
 
-@r874@
+@r1066@
 typedef LPEXTENSIONSERVICES;
 position p;
 @@
@@ -11807,12 +14399,12 @@ position p;
 + IExtensionServices *
 
 @script:python depends on report@
-p << r874.p;
+p << r1066.p;
 @@
 WARN(p[0], "IExtensionServices*", "LPEXTENSIONSERVICES")
 
 
-@r875@
+@r1067@
 typedef IExternalConnection;
 typedef PEXTERNALCONNECTION;
 position p;
@@ -11821,12 +14413,12 @@ position p;
 + IExternalConnection *
 
 @script:python depends on report@
-p << r875.p;
+p << r1067.p;
 @@
 WARN(p[0], "IExternalConnection*", "PEXTERNALCONNECTION")
 
 
-@r876@
+@r1068@
 typedef LPEXTERNALCONNECTION;
 position p;
 @@
@@ -11834,12 +14426,12 @@ position p;
 + IExternalConnection *
 
 @script:python depends on report@
-p << r876.p;
+p << r1068.p;
 @@
 WARN(p[0], "IExternalConnection*", "LPEXTERNALCONNECTION")
 
 
-@r877@
+@r1069@
 typedef IExtractIconA;
 typedef PEXTRACTICONA;
 position p;
@@ -11848,12 +14440,12 @@ position p;
 + IExtractIconA *
 
 @script:python depends on report@
-p << r877.p;
+p << r1069.p;
 @@
 WARN(p[0], "IExtractIconA*", "PEXTRACTICONA")
 
 
-@r878@
+@r1070@
 typedef LPEXTRACTICONA;
 position p;
 @@
@@ -11861,12 +14453,12 @@ position p;
 + IExtractIconA *
 
 @script:python depends on report@
-p << r878.p;
+p << r1070.p;
 @@
 WARN(p[0], "IExtractIconA*", "LPEXTRACTICONA")
 
 
-@r879@
+@r1071@
 typedef IExtractIconW;
 typedef PEXTRACTICONW;
 position p;
@@ -11875,12 +14467,12 @@ position p;
 + IExtractIconW *
 
 @script:python depends on report@
-p << r879.p;
+p << r1071.p;
 @@
 WARN(p[0], "IExtractIconW*", "PEXTRACTICONW")
 
 
-@r880@
+@r1072@
 typedef LPEXTRACTICONW;
 position p;
 @@
@@ -11888,12 +14480,12 @@ position p;
 + IExtractIconW *
 
 @script:python depends on report@
-p << r880.p;
+p << r1072.p;
 @@
 WARN(p[0], "IExtractIconW*", "LPEXTRACTICONW")
 
 
-@r881@
+@r1073@
 typedef IFile;
 typedef PFILE;
 position p;
@@ -11902,12 +14494,12 @@ position p;
 + IFile *
 
 @script:python depends on report@
-p << r881.p;
+p << r1073.p;
 @@
 WARN(p[0], "IFile*", "PFILE")
 
 
-@r882@
+@r1074@
 typedef LPFILE;
 position p;
 @@
@@ -11915,12 +14507,12 @@ position p;
 + IFile *
 
 @script:python depends on report@
-p << r882.p;
+p << r1074.p;
 @@
 WARN(p[0], "IFile*", "LPFILE")
 
 
-@r883@
+@r1075@
 typedef IFileCollection;
 typedef PFILECOLLECTION;
 position p;
@@ -11929,12 +14521,12 @@ position p;
 + IFileCollection *
 
 @script:python depends on report@
-p << r883.p;
+p << r1075.p;
 @@
 WARN(p[0], "IFileCollection*", "PFILECOLLECTION")
 
 
-@r884@
+@r1076@
 typedef LPFILECOLLECTION;
 position p;
 @@
@@ -11942,12 +14534,12 @@ position p;
 + IFileCollection *
 
 @script:python depends on report@
-p << r884.p;
+p << r1076.p;
 @@
 WARN(p[0], "IFileCollection*", "LPFILECOLLECTION")
 
 
-@r885@
+@r1077@
 typedef IFileDialog2;
 typedef PFILEDIALOG2;
 position p;
@@ -11956,12 +14548,12 @@ position p;
 + IFileDialog2 *
 
 @script:python depends on report@
-p << r885.p;
+p << r1077.p;
 @@
 WARN(p[0], "IFileDialog2*", "PFILEDIALOG2")
 
 
-@r886@
+@r1078@
 typedef LPFILEDIALOG2;
 position p;
 @@
@@ -11969,12 +14561,12 @@ position p;
 + IFileDialog2 *
 
 @script:python depends on report@
-p << r886.p;
+p << r1078.p;
 @@
 WARN(p[0], "IFileDialog2*", "LPFILEDIALOG2")
 
 
-@r887@
+@r1079@
 typedef IFileDialogCustomize;
 typedef PFILEDIALOGCUSTOMIZE;
 position p;
@@ -11983,12 +14575,12 @@ position p;
 + IFileDialogCustomize *
 
 @script:python depends on report@
-p << r887.p;
+p << r1079.p;
 @@
 WARN(p[0], "IFileDialogCustomize*", "PFILEDIALOGCUSTOMIZE")
 
 
-@r888@
+@r1080@
 typedef LPFILEDIALOGCUSTOMIZE;
 position p;
 @@
@@ -11996,12 +14588,12 @@ position p;
 + IFileDialogCustomize *
 
 @script:python depends on report@
-p << r888.p;
+p << r1080.p;
 @@
 WARN(p[0], "IFileDialogCustomize*", "LPFILEDIALOGCUSTOMIZE")
 
 
-@r889@
+@r1081@
 typedef IFileDialogEvents;
 typedef PFILEDIALOGEVENTS;
 position p;
@@ -12010,12 +14602,12 @@ position p;
 + IFileDialogEvents *
 
 @script:python depends on report@
-p << r889.p;
+p << r1081.p;
 @@
 WARN(p[0], "IFileDialogEvents*", "PFILEDIALOGEVENTS")
 
 
-@r890@
+@r1082@
 typedef LPFILEDIALOGEVENTS;
 position p;
 @@
@@ -12023,12 +14615,66 @@ position p;
 + IFileDialogEvents *
 
 @script:python depends on report@
-p << r890.p;
+p << r1082.p;
 @@
 WARN(p[0], "IFileDialogEvents*", "LPFILEDIALOGEVENTS")
 
 
-@r891@
+@r1083@
+typedef IFileOperation;
+typedef PFILEOPERATION;
+position p;
+@@
+- PFILEOPERATION@p
++ IFileOperation *
+
+@script:python depends on report@
+p << r1083.p;
+@@
+WARN(p[0], "IFileOperation*", "PFILEOPERATION")
+
+
+@r1084@
+typedef LPFILEOPERATION;
+position p;
+@@
+- LPFILEOPERATION@p
++ IFileOperation *
+
+@script:python depends on report@
+p << r1084.p;
+@@
+WARN(p[0], "IFileOperation*", "LPFILEOPERATION")
+
+
+@r1085@
+typedef IFileSinkFilter;
+typedef PFILESINKFILTER;
+position p;
+@@
+- PFILESINKFILTER@p
++ IFileSinkFilter *
+
+@script:python depends on report@
+p << r1085.p;
+@@
+WARN(p[0], "IFileSinkFilter*", "PFILESINKFILTER")
+
+
+@r1086@
+typedef LPFILESINKFILTER;
+position p;
+@@
+- LPFILESINKFILTER@p
++ IFileSinkFilter *
+
+@script:python depends on report@
+p << r1086.p;
+@@
+WARN(p[0], "IFileSinkFilter*", "LPFILESINKFILTER")
+
+
+@r1087@
 typedef IFileSourceFilter;
 typedef PFILESOURCEFILTER;
 position p;
@@ -12037,12 +14683,12 @@ position p;
 + IFileSourceFilter *
 
 @script:python depends on report@
-p << r891.p;
+p << r1087.p;
 @@
 WARN(p[0], "IFileSourceFilter*", "PFILESOURCEFILTER")
 
 
-@r892@
+@r1088@
 typedef LPFILESOURCEFILTER;
 position p;
 @@
@@ -12050,12 +14696,12 @@ position p;
 + IFileSourceFilter *
 
 @script:python depends on report@
-p << r892.p;
+p << r1088.p;
 @@
 WARN(p[0], "IFileSourceFilter*", "LPFILESOURCEFILTER")
 
 
-@r893@
+@r1089@
 typedef IFileSystem3;
 typedef PFILESYSTEM3;
 position p;
@@ -12064,12 +14710,12 @@ position p;
 + IFileSystem3 *
 
 @script:python depends on report@
-p << r893.p;
+p << r1089.p;
 @@
 WARN(p[0], "IFileSystem3*", "PFILESYSTEM3")
 
 
-@r894@
+@r1090@
 typedef LPFILESYSTEM3;
 position p;
 @@
@@ -12077,12 +14723,12 @@ position p;
 + IFileSystem3 *
 
 @script:python depends on report@
-p << r894.p;
+p << r1090.p;
 @@
 WARN(p[0], "IFileSystem3*", "LPFILESYSTEM3")
 
 
-@r895@
+@r1091@
 typedef IFileSystemBindData;
 typedef PFILESYSTEMBINDDATA;
 position p;
@@ -12091,12 +14737,12 @@ position p;
 + IFileSystemBindData *
 
 @script:python depends on report@
-p << r895.p;
+p << r1091.p;
 @@
 WARN(p[0], "IFileSystemBindData*", "PFILESYSTEMBINDDATA")
 
 
-@r896@
+@r1092@
 typedef LPFILESYSTEMBINDDATA;
 position p;
 @@
@@ -12104,12 +14750,12 @@ position p;
 + IFileSystemBindData *
 
 @script:python depends on report@
-p << r896.p;
+p << r1092.p;
 @@
 WARN(p[0], "IFileSystemBindData*", "LPFILESYSTEMBINDDATA")
 
 
-@r897@
+@r1093@
 typedef IFilterGraph2;
 typedef PFILTERGRAPH2;
 position p;
@@ -12118,12 +14764,12 @@ position p;
 + IFilterGraph2 *
 
 @script:python depends on report@
-p << r897.p;
+p << r1093.p;
 @@
 WARN(p[0], "IFilterGraph2*", "PFILTERGRAPH2")
 
 
-@r898@
+@r1094@
 typedef LPFILTERGRAPH2;
 position p;
 @@
@@ -12131,12 +14777,12 @@ position p;
 + IFilterGraph2 *
 
 @script:python depends on report@
-p << r898.p;
+p << r1094.p;
 @@
 WARN(p[0], "IFilterGraph2*", "LPFILTERGRAPH2")
 
 
-@r899@
+@r1095@
 typedef IFilterMapper;
 typedef PFILTERMAPPER;
 position p;
@@ -12145,12 +14791,12 @@ position p;
 + IFilterMapper *
 
 @script:python depends on report@
-p << r899.p;
+p << r1095.p;
 @@
 WARN(p[0], "IFilterMapper*", "PFILTERMAPPER")
 
 
-@r900@
+@r1096@
 typedef LPFILTERMAPPER;
 position p;
 @@
@@ -12158,12 +14804,12 @@ position p;
 + IFilterMapper *
 
 @script:python depends on report@
-p << r900.p;
+p << r1096.p;
 @@
 WARN(p[0], "IFilterMapper*", "LPFILTERMAPPER")
 
 
-@r901@
+@r1097@
 typedef IFilterMapper3;
 typedef PFILTERMAPPER3;
 position p;
@@ -12172,12 +14818,12 @@ position p;
 + IFilterMapper3 *
 
 @script:python depends on report@
-p << r901.p;
+p << r1097.p;
 @@
 WARN(p[0], "IFilterMapper3*", "PFILTERMAPPER3")
 
 
-@r902@
+@r1098@
 typedef LPFILTERMAPPER3;
 position p;
 @@
@@ -12185,12 +14831,12 @@ position p;
 + IFilterMapper3 *
 
 @script:python depends on report@
-p << r902.p;
+p << r1098.p;
 @@
 WARN(p[0], "IFilterMapper3*", "LPFILTERMAPPER3")
 
 
-@r903@
+@r1099@
 typedef IFolder;
 typedef PFOLDER;
 position p;
@@ -12199,12 +14845,12 @@ position p;
 + IFolder *
 
 @script:python depends on report@
-p << r903.p;
+p << r1099.p;
 @@
 WARN(p[0], "IFolder*", "PFOLDER")
 
 
-@r904@
+@r1100@
 typedef LPFOLDER;
 position p;
 @@
@@ -12212,12 +14858,12 @@ position p;
 + IFolder *
 
 @script:python depends on report@
-p << r904.p;
+p << r1100.p;
 @@
 WARN(p[0], "IFolder*", "LPFOLDER")
 
 
-@r905@
+@r1101@
 typedef IFolderCollection;
 typedef PFOLDERCOLLECTION;
 position p;
@@ -12226,12 +14872,12 @@ position p;
 + IFolderCollection *
 
 @script:python depends on report@
-p << r905.p;
+p << r1101.p;
 @@
 WARN(p[0], "IFolderCollection*", "PFOLDERCOLLECTION")
 
 
-@r906@
+@r1102@
 typedef LPFOLDERCOLLECTION;
 position p;
 @@
@@ -12239,12 +14885,12 @@ position p;
 + IFolderCollection *
 
 @script:python depends on report@
-p << r906.p;
+p << r1102.p;
 @@
 WARN(p[0], "IFolderCollection*", "LPFOLDERCOLLECTION")
 
 
-@r907@
+@r1103@
 typedef IFolderView2;
 typedef PFOLDERVIEW2;
 position p;
@@ -12253,12 +14899,12 @@ position p;
 + IFolderView2 *
 
 @script:python depends on report@
-p << r907.p;
+p << r1103.p;
 @@
 WARN(p[0], "IFolderView2*", "PFOLDERVIEW2")
 
 
-@r908@
+@r1104@
 typedef LPFOLDERVIEW2;
 position p;
 @@
@@ -12266,12 +14912,12 @@ position p;
 + IFolderView2 *
 
 @script:python depends on report@
-p << r908.p;
+p << r1104.p;
 @@
 WARN(p[0], "IFolderView2*", "LPFOLDERVIEW2")
 
 
-@r909@
+@r1105@
 typedef IFont;
 typedef PFONT;
 position p;
@@ -12280,12 +14926,12 @@ position p;
 + IFont *
 
 @script:python depends on report@
-p << r909.p;
+p << r1105.p;
 @@
 WARN(p[0], "IFont*", "PFONT")
 
 
-@r910@
+@r1106@
 typedef LPFONT;
 position p;
 @@
@@ -12293,12 +14939,12 @@ position p;
 + IFont *
 
 @script:python depends on report@
-p << r910.p;
+p << r1106.p;
 @@
 WARN(p[0], "IFont*", "LPFONT")
 
 
-@r911@
+@r1107@
 typedef IGameExplorer;
 typedef PGAMEEXPLORER;
 position p;
@@ -12307,12 +14953,12 @@ position p;
 + IGameExplorer *
 
 @script:python depends on report@
-p << r911.p;
+p << r1107.p;
 @@
 WARN(p[0], "IGameExplorer*", "PGAMEEXPLORER")
 
 
-@r912@
+@r1108@
 typedef LPGAMEEXPLORER;
 position p;
 @@
@@ -12320,12 +14966,12 @@ position p;
 + IGameExplorer *
 
 @script:python depends on report@
-p << r912.p;
+p << r1108.p;
 @@
 WARN(p[0], "IGameExplorer*", "LPGAMEEXPLORER")
 
 
-@r913@
+@r1109@
 typedef IGameExplorer2;
 typedef PGAMEEXPLORER2;
 position p;
@@ -12334,12 +14980,12 @@ position p;
 + IGameExplorer2 *
 
 @script:python depends on report@
-p << r913.p;
+p << r1109.p;
 @@
 WARN(p[0], "IGameExplorer2*", "PGAMEEXPLORER2")
 
 
-@r914@
+@r1110@
 typedef LPGAMEEXPLORER2;
 position p;
 @@
@@ -12347,12 +14993,12 @@ position p;
 + IGameExplorer2 *
 
 @script:python depends on report@
-p << r914.p;
+p << r1110.p;
 @@
 WARN(p[0], "IGameExplorer2*", "LPGAMEEXPLORER2")
 
 
-@r915@
+@r1111@
 typedef IGameStatistics;
 typedef PGAMESTATISTICS;
 position p;
@@ -12361,12 +15007,12 @@ position p;
 + IGameStatistics *
 
 @script:python depends on report@
-p << r915.p;
+p << r1111.p;
 @@
 WARN(p[0], "IGameStatistics*", "PGAMESTATISTICS")
 
 
-@r916@
+@r1112@
 typedef LPGAMESTATISTICS;
 position p;
 @@
@@ -12374,12 +15020,12 @@ position p;
 + IGameStatistics *
 
 @script:python depends on report@
-p << r916.p;
+p << r1112.p;
 @@
 WARN(p[0], "IGameStatistics*", "LPGAMESTATISTICS")
 
 
-@r917@
+@r1113@
 typedef IGameStatisticsMgr;
 typedef PGAMESTATISTICSMGR;
 position p;
@@ -12388,12 +15034,12 @@ position p;
 + IGameStatisticsMgr *
 
 @script:python depends on report@
-p << r917.p;
+p << r1113.p;
 @@
 WARN(p[0], "IGameStatisticsMgr*", "PGAMESTATISTICSMGR")
 
 
-@r918@
+@r1114@
 typedef LPGAMESTATISTICSMGR;
 position p;
 @@
@@ -12401,12 +15047,39 @@ position p;
 + IGameStatisticsMgr *
 
 @script:python depends on report@
-p << r918.p;
+p << r1114.p;
 @@
 WARN(p[0], "IGameStatisticsMgr*", "LPGAMESTATISTICSMGR")
 
 
-@r919@
+@r1115@
+typedef IGamepadStatics;
+typedef PGAMEPADSTATICS;
+position p;
+@@
+- PGAMEPADSTATICS@p
++ IGamepadStatics *
+
+@script:python depends on report@
+p << r1115.p;
+@@
+WARN(p[0], "IGamepadStatics*", "PGAMEPADSTATICS")
+
+
+@r1116@
+typedef LPGAMEPADSTATICS;
+position p;
+@@
+- LPGAMEPADSTATICS@p
++ IGamepadStatics *
+
+@script:python depends on report@
+p << r1116.p;
+@@
+WARN(p[0], "IGamepadStatics*", "LPGAMEPADSTATICS")
+
+
+@r1117@
 typedef IGenScriptletTLib;
 typedef PGENSCRIPTLETTLIB;
 position p;
@@ -12415,12 +15088,12 @@ position p;
 + IGenScriptletTLib *
 
 @script:python depends on report@
-p << r919.p;
+p << r1117.p;
 @@
 WARN(p[0], "IGenScriptletTLib*", "PGENSCRIPTLETTLIB")
 
 
-@r920@
+@r1118@
 typedef LPGENSCRIPTLETTLIB;
 position p;
 @@
@@ -12428,12 +15101,12 @@ position p;
 + IGenScriptletTLib *
 
 @script:python depends on report@
-p << r920.p;
+p << r1118.p;
 @@
 WARN(p[0], "IGenScriptletTLib*", "LPGENSCRIPTLETTLIB")
 
 
-@r921@
+@r1119@
 typedef IGetFrame;
 typedef PGETFRAME;
 position p;
@@ -12442,12 +15115,12 @@ position p;
 + IGetFrame *
 
 @script:python depends on report@
-p << r921.p;
+p << r1119.p;
 @@
 WARN(p[0], "IGetFrame*", "PGETFRAME")
 
 
-@r922@
+@r1120@
 typedef LPGETFRAME;
 position p;
 @@
@@ -12455,12 +15128,12 @@ position p;
 + IGetFrame *
 
 @script:python depends on report@
-p << r922.p;
+p << r1120.p;
 @@
 WARN(p[0], "IGetFrame*", "LPGETFRAME")
 
 
-@r923@
+@r1121@
 typedef IGlobalInterfaceTable;
 typedef PGLOBALINTERFACETABLE;
 position p;
@@ -12469,12 +15142,12 @@ position p;
 + IGlobalInterfaceTable *
 
 @script:python depends on report@
-p << r923.p;
+p << r1121.p;
 @@
 WARN(p[0], "IGlobalInterfaceTable*", "PGLOBALINTERFACETABLE")
 
 
-@r924@
+@r1122@
 typedef LPGLOBALINTERFACETABLE;
 position p;
 @@
@@ -12482,12 +15155,12 @@ position p;
 + IGlobalInterfaceTable *
 
 @script:python depends on report@
-p << r924.p;
+p << r1122.p;
 @@
 WARN(p[0], "IGlobalInterfaceTable*", "LPGLOBALINTERFACETABLE")
 
 
-@r925@
+@r1123@
 typedef IGlobalOptions;
 typedef PGLOBALOPTIONS;
 position p;
@@ -12496,12 +15169,12 @@ position p;
 + IGlobalOptions *
 
 @script:python depends on report@
-p << r925.p;
+p << r1123.p;
 @@
 WARN(p[0], "IGlobalOptions*", "PGLOBALOPTIONS")
 
 
-@r926@
+@r1124@
 typedef LPGLOBALOPTIONS;
 position p;
 @@
@@ -12509,12 +15182,39 @@ position p;
 + IGlobalOptions *
 
 @script:python depends on report@
-p << r926.p;
+p << r1124.p;
 @@
 WARN(p[0], "IGlobalOptions*", "LPGLOBALOPTIONS")
 
 
-@r927@
+@r1125@
+typedef IGlobalizationPreferencesStatics;
+typedef PGLOBALIZATIONPREFERENCESSTATICS;
+position p;
+@@
+- PGLOBALIZATIONPREFERENCESSTATICS@p
++ IGlobalizationPreferencesStatics *
+
+@script:python depends on report@
+p << r1125.p;
+@@
+WARN(p[0], "IGlobalizationPreferencesStatics*", "PGLOBALIZATIONPREFERENCESSTATICS")
+
+
+@r1126@
+typedef LPGLOBALIZATIONPREFERENCESSTATICS;
+position p;
+@@
+- LPGLOBALIZATIONPREFERENCESSTATICS@p
++ IGlobalizationPreferencesStatics *
+
+@script:python depends on report@
+p << r1126.p;
+@@
+WARN(p[0], "IGlobalizationPreferencesStatics*", "LPGLOBALIZATIONPREFERENCESSTATICS")
+
+
+@r1127@
 typedef IGraphConfig;
 typedef PGRAPHCONFIG;
 position p;
@@ -12523,12 +15223,12 @@ position p;
 + IGraphConfig *
 
 @script:python depends on report@
-p << r927.p;
+p << r1127.p;
 @@
 WARN(p[0], "IGraphConfig*", "PGRAPHCONFIG")
 
 
-@r928@
+@r1128@
 typedef LPGRAPHCONFIG;
 position p;
 @@
@@ -12536,12 +15236,12 @@ position p;
 + IGraphConfig *
 
 @script:python depends on report@
-p << r928.p;
+p << r1128.p;
 @@
 WARN(p[0], "IGraphConfig*", "LPGRAPHCONFIG")
 
 
-@r929@
+@r1129@
 typedef IGraphVersion;
 typedef PGRAPHVERSION;
 position p;
@@ -12550,12 +15250,12 @@ position p;
 + IGraphVersion *
 
 @script:python depends on report@
-p << r929.p;
+p << r1129.p;
 @@
 WARN(p[0], "IGraphVersion*", "PGRAPHVERSION")
 
 
-@r930@
+@r1130@
 typedef LPGRAPHVERSION;
 position p;
 @@
@@ -12563,12 +15263,12 @@ position p;
 + IGraphVersion *
 
 @script:python depends on report@
-p << r930.p;
+p << r1130.p;
 @@
 WARN(p[0], "IGraphVersion*", "LPGRAPHVERSION")
 
 
-@r931@
+@r1131@
 typedef IHTMLAnchorElement;
 typedef PHTMLANCHORELEMENT;
 position p;
@@ -12577,12 +15277,12 @@ position p;
 + IHTMLAnchorElement *
 
 @script:python depends on report@
-p << r931.p;
+p << r1131.p;
 @@
 WARN(p[0], "IHTMLAnchorElement*", "PHTMLANCHORELEMENT")
 
 
-@r932@
+@r1132@
 typedef LPHTMLANCHORELEMENT;
 position p;
 @@
@@ -12590,12 +15290,12 @@ position p;
 + IHTMLAnchorElement *
 
 @script:python depends on report@
-p << r932.p;
+p << r1132.p;
 @@
 WARN(p[0], "IHTMLAnchorElement*", "LPHTMLANCHORELEMENT")
 
 
-@r933@
+@r1133@
 typedef IHTMLAreaElement;
 typedef PHTMLAREAELEMENT;
 position p;
@@ -12604,12 +15304,12 @@ position p;
 + IHTMLAreaElement *
 
 @script:python depends on report@
-p << r933.p;
+p << r1133.p;
 @@
 WARN(p[0], "IHTMLAreaElement*", "PHTMLAREAELEMENT")
 
 
-@r934@
+@r1134@
 typedef LPHTMLAREAELEMENT;
 position p;
 @@
@@ -12617,12 +15317,12 @@ position p;
 + IHTMLAreaElement *
 
 @script:python depends on report@
-p << r934.p;
+p << r1134.p;
 @@
 WARN(p[0], "IHTMLAreaElement*", "LPHTMLAREAELEMENT")
 
 
-@r935@
+@r1135@
 typedef IHTMLAttributeCollection;
 typedef PHTMLATTRIBUTECOLLECTION;
 position p;
@@ -12631,12 +15331,12 @@ position p;
 + IHTMLAttributeCollection *
 
 @script:python depends on report@
-p << r935.p;
+p << r1135.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection*", "PHTMLATTRIBUTECOLLECTION")
 
 
-@r936@
+@r1136@
 typedef LPHTMLATTRIBUTECOLLECTION;
 position p;
 @@
@@ -12644,12 +15344,12 @@ position p;
 + IHTMLAttributeCollection *
 
 @script:python depends on report@
-p << r936.p;
+p << r1136.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection*", "LPHTMLATTRIBUTECOLLECTION")
 
 
-@r937@
+@r1137@
 typedef IHTMLAttributeCollection2;
 typedef PHTMLATTRIBUTECOLLECTION2;
 position p;
@@ -12658,12 +15358,12 @@ position p;
 + IHTMLAttributeCollection2 *
 
 @script:python depends on report@
-p << r937.p;
+p << r1137.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection2*", "PHTMLATTRIBUTECOLLECTION2")
 
 
-@r938@
+@r1138@
 typedef LPHTMLATTRIBUTECOLLECTION2;
 position p;
 @@
@@ -12671,12 +15371,12 @@ position p;
 + IHTMLAttributeCollection2 *
 
 @script:python depends on report@
-p << r938.p;
+p << r1138.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection2*", "LPHTMLATTRIBUTECOLLECTION2")
 
 
-@r939@
+@r1139@
 typedef IHTMLAttributeCollection3;
 typedef PHTMLATTRIBUTECOLLECTION3;
 position p;
@@ -12685,12 +15385,12 @@ position p;
 + IHTMLAttributeCollection3 *
 
 @script:python depends on report@
-p << r939.p;
+p << r1139.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection3*", "PHTMLATTRIBUTECOLLECTION3")
 
 
-@r940@
+@r1140@
 typedef LPHTMLATTRIBUTECOLLECTION3;
 position p;
 @@
@@ -12698,12 +15398,12 @@ position p;
 + IHTMLAttributeCollection3 *
 
 @script:python depends on report@
-p << r940.p;
+p << r1140.p;
 @@
 WARN(p[0], "IHTMLAttributeCollection3*", "LPHTMLATTRIBUTECOLLECTION3")
 
 
-@r941@
+@r1141@
 typedef IHTMLBodyElement;
 typedef PHTMLBODYELEMENT;
 position p;
@@ -12712,12 +15412,12 @@ position p;
 + IHTMLBodyElement *
 
 @script:python depends on report@
-p << r941.p;
+p << r1141.p;
 @@
 WARN(p[0], "IHTMLBodyElement*", "PHTMLBODYELEMENT")
 
 
-@r942@
+@r1142@
 typedef LPHTMLBODYELEMENT;
 position p;
 @@
@@ -12725,12 +15425,12 @@ position p;
 + IHTMLBodyElement *
 
 @script:python depends on report@
-p << r942.p;
+p << r1142.p;
 @@
 WARN(p[0], "IHTMLBodyElement*", "LPHTMLBODYELEMENT")
 
 
-@r943@
+@r1143@
 typedef IHTMLButtonElement;
 typedef PHTMLBUTTONELEMENT;
 position p;
@@ -12739,12 +15439,12 @@ position p;
 + IHTMLButtonElement *
 
 @script:python depends on report@
-p << r943.p;
+p << r1143.p;
 @@
 WARN(p[0], "IHTMLButtonElement*", "PHTMLBUTTONELEMENT")
 
 
-@r944@
+@r1144@
 typedef LPHTMLBUTTONELEMENT;
 position p;
 @@
@@ -12752,12 +15452,66 @@ position p;
 + IHTMLButtonElement *
 
 @script:python depends on report@
-p << r944.p;
+p << r1144.p;
 @@
 WARN(p[0], "IHTMLButtonElement*", "LPHTMLBUTTONELEMENT")
 
 
-@r945@
+@r1145@
+typedef IHTMLCSSStyleDeclaration;
+typedef PHTMLCSSSTYLEDECLARATION;
+position p;
+@@
+- PHTMLCSSSTYLEDECLARATION@p
++ IHTMLCSSStyleDeclaration *
+
+@script:python depends on report@
+p << r1145.p;
+@@
+WARN(p[0], "IHTMLCSSStyleDeclaration*", "PHTMLCSSSTYLEDECLARATION")
+
+
+@r1146@
+typedef LPHTMLCSSSTYLEDECLARATION;
+position p;
+@@
+- LPHTMLCSSSTYLEDECLARATION@p
++ IHTMLCSSStyleDeclaration *
+
+@script:python depends on report@
+p << r1146.p;
+@@
+WARN(p[0], "IHTMLCSSStyleDeclaration*", "LPHTMLCSSSTYLEDECLARATION")
+
+
+@r1147@
+typedef IHTMLCSSStyleDeclaration2;
+typedef PHTMLCSSSTYLEDECLARATION2;
+position p;
+@@
+- PHTMLCSSSTYLEDECLARATION2@p
++ IHTMLCSSStyleDeclaration2 *
+
+@script:python depends on report@
+p << r1147.p;
+@@
+WARN(p[0], "IHTMLCSSStyleDeclaration2*", "PHTMLCSSSTYLEDECLARATION2")
+
+
+@r1148@
+typedef LPHTMLCSSSTYLEDECLARATION2;
+position p;
+@@
+- LPHTMLCSSSTYLEDECLARATION2@p
++ IHTMLCSSStyleDeclaration2 *
+
+@script:python depends on report@
+p << r1148.p;
+@@
+WARN(p[0], "IHTMLCSSStyleDeclaration2*", "LPHTMLCSSSTYLEDECLARATION2")
+
+
+@r1149@
 typedef IHTMLCommentElement;
 typedef PHTMLCOMMENTELEMENT;
 position p;
@@ -12766,12 +15520,12 @@ position p;
 + IHTMLCommentElement *
 
 @script:python depends on report@
-p << r945.p;
+p << r1149.p;
 @@
 WARN(p[0], "IHTMLCommentElement*", "PHTMLCOMMENTELEMENT")
 
 
-@r946@
+@r1150@
 typedef LPHTMLCOMMENTELEMENT;
 position p;
 @@
@@ -12779,12 +15533,12 @@ position p;
 + IHTMLCommentElement *
 
 @script:python depends on report@
-p << r946.p;
+p << r1150.p;
 @@
 WARN(p[0], "IHTMLCommentElement*", "LPHTMLCOMMENTELEMENT")
 
 
-@r947@
+@r1151@
 typedef IHTMLCurrentStyle;
 typedef PHTMLCURRENTSTYLE;
 position p;
@@ -12793,12 +15547,12 @@ position p;
 + IHTMLCurrentStyle *
 
 @script:python depends on report@
-p << r947.p;
+p << r1151.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle*", "PHTMLCURRENTSTYLE")
 
 
-@r948@
+@r1152@
 typedef LPHTMLCURRENTSTYLE;
 position p;
 @@
@@ -12806,12 +15560,12 @@ position p;
 + IHTMLCurrentStyle *
 
 @script:python depends on report@
-p << r948.p;
+p << r1152.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle*", "LPHTMLCURRENTSTYLE")
 
 
-@r949@
+@r1153@
 typedef IHTMLCurrentStyle2;
 typedef PHTMLCURRENTSTYLE2;
 position p;
@@ -12820,12 +15574,12 @@ position p;
 + IHTMLCurrentStyle2 *
 
 @script:python depends on report@
-p << r949.p;
+p << r1153.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle2*", "PHTMLCURRENTSTYLE2")
 
 
-@r950@
+@r1154@
 typedef LPHTMLCURRENTSTYLE2;
 position p;
 @@
@@ -12833,12 +15587,12 @@ position p;
 + IHTMLCurrentStyle2 *
 
 @script:python depends on report@
-p << r950.p;
+p << r1154.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle2*", "LPHTMLCURRENTSTYLE2")
 
 
-@r951@
+@r1155@
 typedef IHTMLCurrentStyle3;
 typedef PHTMLCURRENTSTYLE3;
 position p;
@@ -12847,12 +15601,12 @@ position p;
 + IHTMLCurrentStyle3 *
 
 @script:python depends on report@
-p << r951.p;
+p << r1155.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle3*", "PHTMLCURRENTSTYLE3")
 
 
-@r952@
+@r1156@
 typedef LPHTMLCURRENTSTYLE3;
 position p;
 @@
@@ -12860,12 +15614,12 @@ position p;
 + IHTMLCurrentStyle3 *
 
 @script:python depends on report@
-p << r952.p;
+p << r1156.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle3*", "LPHTMLCURRENTSTYLE3")
 
 
-@r953@
+@r1157@
 typedef IHTMLCurrentStyle4;
 typedef PHTMLCURRENTSTYLE4;
 position p;
@@ -12874,12 +15628,12 @@ position p;
 + IHTMLCurrentStyle4 *
 
 @script:python depends on report@
-p << r953.p;
+p << r1157.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle4*", "PHTMLCURRENTSTYLE4")
 
 
-@r954@
+@r1158@
 typedef LPHTMLCURRENTSTYLE4;
 position p;
 @@
@@ -12887,12 +15641,12 @@ position p;
 + IHTMLCurrentStyle4 *
 
 @script:python depends on report@
-p << r954.p;
+p << r1158.p;
 @@
 WARN(p[0], "IHTMLCurrentStyle4*", "LPHTMLCURRENTSTYLE4")
 
 
-@r955@
+@r1159@
 typedef IHTMLDOMAttribute;
 typedef PHTMLDOMATTRIBUTE;
 position p;
@@ -12901,12 +15655,12 @@ position p;
 + IHTMLDOMAttribute *
 
 @script:python depends on report@
-p << r955.p;
+p << r1159.p;
 @@
 WARN(p[0], "IHTMLDOMAttribute*", "PHTMLDOMATTRIBUTE")
 
 
-@r956@
+@r1160@
 typedef LPHTMLDOMATTRIBUTE;
 position p;
 @@
@@ -12914,12 +15668,12 @@ position p;
 + IHTMLDOMAttribute *
 
 @script:python depends on report@
-p << r956.p;
+p << r1160.p;
 @@
 WARN(p[0], "IHTMLDOMAttribute*", "LPHTMLDOMATTRIBUTE")
 
 
-@r957@
+@r1161@
 typedef IHTMLDOMAttribute2;
 typedef PHTMLDOMATTRIBUTE2;
 position p;
@@ -12928,12 +15682,12 @@ position p;
 + IHTMLDOMAttribute2 *
 
 @script:python depends on report@
-p << r957.p;
+p << r1161.p;
 @@
 WARN(p[0], "IHTMLDOMAttribute2*", "PHTMLDOMATTRIBUTE2")
 
 
-@r958@
+@r1162@
 typedef LPHTMLDOMATTRIBUTE2;
 position p;
 @@
@@ -12941,12 +15695,12 @@ position p;
 + IHTMLDOMAttribute2 *
 
 @script:python depends on report@
-p << r958.p;
+p << r1162.p;
 @@
 WARN(p[0], "IHTMLDOMAttribute2*", "LPHTMLDOMATTRIBUTE2")
 
 
-@r959@
+@r1163@
 typedef IHTMLDOMChildrenCollection;
 typedef PHTMLDOMCHILDRENCOLLECTION;
 position p;
@@ -12955,12 +15709,12 @@ position p;
 + IHTMLDOMChildrenCollection *
 
 @script:python depends on report@
-p << r959.p;
+p << r1163.p;
 @@
 WARN(p[0], "IHTMLDOMChildrenCollection*", "PHTMLDOMCHILDRENCOLLECTION")
 
 
-@r960@
+@r1164@
 typedef LPHTMLDOMCHILDRENCOLLECTION;
 position p;
 @@
@@ -12968,12 +15722,12 @@ position p;
 + IHTMLDOMChildrenCollection *
 
 @script:python depends on report@
-p << r960.p;
+p << r1164.p;
 @@
 WARN(p[0], "IHTMLDOMChildrenCollection*", "LPHTMLDOMCHILDRENCOLLECTION")
 
 
-@r961@
+@r1165@
 typedef IHTMLDOMImplementation;
 typedef PHTMLDOMIMPLEMENTATION;
 position p;
@@ -12982,12 +15736,12 @@ position p;
 + IHTMLDOMImplementation *
 
 @script:python depends on report@
-p << r961.p;
+p << r1165.p;
 @@
 WARN(p[0], "IHTMLDOMImplementation*", "PHTMLDOMIMPLEMENTATION")
 
 
-@r962@
+@r1166@
 typedef LPHTMLDOMIMPLEMENTATION;
 position p;
 @@
@@ -12995,12 +15749,39 @@ position p;
 + IHTMLDOMImplementation *
 
 @script:python depends on report@
-p << r962.p;
+p << r1166.p;
 @@
 WARN(p[0], "IHTMLDOMImplementation*", "LPHTMLDOMIMPLEMENTATION")
 
 
-@r963@
+@r1167@
+typedef IHTMLDOMImplementation2;
+typedef PHTMLDOMIMPLEMENTATION2;
+position p;
+@@
+- PHTMLDOMIMPLEMENTATION2@p
++ IHTMLDOMImplementation2 *
+
+@script:python depends on report@
+p << r1167.p;
+@@
+WARN(p[0], "IHTMLDOMImplementation2*", "PHTMLDOMIMPLEMENTATION2")
+
+
+@r1168@
+typedef LPHTMLDOMIMPLEMENTATION2;
+position p;
+@@
+- LPHTMLDOMIMPLEMENTATION2@p
++ IHTMLDOMImplementation2 *
+
+@script:python depends on report@
+p << r1168.p;
+@@
+WARN(p[0], "IHTMLDOMImplementation2*", "LPHTMLDOMIMPLEMENTATION2")
+
+
+@r1169@
 typedef IHTMLDOMNode;
 typedef PHTMLDOMNODE;
 position p;
@@ -13009,12 +15790,12 @@ position p;
 + IHTMLDOMNode *
 
 @script:python depends on report@
-p << r963.p;
+p << r1169.p;
 @@
 WARN(p[0], "IHTMLDOMNode*", "PHTMLDOMNODE")
 
 
-@r964@
+@r1170@
 typedef LPHTMLDOMNODE;
 position p;
 @@
@@ -13022,12 +15803,12 @@ position p;
 + IHTMLDOMNode *
 
 @script:python depends on report@
-p << r964.p;
+p << r1170.p;
 @@
 WARN(p[0], "IHTMLDOMNode*", "LPHTMLDOMNODE")
 
 
-@r965@
+@r1171@
 typedef IHTMLDOMNode2;
 typedef PHTMLDOMNODE2;
 position p;
@@ -13036,12 +15817,12 @@ position p;
 + IHTMLDOMNode2 *
 
 @script:python depends on report@
-p << r965.p;
+p << r1171.p;
 @@
 WARN(p[0], "IHTMLDOMNode2*", "PHTMLDOMNODE2")
 
 
-@r966@
+@r1172@
 typedef LPHTMLDOMNODE2;
 position p;
 @@
@@ -13049,12 +15830,66 @@ position p;
 + IHTMLDOMNode2 *
 
 @script:python depends on report@
-p << r966.p;
+p << r1172.p;
 @@
 WARN(p[0], "IHTMLDOMNode2*", "LPHTMLDOMNODE2")
 
 
-@r967@
+@r1173@
+typedef IHTMLDOMNode3;
+typedef PHTMLDOMNODE3;
+position p;
+@@
+- PHTMLDOMNODE3@p
++ IHTMLDOMNode3 *
+
+@script:python depends on report@
+p << r1173.p;
+@@
+WARN(p[0], "IHTMLDOMNode3*", "PHTMLDOMNODE3")
+
+
+@r1174@
+typedef LPHTMLDOMNODE3;
+position p;
+@@
+- LPHTMLDOMNODE3@p
++ IHTMLDOMNode3 *
+
+@script:python depends on report@
+p << r1174.p;
+@@
+WARN(p[0], "IHTMLDOMNode3*", "LPHTMLDOMNODE3")
+
+
+@r1175@
+typedef IHTMLDOMRange;
+typedef PHTMLDOMRANGE;
+position p;
+@@
+- PHTMLDOMRANGE@p
++ IHTMLDOMRange *
+
+@script:python depends on report@
+p << r1175.p;
+@@
+WARN(p[0], "IHTMLDOMRange*", "PHTMLDOMRANGE")
+
+
+@r1176@
+typedef LPHTMLDOMRANGE;
+position p;
+@@
+- LPHTMLDOMRANGE@p
++ IHTMLDOMRange *
+
+@script:python depends on report@
+p << r1176.p;
+@@
+WARN(p[0], "IHTMLDOMRange*", "LPHTMLDOMRANGE")
+
+
+@r1177@
 typedef IHTMLDOMTextNode;
 typedef PHTMLDOMTEXTNODE;
 position p;
@@ -13063,12 +15898,12 @@ position p;
 + IHTMLDOMTextNode *
 
 @script:python depends on report@
-p << r967.p;
+p << r1177.p;
 @@
 WARN(p[0], "IHTMLDOMTextNode*", "PHTMLDOMTEXTNODE")
 
 
-@r968@
+@r1178@
 typedef LPHTMLDOMTEXTNODE;
 position p;
 @@
@@ -13076,12 +15911,12 @@ position p;
 + IHTMLDOMTextNode *
 
 @script:python depends on report@
-p << r968.p;
+p << r1178.p;
 @@
 WARN(p[0], "IHTMLDOMTextNode*", "LPHTMLDOMTEXTNODE")
 
 
-@r969@
+@r1179@
 typedef IHTMLDOMTextNode2;
 typedef PHTMLDOMTEXTNODE2;
 position p;
@@ -13090,12 +15925,12 @@ position p;
 + IHTMLDOMTextNode2 *
 
 @script:python depends on report@
-p << r969.p;
+p << r1179.p;
 @@
 WARN(p[0], "IHTMLDOMTextNode2*", "PHTMLDOMTEXTNODE2")
 
 
-@r970@
+@r1180@
 typedef LPHTMLDOMTEXTNODE2;
 position p;
 @@
@@ -13103,12 +15938,12 @@ position p;
 + IHTMLDOMTextNode2 *
 
 @script:python depends on report@
-p << r970.p;
+p << r1180.p;
 @@
 WARN(p[0], "IHTMLDOMTextNode2*", "LPHTMLDOMTEXTNODE2")
 
 
-@r971@
+@r1181@
 typedef IHTMLDocument2;
 typedef PHTMLDOCUMENT2;
 position p;
@@ -13117,12 +15952,12 @@ position p;
 + IHTMLDocument2 *
 
 @script:python depends on report@
-p << r971.p;
+p << r1181.p;
 @@
 WARN(p[0], "IHTMLDocument2*", "PHTMLDOCUMENT2")
 
 
-@r972@
+@r1182@
 typedef LPHTMLDOCUMENT2;
 position p;
 @@
@@ -13130,12 +15965,12 @@ position p;
 + IHTMLDocument2 *
 
 @script:python depends on report@
-p << r972.p;
+p << r1182.p;
 @@
 WARN(p[0], "IHTMLDocument2*", "LPHTMLDOCUMENT2")
 
 
-@r973@
+@r1183@
 typedef IHTMLDocument3;
 typedef PHTMLDOCUMENT3;
 position p;
@@ -13144,12 +15979,12 @@ position p;
 + IHTMLDocument3 *
 
 @script:python depends on report@
-p << r973.p;
+p << r1183.p;
 @@
 WARN(p[0], "IHTMLDocument3*", "PHTMLDOCUMENT3")
 
 
-@r974@
+@r1184@
 typedef LPHTMLDOCUMENT3;
 position p;
 @@
@@ -13157,12 +15992,12 @@ position p;
 + IHTMLDocument3 *
 
 @script:python depends on report@
-p << r974.p;
+p << r1184.p;
 @@
 WARN(p[0], "IHTMLDocument3*", "LPHTMLDOCUMENT3")
 
 
-@r975@
+@r1185@
 typedef IHTMLDocument4;
 typedef PHTMLDOCUMENT4;
 position p;
@@ -13171,12 +16006,12 @@ position p;
 + IHTMLDocument4 *
 
 @script:python depends on report@
-p << r975.p;
+p << r1185.p;
 @@
 WARN(p[0], "IHTMLDocument4*", "PHTMLDOCUMENT4")
 
 
-@r976@
+@r1186@
 typedef LPHTMLDOCUMENT4;
 position p;
 @@
@@ -13184,12 +16019,12 @@ position p;
 + IHTMLDocument4 *
 
 @script:python depends on report@
-p << r976.p;
+p << r1186.p;
 @@
 WARN(p[0], "IHTMLDocument4*", "LPHTMLDOCUMENT4")
 
 
-@r977@
+@r1187@
 typedef IHTMLDocument5;
 typedef PHTMLDOCUMENT5;
 position p;
@@ -13198,12 +16033,12 @@ position p;
 + IHTMLDocument5 *
 
 @script:python depends on report@
-p << r977.p;
+p << r1187.p;
 @@
 WARN(p[0], "IHTMLDocument5*", "PHTMLDOCUMENT5")
 
 
-@r978@
+@r1188@
 typedef LPHTMLDOCUMENT5;
 position p;
 @@
@@ -13211,12 +16046,12 @@ position p;
 + IHTMLDocument5 *
 
 @script:python depends on report@
-p << r978.p;
+p << r1188.p;
 @@
 WARN(p[0], "IHTMLDocument5*", "LPHTMLDOCUMENT5")
 
 
-@r979@
+@r1189@
 typedef IHTMLDocument6;
 typedef PHTMLDOCUMENT6;
 position p;
@@ -13225,12 +16060,12 @@ position p;
 + IHTMLDocument6 *
 
 @script:python depends on report@
-p << r979.p;
+p << r1189.p;
 @@
 WARN(p[0], "IHTMLDocument6*", "PHTMLDOCUMENT6")
 
 
-@r980@
+@r1190@
 typedef LPHTMLDOCUMENT6;
 position p;
 @@
@@ -13238,12 +16073,12 @@ position p;
 + IHTMLDocument6 *
 
 @script:python depends on report@
-p << r980.p;
+p << r1190.p;
 @@
 WARN(p[0], "IHTMLDocument6*", "LPHTMLDOCUMENT6")
 
 
-@r981@
+@r1191@
 typedef IHTMLDocument7;
 typedef PHTMLDOCUMENT7;
 position p;
@@ -13252,12 +16087,12 @@ position p;
 + IHTMLDocument7 *
 
 @script:python depends on report@
-p << r981.p;
+p << r1191.p;
 @@
 WARN(p[0], "IHTMLDocument7*", "PHTMLDOCUMENT7")
 
 
-@r982@
+@r1192@
 typedef LPHTMLDOCUMENT7;
 position p;
 @@
@@ -13265,12 +16100,12 @@ position p;
 + IHTMLDocument7 *
 
 @script:python depends on report@
-p << r982.p;
+p << r1192.p;
 @@
 WARN(p[0], "IHTMLDocument7*", "LPHTMLDOCUMENT7")
 
 
-@r983@
+@r1193@
 typedef IHTMLEditServices;
 typedef PHTMLEDITSERVICES;
 position p;
@@ -13279,12 +16114,12 @@ position p;
 + IHTMLEditServices *
 
 @script:python depends on report@
-p << r983.p;
+p << r1193.p;
 @@
 WARN(p[0], "IHTMLEditServices*", "PHTMLEDITSERVICES")
 
 
-@r984@
+@r1194@
 typedef LPHTMLEDITSERVICES;
 position p;
 @@
@@ -13292,12 +16127,12 @@ position p;
 + IHTMLEditServices *
 
 @script:python depends on report@
-p << r984.p;
+p << r1194.p;
 @@
 WARN(p[0], "IHTMLEditServices*", "LPHTMLEDITSERVICES")
 
 
-@r985@
+@r1195@
 typedef IHTMLElement;
 typedef PHTMLELEMENT;
 position p;
@@ -13306,12 +16141,12 @@ position p;
 + IHTMLElement *
 
 @script:python depends on report@
-p << r985.p;
+p << r1195.p;
 @@
 WARN(p[0], "IHTMLElement*", "PHTMLELEMENT")
 
 
-@r986@
+@r1196@
 typedef LPHTMLELEMENT;
 position p;
 @@
@@ -13319,12 +16154,12 @@ position p;
 + IHTMLElement *
 
 @script:python depends on report@
-p << r986.p;
+p << r1196.p;
 @@
 WARN(p[0], "IHTMLElement*", "LPHTMLELEMENT")
 
 
-@r987@
+@r1197@
 typedef IHTMLElement2;
 typedef PHTMLELEMENT2;
 position p;
@@ -13333,12 +16168,12 @@ position p;
 + IHTMLElement2 *
 
 @script:python depends on report@
-p << r987.p;
+p << r1197.p;
 @@
 WARN(p[0], "IHTMLElement2*", "PHTMLELEMENT2")
 
 
-@r988@
+@r1198@
 typedef LPHTMLELEMENT2;
 position p;
 @@
@@ -13346,12 +16181,12 @@ position p;
 + IHTMLElement2 *
 
 @script:python depends on report@
-p << r988.p;
+p << r1198.p;
 @@
 WARN(p[0], "IHTMLElement2*", "LPHTMLELEMENT2")
 
 
-@r989@
+@r1199@
 typedef IHTMLElement3;
 typedef PHTMLELEMENT3;
 position p;
@@ -13360,12 +16195,12 @@ position p;
 + IHTMLElement3 *
 
 @script:python depends on report@
-p << r989.p;
+p << r1199.p;
 @@
 WARN(p[0], "IHTMLElement3*", "PHTMLELEMENT3")
 
 
-@r990@
+@r1200@
 typedef LPHTMLELEMENT3;
 position p;
 @@
@@ -13373,12 +16208,12 @@ position p;
 + IHTMLElement3 *
 
 @script:python depends on report@
-p << r990.p;
+p << r1200.p;
 @@
 WARN(p[0], "IHTMLElement3*", "LPHTMLELEMENT3")
 
 
-@r991@
+@r1201@
 typedef IHTMLElement4;
 typedef PHTMLELEMENT4;
 position p;
@@ -13387,12 +16222,12 @@ position p;
 + IHTMLElement4 *
 
 @script:python depends on report@
-p << r991.p;
+p << r1201.p;
 @@
 WARN(p[0], "IHTMLElement4*", "PHTMLELEMENT4")
 
 
-@r992@
+@r1202@
 typedef LPHTMLELEMENT4;
 position p;
 @@
@@ -13400,12 +16235,12 @@ position p;
 + IHTMLElement4 *
 
 @script:python depends on report@
-p << r992.p;
+p << r1202.p;
 @@
 WARN(p[0], "IHTMLElement4*", "LPHTMLELEMENT4")
 
 
-@r993@
+@r1203@
 typedef IHTMLElement6;
 typedef PHTMLELEMENT6;
 position p;
@@ -13414,12 +16249,12 @@ position p;
 + IHTMLElement6 *
 
 @script:python depends on report@
-p << r993.p;
+p << r1203.p;
 @@
 WARN(p[0], "IHTMLElement6*", "PHTMLELEMENT6")
 
 
-@r994@
+@r1204@
 typedef LPHTMLELEMENT6;
 position p;
 @@
@@ -13427,12 +16262,39 @@ position p;
 + IHTMLElement6 *
 
 @script:python depends on report@
-p << r994.p;
+p << r1204.p;
 @@
 WARN(p[0], "IHTMLElement6*", "LPHTMLELEMENT6")
 
 
-@r995@
+@r1205@
+typedef IHTMLElement7;
+typedef PHTMLELEMENT7;
+position p;
+@@
+- PHTMLELEMENT7@p
++ IHTMLElement7 *
+
+@script:python depends on report@
+p << r1205.p;
+@@
+WARN(p[0], "IHTMLElement7*", "PHTMLELEMENT7")
+
+
+@r1206@
+typedef LPHTMLELEMENT7;
+position p;
+@@
+- LPHTMLELEMENT7@p
++ IHTMLElement7 *
+
+@script:python depends on report@
+p << r1206.p;
+@@
+WARN(p[0], "IHTMLElement7*", "LPHTMLELEMENT7")
+
+
+@r1207@
 typedef IHTMLElementCollection;
 typedef PHTMLELEMENTCOLLECTION;
 position p;
@@ -13441,12 +16303,12 @@ position p;
 + IHTMLElementCollection *
 
 @script:python depends on report@
-p << r995.p;
+p << r1207.p;
 @@
 WARN(p[0], "IHTMLElementCollection*", "PHTMLELEMENTCOLLECTION")
 
 
-@r996@
+@r1208@
 typedef LPHTMLELEMENTCOLLECTION;
 position p;
 @@
@@ -13454,12 +16316,12 @@ position p;
 + IHTMLElementCollection *
 
 @script:python depends on report@
-p << r996.p;
+p << r1208.p;
 @@
 WARN(p[0], "IHTMLElementCollection*", "LPHTMLELEMENTCOLLECTION")
 
 
-@r997@
+@r1209@
 typedef IHTMLEmbedElement;
 typedef PHTMLEMBEDELEMENT;
 position p;
@@ -13468,12 +16330,12 @@ position p;
 + IHTMLEmbedElement *
 
 @script:python depends on report@
-p << r997.p;
+p << r1209.p;
 @@
 WARN(p[0], "IHTMLEmbedElement*", "PHTMLEMBEDELEMENT")
 
 
-@r998@
+@r1210@
 typedef LPHTMLEMBEDELEMENT;
 position p;
 @@
@@ -13481,12 +16343,12 @@ position p;
 + IHTMLEmbedElement *
 
 @script:python depends on report@
-p << r998.p;
+p << r1210.p;
 @@
 WARN(p[0], "IHTMLEmbedElement*", "LPHTMLEMBEDELEMENT")
 
 
-@r999@
+@r1211@
 typedef IHTMLEventObj;
 typedef PHTMLEVENTOBJ;
 position p;
@@ -13495,12 +16357,12 @@ position p;
 + IHTMLEventObj *
 
 @script:python depends on report@
-p << r999.p;
+p << r1211.p;
 @@
 WARN(p[0], "IHTMLEventObj*", "PHTMLEVENTOBJ")
 
 
-@r1000@
+@r1212@
 typedef LPHTMLEVENTOBJ;
 position p;
 @@
@@ -13508,12 +16370,12 @@ position p;
 + IHTMLEventObj *
 
 @script:python depends on report@
-p << r1000.p;
+p << r1212.p;
 @@
 WARN(p[0], "IHTMLEventObj*", "LPHTMLEVENTOBJ")
 
 
-@r1001@
+@r1213@
 typedef IHTMLFiltersCollection;
 typedef PHTMLFILTERSCOLLECTION;
 position p;
@@ -13522,12 +16384,12 @@ position p;
 + IHTMLFiltersCollection *
 
 @script:python depends on report@
-p << r1001.p;
+p << r1213.p;
 @@
 WARN(p[0], "IHTMLFiltersCollection*", "PHTMLFILTERSCOLLECTION")
 
 
-@r1002@
+@r1214@
 typedef LPHTMLFILTERSCOLLECTION;
 position p;
 @@
@@ -13535,12 +16397,12 @@ position p;
 + IHTMLFiltersCollection *
 
 @script:python depends on report@
-p << r1002.p;
+p << r1214.p;
 @@
 WARN(p[0], "IHTMLFiltersCollection*", "LPHTMLFILTERSCOLLECTION")
 
 
-@r1003@
+@r1215@
 typedef IHTMLFormElement;
 typedef PHTMLFORMELEMENT;
 position p;
@@ -13549,12 +16411,12 @@ position p;
 + IHTMLFormElement *
 
 @script:python depends on report@
-p << r1003.p;
+p << r1215.p;
 @@
 WARN(p[0], "IHTMLFormElement*", "PHTMLFORMELEMENT")
 
 
-@r1004@
+@r1216@
 typedef LPHTMLFORMELEMENT;
 position p;
 @@
@@ -13562,12 +16424,12 @@ position p;
 + IHTMLFormElement *
 
 @script:python depends on report@
-p << r1004.p;
+p << r1216.p;
 @@
 WARN(p[0], "IHTMLFormElement*", "LPHTMLFORMELEMENT")
 
 
-@r1005@
+@r1217@
 typedef IHTMLFrameBase;
 typedef PHTMLFRAMEBASE;
 position p;
@@ -13576,12 +16438,12 @@ position p;
 + IHTMLFrameBase *
 
 @script:python depends on report@
-p << r1005.p;
+p << r1217.p;
 @@
 WARN(p[0], "IHTMLFrameBase*", "PHTMLFRAMEBASE")
 
 
-@r1006@
+@r1218@
 typedef LPHTMLFRAMEBASE;
 position p;
 @@
@@ -13589,12 +16451,12 @@ position p;
 + IHTMLFrameBase *
 
 @script:python depends on report@
-p << r1006.p;
+p << r1218.p;
 @@
 WARN(p[0], "IHTMLFrameBase*", "LPHTMLFRAMEBASE")
 
 
-@r1007@
+@r1219@
 typedef IHTMLFrameBase2;
 typedef PHTMLFRAMEBASE2;
 position p;
@@ -13603,12 +16465,12 @@ position p;
 + IHTMLFrameBase2 *
 
 @script:python depends on report@
-p << r1007.p;
+p << r1219.p;
 @@
 WARN(p[0], "IHTMLFrameBase2*", "PHTMLFRAMEBASE2")
 
 
-@r1008@
+@r1220@
 typedef LPHTMLFRAMEBASE2;
 position p;
 @@
@@ -13616,12 +16478,12 @@ position p;
 + IHTMLFrameBase2 *
 
 @script:python depends on report@
-p << r1008.p;
+p << r1220.p;
 @@
 WARN(p[0], "IHTMLFrameBase2*", "LPHTMLFRAMEBASE2")
 
 
-@r1009@
+@r1221@
 typedef IHTMLFrameElement3;
 typedef PHTMLFRAMEELEMENT3;
 position p;
@@ -13630,12 +16492,12 @@ position p;
 + IHTMLFrameElement3 *
 
 @script:python depends on report@
-p << r1009.p;
+p << r1221.p;
 @@
 WARN(p[0], "IHTMLFrameElement3*", "PHTMLFRAMEELEMENT3")
 
 
-@r1010@
+@r1222@
 typedef LPHTMLFRAMEELEMENT3;
 position p;
 @@
@@ -13643,12 +16505,12 @@ position p;
 + IHTMLFrameElement3 *
 
 @script:python depends on report@
-p << r1010.p;
+p << r1222.p;
 @@
 WARN(p[0], "IHTMLFrameElement3*", "LPHTMLFRAMEELEMENT3")
 
 
-@r1011@
+@r1223@
 typedef IHTMLGenericElement;
 typedef PHTMLGENERICELEMENT;
 position p;
@@ -13657,12 +16519,12 @@ position p;
 + IHTMLGenericElement *
 
 @script:python depends on report@
-p << r1011.p;
+p << r1223.p;
 @@
 WARN(p[0], "IHTMLGenericElement*", "PHTMLGENERICELEMENT")
 
 
-@r1012@
+@r1224@
 typedef LPHTMLGENERICELEMENT;
 position p;
 @@
@@ -13670,12 +16532,12 @@ position p;
 + IHTMLGenericElement *
 
 @script:python depends on report@
-p << r1012.p;
+p << r1224.p;
 @@
 WARN(p[0], "IHTMLGenericElement*", "LPHTMLGENERICELEMENT")
 
 
-@r1013@
+@r1225@
 typedef IHTMLHeadElement;
 typedef PHTMLHEADELEMENT;
 position p;
@@ -13684,12 +16546,12 @@ position p;
 + IHTMLHeadElement *
 
 @script:python depends on report@
-p << r1013.p;
+p << r1225.p;
 @@
 WARN(p[0], "IHTMLHeadElement*", "PHTMLHEADELEMENT")
 
 
-@r1014@
+@r1226@
 typedef LPHTMLHEADELEMENT;
 position p;
 @@
@@ -13697,12 +16559,12 @@ position p;
 + IHTMLHeadElement *
 
 @script:python depends on report@
-p << r1014.p;
+p << r1226.p;
 @@
 WARN(p[0], "IHTMLHeadElement*", "LPHTMLHEADELEMENT")
 
 
-@r1015@
+@r1227@
 typedef IHTMLHtmlElement;
 typedef PHTMLHTMLELEMENT;
 position p;
@@ -13711,12 +16573,12 @@ position p;
 + IHTMLHtmlElement *
 
 @script:python depends on report@
-p << r1015.p;
+p << r1227.p;
 @@
 WARN(p[0], "IHTMLHtmlElement*", "PHTMLHTMLELEMENT")
 
 
-@r1016@
+@r1228@
 typedef LPHTMLHTMLELEMENT;
 position p;
 @@
@@ -13724,12 +16586,12 @@ position p;
 + IHTMLHtmlElement *
 
 @script:python depends on report@
-p << r1016.p;
+p << r1228.p;
 @@
 WARN(p[0], "IHTMLHtmlElement*", "LPHTMLHTMLELEMENT")
 
 
-@r1017@
+@r1229@
 typedef IHTMLIFrameElement;
 typedef PHTMLIFRAMEELEMENT;
 position p;
@@ -13738,12 +16600,12 @@ position p;
 + IHTMLIFrameElement *
 
 @script:python depends on report@
-p << r1017.p;
+p << r1229.p;
 @@
 WARN(p[0], "IHTMLIFrameElement*", "PHTMLIFRAMEELEMENT")
 
 
-@r1018@
+@r1230@
 typedef LPHTMLIFRAMEELEMENT;
 position p;
 @@
@@ -13751,12 +16613,12 @@ position p;
 + IHTMLIFrameElement *
 
 @script:python depends on report@
-p << r1018.p;
+p << r1230.p;
 @@
 WARN(p[0], "IHTMLIFrameElement*", "LPHTMLIFRAMEELEMENT")
 
 
-@r1019@
+@r1231@
 typedef IHTMLIFrameElement2;
 typedef PHTMLIFRAMEELEMENT2;
 position p;
@@ -13765,12 +16627,12 @@ position p;
 + IHTMLIFrameElement2 *
 
 @script:python depends on report@
-p << r1019.p;
+p << r1231.p;
 @@
 WARN(p[0], "IHTMLIFrameElement2*", "PHTMLIFRAMEELEMENT2")
 
 
-@r1020@
+@r1232@
 typedef LPHTMLIFRAMEELEMENT2;
 position p;
 @@
@@ -13778,12 +16640,12 @@ position p;
 + IHTMLIFrameElement2 *
 
 @script:python depends on report@
-p << r1020.p;
+p << r1232.p;
 @@
 WARN(p[0], "IHTMLIFrameElement2*", "LPHTMLIFRAMEELEMENT2")
 
 
-@r1021@
+@r1233@
 typedef IHTMLIFrameElement3;
 typedef PHTMLIFRAMEELEMENT3;
 position p;
@@ -13792,12 +16654,12 @@ position p;
 + IHTMLIFrameElement3 *
 
 @script:python depends on report@
-p << r1021.p;
+p << r1233.p;
 @@
 WARN(p[0], "IHTMLIFrameElement3*", "PHTMLIFRAMEELEMENT3")
 
 
-@r1022@
+@r1234@
 typedef LPHTMLIFRAMEELEMENT3;
 position p;
 @@
@@ -13805,12 +16667,12 @@ position p;
 + IHTMLIFrameElement3 *
 
 @script:python depends on report@
-p << r1022.p;
+p << r1234.p;
 @@
 WARN(p[0], "IHTMLIFrameElement3*", "LPHTMLIFRAMEELEMENT3")
 
 
-@r1023@
+@r1235@
 typedef IHTMLImageElementFactory;
 typedef PHTMLIMAGEELEMENTFACTORY;
 position p;
@@ -13819,12 +16681,12 @@ position p;
 + IHTMLImageElementFactory *
 
 @script:python depends on report@
-p << r1023.p;
+p << r1235.p;
 @@
 WARN(p[0], "IHTMLImageElementFactory*", "PHTMLIMAGEELEMENTFACTORY")
 
 
-@r1024@
+@r1236@
 typedef LPHTMLIMAGEELEMENTFACTORY;
 position p;
 @@
@@ -13832,12 +16694,12 @@ position p;
 + IHTMLImageElementFactory *
 
 @script:python depends on report@
-p << r1024.p;
+p << r1236.p;
 @@
 WARN(p[0], "IHTMLImageElementFactory*", "LPHTMLIMAGEELEMENTFACTORY")
 
 
-@r1025@
+@r1237@
 typedef IHTMLImgElement;
 typedef PHTMLIMGELEMENT;
 position p;
@@ -13846,12 +16708,12 @@ position p;
 + IHTMLImgElement *
 
 @script:python depends on report@
-p << r1025.p;
+p << r1237.p;
 @@
 WARN(p[0], "IHTMLImgElement*", "PHTMLIMGELEMENT")
 
 
-@r1026@
+@r1238@
 typedef LPHTMLIMGELEMENT;
 position p;
 @@
@@ -13859,12 +16721,12 @@ position p;
 + IHTMLImgElement *
 
 @script:python depends on report@
-p << r1026.p;
+p << r1238.p;
 @@
 WARN(p[0], "IHTMLImgElement*", "LPHTMLIMGELEMENT")
 
 
-@r1027@
+@r1239@
 typedef IHTMLInputElement;
 typedef PHTMLINPUTELEMENT;
 position p;
@@ -13873,12 +16735,12 @@ position p;
 + IHTMLInputElement *
 
 @script:python depends on report@
-p << r1027.p;
+p << r1239.p;
 @@
 WARN(p[0], "IHTMLInputElement*", "PHTMLINPUTELEMENT")
 
 
-@r1028@
+@r1240@
 typedef LPHTMLINPUTELEMENT;
 position p;
 @@
@@ -13886,12 +16748,12 @@ position p;
 + IHTMLInputElement *
 
 @script:python depends on report@
-p << r1028.p;
+p << r1240.p;
 @@
 WARN(p[0], "IHTMLInputElement*", "LPHTMLINPUTELEMENT")
 
 
-@r1029@
+@r1241@
 typedef IHTMLInputTextElement;
 typedef PHTMLINPUTTEXTELEMENT;
 position p;
@@ -13900,12 +16762,12 @@ position p;
 + IHTMLInputTextElement *
 
 @script:python depends on report@
-p << r1029.p;
+p << r1241.p;
 @@
 WARN(p[0], "IHTMLInputTextElement*", "PHTMLINPUTTEXTELEMENT")
 
 
-@r1030@
+@r1242@
 typedef LPHTMLINPUTTEXTELEMENT;
 position p;
 @@
@@ -13913,12 +16775,39 @@ position p;
 + IHTMLInputTextElement *
 
 @script:python depends on report@
-p << r1030.p;
+p << r1242.p;
 @@
 WARN(p[0], "IHTMLInputTextElement*", "LPHTMLINPUTTEXTELEMENT")
 
 
-@r1031@
+@r1243@
+typedef IHTMLInputTextElement2;
+typedef PHTMLINPUTTEXTELEMENT2;
+position p;
+@@
+- PHTMLINPUTTEXTELEMENT2@p
++ IHTMLInputTextElement2 *
+
+@script:python depends on report@
+p << r1243.p;
+@@
+WARN(p[0], "IHTMLInputTextElement2*", "PHTMLINPUTTEXTELEMENT2")
+
+
+@r1244@
+typedef LPHTMLINPUTTEXTELEMENT2;
+position p;
+@@
+- LPHTMLINPUTTEXTELEMENT2@p
++ IHTMLInputTextElement2 *
+
+@script:python depends on report@
+p << r1244.p;
+@@
+WARN(p[0], "IHTMLInputTextElement2*", "LPHTMLINPUTTEXTELEMENT2")
+
+
+@r1245@
 typedef IHTMLLabelElement;
 typedef PHTMLLABELELEMENT;
 position p;
@@ -13927,12 +16816,12 @@ position p;
 + IHTMLLabelElement *
 
 @script:python depends on report@
-p << r1031.p;
+p << r1245.p;
 @@
 WARN(p[0], "IHTMLLabelElement*", "PHTMLLABELELEMENT")
 
 
-@r1032@
+@r1246@
 typedef LPHTMLLABELELEMENT;
 position p;
 @@
@@ -13940,12 +16829,12 @@ position p;
 + IHTMLLabelElement *
 
 @script:python depends on report@
-p << r1032.p;
+p << r1246.p;
 @@
 WARN(p[0], "IHTMLLabelElement*", "LPHTMLLABELELEMENT")
 
 
-@r1033@
+@r1247@
 typedef IHTMLLinkElement;
 typedef PHTMLLINKELEMENT;
 position p;
@@ -13954,12 +16843,12 @@ position p;
 + IHTMLLinkElement *
 
 @script:python depends on report@
-p << r1033.p;
+p << r1247.p;
 @@
 WARN(p[0], "IHTMLLinkElement*", "PHTMLLINKELEMENT")
 
 
-@r1034@
+@r1248@
 typedef LPHTMLLINKELEMENT;
 position p;
 @@
@@ -13967,12 +16856,12 @@ position p;
 + IHTMLLinkElement *
 
 @script:python depends on report@
-p << r1034.p;
+p << r1248.p;
 @@
 WARN(p[0], "IHTMLLinkElement*", "LPHTMLLINKELEMENT")
 
 
-@r1035@
+@r1249@
 typedef IHTMLLocation;
 typedef PHTMLLOCATION;
 position p;
@@ -13981,12 +16870,12 @@ position p;
 + IHTMLLocation *
 
 @script:python depends on report@
-p << r1035.p;
+p << r1249.p;
 @@
 WARN(p[0], "IHTMLLocation*", "PHTMLLOCATION")
 
 
-@r1036@
+@r1250@
 typedef LPHTMLLOCATION;
 position p;
 @@
@@ -13994,12 +16883,12 @@ position p;
 + IHTMLLocation *
 
 @script:python depends on report@
-p << r1036.p;
+p << r1250.p;
 @@
 WARN(p[0], "IHTMLLocation*", "LPHTMLLOCATION")
 
 
-@r1037@
+@r1251@
 typedef IHTMLMetaElement;
 typedef PHTMLMETAELEMENT;
 position p;
@@ -14008,12 +16897,12 @@ position p;
 + IHTMLMetaElement *
 
 @script:python depends on report@
-p << r1037.p;
+p << r1251.p;
 @@
 WARN(p[0], "IHTMLMetaElement*", "PHTMLMETAELEMENT")
 
 
-@r1038@
+@r1252@
 typedef LPHTMLMETAELEMENT;
 position p;
 @@
@@ -14021,12 +16910,12 @@ position p;
 + IHTMLMetaElement *
 
 @script:python depends on report@
-p << r1038.p;
+p << r1252.p;
 @@
 WARN(p[0], "IHTMLMetaElement*", "LPHTMLMETAELEMENT")
 
 
-@r1039@
+@r1253@
 typedef IHTMLMimeTypesCollection;
 typedef PHTMLMIMETYPESCOLLECTION;
 position p;
@@ -14035,12 +16924,12 @@ position p;
 + IHTMLMimeTypesCollection *
 
 @script:python depends on report@
-p << r1039.p;
+p << r1253.p;
 @@
 WARN(p[0], "IHTMLMimeTypesCollection*", "PHTMLMIMETYPESCOLLECTION")
 
 
-@r1040@
+@r1254@
 typedef LPHTMLMIMETYPESCOLLECTION;
 position p;
 @@
@@ -14048,12 +16937,39 @@ position p;
 + IHTMLMimeTypesCollection *
 
 @script:python depends on report@
-p << r1040.p;
+p << r1254.p;
 @@
 WARN(p[0], "IHTMLMimeTypesCollection*", "LPHTMLMIMETYPESCOLLECTION")
 
 
-@r1041@
+@r1255@
+typedef IHTMLNamespaceCollection;
+typedef PHTMLNAMESPACECOLLECTION;
+position p;
+@@
+- PHTMLNAMESPACECOLLECTION@p
++ IHTMLNamespaceCollection *
+
+@script:python depends on report@
+p << r1255.p;
+@@
+WARN(p[0], "IHTMLNamespaceCollection*", "PHTMLNAMESPACECOLLECTION")
+
+
+@r1256@
+typedef LPHTMLNAMESPACECOLLECTION;
+position p;
+@@
+- LPHTMLNAMESPACECOLLECTION@p
++ IHTMLNamespaceCollection *
+
+@script:python depends on report@
+p << r1256.p;
+@@
+WARN(p[0], "IHTMLNamespaceCollection*", "LPHTMLNAMESPACECOLLECTION")
+
+
+@r1257@
 typedef IHTMLObjectElement;
 typedef PHTMLOBJECTELEMENT;
 position p;
@@ -14062,12 +16978,12 @@ position p;
 + IHTMLObjectElement *
 
 @script:python depends on report@
-p << r1041.p;
+p << r1257.p;
 @@
 WARN(p[0], "IHTMLObjectElement*", "PHTMLOBJECTELEMENT")
 
 
-@r1042@
+@r1258@
 typedef LPHTMLOBJECTELEMENT;
 position p;
 @@
@@ -14075,12 +16991,12 @@ position p;
 + IHTMLObjectElement *
 
 @script:python depends on report@
-p << r1042.p;
+p << r1258.p;
 @@
 WARN(p[0], "IHTMLObjectElement*", "LPHTMLOBJECTELEMENT")
 
 
-@r1043@
+@r1259@
 typedef IHTMLObjectElement2;
 typedef PHTMLOBJECTELEMENT2;
 position p;
@@ -14089,12 +17005,12 @@ position p;
 + IHTMLObjectElement2 *
 
 @script:python depends on report@
-p << r1043.p;
+p << r1259.p;
 @@
 WARN(p[0], "IHTMLObjectElement2*", "PHTMLOBJECTELEMENT2")
 
 
-@r1044@
+@r1260@
 typedef LPHTMLOBJECTELEMENT2;
 position p;
 @@
@@ -14102,12 +17018,12 @@ position p;
 + IHTMLObjectElement2 *
 
 @script:python depends on report@
-p << r1044.p;
+p << r1260.p;
 @@
 WARN(p[0], "IHTMLObjectElement2*", "LPHTMLOBJECTELEMENT2")
 
 
-@r1045@
+@r1261@
 typedef IHTMLOptionElement;
 typedef PHTMLOPTIONELEMENT;
 position p;
@@ -14116,12 +17032,12 @@ position p;
 + IHTMLOptionElement *
 
 @script:python depends on report@
-p << r1045.p;
+p << r1261.p;
 @@
 WARN(p[0], "IHTMLOptionElement*", "PHTMLOPTIONELEMENT")
 
 
-@r1046@
+@r1262@
 typedef LPHTMLOPTIONELEMENT;
 position p;
 @@
@@ -14129,12 +17045,12 @@ position p;
 + IHTMLOptionElement *
 
 @script:python depends on report@
-p << r1046.p;
+p << r1262.p;
 @@
 WARN(p[0], "IHTMLOptionElement*", "LPHTMLOPTIONELEMENT")
 
 
-@r1047@
+@r1263@
 typedef IHTMLOptionElementFactory;
 typedef PHTMLOPTIONELEMENTFACTORY;
 position p;
@@ -14143,12 +17059,12 @@ position p;
 + IHTMLOptionElementFactory *
 
 @script:python depends on report@
-p << r1047.p;
+p << r1263.p;
 @@
 WARN(p[0], "IHTMLOptionElementFactory*", "PHTMLOPTIONELEMENTFACTORY")
 
 
-@r1048@
+@r1264@
 typedef LPHTMLOPTIONELEMENTFACTORY;
 position p;
 @@
@@ -14156,12 +17072,93 @@ position p;
 + IHTMLOptionElementFactory *
 
 @script:python depends on report@
-p << r1048.p;
+p << r1264.p;
 @@
 WARN(p[0], "IHTMLOptionElementFactory*", "LPHTMLOPTIONELEMENTFACTORY")
 
 
-@r1049@
+@r1265@
+typedef IHTMLPerformance;
+typedef PHTMLPERFORMANCE;
+position p;
+@@
+- PHTMLPERFORMANCE@p
++ IHTMLPerformance *
+
+@script:python depends on report@
+p << r1265.p;
+@@
+WARN(p[0], "IHTMLPerformance*", "PHTMLPERFORMANCE")
+
+
+@r1266@
+typedef LPHTMLPERFORMANCE;
+position p;
+@@
+- LPHTMLPERFORMANCE@p
++ IHTMLPerformance *
+
+@script:python depends on report@
+p << r1266.p;
+@@
+WARN(p[0], "IHTMLPerformance*", "LPHTMLPERFORMANCE")
+
+
+@r1267@
+typedef IHTMLPerformanceNavigation;
+typedef PHTMLPERFORMANCENAVIGATION;
+position p;
+@@
+- PHTMLPERFORMANCENAVIGATION@p
++ IHTMLPerformanceNavigation *
+
+@script:python depends on report@
+p << r1267.p;
+@@
+WARN(p[0], "IHTMLPerformanceNavigation*", "PHTMLPERFORMANCENAVIGATION")
+
+
+@r1268@
+typedef LPHTMLPERFORMANCENAVIGATION;
+position p;
+@@
+- LPHTMLPERFORMANCENAVIGATION@p
++ IHTMLPerformanceNavigation *
+
+@script:python depends on report@
+p << r1268.p;
+@@
+WARN(p[0], "IHTMLPerformanceNavigation*", "LPHTMLPERFORMANCENAVIGATION")
+
+
+@r1269@
+typedef IHTMLPerformanceTiming;
+typedef PHTMLPERFORMANCETIMING;
+position p;
+@@
+- PHTMLPERFORMANCETIMING@p
++ IHTMLPerformanceTiming *
+
+@script:python depends on report@
+p << r1269.p;
+@@
+WARN(p[0], "IHTMLPerformanceTiming*", "PHTMLPERFORMANCETIMING")
+
+
+@r1270@
+typedef LPHTMLPERFORMANCETIMING;
+position p;
+@@
+- LPHTMLPERFORMANCETIMING@p
++ IHTMLPerformanceTiming *
+
+@script:python depends on report@
+p << r1270.p;
+@@
+WARN(p[0], "IHTMLPerformanceTiming*", "LPHTMLPERFORMANCETIMING")
+
+
+@r1271@
 typedef IHTMLPluginsCollection;
 typedef PHTMLPLUGINSCOLLECTION;
 position p;
@@ -14170,12 +17167,12 @@ position p;
 + IHTMLPluginsCollection *
 
 @script:python depends on report@
-p << r1049.p;
+p << r1271.p;
 @@
 WARN(p[0], "IHTMLPluginsCollection*", "PHTMLPLUGINSCOLLECTION")
 
 
-@r1050@
+@r1272@
 typedef LPHTMLPLUGINSCOLLECTION;
 position p;
 @@
@@ -14183,12 +17180,12 @@ position p;
 + IHTMLPluginsCollection *
 
 @script:python depends on report@
-p << r1050.p;
+p << r1272.p;
 @@
 WARN(p[0], "IHTMLPluginsCollection*", "LPHTMLPLUGINSCOLLECTION")
 
 
-@r1051@
+@r1273@
 typedef IHTMLPrivateWindow;
 typedef PHTMLPRIVATEWINDOW;
 position p;
@@ -14197,12 +17194,12 @@ position p;
 + IHTMLPrivateWindow *
 
 @script:python depends on report@
-p << r1051.p;
+p << r1273.p;
 @@
 WARN(p[0], "IHTMLPrivateWindow*", "PHTMLPRIVATEWINDOW")
 
 
-@r1052@
+@r1274@
 typedef LPHTMLPRIVATEWINDOW;
 position p;
 @@
@@ -14210,12 +17207,12 @@ position p;
 + IHTMLPrivateWindow *
 
 @script:python depends on report@
-p << r1052.p;
+p << r1274.p;
 @@
 WARN(p[0], "IHTMLPrivateWindow*", "LPHTMLPRIVATEWINDOW")
 
 
-@r1053@
+@r1275@
 typedef IHTMLRect;
 typedef PHTMLRECT;
 position p;
@@ -14224,12 +17221,12 @@ position p;
 + IHTMLRect *
 
 @script:python depends on report@
-p << r1053.p;
+p << r1275.p;
 @@
 WARN(p[0], "IHTMLRect*", "PHTMLRECT")
 
 
-@r1054@
+@r1276@
 typedef LPHTMLRECT;
 position p;
 @@
@@ -14237,12 +17234,39 @@ position p;
 + IHTMLRect *
 
 @script:python depends on report@
-p << r1054.p;
+p << r1276.p;
 @@
 WARN(p[0], "IHTMLRect*", "LPHTMLRECT")
 
 
-@r1055@
+@r1277@
+typedef IHTMLRectCollection;
+typedef PHTMLRECTCOLLECTION;
+position p;
+@@
+- PHTMLRECTCOLLECTION@p
++ IHTMLRectCollection *
+
+@script:python depends on report@
+p << r1277.p;
+@@
+WARN(p[0], "IHTMLRectCollection*", "PHTMLRECTCOLLECTION")
+
+
+@r1278@
+typedef LPHTMLRECTCOLLECTION;
+position p;
+@@
+- LPHTMLRECTCOLLECTION@p
++ IHTMLRectCollection *
+
+@script:python depends on report@
+p << r1278.p;
+@@
+WARN(p[0], "IHTMLRectCollection*", "LPHTMLRECTCOLLECTION")
+
+
+@r1279@
 typedef IHTMLScreen;
 typedef PHTMLSCREEN;
 position p;
@@ -14251,12 +17275,12 @@ position p;
 + IHTMLScreen *
 
 @script:python depends on report@
-p << r1055.p;
+p << r1279.p;
 @@
 WARN(p[0], "IHTMLScreen*", "PHTMLSCREEN")
 
 
-@r1056@
+@r1280@
 typedef LPHTMLSCREEN;
 position p;
 @@
@@ -14264,12 +17288,12 @@ position p;
 + IHTMLScreen *
 
 @script:python depends on report@
-p << r1056.p;
+p << r1280.p;
 @@
 WARN(p[0], "IHTMLScreen*", "LPHTMLSCREEN")
 
 
-@r1057@
+@r1281@
 typedef IHTMLScriptElement;
 typedef PHTMLSCRIPTELEMENT;
 position p;
@@ -14278,12 +17302,12 @@ position p;
 + IHTMLScriptElement *
 
 @script:python depends on report@
-p << r1057.p;
+p << r1281.p;
 @@
 WARN(p[0], "IHTMLScriptElement*", "PHTMLSCRIPTELEMENT")
 
 
-@r1058@
+@r1282@
 typedef LPHTMLSCRIPTELEMENT;
 position p;
 @@
@@ -14291,12 +17315,12 @@ position p;
 + IHTMLScriptElement *
 
 @script:python depends on report@
-p << r1058.p;
+p << r1282.p;
 @@
 WARN(p[0], "IHTMLScriptElement*", "LPHTMLSCRIPTELEMENT")
 
 
-@r1059@
+@r1283@
 typedef IHTMLSelectElement;
 typedef PHTMLSELECTELEMENT;
 position p;
@@ -14305,12 +17329,12 @@ position p;
 + IHTMLSelectElement *
 
 @script:python depends on report@
-p << r1059.p;
+p << r1283.p;
 @@
 WARN(p[0], "IHTMLSelectElement*", "PHTMLSELECTELEMENT")
 
 
-@r1060@
+@r1284@
 typedef LPHTMLSELECTELEMENT;
 position p;
 @@
@@ -14318,12 +17342,12 @@ position p;
 + IHTMLSelectElement *
 
 @script:python depends on report@
-p << r1060.p;
+p << r1284.p;
 @@
 WARN(p[0], "IHTMLSelectElement*", "LPHTMLSELECTELEMENT")
 
 
-@r1061@
+@r1285@
 typedef IHTMLSelectionObject;
 typedef PHTMLSELECTIONOBJECT;
 position p;
@@ -14332,12 +17356,12 @@ position p;
 + IHTMLSelectionObject *
 
 @script:python depends on report@
-p << r1061.p;
+p << r1285.p;
 @@
 WARN(p[0], "IHTMLSelectionObject*", "PHTMLSELECTIONOBJECT")
 
 
-@r1062@
+@r1286@
 typedef LPHTMLSELECTIONOBJECT;
 position p;
 @@
@@ -14345,12 +17369,12 @@ position p;
 + IHTMLSelectionObject *
 
 @script:python depends on report@
-p << r1062.p;
+p << r1286.p;
 @@
 WARN(p[0], "IHTMLSelectionObject*", "LPHTMLSELECTIONOBJECT")
 
 
-@r1063@
+@r1287@
 typedef IHTMLSelectionObject2;
 typedef PHTMLSELECTIONOBJECT2;
 position p;
@@ -14359,12 +17383,12 @@ position p;
 + IHTMLSelectionObject2 *
 
 @script:python depends on report@
-p << r1063.p;
+p << r1287.p;
 @@
 WARN(p[0], "IHTMLSelectionObject2*", "PHTMLSELECTIONOBJECT2")
 
 
-@r1064@
+@r1288@
 typedef LPHTMLSELECTIONOBJECT2;
 position p;
 @@
@@ -14372,12 +17396,12 @@ position p;
 + IHTMLSelectionObject2 *
 
 @script:python depends on report@
-p << r1064.p;
+p << r1288.p;
 @@
 WARN(p[0], "IHTMLSelectionObject2*", "LPHTMLSELECTIONOBJECT2")
 
 
-@r1065@
+@r1289@
 typedef IHTMLStorage;
 typedef PHTMLSTORAGE;
 position p;
@@ -14386,12 +17410,12 @@ position p;
 + IHTMLStorage *
 
 @script:python depends on report@
-p << r1065.p;
+p << r1289.p;
 @@
 WARN(p[0], "IHTMLStorage*", "PHTMLSTORAGE")
 
 
-@r1066@
+@r1290@
 typedef LPHTMLSTORAGE;
 position p;
 @@
@@ -14399,12 +17423,12 @@ position p;
 + IHTMLStorage *
 
 @script:python depends on report@
-p << r1066.p;
+p << r1290.p;
 @@
 WARN(p[0], "IHTMLStorage*", "LPHTMLSTORAGE")
 
 
-@r1067@
+@r1291@
 typedef IHTMLStyle;
 typedef PHTMLSTYLE;
 position p;
@@ -14413,12 +17437,12 @@ position p;
 + IHTMLStyle *
 
 @script:python depends on report@
-p << r1067.p;
+p << r1291.p;
 @@
 WARN(p[0], "IHTMLStyle*", "PHTMLSTYLE")
 
 
-@r1068@
+@r1292@
 typedef LPHTMLSTYLE;
 position p;
 @@
@@ -14426,12 +17450,12 @@ position p;
 + IHTMLStyle *
 
 @script:python depends on report@
-p << r1068.p;
+p << r1292.p;
 @@
 WARN(p[0], "IHTMLStyle*", "LPHTMLSTYLE")
 
 
-@r1069@
+@r1293@
 typedef IHTMLStyle2;
 typedef PHTMLSTYLE2;
 position p;
@@ -14440,12 +17464,12 @@ position p;
 + IHTMLStyle2 *
 
 @script:python depends on report@
-p << r1069.p;
+p << r1293.p;
 @@
 WARN(p[0], "IHTMLStyle2*", "PHTMLSTYLE2")
 
 
-@r1070@
+@r1294@
 typedef LPHTMLSTYLE2;
 position p;
 @@
@@ -14453,12 +17477,12 @@ position p;
 + IHTMLStyle2 *
 
 @script:python depends on report@
-p << r1070.p;
+p << r1294.p;
 @@
 WARN(p[0], "IHTMLStyle2*", "LPHTMLSTYLE2")
 
 
-@r1071@
+@r1295@
 typedef IHTMLStyle3;
 typedef PHTMLSTYLE3;
 position p;
@@ -14467,12 +17491,12 @@ position p;
 + IHTMLStyle3 *
 
 @script:python depends on report@
-p << r1071.p;
+p << r1295.p;
 @@
 WARN(p[0], "IHTMLStyle3*", "PHTMLSTYLE3")
 
 
-@r1072@
+@r1296@
 typedef LPHTMLSTYLE3;
 position p;
 @@
@@ -14480,12 +17504,12 @@ position p;
 + IHTMLStyle3 *
 
 @script:python depends on report@
-p << r1072.p;
+p << r1296.p;
 @@
 WARN(p[0], "IHTMLStyle3*", "LPHTMLSTYLE3")
 
 
-@r1073@
+@r1297@
 typedef IHTMLStyle4;
 typedef PHTMLSTYLE4;
 position p;
@@ -14494,12 +17518,12 @@ position p;
 + IHTMLStyle4 *
 
 @script:python depends on report@
-p << r1073.p;
+p << r1297.p;
 @@
 WARN(p[0], "IHTMLStyle4*", "PHTMLSTYLE4")
 
 
-@r1074@
+@r1298@
 typedef LPHTMLSTYLE4;
 position p;
 @@
@@ -14507,12 +17531,12 @@ position p;
 + IHTMLStyle4 *
 
 @script:python depends on report@
-p << r1074.p;
+p << r1298.p;
 @@
 WARN(p[0], "IHTMLStyle4*", "LPHTMLSTYLE4")
 
 
-@r1075@
+@r1299@
 typedef IHTMLStyle5;
 typedef PHTMLSTYLE5;
 position p;
@@ -14521,12 +17545,12 @@ position p;
 + IHTMLStyle5 *
 
 @script:python depends on report@
-p << r1075.p;
+p << r1299.p;
 @@
 WARN(p[0], "IHTMLStyle5*", "PHTMLSTYLE5")
 
 
-@r1076@
+@r1300@
 typedef LPHTMLSTYLE5;
 position p;
 @@
@@ -14534,12 +17558,12 @@ position p;
 + IHTMLStyle5 *
 
 @script:python depends on report@
-p << r1076.p;
+p << r1300.p;
 @@
 WARN(p[0], "IHTMLStyle5*", "LPHTMLSTYLE5")
 
 
-@r1077@
+@r1301@
 typedef IHTMLStyle6;
 typedef PHTMLSTYLE6;
 position p;
@@ -14548,12 +17572,12 @@ position p;
 + IHTMLStyle6 *
 
 @script:python depends on report@
-p << r1077.p;
+p << r1301.p;
 @@
 WARN(p[0], "IHTMLStyle6*", "PHTMLSTYLE6")
 
 
-@r1078@
+@r1302@
 typedef LPHTMLSTYLE6;
 position p;
 @@
@@ -14561,12 +17585,12 @@ position p;
 + IHTMLStyle6 *
 
 @script:python depends on report@
-p << r1078.p;
+p << r1302.p;
 @@
 WARN(p[0], "IHTMLStyle6*", "LPHTMLSTYLE6")
 
 
-@r1079@
+@r1303@
 typedef IHTMLStyleElement;
 typedef PHTMLSTYLEELEMENT;
 position p;
@@ -14575,12 +17599,12 @@ position p;
 + IHTMLStyleElement *
 
 @script:python depends on report@
-p << r1079.p;
+p << r1303.p;
 @@
 WARN(p[0], "IHTMLStyleElement*", "PHTMLSTYLEELEMENT")
 
 
-@r1080@
+@r1304@
 typedef LPHTMLSTYLEELEMENT;
 position p;
 @@
@@ -14588,12 +17612,39 @@ position p;
 + IHTMLStyleElement *
 
 @script:python depends on report@
-p << r1080.p;
+p << r1304.p;
 @@
 WARN(p[0], "IHTMLStyleElement*", "LPHTMLSTYLEELEMENT")
 
 
-@r1081@
+@r1305@
+typedef IHTMLStyleElement2;
+typedef PHTMLSTYLEELEMENT2;
+position p;
+@@
+- PHTMLSTYLEELEMENT2@p
++ IHTMLStyleElement2 *
+
+@script:python depends on report@
+p << r1305.p;
+@@
+WARN(p[0], "IHTMLStyleElement2*", "PHTMLSTYLEELEMENT2")
+
+
+@r1306@
+typedef LPHTMLSTYLEELEMENT2;
+position p;
+@@
+- LPHTMLSTYLEELEMENT2@p
++ IHTMLStyleElement2 *
+
+@script:python depends on report@
+p << r1306.p;
+@@
+WARN(p[0], "IHTMLStyleElement2*", "LPHTMLSTYLEELEMENT2")
+
+
+@r1307@
 typedef IHTMLStyleSheet;
 typedef PHTMLSTYLESHEET;
 position p;
@@ -14602,12 +17653,12 @@ position p;
 + IHTMLStyleSheet *
 
 @script:python depends on report@
-p << r1081.p;
+p << r1307.p;
 @@
 WARN(p[0], "IHTMLStyleSheet*", "PHTMLSTYLESHEET")
 
 
-@r1082@
+@r1308@
 typedef LPHTMLSTYLESHEET;
 position p;
 @@
@@ -14615,12 +17666,66 @@ position p;
 + IHTMLStyleSheet *
 
 @script:python depends on report@
-p << r1082.p;
+p << r1308.p;
 @@
 WARN(p[0], "IHTMLStyleSheet*", "LPHTMLSTYLESHEET")
 
 
-@r1083@
+@r1309@
+typedef IHTMLStyleSheet4;
+typedef PHTMLSTYLESHEET4;
+position p;
+@@
+- PHTMLSTYLESHEET4@p
++ IHTMLStyleSheet4 *
+
+@script:python depends on report@
+p << r1309.p;
+@@
+WARN(p[0], "IHTMLStyleSheet4*", "PHTMLSTYLESHEET4")
+
+
+@r1310@
+typedef LPHTMLSTYLESHEET4;
+position p;
+@@
+- LPHTMLSTYLESHEET4@p
++ IHTMLStyleSheet4 *
+
+@script:python depends on report@
+p << r1310.p;
+@@
+WARN(p[0], "IHTMLStyleSheet4*", "LPHTMLSTYLESHEET4")
+
+
+@r1311@
+typedef IHTMLStyleSheetRule;
+typedef PHTMLSTYLESHEETRULE;
+position p;
+@@
+- PHTMLSTYLESHEETRULE@p
++ IHTMLStyleSheetRule *
+
+@script:python depends on report@
+p << r1311.p;
+@@
+WARN(p[0], "IHTMLStyleSheetRule*", "PHTMLSTYLESHEETRULE")
+
+
+@r1312@
+typedef LPHTMLSTYLESHEETRULE;
+position p;
+@@
+- LPHTMLSTYLESHEETRULE@p
++ IHTMLStyleSheetRule *
+
+@script:python depends on report@
+p << r1312.p;
+@@
+WARN(p[0], "IHTMLStyleSheetRule*", "LPHTMLSTYLESHEETRULE")
+
+
+@r1313@
 typedef IHTMLStyleSheetRulesCollection;
 typedef PHTMLSTYLESHEETRULESCOLLECTION;
 position p;
@@ -14629,12 +17734,12 @@ position p;
 + IHTMLStyleSheetRulesCollection *
 
 @script:python depends on report@
-p << r1083.p;
+p << r1313.p;
 @@
 WARN(p[0], "IHTMLStyleSheetRulesCollection*", "PHTMLSTYLESHEETRULESCOLLECTION")
 
 
-@r1084@
+@r1314@
 typedef LPHTMLSTYLESHEETRULESCOLLECTION;
 position p;
 @@
@@ -14642,12 +17747,12 @@ position p;
 + IHTMLStyleSheetRulesCollection *
 
 @script:python depends on report@
-p << r1084.p;
+p << r1314.p;
 @@
 WARN(p[0], "IHTMLStyleSheetRulesCollection*", "LPHTMLSTYLESHEETRULESCOLLECTION")
 
 
-@r1085@
+@r1315@
 typedef IHTMLStyleSheetsCollection;
 typedef PHTMLSTYLESHEETSCOLLECTION;
 position p;
@@ -14656,12 +17761,12 @@ position p;
 + IHTMLStyleSheetsCollection *
 
 @script:python depends on report@
-p << r1085.p;
+p << r1315.p;
 @@
 WARN(p[0], "IHTMLStyleSheetsCollection*", "PHTMLSTYLESHEETSCOLLECTION")
 
 
-@r1086@
+@r1316@
 typedef LPHTMLSTYLESHEETSCOLLECTION;
 position p;
 @@
@@ -14669,12 +17774,12 @@ position p;
 + IHTMLStyleSheetsCollection *
 
 @script:python depends on report@
-p << r1086.p;
+p << r1316.p;
 @@
 WARN(p[0], "IHTMLStyleSheetsCollection*", "LPHTMLSTYLESHEETSCOLLECTION")
 
 
-@r1087@
+@r1317@
 typedef IHTMLTable;
 typedef PHTMLTABLE;
 position p;
@@ -14683,12 +17788,12 @@ position p;
 + IHTMLTable *
 
 @script:python depends on report@
-p << r1087.p;
+p << r1317.p;
 @@
 WARN(p[0], "IHTMLTable*", "PHTMLTABLE")
 
 
-@r1088@
+@r1318@
 typedef LPHTMLTABLE;
 position p;
 @@
@@ -14696,12 +17801,12 @@ position p;
 + IHTMLTable *
 
 @script:python depends on report@
-p << r1088.p;
+p << r1318.p;
 @@
 WARN(p[0], "IHTMLTable*", "LPHTMLTABLE")
 
 
-@r1089@
+@r1319@
 typedef IHTMLTable2;
 typedef PHTMLTABLE2;
 position p;
@@ -14710,12 +17815,12 @@ position p;
 + IHTMLTable2 *
 
 @script:python depends on report@
-p << r1089.p;
+p << r1319.p;
 @@
 WARN(p[0], "IHTMLTable2*", "PHTMLTABLE2")
 
 
-@r1090@
+@r1320@
 typedef LPHTMLTABLE2;
 position p;
 @@
@@ -14723,12 +17828,12 @@ position p;
 + IHTMLTable2 *
 
 @script:python depends on report@
-p << r1090.p;
+p << r1320.p;
 @@
 WARN(p[0], "IHTMLTable2*", "LPHTMLTABLE2")
 
 
-@r1091@
+@r1321@
 typedef IHTMLTable3;
 typedef PHTMLTABLE3;
 position p;
@@ -14737,12 +17842,12 @@ position p;
 + IHTMLTable3 *
 
 @script:python depends on report@
-p << r1091.p;
+p << r1321.p;
 @@
 WARN(p[0], "IHTMLTable3*", "PHTMLTABLE3")
 
 
-@r1092@
+@r1322@
 typedef LPHTMLTABLE3;
 position p;
 @@
@@ -14750,12 +17855,12 @@ position p;
 + IHTMLTable3 *
 
 @script:python depends on report@
-p << r1092.p;
+p << r1322.p;
 @@
 WARN(p[0], "IHTMLTable3*", "LPHTMLTABLE3")
 
 
-@r1093@
+@r1323@
 typedef IHTMLTableCell;
 typedef PHTMLTABLECELL;
 position p;
@@ -14764,12 +17869,12 @@ position p;
 + IHTMLTableCell *
 
 @script:python depends on report@
-p << r1093.p;
+p << r1323.p;
 @@
 WARN(p[0], "IHTMLTableCell*", "PHTMLTABLECELL")
 
 
-@r1094@
+@r1324@
 typedef LPHTMLTABLECELL;
 position p;
 @@
@@ -14777,12 +17882,12 @@ position p;
 + IHTMLTableCell *
 
 @script:python depends on report@
-p << r1094.p;
+p << r1324.p;
 @@
 WARN(p[0], "IHTMLTableCell*", "LPHTMLTABLECELL")
 
 
-@r1095@
+@r1325@
 typedef IHTMLTableRow;
 typedef PHTMLTABLEROW;
 position p;
@@ -14791,12 +17896,12 @@ position p;
 + IHTMLTableRow *
 
 @script:python depends on report@
-p << r1095.p;
+p << r1325.p;
 @@
 WARN(p[0], "IHTMLTableRow*", "PHTMLTABLEROW")
 
 
-@r1096@
+@r1326@
 typedef LPHTMLTABLEROW;
 position p;
 @@
@@ -14804,12 +17909,12 @@ position p;
 + IHTMLTableRow *
 
 @script:python depends on report@
-p << r1096.p;
+p << r1326.p;
 @@
 WARN(p[0], "IHTMLTableRow*", "LPHTMLTABLEROW")
 
 
-@r1097@
+@r1327@
 typedef IHTMLTextAreaElement;
 typedef PHTMLTEXTAREAELEMENT;
 position p;
@@ -14818,12 +17923,12 @@ position p;
 + IHTMLTextAreaElement *
 
 @script:python depends on report@
-p << r1097.p;
+p << r1327.p;
 @@
 WARN(p[0], "IHTMLTextAreaElement*", "PHTMLTEXTAREAELEMENT")
 
 
-@r1098@
+@r1328@
 typedef LPHTMLTEXTAREAELEMENT;
 position p;
 @@
@@ -14831,12 +17936,12 @@ position p;
 + IHTMLTextAreaElement *
 
 @script:python depends on report@
-p << r1098.p;
+p << r1328.p;
 @@
 WARN(p[0], "IHTMLTextAreaElement*", "LPHTMLTEXTAREAELEMENT")
 
 
-@r1099@
+@r1329@
 typedef IHTMLTextContainer;
 typedef PHTMLTEXTCONTAINER;
 position p;
@@ -14845,12 +17950,12 @@ position p;
 + IHTMLTextContainer *
 
 @script:python depends on report@
-p << r1099.p;
+p << r1329.p;
 @@
 WARN(p[0], "IHTMLTextContainer*", "PHTMLTEXTCONTAINER")
 
 
-@r1100@
+@r1330@
 typedef LPHTMLTEXTCONTAINER;
 position p;
 @@
@@ -14858,12 +17963,12 @@ position p;
 + IHTMLTextContainer *
 
 @script:python depends on report@
-p << r1100.p;
+p << r1330.p;
 @@
 WARN(p[0], "IHTMLTextContainer*", "LPHTMLTEXTCONTAINER")
 
 
-@r1101@
+@r1331@
 typedef IHTMLTitleElement;
 typedef PHTMLTITLEELEMENT;
 position p;
@@ -14872,12 +17977,12 @@ position p;
 + IHTMLTitleElement *
 
 @script:python depends on report@
-p << r1101.p;
+p << r1331.p;
 @@
 WARN(p[0], "IHTMLTitleElement*", "PHTMLTITLEELEMENT")
 
 
-@r1102@
+@r1332@
 typedef LPHTMLTITLEELEMENT;
 position p;
 @@
@@ -14885,12 +17990,12 @@ position p;
 + IHTMLTitleElement *
 
 @script:python depends on report@
-p << r1102.p;
+p << r1332.p;
 @@
 WARN(p[0], "IHTMLTitleElement*", "LPHTMLTITLEELEMENT")
 
 
-@r1103@
+@r1333@
 typedef IHTMLTxtRange;
 typedef PHTMLTXTRANGE;
 position p;
@@ -14899,12 +18004,12 @@ position p;
 + IHTMLTxtRange *
 
 @script:python depends on report@
-p << r1103.p;
+p << r1333.p;
 @@
 WARN(p[0], "IHTMLTxtRange*", "PHTMLTXTRANGE")
 
 
-@r1104@
+@r1334@
 typedef LPHTMLTXTRANGE;
 position p;
 @@
@@ -14912,12 +18017,12 @@ position p;
 + IHTMLTxtRange *
 
 @script:python depends on report@
-p << r1104.p;
+p << r1334.p;
 @@
 WARN(p[0], "IHTMLTxtRange*", "LPHTMLTXTRANGE")
 
 
-@r1105@
+@r1335@
 typedef IHTMLUniqueName;
 typedef PHTMLUNIQUENAME;
 position p;
@@ -14926,12 +18031,12 @@ position p;
 + IHTMLUniqueName *
 
 @script:python depends on report@
-p << r1105.p;
+p << r1335.p;
 @@
 WARN(p[0], "IHTMLUniqueName*", "PHTMLUNIQUENAME")
 
 
-@r1106@
+@r1336@
 typedef LPHTMLUNIQUENAME;
 position p;
 @@
@@ -14939,12 +18044,12 @@ position p;
 + IHTMLUniqueName *
 
 @script:python depends on report@
-p << r1106.p;
+p << r1336.p;
 @@
 WARN(p[0], "IHTMLUniqueName*", "LPHTMLUNIQUENAME")
 
 
-@r1107@
+@r1337@
 typedef IHTMLWindow2;
 typedef PHTMLWINDOW2;
 position p;
@@ -14953,12 +18058,12 @@ position p;
 + IHTMLWindow2 *
 
 @script:python depends on report@
-p << r1107.p;
+p << r1337.p;
 @@
 WARN(p[0], "IHTMLWindow2*", "PHTMLWINDOW2")
 
 
-@r1108@
+@r1338@
 typedef LPHTMLWINDOW2;
 position p;
 @@
@@ -14966,12 +18071,12 @@ position p;
 + IHTMLWindow2 *
 
 @script:python depends on report@
-p << r1108.p;
+p << r1338.p;
 @@
 WARN(p[0], "IHTMLWindow2*", "LPHTMLWINDOW2")
 
 
-@r1109@
+@r1339@
 typedef IHTMLWindow3;
 typedef PHTMLWINDOW3;
 position p;
@@ -14980,12 +18085,12 @@ position p;
 + IHTMLWindow3 *
 
 @script:python depends on report@
-p << r1109.p;
+p << r1339.p;
 @@
 WARN(p[0], "IHTMLWindow3*", "PHTMLWINDOW3")
 
 
-@r1110@
+@r1340@
 typedef LPHTMLWINDOW3;
 position p;
 @@
@@ -14993,12 +18098,12 @@ position p;
 + IHTMLWindow3 *
 
 @script:python depends on report@
-p << r1110.p;
+p << r1340.p;
 @@
 WARN(p[0], "IHTMLWindow3*", "LPHTMLWINDOW3")
 
 
-@r1111@
+@r1341@
 typedef IHTMLWindow4;
 typedef PHTMLWINDOW4;
 position p;
@@ -15007,12 +18112,12 @@ position p;
 + IHTMLWindow4 *
 
 @script:python depends on report@
-p << r1111.p;
+p << r1341.p;
 @@
 WARN(p[0], "IHTMLWindow4*", "PHTMLWINDOW4")
 
 
-@r1112@
+@r1342@
 typedef LPHTMLWINDOW4;
 position p;
 @@
@@ -15020,12 +18125,12 @@ position p;
 + IHTMLWindow4 *
 
 @script:python depends on report@
-p << r1112.p;
+p << r1342.p;
 @@
 WARN(p[0], "IHTMLWindow4*", "LPHTMLWINDOW4")
 
 
-@r1113@
+@r1343@
 typedef IHTMLWindow5;
 typedef PHTMLWINDOW5;
 position p;
@@ -15034,12 +18139,12 @@ position p;
 + IHTMLWindow5 *
 
 @script:python depends on report@
-p << r1113.p;
+p << r1343.p;
 @@
 WARN(p[0], "IHTMLWindow5*", "PHTMLWINDOW5")
 
 
-@r1114@
+@r1344@
 typedef LPHTMLWINDOW5;
 position p;
 @@
@@ -15047,12 +18152,12 @@ position p;
 + IHTMLWindow5 *
 
 @script:python depends on report@
-p << r1114.p;
+p << r1344.p;
 @@
 WARN(p[0], "IHTMLWindow5*", "LPHTMLWINDOW5")
 
 
-@r1115@
+@r1345@
 typedef IHTMLWindow6;
 typedef PHTMLWINDOW6;
 position p;
@@ -15061,12 +18166,12 @@ position p;
 + IHTMLWindow6 *
 
 @script:python depends on report@
-p << r1115.p;
+p << r1345.p;
 @@
 WARN(p[0], "IHTMLWindow6*", "PHTMLWINDOW6")
 
 
-@r1116@
+@r1346@
 typedef LPHTMLWINDOW6;
 position p;
 @@
@@ -15074,12 +18179,39 @@ position p;
 + IHTMLWindow6 *
 
 @script:python depends on report@
-p << r1116.p;
+p << r1346.p;
 @@
 WARN(p[0], "IHTMLWindow6*", "LPHTMLWINDOW6")
 
 
-@r1117@
+@r1347@
+typedef IHTMLWindow7;
+typedef PHTMLWINDOW7;
+position p;
+@@
+- PHTMLWINDOW7@p
++ IHTMLWindow7 *
+
+@script:python depends on report@
+p << r1347.p;
+@@
+WARN(p[0], "IHTMLWindow7*", "PHTMLWINDOW7")
+
+
+@r1348@
+typedef LPHTMLWINDOW7;
+position p;
+@@
+- LPHTMLWINDOW7@p
++ IHTMLWindow7 *
+
+@script:python depends on report@
+p << r1348.p;
+@@
+WARN(p[0], "IHTMLWindow7*", "LPHTMLWINDOW7")
+
+
+@r1349@
 typedef IHTMLXMLHttpRequest;
 typedef PHTMLXMLHTTPREQUEST;
 position p;
@@ -15088,12 +18220,12 @@ position p;
 + IHTMLXMLHttpRequest *
 
 @script:python depends on report@
-p << r1117.p;
+p << r1349.p;
 @@
 WARN(p[0], "IHTMLXMLHttpRequest*", "PHTMLXMLHTTPREQUEST")
 
 
-@r1118@
+@r1350@
 typedef LPHTMLXMLHTTPREQUEST;
 position p;
 @@
@@ -15101,12 +18233,12 @@ position p;
 + IHTMLXMLHttpRequest *
 
 @script:python depends on report@
-p << r1118.p;
+p << r1350.p;
 @@
 WARN(p[0], "IHTMLXMLHttpRequest*", "LPHTMLXMLHTTPREQUEST")
 
 
-@r1119@
+@r1351@
 typedef IHTMLXMLHttpRequestFactory;
 typedef PHTMLXMLHTTPREQUESTFACTORY;
 position p;
@@ -15115,12 +18247,12 @@ position p;
 + IHTMLXMLHttpRequestFactory *
 
 @script:python depends on report@
-p << r1119.p;
+p << r1351.p;
 @@
 WARN(p[0], "IHTMLXMLHttpRequestFactory*", "PHTMLXMLHTTPREQUESTFACTORY")
 
 
-@r1120@
+@r1352@
 typedef LPHTMLXMLHTTPREQUESTFACTORY;
 position p;
 @@
@@ -15128,12 +18260,12 @@ position p;
 + IHTMLXMLHttpRequestFactory *
 
 @script:python depends on report@
-p << r1120.p;
+p << r1352.p;
 @@
 WARN(p[0], "IHTMLXMLHttpRequestFactory*", "LPHTMLXMLHTTPREQUESTFACTORY")
 
 
-@r1121@
+@r1353@
 typedef IHlink;
 typedef PHLINK;
 position p;
@@ -15142,12 +18274,12 @@ position p;
 + IHlink *
 
 @script:python depends on report@
-p << r1121.p;
+p << r1353.p;
 @@
 WARN(p[0], "IHlink*", "PHLINK")
 
 
-@r1122@
+@r1354@
 typedef LPHLINK;
 position p;
 @@
@@ -15155,12 +18287,12 @@ position p;
 + IHlink *
 
 @script:python depends on report@
-p << r1122.p;
+p << r1354.p;
 @@
 WARN(p[0], "IHlink*", "LPHLINK")
 
 
-@r1123@
+@r1355@
 typedef IHlinkBrowseContext;
 typedef PHLINKBROWSECONTEXT;
 position p;
@@ -15169,12 +18301,12 @@ position p;
 + IHlinkBrowseContext *
 
 @script:python depends on report@
-p << r1123.p;
+p << r1355.p;
 @@
 WARN(p[0], "IHlinkBrowseContext*", "PHLINKBROWSECONTEXT")
 
 
-@r1124@
+@r1356@
 typedef LPHLINKBROWSECONTEXT;
 position p;
 @@
@@ -15182,12 +18314,12 @@ position p;
 + IHlinkBrowseContext *
 
 @script:python depends on report@
-p << r1124.p;
+p << r1356.p;
 @@
 WARN(p[0], "IHlinkBrowseContext*", "LPHLINKBROWSECONTEXT")
 
 
-@r1125@
+@r1357@
 typedef IHlinkFrame;
 typedef PHLINKFRAME;
 position p;
@@ -15196,12 +18328,12 @@ position p;
 + IHlinkFrame *
 
 @script:python depends on report@
-p << r1125.p;
+p << r1357.p;
 @@
 WARN(p[0], "IHlinkFrame*", "PHLINKFRAME")
 
 
-@r1126@
+@r1358@
 typedef LPHLINKFRAME;
 position p;
 @@
@@ -15209,12 +18341,12 @@ position p;
 + IHlinkFrame *
 
 @script:python depends on report@
-p << r1126.p;
+p << r1358.p;
 @@
 WARN(p[0], "IHlinkFrame*", "LPHLINKFRAME")
 
 
-@r1127@
+@r1359@
 typedef IHlinkTarget;
 typedef PHLINKTARGET;
 position p;
@@ -15223,12 +18355,12 @@ position p;
 + IHlinkTarget *
 
 @script:python depends on report@
-p << r1127.p;
+p << r1359.p;
 @@
 WARN(p[0], "IHlinkTarget*", "PHLINKTARGET")
 
 
-@r1128@
+@r1360@
 typedef LPHLINKTARGET;
 position p;
 @@
@@ -15236,12 +18368,39 @@ position p;
 + IHlinkTarget *
 
 @script:python depends on report@
-p << r1128.p;
+p << r1360.p;
 @@
 WARN(p[0], "IHlinkTarget*", "LPHLINKTARGET")
 
 
-@r1129@
+@r1361@
+typedef IHolder;
+typedef PHOLDER;
+position p;
+@@
+- PHOLDER@p
++ IHolder *
+
+@script:python depends on report@
+p << r1361.p;
+@@
+WARN(p[0], "IHolder*", "PHOLDER")
+
+
+@r1362@
+typedef LPHOLDER;
+position p;
+@@
+- LPHOLDER@p
++ IHolder *
+
+@script:python depends on report@
+p << r1362.p;
+@@
+WARN(p[0], "IHolder*", "LPHOLDER")
+
+
+@r1363@
 typedef IHtmlLoadOptions;
 typedef PHTMLLOADOPTIONS;
 position p;
@@ -15250,12 +18409,12 @@ position p;
 + IHtmlLoadOptions *
 
 @script:python depends on report@
-p << r1129.p;
+p << r1363.p;
 @@
 WARN(p[0], "IHtmlLoadOptions*", "PHTMLLOADOPTIONS")
 
 
-@r1130@
+@r1364@
 typedef LPHTMLLOADOPTIONS;
 position p;
 @@
@@ -15263,12 +18422,12 @@ position p;
 + IHtmlLoadOptions *
 
 @script:python depends on report@
-p << r1130.p;
+p << r1364.p;
 @@
 WARN(p[0], "IHtmlLoadOptions*", "LPHTMLLOADOPTIONS")
 
 
-@r1131@
+@r1365@
 typedef IHttpNegotiate;
 typedef PHTTPNEGOTIATE;
 position p;
@@ -15277,12 +18436,12 @@ position p;
 + IHttpNegotiate *
 
 @script:python depends on report@
-p << r1131.p;
+p << r1365.p;
 @@
 WARN(p[0], "IHttpNegotiate*", "PHTTPNEGOTIATE")
 
 
-@r1132@
+@r1366@
 typedef LPHTTPNEGOTIATE;
 position p;
 @@
@@ -15290,12 +18449,12 @@ position p;
 + IHttpNegotiate *
 
 @script:python depends on report@
-p << r1132.p;
+p << r1366.p;
 @@
 WARN(p[0], "IHttpNegotiate*", "LPHTTPNEGOTIATE")
 
 
-@r1133@
+@r1367@
 typedef IHttpNegotiate2;
 typedef PHTTPNEGOTIATE2;
 position p;
@@ -15304,12 +18463,12 @@ position p;
 + IHttpNegotiate2 *
 
 @script:python depends on report@
-p << r1133.p;
+p << r1367.p;
 @@
 WARN(p[0], "IHttpNegotiate2*", "PHTTPNEGOTIATE2")
 
 
-@r1134@
+@r1368@
 typedef LPHTTPNEGOTIATE2;
 position p;
 @@
@@ -15317,12 +18476,12 @@ position p;
 + IHttpNegotiate2 *
 
 @script:python depends on report@
-p << r1134.p;
+p << r1368.p;
 @@
 WARN(p[0], "IHttpNegotiate2*", "LPHTTPNEGOTIATE2")
 
 
-@r1135@
+@r1369@
 typedef IHttpSecurity;
 typedef PHTTPSECURITY;
 position p;
@@ -15331,12 +18490,12 @@ position p;
 + IHttpSecurity *
 
 @script:python depends on report@
-p << r1135.p;
+p << r1369.p;
 @@
 WARN(p[0], "IHttpSecurity*", "PHTTPSECURITY")
 
 
-@r1136@
+@r1370@
 typedef LPHTTPSECURITY;
 position p;
 @@
@@ -15344,12 +18503,12 @@ position p;
 + IHttpSecurity *
 
 @script:python depends on report@
-p << r1136.p;
+p << r1370.p;
 @@
 WARN(p[0], "IHttpSecurity*", "LPHTTPSECURITY")
 
 
-@r1137@
+@r1371@
 typedef IITStorage;
 typedef PITSTORAGE;
 position p;
@@ -15358,12 +18517,12 @@ position p;
 + IITStorage *
 
 @script:python depends on report@
-p << r1137.p;
+p << r1371.p;
 @@
 WARN(p[0], "IITStorage*", "PITSTORAGE")
 
 
-@r1138@
+@r1372@
 typedef LPITSTORAGE;
 position p;
 @@
@@ -15371,12 +18530,12 @@ position p;
 + IITStorage *
 
 @script:python depends on report@
-p << r1138.p;
+p << r1372.p;
 @@
 WARN(p[0], "IITStorage*", "LPITSTORAGE")
 
 
-@r1139@
+@r1373@
 typedef IImageList2;
 typedef PIMAGELIST2;
 position p;
@@ -15385,12 +18544,12 @@ position p;
 + IImageList2 *
 
 @script:python depends on report@
-p << r1139.p;
+p << r1373.p;
 @@
 WARN(p[0], "IImageList2*", "PIMAGELIST2")
 
 
-@r1140@
+@r1374@
 typedef LPIMAGELIST2;
 position p;
 @@
@@ -15398,12 +18557,12 @@ position p;
 + IImageList2 *
 
 @script:python depends on report@
-p << r1140.p;
+p << r1374.p;
 @@
 WARN(p[0], "IImageList2*", "LPIMAGELIST2")
 
 
-@r1141@
+@r1375@
 typedef IInputObject;
 typedef PINPUTOBJECT;
 position p;
@@ -15412,12 +18571,12 @@ position p;
 + IInputObject *
 
 @script:python depends on report@
-p << r1141.p;
+p << r1375.p;
 @@
 WARN(p[0], "IInputObject*", "PINPUTOBJECT")
 
 
-@r1142@
+@r1376@
 typedef LPINPUTOBJECT;
 position p;
 @@
@@ -15425,12 +18584,12 @@ position p;
 + IInputObject *
 
 @script:python depends on report@
-p << r1142.p;
+p << r1376.p;
 @@
 WARN(p[0], "IInputObject*", "LPINPUTOBJECT")
 
 
-@r1143@
+@r1377@
 typedef IInstallEngine2;
 typedef PINSTALLENGINE2;
 position p;
@@ -15439,12 +18598,12 @@ position p;
 + IInstallEngine2 *
 
 @script:python depends on report@
-p << r1143.p;
+p << r1377.p;
 @@
 WARN(p[0], "IInstallEngine2*", "PINSTALLENGINE2")
 
 
-@r1144@
+@r1378@
 typedef LPINSTALLENGINE2;
 position p;
 @@
@@ -15452,12 +18611,39 @@ position p;
 + IInstallEngine2 *
 
 @script:python depends on report@
-p << r1144.p;
+p << r1378.p;
 @@
 WARN(p[0], "IInstallEngine2*", "LPINSTALLENGINE2")
 
 
-@r1145@
+@r1379@
+typedef IInstalledVoicesStatic;
+typedef PINSTALLEDVOICESSTATIC;
+position p;
+@@
+- PINSTALLEDVOICESSTATIC@p
++ IInstalledVoicesStatic *
+
+@script:python depends on report@
+p << r1379.p;
+@@
+WARN(p[0], "IInstalledVoicesStatic*", "PINSTALLEDVOICESSTATIC")
+
+
+@r1380@
+typedef LPINSTALLEDVOICESSTATIC;
+position p;
+@@
+- LPINSTALLEDVOICESSTATIC@p
++ IInstalledVoicesStatic *
+
+@script:python depends on report@
+p << r1380.p;
+@@
+WARN(p[0], "IInstalledVoicesStatic*", "LPINSTALLEDVOICESSTATIC")
+
+
+@r1381@
 typedef IInternetBindInfo;
 typedef PINTERNETBINDINFO;
 position p;
@@ -15466,12 +18652,12 @@ position p;
 + IInternetBindInfo *
 
 @script:python depends on report@
-p << r1145.p;
+p << r1381.p;
 @@
 WARN(p[0], "IInternetBindInfo*", "PINTERNETBINDINFO")
 
 
-@r1146@
+@r1382@
 typedef LPINTERNETBINDINFO;
 position p;
 @@
@@ -15479,12 +18665,39 @@ position p;
 + IInternetBindInfo *
 
 @script:python depends on report@
-p << r1146.p;
+p << r1382.p;
 @@
 WARN(p[0], "IInternetBindInfo*", "LPINTERNETBINDINFO")
 
 
-@r1147@
+@r1383@
+typedef IInternetExplorerManager;
+typedef PINTERNETEXPLORERMANAGER;
+position p;
+@@
+- PINTERNETEXPLORERMANAGER@p
++ IInternetExplorerManager *
+
+@script:python depends on report@
+p << r1383.p;
+@@
+WARN(p[0], "IInternetExplorerManager*", "PINTERNETEXPLORERMANAGER")
+
+
+@r1384@
+typedef LPINTERNETEXPLORERMANAGER;
+position p;
+@@
+- LPINTERNETEXPLORERMANAGER@p
++ IInternetExplorerManager *
+
+@script:python depends on report@
+p << r1384.p;
+@@
+WARN(p[0], "IInternetExplorerManager*", "LPINTERNETEXPLORERMANAGER")
+
+
+@r1385@
 typedef IInternetHostSecurityManager;
 typedef PINTERNETHOSTSECURITYMANAGER;
 position p;
@@ -15493,12 +18706,12 @@ position p;
 + IInternetHostSecurityManager *
 
 @script:python depends on report@
-p << r1147.p;
+p << r1385.p;
 @@
 WARN(p[0], "IInternetHostSecurityManager*", "PINTERNETHOSTSECURITYMANAGER")
 
 
-@r1148@
+@r1386@
 typedef LPINTERNETHOSTSECURITYMANAGER;
 position p;
 @@
@@ -15506,12 +18719,12 @@ position p;
 + IInternetHostSecurityManager *
 
 @script:python depends on report@
-p << r1148.p;
+p << r1386.p;
 @@
 WARN(p[0], "IInternetHostSecurityManager*", "LPINTERNETHOSTSECURITYMANAGER")
 
 
-@r1149@
+@r1387@
 typedef IInternetPriority;
 typedef PINTERNETPRIORITY;
 position p;
@@ -15520,12 +18733,12 @@ position p;
 + IInternetPriority *
 
 @script:python depends on report@
-p << r1149.p;
+p << r1387.p;
 @@
 WARN(p[0], "IInternetPriority*", "PINTERNETPRIORITY")
 
 
-@r1150@
+@r1388@
 typedef LPINTERNETPRIORITY;
 position p;
 @@
@@ -15533,12 +18746,12 @@ position p;
 + IInternetPriority *
 
 @script:python depends on report@
-p << r1150.p;
+p << r1388.p;
 @@
 WARN(p[0], "IInternetPriority*", "LPINTERNETPRIORITY")
 
 
-@r1151@
+@r1389@
 typedef IInternetProtocol;
 typedef PINTERNETPROTOCOL;
 position p;
@@ -15547,12 +18760,12 @@ position p;
 + IInternetProtocol *
 
 @script:python depends on report@
-p << r1151.p;
+p << r1389.p;
 @@
 WARN(p[0], "IInternetProtocol*", "PINTERNETPROTOCOL")
 
 
-@r1152@
+@r1390@
 typedef LPINTERNETPROTOCOL;
 position p;
 @@
@@ -15560,12 +18773,12 @@ position p;
 + IInternetProtocol *
 
 @script:python depends on report@
-p << r1152.p;
+p << r1390.p;
 @@
 WARN(p[0], "IInternetProtocol*", "LPINTERNETPROTOCOL")
 
 
-@r1153@
+@r1391@
 typedef IInternetProtocolEx;
 typedef PINTERNETPROTOCOLEX;
 position p;
@@ -15574,12 +18787,12 @@ position p;
 + IInternetProtocolEx *
 
 @script:python depends on report@
-p << r1153.p;
+p << r1391.p;
 @@
 WARN(p[0], "IInternetProtocolEx*", "PINTERNETPROTOCOLEX")
 
 
-@r1154@
+@r1392@
 typedef LPINTERNETPROTOCOLEX;
 position p;
 @@
@@ -15587,12 +18800,12 @@ position p;
 + IInternetProtocolEx *
 
 @script:python depends on report@
-p << r1154.p;
+p << r1392.p;
 @@
 WARN(p[0], "IInternetProtocolEx*", "LPINTERNETPROTOCOLEX")
 
 
-@r1155@
+@r1393@
 typedef IInternetProtocolInfo;
 typedef PINTERNETPROTOCOLINFO;
 position p;
@@ -15601,12 +18814,12 @@ position p;
 + IInternetProtocolInfo *
 
 @script:python depends on report@
-p << r1155.p;
+p << r1393.p;
 @@
 WARN(p[0], "IInternetProtocolInfo*", "PINTERNETPROTOCOLINFO")
 
 
-@r1156@
+@r1394@
 typedef LPINTERNETPROTOCOLINFO;
 position p;
 @@
@@ -15614,12 +18827,12 @@ position p;
 + IInternetProtocolInfo *
 
 @script:python depends on report@
-p << r1156.p;
+p << r1394.p;
 @@
 WARN(p[0], "IInternetProtocolInfo*", "LPINTERNETPROTOCOLINFO")
 
 
-@r1157@
+@r1395@
 typedef IInternetProtocolSink;
 typedef PINTERNETPROTOCOLSINK;
 position p;
@@ -15628,12 +18841,12 @@ position p;
 + IInternetProtocolSink *
 
 @script:python depends on report@
-p << r1157.p;
+p << r1395.p;
 @@
 WARN(p[0], "IInternetProtocolSink*", "PINTERNETPROTOCOLSINK")
 
 
-@r1158@
+@r1396@
 typedef LPINTERNETPROTOCOLSINK;
 position p;
 @@
@@ -15641,12 +18854,12 @@ position p;
 + IInternetProtocolSink *
 
 @script:python depends on report@
-p << r1158.p;
+p << r1396.p;
 @@
 WARN(p[0], "IInternetProtocolSink*", "LPINTERNETPROTOCOLSINK")
 
 
-@r1159@
+@r1397@
 typedef IInternetSecurityManagerEx2;
 typedef PINTERNETSECURITYMANAGEREX2;
 position p;
@@ -15655,12 +18868,12 @@ position p;
 + IInternetSecurityManagerEx2 *
 
 @script:python depends on report@
-p << r1159.p;
+p << r1397.p;
 @@
 WARN(p[0], "IInternetSecurityManagerEx2*", "PINTERNETSECURITYMANAGEREX2")
 
 
-@r1160@
+@r1398@
 typedef LPINTERNETSECURITYMANAGEREX2;
 position p;
 @@
@@ -15668,12 +18881,12 @@ position p;
 + IInternetSecurityManagerEx2 *
 
 @script:python depends on report@
-p << r1160.p;
+p << r1398.p;
 @@
 WARN(p[0], "IInternetSecurityManagerEx2*", "LPINTERNETSECURITYMANAGEREX2")
 
 
-@r1161@
+@r1399@
 typedef IInternetZoneManagerEx2;
 typedef PINTERNETZONEMANAGEREX2;
 position p;
@@ -15682,12 +18895,12 @@ position p;
 + IInternetZoneManagerEx2 *
 
 @script:python depends on report@
-p << r1161.p;
+p << r1399.p;
 @@
 WARN(p[0], "IInternetZoneManagerEx2*", "PINTERNETZONEMANAGEREX2")
 
 
-@r1162@
+@r1400@
 typedef LPINTERNETZONEMANAGEREX2;
 position p;
 @@
@@ -15695,12 +18908,12 @@ position p;
 + IInternetZoneManagerEx2 *
 
 @script:python depends on report@
-p << r1162.p;
+p << r1400.p;
 @@
 WARN(p[0], "IInternetZoneManagerEx2*", "LPINTERNETZONEMANAGEREX2")
 
 
-@r1163@
+@r1401@
 typedef IKindaEnumWidget;
 typedef PKINDAENUMWIDGET;
 position p;
@@ -15709,12 +18922,12 @@ position p;
 + IKindaEnumWidget *
 
 @script:python depends on report@
-p << r1163.p;
+p << r1401.p;
 @@
 WARN(p[0], "IKindaEnumWidget*", "PKINDAENUMWIDGET")
 
 
-@r1164@
+@r1402@
 typedef LPKINDAENUMWIDGET;
 position p;
 @@
@@ -15722,12 +18935,12 @@ position p;
 + IKindaEnumWidget *
 
 @script:python depends on report@
-p << r1164.p;
+p << r1402.p;
 @@
 WARN(p[0], "IKindaEnumWidget*", "LPKINDAENUMWIDGET")
 
 
-@r1165@
+@r1403@
 typedef IKnownFolder;
 typedef PKNOWNFOLDER;
 position p;
@@ -15736,12 +18949,12 @@ position p;
 + IKnownFolder *
 
 @script:python depends on report@
-p << r1165.p;
+p << r1403.p;
 @@
 WARN(p[0], "IKnownFolder*", "PKNOWNFOLDER")
 
 
-@r1166@
+@r1404@
 typedef LPKNOWNFOLDER;
 position p;
 @@
@@ -15749,12 +18962,12 @@ position p;
 + IKnownFolder *
 
 @script:python depends on report@
-p << r1166.p;
+p << r1404.p;
 @@
 WARN(p[0], "IKnownFolder*", "LPKNOWNFOLDER")
 
 
-@r1167@
+@r1405@
 typedef IKnownFolderManager;
 typedef PKNOWNFOLDERMANAGER;
 position p;
@@ -15763,12 +18976,12 @@ position p;
 + IKnownFolderManager *
 
 @script:python depends on report@
-p << r1167.p;
+p << r1405.p;
 @@
 WARN(p[0], "IKnownFolderManager*", "PKNOWNFOLDERMANAGER")
 
 
-@r1168@
+@r1406@
 typedef LPKNOWNFOLDERMANAGER;
 position p;
 @@
@@ -15776,12 +18989,12 @@ position p;
 + IKnownFolderManager *
 
 @script:python depends on report@
-p << r1168.p;
+p << r1406.p;
 @@
 WARN(p[0], "IKnownFolderManager*", "LPKNOWNFOLDERMANAGER")
 
 
-@r1169@
+@r1407@
 typedef IKsControl;
 typedef PKSCONTROL;
 position p;
@@ -15790,12 +19003,12 @@ position p;
 + IKsControl *
 
 @script:python depends on report@
-p << r1169.p;
+p << r1407.p;
 @@
 WARN(p[0], "IKsControl*", "PKSCONTROL")
 
 
-@r1170@
+@r1408@
 typedef LPKSCONTROL;
 position p;
 @@
@@ -15803,12 +19016,12 @@ position p;
 + IKsControl *
 
 @script:python depends on report@
-p << r1170.p;
+p << r1408.p;
 @@
 WARN(p[0], "IKsControl*", "LPKSCONTROL")
 
 
-@r1171@
+@r1409@
 typedef IKsPropertySet;
 typedef PKSPROPERTYSET;
 position p;
@@ -15817,12 +19030,12 @@ position p;
 + IKsPropertySet *
 
 @script:python depends on report@
-p << r1171.p;
+p << r1409.p;
 @@
 WARN(p[0], "IKsPropertySet*", "PKSPROPERTYSET")
 
 
-@r1172@
+@r1410@
 typedef LPKSPROPERTYSET;
 position p;
 @@
@@ -15830,12 +19043,12 @@ position p;
 + IKsPropertySet *
 
 @script:python depends on report@
-p << r1172.p;
+p << r1410.p;
 @@
 WARN(p[0], "IKsPropertySet*", "LPKSPROPERTYSET")
 
 
-@r1173@
+@r1411@
 typedef ILockBytes;
 typedef PLOCKBYTES;
 position p;
@@ -15844,12 +19057,12 @@ position p;
 + ILockBytes *
 
 @script:python depends on report@
-p << r1173.p;
+p << r1411.p;
 @@
 WARN(p[0], "ILockBytes*", "PLOCKBYTES")
 
 
-@r1174@
+@r1412@
 typedef LPLOCKBYTES;
 position p;
 @@
@@ -15857,12 +19070,12 @@ position p;
 + ILockBytes *
 
 @script:python depends on report@
-p << r1174.p;
+p << r1412.p;
 @@
 WARN(p[0], "ILockBytes*", "LPLOCKBYTES")
 
 
-@r1175@
+@r1413@
 typedef ILockBytes16;
 typedef PLOCKBYTES16;
 position p;
@@ -15871,12 +19084,12 @@ position p;
 + ILockBytes16 *
 
 @script:python depends on report@
-p << r1175.p;
+p << r1413.p;
 @@
 WARN(p[0], "ILockBytes16*", "PLOCKBYTES16")
 
 
-@r1176@
+@r1414@
 typedef LPLOCKBYTES16;
 position p;
 @@
@@ -15884,39 +19097,2172 @@ position p;
 + ILockBytes16 *
 
 @script:python depends on report@
-p << r1176.p;
+p << r1414.p;
 @@
 WARN(p[0], "ILockBytes16*", "LPLOCKBYTES16")
 
 
-@r1177@
-typedef IMILBitmapSource;
-typedef PMILBITMAPSOURCE;
+@r1415@
+typedef IMF2DBuffer2;
+typedef PMF2DBUFFER2;
 position p;
 @@
-- PMILBITMAPSOURCE@p
-+ IMILBitmapSource *
+- PMF2DBUFFER2@p
++ IMF2DBuffer2 *
 
 @script:python depends on report@
-p << r1177.p;
+p << r1415.p;
 @@
-WARN(p[0], "IMILBitmapSource*", "PMILBITMAPSOURCE")
+WARN(p[0], "IMF2DBuffer2*", "PMF2DBUFFER2")
 
 
-@r1178@
-typedef LPMILBITMAPSOURCE;
+@r1416@
+typedef LPMF2DBUFFER2;
 position p;
 @@
-- LPMILBITMAPSOURCE@p
-+ IMILBitmapSource *
+- LPMF2DBUFFER2@p
++ IMF2DBuffer2 *
 
 @script:python depends on report@
-p << r1178.p;
+p << r1416.p;
 @@
-WARN(p[0], "IMILBitmapSource*", "LPMILBITMAPSOURCE")
+WARN(p[0], "IMF2DBuffer2*", "LPMF2DBUFFER2")
 
 
-@r1179@
+@r1417@
+typedef IMFActivate;
+typedef PMFACTIVATE;
+position p;
+@@
+- PMFACTIVATE@p
++ IMFActivate *
+
+@script:python depends on report@
+p << r1417.p;
+@@
+WARN(p[0], "IMFActivate*", "PMFACTIVATE")
+
+
+@r1418@
+typedef LPMFACTIVATE;
+position p;
+@@
+- LPMFACTIVATE@p
++ IMFActivate *
+
+@script:python depends on report@
+p << r1418.p;
+@@
+WARN(p[0], "IMFActivate*", "LPMFACTIVATE")
+
+
+@r1419@
+typedef IMFAsyncCallback;
+typedef PMFASYNCCALLBACK;
+position p;
+@@
+- PMFASYNCCALLBACK@p
++ IMFAsyncCallback *
+
+@script:python depends on report@
+p << r1419.p;
+@@
+WARN(p[0], "IMFAsyncCallback*", "PMFASYNCCALLBACK")
+
+
+@r1420@
+typedef LPMFASYNCCALLBACK;
+position p;
+@@
+- LPMFASYNCCALLBACK@p
++ IMFAsyncCallback *
+
+@script:python depends on report@
+p << r1420.p;
+@@
+WARN(p[0], "IMFAsyncCallback*", "LPMFASYNCCALLBACK")
+
+
+@r1421@
+typedef IMFAttributes;
+typedef PMFATTRIBUTES;
+position p;
+@@
+- PMFATTRIBUTES@p
++ IMFAttributes *
+
+@script:python depends on report@
+p << r1421.p;
+@@
+WARN(p[0], "IMFAttributes*", "PMFATTRIBUTES")
+
+
+@r1422@
+typedef LPMFATTRIBUTES;
+position p;
+@@
+- LPMFATTRIBUTES@p
++ IMFAttributes *
+
+@script:python depends on report@
+p << r1422.p;
+@@
+WARN(p[0], "IMFAttributes*", "LPMFATTRIBUTES")
+
+
+@r1423@
+typedef IMFAudioMediaType;
+typedef PMFAUDIOMEDIATYPE;
+position p;
+@@
+- PMFAUDIOMEDIATYPE@p
++ IMFAudioMediaType *
+
+@script:python depends on report@
+p << r1423.p;
+@@
+WARN(p[0], "IMFAudioMediaType*", "PMFAUDIOMEDIATYPE")
+
+
+@r1424@
+typedef LPMFAUDIOMEDIATYPE;
+position p;
+@@
+- LPMFAUDIOMEDIATYPE@p
++ IMFAudioMediaType *
+
+@script:python depends on report@
+p << r1424.p;
+@@
+WARN(p[0], "IMFAudioMediaType*", "LPMFAUDIOMEDIATYPE")
+
+
+@r1425@
+typedef IMFAudioPolicy;
+typedef PMFAUDIOPOLICY;
+position p;
+@@
+- PMFAUDIOPOLICY@p
++ IMFAudioPolicy *
+
+@script:python depends on report@
+p << r1425.p;
+@@
+WARN(p[0], "IMFAudioPolicy*", "PMFAUDIOPOLICY")
+
+
+@r1426@
+typedef LPMFAUDIOPOLICY;
+position p;
+@@
+- LPMFAUDIOPOLICY@p
++ IMFAudioPolicy *
+
+@script:python depends on report@
+p << r1426.p;
+@@
+WARN(p[0], "IMFAudioPolicy*", "LPMFAUDIOPOLICY")
+
+
+@r1427@
+typedef IMFAudioStreamVolume;
+typedef PMFAUDIOSTREAMVOLUME;
+position p;
+@@
+- PMFAUDIOSTREAMVOLUME@p
++ IMFAudioStreamVolume *
+
+@script:python depends on report@
+p << r1427.p;
+@@
+WARN(p[0], "IMFAudioStreamVolume*", "PMFAUDIOSTREAMVOLUME")
+
+
+@r1428@
+typedef LPMFAUDIOSTREAMVOLUME;
+position p;
+@@
+- LPMFAUDIOSTREAMVOLUME@p
++ IMFAudioStreamVolume *
+
+@script:python depends on report@
+p << r1428.p;
+@@
+WARN(p[0], "IMFAudioStreamVolume*", "LPMFAUDIOSTREAMVOLUME")
+
+
+@r1429@
+typedef IMFByteStream;
+typedef PMFBYTESTREAM;
+position p;
+@@
+- PMFBYTESTREAM@p
++ IMFByteStream *
+
+@script:python depends on report@
+p << r1429.p;
+@@
+WARN(p[0], "IMFByteStream*", "PMFBYTESTREAM")
+
+
+@r1430@
+typedef LPMFBYTESTREAM;
+position p;
+@@
+- LPMFBYTESTREAM@p
++ IMFByteStream *
+
+@script:python depends on report@
+p << r1430.p;
+@@
+WARN(p[0], "IMFByteStream*", "LPMFBYTESTREAM")
+
+
+@r1431@
+typedef IMFByteStreamBuffering;
+typedef PMFBYTESTREAMBUFFERING;
+position p;
+@@
+- PMFBYTESTREAMBUFFERING@p
++ IMFByteStreamBuffering *
+
+@script:python depends on report@
+p << r1431.p;
+@@
+WARN(p[0], "IMFByteStreamBuffering*", "PMFBYTESTREAMBUFFERING")
+
+
+@r1432@
+typedef LPMFBYTESTREAMBUFFERING;
+position p;
+@@
+- LPMFBYTESTREAMBUFFERING@p
++ IMFByteStreamBuffering *
+
+@script:python depends on report@
+p << r1432.p;
+@@
+WARN(p[0], "IMFByteStreamBuffering*", "LPMFBYTESTREAMBUFFERING")
+
+
+@r1433@
+typedef IMFByteStreamCacheControl;
+typedef PMFBYTESTREAMCACHECONTROL;
+position p;
+@@
+- PMFBYTESTREAMCACHECONTROL@p
++ IMFByteStreamCacheControl *
+
+@script:python depends on report@
+p << r1433.p;
+@@
+WARN(p[0], "IMFByteStreamCacheControl*", "PMFBYTESTREAMCACHECONTROL")
+
+
+@r1434@
+typedef LPMFBYTESTREAMCACHECONTROL;
+position p;
+@@
+- LPMFBYTESTREAMCACHECONTROL@p
++ IMFByteStreamCacheControl *
+
+@script:python depends on report@
+p << r1434.p;
+@@
+WARN(p[0], "IMFByteStreamCacheControl*", "LPMFBYTESTREAMCACHECONTROL")
+
+
+@r1435@
+typedef IMFByteStreamHandler;
+typedef PMFBYTESTREAMHANDLER;
+position p;
+@@
+- PMFBYTESTREAMHANDLER@p
++ IMFByteStreamHandler *
+
+@script:python depends on report@
+p << r1435.p;
+@@
+WARN(p[0], "IMFByteStreamHandler*", "PMFBYTESTREAMHANDLER")
+
+
+@r1436@
+typedef LPMFBYTESTREAMHANDLER;
+position p;
+@@
+- LPMFBYTESTREAMHANDLER@p
++ IMFByteStreamHandler *
+
+@script:python depends on report@
+p << r1436.p;
+@@
+WARN(p[0], "IMFByteStreamHandler*", "LPMFBYTESTREAMHANDLER")
+
+
+@r1437@
+typedef IMFByteStreamTimeSeek;
+typedef PMFBYTESTREAMTIMESEEK;
+position p;
+@@
+- PMFBYTESTREAMTIMESEEK@p
++ IMFByteStreamTimeSeek *
+
+@script:python depends on report@
+p << r1437.p;
+@@
+WARN(p[0], "IMFByteStreamTimeSeek*", "PMFBYTESTREAMTIMESEEK")
+
+
+@r1438@
+typedef LPMFBYTESTREAMTIMESEEK;
+position p;
+@@
+- LPMFBYTESTREAMTIMESEEK@p
++ IMFByteStreamTimeSeek *
+
+@script:python depends on report@
+p << r1438.p;
+@@
+WARN(p[0], "IMFByteStreamTimeSeek*", "LPMFBYTESTREAMTIMESEEK")
+
+
+@r1439@
+typedef IMFClock;
+typedef PMFCLOCK;
+position p;
+@@
+- PMFCLOCK@p
++ IMFClock *
+
+@script:python depends on report@
+p << r1439.p;
+@@
+WARN(p[0], "IMFClock*", "PMFCLOCK")
+
+
+@r1440@
+typedef LPMFCLOCK;
+position p;
+@@
+- LPMFCLOCK@p
++ IMFClock *
+
+@script:python depends on report@
+p << r1440.p;
+@@
+WARN(p[0], "IMFClock*", "LPMFCLOCK")
+
+
+@r1441@
+typedef IMFClockStateSink;
+typedef PMFCLOCKSTATESINK;
+position p;
+@@
+- PMFCLOCKSTATESINK@p
++ IMFClockStateSink *
+
+@script:python depends on report@
+p << r1441.p;
+@@
+WARN(p[0], "IMFClockStateSink*", "PMFCLOCKSTATESINK")
+
+
+@r1442@
+typedef LPMFCLOCKSTATESINK;
+position p;
+@@
+- LPMFCLOCKSTATESINK@p
++ IMFClockStateSink *
+
+@script:python depends on report@
+p << r1442.p;
+@@
+WARN(p[0], "IMFClockStateSink*", "LPMFCLOCKSTATESINK")
+
+
+@r1443@
+typedef IMFCollection;
+typedef PMFCOLLECTION;
+position p;
+@@
+- PMFCOLLECTION@p
++ IMFCollection *
+
+@script:python depends on report@
+p << r1443.p;
+@@
+WARN(p[0], "IMFCollection*", "PMFCOLLECTION")
+
+
+@r1444@
+typedef LPMFCOLLECTION;
+position p;
+@@
+- LPMFCOLLECTION@p
++ IMFCollection *
+
+@script:python depends on report@
+p << r1444.p;
+@@
+WARN(p[0], "IMFCollection*", "LPMFCOLLECTION")
+
+
+@r1445@
+typedef IMFDXGIBuffer;
+typedef PMFDXGIBUFFER;
+position p;
+@@
+- PMFDXGIBUFFER@p
++ IMFDXGIBuffer *
+
+@script:python depends on report@
+p << r1445.p;
+@@
+WARN(p[0], "IMFDXGIBuffer*", "PMFDXGIBUFFER")
+
+
+@r1446@
+typedef LPMFDXGIBUFFER;
+position p;
+@@
+- LPMFDXGIBUFFER@p
++ IMFDXGIBuffer *
+
+@script:python depends on report@
+p << r1446.p;
+@@
+WARN(p[0], "IMFDXGIBuffer*", "LPMFDXGIBUFFER")
+
+
+@r1447@
+typedef IMFDXGIDeviceManager;
+typedef PMFDXGIDEVICEMANAGER;
+position p;
+@@
+- PMFDXGIDEVICEMANAGER@p
++ IMFDXGIDeviceManager *
+
+@script:python depends on report@
+p << r1447.p;
+@@
+WARN(p[0], "IMFDXGIDeviceManager*", "PMFDXGIDEVICEMANAGER")
+
+
+@r1448@
+typedef LPMFDXGIDEVICEMANAGER;
+position p;
+@@
+- LPMFDXGIDEVICEMANAGER@p
++ IMFDXGIDeviceManager *
+
+@script:python depends on report@
+p << r1448.p;
+@@
+WARN(p[0], "IMFDXGIDeviceManager*", "LPMFDXGIDEVICEMANAGER")
+
+
+@r1449@
+typedef IMFDesiredSample;
+typedef PMFDESIREDSAMPLE;
+position p;
+@@
+- PMFDESIREDSAMPLE@p
++ IMFDesiredSample *
+
+@script:python depends on report@
+p << r1449.p;
+@@
+WARN(p[0], "IMFDesiredSample*", "PMFDESIREDSAMPLE")
+
+
+@r1450@
+typedef LPMFDESIREDSAMPLE;
+position p;
+@@
+- LPMFDESIREDSAMPLE@p
++ IMFDesiredSample *
+
+@script:python depends on report@
+p << r1450.p;
+@@
+WARN(p[0], "IMFDesiredSample*", "LPMFDESIREDSAMPLE")
+
+
+@r1451@
+typedef IMFGetService;
+typedef PMFGETSERVICE;
+position p;
+@@
+- PMFGETSERVICE@p
++ IMFGetService *
+
+@script:python depends on report@
+p << r1451.p;
+@@
+WARN(p[0], "IMFGetService*", "PMFGETSERVICE")
+
+
+@r1452@
+typedef LPMFGETSERVICE;
+position p;
+@@
+- LPMFGETSERVICE@p
++ IMFGetService *
+
+@script:python depends on report@
+p << r1452.p;
+@@
+WARN(p[0], "IMFGetService*", "LPMFGETSERVICE")
+
+
+@r1453@
+typedef IMFMediaBuffer;
+typedef PMFMEDIABUFFER;
+position p;
+@@
+- PMFMEDIABUFFER@p
++ IMFMediaBuffer *
+
+@script:python depends on report@
+p << r1453.p;
+@@
+WARN(p[0], "IMFMediaBuffer*", "PMFMEDIABUFFER")
+
+
+@r1454@
+typedef LPMFMEDIABUFFER;
+position p;
+@@
+- LPMFMEDIABUFFER@p
++ IMFMediaBuffer *
+
+@script:python depends on report@
+p << r1454.p;
+@@
+WARN(p[0], "IMFMediaBuffer*", "LPMFMEDIABUFFER")
+
+
+@r1455@
+typedef IMFMediaEngine;
+typedef PMFMEDIAENGINE;
+position p;
+@@
+- PMFMEDIAENGINE@p
++ IMFMediaEngine *
+
+@script:python depends on report@
+p << r1455.p;
+@@
+WARN(p[0], "IMFMediaEngine*", "PMFMEDIAENGINE")
+
+
+@r1456@
+typedef LPMFMEDIAENGINE;
+position p;
+@@
+- LPMFMEDIAENGINE@p
++ IMFMediaEngine *
+
+@script:python depends on report@
+p << r1456.p;
+@@
+WARN(p[0], "IMFMediaEngine*", "LPMFMEDIAENGINE")
+
+
+@r1457@
+typedef IMFMediaEngineNotify;
+typedef PMFMEDIAENGINENOTIFY;
+position p;
+@@
+- PMFMEDIAENGINENOTIFY@p
++ IMFMediaEngineNotify *
+
+@script:python depends on report@
+p << r1457.p;
+@@
+WARN(p[0], "IMFMediaEngineNotify*", "PMFMEDIAENGINENOTIFY")
+
+
+@r1458@
+typedef LPMFMEDIAENGINENOTIFY;
+position p;
+@@
+- LPMFMEDIAENGINENOTIFY@p
++ IMFMediaEngineNotify *
+
+@script:python depends on report@
+p << r1458.p;
+@@
+WARN(p[0], "IMFMediaEngineNotify*", "LPMFMEDIAENGINENOTIFY")
+
+
+@r1459@
+typedef IMFMediaError;
+typedef PMFMEDIAERROR;
+position p;
+@@
+- PMFMEDIAERROR@p
++ IMFMediaError *
+
+@script:python depends on report@
+p << r1459.p;
+@@
+WARN(p[0], "IMFMediaError*", "PMFMEDIAERROR")
+
+
+@r1460@
+typedef LPMFMEDIAERROR;
+position p;
+@@
+- LPMFMEDIAERROR@p
++ IMFMediaError *
+
+@script:python depends on report@
+p << r1460.p;
+@@
+WARN(p[0], "IMFMediaError*", "LPMFMEDIAERROR")
+
+
+@r1461@
+typedef IMFMediaEvent;
+typedef PMFMEDIAEVENT;
+position p;
+@@
+- PMFMEDIAEVENT@p
++ IMFMediaEvent *
+
+@script:python depends on report@
+p << r1461.p;
+@@
+WARN(p[0], "IMFMediaEvent*", "PMFMEDIAEVENT")
+
+
+@r1462@
+typedef LPMFMEDIAEVENT;
+position p;
+@@
+- LPMFMEDIAEVENT@p
++ IMFMediaEvent *
+
+@script:python depends on report@
+p << r1462.p;
+@@
+WARN(p[0], "IMFMediaEvent*", "LPMFMEDIAEVENT")
+
+
+@r1463@
+typedef IMFMediaEventGenerator;
+typedef PMFMEDIAEVENTGENERATOR;
+position p;
+@@
+- PMFMEDIAEVENTGENERATOR@p
++ IMFMediaEventGenerator *
+
+@script:python depends on report@
+p << r1463.p;
+@@
+WARN(p[0], "IMFMediaEventGenerator*", "PMFMEDIAEVENTGENERATOR")
+
+
+@r1464@
+typedef LPMFMEDIAEVENTGENERATOR;
+position p;
+@@
+- LPMFMEDIAEVENTGENERATOR@p
++ IMFMediaEventGenerator *
+
+@script:python depends on report@
+p << r1464.p;
+@@
+WARN(p[0], "IMFMediaEventGenerator*", "LPMFMEDIAEVENTGENERATOR")
+
+
+@r1465@
+typedef IMFMediaEventQueue;
+typedef PMFMEDIAEVENTQUEUE;
+position p;
+@@
+- PMFMEDIAEVENTQUEUE@p
++ IMFMediaEventQueue *
+
+@script:python depends on report@
+p << r1465.p;
+@@
+WARN(p[0], "IMFMediaEventQueue*", "PMFMEDIAEVENTQUEUE")
+
+
+@r1466@
+typedef LPMFMEDIAEVENTQUEUE;
+position p;
+@@
+- LPMFMEDIAEVENTQUEUE@p
++ IMFMediaEventQueue *
+
+@script:python depends on report@
+p << r1466.p;
+@@
+WARN(p[0], "IMFMediaEventQueue*", "LPMFMEDIAEVENTQUEUE")
+
+
+@r1467@
+typedef IMFMediaSession;
+typedef PMFMEDIASESSION;
+position p;
+@@
+- PMFMEDIASESSION@p
++ IMFMediaSession *
+
+@script:python depends on report@
+p << r1467.p;
+@@
+WARN(p[0], "IMFMediaSession*", "PMFMEDIASESSION")
+
+
+@r1468@
+typedef LPMFMEDIASESSION;
+position p;
+@@
+- LPMFMEDIASESSION@p
++ IMFMediaSession *
+
+@script:python depends on report@
+p << r1468.p;
+@@
+WARN(p[0], "IMFMediaSession*", "LPMFMEDIASESSION")
+
+
+@r1469@
+typedef IMFMediaSink;
+typedef PMFMEDIASINK;
+position p;
+@@
+- PMFMEDIASINK@p
++ IMFMediaSink *
+
+@script:python depends on report@
+p << r1469.p;
+@@
+WARN(p[0], "IMFMediaSink*", "PMFMEDIASINK")
+
+
+@r1470@
+typedef LPMFMEDIASINK;
+position p;
+@@
+- LPMFMEDIASINK@p
++ IMFMediaSink *
+
+@script:python depends on report@
+p << r1470.p;
+@@
+WARN(p[0], "IMFMediaSink*", "LPMFMEDIASINK")
+
+
+@r1471@
+typedef IMFMediaSinkPreroll;
+typedef PMFMEDIASINKPREROLL;
+position p;
+@@
+- PMFMEDIASINKPREROLL@p
++ IMFMediaSinkPreroll *
+
+@script:python depends on report@
+p << r1471.p;
+@@
+WARN(p[0], "IMFMediaSinkPreroll*", "PMFMEDIASINKPREROLL")
+
+
+@r1472@
+typedef LPMFMEDIASINKPREROLL;
+position p;
+@@
+- LPMFMEDIASINKPREROLL@p
++ IMFMediaSinkPreroll *
+
+@script:python depends on report@
+p << r1472.p;
+@@
+WARN(p[0], "IMFMediaSinkPreroll*", "LPMFMEDIASINKPREROLL")
+
+
+@r1473@
+typedef IMFMediaSource;
+typedef PMFMEDIASOURCE;
+position p;
+@@
+- PMFMEDIASOURCE@p
++ IMFMediaSource *
+
+@script:python depends on report@
+p << r1473.p;
+@@
+WARN(p[0], "IMFMediaSource*", "PMFMEDIASOURCE")
+
+
+@r1474@
+typedef LPMFMEDIASOURCE;
+position p;
+@@
+- LPMFMEDIASOURCE@p
++ IMFMediaSource *
+
+@script:python depends on report@
+p << r1474.p;
+@@
+WARN(p[0], "IMFMediaSource*", "LPMFMEDIASOURCE")
+
+
+@r1475@
+typedef IMFMediaSourceTopologyProvider;
+typedef PMFMEDIASOURCETOPOLOGYPROVIDER;
+position p;
+@@
+- PMFMEDIASOURCETOPOLOGYPROVIDER@p
++ IMFMediaSourceTopologyProvider *
+
+@script:python depends on report@
+p << r1475.p;
+@@
+WARN(p[0], "IMFMediaSourceTopologyProvider*", "PMFMEDIASOURCETOPOLOGYPROVIDER")
+
+
+@r1476@
+typedef LPMFMEDIASOURCETOPOLOGYPROVIDER;
+position p;
+@@
+- LPMFMEDIASOURCETOPOLOGYPROVIDER@p
++ IMFMediaSourceTopologyProvider *
+
+@script:python depends on report@
+p << r1476.p;
+@@
+WARN(p[0], "IMFMediaSourceTopologyProvider*", "LPMFMEDIASOURCETOPOLOGYPROVIDER")
+
+
+@r1477@
+typedef IMFMediaStream;
+typedef PMFMEDIASTREAM;
+position p;
+@@
+- PMFMEDIASTREAM@p
++ IMFMediaStream *
+
+@script:python depends on report@
+p << r1477.p;
+@@
+WARN(p[0], "IMFMediaStream*", "PMFMEDIASTREAM")
+
+
+@r1478@
+typedef LPMFMEDIASTREAM;
+position p;
+@@
+- LPMFMEDIASTREAM@p
++ IMFMediaStream *
+
+@script:python depends on report@
+p << r1478.p;
+@@
+WARN(p[0], "IMFMediaStream*", "LPMFMEDIASTREAM")
+
+
+@r1479@
+typedef IMFMediaTimeRange;
+typedef PMFMEDIATIMERANGE;
+position p;
+@@
+- PMFMEDIATIMERANGE@p
++ IMFMediaTimeRange *
+
+@script:python depends on report@
+p << r1479.p;
+@@
+WARN(p[0], "IMFMediaTimeRange*", "PMFMEDIATIMERANGE")
+
+
+@r1480@
+typedef LPMFMEDIATIMERANGE;
+position p;
+@@
+- LPMFMEDIATIMERANGE@p
++ IMFMediaTimeRange *
+
+@script:python depends on report@
+p << r1480.p;
+@@
+WARN(p[0], "IMFMediaTimeRange*", "LPMFMEDIATIMERANGE")
+
+
+@r1481@
+typedef IMFMediaType;
+typedef PMFMEDIATYPE;
+position p;
+@@
+- PMFMEDIATYPE@p
++ IMFMediaType *
+
+@script:python depends on report@
+p << r1481.p;
+@@
+WARN(p[0], "IMFMediaType*", "PMFMEDIATYPE")
+
+
+@r1482@
+typedef LPMFMEDIATYPE;
+position p;
+@@
+- LPMFMEDIATYPE@p
++ IMFMediaType *
+
+@script:python depends on report@
+p << r1482.p;
+@@
+WARN(p[0], "IMFMediaType*", "LPMFMEDIATYPE")
+
+
+@r1483@
+typedef IMFMediaTypeHandler;
+typedef PMFMEDIATYPEHANDLER;
+position p;
+@@
+- PMFMEDIATYPEHANDLER@p
++ IMFMediaTypeHandler *
+
+@script:python depends on report@
+p << r1483.p;
+@@
+WARN(p[0], "IMFMediaTypeHandler*", "PMFMEDIATYPEHANDLER")
+
+
+@r1484@
+typedef LPMFMEDIATYPEHANDLER;
+position p;
+@@
+- LPMFMEDIATYPEHANDLER@p
++ IMFMediaTypeHandler *
+
+@script:python depends on report@
+p << r1484.p;
+@@
+WARN(p[0], "IMFMediaTypeHandler*", "LPMFMEDIATYPEHANDLER")
+
+
+@r1485@
+typedef IMFPMediaItem;
+typedef PMFPMEDIAITEM;
+position p;
+@@
+- PMFPMEDIAITEM@p
++ IMFPMediaItem *
+
+@script:python depends on report@
+p << r1485.p;
+@@
+WARN(p[0], "IMFPMediaItem*", "PMFPMEDIAITEM")
+
+
+@r1486@
+typedef LPMFPMEDIAITEM;
+position p;
+@@
+- LPMFPMEDIAITEM@p
++ IMFPMediaItem *
+
+@script:python depends on report@
+p << r1486.p;
+@@
+WARN(p[0], "IMFPMediaItem*", "LPMFPMEDIAITEM")
+
+
+@r1487@
+typedef IMFPMediaPlayer;
+typedef PMFPMEDIAPLAYER;
+position p;
+@@
+- PMFPMEDIAPLAYER@p
++ IMFPMediaPlayer *
+
+@script:python depends on report@
+p << r1487.p;
+@@
+WARN(p[0], "IMFPMediaPlayer*", "PMFPMEDIAPLAYER")
+
+
+@r1488@
+typedef LPMFPMEDIAPLAYER;
+position p;
+@@
+- LPMFPMEDIAPLAYER@p
++ IMFPMediaPlayer *
+
+@script:python depends on report@
+p << r1488.p;
+@@
+WARN(p[0], "IMFPMediaPlayer*", "LPMFPMEDIAPLAYER")
+
+
+@r1489@
+typedef IMFPresentationClock;
+typedef PMFPRESENTATIONCLOCK;
+position p;
+@@
+- PMFPRESENTATIONCLOCK@p
++ IMFPresentationClock *
+
+@script:python depends on report@
+p << r1489.p;
+@@
+WARN(p[0], "IMFPresentationClock*", "PMFPRESENTATIONCLOCK")
+
+
+@r1490@
+typedef LPMFPRESENTATIONCLOCK;
+position p;
+@@
+- LPMFPRESENTATIONCLOCK@p
++ IMFPresentationClock *
+
+@script:python depends on report@
+p << r1490.p;
+@@
+WARN(p[0], "IMFPresentationClock*", "LPMFPRESENTATIONCLOCK")
+
+
+@r1491@
+typedef IMFPresentationDescriptor;
+typedef PMFPRESENTATIONDESCRIPTOR;
+position p;
+@@
+- PMFPRESENTATIONDESCRIPTOR@p
++ IMFPresentationDescriptor *
+
+@script:python depends on report@
+p << r1491.p;
+@@
+WARN(p[0], "IMFPresentationDescriptor*", "PMFPRESENTATIONDESCRIPTOR")
+
+
+@r1492@
+typedef LPMFPRESENTATIONDESCRIPTOR;
+position p;
+@@
+- LPMFPRESENTATIONDESCRIPTOR@p
++ IMFPresentationDescriptor *
+
+@script:python depends on report@
+p << r1492.p;
+@@
+WARN(p[0], "IMFPresentationDescriptor*", "LPMFPRESENTATIONDESCRIPTOR")
+
+
+@r1493@
+typedef IMFPresentationTimeSource;
+typedef PMFPRESENTATIONTIMESOURCE;
+position p;
+@@
+- PMFPRESENTATIONTIMESOURCE@p
++ IMFPresentationTimeSource *
+
+@script:python depends on report@
+p << r1493.p;
+@@
+WARN(p[0], "IMFPresentationTimeSource*", "PMFPRESENTATIONTIMESOURCE")
+
+
+@r1494@
+typedef LPMFPRESENTATIONTIMESOURCE;
+position p;
+@@
+- LPMFPRESENTATIONTIMESOURCE@p
++ IMFPresentationTimeSource *
+
+@script:python depends on report@
+p << r1494.p;
+@@
+WARN(p[0], "IMFPresentationTimeSource*", "LPMFPRESENTATIONTIMESOURCE")
+
+
+@r1495@
+typedef IMFQualityAdvise;
+typedef PMFQUALITYADVISE;
+position p;
+@@
+- PMFQUALITYADVISE@p
++ IMFQualityAdvise *
+
+@script:python depends on report@
+p << r1495.p;
+@@
+WARN(p[0], "IMFQualityAdvise*", "PMFQUALITYADVISE")
+
+
+@r1496@
+typedef LPMFQUALITYADVISE;
+position p;
+@@
+- LPMFQUALITYADVISE@p
++ IMFQualityAdvise *
+
+@script:python depends on report@
+p << r1496.p;
+@@
+WARN(p[0], "IMFQualityAdvise*", "LPMFQUALITYADVISE")
+
+
+@r1497@
+typedef IMFQualityAdviseLimits;
+typedef PMFQUALITYADVISELIMITS;
+position p;
+@@
+- PMFQUALITYADVISELIMITS@p
++ IMFQualityAdviseLimits *
+
+@script:python depends on report@
+p << r1497.p;
+@@
+WARN(p[0], "IMFQualityAdviseLimits*", "PMFQUALITYADVISELIMITS")
+
+
+@r1498@
+typedef LPMFQUALITYADVISELIMITS;
+position p;
+@@
+- LPMFQUALITYADVISELIMITS@p
++ IMFQualityAdviseLimits *
+
+@script:python depends on report@
+p << r1498.p;
+@@
+WARN(p[0], "IMFQualityAdviseLimits*", "LPMFQUALITYADVISELIMITS")
+
+
+@r1499@
+typedef IMFQualityManager;
+typedef PMFQUALITYMANAGER;
+position p;
+@@
+- PMFQUALITYMANAGER@p
++ IMFQualityManager *
+
+@script:python depends on report@
+p << r1499.p;
+@@
+WARN(p[0], "IMFQualityManager*", "PMFQUALITYMANAGER")
+
+
+@r1500@
+typedef LPMFQUALITYMANAGER;
+position p;
+@@
+- LPMFQUALITYMANAGER@p
++ IMFQualityManager *
+
+@script:python depends on report@
+p << r1500.p;
+@@
+WARN(p[0], "IMFQualityManager*", "LPMFQUALITYMANAGER")
+
+
+@r1501@
+typedef IMFRateControl;
+typedef PMFRATECONTROL;
+position p;
+@@
+- PMFRATECONTROL@p
++ IMFRateControl *
+
+@script:python depends on report@
+p << r1501.p;
+@@
+WARN(p[0], "IMFRateControl*", "PMFRATECONTROL")
+
+
+@r1502@
+typedef LPMFRATECONTROL;
+position p;
+@@
+- LPMFRATECONTROL@p
++ IMFRateControl *
+
+@script:python depends on report@
+p << r1502.p;
+@@
+WARN(p[0], "IMFRateControl*", "LPMFRATECONTROL")
+
+
+@r1503@
+typedef IMFRateSupport;
+typedef PMFRATESUPPORT;
+position p;
+@@
+- PMFRATESUPPORT@p
++ IMFRateSupport *
+
+@script:python depends on report@
+p << r1503.p;
+@@
+WARN(p[0], "IMFRateSupport*", "PMFRATESUPPORT")
+
+
+@r1504@
+typedef LPMFRATESUPPORT;
+position p;
+@@
+- LPMFRATESUPPORT@p
++ IMFRateSupport *
+
+@script:python depends on report@
+p << r1504.p;
+@@
+WARN(p[0], "IMFRateSupport*", "LPMFRATESUPPORT")
+
+
+@r1505@
+typedef IMFSample;
+typedef PMFSAMPLE;
+position p;
+@@
+- PMFSAMPLE@p
++ IMFSample *
+
+@script:python depends on report@
+p << r1505.p;
+@@
+WARN(p[0], "IMFSample*", "PMFSAMPLE")
+
+
+@r1506@
+typedef LPMFSAMPLE;
+position p;
+@@
+- LPMFSAMPLE@p
++ IMFSample *
+
+@script:python depends on report@
+p << r1506.p;
+@@
+WARN(p[0], "IMFSample*", "LPMFSAMPLE")
+
+
+@r1507@
+typedef IMFSampleOutputStream;
+typedef PMFSAMPLEOUTPUTSTREAM;
+position p;
+@@
+- PMFSAMPLEOUTPUTSTREAM@p
++ IMFSampleOutputStream *
+
+@script:python depends on report@
+p << r1507.p;
+@@
+WARN(p[0], "IMFSampleOutputStream*", "PMFSAMPLEOUTPUTSTREAM")
+
+
+@r1508@
+typedef LPMFSAMPLEOUTPUTSTREAM;
+position p;
+@@
+- LPMFSAMPLEOUTPUTSTREAM@p
++ IMFSampleOutputStream *
+
+@script:python depends on report@
+p << r1508.p;
+@@
+WARN(p[0], "IMFSampleOutputStream*", "LPMFSAMPLEOUTPUTSTREAM")
+
+
+@r1509@
+typedef IMFSchemeHandler;
+typedef PMFSCHEMEHANDLER;
+position p;
+@@
+- PMFSCHEMEHANDLER@p
++ IMFSchemeHandler *
+
+@script:python depends on report@
+p << r1509.p;
+@@
+WARN(p[0], "IMFSchemeHandler*", "PMFSCHEMEHANDLER")
+
+
+@r1510@
+typedef LPMFSCHEMEHANDLER;
+position p;
+@@
+- LPMFSCHEMEHANDLER@p
++ IMFSchemeHandler *
+
+@script:python depends on report@
+p << r1510.p;
+@@
+WARN(p[0], "IMFSchemeHandler*", "LPMFSCHEMEHANDLER")
+
+
+@r1511@
+typedef IMFSequencerSource;
+typedef PMFSEQUENCERSOURCE;
+position p;
+@@
+- PMFSEQUENCERSOURCE@p
++ IMFSequencerSource *
+
+@script:python depends on report@
+p << r1511.p;
+@@
+WARN(p[0], "IMFSequencerSource*", "PMFSEQUENCERSOURCE")
+
+
+@r1512@
+typedef LPMFSEQUENCERSOURCE;
+position p;
+@@
+- LPMFSEQUENCERSOURCE@p
++ IMFSequencerSource *
+
+@script:python depends on report@
+p << r1512.p;
+@@
+WARN(p[0], "IMFSequencerSource*", "LPMFSEQUENCERSOURCE")
+
+
+@r1513@
+typedef IMFShutdown;
+typedef PMFSHUTDOWN;
+position p;
+@@
+- PMFSHUTDOWN@p
++ IMFShutdown *
+
+@script:python depends on report@
+p << r1513.p;
+@@
+WARN(p[0], "IMFShutdown*", "PMFSHUTDOWN")
+
+
+@r1514@
+typedef LPMFSHUTDOWN;
+position p;
+@@
+- LPMFSHUTDOWN@p
++ IMFShutdown *
+
+@script:python depends on report@
+p << r1514.p;
+@@
+WARN(p[0], "IMFShutdown*", "LPMFSHUTDOWN")
+
+
+@r1515@
+typedef IMFSimpleAudioVolume;
+typedef PMFSIMPLEAUDIOVOLUME;
+position p;
+@@
+- PMFSIMPLEAUDIOVOLUME@p
++ IMFSimpleAudioVolume *
+
+@script:python depends on report@
+p << r1515.p;
+@@
+WARN(p[0], "IMFSimpleAudioVolume*", "PMFSIMPLEAUDIOVOLUME")
+
+
+@r1516@
+typedef LPMFSIMPLEAUDIOVOLUME;
+position p;
+@@
+- LPMFSIMPLEAUDIOVOLUME@p
++ IMFSimpleAudioVolume *
+
+@script:python depends on report@
+p << r1516.p;
+@@
+WARN(p[0], "IMFSimpleAudioVolume*", "LPMFSIMPLEAUDIOVOLUME")
+
+
+@r1517@
+typedef IMFSinkWriter;
+typedef PMFSINKWRITER;
+position p;
+@@
+- PMFSINKWRITER@p
++ IMFSinkWriter *
+
+@script:python depends on report@
+p << r1517.p;
+@@
+WARN(p[0], "IMFSinkWriter*", "PMFSINKWRITER")
+
+
+@r1518@
+typedef LPMFSINKWRITER;
+position p;
+@@
+- LPMFSINKWRITER@p
++ IMFSinkWriter *
+
+@script:python depends on report@
+p << r1518.p;
+@@
+WARN(p[0], "IMFSinkWriter*", "LPMFSINKWRITER")
+
+
+@r1519@
+typedef IMFSourceReader;
+typedef PMFSOURCEREADER;
+position p;
+@@
+- PMFSOURCEREADER@p
++ IMFSourceReader *
+
+@script:python depends on report@
+p << r1519.p;
+@@
+WARN(p[0], "IMFSourceReader*", "PMFSOURCEREADER")
+
+
+@r1520@
+typedef LPMFSOURCEREADER;
+position p;
+@@
+- LPMFSOURCEREADER@p
++ IMFSourceReader *
+
+@script:python depends on report@
+p << r1520.p;
+@@
+WARN(p[0], "IMFSourceReader*", "LPMFSOURCEREADER")
+
+
+@r1521@
+typedef IMFSourceReaderCallback;
+typedef PMFSOURCEREADERCALLBACK;
+position p;
+@@
+- PMFSOURCEREADERCALLBACK@p
++ IMFSourceReaderCallback *
+
+@script:python depends on report@
+p << r1521.p;
+@@
+WARN(p[0], "IMFSourceReaderCallback*", "PMFSOURCEREADERCALLBACK")
+
+
+@r1522@
+typedef LPMFSOURCEREADERCALLBACK;
+position p;
+@@
+- LPMFSOURCEREADERCALLBACK@p
++ IMFSourceReaderCallback *
+
+@script:python depends on report@
+p << r1522.p;
+@@
+WARN(p[0], "IMFSourceReaderCallback*", "LPMFSOURCEREADERCALLBACK")
+
+
+@r1523@
+typedef IMFSourceResolver;
+typedef PMFSOURCERESOLVER;
+position p;
+@@
+- PMFSOURCERESOLVER@p
++ IMFSourceResolver *
+
+@script:python depends on report@
+p << r1523.p;
+@@
+WARN(p[0], "IMFSourceResolver*", "PMFSOURCERESOLVER")
+
+
+@r1524@
+typedef LPMFSOURCERESOLVER;
+position p;
+@@
+- LPMFSOURCERESOLVER@p
++ IMFSourceResolver *
+
+@script:python depends on report@
+p << r1524.p;
+@@
+WARN(p[0], "IMFSourceResolver*", "LPMFSOURCERESOLVER")
+
+
+@r1525@
+typedef IMFStreamDescriptor;
+typedef PMFSTREAMDESCRIPTOR;
+position p;
+@@
+- PMFSTREAMDESCRIPTOR@p
++ IMFStreamDescriptor *
+
+@script:python depends on report@
+p << r1525.p;
+@@
+WARN(p[0], "IMFStreamDescriptor*", "PMFSTREAMDESCRIPTOR")
+
+
+@r1526@
+typedef LPMFSTREAMDESCRIPTOR;
+position p;
+@@
+- LPMFSTREAMDESCRIPTOR@p
++ IMFStreamDescriptor *
+
+@script:python depends on report@
+p << r1526.p;
+@@
+WARN(p[0], "IMFStreamDescriptor*", "LPMFSTREAMDESCRIPTOR")
+
+
+@r1527@
+typedef IMFStreamSink;
+typedef PMFSTREAMSINK;
+position p;
+@@
+- PMFSTREAMSINK@p
++ IMFStreamSink *
+
+@script:python depends on report@
+p << r1527.p;
+@@
+WARN(p[0], "IMFStreamSink*", "PMFSTREAMSINK")
+
+
+@r1528@
+typedef LPMFSTREAMSINK;
+position p;
+@@
+- LPMFSTREAMSINK@p
++ IMFStreamSink *
+
+@script:python depends on report@
+p << r1528.p;
+@@
+WARN(p[0], "IMFStreamSink*", "LPMFSTREAMSINK")
+
+
+@r1529@
+typedef IMFTimer;
+typedef PMFTIMER;
+position p;
+@@
+- PMFTIMER@p
++ IMFTimer *
+
+@script:python depends on report@
+p << r1529.p;
+@@
+WARN(p[0], "IMFTimer*", "PMFTIMER")
+
+
+@r1530@
+typedef LPMFTIMER;
+position p;
+@@
+- LPMFTIMER@p
++ IMFTimer *
+
+@script:python depends on report@
+p << r1530.p;
+@@
+WARN(p[0], "IMFTimer*", "LPMFTIMER")
+
+
+@r1531@
+typedef IMFTopoLoader;
+typedef PMFTOPOLOADER;
+position p;
+@@
+- PMFTOPOLOADER@p
++ IMFTopoLoader *
+
+@script:python depends on report@
+p << r1531.p;
+@@
+WARN(p[0], "IMFTopoLoader*", "PMFTOPOLOADER")
+
+
+@r1532@
+typedef LPMFTOPOLOADER;
+position p;
+@@
+- LPMFTOPOLOADER@p
++ IMFTopoLoader *
+
+@script:python depends on report@
+p << r1532.p;
+@@
+WARN(p[0], "IMFTopoLoader*", "LPMFTOPOLOADER")
+
+
+@r1533@
+typedef IMFTopology;
+typedef PMFTOPOLOGY;
+position p;
+@@
+- PMFTOPOLOGY@p
++ IMFTopology *
+
+@script:python depends on report@
+p << r1533.p;
+@@
+WARN(p[0], "IMFTopology*", "PMFTOPOLOGY")
+
+
+@r1534@
+typedef LPMFTOPOLOGY;
+position p;
+@@
+- LPMFTOPOLOGY@p
++ IMFTopology *
+
+@script:python depends on report@
+p << r1534.p;
+@@
+WARN(p[0], "IMFTopology*", "LPMFTOPOLOGY")
+
+
+@r1535@
+typedef IMFTopologyNode;
+typedef PMFTOPOLOGYNODE;
+position p;
+@@
+- PMFTOPOLOGYNODE@p
++ IMFTopologyNode *
+
+@script:python depends on report@
+p << r1535.p;
+@@
+WARN(p[0], "IMFTopologyNode*", "PMFTOPOLOGYNODE")
+
+
+@r1536@
+typedef LPMFTOPOLOGYNODE;
+position p;
+@@
+- LPMFTOPOLOGYNODE@p
++ IMFTopologyNode *
+
+@script:python depends on report@
+p << r1536.p;
+@@
+WARN(p[0], "IMFTopologyNode*", "LPMFTOPOLOGYNODE")
+
+
+@r1537@
+typedef IMFTopologyNodeAttributeEditor;
+typedef PMFTOPOLOGYNODEATTRIBUTEEDITOR;
+position p;
+@@
+- PMFTOPOLOGYNODEATTRIBUTEEDITOR@p
++ IMFTopologyNodeAttributeEditor *
+
+@script:python depends on report@
+p << r1537.p;
+@@
+WARN(p[0], "IMFTopologyNodeAttributeEditor*", "PMFTOPOLOGYNODEATTRIBUTEEDITOR")
+
+
+@r1538@
+typedef LPMFTOPOLOGYNODEATTRIBUTEEDITOR;
+position p;
+@@
+- LPMFTOPOLOGYNODEATTRIBUTEEDITOR@p
++ IMFTopologyNodeAttributeEditor *
+
+@script:python depends on report@
+p << r1538.p;
+@@
+WARN(p[0], "IMFTopologyNodeAttributeEditor*", "LPMFTOPOLOGYNODEATTRIBUTEEDITOR")
+
+
+@r1539@
+typedef IMFTopologyServiceLookup;
+typedef PMFTOPOLOGYSERVICELOOKUP;
+position p;
+@@
+- PMFTOPOLOGYSERVICELOOKUP@p
++ IMFTopologyServiceLookup *
+
+@script:python depends on report@
+p << r1539.p;
+@@
+WARN(p[0], "IMFTopologyServiceLookup*", "PMFTOPOLOGYSERVICELOOKUP")
+
+
+@r1540@
+typedef LPMFTOPOLOGYSERVICELOOKUP;
+position p;
+@@
+- LPMFTOPOLOGYSERVICELOOKUP@p
++ IMFTopologyServiceLookup *
+
+@script:python depends on report@
+p << r1540.p;
+@@
+WARN(p[0], "IMFTopologyServiceLookup*", "LPMFTOPOLOGYSERVICELOOKUP")
+
+
+@r1541@
+typedef IMFTopologyServiceLookupClient;
+typedef PMFTOPOLOGYSERVICELOOKUPCLIENT;
+position p;
+@@
+- PMFTOPOLOGYSERVICELOOKUPCLIENT@p
++ IMFTopologyServiceLookupClient *
+
+@script:python depends on report@
+p << r1541.p;
+@@
+WARN(p[0], "IMFTopologyServiceLookupClient*", "PMFTOPOLOGYSERVICELOOKUPCLIENT")
+
+
+@r1542@
+typedef LPMFTOPOLOGYSERVICELOOKUPCLIENT;
+position p;
+@@
+- LPMFTOPOLOGYSERVICELOOKUPCLIENT@p
++ IMFTopologyServiceLookupClient *
+
+@script:python depends on report@
+p << r1542.p;
+@@
+WARN(p[0], "IMFTopologyServiceLookupClient*", "LPMFTOPOLOGYSERVICELOOKUPCLIENT")
+
+
+@r1543@
+typedef IMFTrackedSample;
+typedef PMFTRACKEDSAMPLE;
+position p;
+@@
+- PMFTRACKEDSAMPLE@p
++ IMFTrackedSample *
+
+@script:python depends on report@
+p << r1543.p;
+@@
+WARN(p[0], "IMFTrackedSample*", "PMFTRACKEDSAMPLE")
+
+
+@r1544@
+typedef LPMFTRACKEDSAMPLE;
+position p;
+@@
+- LPMFTRACKEDSAMPLE@p
++ IMFTrackedSample *
+
+@script:python depends on report@
+p << r1544.p;
+@@
+WARN(p[0], "IMFTrackedSample*", "LPMFTRACKEDSAMPLE")
+
+
+@r1545@
+typedef IMFTransform;
+typedef PMFTRANSFORM;
+position p;
+@@
+- PMFTRANSFORM@p
++ IMFTransform *
+
+@script:python depends on report@
+p << r1545.p;
+@@
+WARN(p[0], "IMFTransform*", "PMFTRANSFORM")
+
+
+@r1546@
+typedef LPMFTRANSFORM;
+position p;
+@@
+- LPMFTRANSFORM@p
++ IMFTransform *
+
+@script:python depends on report@
+p << r1546.p;
+@@
+WARN(p[0], "IMFTransform*", "LPMFTRANSFORM")
+
+
+@r1547@
+typedef IMFVideoDeviceID;
+typedef PMFVIDEODEVICEID;
+position p;
+@@
+- PMFVIDEODEVICEID@p
++ IMFVideoDeviceID *
+
+@script:python depends on report@
+p << r1547.p;
+@@
+WARN(p[0], "IMFVideoDeviceID*", "PMFVIDEODEVICEID")
+
+
+@r1548@
+typedef LPMFVIDEODEVICEID;
+position p;
+@@
+- LPMFVIDEODEVICEID@p
++ IMFVideoDeviceID *
+
+@script:python depends on report@
+p << r1548.p;
+@@
+WARN(p[0], "IMFVideoDeviceID*", "LPMFVIDEODEVICEID")
+
+
+@r1549@
+typedef IMFVideoDisplayControl;
+typedef PMFVIDEODISPLAYCONTROL;
+position p;
+@@
+- PMFVIDEODISPLAYCONTROL@p
++ IMFVideoDisplayControl *
+
+@script:python depends on report@
+p << r1549.p;
+@@
+WARN(p[0], "IMFVideoDisplayControl*", "PMFVIDEODISPLAYCONTROL")
+
+
+@r1550@
+typedef LPMFVIDEODISPLAYCONTROL;
+position p;
+@@
+- LPMFVIDEODISPLAYCONTROL@p
++ IMFVideoDisplayControl *
+
+@script:python depends on report@
+p << r1550.p;
+@@
+WARN(p[0], "IMFVideoDisplayControl*", "LPMFVIDEODISPLAYCONTROL")
+
+
+@r1551@
+typedef IMFVideoMediaType;
+typedef PMFVIDEOMEDIATYPE;
+position p;
+@@
+- PMFVIDEOMEDIATYPE@p
++ IMFVideoMediaType *
+
+@script:python depends on report@
+p << r1551.p;
+@@
+WARN(p[0], "IMFVideoMediaType*", "PMFVIDEOMEDIATYPE")
+
+
+@r1552@
+typedef LPMFVIDEOMEDIATYPE;
+position p;
+@@
+- LPMFVIDEOMEDIATYPE@p
++ IMFVideoMediaType *
+
+@script:python depends on report@
+p << r1552.p;
+@@
+WARN(p[0], "IMFVideoMediaType*", "LPMFVIDEOMEDIATYPE")
+
+
+@r1553@
+typedef IMFVideoMixerBitmap;
+typedef PMFVIDEOMIXERBITMAP;
+position p;
+@@
+- PMFVIDEOMIXERBITMAP@p
++ IMFVideoMixerBitmap *
+
+@script:python depends on report@
+p << r1553.p;
+@@
+WARN(p[0], "IMFVideoMixerBitmap*", "PMFVIDEOMIXERBITMAP")
+
+
+@r1554@
+typedef LPMFVIDEOMIXERBITMAP;
+position p;
+@@
+- LPMFVIDEOMIXERBITMAP@p
++ IMFVideoMixerBitmap *
+
+@script:python depends on report@
+p << r1554.p;
+@@
+WARN(p[0], "IMFVideoMixerBitmap*", "LPMFVIDEOMIXERBITMAP")
+
+
+@r1555@
+typedef IMFVideoMixerControl2;
+typedef PMFVIDEOMIXERCONTROL2;
+position p;
+@@
+- PMFVIDEOMIXERCONTROL2@p
++ IMFVideoMixerControl2 *
+
+@script:python depends on report@
+p << r1555.p;
+@@
+WARN(p[0], "IMFVideoMixerControl2*", "PMFVIDEOMIXERCONTROL2")
+
+
+@r1556@
+typedef LPMFVIDEOMIXERCONTROL2;
+position p;
+@@
+- LPMFVIDEOMIXERCONTROL2@p
++ IMFVideoMixerControl2 *
+
+@script:python depends on report@
+p << r1556.p;
+@@
+WARN(p[0], "IMFVideoMixerControl2*", "LPMFVIDEOMIXERCONTROL2")
+
+
+@r1557@
+typedef IMFVideoPositionMapper;
+typedef PMFVIDEOPOSITIONMAPPER;
+position p;
+@@
+- PMFVIDEOPOSITIONMAPPER@p
++ IMFVideoPositionMapper *
+
+@script:python depends on report@
+p << r1557.p;
+@@
+WARN(p[0], "IMFVideoPositionMapper*", "PMFVIDEOPOSITIONMAPPER")
+
+
+@r1558@
+typedef LPMFVIDEOPOSITIONMAPPER;
+position p;
+@@
+- LPMFVIDEOPOSITIONMAPPER@p
++ IMFVideoPositionMapper *
+
+@script:python depends on report@
+p << r1558.p;
+@@
+WARN(p[0], "IMFVideoPositionMapper*", "LPMFVIDEOPOSITIONMAPPER")
+
+
+@r1559@
+typedef IMFVideoPresenter;
+typedef PMFVIDEOPRESENTER;
+position p;
+@@
+- PMFVIDEOPRESENTER@p
++ IMFVideoPresenter *
+
+@script:python depends on report@
+p << r1559.p;
+@@
+WARN(p[0], "IMFVideoPresenter*", "PMFVIDEOPRESENTER")
+
+
+@r1560@
+typedef LPMFVIDEOPRESENTER;
+position p;
+@@
+- LPMFVIDEOPRESENTER@p
++ IMFVideoPresenter *
+
+@script:python depends on report@
+p << r1560.p;
+@@
+WARN(p[0], "IMFVideoPresenter*", "LPMFVIDEOPRESENTER")
+
+
+@r1561@
+typedef IMFVideoProcessor;
+typedef PMFVIDEOPROCESSOR;
+position p;
+@@
+- PMFVIDEOPROCESSOR@p
++ IMFVideoProcessor *
+
+@script:python depends on report@
+p << r1561.p;
+@@
+WARN(p[0], "IMFVideoProcessor*", "PMFVIDEOPROCESSOR")
+
+
+@r1562@
+typedef LPMFVIDEOPROCESSOR;
+position p;
+@@
+- LPMFVIDEOPROCESSOR@p
++ IMFVideoProcessor *
+
+@script:python depends on report@
+p << r1562.p;
+@@
+WARN(p[0], "IMFVideoProcessor*", "LPMFVIDEOPROCESSOR")
+
+
+@r1563@
+typedef IMFVideoRenderer;
+typedef PMFVIDEORENDERER;
+position p;
+@@
+- PMFVIDEORENDERER@p
++ IMFVideoRenderer *
+
+@script:python depends on report@
+p << r1563.p;
+@@
+WARN(p[0], "IMFVideoRenderer*", "PMFVIDEORENDERER")
+
+
+@r1564@
+typedef LPMFVIDEORENDERER;
+position p;
+@@
+- LPMFVIDEORENDERER@p
++ IMFVideoRenderer *
+
+@script:python depends on report@
+p << r1564.p;
+@@
+WARN(p[0], "IMFVideoRenderer*", "LPMFVIDEORENDERER")
+
+
+@r1565@
+typedef IMFVideoSampleAllocator;
+typedef PMFVIDEOSAMPLEALLOCATOR;
+position p;
+@@
+- PMFVIDEOSAMPLEALLOCATOR@p
++ IMFVideoSampleAllocator *
+
+@script:python depends on report@
+p << r1565.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocator*", "PMFVIDEOSAMPLEALLOCATOR")
+
+
+@r1566@
+typedef LPMFVIDEOSAMPLEALLOCATOR;
+position p;
+@@
+- LPMFVIDEOSAMPLEALLOCATOR@p
++ IMFVideoSampleAllocator *
+
+@script:python depends on report@
+p << r1566.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocator*", "LPMFVIDEOSAMPLEALLOCATOR")
+
+
+@r1567@
+typedef IMFVideoSampleAllocatorCallback;
+typedef PMFVIDEOSAMPLEALLOCATORCALLBACK;
+position p;
+@@
+- PMFVIDEOSAMPLEALLOCATORCALLBACK@p
++ IMFVideoSampleAllocatorCallback *
+
+@script:python depends on report@
+p << r1567.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocatorCallback*", "PMFVIDEOSAMPLEALLOCATORCALLBACK")
+
+
+@r1568@
+typedef LPMFVIDEOSAMPLEALLOCATORCALLBACK;
+position p;
+@@
+- LPMFVIDEOSAMPLEALLOCATORCALLBACK@p
++ IMFVideoSampleAllocatorCallback *
+
+@script:python depends on report@
+p << r1568.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocatorCallback*", "LPMFVIDEOSAMPLEALLOCATORCALLBACK")
+
+
+@r1569@
+typedef IMFVideoSampleAllocatorEx;
+typedef PMFVIDEOSAMPLEALLOCATOREX;
+position p;
+@@
+- PMFVIDEOSAMPLEALLOCATOREX@p
++ IMFVideoSampleAllocatorEx *
+
+@script:python depends on report@
+p << r1569.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocatorEx*", "PMFVIDEOSAMPLEALLOCATOREX")
+
+
+@r1570@
+typedef LPMFVIDEOSAMPLEALLOCATOREX;
+position p;
+@@
+- LPMFVIDEOSAMPLEALLOCATOREX@p
++ IMFVideoSampleAllocatorEx *
+
+@script:python depends on report@
+p << r1570.p;
+@@
+WARN(p[0], "IMFVideoSampleAllocatorEx*", "LPMFVIDEOSAMPLEALLOCATOREX")
+
+
+@r1571@
+typedef IMILBitmap;
+typedef PMILBITMAP;
+position p;
+@@
+- PMILBITMAP@p
++ IMILBitmap *
+
+@script:python depends on report@
+p << r1571.p;
+@@
+WARN(p[0], "IMILBitmap*", "PMILBITMAP")
+
+
+@r1572@
+typedef LPMILBITMAP;
+position p;
+@@
+- LPMILBITMAP@p
++ IMILBitmap *
+
+@script:python depends on report@
+p << r1572.p;
+@@
+WARN(p[0], "IMILBitmap*", "LPMILBITMAP")
+
+
+@r1573@
+typedef IMILBitmapScaler;
+typedef PMILBITMAPSCALER;
+position p;
+@@
+- PMILBITMAPSCALER@p
++ IMILBitmapScaler *
+
+@script:python depends on report@
+p << r1573.p;
+@@
+WARN(p[0], "IMILBitmapScaler*", "PMILBITMAPSCALER")
+
+
+@r1574@
+typedef LPMILBITMAPSCALER;
+position p;
+@@
+- LPMILBITMAPSCALER@p
++ IMILBitmapScaler *
+
+@script:python depends on report@
+p << r1574.p;
+@@
+WARN(p[0], "IMILBitmapScaler*", "LPMILBITMAPSCALER")
+
+
+@r1575@
 typedef IMILUnknown1;
 typedef PMILUNKNOWN1;
 position p;
@@ -15925,12 +21271,12 @@ position p;
 + IMILUnknown1 *
 
 @script:python depends on report@
-p << r1179.p;
+p << r1575.p;
 @@
 WARN(p[0], "IMILUnknown1*", "PMILUNKNOWN1")
 
 
-@r1180@
+@r1576@
 typedef LPMILUNKNOWN1;
 position p;
 @@
@@ -15938,12 +21284,12 @@ position p;
 + IMILUnknown1 *
 
 @script:python depends on report@
-p << r1180.p;
+p << r1576.p;
 @@
 WARN(p[0], "IMILUnknown1*", "LPMILUNKNOWN1")
 
 
-@r1181@
+@r1577@
 typedef IMILUnknown2;
 typedef PMILUNKNOWN2;
 position p;
@@ -15952,12 +21298,12 @@ position p;
 + IMILUnknown2 *
 
 @script:python depends on report@
-p << r1181.p;
+p << r1577.p;
 @@
 WARN(p[0], "IMILUnknown2*", "PMILUNKNOWN2")
 
 
-@r1182@
+@r1578@
 typedef LPMILUNKNOWN2;
 position p;
 @@
@@ -15965,12 +21311,12 @@ position p;
 + IMILUnknown2 *
 
 @script:python depends on report@
-p << r1182.p;
+p << r1578.p;
 @@
 WARN(p[0], "IMILUnknown2*", "LPMILUNKNOWN2")
 
 
-@r1183@
+@r1579@
 typedef IMLangConvertCharset;
 typedef PMLANGCONVERTCHARSET;
 position p;
@@ -15979,12 +21325,12 @@ position p;
 + IMLangConvertCharset *
 
 @script:python depends on report@
-p << r1183.p;
+p << r1579.p;
 @@
 WARN(p[0], "IMLangConvertCharset*", "PMLANGCONVERTCHARSET")
 
 
-@r1184@
+@r1580@
 typedef LPMLANGCONVERTCHARSET;
 position p;
 @@
@@ -15992,12 +21338,12 @@ position p;
 + IMLangConvertCharset *
 
 @script:python depends on report@
-p << r1184.p;
+p << r1580.p;
 @@
 WARN(p[0], "IMLangConvertCharset*", "LPMLANGCONVERTCHARSET")
 
 
-@r1185@
+@r1581@
 typedef IMLangFontLink;
 typedef PMLANGFONTLINK;
 position p;
@@ -16006,12 +21352,12 @@ position p;
 + IMLangFontLink *
 
 @script:python depends on report@
-p << r1185.p;
+p << r1581.p;
 @@
 WARN(p[0], "IMLangFontLink*", "PMLANGFONTLINK")
 
 
-@r1186@
+@r1582@
 typedef LPMLANGFONTLINK;
 position p;
 @@
@@ -16019,12 +21365,12 @@ position p;
 + IMLangFontLink *
 
 @script:python depends on report@
-p << r1186.p;
+p << r1582.p;
 @@
 WARN(p[0], "IMLangFontLink*", "LPMLANGFONTLINK")
 
 
-@r1187@
+@r1583@
 typedef IMLangFontLink2;
 typedef PMLANGFONTLINK2;
 position p;
@@ -16033,12 +21379,12 @@ position p;
 + IMLangFontLink2 *
 
 @script:python depends on report@
-p << r1187.p;
+p << r1583.p;
 @@
 WARN(p[0], "IMLangFontLink2*", "PMLANGFONTLINK2")
 
 
-@r1188@
+@r1584@
 typedef LPMLANGFONTLINK2;
 position p;
 @@
@@ -16046,12 +21392,12 @@ position p;
 + IMLangFontLink2 *
 
 @script:python depends on report@
-p << r1188.p;
+p << r1584.p;
 @@
 WARN(p[0], "IMLangFontLink2*", "LPMLANGFONTLINK2")
 
 
-@r1189@
+@r1585@
 typedef IMLangLineBreakConsole;
 typedef PMLANGLINEBREAKCONSOLE;
 position p;
@@ -16060,12 +21406,12 @@ position p;
 + IMLangLineBreakConsole *
 
 @script:python depends on report@
-p << r1189.p;
+p << r1585.p;
 @@
 WARN(p[0], "IMLangLineBreakConsole*", "PMLANGLINEBREAKCONSOLE")
 
 
-@r1190@
+@r1586@
 typedef LPMLANGLINEBREAKCONSOLE;
 position p;
 @@
@@ -16073,12 +21419,12 @@ position p;
 + IMLangLineBreakConsole *
 
 @script:python depends on report@
-p << r1190.p;
+p << r1586.p;
 @@
 WARN(p[0], "IMLangLineBreakConsole*", "LPMLANGLINEBREAKCONSOLE")
 
 
-@r1191@
+@r1587@
 typedef IMMDevice;
 typedef PMMDEVICE;
 position p;
@@ -16087,12 +21433,12 @@ position p;
 + IMMDevice *
 
 @script:python depends on report@
-p << r1191.p;
+p << r1587.p;
 @@
 WARN(p[0], "IMMDevice*", "PMMDEVICE")
 
 
-@r1192@
+@r1588@
 typedef LPMMDEVICE;
 position p;
 @@
@@ -16100,12 +21446,12 @@ position p;
 + IMMDevice *
 
 @script:python depends on report@
-p << r1192.p;
+p << r1588.p;
 @@
 WARN(p[0], "IMMDevice*", "LPMMDEVICE")
 
 
-@r1193@
+@r1589@
 typedef IMMDeviceCollection;
 typedef PMMDEVICECOLLECTION;
 position p;
@@ -16114,12 +21460,12 @@ position p;
 + IMMDeviceCollection *
 
 @script:python depends on report@
-p << r1193.p;
+p << r1589.p;
 @@
 WARN(p[0], "IMMDeviceCollection*", "PMMDEVICECOLLECTION")
 
 
-@r1194@
+@r1590@
 typedef LPMMDEVICECOLLECTION;
 position p;
 @@
@@ -16127,12 +21473,12 @@ position p;
 + IMMDeviceCollection *
 
 @script:python depends on report@
-p << r1194.p;
+p << r1590.p;
 @@
 WARN(p[0], "IMMDeviceCollection*", "LPMMDEVICECOLLECTION")
 
 
-@r1195@
+@r1591@
 typedef IMMDeviceEnumerator;
 typedef PMMDEVICEENUMERATOR;
 position p;
@@ -16141,12 +21487,12 @@ position p;
 + IMMDeviceEnumerator *
 
 @script:python depends on report@
-p << r1195.p;
+p << r1591.p;
 @@
 WARN(p[0], "IMMDeviceEnumerator*", "PMMDEVICEENUMERATOR")
 
 
-@r1196@
+@r1592@
 typedef LPMMDEVICEENUMERATOR;
 position p;
 @@
@@ -16154,12 +21500,12 @@ position p;
 + IMMDeviceEnumerator *
 
 @script:python depends on report@
-p << r1196.p;
+p << r1592.p;
 @@
 WARN(p[0], "IMMDeviceEnumerator*", "LPMMDEVICEENUMERATOR")
 
 
-@r1197@
+@r1593@
 typedef IMMEndpoint;
 typedef PMMENDPOINT;
 position p;
@@ -16168,12 +21514,12 @@ position p;
 + IMMEndpoint *
 
 @script:python depends on report@
-p << r1197.p;
+p << r1593.p;
 @@
 WARN(p[0], "IMMEndpoint*", "PMMENDPOINT")
 
 
-@r1198@
+@r1594@
 typedef LPMMENDPOINT;
 position p;
 @@
@@ -16181,12 +21527,12 @@ position p;
 + IMMEndpoint *
 
 @script:python depends on report@
-p << r1198.p;
+p << r1594.p;
 @@
 WARN(p[0], "IMMEndpoint*", "LPMMENDPOINT")
 
 
-@r1199@
+@r1595@
 typedef IMXAttributes;
 typedef PMXATTRIBUTES;
 position p;
@@ -16195,12 +21541,12 @@ position p;
 + IMXAttributes *
 
 @script:python depends on report@
-p << r1199.p;
+p << r1595.p;
 @@
 WARN(p[0], "IMXAttributes*", "PMXATTRIBUTES")
 
 
-@r1200@
+@r1596@
 typedef LPMXATTRIBUTES;
 position p;
 @@
@@ -16208,12 +21554,12 @@ position p;
 + IMXAttributes *
 
 @script:python depends on report@
-p << r1200.p;
+p << r1596.p;
 @@
 WARN(p[0], "IMXAttributes*", "LPMXATTRIBUTES")
 
 
-@r1201@
+@r1597@
 typedef IMXNamespaceManager;
 typedef PMXNAMESPACEMANAGER;
 position p;
@@ -16222,12 +21568,12 @@ position p;
 + IMXNamespaceManager *
 
 @script:python depends on report@
-p << r1201.p;
+p << r1597.p;
 @@
 WARN(p[0], "IMXNamespaceManager*", "PMXNAMESPACEMANAGER")
 
 
-@r1202@
+@r1598@
 typedef LPMXNAMESPACEMANAGER;
 position p;
 @@
@@ -16235,12 +21581,12 @@ position p;
 + IMXNamespaceManager *
 
 @script:python depends on report@
-p << r1202.p;
+p << r1598.p;
 @@
 WARN(p[0], "IMXNamespaceManager*", "LPMXNAMESPACEMANAGER")
 
 
-@r1203@
+@r1599@
 typedef IMXWriter;
 typedef PMXWRITER;
 position p;
@@ -16249,12 +21595,12 @@ position p;
 + IMXWriter *
 
 @script:python depends on report@
-p << r1203.p;
+p << r1599.p;
 @@
 WARN(p[0], "IMXWriter*", "PMXWRITER")
 
 
-@r1204@
+@r1600@
 typedef LPMXWRITER;
 position p;
 @@
@@ -16262,12 +21608,12 @@ position p;
 + IMXWriter *
 
 @script:python depends on report@
-p << r1204.p;
+p << r1600.p;
 @@
 WARN(p[0], "IMXWriter*", "LPMXWRITER")
 
 
-@r1205@
+@r1601@
 typedef IMalloc;
 typedef PMALLOC;
 position p;
@@ -16276,12 +21622,12 @@ position p;
 + IMalloc *
 
 @script:python depends on report@
-p << r1205.p;
+p << r1601.p;
 @@
 WARN(p[0], "IMalloc*", "PMALLOC")
 
 
-@r1206@
+@r1602@
 typedef LPMALLOC;
 position p;
 @@
@@ -16289,12 +21635,12 @@ position p;
 + IMalloc *
 
 @script:python depends on report@
-p << r1206.p;
+p << r1602.p;
 @@
 WARN(p[0], "IMalloc*", "LPMALLOC")
 
 
-@r1207@
+@r1603@
 typedef IMalloc16;
 typedef PMALLOC16;
 position p;
@@ -16303,12 +21649,12 @@ position p;
 + IMalloc16 *
 
 @script:python depends on report@
-p << r1207.p;
+p << r1603.p;
 @@
 WARN(p[0], "IMalloc16*", "PMALLOC16")
 
 
-@r1208@
+@r1604@
 typedef LPMALLOC16;
 position p;
 @@
@@ -16316,12 +21662,93 @@ position p;
 + IMalloc16 *
 
 @script:python depends on report@
-p << r1208.p;
+p << r1604.p;
 @@
 WARN(p[0], "IMalloc16*", "LPMALLOC16")
 
 
-@r1209@
+@r1605@
+typedef IMarkupContainer;
+typedef PMARKUPCONTAINER;
+position p;
+@@
+- PMARKUPCONTAINER@p
++ IMarkupContainer *
+
+@script:python depends on report@
+p << r1605.p;
+@@
+WARN(p[0], "IMarkupContainer*", "PMARKUPCONTAINER")
+
+
+@r1606@
+typedef LPMARKUPCONTAINER;
+position p;
+@@
+- LPMARKUPCONTAINER@p
++ IMarkupContainer *
+
+@script:python depends on report@
+p << r1606.p;
+@@
+WARN(p[0], "IMarkupContainer*", "LPMARKUPCONTAINER")
+
+
+@r1607@
+typedef IMarkupPointer2;
+typedef PMARKUPPOINTER2;
+position p;
+@@
+- PMARKUPPOINTER2@p
++ IMarkupPointer2 *
+
+@script:python depends on report@
+p << r1607.p;
+@@
+WARN(p[0], "IMarkupPointer2*", "PMARKUPPOINTER2")
+
+
+@r1608@
+typedef LPMARKUPPOINTER2;
+position p;
+@@
+- LPMARKUPPOINTER2@p
++ IMarkupPointer2 *
+
+@script:python depends on report@
+p << r1608.p;
+@@
+WARN(p[0], "IMarkupPointer2*", "LPMARKUPPOINTER2")
+
+
+@r1609@
+typedef IMarkupServices;
+typedef PMARKUPSERVICES;
+position p;
+@@
+- PMARKUPSERVICES@p
++ IMarkupServices *
+
+@script:python depends on report@
+p << r1609.p;
+@@
+WARN(p[0], "IMarkupServices*", "PMARKUPSERVICES")
+
+
+@r1610@
+typedef LPMARKUPSERVICES;
+position p;
+@@
+- LPMARKUPSERVICES@p
++ IMarkupServices *
+
+@script:python depends on report@
+p << r1610.p;
+@@
+WARN(p[0], "IMarkupServices*", "LPMARKUPSERVICES")
+
+
+@r1611@
 typedef IMarshal;
 typedef PMARSHAL;
 position p;
@@ -16330,12 +21757,12 @@ position p;
 + IMarshal *
 
 @script:python depends on report@
-p << r1209.p;
+p << r1611.p;
 @@
 WARN(p[0], "IMarshal*", "PMARSHAL")
 
 
-@r1210@
+@r1612@
 typedef LPMARSHAL;
 position p;
 @@
@@ -16343,12 +21770,12 @@ position p;
 + IMarshal *
 
 @script:python depends on report@
-p << r1210.p;
+p << r1612.p;
 @@
 WARN(p[0], "IMarshal*", "LPMARSHAL")
 
 
-@r1211@
+@r1613@
 typedef IMatch;
 typedef PMATCH;
 position p;
@@ -16357,12 +21784,12 @@ position p;
 + IMatch *
 
 @script:python depends on report@
-p << r1211.p;
+p << r1613.p;
 @@
 WARN(p[0], "IMatch*", "PMATCH")
 
 
-@r1212@
+@r1614@
 typedef LPMATCH;
 position p;
 @@
@@ -16370,12 +21797,12 @@ position p;
 + IMatch *
 
 @script:python depends on report@
-p << r1212.p;
+p << r1614.p;
 @@
 WARN(p[0], "IMatch*", "LPMATCH")
 
 
-@r1213@
+@r1615@
 typedef IMatch2;
 typedef PMATCH2;
 position p;
@@ -16384,12 +21811,12 @@ position p;
 + IMatch2 *
 
 @script:python depends on report@
-p << r1213.p;
+p << r1615.p;
 @@
 WARN(p[0], "IMatch2*", "PMATCH2")
 
 
-@r1214@
+@r1616@
 typedef LPMATCH2;
 position p;
 @@
@@ -16397,12 +21824,12 @@ position p;
 + IMatch2 *
 
 @script:python depends on report@
-p << r1214.p;
+p << r1616.p;
 @@
 WARN(p[0], "IMatch2*", "LPMATCH2")
 
 
-@r1215@
+@r1617@
 typedef IMatchCollection;
 typedef PMATCHCOLLECTION;
 position p;
@@ -16411,12 +21838,12 @@ position p;
 + IMatchCollection *
 
 @script:python depends on report@
-p << r1215.p;
+p << r1617.p;
 @@
 WARN(p[0], "IMatchCollection*", "PMATCHCOLLECTION")
 
 
-@r1216@
+@r1618@
 typedef LPMATCHCOLLECTION;
 position p;
 @@
@@ -16424,12 +21851,12 @@ position p;
 + IMatchCollection *
 
 @script:python depends on report@
-p << r1216.p;
+p << r1618.p;
 @@
 WARN(p[0], "IMatchCollection*", "LPMATCHCOLLECTION")
 
 
-@r1217@
+@r1619@
 typedef IMatchCollection2;
 typedef PMATCHCOLLECTION2;
 position p;
@@ -16438,12 +21865,12 @@ position p;
 + IMatchCollection2 *
 
 @script:python depends on report@
-p << r1217.p;
+p << r1619.p;
 @@
 WARN(p[0], "IMatchCollection2*", "PMATCHCOLLECTION2")
 
 
-@r1218@
+@r1620@
 typedef LPMATCHCOLLECTION2;
 position p;
 @@
@@ -16451,12 +21878,39 @@ position p;
 + IMatchCollection2 *
 
 @script:python depends on report@
-p << r1218.p;
+p << r1620.p;
 @@
 WARN(p[0], "IMatchCollection2*", "LPMATCHCOLLECTION2")
 
 
-@r1219@
+@r1621@
+typedef IMediaBuffer;
+typedef PMEDIABUFFER;
+position p;
+@@
+- PMEDIABUFFER@p
++ IMediaBuffer *
+
+@script:python depends on report@
+p << r1621.p;
+@@
+WARN(p[0], "IMediaBuffer*", "PMEDIABUFFER")
+
+
+@r1622@
+typedef LPMEDIABUFFER;
+position p;
+@@
+- LPMEDIABUFFER@p
++ IMediaBuffer *
+
+@script:python depends on report@
+p << r1622.p;
+@@
+WARN(p[0], "IMediaBuffer*", "LPMEDIABUFFER")
+
+
+@r1623@
 typedef IMediaControl;
 typedef PMEDIACONTROL;
 position p;
@@ -16465,12 +21919,12 @@ position p;
 + IMediaControl *
 
 @script:python depends on report@
-p << r1219.p;
+p << r1623.p;
 @@
 WARN(p[0], "IMediaControl*", "PMEDIACONTROL")
 
 
-@r1220@
+@r1624@
 typedef LPMEDIACONTROL;
 position p;
 @@
@@ -16478,12 +21932,12 @@ position p;
 + IMediaControl *
 
 @script:python depends on report@
-p << r1220.p;
+p << r1624.p;
 @@
 WARN(p[0], "IMediaControl*", "LPMEDIACONTROL")
 
 
-@r1221@
+@r1625@
 typedef IMediaDet;
 typedef PMEDIADET;
 position p;
@@ -16492,12 +21946,12 @@ position p;
 + IMediaDet *
 
 @script:python depends on report@
-p << r1221.p;
+p << r1625.p;
 @@
 WARN(p[0], "IMediaDet*", "PMEDIADET")
 
 
-@r1222@
+@r1626@
 typedef LPMEDIADET;
 position p;
 @@
@@ -16505,12 +21959,39 @@ position p;
 + IMediaDet *
 
 @script:python depends on report@
-p << r1222.p;
+p << r1626.p;
 @@
 WARN(p[0], "IMediaDet*", "LPMEDIADET")
 
 
-@r1223@
+@r1627@
+typedef IMediaDeviceStatics;
+typedef PMEDIADEVICESTATICS;
+position p;
+@@
+- PMEDIADEVICESTATICS@p
++ IMediaDeviceStatics *
+
+@script:python depends on report@
+p << r1627.p;
+@@
+WARN(p[0], "IMediaDeviceStatics*", "PMEDIADEVICESTATICS")
+
+
+@r1628@
+typedef LPMEDIADEVICESTATICS;
+position p;
+@@
+- LPMEDIADEVICESTATICS@p
++ IMediaDeviceStatics *
+
+@script:python depends on report@
+p << r1628.p;
+@@
+WARN(p[0], "IMediaDeviceStatics*", "LPMEDIADEVICESTATICS")
+
+
+@r1629@
 typedef IMediaEventEx;
 typedef PMEDIAEVENTEX;
 position p;
@@ -16519,12 +22000,12 @@ position p;
 + IMediaEventEx *
 
 @script:python depends on report@
-p << r1223.p;
+p << r1629.p;
 @@
 WARN(p[0], "IMediaEventEx*", "PMEDIAEVENTEX")
 
 
-@r1224@
+@r1630@
 typedef LPMEDIAEVENTEX;
 position p;
 @@
@@ -16532,12 +22013,12 @@ position p;
 + IMediaEventEx *
 
 @script:python depends on report@
-p << r1224.p;
+p << r1630.p;
 @@
 WARN(p[0], "IMediaEventEx*", "LPMEDIAEVENTEX")
 
 
-@r1225@
+@r1631@
 typedef IMediaEventSink;
 typedef PMEDIAEVENTSINK;
 position p;
@@ -16546,12 +22027,12 @@ position p;
 + IMediaEventSink *
 
 @script:python depends on report@
-p << r1225.p;
+p << r1631.p;
 @@
 WARN(p[0], "IMediaEventSink*", "PMEDIAEVENTSINK")
 
 
-@r1226@
+@r1632@
 typedef LPMEDIAEVENTSINK;
 position p;
 @@
@@ -16559,12 +22040,12 @@ position p;
 + IMediaEventSink *
 
 @script:python depends on report@
-p << r1226.p;
+p << r1632.p;
 @@
 WARN(p[0], "IMediaEventSink*", "LPMEDIAEVENTSINK")
 
 
-@r1227@
+@r1633@
 typedef IMediaFilter;
 typedef PMEDIAFILTER;
 position p;
@@ -16573,12 +22054,12 @@ position p;
 + IMediaFilter *
 
 @script:python depends on report@
-p << r1227.p;
+p << r1633.p;
 @@
 WARN(p[0], "IMediaFilter*", "PMEDIAFILTER")
 
 
-@r1228@
+@r1634@
 typedef LPMEDIAFILTER;
 position p;
 @@
@@ -16586,12 +22067,66 @@ position p;
 + IMediaFilter *
 
 @script:python depends on report@
-p << r1228.p;
+p << r1634.p;
 @@
 WARN(p[0], "IMediaFilter*", "LPMEDIAFILTER")
 
 
-@r1229@
+@r1635@
+typedef IMediaObject;
+typedef PMEDIAOBJECT;
+position p;
+@@
+- PMEDIAOBJECT@p
++ IMediaObject *
+
+@script:python depends on report@
+p << r1635.p;
+@@
+WARN(p[0], "IMediaObject*", "PMEDIAOBJECT")
+
+
+@r1636@
+typedef LPMEDIAOBJECT;
+position p;
+@@
+- LPMEDIAOBJECT@p
++ IMediaObject *
+
+@script:python depends on report@
+p << r1636.p;
+@@
+WARN(p[0], "IMediaObject*", "LPMEDIAOBJECT")
+
+
+@r1637@
+typedef IMediaObjectInPlace;
+typedef PMEDIAOBJECTINPLACE;
+position p;
+@@
+- PMEDIAOBJECTINPLACE@p
++ IMediaObjectInPlace *
+
+@script:python depends on report@
+p << r1637.p;
+@@
+WARN(p[0], "IMediaObjectInPlace*", "PMEDIAOBJECTINPLACE")
+
+
+@r1638@
+typedef LPMEDIAOBJECTINPLACE;
+position p;
+@@
+- LPMEDIAOBJECTINPLACE@p
++ IMediaObjectInPlace *
+
+@script:python depends on report@
+p << r1638.p;
+@@
+WARN(p[0], "IMediaObjectInPlace*", "LPMEDIAOBJECTINPLACE")
+
+
+@r1639@
 typedef IMediaPosition;
 typedef PMEDIAPOSITION;
 position p;
@@ -16600,12 +22135,12 @@ position p;
 + IMediaPosition *
 
 @script:python depends on report@
-p << r1229.p;
+p << r1639.p;
 @@
 WARN(p[0], "IMediaPosition*", "PMEDIAPOSITION")
 
 
-@r1230@
+@r1640@
 typedef LPMEDIAPOSITION;
 position p;
 @@
@@ -16613,12 +22148,12 @@ position p;
 + IMediaPosition *
 
 @script:python depends on report@
-p << r1230.p;
+p << r1640.p;
 @@
 WARN(p[0], "IMediaPosition*", "LPMEDIAPOSITION")
 
 
-@r1231@
+@r1641@
 typedef IMediaSample2;
 typedef PMEDIASAMPLE2;
 position p;
@@ -16627,12 +22162,12 @@ position p;
 + IMediaSample2 *
 
 @script:python depends on report@
-p << r1231.p;
+p << r1641.p;
 @@
 WARN(p[0], "IMediaSample2*", "PMEDIASAMPLE2")
 
 
-@r1232@
+@r1642@
 typedef LPMEDIASAMPLE2;
 position p;
 @@
@@ -16640,12 +22175,12 @@ position p;
 + IMediaSample2 *
 
 @script:python depends on report@
-p << r1232.p;
+p << r1642.p;
 @@
 WARN(p[0], "IMediaSample2*", "LPMEDIASAMPLE2")
 
 
-@r1233@
+@r1643@
 typedef IMediaSeeking;
 typedef PMEDIASEEKING;
 position p;
@@ -16654,12 +22189,12 @@ position p;
 + IMediaSeeking *
 
 @script:python depends on report@
-p << r1233.p;
+p << r1643.p;
 @@
 WARN(p[0], "IMediaSeeking*", "PMEDIASEEKING")
 
 
-@r1234@
+@r1644@
 typedef LPMEDIASEEKING;
 position p;
 @@
@@ -16667,12 +22202,39 @@ position p;
 + IMediaSeeking *
 
 @script:python depends on report@
-p << r1234.p;
+p << r1644.p;
 @@
 WARN(p[0], "IMediaSeeking*", "LPMEDIASEEKING")
 
 
-@r1235@
+@r1645@
+typedef IMediaStreamFilter;
+typedef PMEDIASTREAMFILTER;
+position p;
+@@
+- PMEDIASTREAMFILTER@p
++ IMediaStreamFilter *
+
+@script:python depends on report@
+p << r1645.p;
+@@
+WARN(p[0], "IMediaStreamFilter*", "PMEDIASTREAMFILTER")
+
+
+@r1646@
+typedef LPMEDIASTREAMFILTER;
+position p;
+@@
+- LPMEDIASTREAMFILTER@p
++ IMediaStreamFilter *
+
+@script:python depends on report@
+p << r1646.p;
+@@
+WARN(p[0], "IMediaStreamFilter*", "LPMEDIASTREAMFILTER")
+
+
+@r1647@
 typedef IMemAllocator;
 typedef PMEMALLOCATOR;
 position p;
@@ -16681,12 +22243,12 @@ position p;
 + IMemAllocator *
 
 @script:python depends on report@
-p << r1235.p;
+p << r1647.p;
 @@
 WARN(p[0], "IMemAllocator*", "PMEMALLOCATOR")
 
 
-@r1236@
+@r1648@
 typedef LPMEMALLOCATOR;
 position p;
 @@
@@ -16694,12 +22256,12 @@ position p;
 + IMemAllocator *
 
 @script:python depends on report@
-p << r1236.p;
+p << r1648.p;
 @@
 WARN(p[0], "IMemAllocator*", "LPMEMALLOCATOR")
 
 
-@r1237@
+@r1649@
 typedef IMemInputPin;
 typedef PMEMINPUTPIN;
 position p;
@@ -16708,12 +22270,12 @@ position p;
 + IMemInputPin *
 
 @script:python depends on report@
-p << r1237.p;
+p << r1649.p;
 @@
 WARN(p[0], "IMemInputPin*", "PMEMINPUTPIN")
 
 
-@r1238@
+@r1650@
 typedef LPMEMINPUTPIN;
 position p;
 @@
@@ -16721,12 +22283,12 @@ position p;
 + IMemInputPin *
 
 @script:python depends on report@
-p << r1238.p;
+p << r1650.p;
 @@
 WARN(p[0], "IMemInputPin*", "LPMEMINPUTPIN")
 
 
-@r1239@
+@r1651@
 typedef IMetaDataDispenserEx;
 typedef PMETADATADISPENSEREX;
 position p;
@@ -16735,12 +22297,12 @@ position p;
 + IMetaDataDispenserEx *
 
 @script:python depends on report@
-p << r1239.p;
+p << r1651.p;
 @@
 WARN(p[0], "IMetaDataDispenserEx*", "PMETADATADISPENSEREX")
 
 
-@r1240@
+@r1652@
 typedef LPMETADATADISPENSEREX;
 position p;
 @@
@@ -16748,12 +22310,12 @@ position p;
 + IMetaDataDispenserEx *
 
 @script:python depends on report@
-p << r1240.p;
+p << r1652.p;
 @@
 WARN(p[0], "IMetaDataDispenserEx*", "LPMETADATADISPENSEREX")
 
 
-@r1241@
+@r1653@
 typedef IMimeBody;
 typedef PMIMEBODY;
 position p;
@@ -16762,12 +22324,12 @@ position p;
 + IMimeBody *
 
 @script:python depends on report@
-p << r1241.p;
+p << r1653.p;
 @@
 WARN(p[0], "IMimeBody*", "PMIMEBODY")
 
 
-@r1242@
+@r1654@
 typedef LPMIMEBODY;
 position p;
 @@
@@ -16775,12 +22337,12 @@ position p;
 + IMimeBody *
 
 @script:python depends on report@
-p << r1242.p;
+p << r1654.p;
 @@
 WARN(p[0], "IMimeBody*", "LPMIMEBODY")
 
 
-@r1243@
+@r1655@
 typedef IMimeInternational;
 typedef PMIMEINTERNATIONAL;
 position p;
@@ -16789,12 +22351,12 @@ position p;
 + IMimeInternational *
 
 @script:python depends on report@
-p << r1243.p;
+p << r1655.p;
 @@
 WARN(p[0], "IMimeInternational*", "PMIMEINTERNATIONAL")
 
 
-@r1244@
+@r1656@
 typedef LPMIMEINTERNATIONAL;
 position p;
 @@
@@ -16802,12 +22364,12 @@ position p;
 + IMimeInternational *
 
 @script:python depends on report@
-p << r1244.p;
+p << r1656.p;
 @@
 WARN(p[0], "IMimeInternational*", "LPMIMEINTERNATIONAL")
 
 
-@r1245@
+@r1657@
 typedef IMimeMessage;
 typedef PMIMEMESSAGE;
 position p;
@@ -16816,12 +22378,12 @@ position p;
 + IMimeMessage *
 
 @script:python depends on report@
-p << r1245.p;
+p << r1657.p;
 @@
 WARN(p[0], "IMimeMessage*", "PMIMEMESSAGE")
 
 
-@r1246@
+@r1658@
 typedef LPMIMEMESSAGE;
 position p;
 @@
@@ -16829,12 +22391,12 @@ position p;
 + IMimeMessage *
 
 @script:python depends on report@
-p << r1246.p;
+p << r1658.p;
 @@
 WARN(p[0], "IMimeMessage*", "LPMIMEMESSAGE")
 
 
-@r1247@
+@r1659@
 typedef IMimePropertySchema;
 typedef PMIMEPROPERTYSCHEMA;
 position p;
@@ -16843,12 +22405,12 @@ position p;
 + IMimePropertySchema *
 
 @script:python depends on report@
-p << r1247.p;
+p << r1659.p;
 @@
 WARN(p[0], "IMimePropertySchema*", "PMIMEPROPERTYSCHEMA")
 
 
-@r1248@
+@r1660@
 typedef LPMIMEPROPERTYSCHEMA;
 position p;
 @@
@@ -16856,12 +22418,12 @@ position p;
 + IMimePropertySchema *
 
 @script:python depends on report@
-p << r1248.p;
+p << r1660.p;
 @@
 WARN(p[0], "IMimePropertySchema*", "LPMIMEPROPERTYSCHEMA")
 
 
-@r1249@
+@r1661@
 typedef IMimeSecurity;
 typedef PMIMESECURITY;
 position p;
@@ -16870,12 +22432,12 @@ position p;
 + IMimeSecurity *
 
 @script:python depends on report@
-p << r1249.p;
+p << r1661.p;
 @@
 WARN(p[0], "IMimeSecurity*", "PMIMESECURITY")
 
 
-@r1250@
+@r1662@
 typedef LPMIMESECURITY;
 position p;
 @@
@@ -16883,12 +22445,12 @@ position p;
 + IMimeSecurity *
 
 @script:python depends on report@
-p << r1250.p;
+p << r1662.p;
 @@
 WARN(p[0], "IMimeSecurity*", "LPMIMESECURITY")
 
 
-@r1251@
+@r1663@
 typedef IMoniker;
 typedef PMONIKER;
 position p;
@@ -16897,12 +22459,12 @@ position p;
 + IMoniker *
 
 @script:python depends on report@
-p << r1251.p;
+p << r1663.p;
 @@
 WARN(p[0], "IMoniker*", "PMONIKER")
 
 
-@r1252@
+@r1664@
 typedef LPMONIKER;
 position p;
 @@
@@ -16910,12 +22472,12 @@ position p;
 + IMoniker *
 
 @script:python depends on report@
-p << r1252.p;
+p << r1664.p;
 @@
 WARN(p[0], "IMoniker*", "LPMONIKER")
 
 
-@r1253@
+@r1665@
 typedef IMonikerProp;
 typedef PMONIKERPROP;
 position p;
@@ -16924,12 +22486,12 @@ position p;
 + IMonikerProp *
 
 @script:python depends on report@
-p << r1253.p;
+p << r1665.p;
 @@
 WARN(p[0], "IMonikerProp*", "PMONIKERPROP")
 
 
-@r1254@
+@r1666@
 typedef LPMONIKERPROP;
 position p;
 @@
@@ -16937,12 +22499,12 @@ position p;
 + IMonikerProp *
 
 @script:python depends on report@
-p << r1254.p;
+p << r1666.p;
 @@
 WARN(p[0], "IMonikerProp*", "LPMONIKERPROP")
 
 
-@r1255@
+@r1667@
 typedef IMultiLanguage;
 typedef PMULTILANGUAGE;
 position p;
@@ -16951,12 +22513,12 @@ position p;
 + IMultiLanguage *
 
 @script:python depends on report@
-p << r1255.p;
+p << r1667.p;
 @@
 WARN(p[0], "IMultiLanguage*", "PMULTILANGUAGE")
 
 
-@r1256@
+@r1668@
 typedef LPMULTILANGUAGE;
 position p;
 @@
@@ -16964,12 +22526,12 @@ position p;
 + IMultiLanguage *
 
 @script:python depends on report@
-p << r1256.p;
+p << r1668.p;
 @@
 WARN(p[0], "IMultiLanguage*", "LPMULTILANGUAGE")
 
 
-@r1257@
+@r1669@
 typedef IMultiLanguage3;
 typedef PMULTILANGUAGE3;
 position p;
@@ -16978,12 +22540,12 @@ position p;
 + IMultiLanguage3 *
 
 @script:python depends on report@
-p << r1257.p;
+p << r1669.p;
 @@
 WARN(p[0], "IMultiLanguage3*", "PMULTILANGUAGE3")
 
 
-@r1258@
+@r1670@
 typedef LPMULTILANGUAGE3;
 position p;
 @@
@@ -16991,12 +22553,12 @@ position p;
 + IMultiLanguage3 *
 
 @script:python depends on report@
-p << r1258.p;
+p << r1670.p;
 @@
 WARN(p[0], "IMultiLanguage3*", "LPMULTILANGUAGE3")
 
 
-@r1259@
+@r1671@
 typedef IMultiQI;
 typedef PMULTIQI;
 position p;
@@ -17005,12 +22567,12 @@ position p;
 + IMultiQI *
 
 @script:python depends on report@
-p << r1259.p;
+p << r1671.p;
 @@
 WARN(p[0], "IMultiQI*", "PMULTIQI")
 
 
-@r1260@
+@r1672@
 typedef LPMULTIQI;
 position p;
 @@
@@ -17018,12 +22580,12 @@ position p;
 + IMultiQI *
 
 @script:python depends on report@
-p << r1260.p;
+p << r1672.p;
 @@
 WARN(p[0], "IMultiQI*", "LPMULTIQI")
 
 
-@r1261@
+@r1673@
 typedef INameSpaceTreeControl2;
 typedef PNAMESPACETREECONTROL2;
 position p;
@@ -17032,12 +22594,12 @@ position p;
 + INameSpaceTreeControl2 *
 
 @script:python depends on report@
-p << r1261.p;
+p << r1673.p;
 @@
 WARN(p[0], "INameSpaceTreeControl2*", "PNAMESPACETREECONTROL2")
 
 
-@r1262@
+@r1674@
 typedef LPNAMESPACETREECONTROL2;
 position p;
 @@
@@ -17045,12 +22607,12 @@ position p;
 + INameSpaceTreeControl2 *
 
 @script:python depends on report@
-p << r1262.p;
+p << r1674.p;
 @@
 WARN(p[0], "INameSpaceTreeControl2*", "LPNAMESPACETREECONTROL2")
 
 
-@r1263@
+@r1675@
 typedef INameSpaceTreeControlEvents;
 typedef PNAMESPACETREECONTROLEVENTS;
 position p;
@@ -17059,12 +22621,12 @@ position p;
 + INameSpaceTreeControlEvents *
 
 @script:python depends on report@
-p << r1263.p;
+p << r1675.p;
 @@
 WARN(p[0], "INameSpaceTreeControlEvents*", "PNAMESPACETREECONTROLEVENTS")
 
 
-@r1264@
+@r1676@
 typedef LPNAMESPACETREECONTROLEVENTS;
 position p;
 @@
@@ -17072,12 +22634,12 @@ position p;
 + INameSpaceTreeControlEvents *
 
 @script:python depends on report@
-p << r1264.p;
+p << r1676.p;
 @@
 WARN(p[0], "INameSpaceTreeControlEvents*", "LPNAMESPACETREECONTROLEVENTS")
 
 
-@r1265@
+@r1677@
 typedef INetCfg;
 typedef PNETCFG;
 position p;
@@ -17086,12 +22648,12 @@ position p;
 + INetCfg *
 
 @script:python depends on report@
-p << r1265.p;
+p << r1677.p;
 @@
 WARN(p[0], "INetCfg*", "PNETCFG")
 
 
-@r1266@
+@r1678@
 typedef LPNETCFG;
 position p;
 @@
@@ -17099,12 +22661,12 @@ position p;
 + INetCfg *
 
 @script:python depends on report@
-p << r1266.p;
+p << r1678.p;
 @@
 WARN(p[0], "INetCfg*", "LPNETCFG")
 
 
-@r1267@
+@r1679@
 typedef INetCfgLock;
 typedef PNETCFGLOCK;
 position p;
@@ -17113,12 +22675,12 @@ position p;
 + INetCfgLock *
 
 @script:python depends on report@
-p << r1267.p;
+p << r1679.p;
 @@
 WARN(p[0], "INetCfgLock*", "PNETCFGLOCK")
 
 
-@r1268@
+@r1680@
 typedef LPNETCFGLOCK;
 position p;
 @@
@@ -17126,12 +22688,12 @@ position p;
 + INetCfgLock *
 
 @script:python depends on report@
-p << r1268.p;
+p << r1680.p;
 @@
 WARN(p[0], "INetCfgLock*", "LPNETCFGLOCK")
 
 
-@r1269@
+@r1681@
 typedef INetFwAuthorizedApplication;
 typedef PNETFWAUTHORIZEDAPPLICATION;
 position p;
@@ -17140,12 +22702,12 @@ position p;
 + INetFwAuthorizedApplication *
 
 @script:python depends on report@
-p << r1269.p;
+p << r1681.p;
 @@
 WARN(p[0], "INetFwAuthorizedApplication*", "PNETFWAUTHORIZEDAPPLICATION")
 
 
-@r1270@
+@r1682@
 typedef LPNETFWAUTHORIZEDAPPLICATION;
 position p;
 @@
@@ -17153,12 +22715,12 @@ position p;
 + INetFwAuthorizedApplication *
 
 @script:python depends on report@
-p << r1270.p;
+p << r1682.p;
 @@
 WARN(p[0], "INetFwAuthorizedApplication*", "LPNETFWAUTHORIZEDAPPLICATION")
 
 
-@r1271@
+@r1683@
 typedef INetFwAuthorizedApplications;
 typedef PNETFWAUTHORIZEDAPPLICATIONS;
 position p;
@@ -17167,12 +22729,12 @@ position p;
 + INetFwAuthorizedApplications *
 
 @script:python depends on report@
-p << r1271.p;
+p << r1683.p;
 @@
 WARN(p[0], "INetFwAuthorizedApplications*", "PNETFWAUTHORIZEDAPPLICATIONS")
 
 
-@r1272@
+@r1684@
 typedef LPNETFWAUTHORIZEDAPPLICATIONS;
 position p;
 @@
@@ -17180,12 +22742,12 @@ position p;
 + INetFwAuthorizedApplications *
 
 @script:python depends on report@
-p << r1272.p;
+p << r1684.p;
 @@
 WARN(p[0], "INetFwAuthorizedApplications*", "LPNETFWAUTHORIZEDAPPLICATIONS")
 
 
-@r1273@
+@r1685@
 typedef INetFwMgr;
 typedef PNETFWMGR;
 position p;
@@ -17194,12 +22756,12 @@ position p;
 + INetFwMgr *
 
 @script:python depends on report@
-p << r1273.p;
+p << r1685.p;
 @@
 WARN(p[0], "INetFwMgr*", "PNETFWMGR")
 
 
-@r1274@
+@r1686@
 typedef LPNETFWMGR;
 position p;
 @@
@@ -17207,12 +22769,12 @@ position p;
 + INetFwMgr *
 
 @script:python depends on report@
-p << r1274.p;
+p << r1686.p;
 @@
 WARN(p[0], "INetFwMgr*", "LPNETFWMGR")
 
 
-@r1275@
+@r1687@
 typedef INetFwOpenPort;
 typedef PNETFWOPENPORT;
 position p;
@@ -17221,12 +22783,12 @@ position p;
 + INetFwOpenPort *
 
 @script:python depends on report@
-p << r1275.p;
+p << r1687.p;
 @@
 WARN(p[0], "INetFwOpenPort*", "PNETFWOPENPORT")
 
 
-@r1276@
+@r1688@
 typedef LPNETFWOPENPORT;
 position p;
 @@
@@ -17234,12 +22796,12 @@ position p;
 + INetFwOpenPort *
 
 @script:python depends on report@
-p << r1276.p;
+p << r1688.p;
 @@
 WARN(p[0], "INetFwOpenPort*", "LPNETFWOPENPORT")
 
 
-@r1277@
+@r1689@
 typedef INetFwOpenPorts;
 typedef PNETFWOPENPORTS;
 position p;
@@ -17248,12 +22810,12 @@ position p;
 + INetFwOpenPorts *
 
 @script:python depends on report@
-p << r1277.p;
+p << r1689.p;
 @@
 WARN(p[0], "INetFwOpenPorts*", "PNETFWOPENPORTS")
 
 
-@r1278@
+@r1690@
 typedef LPNETFWOPENPORTS;
 position p;
 @@
@@ -17261,12 +22823,12 @@ position p;
 + INetFwOpenPorts *
 
 @script:python depends on report@
-p << r1278.p;
+p << r1690.p;
 @@
 WARN(p[0], "INetFwOpenPorts*", "LPNETFWOPENPORTS")
 
 
-@r1279@
+@r1691@
 typedef INetFwPolicy;
 typedef PNETFWPOLICY;
 position p;
@@ -17275,12 +22837,12 @@ position p;
 + INetFwPolicy *
 
 @script:python depends on report@
-p << r1279.p;
+p << r1691.p;
 @@
 WARN(p[0], "INetFwPolicy*", "PNETFWPOLICY")
 
 
-@r1280@
+@r1692@
 typedef LPNETFWPOLICY;
 position p;
 @@
@@ -17288,12 +22850,12 @@ position p;
 + INetFwPolicy *
 
 @script:python depends on report@
-p << r1280.p;
+p << r1692.p;
 @@
 WARN(p[0], "INetFwPolicy*", "LPNETFWPOLICY")
 
 
-@r1281@
+@r1693@
 typedef INetFwPolicy2;
 typedef PNETFWPOLICY2;
 position p;
@@ -17302,12 +22864,12 @@ position p;
 + INetFwPolicy2 *
 
 @script:python depends on report@
-p << r1281.p;
+p << r1693.p;
 @@
 WARN(p[0], "INetFwPolicy2*", "PNETFWPOLICY2")
 
 
-@r1282@
+@r1694@
 typedef LPNETFWPOLICY2;
 position p;
 @@
@@ -17315,12 +22877,12 @@ position p;
 + INetFwPolicy2 *
 
 @script:python depends on report@
-p << r1282.p;
+p << r1694.p;
 @@
 WARN(p[0], "INetFwPolicy2*", "LPNETFWPOLICY2")
 
 
-@r1283@
+@r1695@
 typedef INetFwProfile;
 typedef PNETFWPROFILE;
 position p;
@@ -17329,12 +22891,12 @@ position p;
 + INetFwProfile *
 
 @script:python depends on report@
-p << r1283.p;
+p << r1695.p;
 @@
 WARN(p[0], "INetFwProfile*", "PNETFWPROFILE")
 
 
-@r1284@
+@r1696@
 typedef LPNETFWPROFILE;
 position p;
 @@
@@ -17342,12 +22904,39 @@ position p;
 + INetFwProfile *
 
 @script:python depends on report@
-p << r1284.p;
+p << r1696.p;
 @@
 WARN(p[0], "INetFwProfile*", "LPNETFWPROFILE")
 
 
-@r1285@
+@r1697@
+typedef INetFwRules;
+typedef PNETFWRULES;
+position p;
+@@
+- PNETFWRULES@p
++ INetFwRules *
+
+@script:python depends on report@
+p << r1697.p;
+@@
+WARN(p[0], "INetFwRules*", "PNETFWRULES")
+
+
+@r1698@
+typedef LPNETFWRULES;
+position p;
+@@
+- LPNETFWRULES@p
++ INetFwRules *
+
+@script:python depends on report@
+p << r1698.p;
+@@
+WARN(p[0], "INetFwRules*", "LPNETFWRULES")
+
+
+@r1699@
 typedef INetFwService;
 typedef PNETFWSERVICE;
 position p;
@@ -17356,12 +22945,12 @@ position p;
 + INetFwService *
 
 @script:python depends on report@
-p << r1285.p;
+p << r1699.p;
 @@
 WARN(p[0], "INetFwService*", "PNETFWSERVICE")
 
 
-@r1286@
+@r1700@
 typedef LPNETFWSERVICE;
 position p;
 @@
@@ -17369,12 +22958,12 @@ position p;
 + INetFwService *
 
 @script:python depends on report@
-p << r1286.p;
+p << r1700.p;
 @@
 WARN(p[0], "INetFwService*", "LPNETFWSERVICE")
 
 
-@r1287@
+@r1701@
 typedef INetFwServices;
 typedef PNETFWSERVICES;
 position p;
@@ -17383,12 +22972,12 @@ position p;
 + INetFwServices *
 
 @script:python depends on report@
-p << r1287.p;
+p << r1701.p;
 @@
 WARN(p[0], "INetFwServices*", "PNETFWSERVICES")
 
 
-@r1288@
+@r1702@
 typedef LPNETFWSERVICES;
 position p;
 @@
@@ -17396,12 +22985,12 @@ position p;
 + INetFwServices *
 
 @script:python depends on report@
-p << r1288.p;
+p << r1702.p;
 @@
 WARN(p[0], "INetFwServices*", "LPNETFWSERVICES")
 
 
-@r1289@
+@r1703@
 typedef INetwork;
 typedef PNETWORK;
 position p;
@@ -17410,12 +22999,12 @@ position p;
 + INetwork *
 
 @script:python depends on report@
-p << r1289.p;
+p << r1703.p;
 @@
 WARN(p[0], "INetwork*", "PNETWORK")
 
 
-@r1290@
+@r1704@
 typedef LPNETWORK;
 position p;
 @@
@@ -17423,12 +23012,12 @@ position p;
 + INetwork *
 
 @script:python depends on report@
-p << r1290.p;
+p << r1704.p;
 @@
 WARN(p[0], "INetwork*", "LPNETWORK")
 
 
-@r1291@
+@r1705@
 typedef INetworkConnection;
 typedef PNETWORKCONNECTION;
 position p;
@@ -17437,12 +23026,12 @@ position p;
 + INetworkConnection *
 
 @script:python depends on report@
-p << r1291.p;
+p << r1705.p;
 @@
 WARN(p[0], "INetworkConnection*", "PNETWORKCONNECTION")
 
 
-@r1292@
+@r1706@
 typedef LPNETWORKCONNECTION;
 position p;
 @@
@@ -17450,12 +23039,12 @@ position p;
 + INetworkConnection *
 
 @script:python depends on report@
-p << r1292.p;
+p << r1706.p;
 @@
 WARN(p[0], "INetworkConnection*", "LPNETWORKCONNECTION")
 
 
-@r1293@
+@r1707@
 typedef INetworkConnectionCost;
 typedef PNETWORKCONNECTIONCOST;
 position p;
@@ -17464,12 +23053,12 @@ position p;
 + INetworkConnectionCost *
 
 @script:python depends on report@
-p << r1293.p;
+p << r1707.p;
 @@
 WARN(p[0], "INetworkConnectionCost*", "PNETWORKCONNECTIONCOST")
 
 
-@r1294@
+@r1708@
 typedef LPNETWORKCONNECTIONCOST;
 position p;
 @@
@@ -17477,12 +23066,12 @@ position p;
 + INetworkConnectionCost *
 
 @script:python depends on report@
-p << r1294.p;
+p << r1708.p;
 @@
 WARN(p[0], "INetworkConnectionCost*", "LPNETWORKCONNECTIONCOST")
 
 
-@r1295@
+@r1709@
 typedef INetworkCostManager;
 typedef PNETWORKCOSTMANAGER;
 position p;
@@ -17491,12 +23080,12 @@ position p;
 + INetworkCostManager *
 
 @script:python depends on report@
-p << r1295.p;
+p << r1709.p;
 @@
 WARN(p[0], "INetworkCostManager*", "PNETWORKCOSTMANAGER")
 
 
-@r1296@
+@r1710@
 typedef LPNETWORKCOSTMANAGER;
 position p;
 @@
@@ -17504,12 +23093,12 @@ position p;
 + INetworkCostManager *
 
 @script:python depends on report@
-p << r1296.p;
+p << r1710.p;
 @@
 WARN(p[0], "INetworkCostManager*", "LPNETWORKCOSTMANAGER")
 
 
-@r1297@
+@r1711@
 typedef INetworkListManager;
 typedef PNETWORKLISTMANAGER;
 position p;
@@ -17518,12 +23107,12 @@ position p;
 + INetworkListManager *
 
 @script:python depends on report@
-p << r1297.p;
+p << r1711.p;
 @@
 WARN(p[0], "INetworkListManager*", "PNETWORKLISTMANAGER")
 
 
-@r1298@
+@r1712@
 typedef LPNETWORKLISTMANAGER;
 position p;
 @@
@@ -17531,12 +23120,12 @@ position p;
 + INetworkListManager *
 
 @script:python depends on report@
-p << r1298.p;
+p << r1712.p;
 @@
 WARN(p[0], "INetworkListManager*", "LPNETWORKLISTMANAGER")
 
 
-@r1299@
+@r1713@
 typedef INewWindowManager;
 typedef PNEWWINDOWMANAGER;
 position p;
@@ -17545,12 +23134,12 @@ position p;
 + INewWindowManager *
 
 @script:python depends on report@
-p << r1299.p;
+p << r1713.p;
 @@
 WARN(p[0], "INewWindowManager*", "PNEWWINDOWMANAGER")
 
 
-@r1300@
+@r1714@
 typedef LPNEWWINDOWMANAGER;
 position p;
 @@
@@ -17558,12 +23147,12 @@ position p;
 + INewWindowManager *
 
 @script:python depends on report@
-p << r1300.p;
+p << r1714.p;
 @@
 WARN(p[0], "INewWindowManager*", "LPNEWWINDOWMANAGER")
 
 
-@r1301@
+@r1715@
 typedef IObjContext;
 typedef POBJCONTEXT;
 position p;
@@ -17572,12 +23161,12 @@ position p;
 + IObjContext *
 
 @script:python depends on report@
-p << r1301.p;
+p << r1715.p;
 @@
 WARN(p[0], "IObjContext*", "POBJCONTEXT")
 
 
-@r1302@
+@r1716@
 typedef LPOBJCONTEXT;
 position p;
 @@
@@ -17585,12 +23174,12 @@ position p;
 + IObjContext *
 
 @script:python depends on report@
-p << r1302.p;
+p << r1716.p;
 @@
 WARN(p[0], "IObjContext*", "LPOBJCONTEXT")
 
 
-@r1303@
+@r1717@
 typedef IObjMgr;
 typedef POBJMGR;
 position p;
@@ -17599,12 +23188,12 @@ position p;
 + IObjMgr *
 
 @script:python depends on report@
-p << r1303.p;
+p << r1717.p;
 @@
 WARN(p[0], "IObjMgr*", "POBJMGR")
 
 
-@r1304@
+@r1718@
 typedef LPOBJMGR;
 position p;
 @@
@@ -17612,12 +23201,12 @@ position p;
 + IObjMgr *
 
 @script:python depends on report@
-p << r1304.p;
+p << r1718.p;
 @@
 WARN(p[0], "IObjMgr*", "LPOBJMGR")
 
 
-@r1305@
+@r1719@
 typedef IObjectIdentity;
 typedef POBJECTIDENTITY;
 position p;
@@ -17626,12 +23215,12 @@ position p;
 + IObjectIdentity *
 
 @script:python depends on report@
-p << r1305.p;
+p << r1719.p;
 @@
 WARN(p[0], "IObjectIdentity*", "POBJECTIDENTITY")
 
 
-@r1306@
+@r1720@
 typedef LPOBJECTIDENTITY;
 position p;
 @@
@@ -17639,12 +23228,12 @@ position p;
 + IObjectIdentity *
 
 @script:python depends on report@
-p << r1306.p;
+p << r1720.p;
 @@
 WARN(p[0], "IObjectIdentity*", "LPOBJECTIDENTITY")
 
 
-@r1307@
+@r1721@
 typedef IObjectSafety;
 typedef POBJECTSAFETY;
 position p;
@@ -17653,12 +23242,12 @@ position p;
 + IObjectSafety *
 
 @script:python depends on report@
-p << r1307.p;
+p << r1721.p;
 @@
 WARN(p[0], "IObjectSafety*", "POBJECTSAFETY")
 
 
-@r1308@
+@r1722@
 typedef LPOBJECTSAFETY;
 position p;
 @@
@@ -17666,12 +23255,12 @@ position p;
 + IObjectSafety *
 
 @script:python depends on report@
-p << r1308.p;
+p << r1722.p;
 @@
 WARN(p[0], "IObjectSafety*", "LPOBJECTSAFETY")
 
 
-@r1309@
+@r1723@
 typedef IObjectWithSite;
 typedef POBJECTWITHSITE;
 position p;
@@ -17680,12 +23269,12 @@ position p;
 + IObjectWithSite *
 
 @script:python depends on report@
-p << r1309.p;
+p << r1723.p;
 @@
 WARN(p[0], "IObjectWithSite*", "POBJECTWITHSITE")
 
 
-@r1310@
+@r1724@
 typedef LPOBJECTWITHSITE;
 position p;
 @@
@@ -17693,12 +23282,12 @@ position p;
 + IObjectWithSite *
 
 @script:python depends on report@
-p << r1310.p;
+p << r1724.p;
 @@
 WARN(p[0], "IObjectWithSite*", "LPOBJECTWITHSITE")
 
 
-@r1311@
+@r1725@
 typedef IOleAdviseHolder;
 typedef POLEADVISEHOLDER;
 position p;
@@ -17707,12 +23296,12 @@ position p;
 + IOleAdviseHolder *
 
 @script:python depends on report@
-p << r1311.p;
+p << r1725.p;
 @@
 WARN(p[0], "IOleAdviseHolder*", "POLEADVISEHOLDER")
 
 
-@r1312@
+@r1726@
 typedef LPOLEADVISEHOLDER;
 position p;
 @@
@@ -17720,12 +23309,12 @@ position p;
 + IOleAdviseHolder *
 
 @script:python depends on report@
-p << r1312.p;
+p << r1726.p;
 @@
 WARN(p[0], "IOleAdviseHolder*", "LPOLEADVISEHOLDER")
 
 
-@r1313@
+@r1727@
 typedef IOleCache2;
 typedef POLECACHE2;
 position p;
@@ -17734,12 +23323,12 @@ position p;
 + IOleCache2 *
 
 @script:python depends on report@
-p << r1313.p;
+p << r1727.p;
 @@
 WARN(p[0], "IOleCache2*", "POLECACHE2")
 
 
-@r1314@
+@r1728@
 typedef LPOLECACHE2;
 position p;
 @@
@@ -17747,12 +23336,12 @@ position p;
 + IOleCache2 *
 
 @script:python depends on report@
-p << r1314.p;
+p << r1728.p;
 @@
 WARN(p[0], "IOleCache2*", "LPOLECACHE2")
 
 
-@r1315@
+@r1729@
 typedef IOleCacheControl;
 typedef POLECACHECONTROL;
 position p;
@@ -17761,12 +23350,12 @@ position p;
 + IOleCacheControl *
 
 @script:python depends on report@
-p << r1315.p;
+p << r1729.p;
 @@
 WARN(p[0], "IOleCacheControl*", "POLECACHECONTROL")
 
 
-@r1316@
+@r1730@
 typedef LPOLECACHECONTROL;
 position p;
 @@
@@ -17774,12 +23363,12 @@ position p;
 + IOleCacheControl *
 
 @script:python depends on report@
-p << r1316.p;
+p << r1730.p;
 @@
 WARN(p[0], "IOleCacheControl*", "LPOLECACHECONTROL")
 
 
-@r1317@
+@r1731@
 typedef IOleClientSite;
 typedef POLECLIENTSITE;
 position p;
@@ -17788,12 +23377,12 @@ position p;
 + IOleClientSite *
 
 @script:python depends on report@
-p << r1317.p;
+p << r1731.p;
 @@
 WARN(p[0], "IOleClientSite*", "POLECLIENTSITE")
 
 
-@r1318@
+@r1732@
 typedef LPOLECLIENTSITE;
 position p;
 @@
@@ -17801,12 +23390,12 @@ position p;
 + IOleClientSite *
 
 @script:python depends on report@
-p << r1318.p;
+p << r1732.p;
 @@
 WARN(p[0], "IOleClientSite*", "LPOLECLIENTSITE")
 
 
-@r1319@
+@r1733@
 typedef IOleCommandTarget;
 typedef POLECOMMANDTARGET;
 position p;
@@ -17815,12 +23404,12 @@ position p;
 + IOleCommandTarget *
 
 @script:python depends on report@
-p << r1319.p;
+p << r1733.p;
 @@
 WARN(p[0], "IOleCommandTarget*", "POLECOMMANDTARGET")
 
 
-@r1320@
+@r1734@
 typedef LPOLECOMMANDTARGET;
 position p;
 @@
@@ -17828,12 +23417,12 @@ position p;
 + IOleCommandTarget *
 
 @script:python depends on report@
-p << r1320.p;
+p << r1734.p;
 @@
 WARN(p[0], "IOleCommandTarget*", "LPOLECOMMANDTARGET")
 
 
-@r1321@
+@r1735@
 typedef IOleContainer;
 typedef POLECONTAINER;
 position p;
@@ -17842,12 +23431,12 @@ position p;
 + IOleContainer *
 
 @script:python depends on report@
-p << r1321.p;
+p << r1735.p;
 @@
 WARN(p[0], "IOleContainer*", "POLECONTAINER")
 
 
-@r1322@
+@r1736@
 typedef LPOLECONTAINER;
 position p;
 @@
@@ -17855,12 +23444,12 @@ position p;
 + IOleContainer *
 
 @script:python depends on report@
-p << r1322.p;
+p << r1736.p;
 @@
 WARN(p[0], "IOleContainer*", "LPOLECONTAINER")
 
 
-@r1323@
+@r1737@
 typedef IOleControl;
 typedef POLECONTROL;
 position p;
@@ -17869,12 +23458,12 @@ position p;
 + IOleControl *
 
 @script:python depends on report@
-p << r1323.p;
+p << r1737.p;
 @@
 WARN(p[0], "IOleControl*", "POLECONTROL")
 
 
-@r1324@
+@r1738@
 typedef LPOLECONTROL;
 position p;
 @@
@@ -17882,12 +23471,12 @@ position p;
 + IOleControl *
 
 @script:python depends on report@
-p << r1324.p;
+p << r1738.p;
 @@
 WARN(p[0], "IOleControl*", "LPOLECONTROL")
 
 
-@r1325@
+@r1739@
 typedef IOleControlSite;
 typedef POLECONTROLSITE;
 position p;
@@ -17896,12 +23485,12 @@ position p;
 + IOleControlSite *
 
 @script:python depends on report@
-p << r1325.p;
+p << r1739.p;
 @@
 WARN(p[0], "IOleControlSite*", "POLECONTROLSITE")
 
 
-@r1326@
+@r1740@
 typedef LPOLECONTROLSITE;
 position p;
 @@
@@ -17909,12 +23498,12 @@ position p;
 + IOleControlSite *
 
 @script:python depends on report@
-p << r1326.p;
+p << r1740.p;
 @@
 WARN(p[0], "IOleControlSite*", "LPOLECONTROLSITE")
 
 
-@r1327@
+@r1741@
 typedef IOleDocument;
 typedef POLEDOCUMENT;
 position p;
@@ -17923,12 +23512,12 @@ position p;
 + IOleDocument *
 
 @script:python depends on report@
-p << r1327.p;
+p << r1741.p;
 @@
 WARN(p[0], "IOleDocument*", "POLEDOCUMENT")
 
 
-@r1328@
+@r1742@
 typedef LPOLEDOCUMENT;
 position p;
 @@
@@ -17936,12 +23525,12 @@ position p;
 + IOleDocument *
 
 @script:python depends on report@
-p << r1328.p;
+p << r1742.p;
 @@
 WARN(p[0], "IOleDocument*", "LPOLEDOCUMENT")
 
 
-@r1329@
+@r1743@
 typedef IOleDocumentSite;
 typedef POLEDOCUMENTSITE;
 position p;
@@ -17950,12 +23539,12 @@ position p;
 + IOleDocumentSite *
 
 @script:python depends on report@
-p << r1329.p;
+p << r1743.p;
 @@
 WARN(p[0], "IOleDocumentSite*", "POLEDOCUMENTSITE")
 
 
-@r1330@
+@r1744@
 typedef LPOLEDOCUMENTSITE;
 position p;
 @@
@@ -17963,12 +23552,12 @@ position p;
 + IOleDocumentSite *
 
 @script:python depends on report@
-p << r1330.p;
+p << r1744.p;
 @@
 WARN(p[0], "IOleDocumentSite*", "LPOLEDOCUMENTSITE")
 
 
-@r1331@
+@r1745@
 typedef IOleDocumentView;
 typedef POLEDOCUMENTVIEW;
 position p;
@@ -17977,12 +23566,12 @@ position p;
 + IOleDocumentView *
 
 @script:python depends on report@
-p << r1331.p;
+p << r1745.p;
 @@
 WARN(p[0], "IOleDocumentView*", "POLEDOCUMENTVIEW")
 
 
-@r1332@
+@r1746@
 typedef LPOLEDOCUMENTVIEW;
 position p;
 @@
@@ -17990,12 +23579,12 @@ position p;
 + IOleDocumentView *
 
 @script:python depends on report@
-p << r1332.p;
+p << r1746.p;
 @@
 WARN(p[0], "IOleDocumentView*", "LPOLEDOCUMENTVIEW")
 
 
-@r1333@
+@r1747@
 typedef IOleInPlaceActiveObject;
 typedef POLEINPLACEACTIVEOBJECT;
 position p;
@@ -18004,12 +23593,12 @@ position p;
 + IOleInPlaceActiveObject *
 
 @script:python depends on report@
-p << r1333.p;
+p << r1747.p;
 @@
 WARN(p[0], "IOleInPlaceActiveObject*", "POLEINPLACEACTIVEOBJECT")
 
 
-@r1334@
+@r1748@
 typedef LPOLEINPLACEACTIVEOBJECT;
 position p;
 @@
@@ -18017,12 +23606,12 @@ position p;
 + IOleInPlaceActiveObject *
 
 @script:python depends on report@
-p << r1334.p;
+p << r1748.p;
 @@
 WARN(p[0], "IOleInPlaceActiveObject*", "LPOLEINPLACEACTIVEOBJECT")
 
 
-@r1335@
+@r1749@
 typedef IOleInPlaceFrame;
 typedef POLEINPLACEFRAME;
 position p;
@@ -18031,12 +23620,12 @@ position p;
 + IOleInPlaceFrame *
 
 @script:python depends on report@
-p << r1335.p;
+p << r1749.p;
 @@
 WARN(p[0], "IOleInPlaceFrame*", "POLEINPLACEFRAME")
 
 
-@r1336@
+@r1750@
 typedef LPOLEINPLACEFRAME;
 position p;
 @@
@@ -18044,12 +23633,12 @@ position p;
 + IOleInPlaceFrame *
 
 @script:python depends on report@
-p << r1336.p;
+p << r1750.p;
 @@
 WARN(p[0], "IOleInPlaceFrame*", "LPOLEINPLACEFRAME")
 
 
-@r1337@
+@r1751@
 typedef IOleInPlaceObject;
 typedef POLEINPLACEOBJECT;
 position p;
@@ -18058,12 +23647,12 @@ position p;
 + IOleInPlaceObject *
 
 @script:python depends on report@
-p << r1337.p;
+p << r1751.p;
 @@
 WARN(p[0], "IOleInPlaceObject*", "POLEINPLACEOBJECT")
 
 
-@r1338@
+@r1752@
 typedef LPOLEINPLACEOBJECT;
 position p;
 @@
@@ -18071,12 +23660,12 @@ position p;
 + IOleInPlaceObject *
 
 @script:python depends on report@
-p << r1338.p;
+p << r1752.p;
 @@
 WARN(p[0], "IOleInPlaceObject*", "LPOLEINPLACEOBJECT")
 
 
-@r1339@
+@r1753@
 typedef IOleInPlaceObjectWindowless;
 typedef POLEINPLACEOBJECTWINDOWLESS;
 position p;
@@ -18085,12 +23674,12 @@ position p;
 + IOleInPlaceObjectWindowless *
 
 @script:python depends on report@
-p << r1339.p;
+p << r1753.p;
 @@
 WARN(p[0], "IOleInPlaceObjectWindowless*", "POLEINPLACEOBJECTWINDOWLESS")
 
 
-@r1340@
+@r1754@
 typedef LPOLEINPLACEOBJECTWINDOWLESS;
 position p;
 @@
@@ -18098,12 +23687,12 @@ position p;
 + IOleInPlaceObjectWindowless *
 
 @script:python depends on report@
-p << r1340.p;
+p << r1754.p;
 @@
 WARN(p[0], "IOleInPlaceObjectWindowless*", "LPOLEINPLACEOBJECTWINDOWLESS")
 
 
-@r1341@
+@r1755@
 typedef IOleInPlaceSite;
 typedef POLEINPLACESITE;
 position p;
@@ -18112,12 +23701,12 @@ position p;
 + IOleInPlaceSite *
 
 @script:python depends on report@
-p << r1341.p;
+p << r1755.p;
 @@
 WARN(p[0], "IOleInPlaceSite*", "POLEINPLACESITE")
 
 
-@r1342@
+@r1756@
 typedef LPOLEINPLACESITE;
 position p;
 @@
@@ -18125,12 +23714,12 @@ position p;
 + IOleInPlaceSite *
 
 @script:python depends on report@
-p << r1342.p;
+p << r1756.p;
 @@
 WARN(p[0], "IOleInPlaceSite*", "LPOLEINPLACESITE")
 
 
-@r1343@
+@r1757@
 typedef IOleInPlaceSiteEx;
 typedef POLEINPLACESITEEX;
 position p;
@@ -18139,12 +23728,12 @@ position p;
 + IOleInPlaceSiteEx *
 
 @script:python depends on report@
-p << r1343.p;
+p << r1757.p;
 @@
 WARN(p[0], "IOleInPlaceSiteEx*", "POLEINPLACESITEEX")
 
 
-@r1344@
+@r1758@
 typedef LPOLEINPLACESITEEX;
 position p;
 @@
@@ -18152,12 +23741,12 @@ position p;
 + IOleInPlaceSiteEx *
 
 @script:python depends on report@
-p << r1344.p;
+p << r1758.p;
 @@
 WARN(p[0], "IOleInPlaceSiteEx*", "LPOLEINPLACESITEEX")
 
 
-@r1345@
+@r1759@
 typedef IOleInPlaceSiteWindowless;
 typedef POLEINPLACESITEWINDOWLESS;
 position p;
@@ -18166,12 +23755,12 @@ position p;
 + IOleInPlaceSiteWindowless *
 
 @script:python depends on report@
-p << r1345.p;
+p << r1759.p;
 @@
 WARN(p[0], "IOleInPlaceSiteWindowless*", "POLEINPLACESITEWINDOWLESS")
 
 
-@r1346@
+@r1760@
 typedef LPOLEINPLACESITEWINDOWLESS;
 position p;
 @@
@@ -18179,12 +23768,12 @@ position p;
 + IOleInPlaceSiteWindowless *
 
 @script:python depends on report@
-p << r1346.p;
+p << r1760.p;
 @@
 WARN(p[0], "IOleInPlaceSiteWindowless*", "LPOLEINPLACESITEWINDOWLESS")
 
 
-@r1347@
+@r1761@
 typedef IOleInPlaceUIWindow;
 typedef POLEINPLACEUIWINDOW;
 position p;
@@ -18193,12 +23782,12 @@ position p;
 + IOleInPlaceUIWindow *
 
 @script:python depends on report@
-p << r1347.p;
+p << r1761.p;
 @@
 WARN(p[0], "IOleInPlaceUIWindow*", "POLEINPLACEUIWINDOW")
 
 
-@r1348@
+@r1762@
 typedef LPOLEINPLACEUIWINDOW;
 position p;
 @@
@@ -18206,12 +23795,39 @@ position p;
 + IOleInPlaceUIWindow *
 
 @script:python depends on report@
-p << r1348.p;
+p << r1762.p;
 @@
 WARN(p[0], "IOleInPlaceUIWindow*", "LPOLEINPLACEUIWINDOW")
 
 
-@r1349@
+@r1763@
+typedef IOleItemContainer;
+typedef POLEITEMCONTAINER;
+position p;
+@@
+- POLEITEMCONTAINER@p
++ IOleItemContainer *
+
+@script:python depends on report@
+p << r1763.p;
+@@
+WARN(p[0], "IOleItemContainer*", "POLEITEMCONTAINER")
+
+
+@r1764@
+typedef LPOLEITEMCONTAINER;
+position p;
+@@
+- LPOLEITEMCONTAINER@p
++ IOleItemContainer *
+
+@script:python depends on report@
+p << r1764.p;
+@@
+WARN(p[0], "IOleItemContainer*", "LPOLEITEMCONTAINER")
+
+
+@r1765@
 typedef IOleObject;
 typedef POLEOBJECT;
 position p;
@@ -18220,12 +23836,12 @@ position p;
 + IOleObject *
 
 @script:python depends on report@
-p << r1349.p;
+p << r1765.p;
 @@
 WARN(p[0], "IOleObject*", "POLEOBJECT")
 
 
-@r1350@
+@r1766@
 typedef LPOLEOBJECT;
 position p;
 @@
@@ -18233,12 +23849,12 @@ position p;
 + IOleObject *
 
 @script:python depends on report@
-p << r1350.p;
+p << r1766.p;
 @@
 WARN(p[0], "IOleObject*", "LPOLEOBJECT")
 
 
-@r1351@
+@r1767@
 typedef IOleUndoManager;
 typedef POLEUNDOMANAGER;
 position p;
@@ -18247,12 +23863,12 @@ position p;
 + IOleUndoManager *
 
 @script:python depends on report@
-p << r1351.p;
+p << r1767.p;
 @@
 WARN(p[0], "IOleUndoManager*", "POLEUNDOMANAGER")
 
 
-@r1352@
+@r1768@
 typedef LPOLEUNDOMANAGER;
 position p;
 @@
@@ -18260,12 +23876,12 @@ position p;
 + IOleUndoManager *
 
 @script:python depends on report@
-p << r1352.p;
+p << r1768.p;
 @@
 WARN(p[0], "IOleUndoManager*", "LPOLEUNDOMANAGER")
 
 
-@r1353@
+@r1769@
 typedef IOleWindow;
 typedef POLEWINDOW;
 position p;
@@ -18274,12 +23890,12 @@ position p;
 + IOleWindow *
 
 @script:python depends on report@
-p << r1353.p;
+p << r1769.p;
 @@
 WARN(p[0], "IOleWindow*", "POLEWINDOW")
 
 
-@r1354@
+@r1770@
 typedef LPOLEWINDOW;
 position p;
 @@
@@ -18287,12 +23903,12 @@ position p;
 + IOleWindow *
 
 @script:python depends on report@
-p << r1354.p;
+p << r1770.p;
 @@
 WARN(p[0], "IOleWindow*", "LPOLEWINDOW")
 
 
-@r1355@
+@r1771@
 typedef IOmHistory;
 typedef POMHISTORY;
 position p;
@@ -18301,12 +23917,12 @@ position p;
 + IOmHistory *
 
 @script:python depends on report@
-p << r1355.p;
+p << r1771.p;
 @@
 WARN(p[0], "IOmHistory*", "POMHISTORY")
 
 
-@r1356@
+@r1772@
 typedef LPOMHISTORY;
 position p;
 @@
@@ -18314,12 +23930,12 @@ position p;
 + IOmHistory *
 
 @script:python depends on report@
-p << r1356.p;
+p << r1772.p;
 @@
 WARN(p[0], "IOmHistory*", "LPOMHISTORY")
 
 
-@r1357@
+@r1773@
 typedef IOmNavigator;
 typedef POMNAVIGATOR;
 position p;
@@ -18328,12 +23944,12 @@ position p;
 + IOmNavigator *
 
 @script:python depends on report@
-p << r1357.p;
+p << r1773.p;
 @@
 WARN(p[0], "IOmNavigator*", "POMNAVIGATOR")
 
 
-@r1358@
+@r1774@
 typedef LPOMNAVIGATOR;
 position p;
 @@
@@ -18341,12 +23957,255 @@ position p;
 + IOmNavigator *
 
 @script:python depends on report@
-p << r1358.p;
+p << r1774.p;
 @@
 WARN(p[0], "IOmNavigator*", "LPOMNAVIGATOR")
 
 
-@r1359@
+@r1775@
+typedef IOpcPackage;
+typedef POPCPACKAGE;
+position p;
+@@
+- POPCPACKAGE@p
++ IOpcPackage *
+
+@script:python depends on report@
+p << r1775.p;
+@@
+WARN(p[0], "IOpcPackage*", "POPCPACKAGE")
+
+
+@r1776@
+typedef LPOPCPACKAGE;
+position p;
+@@
+- LPOPCPACKAGE@p
++ IOpcPackage *
+
+@script:python depends on report@
+p << r1776.p;
+@@
+WARN(p[0], "IOpcPackage*", "LPOPCPACKAGE")
+
+
+@r1777@
+typedef IOpcPart;
+typedef POPCPART;
+position p;
+@@
+- POPCPART@p
++ IOpcPart *
+
+@script:python depends on report@
+p << r1777.p;
+@@
+WARN(p[0], "IOpcPart*", "POPCPART")
+
+
+@r1778@
+typedef LPOPCPART;
+position p;
+@@
+- LPOPCPART@p
++ IOpcPart *
+
+@script:python depends on report@
+p << r1778.p;
+@@
+WARN(p[0], "IOpcPart*", "LPOPCPART")
+
+
+@r1779@
+typedef IOpcPartEnumerator;
+typedef POPCPARTENUMERATOR;
+position p;
+@@
+- POPCPARTENUMERATOR@p
++ IOpcPartEnumerator *
+
+@script:python depends on report@
+p << r1779.p;
+@@
+WARN(p[0], "IOpcPartEnumerator*", "POPCPARTENUMERATOR")
+
+
+@r1780@
+typedef LPOPCPARTENUMERATOR;
+position p;
+@@
+- LPOPCPARTENUMERATOR@p
++ IOpcPartEnumerator *
+
+@script:python depends on report@
+p << r1780.p;
+@@
+WARN(p[0], "IOpcPartEnumerator*", "LPOPCPARTENUMERATOR")
+
+
+@r1781@
+typedef IOpcPartSet;
+typedef POPCPARTSET;
+position p;
+@@
+- POPCPARTSET@p
++ IOpcPartSet *
+
+@script:python depends on report@
+p << r1781.p;
+@@
+WARN(p[0], "IOpcPartSet*", "POPCPARTSET")
+
+
+@r1782@
+typedef LPOPCPARTSET;
+position p;
+@@
+- LPOPCPARTSET@p
++ IOpcPartSet *
+
+@script:python depends on report@
+p << r1782.p;
+@@
+WARN(p[0], "IOpcPartSet*", "LPOPCPARTSET")
+
+
+@r1783@
+typedef IOpcPartUri;
+typedef POPCPARTURI;
+position p;
+@@
+- POPCPARTURI@p
++ IOpcPartUri *
+
+@script:python depends on report@
+p << r1783.p;
+@@
+WARN(p[0], "IOpcPartUri*", "POPCPARTURI")
+
+
+@r1784@
+typedef LPOPCPARTURI;
+position p;
+@@
+- LPOPCPARTURI@p
++ IOpcPartUri *
+
+@script:python depends on report@
+p << r1784.p;
+@@
+WARN(p[0], "IOpcPartUri*", "LPOPCPARTURI")
+
+
+@r1785@
+typedef IOpcRelationship;
+typedef POPCRELATIONSHIP;
+position p;
+@@
+- POPCRELATIONSHIP@p
++ IOpcRelationship *
+
+@script:python depends on report@
+p << r1785.p;
+@@
+WARN(p[0], "IOpcRelationship*", "POPCRELATIONSHIP")
+
+
+@r1786@
+typedef LPOPCRELATIONSHIP;
+position p;
+@@
+- LPOPCRELATIONSHIP@p
++ IOpcRelationship *
+
+@script:python depends on report@
+p << r1786.p;
+@@
+WARN(p[0], "IOpcRelationship*", "LPOPCRELATIONSHIP")
+
+
+@r1787@
+typedef IOpcRelationshipEnumerator;
+typedef POPCRELATIONSHIPENUMERATOR;
+position p;
+@@
+- POPCRELATIONSHIPENUMERATOR@p
++ IOpcRelationshipEnumerator *
+
+@script:python depends on report@
+p << r1787.p;
+@@
+WARN(p[0], "IOpcRelationshipEnumerator*", "POPCRELATIONSHIPENUMERATOR")
+
+
+@r1788@
+typedef LPOPCRELATIONSHIPENUMERATOR;
+position p;
+@@
+- LPOPCRELATIONSHIPENUMERATOR@p
++ IOpcRelationshipEnumerator *
+
+@script:python depends on report@
+p << r1788.p;
+@@
+WARN(p[0], "IOpcRelationshipEnumerator*", "LPOPCRELATIONSHIPENUMERATOR")
+
+
+@r1789@
+typedef IOpcRelationshipSet;
+typedef POPCRELATIONSHIPSET;
+position p;
+@@
+- POPCRELATIONSHIPSET@p
++ IOpcRelationshipSet *
+
+@script:python depends on report@
+p << r1789.p;
+@@
+WARN(p[0], "IOpcRelationshipSet*", "POPCRELATIONSHIPSET")
+
+
+@r1790@
+typedef LPOPCRELATIONSHIPSET;
+position p;
+@@
+- LPOPCRELATIONSHIPSET@p
++ IOpcRelationshipSet *
+
+@script:python depends on report@
+p << r1790.p;
+@@
+WARN(p[0], "IOpcRelationshipSet*", "LPOPCRELATIONSHIPSET")
+
+
+@r1791@
+typedef IOverlay;
+typedef POVERLAY;
+position p;
+@@
+- POVERLAY@p
++ IOverlay *
+
+@script:python depends on report@
+p << r1791.p;
+@@
+WARN(p[0], "IOverlay*", "POVERLAY")
+
+
+@r1792@
+typedef LPOVERLAY;
+position p;
+@@
+- LPOVERLAY@p
++ IOverlay *
+
+@script:python depends on report@
+p << r1792.p;
+@@
+WARN(p[0], "IOverlay*", "LPOVERLAY")
+
+
+@r1793@
 typedef IPStore;
 typedef PPSTORE;
 position p;
@@ -18355,12 +24214,12 @@ position p;
 + IPStore *
 
 @script:python depends on report@
-p << r1359.p;
+p << r1793.p;
 @@
 WARN(p[0], "IPStore*", "PPSTORE")
 
 
-@r1360@
+@r1794@
 typedef LPPSTORE;
 position p;
 @@
@@ -18368,12 +24227,12 @@ position p;
 + IPStore *
 
 @script:python depends on report@
-p << r1360.p;
+p << r1794.p;
 @@
 WARN(p[0], "IPStore*", "LPPSTORE")
 
 
-@r1361@
+@r1795@
 typedef IParseDisplayName;
 typedef PPARSEDISPLAYNAME;
 position p;
@@ -18382,12 +24241,12 @@ position p;
 + IParseDisplayName *
 
 @script:python depends on report@
-p << r1361.p;
+p << r1795.p;
 @@
 WARN(p[0], "IParseDisplayName*", "PPARSEDISPLAYNAME")
 
 
-@r1362@
+@r1796@
 typedef LPPARSEDISPLAYNAME;
 position p;
 @@
@@ -18395,12 +24254,12 @@ position p;
 + IParseDisplayName *
 
 @script:python depends on report@
-p << r1362.p;
+p << r1796.p;
 @@
 WARN(p[0], "IParseDisplayName*", "LPPARSEDISPLAYNAME")
 
 
-@r1363@
+@r1797@
 typedef IPersist;
 typedef PPERSIST;
 position p;
@@ -18409,12 +24268,12 @@ position p;
 + IPersist *
 
 @script:python depends on report@
-p << r1363.p;
+p << r1797.p;
 @@
 WARN(p[0], "IPersist*", "PPERSIST")
 
 
-@r1364@
+@r1798@
 typedef LPPERSIST;
 position p;
 @@
@@ -18422,12 +24281,12 @@ position p;
 + IPersist *
 
 @script:python depends on report@
-p << r1364.p;
+p << r1798.p;
 @@
 WARN(p[0], "IPersist*", "LPPERSIST")
 
 
-@r1365@
+@r1799@
 typedef IPersistFile;
 typedef PPERSISTFILE;
 position p;
@@ -18436,12 +24295,12 @@ position p;
 + IPersistFile *
 
 @script:python depends on report@
-p << r1365.p;
+p << r1799.p;
 @@
 WARN(p[0], "IPersistFile*", "PPERSISTFILE")
 
 
-@r1366@
+@r1800@
 typedef LPPERSISTFILE;
 position p;
 @@
@@ -18449,12 +24308,12 @@ position p;
 + IPersistFile *
 
 @script:python depends on report@
-p << r1366.p;
+p << r1800.p;
 @@
 WARN(p[0], "IPersistFile*", "LPPERSISTFILE")
 
 
-@r1367@
+@r1801@
 typedef IPersistFolder2;
 typedef PPERSISTFOLDER2;
 position p;
@@ -18463,12 +24322,12 @@ position p;
 + IPersistFolder2 *
 
 @script:python depends on report@
-p << r1367.p;
+p << r1801.p;
 @@
 WARN(p[0], "IPersistFolder2*", "PPERSISTFOLDER2")
 
 
-@r1368@
+@r1802@
 typedef LPPERSISTFOLDER2;
 position p;
 @@
@@ -18476,12 +24335,12 @@ position p;
 + IPersistFolder2 *
 
 @script:python depends on report@
-p << r1368.p;
+p << r1802.p;
 @@
 WARN(p[0], "IPersistFolder2*", "LPPERSISTFOLDER2")
 
 
-@r1369@
+@r1803@
 typedef IPersistFolder3;
 typedef PPERSISTFOLDER3;
 position p;
@@ -18490,12 +24349,12 @@ position p;
 + IPersistFolder3 *
 
 @script:python depends on report@
-p << r1369.p;
+p << r1803.p;
 @@
 WARN(p[0], "IPersistFolder3*", "PPERSISTFOLDER3")
 
 
-@r1370@
+@r1804@
 typedef LPPERSISTFOLDER3;
 position p;
 @@
@@ -18503,12 +24362,12 @@ position p;
 + IPersistFolder3 *
 
 @script:python depends on report@
-p << r1370.p;
+p << r1804.p;
 @@
 WARN(p[0], "IPersistFolder3*", "LPPERSISTFOLDER3")
 
 
-@r1371@
+@r1805@
 typedef IPersistHistory;
 typedef PPERSISTHISTORY;
 position p;
@@ -18517,12 +24376,12 @@ position p;
 + IPersistHistory *
 
 @script:python depends on report@
-p << r1371.p;
+p << r1805.p;
 @@
 WARN(p[0], "IPersistHistory*", "PPERSISTHISTORY")
 
 
-@r1372@
+@r1806@
 typedef LPPERSISTHISTORY;
 position p;
 @@
@@ -18530,12 +24389,12 @@ position p;
 + IPersistHistory *
 
 @script:python depends on report@
-p << r1372.p;
+p << r1806.p;
 @@
 WARN(p[0], "IPersistHistory*", "LPPERSISTHISTORY")
 
 
-@r1373@
+@r1807@
 typedef IPersistIDList;
 typedef PPERSISTIDLIST;
 position p;
@@ -18544,12 +24403,12 @@ position p;
 + IPersistIDList *
 
 @script:python depends on report@
-p << r1373.p;
+p << r1807.p;
 @@
 WARN(p[0], "IPersistIDList*", "PPERSISTIDLIST")
 
 
-@r1374@
+@r1808@
 typedef LPPERSISTIDLIST;
 position p;
 @@
@@ -18557,12 +24416,12 @@ position p;
 + IPersistIDList *
 
 @script:python depends on report@
-p << r1374.p;
+p << r1808.p;
 @@
 WARN(p[0], "IPersistIDList*", "LPPERSISTIDLIST")
 
 
-@r1375@
+@r1809@
 typedef IPersistMediaPropertyBag;
 typedef PPERSISTMEDIAPROPERTYBAG;
 position p;
@@ -18571,12 +24430,12 @@ position p;
 + IPersistMediaPropertyBag *
 
 @script:python depends on report@
-p << r1375.p;
+p << r1809.p;
 @@
 WARN(p[0], "IPersistMediaPropertyBag*", "PPERSISTMEDIAPROPERTYBAG")
 
 
-@r1376@
+@r1810@
 typedef LPPERSISTMEDIAPROPERTYBAG;
 position p;
 @@
@@ -18584,12 +24443,12 @@ position p;
 + IPersistMediaPropertyBag *
 
 @script:python depends on report@
-p << r1376.p;
+p << r1810.p;
 @@
 WARN(p[0], "IPersistMediaPropertyBag*", "LPPERSISTMEDIAPROPERTYBAG")
 
 
-@r1377@
+@r1811@
 typedef IPersistMemory;
 typedef PPERSISTMEMORY;
 position p;
@@ -18598,12 +24457,12 @@ position p;
 + IPersistMemory *
 
 @script:python depends on report@
-p << r1377.p;
+p << r1811.p;
 @@
 WARN(p[0], "IPersistMemory*", "PPERSISTMEMORY")
 
 
-@r1378@
+@r1812@
 typedef LPPERSISTMEMORY;
 position p;
 @@
@@ -18611,12 +24470,12 @@ position p;
 + IPersistMemory *
 
 @script:python depends on report@
-p << r1378.p;
+p << r1812.p;
 @@
 WARN(p[0], "IPersistMemory*", "LPPERSISTMEMORY")
 
 
-@r1379@
+@r1813@
 typedef IPersistMoniker;
 typedef PPERSISTMONIKER;
 position p;
@@ -18625,12 +24484,12 @@ position p;
 + IPersistMoniker *
 
 @script:python depends on report@
-p << r1379.p;
+p << r1813.p;
 @@
 WARN(p[0], "IPersistMoniker*", "PPERSISTMONIKER")
 
 
-@r1380@
+@r1814@
 typedef LPPERSISTMONIKER;
 position p;
 @@
@@ -18638,12 +24497,12 @@ position p;
 + IPersistMoniker *
 
 @script:python depends on report@
-p << r1380.p;
+p << r1814.p;
 @@
 WARN(p[0], "IPersistMoniker*", "LPPERSISTMONIKER")
 
 
-@r1381@
+@r1815@
 typedef IPersistPropertyBag;
 typedef PPERSISTPROPERTYBAG;
 position p;
@@ -18652,12 +24511,12 @@ position p;
 + IPersistPropertyBag *
 
 @script:python depends on report@
-p << r1381.p;
+p << r1815.p;
 @@
 WARN(p[0], "IPersistPropertyBag*", "PPERSISTPROPERTYBAG")
 
 
-@r1382@
+@r1816@
 typedef LPPERSISTPROPERTYBAG;
 position p;
 @@
@@ -18665,12 +24524,12 @@ position p;
 + IPersistPropertyBag *
 
 @script:python depends on report@
-p << r1382.p;
+p << r1816.p;
 @@
 WARN(p[0], "IPersistPropertyBag*", "LPPERSISTPROPERTYBAG")
 
 
-@r1383@
+@r1817@
 typedef IPersistStorage;
 typedef PPERSISTSTORAGE;
 position p;
@@ -18679,12 +24538,12 @@ position p;
 + IPersistStorage *
 
 @script:python depends on report@
-p << r1383.p;
+p << r1817.p;
 @@
 WARN(p[0], "IPersistStorage*", "PPERSISTSTORAGE")
 
 
-@r1384@
+@r1818@
 typedef LPPERSISTSTORAGE;
 position p;
 @@
@@ -18692,12 +24551,12 @@ position p;
 + IPersistStorage *
 
 @script:python depends on report@
-p << r1384.p;
+p << r1818.p;
 @@
 WARN(p[0], "IPersistStorage*", "LPPERSISTSTORAGE")
 
 
-@r1385@
+@r1819@
 typedef IPersistStream;
 typedef PPERSISTSTREAM;
 position p;
@@ -18706,12 +24565,12 @@ position p;
 + IPersistStream *
 
 @script:python depends on report@
-p << r1385.p;
+p << r1819.p;
 @@
 WARN(p[0], "IPersistStream*", "PPERSISTSTREAM")
 
 
-@r1386@
+@r1820@
 typedef LPPERSISTSTREAM;
 position p;
 @@
@@ -18719,12 +24578,12 @@ position p;
 + IPersistStream *
 
 @script:python depends on report@
-p << r1386.p;
+p << r1820.p;
 @@
 WARN(p[0], "IPersistStream*", "LPPERSISTSTREAM")
 
 
-@r1387@
+@r1821@
 typedef IPersistStreamInit;
 typedef PPERSISTSTREAMINIT;
 position p;
@@ -18733,12 +24592,12 @@ position p;
 + IPersistStreamInit *
 
 @script:python depends on report@
-p << r1387.p;
+p << r1821.p;
 @@
 WARN(p[0], "IPersistStreamInit*", "PPERSISTSTREAMINIT")
 
 
-@r1388@
+@r1822@
 typedef LPPERSISTSTREAMINIT;
 position p;
 @@
@@ -18746,12 +24605,12 @@ position p;
 + IPersistStreamInit *
 
 @script:python depends on report@
-p << r1388.p;
+p << r1822.p;
 @@
 WARN(p[0], "IPersistStreamInit*", "LPPERSISTSTREAMINIT")
 
 
-@r1389@
+@r1823@
 typedef IPicture;
 typedef PPICTURE;
 position p;
@@ -18760,12 +24619,12 @@ position p;
 + IPicture *
 
 @script:python depends on report@
-p << r1389.p;
+p << r1823.p;
 @@
 WARN(p[0], "IPicture*", "PPICTURE")
 
 
-@r1390@
+@r1824@
 typedef LPPICTURE;
 position p;
 @@
@@ -18773,12 +24632,12 @@ position p;
 + IPicture *
 
 @script:python depends on report@
-p << r1390.p;
+p << r1824.p;
 @@
 WARN(p[0], "IPicture*", "LPPICTURE")
 
 
-@r1391@
+@r1825@
 typedef IPin;
 typedef PPIN;
 position p;
@@ -18787,12 +24646,12 @@ position p;
 + IPin *
 
 @script:python depends on report@
-p << r1391.p;
+p << r1825.p;
 @@
 WARN(p[0], "IPin*", "PPIN")
 
 
-@r1392@
+@r1826@
 typedef LPPIN;
 position p;
 @@
@@ -18800,12 +24659,12 @@ position p;
 + IPin *
 
 @script:python depends on report@
-p << r1392.p;
+p << r1826.p;
 @@
 WARN(p[0], "IPin*", "LPPIN")
 
 
-@r1393@
+@r1827@
 typedef IPointerInactive;
 typedef PPOINTERINACTIVE;
 position p;
@@ -18814,12 +24673,12 @@ position p;
 + IPointerInactive *
 
 @script:python depends on report@
-p << r1393.p;
+p << r1827.p;
 @@
 WARN(p[0], "IPointerInactive*", "PPOINTERINACTIVE")
 
 
-@r1394@
+@r1828@
 typedef LPPOINTERINACTIVE;
 position p;
 @@
@@ -18827,12 +24686,39 @@ position p;
 + IPointerInactive *
 
 @script:python depends on report@
-p << r1394.p;
+p << r1828.p;
 @@
 WARN(p[0], "IPointerInactive*", "LPPOINTERINACTIVE")
 
 
-@r1395@
+@r1829@
+typedef IPrincipal;
+typedef PPRINCIPAL;
+position p;
+@@
+- PPRINCIPAL@p
++ IPrincipal *
+
+@script:python depends on report@
+p << r1829.p;
+@@
+WARN(p[0], "IPrincipal*", "PPRINCIPAL")
+
+
+@r1830@
+typedef LPPRINCIPAL;
+position p;
+@@
+- LPPRINCIPAL@p
++ IPrincipal *
+
+@script:python depends on report@
+p << r1830.p;
+@@
+WARN(p[0], "IPrincipal*", "LPPRINCIPAL")
+
+
+@r1831@
 typedef IProfferService;
 typedef PPROFFERSERVICE;
 position p;
@@ -18841,12 +24727,12 @@ position p;
 + IProfferService *
 
 @script:python depends on report@
-p << r1395.p;
+p << r1831.p;
 @@
 WARN(p[0], "IProfferService*", "PPROFFERSERVICE")
 
 
-@r1396@
+@r1832@
 typedef LPPROFFERSERVICE;
 position p;
 @@
@@ -18854,12 +24740,12 @@ position p;
 + IProfferService *
 
 @script:python depends on report@
-p << r1396.p;
+p << r1832.p;
 @@
 WARN(p[0], "IProfferService*", "LPPROFFERSERVICE")
 
 
-@r1397@
+@r1833@
 typedef IProgressDialog;
 typedef PPROGRESSDIALOG;
 position p;
@@ -18868,12 +24754,12 @@ position p;
 + IProgressDialog *
 
 @script:python depends on report@
-p << r1397.p;
+p << r1833.p;
 @@
 WARN(p[0], "IProgressDialog*", "PPROGRESSDIALOG")
 
 
-@r1398@
+@r1834@
 typedef LPPROGRESSDIALOG;
 position p;
 @@
@@ -18881,12 +24767,12 @@ position p;
 + IProgressDialog *
 
 @script:python depends on report@
-p << r1398.p;
+p << r1834.p;
 @@
 WARN(p[0], "IProgressDialog*", "LPPROGRESSDIALOG")
 
 
-@r1399@
+@r1835@
 typedef IPropData;
 typedef PPROPDATA;
 position p;
@@ -18895,12 +24781,12 @@ position p;
 + IPropData *
 
 @script:python depends on report@
-p << r1399.p;
+p << r1835.p;
 @@
 WARN(p[0], "IPropData*", "PPROPDATA")
 
 
-@r1400@
+@r1836@
 typedef LPPROPDATA;
 position p;
 @@
@@ -18908,12 +24794,12 @@ position p;
 + IPropData *
 
 @script:python depends on report@
-p << r1400.p;
+p << r1836.p;
 @@
 WARN(p[0], "IPropData*", "LPPROPDATA")
 
 
-@r1401@
+@r1837@
 typedef IPropertyBag;
 typedef PPROPERTYBAG;
 position p;
@@ -18922,12 +24808,12 @@ position p;
 + IPropertyBag *
 
 @script:python depends on report@
-p << r1401.p;
+p << r1837.p;
 @@
 WARN(p[0], "IPropertyBag*", "PPROPERTYBAG")
 
 
-@r1402@
+@r1838@
 typedef LPPROPERTYBAG;
 position p;
 @@
@@ -18935,12 +24821,12 @@ position p;
 + IPropertyBag *
 
 @script:python depends on report@
-p << r1402.p;
+p << r1838.p;
 @@
 WARN(p[0], "IPropertyBag*", "LPPROPERTYBAG")
 
 
-@r1403@
+@r1839@
 typedef IPropertyBag2;
 typedef PPROPERTYBAG2;
 position p;
@@ -18949,12 +24835,12 @@ position p;
 + IPropertyBag2 *
 
 @script:python depends on report@
-p << r1403.p;
+p << r1839.p;
 @@
 WARN(p[0], "IPropertyBag2*", "PPROPERTYBAG2")
 
 
-@r1404@
+@r1840@
 typedef LPPROPERTYBAG2;
 position p;
 @@
@@ -18962,12 +24848,12 @@ position p;
 + IPropertyBag2 *
 
 @script:python depends on report@
-p << r1404.p;
+p << r1840.p;
 @@
 WARN(p[0], "IPropertyBag2*", "LPPROPERTYBAG2")
 
 
-@r1405@
+@r1841@
 typedef IPropertyNotifySink;
 typedef PPROPERTYNOTIFYSINK;
 position p;
@@ -18976,12 +24862,12 @@ position p;
 + IPropertyNotifySink *
 
 @script:python depends on report@
-p << r1405.p;
+p << r1841.p;
 @@
 WARN(p[0], "IPropertyNotifySink*", "PPROPERTYNOTIFYSINK")
 
 
-@r1406@
+@r1842@
 typedef LPPROPERTYNOTIFYSINK;
 position p;
 @@
@@ -18989,12 +24875,12 @@ position p;
 + IPropertyNotifySink *
 
 @script:python depends on report@
-p << r1406.p;
+p << r1842.p;
 @@
 WARN(p[0], "IPropertyNotifySink*", "LPPROPERTYNOTIFYSINK")
 
 
-@r1407@
+@r1843@
 typedef IPropertyPageSite;
 typedef PPROPERTYPAGESITE;
 position p;
@@ -19003,12 +24889,12 @@ position p;
 + IPropertyPageSite *
 
 @script:python depends on report@
-p << r1407.p;
+p << r1843.p;
 @@
 WARN(p[0], "IPropertyPageSite*", "PPROPERTYPAGESITE")
 
 
-@r1408@
+@r1844@
 typedef LPPROPERTYPAGESITE;
 position p;
 @@
@@ -19016,12 +24902,12 @@ position p;
 + IPropertyPageSite *
 
 @script:python depends on report@
-p << r1408.p;
+p << r1844.p;
 @@
 WARN(p[0], "IPropertyPageSite*", "LPPROPERTYPAGESITE")
 
 
-@r1409@
+@r1845@
 typedef IPropertySetStorage;
 typedef PPROPERTYSETSTORAGE;
 position p;
@@ -19030,12 +24916,12 @@ position p;
 + IPropertySetStorage *
 
 @script:python depends on report@
-p << r1409.p;
+p << r1845.p;
 @@
 WARN(p[0], "IPropertySetStorage*", "PPROPERTYSETSTORAGE")
 
 
-@r1410@
+@r1846@
 typedef LPPROPERTYSETSTORAGE;
 position p;
 @@
@@ -19043,12 +24929,12 @@ position p;
 + IPropertySetStorage *
 
 @script:python depends on report@
-p << r1410.p;
+p << r1846.p;
 @@
 WARN(p[0], "IPropertySetStorage*", "LPPROPERTYSETSTORAGE")
 
 
-@r1411@
+@r1847@
 typedef IPropertyStorage;
 typedef PPROPERTYSTORAGE;
 position p;
@@ -19057,12 +24943,12 @@ position p;
 + IPropertyStorage *
 
 @script:python depends on report@
-p << r1411.p;
+p << r1847.p;
 @@
 WARN(p[0], "IPropertyStorage*", "PPROPERTYSTORAGE")
 
 
-@r1412@
+@r1848@
 typedef LPPROPERTYSTORAGE;
 position p;
 @@
@@ -19070,12 +24956,12 @@ position p;
 + IPropertyStorage *
 
 @script:python depends on report@
-p << r1412.p;
+p << r1848.p;
 @@
 WARN(p[0], "IPropertyStorage*", "LPPROPERTYSTORAGE")
 
 
-@r1413@
+@r1849@
 typedef IPropertyStore;
 typedef PPROPERTYSTORE;
 position p;
@@ -19084,12 +24970,12 @@ position p;
 + IPropertyStore *
 
 @script:python depends on report@
-p << r1413.p;
+p << r1849.p;
 @@
 WARN(p[0], "IPropertyStore*", "PPROPERTYSTORE")
 
 
-@r1414@
+@r1850@
 typedef LPPROPERTYSTORE;
 position p;
 @@
@@ -19097,12 +24983,12 @@ position p;
 + IPropertyStore *
 
 @script:python depends on report@
-p << r1414.p;
+p << r1850.p;
 @@
 WARN(p[0], "IPropertyStore*", "LPPROPERTYSTORE")
 
 
-@r1415@
+@r1851@
 typedef IPropertyStoreCache;
 typedef PPROPERTYSTORECACHE;
 position p;
@@ -19111,12 +24997,12 @@ position p;
 + IPropertyStoreCache *
 
 @script:python depends on report@
-p << r1415.p;
+p << r1851.p;
 @@
 WARN(p[0], "IPropertyStoreCache*", "PPROPERTYSTORECACHE")
 
 
-@r1416@
+@r1852@
 typedef LPPROPERTYSTORECACHE;
 position p;
 @@
@@ -19124,12 +25010,12 @@ position p;
 + IPropertyStoreCache *
 
 @script:python depends on report@
-p << r1416.p;
+p << r1852.p;
 @@
 WARN(p[0], "IPropertyStoreCache*", "LPPROPERTYSTORECACHE")
 
 
-@r1417@
+@r1853@
 typedef IProvideClassInfo;
 typedef PPROVIDECLASSINFO;
 position p;
@@ -19138,12 +25024,12 @@ position p;
 + IProvideClassInfo *
 
 @script:python depends on report@
-p << r1417.p;
+p << r1853.p;
 @@
 WARN(p[0], "IProvideClassInfo*", "PPROVIDECLASSINFO")
 
 
-@r1418@
+@r1854@
 typedef LPPROVIDECLASSINFO;
 position p;
 @@
@@ -19151,12 +25037,12 @@ position p;
 + IProvideClassInfo *
 
 @script:python depends on report@
-p << r1418.p;
+p << r1854.p;
 @@
 WARN(p[0], "IProvideClassInfo*", "LPPROVIDECLASSINFO")
 
 
-@r1419@
+@r1855@
 typedef IProvideClassInfo2;
 typedef PPROVIDECLASSINFO2;
 position p;
@@ -19165,12 +25051,12 @@ position p;
 + IProvideClassInfo2 *
 
 @script:python depends on report@
-p << r1419.p;
+p << r1855.p;
 @@
 WARN(p[0], "IProvideClassInfo2*", "PPROVIDECLASSINFO2")
 
 
-@r1420@
+@r1856@
 typedef LPPROVIDECLASSINFO2;
 position p;
 @@
@@ -19178,12 +25064,12 @@ position p;
 + IProvideClassInfo2 *
 
 @script:python depends on report@
-p << r1420.p;
+p << r1856.p;
 @@
 WARN(p[0], "IProvideClassInfo2*", "LPPROVIDECLASSINFO2")
 
 
-@r1421@
+@r1857@
 typedef IProvideMultipleClassInfo;
 typedef PPROVIDEMULTIPLECLASSINFO;
 position p;
@@ -19192,12 +25078,12 @@ position p;
 + IProvideMultipleClassInfo *
 
 @script:python depends on report@
-p << r1421.p;
+p << r1857.p;
 @@
 WARN(p[0], "IProvideMultipleClassInfo*", "PPROVIDEMULTIPLECLASSINFO")
 
 
-@r1422@
+@r1858@
 typedef LPPROVIDEMULTIPLECLASSINFO;
 position p;
 @@
@@ -19205,12 +25091,39 @@ position p;
 + IProvideMultipleClassInfo *
 
 @script:python depends on report@
-p << r1422.p;
+p << r1858.p;
 @@
 WARN(p[0], "IProvideMultipleClassInfo*", "LPPROVIDEMULTIPLECLASSINFO")
 
 
-@r1423@
+@r1859@
+typedef IQualProp;
+typedef PQUALPROP;
+position p;
+@@
+- PQUALPROP@p
++ IQualProp *
+
+@script:python depends on report@
+p << r1859.p;
+@@
+WARN(p[0], "IQualProp*", "PQUALPROP")
+
+
+@r1860@
+typedef LPQUALPROP;
+position p;
+@@
+- LPQUALPROP@p
++ IQualProp *
+
+@script:python depends on report@
+p << r1860.p;
+@@
+WARN(p[0], "IQualProp*", "LPQUALPROP")
+
+
+@r1861@
 typedef IQualityControl;
 typedef PQUALITYCONTROL;
 position p;
@@ -19219,12 +25132,12 @@ position p;
 + IQualityControl *
 
 @script:python depends on report@
-p << r1423.p;
+p << r1861.p;
 @@
 WARN(p[0], "IQualityControl*", "PQUALITYCONTROL")
 
 
-@r1424@
+@r1862@
 typedef LPQUALITYCONTROL;
 position p;
 @@
@@ -19232,12 +25145,12 @@ position p;
 + IQualityControl *
 
 @script:python depends on report@
-p << r1424.p;
+p << r1862.p;
 @@
 WARN(p[0], "IQualityControl*", "LPQUALITYCONTROL")
 
 
-@r1425@
+@r1863@
 typedef IQueryAssociations;
 typedef PQUERYASSOCIATIONS;
 position p;
@@ -19246,12 +25159,12 @@ position p;
 + IQueryAssociations *
 
 @script:python depends on report@
-p << r1425.p;
+p << r1863.p;
 @@
 WARN(p[0], "IQueryAssociations*", "PQUERYASSOCIATIONS")
 
 
-@r1426@
+@r1864@
 typedef LPQUERYASSOCIATIONS;
 position p;
 @@
@@ -19259,12 +25172,12 @@ position p;
 + IQueryAssociations *
 
 @script:python depends on report@
-p << r1426.p;
+p << r1864.p;
 @@
 WARN(p[0], "IQueryAssociations*", "LPQUERYASSOCIATIONS")
 
 
-@r1427@
+@r1865@
 typedef IQuickActivate;
 typedef PQUICKACTIVATE;
 position p;
@@ -19273,12 +25186,12 @@ position p;
 + IQuickActivate *
 
 @script:python depends on report@
-p << r1427.p;
+p << r1865.p;
 @@
 WARN(p[0], "IQuickActivate*", "PQUICKACTIVATE")
 
 
-@r1428@
+@r1866@
 typedef LPQUICKACTIVATE;
 position p;
 @@
@@ -19286,12 +25199,12 @@ position p;
 + IQuickActivate *
 
 @script:python depends on report@
-p << r1428.p;
+p << r1866.p;
 @@
 WARN(p[0], "IQuickActivate*", "LPQUICKACTIVATE")
 
 
-@r1429@
+@r1867@
 typedef IROTData;
 typedef PROTDATA;
 position p;
@@ -19300,12 +25213,12 @@ position p;
 + IROTData *
 
 @script:python depends on report@
-p << r1429.p;
+p << r1867.p;
 @@
 WARN(p[0], "IROTData*", "PROTDATA")
 
 
-@r1430@
+@r1868@
 typedef LPROTDATA;
 position p;
 @@
@@ -19313,12 +25226,39 @@ position p;
 + IROTData *
 
 @script:python depends on report@
-p << r1430.p;
+p << r1868.p;
 @@
 WARN(p[0], "IROTData*", "LPROTDATA")
 
 
-@r1431@
+@r1869@
+typedef IRawGameControllerStatics;
+typedef PRAWGAMECONTROLLERSTATICS;
+position p;
+@@
+- PRAWGAMECONTROLLERSTATICS@p
++ IRawGameControllerStatics *
+
+@script:python depends on report@
+p << r1869.p;
+@@
+WARN(p[0], "IRawGameControllerStatics*", "PRAWGAMECONTROLLERSTATICS")
+
+
+@r1870@
+typedef LPRAWGAMECONTROLLERSTATICS;
+position p;
+@@
+- LPRAWGAMECONTROLLERSTATICS@p
++ IRawGameControllerStatics *
+
+@script:python depends on report@
+p << r1870.p;
+@@
+WARN(p[0], "IRawGameControllerStatics*", "LPRAWGAMECONTROLLERSTATICS")
+
+
+@r1871@
 typedef IRecordInfo;
 typedef PRECORDINFO;
 position p;
@@ -19327,12 +25267,12 @@ position p;
 + IRecordInfo *
 
 @script:python depends on report@
-p << r1431.p;
+p << r1871.p;
 @@
 WARN(p[0], "IRecordInfo*", "PRECORDINFO")
 
 
-@r1432@
+@r1872@
 typedef LPRECORDINFO;
 position p;
 @@
@@ -19340,12 +25280,12 @@ position p;
 + IRecordInfo *
 
 @script:python depends on report@
-p << r1432.p;
+p << r1872.p;
 @@
 WARN(p[0], "IRecordInfo*", "LPRECORDINFO")
 
 
-@r1433@
+@r1873@
 typedef IReferenceClock;
 typedef PREFERENCECLOCK;
 position p;
@@ -19354,12 +25294,12 @@ position p;
 + IReferenceClock *
 
 @script:python depends on report@
-p << r1433.p;
+p << r1873.p;
 @@
 WARN(p[0], "IReferenceClock*", "PREFERENCECLOCK")
 
 
-@r1434@
+@r1874@
 typedef LPREFERENCECLOCK;
 position p;
 @@
@@ -19367,12 +25307,12 @@ position p;
 + IReferenceClock *
 
 @script:python depends on report@
-p << r1434.p;
+p << r1874.p;
 @@
 WARN(p[0], "IReferenceClock*", "LPREFERENCECLOCK")
 
 
-@r1435@
+@r1875@
 typedef IRegExp;
 typedef PREGEXP;
 position p;
@@ -19381,12 +25321,12 @@ position p;
 + IRegExp *
 
 @script:python depends on report@
-p << r1435.p;
+p << r1875.p;
 @@
 WARN(p[0], "IRegExp*", "PREGEXP")
 
 
-@r1436@
+@r1876@
 typedef LPREGEXP;
 position p;
 @@
@@ -19394,12 +25334,12 @@ position p;
 + IRegExp *
 
 @script:python depends on report@
-p << r1436.p;
+p << r1876.p;
 @@
 WARN(p[0], "IRegExp*", "LPREGEXP")
 
 
-@r1437@
+@r1877@
 typedef IRegExp2;
 typedef PREGEXP2;
 position p;
@@ -19408,12 +25348,12 @@ position p;
 + IRegExp2 *
 
 @script:python depends on report@
-p << r1437.p;
+p << r1877.p;
 @@
 WARN(p[0], "IRegExp2*", "PREGEXP2")
 
 
-@r1438@
+@r1878@
 typedef LPREGEXP2;
 position p;
 @@
@@ -19421,12 +25361,12 @@ position p;
 + IRegExp2 *
 
 @script:python depends on report@
-p << r1438.p;
+p << r1878.p;
 @@
 WARN(p[0], "IRegExp2*", "LPREGEXP2")
 
 
-@r1439@
+@r1879@
 typedef IRegisteredTask;
 typedef PREGISTEREDTASK;
 position p;
@@ -19435,12 +25375,12 @@ position p;
 + IRegisteredTask *
 
 @script:python depends on report@
-p << r1439.p;
+p << r1879.p;
 @@
 WARN(p[0], "IRegisteredTask*", "PREGISTEREDTASK")
 
 
-@r1440@
+@r1880@
 typedef LPREGISTEREDTASK;
 position p;
 @@
@@ -19448,12 +25388,12 @@ position p;
 + IRegisteredTask *
 
 @script:python depends on report@
-p << r1440.p;
+p << r1880.p;
 @@
 WARN(p[0], "IRegisteredTask*", "LPREGISTEREDTASK")
 
 
-@r1441@
+@r1881@
 typedef IRegisteredTaskCollection;
 typedef PREGISTEREDTASKCOLLECTION;
 position p;
@@ -19462,12 +25402,12 @@ position p;
 + IRegisteredTaskCollection *
 
 @script:python depends on report@
-p << r1441.p;
+p << r1881.p;
 @@
 WARN(p[0], "IRegisteredTaskCollection*", "PREGISTEREDTASKCOLLECTION")
 
 
-@r1442@
+@r1882@
 typedef LPREGISTEREDTASKCOLLECTION;
 position p;
 @@
@@ -19475,12 +25415,12 @@ position p;
 + IRegisteredTaskCollection *
 
 @script:python depends on report@
-p << r1442.p;
+p << r1882.p;
 @@
 WARN(p[0], "IRegisteredTaskCollection*", "LPREGISTEREDTASKCOLLECTION")
 
 
-@r1443@
+@r1883@
 typedef IRegistrar;
 typedef PREGISTRAR;
 position p;
@@ -19489,12 +25429,12 @@ position p;
 + IRegistrar *
 
 @script:python depends on report@
-p << r1443.p;
+p << r1883.p;
 @@
 WARN(p[0], "IRegistrar*", "PREGISTRAR")
 
 
-@r1444@
+@r1884@
 typedef LPREGISTRAR;
 position p;
 @@
@@ -19502,12 +25442,12 @@ position p;
 + IRegistrar *
 
 @script:python depends on report@
-p << r1444.p;
+p << r1884.p;
 @@
 WARN(p[0], "IRegistrar*", "LPREGISTRAR")
 
 
-@r1445@
+@r1885@
 typedef IRegistrationInfo;
 typedef PREGISTRATIONINFO;
 position p;
@@ -19516,12 +25456,12 @@ position p;
 + IRegistrationInfo *
 
 @script:python depends on report@
-p << r1445.p;
+p << r1885.p;
 @@
 WARN(p[0], "IRegistrationInfo*", "PREGISTRATIONINFO")
 
 
-@r1446@
+@r1886@
 typedef LPREGISTRATIONINFO;
 position p;
 @@
@@ -19529,12 +25469,12 @@ position p;
 + IRegistrationInfo *
 
 @script:python depends on report@
-p << r1446.p;
+p << r1886.p;
 @@
 WARN(p[0], "IRegistrationInfo*", "LPREGISTRATIONINFO")
 
 
-@r1447@
+@r1887@
 typedef IRemUnknown;
 typedef PREMUNKNOWN;
 position p;
@@ -19543,12 +25483,12 @@ position p;
 + IRemUnknown *
 
 @script:python depends on report@
-p << r1447.p;
+p << r1887.p;
 @@
 WARN(p[0], "IRemUnknown*", "PREMUNKNOWN")
 
 
-@r1448@
+@r1888@
 typedef LPREMUNKNOWN;
 position p;
 @@
@@ -19556,12 +25496,12 @@ position p;
 + IRemUnknown *
 
 @script:python depends on report@
-p << r1448.p;
+p << r1888.p;
 @@
 WARN(p[0], "IRemUnknown*", "LPREMUNKNOWN")
 
 
-@r1449@
+@r1889@
 typedef IResourceManager;
 typedef PRESOURCEMANAGER;
 position p;
@@ -19570,12 +25510,12 @@ position p;
 + IResourceManager *
 
 @script:python depends on report@
-p << r1449.p;
+p << r1889.p;
 @@
 WARN(p[0], "IResourceManager*", "PRESOURCEMANAGER")
 
 
-@r1450@
+@r1890@
 typedef LPRESOURCEMANAGER;
 position p;
 @@
@@ -19583,12 +25523,12 @@ position p;
 + IResourceManager *
 
 @script:python depends on report@
-p << r1450.p;
+p << r1890.p;
 @@
 WARN(p[0], "IResourceManager*", "LPRESOURCEMANAGER")
 
 
-@r1451@
+@r1891@
 typedef IResourceManagerFactory2;
 typedef PRESOURCEMANAGERFACTORY2;
 position p;
@@ -19597,12 +25537,12 @@ position p;
 + IResourceManagerFactory2 *
 
 @script:python depends on report@
-p << r1451.p;
+p << r1891.p;
 @@
 WARN(p[0], "IResourceManagerFactory2*", "PRESOURCEMANAGERFACTORY2")
 
 
-@r1452@
+@r1892@
 typedef LPRESOURCEMANAGERFACTORY2;
 position p;
 @@
@@ -19610,12 +25550,12 @@ position p;
 + IResourceManagerFactory2 *
 
 @script:python depends on report@
-p << r1452.p;
+p << r1892.p;
 @@
 WARN(p[0], "IResourceManagerFactory2*", "LPRESOURCEMANAGERFACTORY2")
 
 
-@r1453@
+@r1893@
 typedef IRichEditOle;
 typedef PRICHEDITOLE;
 position p;
@@ -19624,12 +25564,12 @@ position p;
 + IRichEditOle *
 
 @script:python depends on report@
-p << r1453.p;
+p << r1893.p;
 @@
 WARN(p[0], "IRichEditOle*", "PRICHEDITOLE")
 
 
-@r1454@
+@r1894@
 typedef LPRICHEDITOLE;
 position p;
 @@
@@ -19637,12 +25577,12 @@ position p;
 + IRichEditOle *
 
 @script:python depends on report@
-p << r1454.p;
+p << r1894.p;
 @@
 WARN(p[0], "IRichEditOle*", "LPRICHEDITOLE")
 
 
-@r1455@
+@r1895@
 typedef IRow;
 typedef PROW;
 position p;
@@ -19651,12 +25591,12 @@ position p;
 + IRow *
 
 @script:python depends on report@
-p << r1455.p;
+p << r1895.p;
 @@
 WARN(p[0], "IRow*", "PROW")
 
 
-@r1456@
+@r1896@
 typedef LPROW;
 position p;
 @@
@@ -19664,12 +25604,12 @@ position p;
 + IRow *
 
 @script:python depends on report@
-p << r1456.p;
+p << r1896.p;
 @@
 WARN(p[0], "IRow*", "LPROW")
 
 
-@r1457@
+@r1897@
 typedef IRowChange;
 typedef PROWCHANGE;
 position p;
@@ -19678,12 +25618,12 @@ position p;
 + IRowChange *
 
 @script:python depends on report@
-p << r1457.p;
+p << r1897.p;
 @@
 WARN(p[0], "IRowChange*", "PROWCHANGE")
 
 
-@r1458@
+@r1898@
 typedef LPROWCHANGE;
 position p;
 @@
@@ -19691,12 +25631,12 @@ position p;
 + IRowChange *
 
 @script:python depends on report@
-p << r1458.p;
+p << r1898.p;
 @@
 WARN(p[0], "IRowChange*", "LPROWCHANGE")
 
 
-@r1459@
+@r1899@
 typedef IRowPosition;
 typedef PROWPOSITION;
 position p;
@@ -19705,12 +25645,12 @@ position p;
 + IRowPosition *
 
 @script:python depends on report@
-p << r1459.p;
+p << r1899.p;
 @@
 WARN(p[0], "IRowPosition*", "PROWPOSITION")
 
 
-@r1460@
+@r1900@
 typedef LPROWPOSITION;
 position p;
 @@
@@ -19718,12 +25658,12 @@ position p;
 + IRowPosition *
 
 @script:python depends on report@
-p << r1460.p;
+p << r1900.p;
 @@
 WARN(p[0], "IRowPosition*", "LPROWPOSITION")
 
 
-@r1461@
+@r1901@
 typedef IRowset;
 typedef PROWSET;
 position p;
@@ -19732,12 +25672,12 @@ position p;
 + IRowset *
 
 @script:python depends on report@
-p << r1461.p;
+p << r1901.p;
 @@
 WARN(p[0], "IRowset*", "PROWSET")
 
 
-@r1462@
+@r1902@
 typedef LPROWSET;
 position p;
 @@
@@ -19745,12 +25685,12 @@ position p;
 + IRowset *
 
 @script:python depends on report@
-p << r1462.p;
+p << r1902.p;
 @@
 WARN(p[0], "IRowset*", "LPROWSET")
 
 
-@r1463@
+@r1903@
 typedef IRowsetInfo;
 typedef PROWSETINFO;
 position p;
@@ -19759,12 +25699,12 @@ position p;
 + IRowsetInfo *
 
 @script:python depends on report@
-p << r1463.p;
+p << r1903.p;
 @@
 WARN(p[0], "IRowsetInfo*", "PROWSETINFO")
 
 
-@r1464@
+@r1904@
 typedef LPROWSETINFO;
 position p;
 @@
@@ -19772,12 +25712,12 @@ position p;
 + IRowsetInfo *
 
 @script:python depends on report@
-p << r1464.p;
+p << r1904.p;
 @@
 WARN(p[0], "IRowsetInfo*", "LPROWSETINFO")
 
 
-@r1465@
+@r1905@
 typedef IRowsetLocate;
 typedef PROWSETLOCATE;
 position p;
@@ -19786,12 +25726,12 @@ position p;
 + IRowsetLocate *
 
 @script:python depends on report@
-p << r1465.p;
+p << r1905.p;
 @@
 WARN(p[0], "IRowsetLocate*", "PROWSETLOCATE")
 
 
-@r1466@
+@r1906@
 typedef LPROWSETLOCATE;
 position p;
 @@
@@ -19799,12 +25739,12 @@ position p;
 + IRowsetLocate *
 
 @script:python depends on report@
-p << r1466.p;
+p << r1906.p;
 @@
 WARN(p[0], "IRowsetLocate*", "LPROWSETLOCATE")
 
 
-@r1467@
+@r1907@
 typedef IRpcChannelBuffer;
 typedef PRPCCHANNELBUFFER;
 position p;
@@ -19813,12 +25753,12 @@ position p;
 + IRpcChannelBuffer *
 
 @script:python depends on report@
-p << r1467.p;
+p << r1907.p;
 @@
 WARN(p[0], "IRpcChannelBuffer*", "PRPCCHANNELBUFFER")
 
 
-@r1468@
+@r1908@
 typedef LPRPCCHANNELBUFFER;
 position p;
 @@
@@ -19826,12 +25766,12 @@ position p;
 + IRpcChannelBuffer *
 
 @script:python depends on report@
-p << r1468.p;
+p << r1908.p;
 @@
 WARN(p[0], "IRpcChannelBuffer*", "LPRPCCHANNELBUFFER")
 
 
-@r1469@
+@r1909@
 typedef IRpcProxyBuffer;
 typedef PRPCPROXYBUFFER;
 position p;
@@ -19840,12 +25780,12 @@ position p;
 + IRpcProxyBuffer *
 
 @script:python depends on report@
-p << r1469.p;
+p << r1909.p;
 @@
 WARN(p[0], "IRpcProxyBuffer*", "PRPCPROXYBUFFER")
 
 
-@r1470@
+@r1910@
 typedef LPRPCPROXYBUFFER;
 position p;
 @@
@@ -19853,12 +25793,12 @@ position p;
 + IRpcProxyBuffer *
 
 @script:python depends on report@
-p << r1470.p;
+p << r1910.p;
 @@
 WARN(p[0], "IRpcProxyBuffer*", "LPRPCPROXYBUFFER")
 
 
-@r1471@
+@r1911@
 typedef IRpcStubBuffer;
 typedef PRPCSTUBBUFFER;
 position p;
@@ -19867,12 +25807,12 @@ position p;
 + IRpcStubBuffer *
 
 @script:python depends on report@
-p << r1471.p;
+p << r1911.p;
 @@
 WARN(p[0], "IRpcStubBuffer*", "PRPCSTUBBUFFER")
 
 
-@r1472@
+@r1912@
 typedef LPRPCSTUBBUFFER;
 position p;
 @@
@@ -19880,12 +25820,39 @@ position p;
 + IRpcStubBuffer *
 
 @script:python depends on report@
-p << r1472.p;
+p << r1912.p;
 @@
 WARN(p[0], "IRpcStubBuffer*", "LPRPCSTUBBUFFER")
 
 
-@r1473@
+@r1913@
+typedef IRtwqAsyncCallback;
+typedef PRTWQASYNCCALLBACK;
+position p;
+@@
+- PRTWQASYNCCALLBACK@p
++ IRtwqAsyncCallback *
+
+@script:python depends on report@
+p << r1913.p;
+@@
+WARN(p[0], "IRtwqAsyncCallback*", "PRTWQASYNCCALLBACK")
+
+
+@r1914@
+typedef LPRTWQASYNCCALLBACK;
+position p;
+@@
+- LPRTWQASYNCCALLBACK@p
++ IRtwqAsyncCallback *
+
+@script:python depends on report@
+p << r1914.p;
+@@
+WARN(p[0], "IRtwqAsyncCallback*", "LPRTWQASYNCCALLBACK")
+
+
+@r1915@
 typedef IRunnableObject;
 typedef PRUNNABLEOBJECT;
 position p;
@@ -19894,12 +25861,12 @@ position p;
 + IRunnableObject *
 
 @script:python depends on report@
-p << r1473.p;
+p << r1915.p;
 @@
 WARN(p[0], "IRunnableObject*", "PRUNNABLEOBJECT")
 
 
-@r1474@
+@r1916@
 typedef LPRUNNABLEOBJECT;
 position p;
 @@
@@ -19907,12 +25874,12 @@ position p;
 + IRunnableObject *
 
 @script:python depends on report@
-p << r1474.p;
+p << r1916.p;
 @@
 WARN(p[0], "IRunnableObject*", "LPRUNNABLEOBJECT")
 
 
-@r1475@
+@r1917@
 typedef IRunnableTask;
 typedef PRUNNABLETASK;
 position p;
@@ -19921,12 +25888,12 @@ position p;
 + IRunnableTask *
 
 @script:python depends on report@
-p << r1475.p;
+p << r1917.p;
 @@
 WARN(p[0], "IRunnableTask*", "PRUNNABLETASK")
 
 
-@r1476@
+@r1918@
 typedef LPRUNNABLETASK;
 position p;
 @@
@@ -19934,12 +25901,12 @@ position p;
 + IRunnableTask *
 
 @script:python depends on report@
-p << r1476.p;
+p << r1918.p;
 @@
 WARN(p[0], "IRunnableTask*", "LPRUNNABLETASK")
 
 
-@r1477@
+@r1919@
 typedef IRunningObjectTable;
 typedef PRUNNINGOBJECTTABLE;
 position p;
@@ -19948,12 +25915,12 @@ position p;
 + IRunningObjectTable *
 
 @script:python depends on report@
-p << r1477.p;
+p << r1919.p;
 @@
 WARN(p[0], "IRunningObjectTable*", "PRUNNINGOBJECTTABLE")
 
 
-@r1478@
+@r1920@
 typedef LPRUNNINGOBJECTTABLE;
 position p;
 @@
@@ -19961,12 +25928,12 @@ position p;
 + IRunningObjectTable *
 
 @script:python depends on report@
-p << r1478.p;
+p << r1920.p;
 @@
 WARN(p[0], "IRunningObjectTable*", "LPRUNNINGOBJECTTABLE")
 
 
-@r1479@
+@r1921@
 typedef ISAXAttributes;
 typedef PSAXATTRIBUTES;
 position p;
@@ -19975,12 +25942,12 @@ position p;
 + ISAXAttributes *
 
 @script:python depends on report@
-p << r1479.p;
+p << r1921.p;
 @@
 WARN(p[0], "ISAXAttributes*", "PSAXATTRIBUTES")
 
 
-@r1480@
+@r1922@
 typedef LPSAXATTRIBUTES;
 position p;
 @@
@@ -19988,12 +25955,12 @@ position p;
 + ISAXAttributes *
 
 @script:python depends on report@
-p << r1480.p;
+p << r1922.p;
 @@
 WARN(p[0], "ISAXAttributes*", "LPSAXATTRIBUTES")
 
 
-@r1481@
+@r1923@
 typedef ISAXContentHandler;
 typedef PSAXCONTENTHANDLER;
 position p;
@@ -20002,12 +25969,12 @@ position p;
 + ISAXContentHandler *
 
 @script:python depends on report@
-p << r1481.p;
+p << r1923.p;
 @@
 WARN(p[0], "ISAXContentHandler*", "PSAXCONTENTHANDLER")
 
 
-@r1482@
+@r1924@
 typedef LPSAXCONTENTHANDLER;
 position p;
 @@
@@ -20015,12 +25982,12 @@ position p;
 + ISAXContentHandler *
 
 @script:python depends on report@
-p << r1482.p;
+p << r1924.p;
 @@
 WARN(p[0], "ISAXContentHandler*", "LPSAXCONTENTHANDLER")
 
 
-@r1483@
+@r1925@
 typedef ISAXDTDHandler;
 typedef PSAXDTDHANDLER;
 position p;
@@ -20029,12 +25996,12 @@ position p;
 + ISAXDTDHandler *
 
 @script:python depends on report@
-p << r1483.p;
+p << r1925.p;
 @@
 WARN(p[0], "ISAXDTDHandler*", "PSAXDTDHANDLER")
 
 
-@r1484@
+@r1926@
 typedef LPSAXDTDHANDLER;
 position p;
 @@
@@ -20042,12 +26009,12 @@ position p;
 + ISAXDTDHandler *
 
 @script:python depends on report@
-p << r1484.p;
+p << r1926.p;
 @@
 WARN(p[0], "ISAXDTDHandler*", "LPSAXDTDHANDLER")
 
 
-@r1485@
+@r1927@
 typedef ISAXDeclHandler;
 typedef PSAXDECLHANDLER;
 position p;
@@ -20056,12 +26023,12 @@ position p;
 + ISAXDeclHandler *
 
 @script:python depends on report@
-p << r1485.p;
+p << r1927.p;
 @@
 WARN(p[0], "ISAXDeclHandler*", "PSAXDECLHANDLER")
 
 
-@r1486@
+@r1928@
 typedef LPSAXDECLHANDLER;
 position p;
 @@
@@ -20069,12 +26036,12 @@ position p;
 + ISAXDeclHandler *
 
 @script:python depends on report@
-p << r1486.p;
+p << r1928.p;
 @@
 WARN(p[0], "ISAXDeclHandler*", "LPSAXDECLHANDLER")
 
 
-@r1487@
+@r1929@
 typedef ISAXErrorHandler;
 typedef PSAXERRORHANDLER;
 position p;
@@ -20083,12 +26050,12 @@ position p;
 + ISAXErrorHandler *
 
 @script:python depends on report@
-p << r1487.p;
+p << r1929.p;
 @@
 WARN(p[0], "ISAXErrorHandler*", "PSAXERRORHANDLER")
 
 
-@r1488@
+@r1930@
 typedef LPSAXERRORHANDLER;
 position p;
 @@
@@ -20096,12 +26063,12 @@ position p;
 + ISAXErrorHandler *
 
 @script:python depends on report@
-p << r1488.p;
+p << r1930.p;
 @@
 WARN(p[0], "ISAXErrorHandler*", "LPSAXERRORHANDLER")
 
 
-@r1489@
+@r1931@
 typedef ISAXLexicalHandler;
 typedef PSAXLEXICALHANDLER;
 position p;
@@ -20110,12 +26077,12 @@ position p;
 + ISAXLexicalHandler *
 
 @script:python depends on report@
-p << r1489.p;
+p << r1931.p;
 @@
 WARN(p[0], "ISAXLexicalHandler*", "PSAXLEXICALHANDLER")
 
 
-@r1490@
+@r1932@
 typedef LPSAXLEXICALHANDLER;
 position p;
 @@
@@ -20123,12 +26090,12 @@ position p;
 + ISAXLexicalHandler *
 
 @script:python depends on report@
-p << r1490.p;
+p << r1932.p;
 @@
 WARN(p[0], "ISAXLexicalHandler*", "LPSAXLEXICALHANDLER")
 
 
-@r1491@
+@r1933@
 typedef ISAXLocator;
 typedef PSAXLOCATOR;
 position p;
@@ -20137,12 +26104,12 @@ position p;
 + ISAXLocator *
 
 @script:python depends on report@
-p << r1491.p;
+p << r1933.p;
 @@
 WARN(p[0], "ISAXLocator*", "PSAXLOCATOR")
 
 
-@r1492@
+@r1934@
 typedef LPSAXLOCATOR;
 position p;
 @@
@@ -20150,12 +26117,12 @@ position p;
 + ISAXLocator *
 
 @script:python depends on report@
-p << r1492.p;
+p << r1934.p;
 @@
 WARN(p[0], "ISAXLocator*", "LPSAXLOCATOR")
 
 
-@r1493@
+@r1935@
 typedef ISAXXMLReader;
 typedef PSAXXMLREADER;
 position p;
@@ -20164,12 +26131,12 @@ position p;
 + ISAXXMLReader *
 
 @script:python depends on report@
-p << r1493.p;
+p << r1935.p;
 @@
 WARN(p[0], "ISAXXMLReader*", "PSAXXMLREADER")
 
 
-@r1494@
+@r1936@
 typedef LPSAXXMLREADER;
 position p;
 @@
@@ -20177,12 +26144,12 @@ position p;
 + ISAXXMLReader *
 
 @script:python depends on report@
-p << r1494.p;
+p << r1936.p;
 @@
 WARN(p[0], "ISAXXMLReader*", "LPSAXXMLREADER")
 
 
-@r1495@
+@r1937@
 typedef ISFHelper;
 typedef PSFHELPER;
 position p;
@@ -20191,12 +26158,12 @@ position p;
 + ISFHelper *
 
 @script:python depends on report@
-p << r1495.p;
+p << r1937.p;
 @@
 WARN(p[0], "ISFHelper*", "PSFHELPER")
 
 
-@r1496@
+@r1938@
 typedef LPSFHELPER;
 position p;
 @@
@@ -20204,12 +26171,120 @@ position p;
 + ISFHelper *
 
 @script:python depends on report@
-p << r1496.p;
+p << r1938.p;
 @@
 WARN(p[0], "ISFHelper*", "LPSFHELPER")
 
 
-@r1497@
+@r1939@
+typedef ISVGCircleElement;
+typedef PSVGCIRCLEELEMENT;
+position p;
+@@
+- PSVGCIRCLEELEMENT@p
++ ISVGCircleElement *
+
+@script:python depends on report@
+p << r1939.p;
+@@
+WARN(p[0], "ISVGCircleElement*", "PSVGCIRCLEELEMENT")
+
+
+@r1940@
+typedef LPSVGCIRCLEELEMENT;
+position p;
+@@
+- LPSVGCIRCLEELEMENT@p
++ ISVGCircleElement *
+
+@script:python depends on report@
+p << r1940.p;
+@@
+WARN(p[0], "ISVGCircleElement*", "LPSVGCIRCLEELEMENT")
+
+
+@r1941@
+typedef ISVGElement;
+typedef PSVGELEMENT;
+position p;
+@@
+- PSVGELEMENT@p
++ ISVGElement *
+
+@script:python depends on report@
+p << r1941.p;
+@@
+WARN(p[0], "ISVGElement*", "PSVGELEMENT")
+
+
+@r1942@
+typedef LPSVGELEMENT;
+position p;
+@@
+- LPSVGELEMENT@p
++ ISVGElement *
+
+@script:python depends on report@
+p << r1942.p;
+@@
+WARN(p[0], "ISVGElement*", "LPSVGELEMENT")
+
+
+@r1943@
+typedef ISVGSVGElement;
+typedef PSVGSVGELEMENT;
+position p;
+@@
+- PSVGSVGELEMENT@p
++ ISVGSVGElement *
+
+@script:python depends on report@
+p << r1943.p;
+@@
+WARN(p[0], "ISVGSVGElement*", "PSVGSVGELEMENT")
+
+
+@r1944@
+typedef LPSVGSVGELEMENT;
+position p;
+@@
+- LPSVGSVGELEMENT@p
++ ISVGSVGElement *
+
+@script:python depends on report@
+p << r1944.p;
+@@
+WARN(p[0], "ISVGSVGElement*", "LPSVGSVGELEMENT")
+
+
+@r1945@
+typedef ISVGTextContentElement;
+typedef PSVGTEXTCONTENTELEMENT;
+position p;
+@@
+- PSVGTEXTCONTENTELEMENT@p
++ ISVGTextContentElement *
+
+@script:python depends on report@
+p << r1945.p;
+@@
+WARN(p[0], "ISVGTextContentElement*", "PSVGTEXTCONTENTELEMENT")
+
+
+@r1946@
+typedef LPSVGTEXTCONTENTELEMENT;
+position p;
+@@
+- LPSVGTEXTCONTENTELEMENT@p
++ ISVGTextContentElement *
+
+@script:python depends on report@
+p << r1946.p;
+@@
+WARN(p[0], "ISVGTextContentElement*", "LPSVGTEXTCONTENTELEMENT")
+
+
+@r1947@
 typedef ISWbemLocator;
 typedef PSWBEMLOCATOR;
 position p;
@@ -20218,12 +26293,12 @@ position p;
 + ISWbemLocator *
 
 @script:python depends on report@
-p << r1497.p;
+p << r1947.p;
 @@
 WARN(p[0], "ISWbemLocator*", "PSWBEMLOCATOR")
 
 
-@r1498@
+@r1948@
 typedef LPSWBEMLOCATOR;
 position p;
 @@
@@ -20231,12 +26306,120 @@ position p;
 + ISWbemLocator *
 
 @script:python depends on report@
-p << r1498.p;
+p << r1948.p;
 @@
 WARN(p[0], "ISWbemLocator*", "LPSWBEMLOCATOR")
 
 
-@r1499@
+@r1949@
+typedef ISWbemMethod;
+typedef PSWBEMMETHOD;
+position p;
+@@
+- PSWBEMMETHOD@p
++ ISWbemMethod *
+
+@script:python depends on report@
+p << r1949.p;
+@@
+WARN(p[0], "ISWbemMethod*", "PSWBEMMETHOD")
+
+
+@r1950@
+typedef LPSWBEMMETHOD;
+position p;
+@@
+- LPSWBEMMETHOD@p
++ ISWbemMethod *
+
+@script:python depends on report@
+p << r1950.p;
+@@
+WARN(p[0], "ISWbemMethod*", "LPSWBEMMETHOD")
+
+
+@r1951@
+typedef ISWbemMethodSet;
+typedef PSWBEMMETHODSET;
+position p;
+@@
+- PSWBEMMETHODSET@p
++ ISWbemMethodSet *
+
+@script:python depends on report@
+p << r1951.p;
+@@
+WARN(p[0], "ISWbemMethodSet*", "PSWBEMMETHODSET")
+
+
+@r1952@
+typedef LPSWBEMMETHODSET;
+position p;
+@@
+- LPSWBEMMETHODSET@p
++ ISWbemMethodSet *
+
+@script:python depends on report@
+p << r1952.p;
+@@
+WARN(p[0], "ISWbemMethodSet*", "LPSWBEMMETHODSET")
+
+
+@r1953@
+typedef ISWbemNamedValue;
+typedef PSWBEMNAMEDVALUE;
+position p;
+@@
+- PSWBEMNAMEDVALUE@p
++ ISWbemNamedValue *
+
+@script:python depends on report@
+p << r1953.p;
+@@
+WARN(p[0], "ISWbemNamedValue*", "PSWBEMNAMEDVALUE")
+
+
+@r1954@
+typedef LPSWBEMNAMEDVALUE;
+position p;
+@@
+- LPSWBEMNAMEDVALUE@p
++ ISWbemNamedValue *
+
+@script:python depends on report@
+p << r1954.p;
+@@
+WARN(p[0], "ISWbemNamedValue*", "LPSWBEMNAMEDVALUE")
+
+
+@r1955@
+typedef ISWbemNamedValueSet;
+typedef PSWBEMNAMEDVALUESET;
+position p;
+@@
+- PSWBEMNAMEDVALUESET@p
++ ISWbemNamedValueSet *
+
+@script:python depends on report@
+p << r1955.p;
+@@
+WARN(p[0], "ISWbemNamedValueSet*", "PSWBEMNAMEDVALUESET")
+
+
+@r1956@
+typedef LPSWBEMNAMEDVALUESET;
+position p;
+@@
+- LPSWBEMNAMEDVALUESET@p
++ ISWbemNamedValueSet *
+
+@script:python depends on report@
+p << r1956.p;
+@@
+WARN(p[0], "ISWbemNamedValueSet*", "LPSWBEMNAMEDVALUESET")
+
+
+@r1957@
 typedef ISWbemObject;
 typedef PSWBEMOBJECT;
 position p;
@@ -20245,12 +26428,12 @@ position p;
 + ISWbemObject *
 
 @script:python depends on report@
-p << r1499.p;
+p << r1957.p;
 @@
 WARN(p[0], "ISWbemObject*", "PSWBEMOBJECT")
 
 
-@r1500@
+@r1958@
 typedef LPSWBEMOBJECT;
 position p;
 @@
@@ -20258,12 +26441,12 @@ position p;
 + ISWbemObject *
 
 @script:python depends on report@
-p << r1500.p;
+p << r1958.p;
 @@
 WARN(p[0], "ISWbemObject*", "LPSWBEMOBJECT")
 
 
-@r1501@
+@r1959@
 typedef ISWbemObjectSet;
 typedef PSWBEMOBJECTSET;
 position p;
@@ -20272,12 +26455,12 @@ position p;
 + ISWbemObjectSet *
 
 @script:python depends on report@
-p << r1501.p;
+p << r1959.p;
 @@
 WARN(p[0], "ISWbemObjectSet*", "PSWBEMOBJECTSET")
 
 
-@r1502@
+@r1960@
 typedef LPSWBEMOBJECTSET;
 position p;
 @@
@@ -20285,12 +26468,12 @@ position p;
 + ISWbemObjectSet *
 
 @script:python depends on report@
-p << r1502.p;
+p << r1960.p;
 @@
 WARN(p[0], "ISWbemObjectSet*", "LPSWBEMOBJECTSET")
 
 
-@r1503@
+@r1961@
 typedef ISWbemProperty;
 typedef PSWBEMPROPERTY;
 position p;
@@ -20299,12 +26482,12 @@ position p;
 + ISWbemProperty *
 
 @script:python depends on report@
-p << r1503.p;
+p << r1961.p;
 @@
 WARN(p[0], "ISWbemProperty*", "PSWBEMPROPERTY")
 
 
-@r1504@
+@r1962@
 typedef LPSWBEMPROPERTY;
 position p;
 @@
@@ -20312,12 +26495,12 @@ position p;
 + ISWbemProperty *
 
 @script:python depends on report@
-p << r1504.p;
+p << r1962.p;
 @@
 WARN(p[0], "ISWbemProperty*", "LPSWBEMPROPERTY")
 
 
-@r1505@
+@r1963@
 typedef ISWbemPropertySet;
 typedef PSWBEMPROPERTYSET;
 position p;
@@ -20326,12 +26509,12 @@ position p;
 + ISWbemPropertySet *
 
 @script:python depends on report@
-p << r1505.p;
+p << r1963.p;
 @@
 WARN(p[0], "ISWbemPropertySet*", "PSWBEMPROPERTYSET")
 
 
-@r1506@
+@r1964@
 typedef LPSWBEMPROPERTYSET;
 position p;
 @@
@@ -20339,12 +26522,39 @@ position p;
 + ISWbemPropertySet *
 
 @script:python depends on report@
-p << r1506.p;
+p << r1964.p;
 @@
 WARN(p[0], "ISWbemPropertySet*", "LPSWBEMPROPERTYSET")
 
 
-@r1507@
+@r1965@
+typedef ISWbemSecurity;
+typedef PSWBEMSECURITY;
+position p;
+@@
+- PSWBEMSECURITY@p
++ ISWbemSecurity *
+
+@script:python depends on report@
+p << r1965.p;
+@@
+WARN(p[0], "ISWbemSecurity*", "PSWBEMSECURITY")
+
+
+@r1966@
+typedef LPSWBEMSECURITY;
+position p;
+@@
+- LPSWBEMSECURITY@p
++ ISWbemSecurity *
+
+@script:python depends on report@
+p << r1966.p;
+@@
+WARN(p[0], "ISWbemSecurity*", "LPSWBEMSECURITY")
+
+
+@r1967@
 typedef ISWbemServices;
 typedef PSWBEMSERVICES;
 position p;
@@ -20353,12 +26563,12 @@ position p;
 + ISWbemServices *
 
 @script:python depends on report@
-p << r1507.p;
+p << r1967.p;
 @@
 WARN(p[0], "ISWbemServices*", "PSWBEMSERVICES")
 
 
-@r1508@
+@r1968@
 typedef LPSWBEMSERVICES;
 position p;
 @@
@@ -20366,12 +26576,12 @@ position p;
 + ISWbemServices *
 
 @script:python depends on report@
-p << r1508.p;
+p << r1968.p;
 @@
 WARN(p[0], "ISWbemServices*", "LPSWBEMSERVICES")
 
 
-@r1509@
+@r1969@
 typedef ISampleGrabber;
 typedef PSAMPLEGRABBER;
 position p;
@@ -20380,12 +26590,12 @@ position p;
 + ISampleGrabber *
 
 @script:python depends on report@
-p << r1509.p;
+p << r1969.p;
 @@
 WARN(p[0], "ISampleGrabber*", "PSAMPLEGRABBER")
 
 
-@r1510@
+@r1970@
 typedef LPSAMPLEGRABBER;
 position p;
 @@
@@ -20393,12 +26603,12 @@ position p;
 + ISampleGrabber *
 
 @script:python depends on report@
-p << r1510.p;
+p << r1970.p;
 @@
 WARN(p[0], "ISampleGrabber*", "LPSAMPLEGRABBER")
 
 
-@r1511@
+@r1971@
 typedef IScriptControl;
 typedef PSCRIPTCONTROL;
 position p;
@@ -20407,12 +26617,12 @@ position p;
 + IScriptControl *
 
 @script:python depends on report@
-p << r1511.p;
+p << r1971.p;
 @@
 WARN(p[0], "IScriptControl*", "PSCRIPTCONTROL")
 
 
-@r1512@
+@r1972@
 typedef LPSCRIPTCONTROL;
 position p;
 @@
@@ -20420,39 +26630,147 @@ position p;
 + IScriptControl *
 
 @script:python depends on report@
-p << r1512.p;
+p << r1972.p;
 @@
 WARN(p[0], "IScriptControl*", "LPSCRIPTCONTROL")
 
 
-@r1513@
-typedef ISeekingPassThru;
-typedef PSEEKINGPASSTHRU;
+@r1973@
+typedef IScriptError;
+typedef PSCRIPTERROR;
 position p;
 @@
-- PSEEKINGPASSTHRU@p
-+ ISeekingPassThru *
+- PSCRIPTERROR@p
++ IScriptError *
 
 @script:python depends on report@
-p << r1513.p;
+p << r1973.p;
 @@
-WARN(p[0], "ISeekingPassThru*", "PSEEKINGPASSTHRU")
+WARN(p[0], "IScriptError*", "PSCRIPTERROR")
 
 
-@r1514@
-typedef LPSEEKINGPASSTHRU;
+@r1974@
+typedef LPSCRIPTERROR;
 position p;
 @@
-- LPSEEKINGPASSTHRU@p
-+ ISeekingPassThru *
+- LPSCRIPTERROR@p
++ IScriptError *
 
 @script:python depends on report@
-p << r1514.p;
+p << r1974.p;
 @@
-WARN(p[0], "ISeekingPassThru*", "LPSEEKINGPASSTHRU")
+WARN(p[0], "IScriptError*", "LPSCRIPTERROR")
 
 
-@r1515@
+@r1975@
+typedef IScriptModule;
+typedef PSCRIPTMODULE;
+position p;
+@@
+- PSCRIPTMODULE@p
++ IScriptModule *
+
+@script:python depends on report@
+p << r1975.p;
+@@
+WARN(p[0], "IScriptModule*", "PSCRIPTMODULE")
+
+
+@r1976@
+typedef LPSCRIPTMODULE;
+position p;
+@@
+- LPSCRIPTMODULE@p
++ IScriptModule *
+
+@script:python depends on report@
+p << r1976.p;
+@@
+WARN(p[0], "IScriptModule*", "LPSCRIPTMODULE")
+
+
+@r1977@
+typedef IScriptModuleCollection;
+typedef PSCRIPTMODULECOLLECTION;
+position p;
+@@
+- PSCRIPTMODULECOLLECTION@p
++ IScriptModuleCollection *
+
+@script:python depends on report@
+p << r1977.p;
+@@
+WARN(p[0], "IScriptModuleCollection*", "PSCRIPTMODULECOLLECTION")
+
+
+@r1978@
+typedef LPSCRIPTMODULECOLLECTION;
+position p;
+@@
+- LPSCRIPTMODULECOLLECTION@p
++ IScriptModuleCollection *
+
+@script:python depends on report@
+p << r1978.p;
+@@
+WARN(p[0], "IScriptModuleCollection*", "LPSCRIPTMODULECOLLECTION")
+
+
+@r1979@
+typedef IScriptProcedure;
+typedef PSCRIPTPROCEDURE;
+position p;
+@@
+- PSCRIPTPROCEDURE@p
++ IScriptProcedure *
+
+@script:python depends on report@
+p << r1979.p;
+@@
+WARN(p[0], "IScriptProcedure*", "PSCRIPTPROCEDURE")
+
+
+@r1980@
+typedef LPSCRIPTPROCEDURE;
+position p;
+@@
+- LPSCRIPTPROCEDURE@p
++ IScriptProcedure *
+
+@script:python depends on report@
+p << r1980.p;
+@@
+WARN(p[0], "IScriptProcedure*", "LPSCRIPTPROCEDURE")
+
+
+@r1981@
+typedef IScriptProcedureCollection;
+typedef PSCRIPTPROCEDURECOLLECTION;
+position p;
+@@
+- PSCRIPTPROCEDURECOLLECTION@p
++ IScriptProcedureCollection *
+
+@script:python depends on report@
+p << r1981.p;
+@@
+WARN(p[0], "IScriptProcedureCollection*", "PSCRIPTPROCEDURECOLLECTION")
+
+
+@r1982@
+typedef LPSCRIPTPROCEDURECOLLECTION;
+position p;
+@@
+- LPSCRIPTPROCEDURECOLLECTION@p
++ IScriptProcedureCollection *
+
+@script:python depends on report@
+p << r1982.p;
+@@
+WARN(p[0], "IScriptProcedureCollection*", "LPSCRIPTPROCEDURECOLLECTION")
+
+
+@r1983@
 typedef IServerXMLHTTPRequest;
 typedef PSERVERXMLHTTPREQUEST;
 position p;
@@ -20461,12 +26779,12 @@ position p;
 + IServerXMLHTTPRequest *
 
 @script:python depends on report@
-p << r1515.p;
+p << r1983.p;
 @@
 WARN(p[0], "IServerXMLHTTPRequest*", "PSERVERXMLHTTPREQUEST")
 
 
-@r1516@
+@r1984@
 typedef LPSERVERXMLHTTPREQUEST;
 position p;
 @@
@@ -20474,12 +26792,12 @@ position p;
 + IServerXMLHTTPRequest *
 
 @script:python depends on report@
-p << r1516.p;
+p << r1984.p;
 @@
 WARN(p[0], "IServerXMLHTTPRequest*", "LPSERVERXMLHTTPREQUEST")
 
 
-@r1517@
+@r1985@
 typedef IServiceProvider;
 typedef PSERVICEPROVIDER;
 position p;
@@ -20488,12 +26806,12 @@ position p;
 + IServiceProvider *
 
 @script:python depends on report@
-p << r1517.p;
+p << r1985.p;
 @@
 WARN(p[0], "IServiceProvider*", "PSERVICEPROVIDER")
 
 
-@r1518@
+@r1986@
 typedef LPSERVICEPROVIDER;
 position p;
 @@
@@ -20501,12 +26819,12 @@ position p;
 + IServiceProvider *
 
 @script:python depends on report@
-p << r1518.p;
+p << r1986.p;
 @@
 WARN(p[0], "IServiceProvider*", "LPSERVICEPROVIDER")
 
 
-@r1519@
+@r1987@
 typedef IShellBrowser;
 typedef PSHELLBROWSER;
 position p;
@@ -20515,12 +26833,12 @@ position p;
 + IShellBrowser *
 
 @script:python depends on report@
-p << r1519.p;
+p << r1987.p;
 @@
 WARN(p[0], "IShellBrowser*", "PSHELLBROWSER")
 
 
-@r1520@
+@r1988@
 typedef LPSHELLBROWSER;
 position p;
 @@
@@ -20528,12 +26846,12 @@ position p;
 + IShellBrowser *
 
 @script:python depends on report@
-p << r1520.p;
+p << r1988.p;
 @@
 WARN(p[0], "IShellBrowser*", "LPSHELLBROWSER")
 
 
-@r1521@
+@r1989@
 typedef IShellDispatch6;
 typedef PSHELLDISPATCH6;
 position p;
@@ -20542,12 +26860,12 @@ position p;
 + IShellDispatch6 *
 
 @script:python depends on report@
-p << r1521.p;
+p << r1989.p;
 @@
 WARN(p[0], "IShellDispatch6*", "PSHELLDISPATCH6")
 
 
-@r1522@
+@r1990@
 typedef LPSHELLDISPATCH6;
 position p;
 @@
@@ -20555,12 +26873,12 @@ position p;
 + IShellDispatch6 *
 
 @script:python depends on report@
-p << r1522.p;
+p << r1990.p;
 @@
 WARN(p[0], "IShellDispatch6*", "LPSHELLDISPATCH6")
 
 
-@r1523@
+@r1991@
 typedef IShellExecuteHookA;
 typedef PSHELLEXECUTEHOOKA;
 position p;
@@ -20569,12 +26887,12 @@ position p;
 + IShellExecuteHookA *
 
 @script:python depends on report@
-p << r1523.p;
+p << r1991.p;
 @@
 WARN(p[0], "IShellExecuteHookA*", "PSHELLEXECUTEHOOKA")
 
 
-@r1524@
+@r1992@
 typedef LPSHELLEXECUTEHOOKA;
 position p;
 @@
@@ -20582,12 +26900,12 @@ position p;
 + IShellExecuteHookA *
 
 @script:python depends on report@
-p << r1524.p;
+p << r1992.p;
 @@
 WARN(p[0], "IShellExecuteHookA*", "LPSHELLEXECUTEHOOKA")
 
 
-@r1525@
+@r1993@
 typedef IShellExecuteHookW;
 typedef PSHELLEXECUTEHOOKW;
 position p;
@@ -20596,12 +26914,12 @@ position p;
 + IShellExecuteHookW *
 
 @script:python depends on report@
-p << r1525.p;
+p << r1993.p;
 @@
 WARN(p[0], "IShellExecuteHookW*", "PSHELLEXECUTEHOOKW")
 
 
-@r1526@
+@r1994@
 typedef LPSHELLEXECUTEHOOKW;
 position p;
 @@
@@ -20609,12 +26927,12 @@ position p;
 + IShellExecuteHookW *
 
 @script:python depends on report@
-p << r1526.p;
+p << r1994.p;
 @@
 WARN(p[0], "IShellExecuteHookW*", "LPSHELLEXECUTEHOOKW")
 
 
-@r1527@
+@r1995@
 typedef IShellExtInit;
 typedef PSHELLEXTINIT;
 position p;
@@ -20623,12 +26941,12 @@ position p;
 + IShellExtInit *
 
 @script:python depends on report@
-p << r1527.p;
+p << r1995.p;
 @@
 WARN(p[0], "IShellExtInit*", "PSHELLEXTINIT")
 
 
-@r1528@
+@r1996@
 typedef LPSHELLEXTINIT;
 position p;
 @@
@@ -20636,12 +26954,12 @@ position p;
 + IShellExtInit *
 
 @script:python depends on report@
-p << r1528.p;
+p << r1996.p;
 @@
 WARN(p[0], "IShellExtInit*", "LPSHELLEXTINIT")
 
 
-@r1529@
+@r1997@
 typedef IShellFolder2;
 typedef PSHELLFOLDER2;
 position p;
@@ -20650,12 +26968,12 @@ position p;
 + IShellFolder2 *
 
 @script:python depends on report@
-p << r1529.p;
+p << r1997.p;
 @@
 WARN(p[0], "IShellFolder2*", "PSHELLFOLDER2")
 
 
-@r1530@
+@r1998@
 typedef LPSHELLFOLDER2;
 position p;
 @@
@@ -20663,12 +26981,12 @@ position p;
 + IShellFolder2 *
 
 @script:python depends on report@
-p << r1530.p;
+p << r1998.p;
 @@
 WARN(p[0], "IShellFolder2*", "LPSHELLFOLDER2")
 
 
-@r1531@
+@r1999@
 typedef IShellFolderView;
 typedef PSHELLFOLDERVIEW;
 position p;
@@ -20677,12 +26995,12 @@ position p;
 + IShellFolderView *
 
 @script:python depends on report@
-p << r1531.p;
+p << r1999.p;
 @@
 WARN(p[0], "IShellFolderView*", "PSHELLFOLDERVIEW")
 
 
-@r1532@
+@r2000@
 typedef LPSHELLFOLDERVIEW;
 position p;
 @@
@@ -20690,12 +27008,12 @@ position p;
 + IShellFolderView *
 
 @script:python depends on report@
-p << r1532.p;
+p << r2000.p;
 @@
 WARN(p[0], "IShellFolderView*", "LPSHELLFOLDERVIEW")
 
 
-@r1533@
+@r2001@
 typedef IShellFolderViewDual3;
 typedef PSHELLFOLDERVIEWDUAL3;
 position p;
@@ -20704,12 +27022,12 @@ position p;
 + IShellFolderViewDual3 *
 
 @script:python depends on report@
-p << r1533.p;
+p << r2001.p;
 @@
 WARN(p[0], "IShellFolderViewDual3*", "PSHELLFOLDERVIEWDUAL3")
 
 
-@r1534@
+@r2002@
 typedef LPSHELLFOLDERVIEWDUAL3;
 position p;
 @@
@@ -20717,12 +27035,12 @@ position p;
 + IShellFolderViewDual3 *
 
 @script:python depends on report@
-p << r1534.p;
+p << r2002.p;
 @@
 WARN(p[0], "IShellFolderViewDual3*", "LPSHELLFOLDERVIEWDUAL3")
 
 
-@r1535@
+@r2003@
 typedef IShellImageData;
 typedef PSHELLIMAGEDATA;
 position p;
@@ -20731,12 +27049,12 @@ position p;
 + IShellImageData *
 
 @script:python depends on report@
-p << r1535.p;
+p << r2003.p;
 @@
 WARN(p[0], "IShellImageData*", "PSHELLIMAGEDATA")
 
 
-@r1536@
+@r2004@
 typedef LPSHELLIMAGEDATA;
 position p;
 @@
@@ -20744,12 +27062,12 @@ position p;
 + IShellImageData *
 
 @script:python depends on report@
-p << r1536.p;
+p << r2004.p;
 @@
 WARN(p[0], "IShellImageData*", "LPSHELLIMAGEDATA")
 
 
-@r1537@
+@r2005@
 typedef IShellItem2;
 typedef PSHELLITEM2;
 position p;
@@ -20758,12 +27076,12 @@ position p;
 + IShellItem2 *
 
 @script:python depends on report@
-p << r1537.p;
+p << r2005.p;
 @@
 WARN(p[0], "IShellItem2*", "PSHELLITEM2")
 
 
-@r1538@
+@r2006@
 typedef LPSHELLITEM2;
 position p;
 @@
@@ -20771,12 +27089,12 @@ position p;
 + IShellItem2 *
 
 @script:python depends on report@
-p << r1538.p;
+p << r2006.p;
 @@
 WARN(p[0], "IShellItem2*", "LPSHELLITEM2")
 
 
-@r1539@
+@r2007@
 typedef IShellItemArray;
 typedef PSHELLITEMARRAY;
 position p;
@@ -20785,12 +27103,12 @@ position p;
 + IShellItemArray *
 
 @script:python depends on report@
-p << r1539.p;
+p << r2007.p;
 @@
 WARN(p[0], "IShellItemArray*", "PSHELLITEMARRAY")
 
 
-@r1540@
+@r2008@
 typedef LPSHELLITEMARRAY;
 position p;
 @@
@@ -20798,12 +27116,12 @@ position p;
 + IShellItemArray *
 
 @script:python depends on report@
-p << r1540.p;
+p << r2008.p;
 @@
 WARN(p[0], "IShellItemArray*", "LPSHELLITEMARRAY")
 
 
-@r1541@
+@r2009@
 typedef IShellLinkA;
 typedef PSHELLLINKA;
 position p;
@@ -20812,12 +27130,12 @@ position p;
 + IShellLinkA *
 
 @script:python depends on report@
-p << r1541.p;
+p << r2009.p;
 @@
 WARN(p[0], "IShellLinkA*", "PSHELLLINKA")
 
 
-@r1542@
+@r2010@
 typedef LPSHELLLINKA;
 position p;
 @@
@@ -20825,12 +27143,12 @@ position p;
 + IShellLinkA *
 
 @script:python depends on report@
-p << r1542.p;
+p << r2010.p;
 @@
 WARN(p[0], "IShellLinkA*", "LPSHELLLINKA")
 
 
-@r1543@
+@r2011@
 typedef IShellLinkDataList;
 typedef PSHELLLINKDATALIST;
 position p;
@@ -20839,12 +27157,12 @@ position p;
 + IShellLinkDataList *
 
 @script:python depends on report@
-p << r1543.p;
+p << r2011.p;
 @@
 WARN(p[0], "IShellLinkDataList*", "PSHELLLINKDATALIST")
 
 
-@r1544@
+@r2012@
 typedef LPSHELLLINKDATALIST;
 position p;
 @@
@@ -20852,12 +27170,39 @@ position p;
 + IShellLinkDataList *
 
 @script:python depends on report@
-p << r1544.p;
+p << r2012.p;
 @@
 WARN(p[0], "IShellLinkDataList*", "LPSHELLLINKDATALIST")
 
 
-@r1545@
+@r2013@
+typedef IShellLinkDual2;
+typedef PSHELLLINKDUAL2;
+position p;
+@@
+- PSHELLLINKDUAL2@p
++ IShellLinkDual2 *
+
+@script:python depends on report@
+p << r2013.p;
+@@
+WARN(p[0], "IShellLinkDual2*", "PSHELLLINKDUAL2")
+
+
+@r2014@
+typedef LPSHELLLINKDUAL2;
+position p;
+@@
+- LPSHELLLINKDUAL2@p
++ IShellLinkDual2 *
+
+@script:python depends on report@
+p << r2014.p;
+@@
+WARN(p[0], "IShellLinkDual2*", "LPSHELLLINKDUAL2")
+
+
+@r2015@
 typedef IShellLinkW;
 typedef PSHELLLINKW;
 position p;
@@ -20866,12 +27211,12 @@ position p;
 + IShellLinkW *
 
 @script:python depends on report@
-p << r1545.p;
+p << r2015.p;
 @@
 WARN(p[0], "IShellLinkW*", "PSHELLLINKW")
 
 
-@r1546@
+@r2016@
 typedef LPSHELLLINKW;
 position p;
 @@
@@ -20879,12 +27224,12 @@ position p;
 + IShellLinkW *
 
 @script:python depends on report@
-p << r1546.p;
+p << r2016.p;
 @@
 WARN(p[0], "IShellLinkW*", "LPSHELLLINKW")
 
 
-@r1547@
+@r2017@
 typedef IShellUIHelper2;
 typedef PSHELLUIHELPER2;
 position p;
@@ -20893,12 +27238,12 @@ position p;
 + IShellUIHelper2 *
 
 @script:python depends on report@
-p << r1547.p;
+p << r2017.p;
 @@
 WARN(p[0], "IShellUIHelper2*", "PSHELLUIHELPER2")
 
 
-@r1548@
+@r2018@
 typedef LPSHELLUIHELPER2;
 position p;
 @@
@@ -20906,12 +27251,12 @@ position p;
 + IShellUIHelper2 *
 
 @script:python depends on report@
-p << r1548.p;
+p << r2018.p;
 @@
 WARN(p[0], "IShellUIHelper2*", "LPSHELLUIHELPER2")
 
 
-@r1549@
+@r2019@
 typedef IShellView3;
 typedef PSHELLVIEW3;
 position p;
@@ -20920,12 +27265,12 @@ position p;
 + IShellView3 *
 
 @script:python depends on report@
-p << r1549.p;
+p << r2019.p;
 @@
 WARN(p[0], "IShellView3*", "PSHELLVIEW3")
 
 
-@r1550@
+@r2020@
 typedef LPSHELLVIEW3;
 position p;
 @@
@@ -20933,12 +27278,12 @@ position p;
 + IShellView3 *
 
 @script:python depends on report@
-p << r1550.p;
+p << r2020.p;
 @@
 WARN(p[0], "IShellView3*", "LPSHELLVIEW3")
 
 
-@r1551@
+@r2021@
 typedef ISimpleAudioVolume;
 typedef PSIMPLEAUDIOVOLUME;
 position p;
@@ -20947,12 +27292,12 @@ position p;
 + ISimpleAudioVolume *
 
 @script:python depends on report@
-p << r1551.p;
+p << r2021.p;
 @@
 WARN(p[0], "ISimpleAudioVolume*", "PSIMPLEAUDIOVOLUME")
 
 
-@r1552@
+@r2022@
 typedef LPSIMPLEAUDIOVOLUME;
 position p;
 @@
@@ -20960,12 +27305,336 @@ position p;
 + ISimpleAudioVolume *
 
 @script:python depends on report@
-p << r1552.p;
+p << r2022.p;
 @@
 WARN(p[0], "ISimpleAudioVolume*", "LPSIMPLEAUDIOVOLUME")
 
 
-@r1553@
+@r2023@
+typedef ISomethingFromDispatch;
+typedef PSOMETHINGFROMDISPATCH;
+position p;
+@@
+- PSOMETHINGFROMDISPATCH@p
++ ISomethingFromDispatch *
+
+@script:python depends on report@
+p << r2023.p;
+@@
+WARN(p[0], "ISomethingFromDispatch*", "PSOMETHINGFROMDISPATCH")
+
+
+@r2024@
+typedef LPSOMETHINGFROMDISPATCH;
+position p;
+@@
+- LPSOMETHINGFROMDISPATCH@p
++ ISomethingFromDispatch *
+
+@script:python depends on report@
+p << r2024.p;
+@@
+WARN(p[0], "ISomethingFromDispatch*", "LPSOMETHINGFROMDISPATCH")
+
+
+@r2025@
+typedef ISpObjectToken;
+typedef PSPOBJECTTOKEN;
+position p;
+@@
+- PSPOBJECTTOKEN@p
++ ISpObjectToken *
+
+@script:python depends on report@
+p << r2025.p;
+@@
+WARN(p[0], "ISpObjectToken*", "PSPOBJECTTOKEN")
+
+
+@r2026@
+typedef LPSPOBJECTTOKEN;
+position p;
+@@
+- LPSPOBJECTTOKEN@p
++ ISpObjectToken *
+
+@script:python depends on report@
+p << r2026.p;
+@@
+WARN(p[0], "ISpObjectToken*", "LPSPOBJECTTOKEN")
+
+
+@r2027@
+typedef ISpObjectTokenCategory;
+typedef PSPOBJECTTOKENCATEGORY;
+position p;
+@@
+- PSPOBJECTTOKENCATEGORY@p
++ ISpObjectTokenCategory *
+
+@script:python depends on report@
+p << r2027.p;
+@@
+WARN(p[0], "ISpObjectTokenCategory*", "PSPOBJECTTOKENCATEGORY")
+
+
+@r2028@
+typedef LPSPOBJECTTOKENCATEGORY;
+position p;
+@@
+- LPSPOBJECTTOKENCATEGORY@p
++ ISpObjectTokenCategory *
+
+@script:python depends on report@
+p << r2028.p;
+@@
+WARN(p[0], "ISpObjectTokenCategory*", "LPSPOBJECTTOKENCATEGORY")
+
+
+@r2029@
+typedef ISpObjectTokenEnumBuilder;
+typedef PSPOBJECTTOKENENUMBUILDER;
+position p;
+@@
+- PSPOBJECTTOKENENUMBUILDER@p
++ ISpObjectTokenEnumBuilder *
+
+@script:python depends on report@
+p << r2029.p;
+@@
+WARN(p[0], "ISpObjectTokenEnumBuilder*", "PSPOBJECTTOKENENUMBUILDER")
+
+
+@r2030@
+typedef LPSPOBJECTTOKENENUMBUILDER;
+position p;
+@@
+- LPSPOBJECTTOKENENUMBUILDER@p
++ ISpObjectTokenEnumBuilder *
+
+@script:python depends on report@
+p << r2030.p;
+@@
+WARN(p[0], "ISpObjectTokenEnumBuilder*", "LPSPOBJECTTOKENENUMBUILDER")
+
+
+@r2031@
+typedef ISpRegDataKey;
+typedef PSPREGDATAKEY;
+position p;
+@@
+- PSPREGDATAKEY@p
++ ISpRegDataKey *
+
+@script:python depends on report@
+p << r2031.p;
+@@
+WARN(p[0], "ISpRegDataKey*", "PSPREGDATAKEY")
+
+
+@r2032@
+typedef LPSPREGDATAKEY;
+position p;
+@@
+- LPSPREGDATAKEY@p
++ ISpRegDataKey *
+
+@script:python depends on report@
+p << r2032.p;
+@@
+WARN(p[0], "ISpRegDataKey*", "LPSPREGDATAKEY")
+
+
+@r2033@
+typedef ISpResourceManager;
+typedef PSPRESOURCEMANAGER;
+position p;
+@@
+- PSPRESOURCEMANAGER@p
++ ISpResourceManager *
+
+@script:python depends on report@
+p << r2033.p;
+@@
+WARN(p[0], "ISpResourceManager*", "PSPRESOURCEMANAGER")
+
+
+@r2034@
+typedef LPSPRESOURCEMANAGER;
+position p;
+@@
+- LPSPRESOURCEMANAGER@p
++ ISpResourceManager *
+
+@script:python depends on report@
+p << r2034.p;
+@@
+WARN(p[0], "ISpResourceManager*", "LPSPRESOURCEMANAGER")
+
+
+@r2035@
+typedef ISpStream;
+typedef PSPSTREAM;
+position p;
+@@
+- PSPSTREAM@p
++ ISpStream *
+
+@script:python depends on report@
+p << r2035.p;
+@@
+WARN(p[0], "ISpStream*", "PSPSTREAM")
+
+
+@r2036@
+typedef LPSPSTREAM;
+position p;
+@@
+- LPSPSTREAM@p
++ ISpStream *
+
+@script:python depends on report@
+p << r2036.p;
+@@
+WARN(p[0], "ISpStream*", "LPSPSTREAM")
+
+
+@r2037@
+typedef ISpVoice;
+typedef PSPVOICE;
+position p;
+@@
+- PSPVOICE@p
++ ISpVoice *
+
+@script:python depends on report@
+p << r2037.p;
+@@
+WARN(p[0], "ISpVoice*", "PSPVOICE")
+
+
+@r2038@
+typedef LPSPVOICE;
+position p;
+@@
+- LPSPVOICE@p
++ ISpVoice *
+
+@script:python depends on report@
+p << r2038.p;
+@@
+WARN(p[0], "ISpVoice*", "LPSPVOICE")
+
+
+@r2039@
+typedef ISpatialAudioClient;
+typedef PSPATIALAUDIOCLIENT;
+position p;
+@@
+- PSPATIALAUDIOCLIENT@p
++ ISpatialAudioClient *
+
+@script:python depends on report@
+p << r2039.p;
+@@
+WARN(p[0], "ISpatialAudioClient*", "PSPATIALAUDIOCLIENT")
+
+
+@r2040@
+typedef LPSPATIALAUDIOCLIENT;
+position p;
+@@
+- LPSPATIALAUDIOCLIENT@p
++ ISpatialAudioClient *
+
+@script:python depends on report@
+p << r2040.p;
+@@
+WARN(p[0], "ISpatialAudioClient*", "LPSPATIALAUDIOCLIENT")
+
+
+@r2041@
+typedef ISpatialAudioObject;
+typedef PSPATIALAUDIOOBJECT;
+position p;
+@@
+- PSPATIALAUDIOOBJECT@p
++ ISpatialAudioObject *
+
+@script:python depends on report@
+p << r2041.p;
+@@
+WARN(p[0], "ISpatialAudioObject*", "PSPATIALAUDIOOBJECT")
+
+
+@r2042@
+typedef LPSPATIALAUDIOOBJECT;
+position p;
+@@
+- LPSPATIALAUDIOOBJECT@p
++ ISpatialAudioObject *
+
+@script:python depends on report@
+p << r2042.p;
+@@
+WARN(p[0], "ISpatialAudioObject*", "LPSPATIALAUDIOOBJECT")
+
+
+@r2043@
+typedef ISpatialAudioObjectRenderStream;
+typedef PSPATIALAUDIOOBJECTRENDERSTREAM;
+position p;
+@@
+- PSPATIALAUDIOOBJECTRENDERSTREAM@p
++ ISpatialAudioObjectRenderStream *
+
+@script:python depends on report@
+p << r2043.p;
+@@
+WARN(p[0], "ISpatialAudioObjectRenderStream*", "PSPATIALAUDIOOBJECTRENDERSTREAM")
+
+
+@r2044@
+typedef LPSPATIALAUDIOOBJECTRENDERSTREAM;
+position p;
+@@
+- LPSPATIALAUDIOOBJECTRENDERSTREAM@p
++ ISpatialAudioObjectRenderStream *
+
+@script:python depends on report@
+p << r2044.p;
+@@
+WARN(p[0], "ISpatialAudioObjectRenderStream*", "LPSPATIALAUDIOOBJECTRENDERSTREAM")
+
+
+@r2045@
+typedef ISpatialAudioObjectRenderStreamNotify;
+typedef PSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY;
+position p;
+@@
+- PSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY@p
++ ISpatialAudioObjectRenderStreamNotify *
+
+@script:python depends on report@
+p << r2045.p;
+@@
+WARN(p[0], "ISpatialAudioObjectRenderStreamNotify*", "PSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY")
+
+
+@r2046@
+typedef LPSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY;
+position p;
+@@
+- LPSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY@p
++ ISpatialAudioObjectRenderStreamNotify *
+
+@script:python depends on report@
+p << r2046.p;
+@@
+WARN(p[0], "ISpatialAudioObjectRenderStreamNotify*", "LPSPATIALAUDIOOBJECTRENDERSTREAMNOTIFY")
+
+
+@r2047@
 typedef ISpecifyPropertyPages;
 typedef PSPECIFYPROPERTYPAGES;
 position p;
@@ -20974,12 +27643,12 @@ position p;
 + ISpecifyPropertyPages *
 
 @script:python depends on report@
-p << r1553.p;
+p << r2047.p;
 @@
 WARN(p[0], "ISpecifyPropertyPages*", "PSPECIFYPROPERTYPAGES")
 
 
-@r1554@
+@r2048@
 typedef LPSPECIFYPROPERTYPAGES;
 position p;
 @@
@@ -20987,12 +27656,66 @@ position p;
 + ISpecifyPropertyPages *
 
 @script:python depends on report@
-p << r1554.p;
+p << r2048.p;
 @@
 WARN(p[0], "ISpecifyPropertyPages*", "LPSPECIFYPROPERTYPAGES")
 
 
-@r1555@
+@r2049@
+typedef ISpeechFileStream;
+typedef PSPEECHFILESTREAM;
+position p;
+@@
+- PSPEECHFILESTREAM@p
++ ISpeechFileStream *
+
+@script:python depends on report@
+p << r2049.p;
+@@
+WARN(p[0], "ISpeechFileStream*", "PSPEECHFILESTREAM")
+
+
+@r2050@
+typedef LPSPEECHFILESTREAM;
+position p;
+@@
+- LPSPEECHFILESTREAM@p
++ ISpeechFileStream *
+
+@script:python depends on report@
+p << r2050.p;
+@@
+WARN(p[0], "ISpeechFileStream*", "LPSPEECHFILESTREAM")
+
+
+@r2051@
+typedef ISpeechVoice;
+typedef PSPEECHVOICE;
+position p;
+@@
+- PSPEECHVOICE@p
++ ISpeechVoice *
+
+@script:python depends on report@
+p << r2051.p;
+@@
+WARN(p[0], "ISpeechVoice*", "PSPEECHVOICE")
+
+
+@r2052@
+typedef LPSPEECHVOICE;
+position p;
+@@
+- LPSPEECHVOICE@p
++ ISpeechVoice *
+
+@script:python depends on report@
+p << r2052.p;
+@@
+WARN(p[0], "ISpeechVoice*", "LPSPEECHVOICE")
+
+
+@r2053@
 typedef IStillImageW;
 typedef PSTILLIMAGEW;
 position p;
@@ -21001,12 +27724,12 @@ position p;
 + IStillImageW *
 
 @script:python depends on report@
-p << r1555.p;
+p << r2053.p;
 @@
 WARN(p[0], "IStillImageW*", "PSTILLIMAGEW")
 
 
-@r1556@
+@r2054@
 typedef LPSTILLIMAGEW;
 position p;
 @@
@@ -21014,12 +27737,12 @@ position p;
 + IStillImageW *
 
 @script:python depends on report@
-p << r1556.p;
+p << r2054.p;
 @@
 WARN(p[0], "IStillImageW*", "LPSTILLIMAGEW")
 
 
-@r1557@
+@r2055@
 typedef IStorage;
 typedef PSTORAGE;
 position p;
@@ -21028,12 +27751,12 @@ position p;
 + IStorage *
 
 @script:python depends on report@
-p << r1557.p;
+p << r2055.p;
 @@
 WARN(p[0], "IStorage*", "PSTORAGE")
 
 
-@r1558@
+@r2056@
 typedef LPSTORAGE;
 position p;
 @@
@@ -21041,12 +27764,12 @@ position p;
 + IStorage *
 
 @script:python depends on report@
-p << r1558.p;
+p << r2056.p;
 @@
 WARN(p[0], "IStorage*", "LPSTORAGE")
 
 
-@r1559@
+@r2057@
 typedef IStorage16;
 typedef PSTORAGE16;
 position p;
@@ -21055,12 +27778,12 @@ position p;
 + IStorage16 *
 
 @script:python depends on report@
-p << r1559.p;
+p << r2057.p;
 @@
 WARN(p[0], "IStorage16*", "PSTORAGE16")
 
 
-@r1560@
+@r2058@
 typedef LPSTORAGE16;
 position p;
 @@
@@ -21068,12 +27791,12 @@ position p;
 + IStorage16 *
 
 @script:python depends on report@
-p << r1560.p;
+p << r2058.p;
 @@
 WARN(p[0], "IStorage16*", "LPSTORAGE16")
 
 
-@r1561@
+@r2059@
 typedef IStream;
 typedef PSTREAM;
 position p;
@@ -21082,12 +27805,12 @@ position p;
 + IStream *
 
 @script:python depends on report@
-p << r1561.p;
+p << r2059.p;
 @@
 WARN(p[0], "IStream*", "PSTREAM")
 
 
-@r1562@
+@r2060@
 typedef LPSTREAM;
 position p;
 @@
@@ -21095,12 +27818,12 @@ position p;
 + IStream *
 
 @script:python depends on report@
-p << r1562.p;
+p << r2060.p;
 @@
 WARN(p[0], "IStream*", "LPSTREAM")
 
 
-@r1563@
+@r2061@
 typedef IStream16;
 typedef PSTREAM16;
 position p;
@@ -21109,12 +27832,12 @@ position p;
 + IStream16 *
 
 @script:python depends on report@
-p << r1563.p;
+p << r2061.p;
 @@
 WARN(p[0], "IStream16*", "PSTREAM16")
 
 
-@r1564@
+@r2062@
 typedef LPSTREAM16;
 position p;
 @@
@@ -21122,12 +27845,12 @@ position p;
 + IStream16 *
 
 @script:python depends on report@
-p << r1564.p;
+p << r2062.p;
 @@
 WARN(p[0], "IStream16*", "LPSTREAM16")
 
 
-@r1565@
+@r2063@
 typedef ISubMatches;
 typedef PSUBMATCHES;
 position p;
@@ -21136,12 +27859,12 @@ position p;
 + ISubMatches *
 
 @script:python depends on report@
-p << r1565.p;
+p << r2063.p;
 @@
 WARN(p[0], "ISubMatches*", "PSUBMATCHES")
 
 
-@r1566@
+@r2064@
 typedef LPSUBMATCHES;
 position p;
 @@
@@ -21149,12 +27872,12 @@ position p;
 + ISubMatches *
 
 @script:python depends on report@
-p << r1566.p;
+p << r2064.p;
 @@
 WARN(p[0], "ISubMatches*", "LPSUBMATCHES")
 
 
-@r1567@
+@r2065@
 typedef ISupportErrorInfo;
 typedef PSUPPORTERRORINFO;
 position p;
@@ -21163,12 +27886,12 @@ position p;
 + ISupportErrorInfo *
 
 @script:python depends on report@
-p << r1567.p;
+p << r2065.p;
 @@
 WARN(p[0], "ISupportErrorInfo*", "PSUPPORTERRORINFO")
 
 
-@r1568@
+@r2066@
 typedef LPSUPPORTERRORINFO;
 position p;
 @@
@@ -21176,12 +27899,12 @@ position p;
 + ISupportErrorInfo *
 
 @script:python depends on report@
-p << r1568.p;
+p << r2066.p;
 @@
 WARN(p[0], "ISupportErrorInfo*", "LPSUPPORTERRORINFO")
 
 
-@r1569@
+@r2067@
 typedef ISynchronize;
 typedef PSYNCHRONIZE;
 position p;
@@ -21190,12 +27913,12 @@ position p;
 + ISynchronize *
 
 @script:python depends on report@
-p << r1569.p;
+p << r2067.p;
 @@
 WARN(p[0], "ISynchronize*", "PSYNCHRONIZE")
 
 
-@r1570@
+@r2068@
 typedef LPSYNCHRONIZE;
 position p;
 @@
@@ -21203,12 +27926,12 @@ position p;
 + ISynchronize *
 
 @script:python depends on report@
-p << r1570.p;
+p << r2068.p;
 @@
 WARN(p[0], "ISynchronize*", "LPSYNCHRONIZE")
 
 
-@r1571@
+@r2069@
 typedef ISynchronizeHandle;
 typedef PSYNCHRONIZEHANDLE;
 position p;
@@ -21217,12 +27940,12 @@ position p;
 + ISynchronizeHandle *
 
 @script:python depends on report@
-p << r1571.p;
+p << r2069.p;
 @@
 WARN(p[0], "ISynchronizeHandle*", "PSYNCHRONIZEHANDLE")
 
 
-@r1572@
+@r2070@
 typedef LPSYNCHRONIZEHANDLE;
 position p;
 @@
@@ -21230,12 +27953,12 @@ position p;
 + ISynchronizeHandle *
 
 @script:python depends on report@
-p << r1572.p;
+p << r2070.p;
 @@
 WARN(p[0], "ISynchronizeHandle*", "LPSYNCHRONIZEHANDLE")
 
 
-@r1573@
+@r2071@
 typedef ISystemInformation;
 typedef PSYSTEMINFORMATION;
 position p;
@@ -21244,12 +27967,12 @@ position p;
 + ISystemInformation *
 
 @script:python depends on report@
-p << r1573.p;
+p << r2071.p;
 @@
 WARN(p[0], "ISystemInformation*", "PSYSTEMINFORMATION")
 
 
-@r1574@
+@r2072@
 typedef LPSYSTEMINFORMATION;
 position p;
 @@
@@ -21257,12 +27980,12 @@ position p;
 + ISystemInformation *
 
 @script:python depends on report@
-p << r1574.p;
+p << r2072.p;
 @@
 WARN(p[0], "ISystemInformation*", "LPSYSTEMINFORMATION")
 
 
-@r1575@
+@r2073@
 typedef ITargetContainer;
 typedef PTARGETCONTAINER;
 position p;
@@ -21271,12 +27994,12 @@ position p;
 + ITargetContainer *
 
 @script:python depends on report@
-p << r1575.p;
+p << r2073.p;
 @@
 WARN(p[0], "ITargetContainer*", "PTARGETCONTAINER")
 
 
-@r1576@
+@r2074@
 typedef LPTARGETCONTAINER;
 position p;
 @@
@@ -21284,12 +28007,12 @@ position p;
 + ITargetContainer *
 
 @script:python depends on report@
-p << r1576.p;
+p << r2074.p;
 @@
 WARN(p[0], "ITargetContainer*", "LPTARGETCONTAINER")
 
 
-@r1577@
+@r2075@
 typedef ITargetFrame;
 typedef PTARGETFRAME;
 position p;
@@ -21298,12 +28021,12 @@ position p;
 + ITargetFrame *
 
 @script:python depends on report@
-p << r1577.p;
+p << r2075.p;
 @@
 WARN(p[0], "ITargetFrame*", "PTARGETFRAME")
 
 
-@r1578@
+@r2076@
 typedef LPTARGETFRAME;
 position p;
 @@
@@ -21311,12 +28034,12 @@ position p;
 + ITargetFrame *
 
 @script:python depends on report@
-p << r1578.p;
+p << r2076.p;
 @@
 WARN(p[0], "ITargetFrame*", "LPTARGETFRAME")
 
 
-@r1579@
+@r2077@
 typedef ITargetFrame2;
 typedef PTARGETFRAME2;
 position p;
@@ -21325,12 +28048,12 @@ position p;
 + ITargetFrame2 *
 
 @script:python depends on report@
-p << r1579.p;
+p << r2077.p;
 @@
 WARN(p[0], "ITargetFrame2*", "PTARGETFRAME2")
 
 
-@r1580@
+@r2078@
 typedef LPTARGETFRAME2;
 position p;
 @@
@@ -21338,12 +28061,12 @@ position p;
 + ITargetFrame2 *
 
 @script:python depends on report@
-p << r1580.p;
+p << r2078.p;
 @@
 WARN(p[0], "ITargetFrame2*", "LPTARGETFRAME2")
 
 
-@r1581@
+@r2079@
 typedef ITargetFramePriv2;
 typedef PTARGETFRAMEPRIV2;
 position p;
@@ -21352,12 +28075,12 @@ position p;
 + ITargetFramePriv2 *
 
 @script:python depends on report@
-p << r1581.p;
+p << r2079.p;
 @@
 WARN(p[0], "ITargetFramePriv2*", "PTARGETFRAMEPRIV2")
 
 
-@r1582@
+@r2080@
 typedef LPTARGETFRAMEPRIV2;
 position p;
 @@
@@ -21365,12 +28088,12 @@ position p;
 + ITargetFramePriv2 *
 
 @script:python depends on report@
-p << r1582.p;
+p << r2080.p;
 @@
 WARN(p[0], "ITargetFramePriv2*", "LPTARGETFRAMEPRIV2")
 
 
-@r1583@
+@r2081@
 typedef ITask;
 typedef PTASK;
 position p;
@@ -21379,12 +28102,12 @@ position p;
 + ITask *
 
 @script:python depends on report@
-p << r1583.p;
+p << r2081.p;
 @@
 WARN(p[0], "ITask*", "PTASK")
 
 
-@r1584@
+@r2082@
 typedef LPTASK;
 position p;
 @@
@@ -21392,12 +28115,12 @@ position p;
 + ITask *
 
 @script:python depends on report@
-p << r1584.p;
+p << r2082.p;
 @@
 WARN(p[0], "ITask*", "LPTASK")
 
 
-@r1585@
+@r2083@
 typedef ITaskDefinition;
 typedef PTASKDEFINITION;
 position p;
@@ -21406,12 +28129,12 @@ position p;
 + ITaskDefinition *
 
 @script:python depends on report@
-p << r1585.p;
+p << r2083.p;
 @@
 WARN(p[0], "ITaskDefinition*", "PTASKDEFINITION")
 
 
-@r1586@
+@r2084@
 typedef LPTASKDEFINITION;
 position p;
 @@
@@ -21419,12 +28142,12 @@ position p;
 + ITaskDefinition *
 
 @script:python depends on report@
-p << r1586.p;
+p << r2084.p;
 @@
 WARN(p[0], "ITaskDefinition*", "LPTASKDEFINITION")
 
 
-@r1587@
+@r2085@
 typedef ITaskFolder;
 typedef PTASKFOLDER;
 position p;
@@ -21433,12 +28156,12 @@ position p;
 + ITaskFolder *
 
 @script:python depends on report@
-p << r1587.p;
+p << r2085.p;
 @@
 WARN(p[0], "ITaskFolder*", "PTASKFOLDER")
 
 
-@r1588@
+@r2086@
 typedef LPTASKFOLDER;
 position p;
 @@
@@ -21446,12 +28169,12 @@ position p;
 + ITaskFolder *
 
 @script:python depends on report@
-p << r1588.p;
+p << r2086.p;
 @@
 WARN(p[0], "ITaskFolder*", "LPTASKFOLDER")
 
 
-@r1589@
+@r2087@
 typedef ITaskFolderCollection;
 typedef PTASKFOLDERCOLLECTION;
 position p;
@@ -21460,12 +28183,12 @@ position p;
 + ITaskFolderCollection *
 
 @script:python depends on report@
-p << r1589.p;
+p << r2087.p;
 @@
 WARN(p[0], "ITaskFolderCollection*", "PTASKFOLDERCOLLECTION")
 
 
-@r1590@
+@r2088@
 typedef LPTASKFOLDERCOLLECTION;
 position p;
 @@
@@ -21473,12 +28196,12 @@ position p;
 + ITaskFolderCollection *
 
 @script:python depends on report@
-p << r1590.p;
+p << r2088.p;
 @@
 WARN(p[0], "ITaskFolderCollection*", "LPTASKFOLDERCOLLECTION")
 
 
-@r1591@
+@r2089@
 typedef ITaskScheduler;
 typedef PTASKSCHEDULER;
 position p;
@@ -21487,12 +28210,12 @@ position p;
 + ITaskScheduler *
 
 @script:python depends on report@
-p << r1591.p;
+p << r2089.p;
 @@
 WARN(p[0], "ITaskScheduler*", "PTASKSCHEDULER")
 
 
-@r1592@
+@r2090@
 typedef LPTASKSCHEDULER;
 position p;
 @@
@@ -21500,12 +28223,12 @@ position p;
 + ITaskScheduler *
 
 @script:python depends on report@
-p << r1592.p;
+p << r2090.p;
 @@
 WARN(p[0], "ITaskScheduler*", "LPTASKSCHEDULER")
 
 
-@r1593@
+@r2091@
 typedef ITaskService;
 typedef PTASKSERVICE;
 position p;
@@ -21514,12 +28237,12 @@ position p;
 + ITaskService *
 
 @script:python depends on report@
-p << r1593.p;
+p << r2091.p;
 @@
 WARN(p[0], "ITaskService*", "PTASKSERVICE")
 
 
-@r1594@
+@r2092@
 typedef LPTASKSERVICE;
 position p;
 @@
@@ -21527,12 +28250,12 @@ position p;
 + ITaskService *
 
 @script:python depends on report@
-p << r1594.p;
+p << r2092.p;
 @@
 WARN(p[0], "ITaskService*", "LPTASKSERVICE")
 
 
-@r1595@
+@r2093@
 typedef ITaskSettings;
 typedef PTASKSETTINGS;
 position p;
@@ -21541,12 +28264,12 @@ position p;
 + ITaskSettings *
 
 @script:python depends on report@
-p << r1595.p;
+p << r2093.p;
 @@
 WARN(p[0], "ITaskSettings*", "PTASKSETTINGS")
 
 
-@r1596@
+@r2094@
 typedef LPTASKSETTINGS;
 position p;
 @@
@@ -21554,12 +28277,12 @@ position p;
 + ITaskSettings *
 
 @script:python depends on report@
-p << r1596.p;
+p << r2094.p;
 @@
 WARN(p[0], "ITaskSettings*", "LPTASKSETTINGS")
 
 
-@r1597@
+@r2095@
 typedef ITaskTrigger;
 typedef PTASKTRIGGER;
 position p;
@@ -21568,12 +28291,12 @@ position p;
 + ITaskTrigger *
 
 @script:python depends on report@
-p << r1597.p;
+p << r2095.p;
 @@
 WARN(p[0], "ITaskTrigger*", "PTASKTRIGGER")
 
 
-@r1598@
+@r2096@
 typedef LPTASKTRIGGER;
 position p;
 @@
@@ -21581,12 +28304,12 @@ position p;
 + ITaskTrigger *
 
 @script:python depends on report@
-p << r1598.p;
+p << r2096.p;
 @@
 WARN(p[0], "ITaskTrigger*", "LPTASKTRIGGER")
 
 
-@r1599@
+@r2097@
 typedef ITaskbarList4;
 typedef PTASKBARLIST4;
 position p;
@@ -21595,12 +28318,12 @@ position p;
 + ITaskbarList4 *
 
 @script:python depends on report@
-p << r1599.p;
+p << r2097.p;
 @@
 WARN(p[0], "ITaskbarList4*", "PTASKBARLIST4")
 
 
-@r1600@
+@r2098@
 typedef LPTASKBARLIST4;
 position p;
 @@
@@ -21608,39 +28331,39 @@ position p;
 + ITaskbarList4 *
 
 @script:python depends on report@
-p << r1600.p;
+p << r2098.p;
 @@
 WARN(p[0], "ITaskbarList4*", "LPTASKBARLIST4")
 
 
-@r1601@
-typedef ITextDocument;
-typedef PTEXTDOCUMENT;
+@r2099@
+typedef ITextDocument2Old;
+typedef PTEXTDOCUMENT2OLD;
 position p;
 @@
-- PTEXTDOCUMENT@p
-+ ITextDocument *
+- PTEXTDOCUMENT2OLD@p
++ ITextDocument2Old *
 
 @script:python depends on report@
-p << r1601.p;
+p << r2099.p;
 @@
-WARN(p[0], "ITextDocument*", "PTEXTDOCUMENT")
+WARN(p[0], "ITextDocument2Old*", "PTEXTDOCUMENT2OLD")
 
 
-@r1602@
-typedef LPTEXTDOCUMENT;
+@r2100@
+typedef LPTEXTDOCUMENT2OLD;
 position p;
 @@
-- LPTEXTDOCUMENT@p
-+ ITextDocument *
+- LPTEXTDOCUMENT2OLD@p
++ ITextDocument2Old *
 
 @script:python depends on report@
-p << r1602.p;
+p << r2100.p;
 @@
-WARN(p[0], "ITextDocument*", "LPTEXTDOCUMENT")
+WARN(p[0], "ITextDocument2Old*", "LPTEXTDOCUMENT2OLD")
 
 
-@r1603@
+@r2101@
 typedef ITextFont;
 typedef PTEXTFONT;
 position p;
@@ -21649,12 +28372,12 @@ position p;
 + ITextFont *
 
 @script:python depends on report@
-p << r1603.p;
+p << r2101.p;
 @@
 WARN(p[0], "ITextFont*", "PTEXTFONT")
 
 
-@r1604@
+@r2102@
 typedef LPTEXTFONT;
 position p;
 @@
@@ -21662,12 +28385,12 @@ position p;
 + ITextFont *
 
 @script:python depends on report@
-p << r1604.p;
+p << r2102.p;
 @@
 WARN(p[0], "ITextFont*", "LPTEXTFONT")
 
 
-@r1605@
+@r2103@
 typedef ITextHost;
 typedef PTEXTHOST;
 position p;
@@ -21676,12 +28399,12 @@ position p;
 + ITextHost *
 
 @script:python depends on report@
-p << r1605.p;
+p << r2103.p;
 @@
 WARN(p[0], "ITextHost*", "PTEXTHOST")
 
 
-@r1606@
+@r2104@
 typedef LPTEXTHOST;
 position p;
 @@
@@ -21689,12 +28412,39 @@ position p;
 + ITextHost *
 
 @script:python depends on report@
-p << r1606.p;
+p << r2104.p;
 @@
 WARN(p[0], "ITextHost*", "LPTEXTHOST")
 
 
-@r1607@
+@r2105@
+typedef ITextHost2;
+typedef PTEXTHOST2;
+position p;
+@@
+- PTEXTHOST2@p
++ ITextHost2 *
+
+@script:python depends on report@
+p << r2105.p;
+@@
+WARN(p[0], "ITextHost2*", "PTEXTHOST2")
+
+
+@r2106@
+typedef LPTEXTHOST2;
+position p;
+@@
+- LPTEXTHOST2@p
++ ITextHost2 *
+
+@script:python depends on report@
+p << r2106.p;
+@@
+WARN(p[0], "ITextHost2*", "LPTEXTHOST2")
+
+
+@r2107@
 typedef ITextPara;
 typedef PTEXTPARA;
 position p;
@@ -21703,12 +28453,12 @@ position p;
 + ITextPara *
 
 @script:python depends on report@
-p << r1607.p;
+p << r2107.p;
 @@
 WARN(p[0], "ITextPara*", "PTEXTPARA")
 
 
-@r1608@
+@r2108@
 typedef LPTEXTPARA;
 position p;
 @@
@@ -21716,12 +28466,12 @@ position p;
 + ITextPara *
 
 @script:python depends on report@
-p << r1608.p;
+p << r2108.p;
 @@
 WARN(p[0], "ITextPara*", "LPTEXTPARA")
 
 
-@r1609@
+@r2109@
 typedef ITextRange;
 typedef PTEXTRANGE;
 position p;
@@ -21730,12 +28480,12 @@ position p;
 + ITextRange *
 
 @script:python depends on report@
-p << r1609.p;
+p << r2109.p;
 @@
 WARN(p[0], "ITextRange*", "PTEXTRANGE")
 
 
-@r1610@
+@r2110@
 typedef LPTEXTRANGE;
 position p;
 @@
@@ -21743,12 +28493,12 @@ position p;
 + ITextRange *
 
 @script:python depends on report@
-p << r1610.p;
+p << r2110.p;
 @@
 WARN(p[0], "ITextRange*", "LPTEXTRANGE")
 
 
-@r1611@
+@r2111@
 typedef ITextSelection;
 typedef PTEXTSELECTION;
 position p;
@@ -21757,12 +28507,12 @@ position p;
 + ITextSelection *
 
 @script:python depends on report@
-p << r1611.p;
+p << r2111.p;
 @@
 WARN(p[0], "ITextSelection*", "PTEXTSELECTION")
 
 
-@r1612@
+@r2112@
 typedef LPTEXTSELECTION;
 position p;
 @@
@@ -21770,12 +28520,12 @@ position p;
 + ITextSelection *
 
 @script:python depends on report@
-p << r1612.p;
+p << r2112.p;
 @@
 WARN(p[0], "ITextSelection*", "LPTEXTSELECTION")
 
 
-@r1613@
+@r2113@
 typedef ITextServices;
 typedef PTEXTSERVICES;
 position p;
@@ -21784,12 +28534,12 @@ position p;
 + ITextServices *
 
 @script:python depends on report@
-p << r1613.p;
+p << r2113.p;
 @@
 WARN(p[0], "ITextServices*", "PTEXTSERVICES")
 
 
-@r1614@
+@r2114@
 typedef LPTEXTSERVICES;
 position p;
 @@
@@ -21797,12 +28547,12 @@ position p;
 + ITextServices *
 
 @script:python depends on report@
-p << r1614.p;
+p << r2114.p;
 @@
 WARN(p[0], "ITextServices*", "LPTEXTSERVICES")
 
 
-@r1615@
+@r2115@
 typedef ITextStoreACP;
 typedef PTEXTSTOREACP;
 position p;
@@ -21811,12 +28561,12 @@ position p;
 + ITextStoreACP *
 
 @script:python depends on report@
-p << r1615.p;
+p << r2115.p;
 @@
 WARN(p[0], "ITextStoreACP*", "PTEXTSTOREACP")
 
 
-@r1616@
+@r2116@
 typedef LPTEXTSTOREACP;
 position p;
 @@
@@ -21824,12 +28574,12 @@ position p;
 + ITextStoreACP *
 
 @script:python depends on report@
-p << r1616.p;
+p << r2116.p;
 @@
 WARN(p[0], "ITextStoreACP*", "LPTEXTSTOREACP")
 
 
-@r1617@
+@r2117@
 typedef ITextStoreACPServices;
 typedef PTEXTSTOREACPSERVICES;
 position p;
@@ -21838,12 +28588,12 @@ position p;
 + ITextStoreACPServices *
 
 @script:python depends on report@
-p << r1617.p;
+p << r2117.p;
 @@
 WARN(p[0], "ITextStoreACPServices*", "PTEXTSTOREACPSERVICES")
 
 
-@r1618@
+@r2118@
 typedef LPTEXTSTOREACPSERVICES;
 position p;
 @@
@@ -21851,12 +28601,12 @@ position p;
 + ITextStoreACPServices *
 
 @script:python depends on report@
-p << r1618.p;
+p << r2118.p;
 @@
 WARN(p[0], "ITextStoreACPServices*", "LPTEXTSTOREACPSERVICES")
 
 
-@r1619@
+@r2119@
 typedef ITextStoreACPSink;
 typedef PTEXTSTOREACPSINK;
 position p;
@@ -21865,12 +28615,12 @@ position p;
 + ITextStoreACPSink *
 
 @script:python depends on report@
-p << r1619.p;
+p << r2119.p;
 @@
 WARN(p[0], "ITextStoreACPSink*", "PTEXTSTOREACPSINK")
 
 
-@r1620@
+@r2120@
 typedef LPTEXTSTOREACPSINK;
 position p;
 @@
@@ -21878,12 +28628,12 @@ position p;
 + ITextStoreACPSink *
 
 @script:python depends on report@
-p << r1620.p;
+p << r2120.p;
 @@
 WARN(p[0], "ITextStoreACPSink*", "LPTEXTSTOREACPSINK")
 
 
-@r1621@
+@r2121@
 typedef ITextStream;
 typedef PTEXTSTREAM;
 position p;
@@ -21892,12 +28642,12 @@ position p;
 + ITextStream *
 
 @script:python depends on report@
-p << r1621.p;
+p << r2121.p;
 @@
 WARN(p[0], "ITextStream*", "PTEXTSTREAM")
 
 
-@r1622@
+@r2122@
 typedef LPTEXTSTREAM;
 position p;
 @@
@@ -21905,12 +28655,12 @@ position p;
 + ITextStream *
 
 @script:python depends on report@
-p << r1622.p;
+p << r2122.p;
 @@
 WARN(p[0], "ITextStream*", "LPTEXTSTREAM")
 
 
-@r1623@
+@r2123@
 typedef ITfCategoryMgr;
 typedef PTFCATEGORYMGR;
 position p;
@@ -21919,12 +28669,12 @@ position p;
 + ITfCategoryMgr *
 
 @script:python depends on report@
-p << r1623.p;
+p << r2123.p;
 @@
 WARN(p[0], "ITfCategoryMgr*", "PTFCATEGORYMGR")
 
 
-@r1624@
+@r2124@
 typedef LPTFCATEGORYMGR;
 position p;
 @@
@@ -21932,12 +28682,12 @@ position p;
 + ITfCategoryMgr *
 
 @script:python depends on report@
-p << r1624.p;
+p << r2124.p;
 @@
 WARN(p[0], "ITfCategoryMgr*", "LPTFCATEGORYMGR")
 
 
-@r1625@
+@r2125@
 typedef ITfClientId;
 typedef PTFCLIENTID;
 position p;
@@ -21946,12 +28696,12 @@ position p;
 + ITfClientId *
 
 @script:python depends on report@
-p << r1625.p;
+p << r2125.p;
 @@
 WARN(p[0], "ITfClientId*", "PTFCLIENTID")
 
 
-@r1626@
+@r2126@
 typedef LPTFCLIENTID;
 position p;
 @@
@@ -21959,12 +28709,12 @@ position p;
 + ITfClientId *
 
 @script:python depends on report@
-p << r1626.p;
+p << r2126.p;
 @@
 WARN(p[0], "ITfClientId*", "LPTFCLIENTID")
 
 
-@r1627@
+@r2127@
 typedef ITfCompartment;
 typedef PTFCOMPARTMENT;
 position p;
@@ -21973,12 +28723,12 @@ position p;
 + ITfCompartment *
 
 @script:python depends on report@
-p << r1627.p;
+p << r2127.p;
 @@
 WARN(p[0], "ITfCompartment*", "PTFCOMPARTMENT")
 
 
-@r1628@
+@r2128@
 typedef LPTFCOMPARTMENT;
 position p;
 @@
@@ -21986,12 +28736,12 @@ position p;
 + ITfCompartment *
 
 @script:python depends on report@
-p << r1628.p;
+p << r2128.p;
 @@
 WARN(p[0], "ITfCompartment*", "LPTFCOMPARTMENT")
 
 
-@r1629@
+@r2129@
 typedef ITfCompartmentMgr;
 typedef PTFCOMPARTMENTMGR;
 position p;
@@ -22000,12 +28750,12 @@ position p;
 + ITfCompartmentMgr *
 
 @script:python depends on report@
-p << r1629.p;
+p << r2129.p;
 @@
 WARN(p[0], "ITfCompartmentMgr*", "PTFCOMPARTMENTMGR")
 
 
-@r1630@
+@r2130@
 typedef LPTFCOMPARTMENTMGR;
 position p;
 @@
@@ -22013,12 +28763,12 @@ position p;
 + ITfCompartmentMgr *
 
 @script:python depends on report@
-p << r1630.p;
+p << r2130.p;
 @@
 WARN(p[0], "ITfCompartmentMgr*", "LPTFCOMPARTMENTMGR")
 
 
-@r1631@
+@r2131@
 typedef ITfContext;
 typedef PTFCONTEXT;
 position p;
@@ -22027,12 +28777,12 @@ position p;
 + ITfContext *
 
 @script:python depends on report@
-p << r1631.p;
+p << r2131.p;
 @@
 WARN(p[0], "ITfContext*", "PTFCONTEXT")
 
 
-@r1632@
+@r2132@
 typedef LPTFCONTEXT;
 position p;
 @@
@@ -22040,12 +28790,39 @@ position p;
 + ITfContext *
 
 @script:python depends on report@
-p << r1632.p;
+p << r2132.p;
 @@
 WARN(p[0], "ITfContext*", "LPTFCONTEXT")
 
 
-@r1633@
+@r2133@
+typedef ITfContextOwnerCompositionServices;
+typedef PTFCONTEXTOWNERCOMPOSITIONSERVICES;
+position p;
+@@
+- PTFCONTEXTOWNERCOMPOSITIONSERVICES@p
++ ITfContextOwnerCompositionServices *
+
+@script:python depends on report@
+p << r2133.p;
+@@
+WARN(p[0], "ITfContextOwnerCompositionServices*", "PTFCONTEXTOWNERCOMPOSITIONSERVICES")
+
+
+@r2134@
+typedef LPTFCONTEXTOWNERCOMPOSITIONSERVICES;
+position p;
+@@
+- LPTFCONTEXTOWNERCOMPOSITIONSERVICES@p
++ ITfContextOwnerCompositionServices *
+
+@script:python depends on report@
+p << r2134.p;
+@@
+WARN(p[0], "ITfContextOwnerCompositionServices*", "LPTFCONTEXTOWNERCOMPOSITIONSERVICES")
+
+
+@r2135@
 typedef ITfDisplayAttributeMgr;
 typedef PTFDISPLAYATTRIBUTEMGR;
 position p;
@@ -22054,12 +28831,12 @@ position p;
 + ITfDisplayAttributeMgr *
 
 @script:python depends on report@
-p << r1633.p;
+p << r2135.p;
 @@
 WARN(p[0], "ITfDisplayAttributeMgr*", "PTFDISPLAYATTRIBUTEMGR")
 
 
-@r1634@
+@r2136@
 typedef LPTFDISPLAYATTRIBUTEMGR;
 position p;
 @@
@@ -22067,12 +28844,12 @@ position p;
 + ITfDisplayAttributeMgr *
 
 @script:python depends on report@
-p << r1634.p;
+p << r2136.p;
 @@
 WARN(p[0], "ITfDisplayAttributeMgr*", "LPTFDISPLAYATTRIBUTEMGR")
 
 
-@r1635@
+@r2137@
 typedef ITfDocumentMgr;
 typedef PTFDOCUMENTMGR;
 position p;
@@ -22081,12 +28858,12 @@ position p;
 + ITfDocumentMgr *
 
 @script:python depends on report@
-p << r1635.p;
+p << r2137.p;
 @@
 WARN(p[0], "ITfDocumentMgr*", "PTFDOCUMENTMGR")
 
 
-@r1636@
+@r2138@
 typedef LPTFDOCUMENTMGR;
 position p;
 @@
@@ -22094,12 +28871,12 @@ position p;
 + ITfDocumentMgr *
 
 @script:python depends on report@
-p << r1636.p;
+p << r2138.p;
 @@
 WARN(p[0], "ITfDocumentMgr*", "LPTFDOCUMENTMGR")
 
 
-@r1637@
+@r2139@
 typedef ITfEditSession;
 typedef PTFEDITSESSION;
 position p;
@@ -22108,12 +28885,12 @@ position p;
 + ITfEditSession *
 
 @script:python depends on report@
-p << r1637.p;
+p << r2139.p;
 @@
 WARN(p[0], "ITfEditSession*", "PTFEDITSESSION")
 
 
-@r1638@
+@r2140@
 typedef LPTFEDITSESSION;
 position p;
 @@
@@ -22121,12 +28898,12 @@ position p;
 + ITfEditSession *
 
 @script:python depends on report@
-p << r1638.p;
+p << r2140.p;
 @@
 WARN(p[0], "ITfEditSession*", "LPTFEDITSESSION")
 
 
-@r1639@
+@r2141@
 typedef ITfInputProcessorProfileMgr;
 typedef PTFINPUTPROCESSORPROFILEMGR;
 position p;
@@ -22135,12 +28912,12 @@ position p;
 + ITfInputProcessorProfileMgr *
 
 @script:python depends on report@
-p << r1639.p;
+p << r2141.p;
 @@
 WARN(p[0], "ITfInputProcessorProfileMgr*", "PTFINPUTPROCESSORPROFILEMGR")
 
 
-@r1640@
+@r2142@
 typedef LPTFINPUTPROCESSORPROFILEMGR;
 position p;
 @@
@@ -22148,12 +28925,12 @@ position p;
 + ITfInputProcessorProfileMgr *
 
 @script:python depends on report@
-p << r1640.p;
+p << r2142.p;
 @@
 WARN(p[0], "ITfInputProcessorProfileMgr*", "LPTFINPUTPROCESSORPROFILEMGR")
 
 
-@r1641@
+@r2143@
 typedef ITfInputProcessorProfiles;
 typedef PTFINPUTPROCESSORPROFILES;
 position p;
@@ -22162,12 +28939,12 @@ position p;
 + ITfInputProcessorProfiles *
 
 @script:python depends on report@
-p << r1641.p;
+p << r2143.p;
 @@
 WARN(p[0], "ITfInputProcessorProfiles*", "PTFINPUTPROCESSORPROFILES")
 
 
-@r1642@
+@r2144@
 typedef LPTFINPUTPROCESSORPROFILES;
 position p;
 @@
@@ -22175,12 +28952,12 @@ position p;
 + ITfInputProcessorProfiles *
 
 @script:python depends on report@
-p << r1642.p;
+p << r2144.p;
 @@
 WARN(p[0], "ITfInputProcessorProfiles*", "LPTFINPUTPROCESSORPROFILES")
 
 
-@r1643@
+@r2145@
 typedef ITfInsertAtSelection;
 typedef PTFINSERTATSELECTION;
 position p;
@@ -22189,12 +28966,12 @@ position p;
 + ITfInsertAtSelection *
 
 @script:python depends on report@
-p << r1643.p;
+p << r2145.p;
 @@
 WARN(p[0], "ITfInsertAtSelection*", "PTFINSERTATSELECTION")
 
 
-@r1644@
+@r2146@
 typedef LPTFINSERTATSELECTION;
 position p;
 @@
@@ -22202,12 +28979,12 @@ position p;
 + ITfInsertAtSelection *
 
 @script:python depends on report@
-p << r1644.p;
+p << r2146.p;
 @@
 WARN(p[0], "ITfInsertAtSelection*", "LPTFINSERTATSELECTION")
 
 
-@r1645@
+@r2147@
 typedef ITfKeyEventSink;
 typedef PTFKEYEVENTSINK;
 position p;
@@ -22216,12 +28993,12 @@ position p;
 + ITfKeyEventSink *
 
 @script:python depends on report@
-p << r1645.p;
+p << r2147.p;
 @@
 WARN(p[0], "ITfKeyEventSink*", "PTFKEYEVENTSINK")
 
 
-@r1646@
+@r2148@
 typedef LPTFKEYEVENTSINK;
 position p;
 @@
@@ -22229,12 +29006,12 @@ position p;
 + ITfKeyEventSink *
 
 @script:python depends on report@
-p << r1646.p;
+p << r2148.p;
 @@
 WARN(p[0], "ITfKeyEventSink*", "LPTFKEYEVENTSINK")
 
 
-@r1647@
+@r2149@
 typedef ITfKeystrokeMgr;
 typedef PTFKEYSTROKEMGR;
 position p;
@@ -22243,12 +29020,12 @@ position p;
 + ITfKeystrokeMgr *
 
 @script:python depends on report@
-p << r1647.p;
+p << r2149.p;
 @@
 WARN(p[0], "ITfKeystrokeMgr*", "PTFKEYSTROKEMGR")
 
 
-@r1648@
+@r2150@
 typedef LPTFKEYSTROKEMGR;
 position p;
 @@
@@ -22256,12 +29033,12 @@ position p;
 + ITfKeystrokeMgr *
 
 @script:python depends on report@
-p << r1648.p;
+p << r2150.p;
 @@
 WARN(p[0], "ITfKeystrokeMgr*", "LPTFKEYSTROKEMGR")
 
 
-@r1649@
+@r2151@
 typedef ITfLangBarMgr;
 typedef PTFLANGBARMGR;
 position p;
@@ -22270,12 +29047,12 @@ position p;
 + ITfLangBarMgr *
 
 @script:python depends on report@
-p << r1649.p;
+p << r2151.p;
 @@
 WARN(p[0], "ITfLangBarMgr*", "PTFLANGBARMGR")
 
 
-@r1650@
+@r2152@
 typedef LPTFLANGBARMGR;
 position p;
 @@
@@ -22283,12 +29060,12 @@ position p;
 + ITfLangBarMgr *
 
 @script:python depends on report@
-p << r1650.p;
+p << r2152.p;
 @@
 WARN(p[0], "ITfLangBarMgr*", "LPTFLANGBARMGR")
 
 
-@r1651@
+@r2153@
 typedef ITfMessagePump;
 typedef PTFMESSAGEPUMP;
 position p;
@@ -22297,12 +29074,12 @@ position p;
 + ITfMessagePump *
 
 @script:python depends on report@
-p << r1651.p;
+p << r2153.p;
 @@
 WARN(p[0], "ITfMessagePump*", "PTFMESSAGEPUMP")
 
 
-@r1652@
+@r2154@
 typedef LPTFMESSAGEPUMP;
 position p;
 @@
@@ -22310,39 +29087,39 @@ position p;
 + ITfMessagePump *
 
 @script:python depends on report@
-p << r1652.p;
+p << r2154.p;
 @@
 WARN(p[0], "ITfMessagePump*", "LPTFMESSAGEPUMP")
 
 
-@r1653@
-typedef ITfRange;
-typedef PTFRANGE;
+@r2155@
+typedef ITfRangeACP;
+typedef PTFRANGEACP;
 position p;
 @@
-- PTFRANGE@p
-+ ITfRange *
+- PTFRANGEACP@p
++ ITfRangeACP *
 
 @script:python depends on report@
-p << r1653.p;
+p << r2155.p;
 @@
-WARN(p[0], "ITfRange*", "PTFRANGE")
+WARN(p[0], "ITfRangeACP*", "PTFRANGEACP")
 
 
-@r1654@
-typedef LPTFRANGE;
+@r2156@
+typedef LPTFRANGEACP;
 position p;
 @@
-- LPTFRANGE@p
-+ ITfRange *
+- LPTFRANGEACP@p
++ ITfRangeACP *
 
 @script:python depends on report@
-p << r1654.p;
+p << r2156.p;
 @@
-WARN(p[0], "ITfRange*", "LPTFRANGE")
+WARN(p[0], "ITfRangeACP*", "LPTFRANGEACP")
 
 
-@r1655@
+@r2157@
 typedef ITfSource;
 typedef PTFSOURCE;
 position p;
@@ -22351,12 +29128,12 @@ position p;
 + ITfSource *
 
 @script:python depends on report@
-p << r1655.p;
+p << r2157.p;
 @@
 WARN(p[0], "ITfSource*", "PTFSOURCE")
 
 
-@r1656@
+@r2158@
 typedef LPTFSOURCE;
 position p;
 @@
@@ -22364,12 +29141,12 @@ position p;
 + ITfSource *
 
 @script:python depends on report@
-p << r1656.p;
+p << r2158.p;
 @@
 WARN(p[0], "ITfSource*", "LPTFSOURCE")
 
 
-@r1657@
+@r2159@
 typedef ITfSourceSingle;
 typedef PTFSOURCESINGLE;
 position p;
@@ -22378,12 +29155,12 @@ position p;
 + ITfSourceSingle *
 
 @script:python depends on report@
-p << r1657.p;
+p << r2159.p;
 @@
 WARN(p[0], "ITfSourceSingle*", "PTFSOURCESINGLE")
 
 
-@r1658@
+@r2160@
 typedef LPTFSOURCESINGLE;
 position p;
 @@
@@ -22391,12 +29168,12 @@ position p;
 + ITfSourceSingle *
 
 @script:python depends on report@
-p << r1658.p;
+p << r2160.p;
 @@
 WARN(p[0], "ITfSourceSingle*", "LPTFSOURCESINGLE")
 
 
-@r1659@
+@r2161@
 typedef ITfTextEditSink;
 typedef PTFTEXTEDITSINK;
 position p;
@@ -22405,12 +29182,12 @@ position p;
 + ITfTextEditSink *
 
 @script:python depends on report@
-p << r1659.p;
+p << r2161.p;
 @@
 WARN(p[0], "ITfTextEditSink*", "PTFTEXTEDITSINK")
 
 
-@r1660@
+@r2162@
 typedef LPTFTEXTEDITSINK;
 position p;
 @@
@@ -22418,12 +29195,12 @@ position p;
 + ITfTextEditSink *
 
 @script:python depends on report@
-p << r1660.p;
+p << r2162.p;
 @@
 WARN(p[0], "ITfTextEditSink*", "LPTFTEXTEDITSINK")
 
 
-@r1661@
+@r2163@
 typedef ITfTextInputProcessor;
 typedef PTFTEXTINPUTPROCESSOR;
 position p;
@@ -22432,12 +29209,12 @@ position p;
 + ITfTextInputProcessor *
 
 @script:python depends on report@
-p << r1661.p;
+p << r2163.p;
 @@
 WARN(p[0], "ITfTextInputProcessor*", "PTFTEXTINPUTPROCESSOR")
 
 
-@r1662@
+@r2164@
 typedef LPTFTEXTINPUTPROCESSOR;
 position p;
 @@
@@ -22445,12 +29222,12 @@ position p;
 + ITfTextInputProcessor *
 
 @script:python depends on report@
-p << r1662.p;
+p << r2164.p;
 @@
 WARN(p[0], "ITfTextInputProcessor*", "LPTFTEXTINPUTPROCESSOR")
 
 
-@r1663@
+@r2165@
 typedef ITfThreadMgrEventSink;
 typedef PTFTHREADMGREVENTSINK;
 position p;
@@ -22459,12 +29236,12 @@ position p;
 + ITfThreadMgrEventSink *
 
 @script:python depends on report@
-p << r1663.p;
+p << r2165.p;
 @@
 WARN(p[0], "ITfThreadMgrEventSink*", "PTFTHREADMGREVENTSINK")
 
 
-@r1664@
+@r2166@
 typedef LPTFTHREADMGREVENTSINK;
 position p;
 @@
@@ -22472,12 +29249,12 @@ position p;
 + ITfThreadMgrEventSink *
 
 @script:python depends on report@
-p << r1664.p;
+p << r2166.p;
 @@
 WARN(p[0], "ITfThreadMgrEventSink*", "LPTFTHREADMGREVENTSINK")
 
 
-@r1665@
+@r2167@
 typedef ITfThreadMgrEx;
 typedef PTFTHREADMGREX;
 position p;
@@ -22486,12 +29263,12 @@ position p;
 + ITfThreadMgrEx *
 
 @script:python depends on report@
-p << r1665.p;
+p << r2167.p;
 @@
 WARN(p[0], "ITfThreadMgrEx*", "PTFTHREADMGREX")
 
 
-@r1666@
+@r2168@
 typedef LPTFTHREADMGREX;
 position p;
 @@
@@ -22499,12 +29276,12 @@ position p;
 + ITfThreadMgrEx *
 
 @script:python depends on report@
-p << r1666.p;
+p << r2168.p;
 @@
 WARN(p[0], "ITfThreadMgrEx*", "LPTFTHREADMGREX")
 
 
-@r1667@
+@r2169@
 typedef ITfUIElementMgr;
 typedef PTFUIELEMENTMGR;
 position p;
@@ -22513,12 +29290,12 @@ position p;
 + ITfUIElementMgr *
 
 @script:python depends on report@
-p << r1667.p;
+p << r2169.p;
 @@
 WARN(p[0], "ITfUIElementMgr*", "PTFUIELEMENTMGR")
 
 
-@r1668@
+@r2170@
 typedef LPTFUIELEMENTMGR;
 position p;
 @@
@@ -22526,12 +29303,12 @@ position p;
 + ITfUIElementMgr *
 
 @script:python depends on report@
-p << r1668.p;
+p << r2170.p;
 @@
 WARN(p[0], "ITfUIElementMgr*", "LPTFUIELEMENTMGR")
 
 
-@r1669@
+@r2171@
 typedef ITransaction;
 typedef PTRANSACTION;
 position p;
@@ -22540,12 +29317,12 @@ position p;
 + ITransaction *
 
 @script:python depends on report@
-p << r1669.p;
+p << r2171.p;
 @@
 WARN(p[0], "ITransaction*", "PTRANSACTION")
 
 
-@r1670@
+@r2172@
 typedef LPTRANSACTION;
 position p;
 @@
@@ -22553,12 +29330,12 @@ position p;
 + ITransaction *
 
 @script:python depends on report@
-p << r1670.p;
+p << r2172.p;
 @@
 WARN(p[0], "ITransaction*", "LPTRANSACTION")
 
 
-@r1671@
+@r2173@
 typedef ITransactionDispenser;
 typedef PTRANSACTIONDISPENSER;
 position p;
@@ -22567,12 +29344,12 @@ position p;
 + ITransactionDispenser *
 
 @script:python depends on report@
-p << r1671.p;
+p << r2173.p;
 @@
 WARN(p[0], "ITransactionDispenser*", "PTRANSACTIONDISPENSER")
 
 
-@r1672@
+@r2174@
 typedef LPTRANSACTIONDISPENSER;
 position p;
 @@
@@ -22580,12 +29357,12 @@ position p;
 + ITransactionDispenser *
 
 @script:python depends on report@
-p << r1672.p;
+p << r2174.p;
 @@
 WARN(p[0], "ITransactionDispenser*", "LPTRANSACTIONDISPENSER")
 
 
-@r1673@
+@r2175@
 typedef ITransactionImport;
 typedef PTRANSACTIONIMPORT;
 position p;
@@ -22594,12 +29371,12 @@ position p;
 + ITransactionImport *
 
 @script:python depends on report@
-p << r1673.p;
+p << r2175.p;
 @@
 WARN(p[0], "ITransactionImport*", "PTRANSACTIONIMPORT")
 
 
-@r1674@
+@r2176@
 typedef LPTRANSACTIONIMPORT;
 position p;
 @@
@@ -22607,12 +29384,12 @@ position p;
 + ITransactionImport *
 
 @script:python depends on report@
-p << r1674.p;
+p << r2176.p;
 @@
 WARN(p[0], "ITransactionImport*", "LPTRANSACTIONIMPORT")
 
 
-@r1675@
+@r2177@
 typedef ITransactionImportWhereabouts;
 typedef PTRANSACTIONIMPORTWHEREABOUTS;
 position p;
@@ -22621,12 +29398,12 @@ position p;
 + ITransactionImportWhereabouts *
 
 @script:python depends on report@
-p << r1675.p;
+p << r2177.p;
 @@
 WARN(p[0], "ITransactionImportWhereabouts*", "PTRANSACTIONIMPORTWHEREABOUTS")
 
 
-@r1676@
+@r2178@
 typedef LPTRANSACTIONIMPORTWHEREABOUTS;
 position p;
 @@
@@ -22634,12 +29411,12 @@ position p;
 + ITransactionImportWhereabouts *
 
 @script:python depends on report@
-p << r1676.p;
+p << r2178.p;
 @@
 WARN(p[0], "ITransactionImportWhereabouts*", "LPTRANSACTIONIMPORTWHEREABOUTS")
 
 
-@r1677@
+@r2179@
 typedef ITransactionOptions;
 typedef PTRANSACTIONOPTIONS;
 position p;
@@ -22648,12 +29425,12 @@ position p;
 + ITransactionOptions *
 
 @script:python depends on report@
-p << r1677.p;
+p << r2179.p;
 @@
 WARN(p[0], "ITransactionOptions*", "PTRANSACTIONOPTIONS")
 
 
-@r1678@
+@r2180@
 typedef LPTRANSACTIONOPTIONS;
 position p;
 @@
@@ -22661,12 +29438,12 @@ position p;
 + ITransactionOptions *
 
 @script:python depends on report@
-p << r1678.p;
+p << r2180.p;
 @@
 WARN(p[0], "ITransactionOptions*", "LPTRANSACTIONOPTIONS")
 
 
-@r1679@
+@r2181@
 typedef ITravelLogClient;
 typedef PTRAVELLOGCLIENT;
 position p;
@@ -22675,12 +29452,12 @@ position p;
 + ITravelLogClient *
 
 @script:python depends on report@
-p << r1679.p;
+p << r2181.p;
 @@
 WARN(p[0], "ITravelLogClient*", "PTRAVELLOGCLIENT")
 
 
-@r1680@
+@r2182@
 typedef LPTRAVELLOGCLIENT;
 position p;
 @@
@@ -22688,12 +29465,12 @@ position p;
 + ITravelLogClient *
 
 @script:python depends on report@
-p << r1680.p;
+p << r2182.p;
 @@
 WARN(p[0], "ITravelLogClient*", "LPTRAVELLOGCLIENT")
 
 
-@r1681@
+@r2183@
 typedef ITriggerCollection;
 typedef PTRIGGERCOLLECTION;
 position p;
@@ -22702,12 +29479,12 @@ position p;
 + ITriggerCollection *
 
 @script:python depends on report@
-p << r1681.p;
+p << r2183.p;
 @@
 WARN(p[0], "ITriggerCollection*", "PTRIGGERCOLLECTION")
 
 
-@r1682@
+@r2184@
 typedef LPTRIGGERCOLLECTION;
 position p;
 @@
@@ -22715,12 +29492,12 @@ position p;
 + ITriggerCollection *
 
 @script:python depends on report@
-p << r1682.p;
+p << r2184.p;
 @@
 WARN(p[0], "ITriggerCollection*", "LPTRIGGERCOLLECTION")
 
 
-@r1683@
+@r2185@
 typedef ITypeComp;
 typedef PTYPECOMP;
 position p;
@@ -22729,12 +29506,12 @@ position p;
 + ITypeComp *
 
 @script:python depends on report@
-p << r1683.p;
+p << r2185.p;
 @@
 WARN(p[0], "ITypeComp*", "PTYPECOMP")
 
 
-@r1684@
+@r2186@
 typedef LPTYPECOMP;
 position p;
 @@
@@ -22742,12 +29519,39 @@ position p;
 + ITypeComp *
 
 @script:python depends on report@
-p << r1684.p;
+p << r2186.p;
 @@
 WARN(p[0], "ITypeComp*", "LPTYPECOMP")
 
 
-@r1685@
+@r2187@
+typedef ITypeInfo;
+typedef PTYPEINFO;
+position p;
+@@
+- PTYPEINFO@p
++ ITypeInfo *
+
+@script:python depends on report@
+p << r2187.p;
+@@
+WARN(p[0], "ITypeInfo*", "PTYPEINFO")
+
+
+@r2188@
+typedef LPTYPEINFO;
+position p;
+@@
+- LPTYPEINFO@p
++ ITypeInfo *
+
+@script:python depends on report@
+p << r2188.p;
+@@
+WARN(p[0], "ITypeInfo*", "LPTYPEINFO")
+
+
+@r2189@
 typedef ITypeInfo2;
 typedef PTYPEINFO2;
 position p;
@@ -22756,12 +29560,12 @@ position p;
 + ITypeInfo2 *
 
 @script:python depends on report@
-p << r1685.p;
+p << r2189.p;
 @@
 WARN(p[0], "ITypeInfo2*", "PTYPEINFO2")
 
 
-@r1686@
+@r2190@
 typedef LPTYPEINFO2;
 position p;
 @@
@@ -22769,12 +29573,12 @@ position p;
 + ITypeInfo2 *
 
 @script:python depends on report@
-p << r1686.p;
+p << r2190.p;
 @@
 WARN(p[0], "ITypeInfo2*", "LPTYPEINFO2")
 
 
-@r1687@
+@r2191@
 typedef ITypeLib2;
 typedef PTYPELIB2;
 position p;
@@ -22783,12 +29587,12 @@ position p;
 + ITypeLib2 *
 
 @script:python depends on report@
-p << r1687.p;
+p << r2191.p;
 @@
 WARN(p[0], "ITypeLib2*", "PTYPELIB2")
 
 
-@r1688@
+@r2192@
 typedef LPTYPELIB2;
 position p;
 @@
@@ -22796,12 +29600,228 @@ position p;
 + ITypeLib2 *
 
 @script:python depends on report@
-p << r1688.p;
+p << r2192.p;
 @@
 WARN(p[0], "ITypeLib2*", "LPTYPELIB2")
 
 
-@r1689@
+@r2193@
+typedef IUIAnimationManager;
+typedef PUIANIMATIONMANAGER;
+position p;
+@@
+- PUIANIMATIONMANAGER@p
++ IUIAnimationManager *
+
+@script:python depends on report@
+p << r2193.p;
+@@
+WARN(p[0], "IUIAnimationManager*", "PUIANIMATIONMANAGER")
+
+
+@r2194@
+typedef LPUIANIMATIONMANAGER;
+position p;
+@@
+- LPUIANIMATIONMANAGER@p
++ IUIAnimationManager *
+
+@script:python depends on report@
+p << r2194.p;
+@@
+WARN(p[0], "IUIAnimationManager*", "LPUIANIMATIONMANAGER")
+
+
+@r2195@
+typedef IUIAnimationStoryboard;
+typedef PUIANIMATIONSTORYBOARD;
+position p;
+@@
+- PUIANIMATIONSTORYBOARD@p
++ IUIAnimationStoryboard *
+
+@script:python depends on report@
+p << r2195.p;
+@@
+WARN(p[0], "IUIAnimationStoryboard*", "PUIANIMATIONSTORYBOARD")
+
+
+@r2196@
+typedef LPUIANIMATIONSTORYBOARD;
+position p;
+@@
+- LPUIANIMATIONSTORYBOARD@p
++ IUIAnimationStoryboard *
+
+@script:python depends on report@
+p << r2196.p;
+@@
+WARN(p[0], "IUIAnimationStoryboard*", "LPUIANIMATIONSTORYBOARD")
+
+
+@r2197@
+typedef IUIAnimationTimer;
+typedef PUIANIMATIONTIMER;
+position p;
+@@
+- PUIANIMATIONTIMER@p
++ IUIAnimationTimer *
+
+@script:python depends on report@
+p << r2197.p;
+@@
+WARN(p[0], "IUIAnimationTimer*", "PUIANIMATIONTIMER")
+
+
+@r2198@
+typedef LPUIANIMATIONTIMER;
+position p;
+@@
+- LPUIANIMATIONTIMER@p
++ IUIAnimationTimer *
+
+@script:python depends on report@
+p << r2198.p;
+@@
+WARN(p[0], "IUIAnimationTimer*", "LPUIANIMATIONTIMER")
+
+
+@r2199@
+typedef IUIAnimationTransitionFactory;
+typedef PUIANIMATIONTRANSITIONFACTORY;
+position p;
+@@
+- PUIANIMATIONTRANSITIONFACTORY@p
++ IUIAnimationTransitionFactory *
+
+@script:python depends on report@
+p << r2199.p;
+@@
+WARN(p[0], "IUIAnimationTransitionFactory*", "PUIANIMATIONTRANSITIONFACTORY")
+
+
+@r2200@
+typedef LPUIANIMATIONTRANSITIONFACTORY;
+position p;
+@@
+- LPUIANIMATIONTRANSITIONFACTORY@p
++ IUIAnimationTransitionFactory *
+
+@script:python depends on report@
+p << r2200.p;
+@@
+WARN(p[0], "IUIAnimationTransitionFactory*", "LPUIANIMATIONTRANSITIONFACTORY")
+
+
+@r2201@
+typedef IUIAnimationTransitionLibrary;
+typedef PUIANIMATIONTRANSITIONLIBRARY;
+position p;
+@@
+- PUIANIMATIONTRANSITIONLIBRARY@p
++ IUIAnimationTransitionLibrary *
+
+@script:python depends on report@
+p << r2201.p;
+@@
+WARN(p[0], "IUIAnimationTransitionLibrary*", "PUIANIMATIONTRANSITIONLIBRARY")
+
+
+@r2202@
+typedef LPUIANIMATIONTRANSITIONLIBRARY;
+position p;
+@@
+- LPUIANIMATIONTRANSITIONLIBRARY@p
++ IUIAnimationTransitionLibrary *
+
+@script:python depends on report@
+p << r2202.p;
+@@
+WARN(p[0], "IUIAnimationTransitionLibrary*", "LPUIANIMATIONTRANSITIONLIBRARY")
+
+
+@r2203@
+typedef IUIAnimationVariable;
+typedef PUIANIMATIONVARIABLE;
+position p;
+@@
+- PUIANIMATIONVARIABLE@p
++ IUIAnimationVariable *
+
+@script:python depends on report@
+p << r2203.p;
+@@
+WARN(p[0], "IUIAnimationVariable*", "PUIANIMATIONVARIABLE")
+
+
+@r2204@
+typedef LPUIANIMATIONVARIABLE;
+position p;
+@@
+- LPUIANIMATIONVARIABLE@p
++ IUIAnimationVariable *
+
+@script:python depends on report@
+p << r2204.p;
+@@
+WARN(p[0], "IUIAnimationVariable*", "LPUIANIMATIONVARIABLE")
+
+
+@r2205@
+typedef IUIFramework;
+typedef PUIFRAMEWORK;
+position p;
+@@
+- PUIFRAMEWORK@p
++ IUIFramework *
+
+@script:python depends on report@
+p << r2205.p;
+@@
+WARN(p[0], "IUIFramework*", "PUIFRAMEWORK")
+
+
+@r2206@
+typedef LPUIFRAMEWORK;
+position p;
+@@
+- LPUIFRAMEWORK@p
++ IUIFramework *
+
+@script:python depends on report@
+p << r2206.p;
+@@
+WARN(p[0], "IUIFramework*", "LPUIFRAMEWORK")
+
+
+@r2207@
+typedef IUPnPNAT;
+typedef PUPNPNAT;
+position p;
+@@
+- PUPNPNAT@p
++ IUPnPNAT *
+
+@script:python depends on report@
+p << r2207.p;
+@@
+WARN(p[0], "IUPnPNAT*", "PUPNPNAT")
+
+
+@r2208@
+typedef LPUPNPNAT;
+position p;
+@@
+- LPUPNPNAT@p
++ IUPnPNAT *
+
+@script:python depends on report@
+p << r2208.p;
+@@
+WARN(p[0], "IUPnPNAT*", "LPUPNPNAT")
+
+
+@r2209@
 typedef IUniformResourceLocatorA;
 typedef PUNIFORMRESOURCELOCATORA;
 position p;
@@ -22810,12 +29830,12 @@ position p;
 + IUniformResourceLocatorA *
 
 @script:python depends on report@
-p << r1689.p;
+p << r2209.p;
 @@
 WARN(p[0], "IUniformResourceLocatorA*", "PUNIFORMRESOURCELOCATORA")
 
 
-@r1690@
+@r2210@
 typedef LPUNIFORMRESOURCELOCATORA;
 position p;
 @@
@@ -22823,12 +29843,12 @@ position p;
 + IUniformResourceLocatorA *
 
 @script:python depends on report@
-p << r1690.p;
+p << r2210.p;
 @@
 WARN(p[0], "IUniformResourceLocatorA*", "LPUNIFORMRESOURCELOCATORA")
 
 
-@r1691@
+@r2211@
 typedef IUniformResourceLocatorW;
 typedef PUNIFORMRESOURCELOCATORW;
 position p;
@@ -22837,12 +29857,12 @@ position p;
 + IUniformResourceLocatorW *
 
 @script:python depends on report@
-p << r1691.p;
+p << r2211.p;
 @@
 WARN(p[0], "IUniformResourceLocatorW*", "PUNIFORMRESOURCELOCATORW")
 
 
-@r1692@
+@r2212@
 typedef LPUNIFORMRESOURCELOCATORW;
 position p;
 @@
@@ -22850,12 +29870,12 @@ position p;
 + IUniformResourceLocatorW *
 
 @script:python depends on report@
-p << r1692.p;
+p << r2212.p;
 @@
 WARN(p[0], "IUniformResourceLocatorW*", "LPUNIFORMRESOURCELOCATORW")
 
 
-@r1693@
+@r2213@
 typedef IUnknown;
 typedef PUNKNOWN;
 position p;
@@ -22864,12 +29884,12 @@ position p;
 + IUnknown *
 
 @script:python depends on report@
-p << r1693.p;
+p << r2213.p;
 @@
 WARN(p[0], "IUnknown*", "PUNKNOWN")
 
 
-@r1694@
+@r2214@
 typedef LPUNKNOWN;
 position p;
 @@
@@ -22877,12 +29897,12 @@ position p;
 + IUnknown *
 
 @script:python depends on report@
-p << r1694.p;
+p << r2214.p;
 @@
 WARN(p[0], "IUnknown*", "LPUNKNOWN")
 
 
-@r1695@
+@r2215@
 typedef IUpdateDownloader;
 typedef PUPDATEDOWNLOADER;
 position p;
@@ -22891,12 +29911,12 @@ position p;
 + IUpdateDownloader *
 
 @script:python depends on report@
-p << r1695.p;
+p << r2215.p;
 @@
 WARN(p[0], "IUpdateDownloader*", "PUPDATEDOWNLOADER")
 
 
-@r1696@
+@r2216@
 typedef LPUPDATEDOWNLOADER;
 position p;
 @@
@@ -22904,12 +29924,12 @@ position p;
 + IUpdateDownloader *
 
 @script:python depends on report@
-p << r1696.p;
+p << r2216.p;
 @@
 WARN(p[0], "IUpdateDownloader*", "LPUPDATEDOWNLOADER")
 
 
-@r1697@
+@r2217@
 typedef IUpdateInstaller;
 typedef PUPDATEINSTALLER;
 position p;
@@ -22918,12 +29938,12 @@ position p;
 + IUpdateInstaller *
 
 @script:python depends on report@
-p << r1697.p;
+p << r2217.p;
 @@
 WARN(p[0], "IUpdateInstaller*", "PUPDATEINSTALLER")
 
 
-@r1698@
+@r2218@
 typedef LPUPDATEINSTALLER;
 position p;
 @@
@@ -22931,12 +29951,12 @@ position p;
 + IUpdateInstaller *
 
 @script:python depends on report@
-p << r1698.p;
+p << r2218.p;
 @@
 WARN(p[0], "IUpdateInstaller*", "LPUPDATEINSTALLER")
 
 
-@r1699@
+@r2219@
 typedef IUpdateSearcher;
 typedef PUPDATESEARCHER;
 position p;
@@ -22945,12 +29965,12 @@ position p;
 + IUpdateSearcher *
 
 @script:python depends on report@
-p << r1699.p;
+p << r2219.p;
 @@
 WARN(p[0], "IUpdateSearcher*", "PUPDATESEARCHER")
 
 
-@r1700@
+@r2220@
 typedef LPUPDATESEARCHER;
 position p;
 @@
@@ -22958,12 +29978,12 @@ position p;
 + IUpdateSearcher *
 
 @script:python depends on report@
-p << r1700.p;
+p << r2220.p;
 @@
 WARN(p[0], "IUpdateSearcher*", "LPUPDATESEARCHER")
 
 
-@r1701@
+@r2221@
 typedef IUpdateSession;
 typedef PUPDATESESSION;
 position p;
@@ -22972,12 +29992,12 @@ position p;
 + IUpdateSession *
 
 @script:python depends on report@
-p << r1701.p;
+p << r2221.p;
 @@
 WARN(p[0], "IUpdateSession*", "PUPDATESESSION")
 
 
-@r1702@
+@r2222@
 typedef LPUPDATESESSION;
 position p;
 @@
@@ -22985,12 +30005,12 @@ position p;
 + IUpdateSession *
 
 @script:python depends on report@
-p << r1702.p;
+p << r2222.p;
 @@
 WARN(p[0], "IUpdateSession*", "LPUPDATESESSION")
 
 
-@r1703@
+@r2223@
 typedef IUri;
 typedef PURI;
 position p;
@@ -22999,12 +30019,12 @@ position p;
 + IUri *
 
 @script:python depends on report@
-p << r1703.p;
+p << r2223.p;
 @@
 WARN(p[0], "IUri*", "PURI")
 
 
-@r1704@
+@r2224@
 typedef LPURI;
 position p;
 @@
@@ -23012,12 +30032,12 @@ position p;
 + IUri *
 
 @script:python depends on report@
-p << r1704.p;
+p << r2224.p;
 @@
 WARN(p[0], "IUri*", "LPURI")
 
 
-@r1705@
+@r2225@
 typedef IUriBuilder;
 typedef PURIBUILDER;
 position p;
@@ -23026,12 +30046,12 @@ position p;
 + IUriBuilder *
 
 @script:python depends on report@
-p << r1705.p;
+p << r2225.p;
 @@
 WARN(p[0], "IUriBuilder*", "PURIBUILDER")
 
 
-@r1706@
+@r2226@
 typedef LPURIBUILDER;
 position p;
 @@
@@ -23039,12 +30059,12 @@ position p;
 + IUriBuilder *
 
 @script:python depends on report@
-p << r1706.p;
+p << r2226.p;
 @@
 WARN(p[0], "IUriBuilder*", "LPURIBUILDER")
 
 
-@r1707@
+@r2227@
 typedef IUriBuilderFactory;
 typedef PURIBUILDERFACTORY;
 position p;
@@ -23053,12 +30073,12 @@ position p;
 + IUriBuilderFactory *
 
 @script:python depends on report@
-p << r1707.p;
+p << r2227.p;
 @@
 WARN(p[0], "IUriBuilderFactory*", "PURIBUILDERFACTORY")
 
 
-@r1708@
+@r2228@
 typedef LPURIBUILDERFACTORY;
 position p;
 @@
@@ -23066,12 +30086,12 @@ position p;
 + IUriBuilderFactory *
 
 @script:python depends on report@
-p << r1708.p;
+p << r2228.p;
 @@
 WARN(p[0], "IUriBuilderFactory*", "LPURIBUILDERFACTORY")
 
 
-@r1709@
+@r2229@
 typedef IUriContainer;
 typedef PURICONTAINER;
 position p;
@@ -23080,12 +30100,12 @@ position p;
 + IUriContainer *
 
 @script:python depends on report@
-p << r1709.p;
+p << r2229.p;
 @@
 WARN(p[0], "IUriContainer*", "PURICONTAINER")
 
 
-@r1710@
+@r2230@
 typedef LPURICONTAINER;
 position p;
 @@
@@ -23093,12 +30113,12 @@ position p;
 + IUriContainer *
 
 @script:python depends on report@
-p << r1710.p;
+p << r2230.p;
 @@
 WARN(p[0], "IUriContainer*", "LPURICONTAINER")
 
 
-@r1711@
+@r2231@
 typedef IVBMXNamespaceManager;
 typedef PVBMXNAMESPACEMANAGER;
 position p;
@@ -23107,12 +30127,12 @@ position p;
 + IVBMXNamespaceManager *
 
 @script:python depends on report@
-p << r1711.p;
+p << r2231.p;
 @@
 WARN(p[0], "IVBMXNamespaceManager*", "PVBMXNAMESPACEMANAGER")
 
 
-@r1712@
+@r2232@
 typedef LPVBMXNAMESPACEMANAGER;
 position p;
 @@
@@ -23120,12 +30140,12 @@ position p;
 + IVBMXNamespaceManager *
 
 @script:python depends on report@
-p << r1712.p;
+p << r2232.p;
 @@
 WARN(p[0], "IVBMXNamespaceManager*", "LPVBMXNAMESPACEMANAGER")
 
 
-@r1713@
+@r2233@
 typedef IVBSAXAttributes;
 typedef PVBSAXATTRIBUTES;
 position p;
@@ -23134,12 +30154,12 @@ position p;
 + IVBSAXAttributes *
 
 @script:python depends on report@
-p << r1713.p;
+p << r2233.p;
 @@
 WARN(p[0], "IVBSAXAttributes*", "PVBSAXATTRIBUTES")
 
 
-@r1714@
+@r2234@
 typedef LPVBSAXATTRIBUTES;
 position p;
 @@
@@ -23147,12 +30167,12 @@ position p;
 + IVBSAXAttributes *
 
 @script:python depends on report@
-p << r1714.p;
+p << r2234.p;
 @@
 WARN(p[0], "IVBSAXAttributes*", "LPVBSAXATTRIBUTES")
 
 
-@r1715@
+@r2235@
 typedef IVBSAXContentHandler;
 typedef PVBSAXCONTENTHANDLER;
 position p;
@@ -23161,12 +30181,12 @@ position p;
 + IVBSAXContentHandler *
 
 @script:python depends on report@
-p << r1715.p;
+p << r2235.p;
 @@
 WARN(p[0], "IVBSAXContentHandler*", "PVBSAXCONTENTHANDLER")
 
 
-@r1716@
+@r2236@
 typedef LPVBSAXCONTENTHANDLER;
 position p;
 @@
@@ -23174,12 +30194,12 @@ position p;
 + IVBSAXContentHandler *
 
 @script:python depends on report@
-p << r1716.p;
+p << r2236.p;
 @@
 WARN(p[0], "IVBSAXContentHandler*", "LPVBSAXCONTENTHANDLER")
 
 
-@r1717@
+@r2237@
 typedef IVBSAXDTDHandler;
 typedef PVBSAXDTDHANDLER;
 position p;
@@ -23188,12 +30208,12 @@ position p;
 + IVBSAXDTDHandler *
 
 @script:python depends on report@
-p << r1717.p;
+p << r2237.p;
 @@
 WARN(p[0], "IVBSAXDTDHandler*", "PVBSAXDTDHANDLER")
 
 
-@r1718@
+@r2238@
 typedef LPVBSAXDTDHANDLER;
 position p;
 @@
@@ -23201,12 +30221,12 @@ position p;
 + IVBSAXDTDHandler *
 
 @script:python depends on report@
-p << r1718.p;
+p << r2238.p;
 @@
 WARN(p[0], "IVBSAXDTDHandler*", "LPVBSAXDTDHANDLER")
 
 
-@r1719@
+@r2239@
 typedef IVBSAXDeclHandler;
 typedef PVBSAXDECLHANDLER;
 position p;
@@ -23215,12 +30235,12 @@ position p;
 + IVBSAXDeclHandler *
 
 @script:python depends on report@
-p << r1719.p;
+p << r2239.p;
 @@
 WARN(p[0], "IVBSAXDeclHandler*", "PVBSAXDECLHANDLER")
 
 
-@r1720@
+@r2240@
 typedef LPVBSAXDECLHANDLER;
 position p;
 @@
@@ -23228,12 +30248,12 @@ position p;
 + IVBSAXDeclHandler *
 
 @script:python depends on report@
-p << r1720.p;
+p << r2240.p;
 @@
 WARN(p[0], "IVBSAXDeclHandler*", "LPVBSAXDECLHANDLER")
 
 
-@r1721@
+@r2241@
 typedef IVBSAXErrorHandler;
 typedef PVBSAXERRORHANDLER;
 position p;
@@ -23242,12 +30262,12 @@ position p;
 + IVBSAXErrorHandler *
 
 @script:python depends on report@
-p << r1721.p;
+p << r2241.p;
 @@
 WARN(p[0], "IVBSAXErrorHandler*", "PVBSAXERRORHANDLER")
 
 
-@r1722@
+@r2242@
 typedef LPVBSAXERRORHANDLER;
 position p;
 @@
@@ -23255,12 +30275,12 @@ position p;
 + IVBSAXErrorHandler *
 
 @script:python depends on report@
-p << r1722.p;
+p << r2242.p;
 @@
 WARN(p[0], "IVBSAXErrorHandler*", "LPVBSAXERRORHANDLER")
 
 
-@r1723@
+@r2243@
 typedef IVBSAXLexicalHandler;
 typedef PVBSAXLEXICALHANDLER;
 position p;
@@ -23269,12 +30289,12 @@ position p;
 + IVBSAXLexicalHandler *
 
 @script:python depends on report@
-p << r1723.p;
+p << r2243.p;
 @@
 WARN(p[0], "IVBSAXLexicalHandler*", "PVBSAXLEXICALHANDLER")
 
 
-@r1724@
+@r2244@
 typedef LPVBSAXLEXICALHANDLER;
 position p;
 @@
@@ -23282,12 +30302,12 @@ position p;
 + IVBSAXLexicalHandler *
 
 @script:python depends on report@
-p << r1724.p;
+p << r2244.p;
 @@
 WARN(p[0], "IVBSAXLexicalHandler*", "LPVBSAXLEXICALHANDLER")
 
 
-@r1725@
+@r2245@
 typedef IVBSAXLocator;
 typedef PVBSAXLOCATOR;
 position p;
@@ -23296,12 +30316,12 @@ position p;
 + IVBSAXLocator *
 
 @script:python depends on report@
-p << r1725.p;
+p << r2245.p;
 @@
 WARN(p[0], "IVBSAXLocator*", "PVBSAXLOCATOR")
 
 
-@r1726@
+@r2246@
 typedef LPVBSAXLOCATOR;
 position p;
 @@
@@ -23309,12 +30329,12 @@ position p;
 + IVBSAXLocator *
 
 @script:python depends on report@
-p << r1726.p;
+p << r2246.p;
 @@
 WARN(p[0], "IVBSAXLocator*", "LPVBSAXLOCATOR")
 
 
-@r1727@
+@r2247@
 typedef IVBSAXXMLReader;
 typedef PVBSAXXMLREADER;
 position p;
@@ -23323,12 +30343,12 @@ position p;
 + IVBSAXXMLReader *
 
 @script:python depends on report@
-p << r1727.p;
+p << r2247.p;
 @@
 WARN(p[0], "IVBSAXXMLReader*", "PVBSAXXMLREADER")
 
 
-@r1728@
+@r2248@
 typedef LPVBSAXXMLREADER;
 position p;
 @@
@@ -23336,12 +30356,39 @@ position p;
 + IVBSAXXMLReader *
 
 @script:python depends on report@
-p << r1728.p;
+p << r2248.p;
 @@
 WARN(p[0], "IVBSAXXMLReader*", "LPVBSAXXMLREADER")
 
 
-@r1729@
+@r2249@
+typedef IVMRAspectRatioControl9;
+typedef PVMRASPECTRATIOCONTROL9;
+position p;
+@@
+- PVMRASPECTRATIOCONTROL9@p
++ IVMRAspectRatioControl9 *
+
+@script:python depends on report@
+p << r2249.p;
+@@
+WARN(p[0], "IVMRAspectRatioControl9*", "PVMRASPECTRATIOCONTROL9")
+
+
+@r2250@
+typedef LPVMRASPECTRATIOCONTROL9;
+position p;
+@@
+- LPVMRASPECTRATIOCONTROL9@p
++ IVMRAspectRatioControl9 *
+
+@script:python depends on report@
+p << r2250.p;
+@@
+WARN(p[0], "IVMRAspectRatioControl9*", "LPVMRASPECTRATIOCONTROL9")
+
+
+@r2251@
 typedef IVMRFilterConfig;
 typedef PVMRFILTERCONFIG;
 position p;
@@ -23350,12 +30397,12 @@ position p;
 + IVMRFilterConfig *
 
 @script:python depends on report@
-p << r1729.p;
+p << r2251.p;
 @@
 WARN(p[0], "IVMRFilterConfig*", "PVMRFILTERCONFIG")
 
 
-@r1730@
+@r2252@
 typedef LPVMRFILTERCONFIG;
 position p;
 @@
@@ -23363,12 +30410,12 @@ position p;
 + IVMRFilterConfig *
 
 @script:python depends on report@
-p << r1730.p;
+p << r2252.p;
 @@
 WARN(p[0], "IVMRFilterConfig*", "LPVMRFILTERCONFIG")
 
 
-@r1731@
+@r2253@
 typedef IVMRFilterConfig9;
 typedef PVMRFILTERCONFIG9;
 position p;
@@ -23377,12 +30424,12 @@ position p;
 + IVMRFilterConfig9 *
 
 @script:python depends on report@
-p << r1731.p;
+p << r2253.p;
 @@
 WARN(p[0], "IVMRFilterConfig9*", "PVMRFILTERCONFIG9")
 
 
-@r1732@
+@r2254@
 typedef LPVMRFILTERCONFIG9;
 position p;
 @@
@@ -23390,12 +30437,12 @@ position p;
 + IVMRFilterConfig9 *
 
 @script:python depends on report@
-p << r1732.p;
+p << r2254.p;
 @@
 WARN(p[0], "IVMRFilterConfig9*", "LPVMRFILTERCONFIG9")
 
 
-@r1733@
+@r2255@
 typedef IVMRImagePresenter9;
 typedef PVMRIMAGEPRESENTER9;
 position p;
@@ -23404,12 +30451,12 @@ position p;
 + IVMRImagePresenter9 *
 
 @script:python depends on report@
-p << r1733.p;
+p << r2255.p;
 @@
 WARN(p[0], "IVMRImagePresenter9*", "PVMRIMAGEPRESENTER9")
 
 
-@r1734@
+@r2256@
 typedef LPVMRIMAGEPRESENTER9;
 position p;
 @@
@@ -23417,12 +30464,66 @@ position p;
 + IVMRImagePresenter9 *
 
 @script:python depends on report@
-p << r1734.p;
+p << r2256.p;
 @@
 WARN(p[0], "IVMRImagePresenter9*", "LPVMRIMAGEPRESENTER9")
 
 
-@r1735@
+@r2257@
+typedef IVMRMixerBitmap9;
+typedef PVMRMIXERBITMAP9;
+position p;
+@@
+- PVMRMIXERBITMAP9@p
++ IVMRMixerBitmap9 *
+
+@script:python depends on report@
+p << r2257.p;
+@@
+WARN(p[0], "IVMRMixerBitmap9*", "PVMRMIXERBITMAP9")
+
+
+@r2258@
+typedef LPVMRMIXERBITMAP9;
+position p;
+@@
+- LPVMRMIXERBITMAP9@p
++ IVMRMixerBitmap9 *
+
+@script:python depends on report@
+p << r2258.p;
+@@
+WARN(p[0], "IVMRMixerBitmap9*", "LPVMRMIXERBITMAP9")
+
+
+@r2259@
+typedef IVMRMixerControl9;
+typedef PVMRMIXERCONTROL9;
+position p;
+@@
+- PVMRMIXERCONTROL9@p
++ IVMRMixerControl9 *
+
+@script:python depends on report@
+p << r2259.p;
+@@
+WARN(p[0], "IVMRMixerControl9*", "PVMRMIXERCONTROL9")
+
+
+@r2260@
+typedef LPVMRMIXERCONTROL9;
+position p;
+@@
+- LPVMRMIXERCONTROL9@p
++ IVMRMixerControl9 *
+
+@script:python depends on report@
+p << r2260.p;
+@@
+WARN(p[0], "IVMRMixerControl9*", "LPVMRMIXERCONTROL9")
+
+
+@r2261@
 typedef IVMRMonitorConfig;
 typedef PVMRMONITORCONFIG;
 position p;
@@ -23431,12 +30532,12 @@ position p;
 + IVMRMonitorConfig *
 
 @script:python depends on report@
-p << r1735.p;
+p << r2261.p;
 @@
 WARN(p[0], "IVMRMonitorConfig*", "PVMRMONITORCONFIG")
 
 
-@r1736@
+@r2262@
 typedef LPVMRMONITORCONFIG;
 position p;
 @@
@@ -23444,12 +30545,12 @@ position p;
 + IVMRMonitorConfig *
 
 @script:python depends on report@
-p << r1736.p;
+p << r2262.p;
 @@
 WARN(p[0], "IVMRMonitorConfig*", "LPVMRMONITORCONFIG")
 
 
-@r1737@
+@r2263@
 typedef IVMRMonitorConfig9;
 typedef PVMRMONITORCONFIG9;
 position p;
@@ -23458,12 +30559,12 @@ position p;
 + IVMRMonitorConfig9 *
 
 @script:python depends on report@
-p << r1737.p;
+p << r2263.p;
 @@
 WARN(p[0], "IVMRMonitorConfig9*", "PVMRMONITORCONFIG9")
 
 
-@r1738@
+@r2264@
 typedef LPVMRMONITORCONFIG9;
 position p;
 @@
@@ -23471,39 +30572,39 @@ position p;
 + IVMRMonitorConfig9 *
 
 @script:python depends on report@
-p << r1738.p;
+p << r2264.p;
 @@
 WARN(p[0], "IVMRMonitorConfig9*", "LPVMRMONITORCONFIG9")
 
 
-@r1739@
-typedef IVMRSurfaceAllocatorEx9;
-typedef PVMRSURFACEALLOCATOREX9;
+@r2265@
+typedef IVMRSurfaceAllocator9;
+typedef PVMRSURFACEALLOCATOR9;
 position p;
 @@
-- PVMRSURFACEALLOCATOREX9@p
-+ IVMRSurfaceAllocatorEx9 *
+- PVMRSURFACEALLOCATOR9@p
++ IVMRSurfaceAllocator9 *
 
 @script:python depends on report@
-p << r1739.p;
+p << r2265.p;
 @@
-WARN(p[0], "IVMRSurfaceAllocatorEx9*", "PVMRSURFACEALLOCATOREX9")
+WARN(p[0], "IVMRSurfaceAllocator9*", "PVMRSURFACEALLOCATOR9")
 
 
-@r1740@
-typedef LPVMRSURFACEALLOCATOREX9;
+@r2266@
+typedef LPVMRSURFACEALLOCATOR9;
 position p;
 @@
-- LPVMRSURFACEALLOCATOREX9@p
-+ IVMRSurfaceAllocatorEx9 *
+- LPVMRSURFACEALLOCATOR9@p
++ IVMRSurfaceAllocator9 *
 
 @script:python depends on report@
-p << r1740.p;
+p << r2266.p;
 @@
-WARN(p[0], "IVMRSurfaceAllocatorEx9*", "LPVMRSURFACEALLOCATOREX9")
+WARN(p[0], "IVMRSurfaceAllocator9*", "LPVMRSURFACEALLOCATOR9")
 
 
-@r1741@
+@r2267@
 typedef IVMRSurfaceAllocatorNotify;
 typedef PVMRSURFACEALLOCATORNOTIFY;
 position p;
@@ -23512,12 +30613,12 @@ position p;
 + IVMRSurfaceAllocatorNotify *
 
 @script:python depends on report@
-p << r1741.p;
+p << r2267.p;
 @@
 WARN(p[0], "IVMRSurfaceAllocatorNotify*", "PVMRSURFACEALLOCATORNOTIFY")
 
 
-@r1742@
+@r2268@
 typedef LPVMRSURFACEALLOCATORNOTIFY;
 position p;
 @@
@@ -23525,12 +30626,12 @@ position p;
 + IVMRSurfaceAllocatorNotify *
 
 @script:python depends on report@
-p << r1742.p;
+p << r2268.p;
 @@
 WARN(p[0], "IVMRSurfaceAllocatorNotify*", "LPVMRSURFACEALLOCATORNOTIFY")
 
 
-@r1743@
+@r2269@
 typedef IVMRSurfaceAllocatorNotify9;
 typedef PVMRSURFACEALLOCATORNOTIFY9;
 position p;
@@ -23539,12 +30640,12 @@ position p;
 + IVMRSurfaceAllocatorNotify9 *
 
 @script:python depends on report@
-p << r1743.p;
+p << r2269.p;
 @@
 WARN(p[0], "IVMRSurfaceAllocatorNotify9*", "PVMRSURFACEALLOCATORNOTIFY9")
 
 
-@r1744@
+@r2270@
 typedef LPVMRSURFACEALLOCATORNOTIFY9;
 position p;
 @@
@@ -23552,12 +30653,12 @@ position p;
 + IVMRSurfaceAllocatorNotify9 *
 
 @script:python depends on report@
-p << r1744.p;
+p << r2270.p;
 @@
 WARN(p[0], "IVMRSurfaceAllocatorNotify9*", "LPVMRSURFACEALLOCATORNOTIFY9")
 
 
-@r1745@
+@r2271@
 typedef IVMRWindowlessControl;
 typedef PVMRWINDOWLESSCONTROL;
 position p;
@@ -23566,12 +30667,12 @@ position p;
 + IVMRWindowlessControl *
 
 @script:python depends on report@
-p << r1745.p;
+p << r2271.p;
 @@
 WARN(p[0], "IVMRWindowlessControl*", "PVMRWINDOWLESSCONTROL")
 
 
-@r1746@
+@r2272@
 typedef LPVMRWINDOWLESSCONTROL;
 position p;
 @@
@@ -23579,12 +30680,12 @@ position p;
 + IVMRWindowlessControl *
 
 @script:python depends on report@
-p << r1746.p;
+p << r2272.p;
 @@
 WARN(p[0], "IVMRWindowlessControl*", "LPVMRWINDOWLESSCONTROL")
 
 
-@r1747@
+@r2273@
 typedef IVMRWindowlessControl9;
 typedef PVMRWINDOWLESSCONTROL9;
 position p;
@@ -23593,12 +30694,12 @@ position p;
 + IVMRWindowlessControl9 *
 
 @script:python depends on report@
-p << r1747.p;
+p << r2273.p;
 @@
 WARN(p[0], "IVMRWindowlessControl9*", "PVMRWINDOWLESSCONTROL9")
 
 
-@r1748@
+@r2274@
 typedef LPVMRWINDOWLESSCONTROL9;
 position p;
 @@
@@ -23606,12 +30707,12 @@ position p;
 + IVMRWindowlessControl9 *
 
 @script:python depends on report@
-p << r1748.p;
+p << r2274.p;
 @@
 WARN(p[0], "IVMRWindowlessControl9*", "LPVMRWINDOWLESSCONTROL9")
 
 
-@r1749@
+@r2275@
 typedef IVariantChangeType;
 typedef PVARIANTCHANGETYPE;
 position p;
@@ -23620,12 +30721,12 @@ position p;
 + IVariantChangeType *
 
 @script:python depends on report@
-p << r1749.p;
+p << r2275.p;
 @@
 WARN(p[0], "IVariantChangeType*", "PVARIANTCHANGETYPE")
 
 
-@r1750@
+@r2276@
 typedef LPVARIANTCHANGETYPE;
 position p;
 @@
@@ -23633,12 +30734,147 @@ position p;
 + IVariantChangeType *
 
 @script:python depends on report@
-p << r1750.p;
+p << r2276.p;
 @@
 WARN(p[0], "IVariantChangeType*", "LPVARIANTCHANGETYPE")
 
 
-@r1751@
+@r2277@
+typedef IVectorView_Gamepad;
+typedef PVECTORVIEW_GAMEPAD;
+position p;
+@@
+- PVECTORVIEW_GAMEPAD@p
++ IVectorView_Gamepad *
+
+@script:python depends on report@
+p << r2277.p;
+@@
+WARN(p[0], "IVectorView_Gamepad*", "PVECTORVIEW_GAMEPAD")
+
+
+@r2278@
+typedef LPVECTORVIEW_GAMEPAD;
+position p;
+@@
+- LPVECTORVIEW_GAMEPAD@p
++ IVectorView_Gamepad *
+
+@script:python depends on report@
+p << r2278.p;
+@@
+WARN(p[0], "IVectorView_Gamepad*", "LPVECTORVIEW_GAMEPAD")
+
+
+@r2279@
+typedef IVectorView_HSTRING;
+typedef PVECTORVIEW_HSTRING;
+position p;
+@@
+- PVECTORVIEW_HSTRING@p
++ IVectorView_HSTRING *
+
+@script:python depends on report@
+p << r2279.p;
+@@
+WARN(p[0], "IVectorView_HSTRING*", "PVECTORVIEW_HSTRING")
+
+
+@r2280@
+typedef LPVECTORVIEW_HSTRING;
+position p;
+@@
+- LPVECTORVIEW_HSTRING@p
++ IVectorView_HSTRING *
+
+@script:python depends on report@
+p << r2280.p;
+@@
+WARN(p[0], "IVectorView_HSTRING*", "LPVECTORVIEW_HSTRING")
+
+
+@r2281@
+typedef IVectorView_RawGameController;
+typedef PVECTORVIEW_RAWGAMECONTROLLER;
+position p;
+@@
+- PVECTORVIEW_RAWGAMECONTROLLER@p
++ IVectorView_RawGameController *
+
+@script:python depends on report@
+p << r2281.p;
+@@
+WARN(p[0], "IVectorView_RawGameController*", "PVECTORVIEW_RAWGAMECONTROLLER")
+
+
+@r2282@
+typedef LPVECTORVIEW_RAWGAMECONTROLLER;
+position p;
+@@
+- LPVECTORVIEW_RAWGAMECONTROLLER@p
++ IVectorView_RawGameController *
+
+@script:python depends on report@
+p << r2282.p;
+@@
+WARN(p[0], "IVectorView_RawGameController*", "LPVECTORVIEW_RAWGAMECONTROLLER")
+
+
+@r2283@
+typedef IVectorView_VoiceInformation;
+typedef PVECTORVIEW_VOICEINFORMATION;
+position p;
+@@
+- PVECTORVIEW_VOICEINFORMATION@p
++ IVectorView_VoiceInformation *
+
+@script:python depends on report@
+p << r2283.p;
+@@
+WARN(p[0], "IVectorView_VoiceInformation*", "PVECTORVIEW_VOICEINFORMATION")
+
+
+@r2284@
+typedef LPVECTORVIEW_VOICEINFORMATION;
+position p;
+@@
+- LPVECTORVIEW_VOICEINFORMATION@p
++ IVectorView_VoiceInformation *
+
+@script:python depends on report@
+p << r2284.p;
+@@
+WARN(p[0], "IVectorView_VoiceInformation*", "LPVECTORVIEW_VOICEINFORMATION")
+
+
+@r2285@
+typedef IVideoFrameStep;
+typedef PVIDEOFRAMESTEP;
+position p;
+@@
+- PVIDEOFRAMESTEP@p
++ IVideoFrameStep *
+
+@script:python depends on report@
+p << r2285.p;
+@@
+WARN(p[0], "IVideoFrameStep*", "PVIDEOFRAMESTEP")
+
+
+@r2286@
+typedef LPVIDEOFRAMESTEP;
+position p;
+@@
+- LPVIDEOFRAMESTEP@p
++ IVideoFrameStep *
+
+@script:python depends on report@
+p << r2286.p;
+@@
+WARN(p[0], "IVideoFrameStep*", "LPVIDEOFRAMESTEP")
+
+
+@r2287@
 typedef IVideoWindow;
 typedef PVIDEOWINDOW;
 position p;
@@ -23647,12 +30883,12 @@ position p;
 + IVideoWindow *
 
 @script:python depends on report@
-p << r1751.p;
+p << r2287.p;
 @@
 WARN(p[0], "IVideoWindow*", "PVIDEOWINDOW")
 
 
-@r1752@
+@r2288@
 typedef LPVIDEOWINDOW;
 position p;
 @@
@@ -23660,12 +30896,12 @@ position p;
 + IVideoWindow *
 
 @script:python depends on report@
-p << r1752.p;
+p << r2288.p;
 @@
 WARN(p[0], "IVideoWindow*", "LPVIDEOWINDOW")
 
 
-@r1753@
+@r2289@
 typedef IViewObject;
 typedef PVIEWOBJECT;
 position p;
@@ -23674,12 +30910,12 @@ position p;
 + IViewObject *
 
 @script:python depends on report@
-p << r1753.p;
+p << r2289.p;
 @@
 WARN(p[0], "IViewObject*", "PVIEWOBJECT")
 
 
-@r1754@
+@r2290@
 typedef LPVIEWOBJECT;
 position p;
 @@
@@ -23687,12 +30923,12 @@ position p;
 + IViewObject *
 
 @script:python depends on report@
-p << r1754.p;
+p << r2290.p;
 @@
 WARN(p[0], "IViewObject*", "LPVIEWOBJECT")
 
 
-@r1755@
+@r2291@
 typedef IViewObject2;
 typedef PVIEWOBJECT2;
 position p;
@@ -23701,12 +30937,12 @@ position p;
 + IViewObject2 *
 
 @script:python depends on report@
-p << r1755.p;
+p << r2291.p;
 @@
 WARN(p[0], "IViewObject2*", "PVIEWOBJECT2")
 
 
-@r1756@
+@r2292@
 typedef LPVIEWOBJECT2;
 position p;
 @@
@@ -23714,12 +30950,12 @@ position p;
 + IViewObject2 *
 
 @script:python depends on report@
-p << r1756.p;
+p << r2292.p;
 @@
 WARN(p[0], "IViewObject2*", "LPVIEWOBJECT2")
 
 
-@r1757@
+@r2293@
 typedef IViewObjectEx;
 typedef PVIEWOBJECTEX;
 position p;
@@ -23728,12 +30964,12 @@ position p;
 + IViewObjectEx *
 
 @script:python depends on report@
-p << r1757.p;
+p << r2293.p;
 @@
 WARN(p[0], "IViewObjectEx*", "PVIEWOBJECTEX")
 
 
-@r1758@
+@r2294@
 typedef LPVIEWOBJECTEX;
 position p;
 @@
@@ -23741,12 +30977,12 @@ position p;
 + IViewObjectEx *
 
 @script:python depends on report@
-p << r1758.p;
+p << r2294.p;
 @@
 WARN(p[0], "IViewObjectEx*", "LPVIEWOBJECTEX")
 
 
-@r1759@
+@r2295@
 typedef IWICBitmap;
 typedef PWICBITMAP;
 position p;
@@ -23755,12 +30991,12 @@ position p;
 + IWICBitmap *
 
 @script:python depends on report@
-p << r1759.p;
+p << r2295.p;
 @@
 WARN(p[0], "IWICBitmap*", "PWICBITMAP")
 
 
-@r1760@
+@r2296@
 typedef LPWICBITMAP;
 position p;
 @@
@@ -23768,12 +31004,12 @@ position p;
 + IWICBitmap *
 
 @script:python depends on report@
-p << r1760.p;
+p << r2296.p;
 @@
 WARN(p[0], "IWICBitmap*", "LPWICBITMAP")
 
 
-@r1761@
+@r2297@
 typedef IWICBitmapClipper;
 typedef PWICBITMAPCLIPPER;
 position p;
@@ -23782,12 +31018,12 @@ position p;
 + IWICBitmapClipper *
 
 @script:python depends on report@
-p << r1761.p;
+p << r2297.p;
 @@
 WARN(p[0], "IWICBitmapClipper*", "PWICBITMAPCLIPPER")
 
 
-@r1762@
+@r2298@
 typedef LPWICBITMAPCLIPPER;
 position p;
 @@
@@ -23795,12 +31031,12 @@ position p;
 + IWICBitmapClipper *
 
 @script:python depends on report@
-p << r1762.p;
+p << r2298.p;
 @@
 WARN(p[0], "IWICBitmapClipper*", "LPWICBITMAPCLIPPER")
 
 
-@r1763@
+@r2299@
 typedef IWICBitmapDecoder;
 typedef PWICBITMAPDECODER;
 position p;
@@ -23809,12 +31045,12 @@ position p;
 + IWICBitmapDecoder *
 
 @script:python depends on report@
-p << r1763.p;
+p << r2299.p;
 @@
 WARN(p[0], "IWICBitmapDecoder*", "PWICBITMAPDECODER")
 
 
-@r1764@
+@r2300@
 typedef LPWICBITMAPDECODER;
 position p;
 @@
@@ -23822,39 +31058,12 @@ position p;
 + IWICBitmapDecoder *
 
 @script:python depends on report@
-p << r1764.p;
+p << r2300.p;
 @@
 WARN(p[0], "IWICBitmapDecoder*", "LPWICBITMAPDECODER")
 
 
-@r1765@
-typedef IWICBitmapDecoderInfo;
-typedef PWICBITMAPDECODERINFO;
-position p;
-@@
-- PWICBITMAPDECODERINFO@p
-+ IWICBitmapDecoderInfo *
-
-@script:python depends on report@
-p << r1765.p;
-@@
-WARN(p[0], "IWICBitmapDecoderInfo*", "PWICBITMAPDECODERINFO")
-
-
-@r1766@
-typedef LPWICBITMAPDECODERINFO;
-position p;
-@@
-- LPWICBITMAPDECODERINFO@p
-+ IWICBitmapDecoderInfo *
-
-@script:python depends on report@
-p << r1766.p;
-@@
-WARN(p[0], "IWICBitmapDecoderInfo*", "LPWICBITMAPDECODERINFO")
-
-
-@r1767@
+@r2301@
 typedef IWICBitmapEncoder;
 typedef PWICBITMAPENCODER;
 position p;
@@ -23863,12 +31072,12 @@ position p;
 + IWICBitmapEncoder *
 
 @script:python depends on report@
-p << r1767.p;
+p << r2301.p;
 @@
 WARN(p[0], "IWICBitmapEncoder*", "PWICBITMAPENCODER")
 
 
-@r1768@
+@r2302@
 typedef LPWICBITMAPENCODER;
 position p;
 @@
@@ -23876,39 +31085,12 @@ position p;
 + IWICBitmapEncoder *
 
 @script:python depends on report@
-p << r1768.p;
+p << r2302.p;
 @@
 WARN(p[0], "IWICBitmapEncoder*", "LPWICBITMAPENCODER")
 
 
-@r1769@
-typedef IWICBitmapEncoderInfo;
-typedef PWICBITMAPENCODERINFO;
-position p;
-@@
-- PWICBITMAPENCODERINFO@p
-+ IWICBitmapEncoderInfo *
-
-@script:python depends on report@
-p << r1769.p;
-@@
-WARN(p[0], "IWICBitmapEncoderInfo*", "PWICBITMAPENCODERINFO")
-
-
-@r1770@
-typedef LPWICBITMAPENCODERINFO;
-position p;
-@@
-- LPWICBITMAPENCODERINFO@p
-+ IWICBitmapEncoderInfo *
-
-@script:python depends on report@
-p << r1770.p;
-@@
-WARN(p[0], "IWICBitmapEncoderInfo*", "LPWICBITMAPENCODERINFO")
-
-
-@r1771@
+@r2303@
 typedef IWICBitmapFlipRotator;
 typedef PWICBITMAPFLIPROTATOR;
 position p;
@@ -23917,12 +31099,12 @@ position p;
 + IWICBitmapFlipRotator *
 
 @script:python depends on report@
-p << r1771.p;
+p << r2303.p;
 @@
 WARN(p[0], "IWICBitmapFlipRotator*", "PWICBITMAPFLIPROTATOR")
 
 
-@r1772@
+@r2304@
 typedef LPWICBITMAPFLIPROTATOR;
 position p;
 @@
@@ -23930,12 +31112,12 @@ position p;
 + IWICBitmapFlipRotator *
 
 @script:python depends on report@
-p << r1772.p;
+p << r2304.p;
 @@
 WARN(p[0], "IWICBitmapFlipRotator*", "LPWICBITMAPFLIPROTATOR")
 
 
-@r1773@
+@r2305@
 typedef IWICBitmapFrameDecode;
 typedef PWICBITMAPFRAMEDECODE;
 position p;
@@ -23944,12 +31126,12 @@ position p;
 + IWICBitmapFrameDecode *
 
 @script:python depends on report@
-p << r1773.p;
+p << r2305.p;
 @@
 WARN(p[0], "IWICBitmapFrameDecode*", "PWICBITMAPFRAMEDECODE")
 
 
-@r1774@
+@r2306@
 typedef LPWICBITMAPFRAMEDECODE;
 position p;
 @@
@@ -23957,12 +31139,12 @@ position p;
 + IWICBitmapFrameDecode *
 
 @script:python depends on report@
-p << r1774.p;
+p << r2306.p;
 @@
 WARN(p[0], "IWICBitmapFrameDecode*", "LPWICBITMAPFRAMEDECODE")
 
 
-@r1775@
+@r2307@
 typedef IWICBitmapFrameEncode;
 typedef PWICBITMAPFRAMEENCODE;
 position p;
@@ -23971,12 +31153,12 @@ position p;
 + IWICBitmapFrameEncode *
 
 @script:python depends on report@
-p << r1775.p;
+p << r2307.p;
 @@
 WARN(p[0], "IWICBitmapFrameEncode*", "PWICBITMAPFRAMEENCODE")
 
 
-@r1776@
+@r2308@
 typedef LPWICBITMAPFRAMEENCODE;
 position p;
 @@
@@ -23984,12 +31166,12 @@ position p;
 + IWICBitmapFrameEncode *
 
 @script:python depends on report@
-p << r1776.p;
+p << r2308.p;
 @@
 WARN(p[0], "IWICBitmapFrameEncode*", "LPWICBITMAPFRAMEENCODE")
 
 
-@r1777@
+@r2309@
 typedef IWICBitmapLock;
 typedef PWICBITMAPLOCK;
 position p;
@@ -23998,12 +31180,12 @@ position p;
 + IWICBitmapLock *
 
 @script:python depends on report@
-p << r1777.p;
+p << r2309.p;
 @@
 WARN(p[0], "IWICBitmapLock*", "PWICBITMAPLOCK")
 
 
-@r1778@
+@r2310@
 typedef LPWICBITMAPLOCK;
 position p;
 @@
@@ -24011,12 +31193,12 @@ position p;
 + IWICBitmapLock *
 
 @script:python depends on report@
-p << r1778.p;
+p << r2310.p;
 @@
 WARN(p[0], "IWICBitmapLock*", "LPWICBITMAPLOCK")
 
 
-@r1779@
+@r2311@
 typedef IWICBitmapScaler;
 typedef PWICBITMAPSCALER;
 position p;
@@ -24025,12 +31207,12 @@ position p;
 + IWICBitmapScaler *
 
 @script:python depends on report@
-p << r1779.p;
+p << r2311.p;
 @@
 WARN(p[0], "IWICBitmapScaler*", "PWICBITMAPSCALER")
 
 
-@r1780@
+@r2312@
 typedef LPWICBITMAPSCALER;
 position p;
 @@
@@ -24038,12 +31220,12 @@ position p;
 + IWICBitmapScaler *
 
 @script:python depends on report@
-p << r1780.p;
+p << r2312.p;
 @@
 WARN(p[0], "IWICBitmapScaler*", "LPWICBITMAPSCALER")
 
 
-@r1781@
+@r2313@
 typedef IWICBitmapSource;
 typedef PWICBITMAPSOURCE;
 position p;
@@ -24052,12 +31234,12 @@ position p;
 + IWICBitmapSource *
 
 @script:python depends on report@
-p << r1781.p;
+p << r2313.p;
 @@
 WARN(p[0], "IWICBitmapSource*", "PWICBITMAPSOURCE")
 
 
-@r1782@
+@r2314@
 typedef LPWICBITMAPSOURCE;
 position p;
 @@
@@ -24065,12 +31247,12 @@ position p;
 + IWICBitmapSource *
 
 @script:python depends on report@
-p << r1782.p;
+p << r2314.p;
 @@
 WARN(p[0], "IWICBitmapSource*", "LPWICBITMAPSOURCE")
 
 
-@r1783@
+@r2315@
 typedef IWICColorContext;
 typedef PWICCOLORCONTEXT;
 position p;
@@ -24079,12 +31261,12 @@ position p;
 + IWICColorContext *
 
 @script:python depends on report@
-p << r1783.p;
+p << r2315.p;
 @@
 WARN(p[0], "IWICColorContext*", "PWICCOLORCONTEXT")
 
 
-@r1784@
+@r2316@
 typedef LPWICCOLORCONTEXT;
 position p;
 @@
@@ -24092,12 +31274,12 @@ position p;
 + IWICColorContext *
 
 @script:python depends on report@
-p << r1784.p;
+p << r2316.p;
 @@
 WARN(p[0], "IWICColorContext*", "LPWICCOLORCONTEXT")
 
 
-@r1785@
+@r2317@
 typedef IWICColorTransform;
 typedef PWICCOLORTRANSFORM;
 position p;
@@ -24106,12 +31288,12 @@ position p;
 + IWICColorTransform *
 
 @script:python depends on report@
-p << r1785.p;
+p << r2317.p;
 @@
 WARN(p[0], "IWICColorTransform*", "PWICCOLORTRANSFORM")
 
 
-@r1786@
+@r2318@
 typedef LPWICCOLORTRANSFORM;
 position p;
 @@
@@ -24119,12 +31301,12 @@ position p;
 + IWICColorTransform *
 
 @script:python depends on report@
-p << r1786.p;
+p << r2318.p;
 @@
 WARN(p[0], "IWICColorTransform*", "LPWICCOLORTRANSFORM")
 
 
-@r1787@
+@r2319@
 typedef IWICComponentFactory;
 typedef PWICCOMPONENTFACTORY;
 position p;
@@ -24133,12 +31315,12 @@ position p;
 + IWICComponentFactory *
 
 @script:python depends on report@
-p << r1787.p;
+p << r2319.p;
 @@
 WARN(p[0], "IWICComponentFactory*", "PWICCOMPONENTFACTORY")
 
 
-@r1788@
+@r2320@
 typedef LPWICCOMPONENTFACTORY;
 position p;
 @@
@@ -24146,12 +31328,120 @@ position p;
 + IWICComponentFactory *
 
 @script:python depends on report@
-p << r1788.p;
+p << r2320.p;
 @@
 WARN(p[0], "IWICComponentFactory*", "LPWICCOMPONENTFACTORY")
 
 
-@r1789@
+@r2321@
+typedef IWICComponentInfo;
+typedef PWICCOMPONENTINFO;
+position p;
+@@
+- PWICCOMPONENTINFO@p
++ IWICComponentInfo *
+
+@script:python depends on report@
+p << r2321.p;
+@@
+WARN(p[0], "IWICComponentInfo*", "PWICCOMPONENTINFO")
+
+
+@r2322@
+typedef LPWICCOMPONENTINFO;
+position p;
+@@
+- LPWICCOMPONENTINFO@p
++ IWICComponentInfo *
+
+@script:python depends on report@
+p << r2322.p;
+@@
+WARN(p[0], "IWICComponentInfo*", "LPWICCOMPONENTINFO")
+
+
+@r2323@
+typedef IWICDdsDecoder;
+typedef PWICDDSDECODER;
+position p;
+@@
+- PWICDDSDECODER@p
++ IWICDdsDecoder *
+
+@script:python depends on report@
+p << r2323.p;
+@@
+WARN(p[0], "IWICDdsDecoder*", "PWICDDSDECODER")
+
+
+@r2324@
+typedef LPWICDDSDECODER;
+position p;
+@@
+- LPWICDDSDECODER@p
++ IWICDdsDecoder *
+
+@script:python depends on report@
+p << r2324.p;
+@@
+WARN(p[0], "IWICDdsDecoder*", "LPWICDDSDECODER")
+
+
+@r2325@
+typedef IWICDdsEncoder;
+typedef PWICDDSENCODER;
+position p;
+@@
+- PWICDDSENCODER@p
++ IWICDdsEncoder *
+
+@script:python depends on report@
+p << r2325.p;
+@@
+WARN(p[0], "IWICDdsEncoder*", "PWICDDSENCODER")
+
+
+@r2326@
+typedef LPWICDDSENCODER;
+position p;
+@@
+- LPWICDDSENCODER@p
++ IWICDdsEncoder *
+
+@script:python depends on report@
+p << r2326.p;
+@@
+WARN(p[0], "IWICDdsEncoder*", "LPWICDDSENCODER")
+
+
+@r2327@
+typedef IWICDdsFrameDecode;
+typedef PWICDDSFRAMEDECODE;
+position p;
+@@
+- PWICDDSFRAMEDECODE@p
++ IWICDdsFrameDecode *
+
+@script:python depends on report@
+p << r2327.p;
+@@
+WARN(p[0], "IWICDdsFrameDecode*", "PWICDDSFRAMEDECODE")
+
+
+@r2328@
+typedef LPWICDDSFRAMEDECODE;
+position p;
+@@
+- LPWICDDSFRAMEDECODE@p
++ IWICDdsFrameDecode *
+
+@script:python depends on report@
+p << r2328.p;
+@@
+WARN(p[0], "IWICDdsFrameDecode*", "LPWICDDSFRAMEDECODE")
+
+
+@r2329@
 typedef IWICEnumMetadataItem;
 typedef PWICENUMMETADATAITEM;
 position p;
@@ -24160,12 +31450,12 @@ position p;
 + IWICEnumMetadataItem *
 
 @script:python depends on report@
-p << r1789.p;
+p << r2329.p;
 @@
 WARN(p[0], "IWICEnumMetadataItem*", "PWICENUMMETADATAITEM")
 
 
-@r1790@
+@r2330@
 typedef LPWICENUMMETADATAITEM;
 position p;
 @@
@@ -24173,12 +31463,12 @@ position p;
 + IWICEnumMetadataItem *
 
 @script:python depends on report@
-p << r1790.p;
+p << r2330.p;
 @@
 WARN(p[0], "IWICEnumMetadataItem*", "LPWICENUMMETADATAITEM")
 
 
-@r1791@
+@r2331@
 typedef IWICFormatConverter;
 typedef PWICFORMATCONVERTER;
 position p;
@@ -24187,12 +31477,12 @@ position p;
 + IWICFormatConverter *
 
 @script:python depends on report@
-p << r1791.p;
+p << r2331.p;
 @@
 WARN(p[0], "IWICFormatConverter*", "PWICFORMATCONVERTER")
 
 
-@r1792@
+@r2332@
 typedef LPWICFORMATCONVERTER;
 position p;
 @@
@@ -24200,39 +31490,39 @@ position p;
 + IWICFormatConverter *
 
 @script:python depends on report@
-p << r1792.p;
+p << r2332.p;
 @@
 WARN(p[0], "IWICFormatConverter*", "LPWICFORMATCONVERTER")
 
 
-@r1793@
-typedef IWICFormatConverterInfo;
-typedef PWICFORMATCONVERTERINFO;
+@r2333@
+typedef IWICImagingFactory2;
+typedef PWICIMAGINGFACTORY2;
 position p;
 @@
-- PWICFORMATCONVERTERINFO@p
-+ IWICFormatConverterInfo *
+- PWICIMAGINGFACTORY2@p
++ IWICImagingFactory2 *
 
 @script:python depends on report@
-p << r1793.p;
+p << r2333.p;
 @@
-WARN(p[0], "IWICFormatConverterInfo*", "PWICFORMATCONVERTERINFO")
+WARN(p[0], "IWICImagingFactory2*", "PWICIMAGINGFACTORY2")
 
 
-@r1794@
-typedef LPWICFORMATCONVERTERINFO;
+@r2334@
+typedef LPWICIMAGINGFACTORY2;
 position p;
 @@
-- LPWICFORMATCONVERTERINFO@p
-+ IWICFormatConverterInfo *
+- LPWICIMAGINGFACTORY2@p
++ IWICImagingFactory2 *
 
 @script:python depends on report@
-p << r1794.p;
+p << r2334.p;
 @@
-WARN(p[0], "IWICFormatConverterInfo*", "LPWICFORMATCONVERTERINFO")
+WARN(p[0], "IWICImagingFactory2*", "LPWICIMAGINGFACTORY2")
 
 
-@r1795@
+@r2335@
 typedef IWICMetadataBlockReader;
 typedef PWICMETADATABLOCKREADER;
 position p;
@@ -24241,12 +31531,12 @@ position p;
 + IWICMetadataBlockReader *
 
 @script:python depends on report@
-p << r1795.p;
+p << r2335.p;
 @@
 WARN(p[0], "IWICMetadataBlockReader*", "PWICMETADATABLOCKREADER")
 
 
-@r1796@
+@r2336@
 typedef LPWICMETADATABLOCKREADER;
 position p;
 @@
@@ -24254,12 +31544,39 @@ position p;
 + IWICMetadataBlockReader *
 
 @script:python depends on report@
-p << r1796.p;
+p << r2336.p;
 @@
 WARN(p[0], "IWICMetadataBlockReader*", "LPWICMETADATABLOCKREADER")
 
 
-@r1797@
+@r2337@
+typedef IWICMetadataBlockWriter;
+typedef PWICMETADATABLOCKWRITER;
+position p;
+@@
+- PWICMETADATABLOCKWRITER@p
++ IWICMetadataBlockWriter *
+
+@script:python depends on report@
+p << r2337.p;
+@@
+WARN(p[0], "IWICMetadataBlockWriter*", "PWICMETADATABLOCKWRITER")
+
+
+@r2338@
+typedef LPWICMETADATABLOCKWRITER;
+position p;
+@@
+- LPWICMETADATABLOCKWRITER@p
++ IWICMetadataBlockWriter *
+
+@script:python depends on report@
+p << r2338.p;
+@@
+WARN(p[0], "IWICMetadataBlockWriter*", "LPWICMETADATABLOCKWRITER")
+
+
+@r2339@
 typedef IWICMetadataQueryReader;
 typedef PWICMETADATAQUERYREADER;
 position p;
@@ -24268,12 +31585,12 @@ position p;
 + IWICMetadataQueryReader *
 
 @script:python depends on report@
-p << r1797.p;
+p << r2339.p;
 @@
 WARN(p[0], "IWICMetadataQueryReader*", "PWICMETADATAQUERYREADER")
 
 
-@r1798@
+@r2340@
 typedef LPWICMETADATAQUERYREADER;
 position p;
 @@
@@ -24281,39 +31598,39 @@ position p;
 + IWICMetadataQueryReader *
 
 @script:python depends on report@
-p << r1798.p;
+p << r2340.p;
 @@
 WARN(p[0], "IWICMetadataQueryReader*", "LPWICMETADATAQUERYREADER")
 
 
-@r1799@
-typedef IWICMetadataReaderInfo;
-typedef PWICMETADATAREADERINFO;
+@r2341@
+typedef IWICMetadataQueryWriter;
+typedef PWICMETADATAQUERYWRITER;
 position p;
 @@
-- PWICMETADATAREADERINFO@p
-+ IWICMetadataReaderInfo *
+- PWICMETADATAQUERYWRITER@p
++ IWICMetadataQueryWriter *
 
 @script:python depends on report@
-p << r1799.p;
+p << r2341.p;
 @@
-WARN(p[0], "IWICMetadataReaderInfo*", "PWICMETADATAREADERINFO")
+WARN(p[0], "IWICMetadataQueryWriter*", "PWICMETADATAQUERYWRITER")
 
 
-@r1800@
-typedef LPWICMETADATAREADERINFO;
+@r2342@
+typedef LPWICMETADATAQUERYWRITER;
 position p;
 @@
-- LPWICMETADATAREADERINFO@p
-+ IWICMetadataReaderInfo *
+- LPWICMETADATAQUERYWRITER@p
++ IWICMetadataQueryWriter *
 
 @script:python depends on report@
-p << r1800.p;
+p << r2342.p;
 @@
-WARN(p[0], "IWICMetadataReaderInfo*", "LPWICMETADATAREADERINFO")
+WARN(p[0], "IWICMetadataQueryWriter*", "LPWICMETADATAQUERYWRITER")
 
 
-@r1801@
+@r2343@
 typedef IWICMetadataWriter;
 typedef PWICMETADATAWRITER;
 position p;
@@ -24322,12 +31639,12 @@ position p;
 + IWICMetadataWriter *
 
 @script:python depends on report@
-p << r1801.p;
+p << r2343.p;
 @@
 WARN(p[0], "IWICMetadataWriter*", "PWICMETADATAWRITER")
 
 
-@r1802@
+@r2344@
 typedef LPWICMETADATAWRITER;
 position p;
 @@
@@ -24335,12 +31652,12 @@ position p;
 + IWICMetadataWriter *
 
 @script:python depends on report@
-p << r1802.p;
+p << r2344.p;
 @@
 WARN(p[0], "IWICMetadataWriter*", "LPWICMETADATAWRITER")
 
 
-@r1803@
+@r2345@
 typedef IWICPalette;
 typedef PWICPALETTE;
 position p;
@@ -24349,12 +31666,12 @@ position p;
 + IWICPalette *
 
 @script:python depends on report@
-p << r1803.p;
+p << r2345.p;
 @@
 WARN(p[0], "IWICPalette*", "PWICPALETTE")
 
 
-@r1804@
+@r2346@
 typedef LPWICPALETTE;
 position p;
 @@
@@ -24362,12 +31679,12 @@ position p;
 + IWICPalette *
 
 @script:python depends on report@
-p << r1804.p;
+p << r2346.p;
 @@
 WARN(p[0], "IWICPalette*", "LPWICPALETTE")
 
 
-@r1805@
+@r2347@
 typedef IWICPersistStream;
 typedef PWICPERSISTSTREAM;
 position p;
@@ -24376,12 +31693,12 @@ position p;
 + IWICPersistStream *
 
 @script:python depends on report@
-p << r1805.p;
+p << r2347.p;
 @@
 WARN(p[0], "IWICPersistStream*", "PWICPERSISTSTREAM")
 
 
-@r1806@
+@r2348@
 typedef LPWICPERSISTSTREAM;
 position p;
 @@
@@ -24389,39 +31706,12 @@ position p;
 + IWICPersistStream *
 
 @script:python depends on report@
-p << r1806.p;
+p << r2348.p;
 @@
 WARN(p[0], "IWICPersistStream*", "LPWICPERSISTSTREAM")
 
 
-@r1807@
-typedef IWICPixelFormatInfo2;
-typedef PWICPIXELFORMATINFO2;
-position p;
-@@
-- PWICPIXELFORMATINFO2@p
-+ IWICPixelFormatInfo2 *
-
-@script:python depends on report@
-p << r1807.p;
-@@
-WARN(p[0], "IWICPixelFormatInfo2*", "PWICPIXELFORMATINFO2")
-
-
-@r1808@
-typedef LPWICPIXELFORMATINFO2;
-position p;
-@@
-- LPWICPIXELFORMATINFO2@p
-+ IWICPixelFormatInfo2 *
-
-@script:python depends on report@
-p << r1808.p;
-@@
-WARN(p[0], "IWICPixelFormatInfo2*", "LPWICPIXELFORMATINFO2")
-
-
-@r1809@
+@r2349@
 typedef IWICStream;
 typedef PWICSTREAM;
 position p;
@@ -24430,12 +31720,12 @@ position p;
 + IWICStream *
 
 @script:python depends on report@
-p << r1809.p;
+p << r2349.p;
 @@
 WARN(p[0], "IWICStream*", "PWICSTREAM")
 
 
-@r1810@
+@r2350@
 typedef LPWICSTREAM;
 position p;
 @@
@@ -24443,12 +31733,201 @@ position p;
 + IWICStream *
 
 @script:python depends on report@
-p << r1810.p;
+p << r2350.p;
 @@
 WARN(p[0], "IWICStream*", "LPWICSTREAM")
 
 
-@r1811@
+@r2351@
+typedef IWICWineDecoder;
+typedef PWICWINEDECODER;
+position p;
+@@
+- PWICWINEDECODER@p
++ IWICWineDecoder *
+
+@script:python depends on report@
+p << r2351.p;
+@@
+WARN(p[0], "IWICWineDecoder*", "PWICWINEDECODER")
+
+
+@r2352@
+typedef LPWICWINEDECODER;
+position p;
+@@
+- LPWICWINEDECODER@p
++ IWICWineDecoder *
+
+@script:python depends on report@
+p << r2352.p;
+@@
+WARN(p[0], "IWICWineDecoder*", "LPWICWINEDECODER")
+
+
+@r2353@
+typedef IWMHeaderInfo3;
+typedef PWMHEADERINFO3;
+position p;
+@@
+- PWMHEADERINFO3@p
++ IWMHeaderInfo3 *
+
+@script:python depends on report@
+p << r2353.p;
+@@
+WARN(p[0], "IWMHeaderInfo3*", "PWMHEADERINFO3")
+
+
+@r2354@
+typedef LPWMHEADERINFO3;
+position p;
+@@
+- LPWMHEADERINFO3@p
++ IWMHeaderInfo3 *
+
+@script:python depends on report@
+p << r2354.p;
+@@
+WARN(p[0], "IWMHeaderInfo3*", "LPWMHEADERINFO3")
+
+
+@r2355@
+typedef IWMLanguageList;
+typedef PWMLANGUAGELIST;
+position p;
+@@
+- PWMLANGUAGELIST@p
++ IWMLanguageList *
+
+@script:python depends on report@
+p << r2355.p;
+@@
+WARN(p[0], "IWMLanguageList*", "PWMLANGUAGELIST")
+
+
+@r2356@
+typedef LPWMLANGUAGELIST;
+position p;
+@@
+- LPWMLANGUAGELIST@p
++ IWMLanguageList *
+
+@script:python depends on report@
+p << r2356.p;
+@@
+WARN(p[0], "IWMLanguageList*", "LPWMLANGUAGELIST")
+
+
+@r2357@
+typedef IWMPControls;
+typedef PWMPCONTROLS;
+position p;
+@@
+- PWMPCONTROLS@p
++ IWMPControls *
+
+@script:python depends on report@
+p << r2357.p;
+@@
+WARN(p[0], "IWMPControls*", "PWMPCONTROLS")
+
+
+@r2358@
+typedef LPWMPCONTROLS;
+position p;
+@@
+- LPWMPCONTROLS@p
++ IWMPControls *
+
+@script:python depends on report@
+p << r2358.p;
+@@
+WARN(p[0], "IWMPControls*", "LPWMPCONTROLS")
+
+
+@r2359@
+typedef IWMPMedia;
+typedef PWMPMEDIA;
+position p;
+@@
+- PWMPMEDIA@p
++ IWMPMedia *
+
+@script:python depends on report@
+p << r2359.p;
+@@
+WARN(p[0], "IWMPMedia*", "PWMPMEDIA")
+
+
+@r2360@
+typedef LPWMPMEDIA;
+position p;
+@@
+- LPWMPMEDIA@p
++ IWMPMedia *
+
+@script:python depends on report@
+p << r2360.p;
+@@
+WARN(p[0], "IWMPMedia*", "LPWMPMEDIA")
+
+
+@r2361@
+typedef IWMPNetwork;
+typedef PWMPNETWORK;
+position p;
+@@
+- PWMPNETWORK@p
++ IWMPNetwork *
+
+@script:python depends on report@
+p << r2361.p;
+@@
+WARN(p[0], "IWMPNetwork*", "PWMPNETWORK")
+
+
+@r2362@
+typedef LPWMPNETWORK;
+position p;
+@@
+- LPWMPNETWORK@p
++ IWMPNetwork *
+
+@script:python depends on report@
+p << r2362.p;
+@@
+WARN(p[0], "IWMPNetwork*", "LPWMPNETWORK")
+
+
+@r2363@
+typedef IWMPPlayer;
+typedef PWMPPLAYER;
+position p;
+@@
+- PWMPPLAYER@p
++ IWMPPlayer *
+
+@script:python depends on report@
+p << r2363.p;
+@@
+WARN(p[0], "IWMPPlayer*", "PWMPPLAYER")
+
+
+@r2364@
+typedef LPWMPPLAYER;
+position p;
+@@
+- LPWMPPLAYER@p
++ IWMPPlayer *
+
+@script:python depends on report@
+p << r2364.p;
+@@
+WARN(p[0], "IWMPPlayer*", "LPWMPPLAYER")
+
+
+@r2365@
 typedef IWMPPlayer4;
 typedef PWMPPLAYER4;
 position p;
@@ -24457,12 +31936,12 @@ position p;
 + IWMPPlayer4 *
 
 @script:python depends on report@
-p << r1811.p;
+p << r2365.p;
 @@
 WARN(p[0], "IWMPPlayer4*", "PWMPPLAYER4")
 
 
-@r1812@
+@r2366@
 typedef LPWMPPLAYER4;
 position p;
 @@
@@ -24470,12 +31949,39 @@ position p;
 + IWMPPlayer4 *
 
 @script:python depends on report@
-p << r1812.p;
+p << r2366.p;
 @@
 WARN(p[0], "IWMPPlayer4*", "LPWMPPLAYER4")
 
 
-@r1813@
+@r2367@
+typedef IWMPPlaylist;
+typedef PWMPPLAYLIST;
+position p;
+@@
+- PWMPPLAYLIST@p
++ IWMPPlaylist *
+
+@script:python depends on report@
+p << r2367.p;
+@@
+WARN(p[0], "IWMPPlaylist*", "PWMPPLAYLIST")
+
+
+@r2368@
+typedef LPWMPPLAYLIST;
+position p;
+@@
+- LPWMPPLAYLIST@p
++ IWMPPlaylist *
+
+@script:python depends on report@
+p << r2368.p;
+@@
+WARN(p[0], "IWMPPlaylist*", "LPWMPPLAYLIST")
+
+
+@r2369@
 typedef IWMPSettings;
 typedef PWMPSETTINGS;
 position p;
@@ -24484,12 +31990,12 @@ position p;
 + IWMPSettings *
 
 @script:python depends on report@
-p << r1813.p;
+p << r2369.p;
 @@
 WARN(p[0], "IWMPSettings*", "PWMPSETTINGS")
 
 
-@r1814@
+@r2370@
 typedef LPWMPSETTINGS;
 position p;
 @@
@@ -24497,39 +32003,93 @@ position p;
 + IWMPSettings *
 
 @script:python depends on report@
-p << r1814.p;
+p << r2370.p;
 @@
 WARN(p[0], "IWMPSettings*", "LPWMPSETTINGS")
 
 
-@r1815@
-typedef IWMProfileManager;
-typedef PWMPROFILEMANAGER;
+@r2371@
+typedef IWMPacketSize2;
+typedef PWMPACKETSIZE2;
 position p;
 @@
-- PWMPROFILEMANAGER@p
-+ IWMProfileManager *
+- PWMPACKETSIZE2@p
++ IWMPacketSize2 *
 
 @script:python depends on report@
-p << r1815.p;
+p << r2371.p;
 @@
-WARN(p[0], "IWMProfileManager*", "PWMPROFILEMANAGER")
+WARN(p[0], "IWMPacketSize2*", "PWMPACKETSIZE2")
 
 
-@r1816@
-typedef LPWMPROFILEMANAGER;
+@r2372@
+typedef LPWMPACKETSIZE2;
 position p;
 @@
-- LPWMPROFILEMANAGER@p
-+ IWMProfileManager *
+- LPWMPACKETSIZE2@p
++ IWMPacketSize2 *
 
 @script:python depends on report@
-p << r1816.p;
+p << r2372.p;
 @@
-WARN(p[0], "IWMProfileManager*", "LPWMPROFILEMANAGER")
+WARN(p[0], "IWMPacketSize2*", "LPWMPACKETSIZE2")
 
 
-@r1817@
+@r2373@
+typedef IWMProfile3;
+typedef PWMPROFILE3;
+position p;
+@@
+- PWMPROFILE3@p
++ IWMProfile3 *
+
+@script:python depends on report@
+p << r2373.p;
+@@
+WARN(p[0], "IWMProfile3*", "PWMPROFILE3")
+
+
+@r2374@
+typedef LPWMPROFILE3;
+position p;
+@@
+- LPWMPROFILE3@p
++ IWMProfile3 *
+
+@script:python depends on report@
+p << r2374.p;
+@@
+WARN(p[0], "IWMProfile3*", "LPWMPROFILE3")
+
+
+@r2375@
+typedef IWMProfileManager2;
+typedef PWMPROFILEMANAGER2;
+position p;
+@@
+- PWMPROFILEMANAGER2@p
++ IWMProfileManager2 *
+
+@script:python depends on report@
+p << r2375.p;
+@@
+WARN(p[0], "IWMProfileManager2*", "PWMPROFILEMANAGER2")
+
+
+@r2376@
+typedef LPWMPROFILEMANAGER2;
+position p;
+@@
+- LPWMPROFILEMANAGER2@p
++ IWMProfileManager2 *
+
+@script:python depends on report@
+p << r2376.p;
+@@
+WARN(p[0], "IWMProfileManager2*", "LPWMPROFILEMANAGER2")
+
+
+@r2377@
 typedef IWMReader;
 typedef PWMREADER;
 position p;
@@ -24538,12 +32098,12 @@ position p;
 + IWMReader *
 
 @script:python depends on report@
-p << r1817.p;
+p << r2377.p;
 @@
 WARN(p[0], "IWMReader*", "PWMREADER")
 
 
-@r1818@
+@r2378@
 typedef LPWMREADER;
 position p;
 @@
@@ -24551,12 +32111,39 @@ position p;
 + IWMReader *
 
 @script:python depends on report@
-p << r1818.p;
+p << r2378.p;
 @@
 WARN(p[0], "IWMReader*", "LPWMREADER")
 
 
-@r1819@
+@r2379@
+typedef IWMReaderAccelerator;
+typedef PWMREADERACCELERATOR;
+position p;
+@@
+- PWMREADERACCELERATOR@p
++ IWMReaderAccelerator *
+
+@script:python depends on report@
+p << r2379.p;
+@@
+WARN(p[0], "IWMReaderAccelerator*", "PWMREADERACCELERATOR")
+
+
+@r2380@
+typedef LPWMREADERACCELERATOR;
+position p;
+@@
+- LPWMREADERACCELERATOR@p
++ IWMReaderAccelerator *
+
+@script:python depends on report@
+p << r2380.p;
+@@
+WARN(p[0], "IWMReaderAccelerator*", "LPWMREADERACCELERATOR")
+
+
+@r2381@
 typedef IWMReaderAdvanced6;
 typedef PWMREADERADVANCED6;
 position p;
@@ -24565,12 +32152,12 @@ position p;
 + IWMReaderAdvanced6 *
 
 @script:python depends on report@
-p << r1819.p;
+p << r2381.p;
 @@
 WARN(p[0], "IWMReaderAdvanced6*", "PWMREADERADVANCED6")
 
 
-@r1820@
+@r2382@
 typedef LPWMREADERADVANCED6;
 position p;
 @@
@@ -24578,12 +32165,174 @@ position p;
 + IWMReaderAdvanced6 *
 
 @script:python depends on report@
-p << r1820.p;
+p << r2382.p;
 @@
 WARN(p[0], "IWMReaderAdvanced6*", "LPWMREADERADVANCED6")
 
 
-@r1821@
+@r2383@
+typedef IWMReaderNetworkConfig2;
+typedef PWMREADERNETWORKCONFIG2;
+position p;
+@@
+- PWMREADERNETWORKCONFIG2@p
++ IWMReaderNetworkConfig2 *
+
+@script:python depends on report@
+p << r2383.p;
+@@
+WARN(p[0], "IWMReaderNetworkConfig2*", "PWMREADERNETWORKCONFIG2")
+
+
+@r2384@
+typedef LPWMREADERNETWORKCONFIG2;
+position p;
+@@
+- LPWMREADERNETWORKCONFIG2@p
++ IWMReaderNetworkConfig2 *
+
+@script:python depends on report@
+p << r2384.p;
+@@
+WARN(p[0], "IWMReaderNetworkConfig2*", "LPWMREADERNETWORKCONFIG2")
+
+
+@r2385@
+typedef IWMReaderPlaylistBurn;
+typedef PWMREADERPLAYLISTBURN;
+position p;
+@@
+- PWMREADERPLAYLISTBURN@p
++ IWMReaderPlaylistBurn *
+
+@script:python depends on report@
+p << r2385.p;
+@@
+WARN(p[0], "IWMReaderPlaylistBurn*", "PWMREADERPLAYLISTBURN")
+
+
+@r2386@
+typedef LPWMREADERPLAYLISTBURN;
+position p;
+@@
+- LPWMREADERPLAYLISTBURN@p
++ IWMReaderPlaylistBurn *
+
+@script:python depends on report@
+p << r2386.p;
+@@
+WARN(p[0], "IWMReaderPlaylistBurn*", "LPWMREADERPLAYLISTBURN")
+
+
+@r2387@
+typedef IWMReaderStreamClock;
+typedef PWMREADERSTREAMCLOCK;
+position p;
+@@
+- PWMREADERSTREAMCLOCK@p
++ IWMReaderStreamClock *
+
+@script:python depends on report@
+p << r2387.p;
+@@
+WARN(p[0], "IWMReaderStreamClock*", "PWMREADERSTREAMCLOCK")
+
+
+@r2388@
+typedef LPWMREADERSTREAMCLOCK;
+position p;
+@@
+- LPWMREADERSTREAMCLOCK@p
++ IWMReaderStreamClock *
+
+@script:python depends on report@
+p << r2388.p;
+@@
+WARN(p[0], "IWMReaderStreamClock*", "LPWMREADERSTREAMCLOCK")
+
+
+@r2389@
+typedef IWMReaderTimecode;
+typedef PWMREADERTIMECODE;
+position p;
+@@
+- PWMREADERTIMECODE@p
++ IWMReaderTimecode *
+
+@script:python depends on report@
+p << r2389.p;
+@@
+WARN(p[0], "IWMReaderTimecode*", "PWMREADERTIMECODE")
+
+
+@r2390@
+typedef LPWMREADERTIMECODE;
+position p;
+@@
+- LPWMREADERTIMECODE@p
++ IWMReaderTimecode *
+
+@script:python depends on report@
+p << r2390.p;
+@@
+WARN(p[0], "IWMReaderTimecode*", "LPWMREADERTIMECODE")
+
+
+@r2391@
+typedef IWMReaderTypeNegotiation;
+typedef PWMREADERTYPENEGOTIATION;
+position p;
+@@
+- PWMREADERTYPENEGOTIATION@p
++ IWMReaderTypeNegotiation *
+
+@script:python depends on report@
+p << r2391.p;
+@@
+WARN(p[0], "IWMReaderTypeNegotiation*", "PWMREADERTYPENEGOTIATION")
+
+
+@r2392@
+typedef LPWMREADERTYPENEGOTIATION;
+position p;
+@@
+- LPWMREADERTYPENEGOTIATION@p
++ IWMReaderTypeNegotiation *
+
+@script:python depends on report@
+p << r2392.p;
+@@
+WARN(p[0], "IWMReaderTypeNegotiation*", "LPWMREADERTYPENEGOTIATION")
+
+
+@r2393@
+typedef IWMSyncReader2;
+typedef PWMSYNCREADER2;
+position p;
+@@
+- PWMSYNCREADER2@p
++ IWMSyncReader2 *
+
+@script:python depends on report@
+p << r2393.p;
+@@
+WARN(p[0], "IWMSyncReader2*", "PWMSYNCREADER2")
+
+
+@r2394@
+typedef LPWMSYNCREADER2;
+position p;
+@@
+- LPWMSYNCREADER2@p
++ IWMSyncReader2 *
+
+@script:python depends on report@
+p << r2394.p;
+@@
+WARN(p[0], "IWMSyncReader2*", "LPWMSYNCREADER2")
+
+
+@r2395@
 typedef IWMWriter;
 typedef PWMWRITER;
 position p;
@@ -24592,12 +32341,12 @@ position p;
 + IWMWriter *
 
 @script:python depends on report@
-p << r1821.p;
+p << r2395.p;
 @@
 WARN(p[0], "IWMWriter*", "PWMWRITER")
 
 
-@r1822@
+@r2396@
 typedef LPWMWRITER;
 position p;
 @@
@@ -24605,12 +32354,12 @@ position p;
 + IWMWriter *
 
 @script:python depends on report@
-p << r1822.p;
+p << r2396.p;
 @@
 WARN(p[0], "IWMWriter*", "LPWMWRITER")
 
 
-@r1823@
+@r2397@
 typedef IWMWriterAdvanced3;
 typedef PWMWRITERADVANCED3;
 position p;
@@ -24619,12 +32368,12 @@ position p;
 + IWMWriterAdvanced3 *
 
 @script:python depends on report@
-p << r1823.p;
+p << r2397.p;
 @@
 WARN(p[0], "IWMWriterAdvanced3*", "PWMWRITERADVANCED3")
 
 
-@r1824@
+@r2398@
 typedef LPWMWRITERADVANCED3;
 position p;
 @@
@@ -24632,12 +32381,147 @@ position p;
 + IWMWriterAdvanced3 *
 
 @script:python depends on report@
-p << r1824.p;
+p << r2398.p;
 @@
 WARN(p[0], "IWMWriterAdvanced3*", "LPWMWRITERADVANCED3")
 
 
-@r1825@
+@r2399@
+typedef IWSDMessageParameters;
+typedef PWSDMESSAGEPARAMETERS;
+position p;
+@@
+- PWSDMESSAGEPARAMETERS@p
++ IWSDMessageParameters *
+
+@script:python depends on report@
+p << r2399.p;
+@@
+WARN(p[0], "IWSDMessageParameters*", "PWSDMESSAGEPARAMETERS")
+
+
+@r2400@
+typedef LPWSDMESSAGEPARAMETERS;
+position p;
+@@
+- LPWSDMESSAGEPARAMETERS@p
++ IWSDMessageParameters *
+
+@script:python depends on report@
+p << r2400.p;
+@@
+WARN(p[0], "IWSDMessageParameters*", "LPWSDMESSAGEPARAMETERS")
+
+
+@r2401@
+typedef IWSDUdpAddress;
+typedef PWSDUDPADDRESS;
+position p;
+@@
+- PWSDUDPADDRESS@p
++ IWSDUdpAddress *
+
+@script:python depends on report@
+p << r2401.p;
+@@
+WARN(p[0], "IWSDUdpAddress*", "PWSDUDPADDRESS")
+
+
+@r2402@
+typedef LPWSDUDPADDRESS;
+position p;
+@@
+- LPWSDUDPADDRESS@p
++ IWSDUdpAddress *
+
+@script:python depends on report@
+p << r2402.p;
+@@
+WARN(p[0], "IWSDUdpAddress*", "LPWSDUDPADDRESS")
+
+
+@r2403@
+typedef IWSDXMLContext;
+typedef PWSDXMLCONTEXT;
+position p;
+@@
+- PWSDXMLCONTEXT@p
++ IWSDXMLContext *
+
+@script:python depends on report@
+p << r2403.p;
+@@
+WARN(p[0], "IWSDXMLContext*", "PWSDXMLCONTEXT")
+
+
+@r2404@
+typedef LPWSDXMLCONTEXT;
+position p;
+@@
+- LPWSDXMLCONTEXT@p
++ IWSDXMLContext *
+
+@script:python depends on report@
+p << r2404.p;
+@@
+WARN(p[0], "IWSDXMLContext*", "LPWSDXMLCONTEXT")
+
+
+@r2405@
+typedef IWSDiscoveryPublisher;
+typedef PWSDISCOVERYPUBLISHER;
+position p;
+@@
+- PWSDISCOVERYPUBLISHER@p
++ IWSDiscoveryPublisher *
+
+@script:python depends on report@
+p << r2405.p;
+@@
+WARN(p[0], "IWSDiscoveryPublisher*", "PWSDISCOVERYPUBLISHER")
+
+
+@r2406@
+typedef LPWSDISCOVERYPUBLISHER;
+position p;
+@@
+- LPWSDISCOVERYPUBLISHER@p
++ IWSDiscoveryPublisher *
+
+@script:python depends on report@
+p << r2406.p;
+@@
+WARN(p[0], "IWSDiscoveryPublisher*", "LPWSDISCOVERYPUBLISHER")
+
+
+@r2407@
+typedef IWSDiscoveryPublisherNotify;
+typedef PWSDISCOVERYPUBLISHERNOTIFY;
+position p;
+@@
+- PWSDISCOVERYPUBLISHERNOTIFY@p
++ IWSDiscoveryPublisherNotify *
+
+@script:python depends on report@
+p << r2407.p;
+@@
+WARN(p[0], "IWSDiscoveryPublisherNotify*", "PWSDISCOVERYPUBLISHERNOTIFY")
+
+
+@r2408@
+typedef LPWSDISCOVERYPUBLISHERNOTIFY;
+position p;
+@@
+- LPWSDISCOVERYPUBLISHERNOTIFY@p
++ IWSDiscoveryPublisherNotify *
+
+@script:python depends on report@
+p << r2408.p;
+@@
+WARN(p[0], "IWSDiscoveryPublisherNotify*", "LPWSDISCOVERYPUBLISHERNOTIFY")
+
+
+@r2409@
 typedef IWbemClassObject;
 typedef PWBEMCLASSOBJECT;
 position p;
@@ -24646,12 +32530,12 @@ position p;
 + IWbemClassObject *
 
 @script:python depends on report@
-p << r1825.p;
+p << r2409.p;
 @@
 WARN(p[0], "IWbemClassObject*", "PWBEMCLASSOBJECT")
 
 
-@r1826@
+@r2410@
 typedef LPWBEMCLASSOBJECT;
 position p;
 @@
@@ -24659,12 +32543,39 @@ position p;
 + IWbemClassObject *
 
 @script:python depends on report@
-p << r1826.p;
+p << r2410.p;
 @@
 WARN(p[0], "IWbemClassObject*", "LPWBEMCLASSOBJECT")
 
 
-@r1827@
+@r2411@
+typedef IWbemContext;
+typedef PWBEMCONTEXT;
+position p;
+@@
+- PWBEMCONTEXT@p
++ IWbemContext *
+
+@script:python depends on report@
+p << r2411.p;
+@@
+WARN(p[0], "IWbemContext*", "PWBEMCONTEXT")
+
+
+@r2412@
+typedef LPWBEMCONTEXT;
+position p;
+@@
+- LPWBEMCONTEXT@p
++ IWbemContext *
+
+@script:python depends on report@
+p << r2412.p;
+@@
+WARN(p[0], "IWbemContext*", "LPWBEMCONTEXT")
+
+
+@r2413@
 typedef IWbemLocator;
 typedef PWBEMLOCATOR;
 position p;
@@ -24673,12 +32584,12 @@ position p;
 + IWbemLocator *
 
 @script:python depends on report@
-p << r1827.p;
+p << r2413.p;
 @@
 WARN(p[0], "IWbemLocator*", "PWBEMLOCATOR")
 
 
-@r1828@
+@r2414@
 typedef LPWBEMLOCATOR;
 position p;
 @@
@@ -24686,12 +32597,12 @@ position p;
 + IWbemLocator *
 
 @script:python depends on report@
-p << r1828.p;
+p << r2414.p;
 @@
 WARN(p[0], "IWbemLocator*", "LPWBEMLOCATOR")
 
 
-@r1829@
+@r2415@
 typedef IWbemPath;
 typedef PWBEMPATH;
 position p;
@@ -24700,12 +32611,12 @@ position p;
 + IWbemPath *
 
 @script:python depends on report@
-p << r1829.p;
+p << r2415.p;
 @@
 WARN(p[0], "IWbemPath*", "PWBEMPATH")
 
 
-@r1830@
+@r2416@
 typedef LPWBEMPATH;
 position p;
 @@
@@ -24713,12 +32624,12 @@ position p;
 + IWbemPath *
 
 @script:python depends on report@
-p << r1830.p;
+p << r2416.p;
 @@
 WARN(p[0], "IWbemPath*", "LPWBEMPATH")
 
 
-@r1831@
+@r2417@
 typedef IWbemPathKeyList;
 typedef PWBEMPATHKEYLIST;
 position p;
@@ -24727,12 +32638,12 @@ position p;
 + IWbemPathKeyList *
 
 @script:python depends on report@
-p << r1831.p;
+p << r2417.p;
 @@
 WARN(p[0], "IWbemPathKeyList*", "PWBEMPATHKEYLIST")
 
 
-@r1832@
+@r2418@
 typedef LPWBEMPATHKEYLIST;
 position p;
 @@
@@ -24740,12 +32651,12 @@ position p;
 + IWbemPathKeyList *
 
 @script:python depends on report@
-p << r1832.p;
+p << r2418.p;
 @@
 WARN(p[0], "IWbemPathKeyList*", "LPWBEMPATHKEYLIST")
 
 
-@r1833@
+@r2419@
 typedef IWbemQualifierSet;
 typedef PWBEMQUALIFIERSET;
 position p;
@@ -24754,12 +32665,12 @@ position p;
 + IWbemQualifierSet *
 
 @script:python depends on report@
-p << r1833.p;
+p << r2419.p;
 @@
 WARN(p[0], "IWbemQualifierSet*", "PWBEMQUALIFIERSET")
 
 
-@r1834@
+@r2420@
 typedef LPWBEMQUALIFIERSET;
 position p;
 @@
@@ -24767,12 +32678,12 @@ position p;
 + IWbemQualifierSet *
 
 @script:python depends on report@
-p << r1834.p;
+p << r2420.p;
 @@
 WARN(p[0], "IWbemQualifierSet*", "LPWBEMQUALIFIERSET")
 
 
-@r1835@
+@r2421@
 typedef IWbemServices;
 typedef PWBEMSERVICES;
 position p;
@@ -24781,12 +32692,12 @@ position p;
 + IWbemServices *
 
 @script:python depends on report@
-p << r1835.p;
+p << r2421.p;
 @@
 WARN(p[0], "IWbemServices*", "PWBEMSERVICES")
 
 
-@r1836@
+@r2422@
 typedef LPWBEMSERVICES;
 position p;
 @@
@@ -24794,12 +32705,12 @@ position p;
 + IWbemServices *
 
 @script:python depends on report@
-p << r1836.p;
+p << r2422.p;
 @@
 WARN(p[0], "IWbemServices*", "LPWBEMSERVICES")
 
 
-@r1837@
+@r2423@
 typedef IWbemStatusCodeText;
 typedef PWBEMSTATUSCODETEXT;
 position p;
@@ -24808,12 +32719,12 @@ position p;
 + IWbemStatusCodeText *
 
 @script:python depends on report@
-p << r1837.p;
+p << r2423.p;
 @@
 WARN(p[0], "IWbemStatusCodeText*", "PWBEMSTATUSCODETEXT")
 
 
-@r1838@
+@r2424@
 typedef LPWBEMSTATUSCODETEXT;
 position p;
 @@
@@ -24821,12 +32732,12 @@ position p;
 + IWbemStatusCodeText *
 
 @script:python depends on report@
-p << r1838.p;
+p << r2424.p;
 @@
 WARN(p[0], "IWbemStatusCodeText*", "LPWBEMSTATUSCODETEXT")
 
 
-@r1839@
+@r2425@
 typedef IWebBrowser2;
 typedef PWEBBROWSER2;
 position p;
@@ -24835,12 +32746,12 @@ position p;
 + IWebBrowser2 *
 
 @script:python depends on report@
-p << r1839.p;
+p << r2425.p;
 @@
 WARN(p[0], "IWebBrowser2*", "PWEBBROWSER2")
 
 
-@r1840@
+@r2426@
 typedef LPWEBBROWSER2;
 position p;
 @@
@@ -24848,12 +32759,12 @@ position p;
 + IWebBrowser2 *
 
 @script:python depends on report@
-p << r1840.p;
+p << r2426.p;
 @@
 WARN(p[0], "IWebBrowser2*", "LPWEBBROWSER2")
 
 
-@r1841@
+@r2427@
 typedef IWebBrowserPriv2IE9;
 typedef PWEBBROWSERPRIV2IE9;
 position p;
@@ -24862,12 +32773,12 @@ position p;
 + IWebBrowserPriv2IE9 *
 
 @script:python depends on report@
-p << r1841.p;
+p << r2427.p;
 @@
 WARN(p[0], "IWebBrowserPriv2IE9*", "PWEBBROWSERPRIV2IE9")
 
 
-@r1842@
+@r2428@
 typedef LPWEBBROWSERPRIV2IE9;
 position p;
 @@
@@ -24875,12 +32786,12 @@ position p;
 + IWebBrowserPriv2IE9 *
 
 @script:python depends on report@
-p << r1842.p;
+p << r2428.p;
 @@
 WARN(p[0], "IWebBrowserPriv2IE9*", "LPWEBBROWSERPRIV2IE9")
 
 
-@r1843@
+@r2429@
 typedef IWiaDevMgr;
 typedef PWIADEVMGR;
 position p;
@@ -24889,12 +32800,12 @@ position p;
 + IWiaDevMgr *
 
 @script:python depends on report@
-p << r1843.p;
+p << r2429.p;
 @@
 WARN(p[0], "IWiaDevMgr*", "PWIADEVMGR")
 
 
-@r1844@
+@r2430@
 typedef LPWIADEVMGR;
 position p;
 @@
@@ -24902,12 +32813,12 @@ position p;
 + IWiaDevMgr *
 
 @script:python depends on report@
-p << r1844.p;
+p << r2430.p;
 @@
 WARN(p[0], "IWiaDevMgr*", "LPWIADEVMGR")
 
 
-@r1845@
+@r2431@
 typedef IWidget;
 typedef PWIDGET;
 position p;
@@ -24916,12 +32827,12 @@ position p;
 + IWidget *
 
 @script:python depends on report@
-p << r1845.p;
+p << r2431.p;
 @@
 WARN(p[0], "IWidget*", "PWIDGET")
 
 
-@r1846@
+@r2432@
 typedef LPWIDGET;
 position p;
 @@
@@ -24929,12 +32840,12 @@ position p;
 + IWidget *
 
 @script:python depends on report@
-p << r1846.p;
+p << r2432.p;
 @@
 WARN(p[0], "IWidget*", "LPWIDGET")
 
 
-@r1847@
+@r2433@
 typedef IWinHttpRequest;
 typedef PWINHTTPREQUEST;
 position p;
@@ -24943,12 +32854,12 @@ position p;
 + IWinHttpRequest *
 
 @script:python depends on report@
-p << r1847.p;
+p << r2433.p;
 @@
 WARN(p[0], "IWinHttpRequest*", "PWINHTTPREQUEST")
 
 
-@r1848@
+@r2434@
 typedef LPWINHTTPREQUEST;
 position p;
 @@
@@ -24956,12 +32867,12 @@ position p;
 + IWinHttpRequest *
 
 @script:python depends on report@
-p << r1848.p;
+p << r2434.p;
 @@
 WARN(p[0], "IWinHttpRequest*", "LPWINHTTPREQUEST")
 
 
-@r1849@
+@r2435@
 typedef IWinInetHttpInfo;
 typedef PWININETHTTPINFO;
 position p;
@@ -24970,12 +32881,12 @@ position p;
 + IWinInetHttpInfo *
 
 @script:python depends on report@
-p << r1849.p;
+p << r2435.p;
 @@
 WARN(p[0], "IWinInetHttpInfo*", "PWININETHTTPINFO")
 
 
-@r1850@
+@r2436@
 typedef LPWININETHTTPINFO;
 position p;
 @@
@@ -24983,12 +32894,12 @@ position p;
 + IWinInetHttpInfo *
 
 @script:python depends on report@
-p << r1850.p;
+p << r2436.p;
 @@
 WARN(p[0], "IWinInetHttpInfo*", "LPWININETHTTPINFO")
 
 
-@r1851@
+@r2437@
 typedef IWindowForBindingUI;
 typedef PWINDOWFORBINDINGUI;
 position p;
@@ -24997,12 +32908,12 @@ position p;
 + IWindowForBindingUI *
 
 @script:python depends on report@
-p << r1851.p;
+p << r2437.p;
 @@
 WARN(p[0], "IWindowForBindingUI*", "PWINDOWFORBINDINGUI")
 
 
-@r1852@
+@r2438@
 typedef LPWINDOWFORBINDINGUI;
 position p;
 @@
@@ -25010,12 +32921,66 @@ position p;
 + IWindowForBindingUI *
 
 @script:python depends on report@
-p << r1852.p;
+p << r2438.p;
 @@
 WARN(p[0], "IWindowForBindingUI*", "LPWINDOWFORBINDINGUI")
 
 
-@r1853@
+@r2439@
+typedef IWineDOMTokenList;
+typedef PWINEDOMTOKENLIST;
+position p;
+@@
+- PWINEDOMTOKENLIST@p
++ IWineDOMTokenList *
+
+@script:python depends on report@
+p << r2439.p;
+@@
+WARN(p[0], "IWineDOMTokenList*", "PWINEDOMTOKENLIST")
+
+
+@r2440@
+typedef LPWINEDOMTOKENLIST;
+position p;
+@@
+- LPWINEDOMTOKENLIST@p
++ IWineDOMTokenList *
+
+@script:python depends on report@
+p << r2440.p;
+@@
+WARN(p[0], "IWineDOMTokenList*", "LPWINEDOMTOKENLIST")
+
+
+@r2441@
+typedef IWineDXGIAdapter;
+typedef PWINEDXGIADAPTER;
+position p;
+@@
+- PWINEDXGIADAPTER@p
++ IWineDXGIAdapter *
+
+@script:python depends on report@
+p << r2441.p;
+@@
+WARN(p[0], "IWineDXGIAdapter*", "PWINEDXGIADAPTER")
+
+
+@r2442@
+typedef LPWINEDXGIADAPTER;
+position p;
+@@
+- LPWINEDXGIADAPTER@p
++ IWineDXGIAdapter *
+
+@script:python depends on report@
+p << r2442.p;
+@@
+WARN(p[0], "IWineDXGIAdapter*", "LPWINEDXGIADAPTER")
+
+
+@r2443@
 typedef IWineDXGIDevice;
 typedef PWINEDXGIDEVICE;
 position p;
@@ -25024,12 +32989,12 @@ position p;
 + IWineDXGIDevice *
 
 @script:python depends on report@
-p << r1853.p;
+p << r2443.p;
 @@
 WARN(p[0], "IWineDXGIDevice*", "PWINEDXGIDEVICE")
 
 
-@r1854@
+@r2444@
 typedef LPWINEDXGIDEVICE;
 position p;
 @@
@@ -25037,12 +33002,12 @@ position p;
 + IWineDXGIDevice *
 
 @script:python depends on report@
-p << r1854.p;
+p << r2444.p;
 @@
 WARN(p[0], "IWineDXGIDevice*", "LPWINEDXGIDEVICE")
 
 
-@r1855@
+@r2445@
 typedef IWineDXGIDeviceParent;
 typedef PWINEDXGIDEVICEPARENT;
 position p;
@@ -25051,12 +33016,12 @@ position p;
 + IWineDXGIDeviceParent *
 
 @script:python depends on report@
-p << r1855.p;
+p << r2445.p;
 @@
 WARN(p[0], "IWineDXGIDeviceParent*", "PWINEDXGIDEVICEPARENT")
 
 
-@r1856@
+@r2446@
 typedef LPWINEDXGIDEVICEPARENT;
 position p;
 @@
@@ -25064,93 +33029,147 @@ position p;
 + IWineDXGIDeviceParent *
 
 @script:python depends on report@
-p << r1856.p;
+p << r2446.p;
 @@
 WARN(p[0], "IWineDXGIDeviceParent*", "LPWINEDXGIDEVICEPARENT")
 
 
-@r1857@
-typedef IWineMsiRemoteCustomAction;
-typedef PWINEMSIREMOTECUSTOMACTION;
+@r2447@
+typedef IWineDXGIFactory;
+typedef PWINEDXGIFACTORY;
 position p;
 @@
-- PWINEMSIREMOTECUSTOMACTION@p
-+ IWineMsiRemoteCustomAction *
+- PWINEDXGIFACTORY@p
++ IWineDXGIFactory *
 
 @script:python depends on report@
-p << r1857.p;
+p << r2447.p;
 @@
-WARN(p[0], "IWineMsiRemoteCustomAction*", "PWINEMSIREMOTECUSTOMACTION")
+WARN(p[0], "IWineDXGIFactory*", "PWINEDXGIFACTORY")
 
 
-@r1858@
-typedef LPWINEMSIREMOTECUSTOMACTION;
+@r2448@
+typedef LPWINEDXGIFACTORY;
 position p;
 @@
-- LPWINEMSIREMOTECUSTOMACTION@p
-+ IWineMsiRemoteCustomAction *
+- LPWINEDXGIFACTORY@p
++ IWineDXGIFactory *
 
 @script:python depends on report@
-p << r1858.p;
+p << r2448.p;
 @@
-WARN(p[0], "IWineMsiRemoteCustomAction*", "LPWINEMSIREMOTECUSTOMACTION")
+WARN(p[0], "IWineDXGIFactory*", "LPWINEDXGIFACTORY")
 
 
-@r1859@
-typedef IWineMsiRemoteDatabase;
-typedef PWINEMSIREMOTEDATABASE;
+@r2449@
+typedef IWineDXGISwapChainFactory;
+typedef PWINEDXGISWAPCHAINFACTORY;
 position p;
 @@
-- PWINEMSIREMOTEDATABASE@p
-+ IWineMsiRemoteDatabase *
+- PWINEDXGISWAPCHAINFACTORY@p
++ IWineDXGISwapChainFactory *
 
 @script:python depends on report@
-p << r1859.p;
+p << r2449.p;
 @@
-WARN(p[0], "IWineMsiRemoteDatabase*", "PWINEMSIREMOTEDATABASE")
+WARN(p[0], "IWineDXGISwapChainFactory*", "PWINEDXGISWAPCHAINFACTORY")
 
 
-@r1860@
-typedef LPWINEMSIREMOTEDATABASE;
+@r2450@
+typedef LPWINEDXGISWAPCHAINFACTORY;
 position p;
 @@
-- LPWINEMSIREMOTEDATABASE@p
-+ IWineMsiRemoteDatabase *
+- LPWINEDXGISWAPCHAINFACTORY@p
++ IWineDXGISwapChainFactory *
 
 @script:python depends on report@
-p << r1860.p;
+p << r2450.p;
 @@
-WARN(p[0], "IWineMsiRemoteDatabase*", "LPWINEMSIREMOTEDATABASE")
+WARN(p[0], "IWineDXGISwapChainFactory*", "LPWINEDXGISWAPCHAINFACTORY")
 
 
-@r1861@
-typedef IWineMsiRemotePackage;
-typedef PWINEMSIREMOTEPACKAGE;
+@r2451@
+typedef IWineHTMLElementPrivate;
+typedef PWINEHTMLELEMENTPRIVATE;
 position p;
 @@
-- PWINEMSIREMOTEPACKAGE@p
-+ IWineMsiRemotePackage *
+- PWINEHTMLELEMENTPRIVATE@p
++ IWineHTMLElementPrivate *
 
 @script:python depends on report@
-p << r1861.p;
+p << r2451.p;
 @@
-WARN(p[0], "IWineMsiRemotePackage*", "PWINEMSIREMOTEPACKAGE")
+WARN(p[0], "IWineHTMLElementPrivate*", "PWINEHTMLELEMENTPRIVATE")
 
 
-@r1862@
-typedef LPWINEMSIREMOTEPACKAGE;
+@r2452@
+typedef LPWINEHTMLELEMENTPRIVATE;
 position p;
 @@
-- LPWINEMSIREMOTEPACKAGE@p
-+ IWineMsiRemotePackage *
+- LPWINEHTMLELEMENTPRIVATE@p
++ IWineHTMLElementPrivate *
 
 @script:python depends on report@
-p << r1862.p;
+p << r2452.p;
 @@
-WARN(p[0], "IWineMsiRemotePackage*", "LPWINEMSIREMOTEPACKAGE")
+WARN(p[0], "IWineHTMLElementPrivate*", "LPWINEHTMLELEMENTPRIVATE")
 
 
-@r1863@
+@r2453@
+typedef IWineHTMLWindowPrivate;
+typedef PWINEHTMLWINDOWPRIVATE;
+position p;
+@@
+- PWINEHTMLWINDOWPRIVATE@p
++ IWineHTMLWindowPrivate *
+
+@script:python depends on report@
+p << r2453.p;
+@@
+WARN(p[0], "IWineHTMLWindowPrivate*", "PWINEHTMLWINDOWPRIVATE")
+
+
+@r2454@
+typedef LPWINEHTMLWINDOWPRIVATE;
+position p;
+@@
+- LPWINEHTMLWINDOWPRIVATE@p
++ IWineHTMLWindowPrivate *
+
+@script:python depends on report@
+p << r2454.p;
+@@
+WARN(p[0], "IWineHTMLWindowPrivate*", "LPWINEHTMLWINDOWPRIVATE")
+
+
+@r2455@
+typedef IWineMSHTMLConsole;
+typedef PWINEMSHTMLCONSOLE;
+position p;
+@@
+- PWINEMSHTMLCONSOLE@p
++ IWineMSHTMLConsole *
+
+@script:python depends on report@
+p << r2455.p;
+@@
+WARN(p[0], "IWineMSHTMLConsole*", "PWINEMSHTMLCONSOLE")
+
+
+@r2456@
+typedef LPWINEMSHTMLCONSOLE;
+position p;
+@@
+- LPWINEMSHTMLCONSOLE@p
++ IWineMSHTMLConsole *
+
+@script:python depends on report@
+p << r2456.p;
+@@
+WARN(p[0], "IWineMSHTMLConsole*", "LPWINEMSHTMLCONSOLE")
+
+
+@r2457@
 typedef IWineRowServer;
 typedef PWINEROWSERVER;
 position p;
@@ -25159,12 +33178,12 @@ position p;
 + IWineRowServer *
 
 @script:python depends on report@
-p << r1863.p;
+p << r2457.p;
 @@
 WARN(p[0], "IWineRowServer*", "PWINEROWSERVER")
 
 
-@r1864@
+@r2458@
 typedef LPWINEROWSERVER;
 position p;
 @@
@@ -25172,12 +33191,12 @@ position p;
 + IWineRowServer *
 
 @script:python depends on report@
-p << r1864.p;
+p << r2458.p;
 @@
 WARN(p[0], "IWineRowServer*", "LPWINEROWSERVER")
 
 
-@r1865@
+@r2459@
 typedef IWordBreaker;
 typedef PWORDBREAKER;
 position p;
@@ -25186,12 +33205,12 @@ position p;
 + IWordBreaker *
 
 @script:python depends on report@
-p << r1865.p;
+p << r2459.p;
 @@
 WARN(p[0], "IWordBreaker*", "PWORDBREAKER")
 
 
-@r1866@
+@r2460@
 typedef LPWORDBREAKER;
 position p;
 @@
@@ -25199,12 +33218,12 @@ position p;
 + IWordBreaker *
 
 @script:python depends on report@
-p << r1866.p;
+p << r2460.p;
 @@
 WARN(p[0], "IWordBreaker*", "LPWORDBREAKER")
 
 
-@r1867@
+@r2461@
 typedef IWordSink;
 typedef PWORDSINK;
 position p;
@@ -25213,12 +33232,12 @@ position p;
 + IWordSink *
 
 @script:python depends on report@
-p << r1867.p;
+p << r2461.p;
 @@
 WARN(p[0], "IWordSink*", "PWORDSINK")
 
 
-@r1868@
+@r2462@
 typedef LPWORDSINK;
 position p;
 @@
@@ -25226,12 +33245,12 @@ position p;
 + IWordSink *
 
 @script:python depends on report@
-p << r1868.p;
+p << r2462.p;
 @@
 WARN(p[0], "IWordSink*", "LPWORDSINK")
 
 
-@r1869@
+@r2463@
 typedef IWshCollection;
 typedef PWSHCOLLECTION;
 position p;
@@ -25240,12 +33259,12 @@ position p;
 + IWshCollection *
 
 @script:python depends on report@
-p << r1869.p;
+p << r2463.p;
 @@
 WARN(p[0], "IWshCollection*", "PWSHCOLLECTION")
 
 
-@r1870@
+@r2464@
 typedef LPWSHCOLLECTION;
 position p;
 @@
@@ -25253,12 +33272,12 @@ position p;
 + IWshCollection *
 
 @script:python depends on report@
-p << r1870.p;
+p << r2464.p;
 @@
 WARN(p[0], "IWshCollection*", "LPWSHCOLLECTION")
 
 
-@r1871@
+@r2465@
 typedef IWshEnvironment;
 typedef PWSHENVIRONMENT;
 position p;
@@ -25267,12 +33286,12 @@ position p;
 + IWshEnvironment *
 
 @script:python depends on report@
-p << r1871.p;
+p << r2465.p;
 @@
 WARN(p[0], "IWshEnvironment*", "PWSHENVIRONMENT")
 
 
-@r1872@
+@r2466@
 typedef LPWSHENVIRONMENT;
 position p;
 @@
@@ -25280,12 +33299,12 @@ position p;
 + IWshEnvironment *
 
 @script:python depends on report@
-p << r1872.p;
+p << r2466.p;
 @@
 WARN(p[0], "IWshEnvironment*", "LPWSHENVIRONMENT")
 
 
-@r1873@
+@r2467@
 typedef IWshExec;
 typedef PWSHEXEC;
 position p;
@@ -25294,12 +33313,12 @@ position p;
 + IWshExec *
 
 @script:python depends on report@
-p << r1873.p;
+p << r2467.p;
 @@
 WARN(p[0], "IWshExec*", "PWSHEXEC")
 
 
-@r1874@
+@r2468@
 typedef LPWSHEXEC;
 position p;
 @@
@@ -25307,12 +33326,12 @@ position p;
 + IWshExec *
 
 @script:python depends on report@
-p << r1874.p;
+p << r2468.p;
 @@
 WARN(p[0], "IWshExec*", "LPWSHEXEC")
 
 
-@r1875@
+@r2469@
 typedef IWshShell3;
 typedef PWSHSHELL3;
 position p;
@@ -25321,12 +33340,12 @@ position p;
 + IWshShell3 *
 
 @script:python depends on report@
-p << r1875.p;
+p << r2469.p;
 @@
 WARN(p[0], "IWshShell3*", "PWSHSHELL3")
 
 
-@r1876@
+@r2470@
 typedef LPWSHSHELL3;
 position p;
 @@
@@ -25334,12 +33353,12 @@ position p;
 + IWshShell3 *
 
 @script:python depends on report@
-p << r1876.p;
+p << r2470.p;
 @@
 WARN(p[0], "IWshShell3*", "LPWSHSHELL3")
 
 
-@r1877@
+@r2471@
 typedef IWshShortcut;
 typedef PWSHSHORTCUT;
 position p;
@@ -25348,12 +33367,12 @@ position p;
 + IWshShortcut *
 
 @script:python depends on report@
-p << r1877.p;
+p << r2471.p;
 @@
 WARN(p[0], "IWshShortcut*", "PWSHSHORTCUT")
 
 
-@r1878@
+@r2472@
 typedef LPWSHSHORTCUT;
 position p;
 @@
@@ -25361,12 +33380,147 @@ position p;
 + IWshShortcut *
 
 @script:python depends on report@
-p << r1878.p;
+p << r2472.p;
 @@
 WARN(p[0], "IWshShortcut*", "LPWSHSHORTCUT")
 
 
-@r1879@
+@r2473@
+typedef IXACT3Cue;
+typedef PXACT3CUE;
+position p;
+@@
+- PXACT3CUE@p
++ IXACT3Cue *
+
+@script:python depends on report@
+p << r2473.p;
+@@
+WARN(p[0], "IXACT3Cue*", "PXACT3CUE")
+
+
+@r2474@
+typedef LPXACT3CUE;
+position p;
+@@
+- LPXACT3CUE@p
++ IXACT3Cue *
+
+@script:python depends on report@
+p << r2474.p;
+@@
+WARN(p[0], "IXACT3Cue*", "LPXACT3CUE")
+
+
+@r2475@
+typedef IXACT3Engine;
+typedef PXACT3ENGINE;
+position p;
+@@
+- PXACT3ENGINE@p
++ IXACT3Engine *
+
+@script:python depends on report@
+p << r2475.p;
+@@
+WARN(p[0], "IXACT3Engine*", "PXACT3ENGINE")
+
+
+@r2476@
+typedef LPXACT3ENGINE;
+position p;
+@@
+- LPXACT3ENGINE@p
++ IXACT3Engine *
+
+@script:python depends on report@
+p << r2476.p;
+@@
+WARN(p[0], "IXACT3Engine*", "LPXACT3ENGINE")
+
+
+@r2477@
+typedef IXACT3SoundBank;
+typedef PXACT3SOUNDBANK;
+position p;
+@@
+- PXACT3SOUNDBANK@p
++ IXACT3SoundBank *
+
+@script:python depends on report@
+p << r2477.p;
+@@
+WARN(p[0], "IXACT3SoundBank*", "PXACT3SOUNDBANK")
+
+
+@r2478@
+typedef LPXACT3SOUNDBANK;
+position p;
+@@
+- LPXACT3SOUNDBANK@p
++ IXACT3SoundBank *
+
+@script:python depends on report@
+p << r2478.p;
+@@
+WARN(p[0], "IXACT3SoundBank*", "LPXACT3SOUNDBANK")
+
+
+@r2479@
+typedef IXACT3Wave;
+typedef PXACT3WAVE;
+position p;
+@@
+- PXACT3WAVE@p
++ IXACT3Wave *
+
+@script:python depends on report@
+p << r2479.p;
+@@
+WARN(p[0], "IXACT3Wave*", "PXACT3WAVE")
+
+
+@r2480@
+typedef LPXACT3WAVE;
+position p;
+@@
+- LPXACT3WAVE@p
++ IXACT3Wave *
+
+@script:python depends on report@
+p << r2480.p;
+@@
+WARN(p[0], "IXACT3Wave*", "LPXACT3WAVE")
+
+
+@r2481@
+typedef IXACT3WaveBank;
+typedef PXACT3WAVEBANK;
+position p;
+@@
+- PXACT3WAVEBANK@p
++ IXACT3WaveBank *
+
+@script:python depends on report@
+p << r2481.p;
+@@
+WARN(p[0], "IXACT3WaveBank*", "PXACT3WAVEBANK")
+
+
+@r2482@
+typedef LPXACT3WAVEBANK;
+position p;
+@@
+- LPXACT3WAVEBANK@p
++ IXACT3WaveBank *
+
+@script:python depends on report@
+p << r2482.p;
+@@
+WARN(p[0], "IXACT3WaveBank*", "LPXACT3WAVEBANK")
+
+
+@r2483@
 typedef IXAPO;
 typedef PXAPO;
 position p;
@@ -25375,12 +33529,12 @@ position p;
 + IXAPO *
 
 @script:python depends on report@
-p << r1879.p;
+p << r2483.p;
 @@
 WARN(p[0], "IXAPO*", "PXAPO")
 
 
-@r1880@
+@r2484@
 typedef LPXAPO;
 position p;
 @@
@@ -25388,12 +33542,12 @@ position p;
 + IXAPO *
 
 @script:python depends on report@
-p << r1880.p;
+p << r2484.p;
 @@
 WARN(p[0], "IXAPO*", "LPXAPO")
 
 
-@r1881@
+@r2485@
 typedef IXAPOParameters;
 typedef PXAPOPARAMETERS;
 position p;
@@ -25402,12 +33556,12 @@ position p;
 + IXAPOParameters *
 
 @script:python depends on report@
-p << r1881.p;
+p << r2485.p;
 @@
 WARN(p[0], "IXAPOParameters*", "PXAPOPARAMETERS")
 
 
-@r1882@
+@r2486@
 typedef LPXAPOPARAMETERS;
 position p;
 @@
@@ -25415,12 +33569,12 @@ position p;
 + IXAPOParameters *
 
 @script:python depends on report@
-p << r1882.p;
+p << r2486.p;
 @@
 WARN(p[0], "IXAPOParameters*", "LPXAPOPARAMETERS")
 
 
-@r1883@
+@r2487@
 typedef IXAudio2;
 typedef PXAUDIO2;
 position p;
@@ -25429,12 +33583,12 @@ position p;
 + IXAudio2 *
 
 @script:python depends on report@
-p << r1883.p;
+p << r2487.p;
 @@
 WARN(p[0], "IXAudio2*", "PXAUDIO2")
 
 
-@r1884@
+@r2488@
 typedef LPXAUDIO2;
 position p;
 @@
@@ -25442,12 +33596,12 @@ position p;
 + IXAudio2 *
 
 @script:python depends on report@
-p << r1884.p;
+p << r2488.p;
 @@
 WARN(p[0], "IXAudio2*", "LPXAUDIO2")
 
 
-@r1885@
+@r2489@
 typedef IXAudio20;
 typedef PXAUDIO20;
 position p;
@@ -25456,12 +33610,12 @@ position p;
 + IXAudio20 *
 
 @script:python depends on report@
-p << r1885.p;
+p << r2489.p;
 @@
 WARN(p[0], "IXAudio20*", "PXAUDIO20")
 
 
-@r1886@
+@r2490@
 typedef LPXAUDIO20;
 position p;
 @@
@@ -25469,12 +33623,12 @@ position p;
 + IXAudio20 *
 
 @script:python depends on report@
-p << r1886.p;
+p << r2490.p;
 @@
 WARN(p[0], "IXAudio20*", "LPXAUDIO20")
 
 
-@r1887@
+@r2491@
 typedef IXAudio20MasteringVoice;
 typedef PXAUDIO20MASTERINGVOICE;
 position p;
@@ -25483,12 +33637,12 @@ position p;
 + IXAudio20MasteringVoice *
 
 @script:python depends on report@
-p << r1887.p;
+p << r2491.p;
 @@
 WARN(p[0], "IXAudio20MasteringVoice*", "PXAUDIO20MASTERINGVOICE")
 
 
-@r1888@
+@r2492@
 typedef LPXAUDIO20MASTERINGVOICE;
 position p;
 @@
@@ -25496,12 +33650,12 @@ position p;
 + IXAudio20MasteringVoice *
 
 @script:python depends on report@
-p << r1888.p;
+p << r2492.p;
 @@
 WARN(p[0], "IXAudio20MasteringVoice*", "LPXAUDIO20MASTERINGVOICE")
 
 
-@r1889@
+@r2493@
 typedef IXAudio20SourceVoice;
 typedef PXAUDIO20SOURCEVOICE;
 position p;
@@ -25510,12 +33664,12 @@ position p;
 + IXAudio20SourceVoice *
 
 @script:python depends on report@
-p << r1889.p;
+p << r2493.p;
 @@
 WARN(p[0], "IXAudio20SourceVoice*", "PXAUDIO20SOURCEVOICE")
 
 
-@r1890@
+@r2494@
 typedef LPXAUDIO20SOURCEVOICE;
 position p;
 @@
@@ -25523,12 +33677,12 @@ position p;
 + IXAudio20SourceVoice *
 
 @script:python depends on report@
-p << r1890.p;
+p << r2494.p;
 @@
 WARN(p[0], "IXAudio20SourceVoice*", "LPXAUDIO20SOURCEVOICE")
 
 
-@r1891@
+@r2495@
 typedef IXAudio20SubmixVoice;
 typedef PXAUDIO20SUBMIXVOICE;
 position p;
@@ -25537,12 +33691,12 @@ position p;
 + IXAudio20SubmixVoice *
 
 @script:python depends on report@
-p << r1891.p;
+p << r2495.p;
 @@
 WARN(p[0], "IXAudio20SubmixVoice*", "PXAUDIO20SUBMIXVOICE")
 
 
-@r1892@
+@r2496@
 typedef LPXAUDIO20SUBMIXVOICE;
 position p;
 @@
@@ -25550,12 +33704,12 @@ position p;
 + IXAudio20SubmixVoice *
 
 @script:python depends on report@
-p << r1892.p;
+p << r2496.p;
 @@
 WARN(p[0], "IXAudio20SubmixVoice*", "LPXAUDIO20SUBMIXVOICE")
 
 
-@r1893@
+@r2497@
 typedef IXAudio22;
 typedef PXAUDIO22;
 position p;
@@ -25564,12 +33718,12 @@ position p;
 + IXAudio22 *
 
 @script:python depends on report@
-p << r1893.p;
+p << r2497.p;
 @@
 WARN(p[0], "IXAudio22*", "PXAUDIO22")
 
 
-@r1894@
+@r2498@
 typedef LPXAUDIO22;
 position p;
 @@
@@ -25577,12 +33731,39 @@ position p;
 + IXAudio22 *
 
 @script:python depends on report@
-p << r1894.p;
+p << r2498.p;
 @@
 WARN(p[0], "IXAudio22*", "LPXAUDIO22")
 
 
-@r1895@
+@r2499@
+typedef IXAudio23;
+typedef PXAUDIO23;
+position p;
+@@
+- PXAUDIO23@p
++ IXAudio23 *
+
+@script:python depends on report@
+p << r2499.p;
+@@
+WARN(p[0], "IXAudio23*", "PXAUDIO23")
+
+
+@r2500@
+typedef LPXAUDIO23;
+position p;
+@@
+- LPXAUDIO23@p
++ IXAudio23 *
+
+@script:python depends on report@
+p << r2500.p;
+@@
+WARN(p[0], "IXAudio23*", "LPXAUDIO23")
+
+
+@r2501@
 typedef IXAudio23MasteringVoice;
 typedef PXAUDIO23MASTERINGVOICE;
 position p;
@@ -25591,12 +33772,12 @@ position p;
 + IXAudio23MasteringVoice *
 
 @script:python depends on report@
-p << r1895.p;
+p << r2501.p;
 @@
 WARN(p[0], "IXAudio23MasteringVoice*", "PXAUDIO23MASTERINGVOICE")
 
 
-@r1896@
+@r2502@
 typedef LPXAUDIO23MASTERINGVOICE;
 position p;
 @@
@@ -25604,12 +33785,12 @@ position p;
 + IXAudio23MasteringVoice *
 
 @script:python depends on report@
-p << r1896.p;
+p << r2502.p;
 @@
 WARN(p[0], "IXAudio23MasteringVoice*", "LPXAUDIO23MASTERINGVOICE")
 
 
-@r1897@
+@r2503@
 typedef IXAudio23SourceVoice;
 typedef PXAUDIO23SOURCEVOICE;
 position p;
@@ -25618,12 +33799,12 @@ position p;
 + IXAudio23SourceVoice *
 
 @script:python depends on report@
-p << r1897.p;
+p << r2503.p;
 @@
 WARN(p[0], "IXAudio23SourceVoice*", "PXAUDIO23SOURCEVOICE")
 
 
-@r1898@
+@r2504@
 typedef LPXAUDIO23SOURCEVOICE;
 position p;
 @@
@@ -25631,12 +33812,12 @@ position p;
 + IXAudio23SourceVoice *
 
 @script:python depends on report@
-p << r1898.p;
+p << r2504.p;
 @@
 WARN(p[0], "IXAudio23SourceVoice*", "LPXAUDIO23SOURCEVOICE")
 
 
-@r1899@
+@r2505@
 typedef IXAudio23SubmixVoice;
 typedef PXAUDIO23SUBMIXVOICE;
 position p;
@@ -25645,12 +33826,12 @@ position p;
 + IXAudio23SubmixVoice *
 
 @script:python depends on report@
-p << r1899.p;
+p << r2505.p;
 @@
 WARN(p[0], "IXAudio23SubmixVoice*", "PXAUDIO23SUBMIXVOICE")
 
 
-@r1900@
+@r2506@
 typedef LPXAUDIO23SUBMIXVOICE;
 position p;
 @@
@@ -25658,12 +33839,12 @@ position p;
 + IXAudio23SubmixVoice *
 
 @script:python depends on report@
-p << r1900.p;
+p << r2506.p;
 @@
 WARN(p[0], "IXAudio23SubmixVoice*", "LPXAUDIO23SUBMIXVOICE")
 
 
-@r1901@
+@r2507@
 typedef IXAudio27;
 typedef PXAUDIO27;
 position p;
@@ -25672,12 +33853,12 @@ position p;
 + IXAudio27 *
 
 @script:python depends on report@
-p << r1901.p;
+p << r2507.p;
 @@
 WARN(p[0], "IXAudio27*", "PXAUDIO27")
 
 
-@r1902@
+@r2508@
 typedef LPXAUDIO27;
 position p;
 @@
@@ -25685,12 +33866,12 @@ position p;
 + IXAudio27 *
 
 @script:python depends on report@
-p << r1902.p;
+p << r2508.p;
 @@
 WARN(p[0], "IXAudio27*", "LPXAUDIO27")
 
 
-@r1903@
+@r2509@
 typedef IXAudio27MasteringVoice;
 typedef PXAUDIO27MASTERINGVOICE;
 position p;
@@ -25699,12 +33880,12 @@ position p;
 + IXAudio27MasteringVoice *
 
 @script:python depends on report@
-p << r1903.p;
+p << r2509.p;
 @@
 WARN(p[0], "IXAudio27MasteringVoice*", "PXAUDIO27MASTERINGVOICE")
 
 
-@r1904@
+@r2510@
 typedef LPXAUDIO27MASTERINGVOICE;
 position p;
 @@
@@ -25712,12 +33893,12 @@ position p;
 + IXAudio27MasteringVoice *
 
 @script:python depends on report@
-p << r1904.p;
+p << r2510.p;
 @@
 WARN(p[0], "IXAudio27MasteringVoice*", "LPXAUDIO27MASTERINGVOICE")
 
 
-@r1905@
+@r2511@
 typedef IXAudio27SourceVoice;
 typedef PXAUDIO27SOURCEVOICE;
 position p;
@@ -25726,12 +33907,12 @@ position p;
 + IXAudio27SourceVoice *
 
 @script:python depends on report@
-p << r1905.p;
+p << r2511.p;
 @@
 WARN(p[0], "IXAudio27SourceVoice*", "PXAUDIO27SOURCEVOICE")
 
 
-@r1906@
+@r2512@
 typedef LPXAUDIO27SOURCEVOICE;
 position p;
 @@
@@ -25739,12 +33920,12 @@ position p;
 + IXAudio27SourceVoice *
 
 @script:python depends on report@
-p << r1906.p;
+p << r2512.p;
 @@
 WARN(p[0], "IXAudio27SourceVoice*", "LPXAUDIO27SOURCEVOICE")
 
 
-@r1907@
+@r2513@
 typedef IXAudio27SubmixVoice;
 typedef PXAUDIO27SUBMIXVOICE;
 position p;
@@ -25753,12 +33934,12 @@ position p;
 + IXAudio27SubmixVoice *
 
 @script:python depends on report@
-p << r1907.p;
+p << r2513.p;
 @@
 WARN(p[0], "IXAudio27SubmixVoice*", "PXAUDIO27SUBMIXVOICE")
 
 
-@r1908@
+@r2514@
 typedef LPXAUDIO27SUBMIXVOICE;
 position p;
 @@
@@ -25766,12 +33947,12 @@ position p;
 + IXAudio27SubmixVoice *
 
 @script:python depends on report@
-p << r1908.p;
+p << r2514.p;
 @@
 WARN(p[0], "IXAudio27SubmixVoice*", "LPXAUDIO27SUBMIXVOICE")
 
 
-@r1909@
+@r2515@
 typedef IXAudio2MasteringVoice;
 typedef PXAUDIO2MASTERINGVOICE;
 position p;
@@ -25780,12 +33961,12 @@ position p;
 + IXAudio2MasteringVoice *
 
 @script:python depends on report@
-p << r1909.p;
+p << r2515.p;
 @@
 WARN(p[0], "IXAudio2MasteringVoice*", "PXAUDIO2MASTERINGVOICE")
 
 
-@r1910@
+@r2516@
 typedef LPXAUDIO2MASTERINGVOICE;
 position p;
 @@
@@ -25793,12 +33974,12 @@ position p;
 + IXAudio2MasteringVoice *
 
 @script:python depends on report@
-p << r1910.p;
+p << r2516.p;
 @@
 WARN(p[0], "IXAudio2MasteringVoice*", "LPXAUDIO2MASTERINGVOICE")
 
 
-@r1911@
+@r2517@
 typedef IXAudio2SourceVoice;
 typedef PXAUDIO2SOURCEVOICE;
 position p;
@@ -25807,12 +33988,12 @@ position p;
 + IXAudio2SourceVoice *
 
 @script:python depends on report@
-p << r1911.p;
+p << r2517.p;
 @@
 WARN(p[0], "IXAudio2SourceVoice*", "PXAUDIO2SOURCEVOICE")
 
 
-@r1912@
+@r2518@
 typedef LPXAUDIO2SOURCEVOICE;
 position p;
 @@
@@ -25820,12 +34001,12 @@ position p;
 + IXAudio2SourceVoice *
 
 @script:python depends on report@
-p << r1912.p;
+p << r2518.p;
 @@
 WARN(p[0], "IXAudio2SourceVoice*", "LPXAUDIO2SOURCEVOICE")
 
 
-@r1913@
+@r2519@
 typedef IXAudio2SubmixVoice;
 typedef PXAUDIO2SUBMIXVOICE;
 position p;
@@ -25834,12 +34015,12 @@ position p;
 + IXAudio2SubmixVoice *
 
 @script:python depends on report@
-p << r1913.p;
+p << r2519.p;
 @@
 WARN(p[0], "IXAudio2SubmixVoice*", "PXAUDIO2SUBMIXVOICE")
 
 
-@r1914@
+@r2520@
 typedef LPXAUDIO2SUBMIXVOICE;
 position p;
 @@
@@ -25847,12 +34028,12 @@ position p;
 + IXAudio2SubmixVoice *
 
 @script:python depends on report@
-p << r1914.p;
+p << r2520.p;
 @@
 WARN(p[0], "IXAudio2SubmixVoice*", "LPXAUDIO2SUBMIXVOICE")
 
 
-@r1915@
+@r2521@
 typedef IXMLDOMAttribute;
 typedef PXMLDOMATTRIBUTE;
 position p;
@@ -25861,12 +34042,12 @@ position p;
 + IXMLDOMAttribute *
 
 @script:python depends on report@
-p << r1915.p;
+p << r2521.p;
 @@
 WARN(p[0], "IXMLDOMAttribute*", "PXMLDOMATTRIBUTE")
 
 
-@r1916@
+@r2522@
 typedef LPXMLDOMATTRIBUTE;
 position p;
 @@
@@ -25874,12 +34055,12 @@ position p;
 + IXMLDOMAttribute *
 
 @script:python depends on report@
-p << r1916.p;
+p << r2522.p;
 @@
 WARN(p[0], "IXMLDOMAttribute*", "LPXMLDOMATTRIBUTE")
 
 
-@r1917@
+@r2523@
 typedef IXMLDOMCDATASection;
 typedef PXMLDOMCDATASECTION;
 position p;
@@ -25888,12 +34069,12 @@ position p;
 + IXMLDOMCDATASection *
 
 @script:python depends on report@
-p << r1917.p;
+p << r2523.p;
 @@
 WARN(p[0], "IXMLDOMCDATASection*", "PXMLDOMCDATASECTION")
 
 
-@r1918@
+@r2524@
 typedef LPXMLDOMCDATASECTION;
 position p;
 @@
@@ -25901,12 +34082,12 @@ position p;
 + IXMLDOMCDATASection *
 
 @script:python depends on report@
-p << r1918.p;
+p << r2524.p;
 @@
 WARN(p[0], "IXMLDOMCDATASection*", "LPXMLDOMCDATASECTION")
 
 
-@r1919@
+@r2525@
 typedef IXMLDOMComment;
 typedef PXMLDOMCOMMENT;
 position p;
@@ -25915,12 +34096,12 @@ position p;
 + IXMLDOMComment *
 
 @script:python depends on report@
-p << r1919.p;
+p << r2525.p;
 @@
 WARN(p[0], "IXMLDOMComment*", "PXMLDOMCOMMENT")
 
 
-@r1920@
+@r2526@
 typedef LPXMLDOMCOMMENT;
 position p;
 @@
@@ -25928,12 +34109,12 @@ position p;
 + IXMLDOMComment *
 
 @script:python depends on report@
-p << r1920.p;
+p << r2526.p;
 @@
 WARN(p[0], "IXMLDOMComment*", "LPXMLDOMCOMMENT")
 
 
-@r1921@
+@r2527@
 typedef IXMLDOMDocument3;
 typedef PXMLDOMDOCUMENT3;
 position p;
@@ -25942,12 +34123,12 @@ position p;
 + IXMLDOMDocument3 *
 
 @script:python depends on report@
-p << r1921.p;
+p << r2527.p;
 @@
 WARN(p[0], "IXMLDOMDocument3*", "PXMLDOMDOCUMENT3")
 
 
-@r1922@
+@r2528@
 typedef LPXMLDOMDOCUMENT3;
 position p;
 @@
@@ -25955,12 +34136,12 @@ position p;
 + IXMLDOMDocument3 *
 
 @script:python depends on report@
-p << r1922.p;
+p << r2528.p;
 @@
 WARN(p[0], "IXMLDOMDocument3*", "LPXMLDOMDOCUMENT3")
 
 
-@r1923@
+@r2529@
 typedef IXMLDOMDocumentFragment;
 typedef PXMLDOMDOCUMENTFRAGMENT;
 position p;
@@ -25969,12 +34150,12 @@ position p;
 + IXMLDOMDocumentFragment *
 
 @script:python depends on report@
-p << r1923.p;
+p << r2529.p;
 @@
 WARN(p[0], "IXMLDOMDocumentFragment*", "PXMLDOMDOCUMENTFRAGMENT")
 
 
-@r1924@
+@r2530@
 typedef LPXMLDOMDOCUMENTFRAGMENT;
 position p;
 @@
@@ -25982,12 +34163,12 @@ position p;
 + IXMLDOMDocumentFragment *
 
 @script:python depends on report@
-p << r1924.p;
+p << r2530.p;
 @@
 WARN(p[0], "IXMLDOMDocumentFragment*", "LPXMLDOMDOCUMENTFRAGMENT")
 
 
-@r1925@
+@r2531@
 typedef IXMLDOMDocumentType;
 typedef PXMLDOMDOCUMENTTYPE;
 position p;
@@ -25996,12 +34177,12 @@ position p;
 + IXMLDOMDocumentType *
 
 @script:python depends on report@
-p << r1925.p;
+p << r2531.p;
 @@
 WARN(p[0], "IXMLDOMDocumentType*", "PXMLDOMDOCUMENTTYPE")
 
 
-@r1926@
+@r2532@
 typedef LPXMLDOMDOCUMENTTYPE;
 position p;
 @@
@@ -26009,12 +34190,12 @@ position p;
 + IXMLDOMDocumentType *
 
 @script:python depends on report@
-p << r1926.p;
+p << r2532.p;
 @@
 WARN(p[0], "IXMLDOMDocumentType*", "LPXMLDOMDOCUMENTTYPE")
 
 
-@r1927@
+@r2533@
 typedef IXMLDOMElement;
 typedef PXMLDOMELEMENT;
 position p;
@@ -26023,12 +34204,12 @@ position p;
 + IXMLDOMElement *
 
 @script:python depends on report@
-p << r1927.p;
+p << r2533.p;
 @@
 WARN(p[0], "IXMLDOMElement*", "PXMLDOMELEMENT")
 
 
-@r1928@
+@r2534@
 typedef LPXMLDOMELEMENT;
 position p;
 @@
@@ -26036,12 +34217,12 @@ position p;
 + IXMLDOMElement *
 
 @script:python depends on report@
-p << r1928.p;
+p << r2534.p;
 @@
 WARN(p[0], "IXMLDOMElement*", "LPXMLDOMELEMENT")
 
 
-@r1929@
+@r2535@
 typedef IXMLDOMEntityReference;
 typedef PXMLDOMENTITYREFERENCE;
 position p;
@@ -26050,12 +34231,12 @@ position p;
 + IXMLDOMEntityReference *
 
 @script:python depends on report@
-p << r1929.p;
+p << r2535.p;
 @@
 WARN(p[0], "IXMLDOMEntityReference*", "PXMLDOMENTITYREFERENCE")
 
 
-@r1930@
+@r2536@
 typedef LPXMLDOMENTITYREFERENCE;
 position p;
 @@
@@ -26063,12 +34244,12 @@ position p;
 + IXMLDOMEntityReference *
 
 @script:python depends on report@
-p << r1930.p;
+p << r2536.p;
 @@
 WARN(p[0], "IXMLDOMEntityReference*", "LPXMLDOMENTITYREFERENCE")
 
 
-@r1931@
+@r2537@
 typedef IXMLDOMImplementation;
 typedef PXMLDOMIMPLEMENTATION;
 position p;
@@ -26077,12 +34258,12 @@ position p;
 + IXMLDOMImplementation *
 
 @script:python depends on report@
-p << r1931.p;
+p << r2537.p;
 @@
 WARN(p[0], "IXMLDOMImplementation*", "PXMLDOMIMPLEMENTATION")
 
 
-@r1932@
+@r2538@
 typedef LPXMLDOMIMPLEMENTATION;
 position p;
 @@
@@ -26090,12 +34271,12 @@ position p;
 + IXMLDOMImplementation *
 
 @script:python depends on report@
-p << r1932.p;
+p << r2538.p;
 @@
 WARN(p[0], "IXMLDOMImplementation*", "LPXMLDOMIMPLEMENTATION")
 
 
-@r1933@
+@r2539@
 typedef IXMLDOMNamedNodeMap;
 typedef PXMLDOMNAMEDNODEMAP;
 position p;
@@ -26104,12 +34285,12 @@ position p;
 + IXMLDOMNamedNodeMap *
 
 @script:python depends on report@
-p << r1933.p;
+p << r2539.p;
 @@
 WARN(p[0], "IXMLDOMNamedNodeMap*", "PXMLDOMNAMEDNODEMAP")
 
 
-@r1934@
+@r2540@
 typedef LPXMLDOMNAMEDNODEMAP;
 position p;
 @@
@@ -26117,12 +34298,12 @@ position p;
 + IXMLDOMNamedNodeMap *
 
 @script:python depends on report@
-p << r1934.p;
+p << r2540.p;
 @@
 WARN(p[0], "IXMLDOMNamedNodeMap*", "LPXMLDOMNAMEDNODEMAP")
 
 
-@r1935@
+@r2541@
 typedef IXMLDOMNode;
 typedef PXMLDOMNODE;
 position p;
@@ -26131,12 +34312,12 @@ position p;
 + IXMLDOMNode *
 
 @script:python depends on report@
-p << r1935.p;
+p << r2541.p;
 @@
 WARN(p[0], "IXMLDOMNode*", "PXMLDOMNODE")
 
 
-@r1936@
+@r2542@
 typedef LPXMLDOMNODE;
 position p;
 @@
@@ -26144,12 +34325,12 @@ position p;
 + IXMLDOMNode *
 
 @script:python depends on report@
-p << r1936.p;
+p << r2542.p;
 @@
 WARN(p[0], "IXMLDOMNode*", "LPXMLDOMNODE")
 
 
-@r1937@
+@r2543@
 typedef IXMLDOMNodeList;
 typedef PXMLDOMNODELIST;
 position p;
@@ -26158,12 +34339,12 @@ position p;
 + IXMLDOMNodeList *
 
 @script:python depends on report@
-p << r1937.p;
+p << r2543.p;
 @@
 WARN(p[0], "IXMLDOMNodeList*", "PXMLDOMNODELIST")
 
 
-@r1938@
+@r2544@
 typedef LPXMLDOMNODELIST;
 position p;
 @@
@@ -26171,12 +34352,12 @@ position p;
 + IXMLDOMNodeList *
 
 @script:python depends on report@
-p << r1938.p;
+p << r2544.p;
 @@
 WARN(p[0], "IXMLDOMNodeList*", "LPXMLDOMNODELIST")
 
 
-@r1939@
+@r2545@
 typedef IXMLDOMParseError2;
 typedef PXMLDOMPARSEERROR2;
 position p;
@@ -26185,12 +34366,12 @@ position p;
 + IXMLDOMParseError2 *
 
 @script:python depends on report@
-p << r1939.p;
+p << r2545.p;
 @@
 WARN(p[0], "IXMLDOMParseError2*", "PXMLDOMPARSEERROR2")
 
 
-@r1940@
+@r2546@
 typedef LPXMLDOMPARSEERROR2;
 position p;
 @@
@@ -26198,12 +34379,12 @@ position p;
 + IXMLDOMParseError2 *
 
 @script:python depends on report@
-p << r1940.p;
+p << r2546.p;
 @@
 WARN(p[0], "IXMLDOMParseError2*", "LPXMLDOMPARSEERROR2")
 
 
-@r1941@
+@r2547@
 typedef IXMLDOMProcessingInstruction;
 typedef PXMLDOMPROCESSINGINSTRUCTION;
 position p;
@@ -26212,12 +34393,12 @@ position p;
 + IXMLDOMProcessingInstruction *
 
 @script:python depends on report@
-p << r1941.p;
+p << r2547.p;
 @@
 WARN(p[0], "IXMLDOMProcessingInstruction*", "PXMLDOMPROCESSINGINSTRUCTION")
 
 
-@r1942@
+@r2548@
 typedef LPXMLDOMPROCESSINGINSTRUCTION;
 position p;
 @@
@@ -26225,12 +34406,12 @@ position p;
 + IXMLDOMProcessingInstruction *
 
 @script:python depends on report@
-p << r1942.p;
+p << r2548.p;
 @@
 WARN(p[0], "IXMLDOMProcessingInstruction*", "LPXMLDOMPROCESSINGINSTRUCTION")
 
 
-@r1943@
+@r2549@
 typedef IXMLDOMSchemaCollection2;
 typedef PXMLDOMSCHEMACOLLECTION2;
 position p;
@@ -26239,12 +34420,12 @@ position p;
 + IXMLDOMSchemaCollection2 *
 
 @script:python depends on report@
-p << r1943.p;
+p << r2549.p;
 @@
 WARN(p[0], "IXMLDOMSchemaCollection2*", "PXMLDOMSCHEMACOLLECTION2")
 
 
-@r1944@
+@r2550@
 typedef LPXMLDOMSCHEMACOLLECTION2;
 position p;
 @@
@@ -26252,12 +34433,12 @@ position p;
 + IXMLDOMSchemaCollection2 *
 
 @script:python depends on report@
-p << r1944.p;
+p << r2550.p;
 @@
 WARN(p[0], "IXMLDOMSchemaCollection2*", "LPXMLDOMSCHEMACOLLECTION2")
 
 
-@r1945@
+@r2551@
 typedef IXMLDOMSelection;
 typedef PXMLDOMSELECTION;
 position p;
@@ -26266,12 +34447,12 @@ position p;
 + IXMLDOMSelection *
 
 @script:python depends on report@
-p << r1945.p;
+p << r2551.p;
 @@
 WARN(p[0], "IXMLDOMSelection*", "PXMLDOMSELECTION")
 
 
-@r1946@
+@r2552@
 typedef LPXMLDOMSELECTION;
 position p;
 @@
@@ -26279,12 +34460,12 @@ position p;
 + IXMLDOMSelection *
 
 @script:python depends on report@
-p << r1946.p;
+p << r2552.p;
 @@
 WARN(p[0], "IXMLDOMSelection*", "LPXMLDOMSELECTION")
 
 
-@r1947@
+@r2553@
 typedef IXMLDOMText;
 typedef PXMLDOMTEXT;
 position p;
@@ -26293,12 +34474,12 @@ position p;
 + IXMLDOMText *
 
 @script:python depends on report@
-p << r1947.p;
+p << r2553.p;
 @@
 WARN(p[0], "IXMLDOMText*", "PXMLDOMTEXT")
 
 
-@r1948@
+@r2554@
 typedef LPXMLDOMTEXT;
 position p;
 @@
@@ -26306,12 +34487,12 @@ position p;
 + IXMLDOMText *
 
 @script:python depends on report@
-p << r1948.p;
+p << r2554.p;
 @@
 WARN(p[0], "IXMLDOMText*", "LPXMLDOMTEXT")
 
 
-@r1949@
+@r2555@
 typedef IXMLDocument;
 typedef PXMLDOCUMENT;
 position p;
@@ -26320,12 +34501,12 @@ position p;
 + IXMLDocument *
 
 @script:python depends on report@
-p << r1949.p;
+p << r2555.p;
 @@
 WARN(p[0], "IXMLDocument*", "PXMLDOCUMENT")
 
 
-@r1950@
+@r2556@
 typedef LPXMLDOCUMENT;
 position p;
 @@
@@ -26333,12 +34514,12 @@ position p;
 + IXMLDocument *
 
 @script:python depends on report@
-p << r1950.p;
+p << r2556.p;
 @@
 WARN(p[0], "IXMLDocument*", "LPXMLDOCUMENT")
 
 
-@r1951@
+@r2557@
 typedef IXMLElement;
 typedef PXMLELEMENT;
 position p;
@@ -26347,12 +34528,12 @@ position p;
 + IXMLElement *
 
 @script:python depends on report@
-p << r1951.p;
+p << r2557.p;
 @@
 WARN(p[0], "IXMLElement*", "PXMLELEMENT")
 
 
-@r1952@
+@r2558@
 typedef LPXMLELEMENT;
 position p;
 @@
@@ -26360,12 +34541,12 @@ position p;
 + IXMLElement *
 
 @script:python depends on report@
-p << r1952.p;
+p << r2558.p;
 @@
 WARN(p[0], "IXMLElement*", "LPXMLELEMENT")
 
 
-@r1953@
+@r2559@
 typedef IXMLElementCollection;
 typedef PXMLELEMENTCOLLECTION;
 position p;
@@ -26374,12 +34555,12 @@ position p;
 + IXMLElementCollection *
 
 @script:python depends on report@
-p << r1953.p;
+p << r2559.p;
 @@
 WARN(p[0], "IXMLElementCollection*", "PXMLELEMENTCOLLECTION")
 
 
-@r1954@
+@r2560@
 typedef LPXMLELEMENTCOLLECTION;
 position p;
 @@
@@ -26387,12 +34568,12 @@ position p;
 + IXMLElementCollection *
 
 @script:python depends on report@
-p << r1954.p;
+p << r2560.p;
 @@
 WARN(p[0], "IXMLElementCollection*", "LPXMLELEMENTCOLLECTION")
 
 
-@r1955@
+@r2561@
 typedef IXMLHTTPRequest;
 typedef PXMLHTTPREQUEST;
 position p;
@@ -26401,12 +34582,12 @@ position p;
 + IXMLHTTPRequest *
 
 @script:python depends on report@
-p << r1955.p;
+p << r2561.p;
 @@
 WARN(p[0], "IXMLHTTPRequest*", "PXMLHTTPREQUEST")
 
 
-@r1956@
+@r2562@
 typedef LPXMLHTTPREQUEST;
 position p;
 @@
@@ -26414,12 +34595,12 @@ position p;
 + IXMLHTTPRequest *
 
 @script:python depends on report@
-p << r1956.p;
+p << r2562.p;
 @@
 WARN(p[0], "IXMLHTTPRequest*", "LPXMLHTTPREQUEST")
 
 
-@r1957@
+@r2563@
 typedef IXMLParser;
 typedef PXMLPARSER;
 position p;
@@ -26428,12 +34609,12 @@ position p;
 + IXMLParser *
 
 @script:python depends on report@
-p << r1957.p;
+p << r2563.p;
 @@
 WARN(p[0], "IXMLParser*", "PXMLPARSER")
 
 
-@r1958@
+@r2564@
 typedef LPXMLPARSER;
 position p;
 @@
@@ -26441,12 +34622,12 @@ position p;
 + IXMLParser *
 
 @script:python depends on report@
-p << r1958.p;
+p << r2564.p;
 @@
 WARN(p[0], "IXMLParser*", "LPXMLPARSER")
 
 
-@r1959@
+@r2565@
 typedef IXSLProcessor;
 typedef PXSLPROCESSOR;
 position p;
@@ -26455,12 +34636,12 @@ position p;
 + IXSLProcessor *
 
 @script:python depends on report@
-p << r1959.p;
+p << r2565.p;
 @@
 WARN(p[0], "IXSLProcessor*", "PXSLPROCESSOR")
 
 
-@r1960@
+@r2566@
 typedef LPXSLPROCESSOR;
 position p;
 @@
@@ -26468,12 +34649,12 @@ position p;
 + IXSLProcessor *
 
 @script:python depends on report@
-p << r1960.p;
+p << r2566.p;
 @@
 WARN(p[0], "IXSLProcessor*", "LPXSLPROCESSOR")
 
 
-@r1961@
+@r2567@
 typedef IXSLTemplate;
 typedef PXSLTEMPLATE;
 position p;
@@ -26482,12 +34663,12 @@ position p;
 + IXSLTemplate *
 
 @script:python depends on report@
-p << r1961.p;
+p << r2567.p;
 @@
 WARN(p[0], "IXSLTemplate*", "PXSLTEMPLATE")
 
 
-@r1962@
+@r2568@
 typedef LPXSLTEMPLATE;
 position p;
 @@
@@ -26495,12 +34676,12 @@ position p;
 + IXSLTemplate *
 
 @script:python depends on report@
-p << r1962.p;
+p << r2568.p;
 @@
 WARN(p[0], "IXSLTemplate*", "LPXSLTEMPLATE")
 
 
-@r1963@
+@r2569@
 typedef IXmlReader;
 typedef PXMLREADER;
 position p;
@@ -26509,12 +34690,12 @@ position p;
 + IXmlReader *
 
 @script:python depends on report@
-p << r1963.p;
+p << r2569.p;
 @@
 WARN(p[0], "IXmlReader*", "PXMLREADER")
 
 
-@r1964@
+@r2570@
 typedef LPXMLREADER;
 position p;
 @@
@@ -26522,12 +34703,12 @@ position p;
 + IXmlReader *
 
 @script:python depends on report@
-p << r1964.p;
+p << r2570.p;
 @@
 WARN(p[0], "IXmlReader*", "LPXMLREADER")
 
 
-@r1965@
+@r2571@
 typedef IXmlReaderInput;
 typedef PXMLREADERINPUT;
 position p;
@@ -26536,12 +34717,12 @@ position p;
 + IXmlReaderInput *
 
 @script:python depends on report@
-p << r1965.p;
+p << r2571.p;
 @@
 WARN(p[0], "IXmlReaderInput*", "PXMLREADERINPUT")
 
 
-@r1966@
+@r2572@
 typedef LPXMLREADERINPUT;
 position p;
 @@
@@ -26549,12 +34730,12 @@ position p;
 + IXmlReaderInput *
 
 @script:python depends on report@
-p << r1966.p;
+p << r2572.p;
 @@
 WARN(p[0], "IXmlReaderInput*", "LPXMLREADERINPUT")
 
 
-@r1967@
+@r2573@
 typedef IXmlWriter;
 typedef PXMLWRITER;
 position p;
@@ -26563,12 +34744,12 @@ position p;
 + IXmlWriter *
 
 @script:python depends on report@
-p << r1967.p;
+p << r2573.p;
 @@
 WARN(p[0], "IXmlWriter*", "PXMLWRITER")
 
 
-@r1968@
+@r2574@
 typedef LPXMLWRITER;
 position p;
 @@
@@ -26576,12 +34757,12 @@ position p;
 + IXmlWriter *
 
 @script:python depends on report@
-p << r1968.p;
+p << r2574.p;
 @@
 WARN(p[0], "IXmlWriter*", "LPXMLWRITER")
 
 
-@r1969@
+@r2575@
 typedef IXmlWriterOutput;
 typedef PXMLWRITEROUTPUT;
 position p;
@@ -26590,12 +34771,12 @@ position p;
 + IXmlWriterOutput *
 
 @script:python depends on report@
-p << r1969.p;
+p << r2575.p;
 @@
 WARN(p[0], "IXmlWriterOutput*", "PXMLWRITEROUTPUT")
 
 
-@r1970@
+@r2576@
 typedef LPXMLWRITEROUTPUT;
 position p;
 @@
@@ -26603,6 +34784,6 @@ position p;
 + IXmlWriterOutput *
 
 @script:python depends on report@
-p << r1970.p;
+p << r2576.p;
 @@
 WARN(p[0], "IXmlWriterOutput*", "LPXMLWRITEROUTPUT")
